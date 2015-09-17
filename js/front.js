@@ -80,6 +80,15 @@
 }(jQuery));
 
 /** 
+ * Merge Icon Font
+ */
+var asNewIconFontsArray = [ "as-heart","as-cloud","as-star","as-tv","as-sound","as-video","as-trash","as-user","as-key","as-search","as-settings","as-camera","as-tag","as-lock","as-bulb","as-pen","as-diamond","as-display","as-location","as-eye","as-bubble","as-stack","as-cup","as-phone","as-news","as-mail","as-like","as-photo","as-note","as-clock","as-paperplane","as-params","as-banknote","as-data","as-music","as-megaphone","as-study","as-lab","as-food","as-t-shirt","as-fire","as-clip","as-shop","as-calendar","as-wallet","as-vynil","as-truck","as-world","as-mobile","as-laptop","as-desktop","as-tablet","as-phone2","as-document","as-documents","as-search2","as-clipboard","as-newspaper","as-notebook","as-book-open","as-browser","as-calendar2","as-presentation","as-picture","as-pictures","as-video2","as-camera2","as-printer","as-toolbox","as-briefcase","as-wallet2","as-gift","as-bargraph","as-grid","as-expand","as-focus","as-edit","as-adjustments","as-ribbon","as-hourglass","as-lock2","as-megaphone2","as-shield","as-trophy","as-flag","as-map","as-puzzle","as-basket","as-envelope","as-streetsign","as-telescope","as-gears","as-key2","as-paperclip","as-attachment","as-pricetags","as-lightbulb","as-layers","as-pencil","as-tools","as-tools-2","as-scissors","as-paintbrush","as-magnifying-glass","as-circle-compass","as-linegraph","as-mic","as-strategy","as-beaker","as-caution","as-recycle","as-anchor","as-profile-male","as-profile-female","as-bike","as-wine","as-hotairballoon","as-globe","as-genius","as-map-pin","as-dial","as-chat","as-heart2","as-cloud2","as-upload","as-download","as-target","as-hazardous","as-piechart","as-speedometer","as-global","as-compass","as-lifesaver","as-clock2","as-aperture","as-quote","as-scope","as-alarmclock","as-refresh","as-happy","as-sad","as-facebook","as-twitter","as-googleplus","as-rss","as-tumblr","as-linkedin","as-dribbble" ];
+if (typeof (dslcFontAwesomeArray)!= "object"){
+	var dslcFontAwesomeArray = [];
+}
+var dslcFontAwesomeArray = dslcFontAwesomeArray.concat( asNewIconFontsArray );
+
+/** 
  * Init Lightbox
  */
 
@@ -110,16 +119,20 @@ function dslc_init_lightbox() {
     jQuery('.dslc-lightbox-gallery').each(function () {
         jQuery(this).magnificPopup({delegate: 'a', type: 'image', gallery: {enabled: true}});
     });
+    jQuery('.as-lightbox-gallery').each(function () {
+	    jQuery(this).magnificPopup({
+		  //delegate: 'a',
+		  type: 'image',
+		  removalDelay: 300,
+		  mainClass: 'mfp-fade',
+		  gallery: {
+		    enabled: true,
+		  }
+		});
+	});    
+	
+}
 
-}
-/**
- * Initiate Parallax
- */
-function dslc_parallax() {
-    jQuery(window).stellar({
-        responsive: true,
-    });
-}
 /**
  * Initiate Counter
  */
@@ -137,7 +150,7 @@ function as_counter() {
 function as_testimonials() {
     jQuery('.as-testimonials-simple').each(function () {
         var slide_owl = jQuery(this),
-                data_pagination = slide_owl.attr('data-pagination');
+            data_pagination = slide_owl.attr('data-pagination');
         data_effect = slide_owl.attr('data-effect');
         data_auto = slide_owl.attr('data-auto');
         var temp = true;
@@ -263,12 +276,7 @@ function dslc_check_viewport() {
         }, {offset: '80%', triggerOnce: true});
     });
 }
-function as_stellar_refresh() {
-/*
-    jQuery(window).data('plugin_stellar').destroy();
-    jQuery(window).data('plugin_stellar').init();
-*/
-}
+
 jQuery(document).ready(function ($) {
     /**
      * Filter
@@ -388,7 +396,7 @@ jQuery(document).ready(function ($) {
             });
         }
         // Event when click on an image portfolio
-        $('.dslc-project .dslca-post-thumb a, .as-port-control a, .dslc-project-title a').click(function (event) {
+        $('.dslc-project .dslca-post-thumb a, .as-port-control a, .dslc-project-title a, .as-group-icon-project a.as-link-to-project').click(function (event) {
             var target = $(event.currentTarget);
             if (target.attr('data-ajax') == "1") {
                 event.preventDefault();
@@ -447,9 +455,43 @@ jQuery(document).ready(function ($) {
         });
     });
 });
+
 /**
  * Google Map
  */
+var style_google = [];
+
+var as_snapzzy_none = [];
+var as_snapzzy_subtle_grayscale = [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}];
+var as_snapzzy_shades_of_grey = [{featureType:"all",elementType:"labels.text.fill",stylers:[{saturation:36},{color:"#000000"},{lightness:40}]},{featureType:"all",elementType:"labels.text.stroke",stylers:[{visibility:"on"},{color:"#000000"},{lightness:16}]},{featureType:"all",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"geometry.fill",stylers:[{color:"#000000"},{lightness:20}]},{featureType:"administrative",elementType:"geometry.stroke",stylers:[{color:"#000000"},{lightness:17},{weight:1.2}]},{featureType:"landscape",elementType:"geometry",stylers:[{color:"#000000"},{lightness:20}]},{featureType:"poi",elementType:"geometry",stylers:[{color:"#000000"},{lightness:21}]},{featureType:"road.highway",elementType:"geometry.fill",stylers:[{color:"#000000"},{lightness:17}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#000000"},{lightness:29},{weight:.2}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#000000"},{lightness:18}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#000000"},{lightness:16}]},{featureType:"transit",elementType:"geometry",stylers:[{color:"#000000"},{lightness:19}]},{featureType:"water",elementType:"geometry",stylers:[{color:"#000000"},{lightness:17}]}];
+var as_snapzzy_blue_water = [{featureType:"administrative",elementType:"labels.text.fill",stylers:[{color:"#444444"}]},{featureType:"landscape",elementType:"all",stylers:[{color:"#f2f2f2"}]},{featureType:"poi",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"all",stylers:[{saturation:-100},{lightness:45}]},{featureType:"road.highway",elementType:"all",stylers:[{visibility:"simplified"}]},{featureType:"road.arterial",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"transit",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"water",elementType:"all",stylers:[{color:"#46bcec"},{visibility:"on"}]}];
+var as_snapzzy_pale_dawn = [{featureType:"administrative",elementType:"all",stylers:[{visibility:"on"},{lightness:33}]},{featureType:"landscape",elementType:"all",stylers:[{color:"#f2e5d4"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#c5dac6"}]},{featureType:"poi.park",elementType:"labels",stylers:[{visibility:"on"},{lightness:20}]},{featureType:"road",elementType:"all",stylers:[{lightness:20}]},{featureType:"road.highway",elementType:"geometry",stylers:[{color:"#c5c6c6"}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#e4d7c6"}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#fbfaf7"}]},{featureType:"water",elementType:"all",stylers:[{visibility:"on"},{color:"#acbcc9"}]}];
+var as_snapzzy_light_monochrome = [{featureType:"administrative.locality",elementType:"all",stylers:[{hue:"#2c2e33"},{saturation:7},{lightness:19},{visibility:"on"}]},{featureType:"landscape",elementType:"all",stylers:[{hue:"#ffffff"},{saturation:-100},{lightness:100},{visibility:"simplified"}]},{featureType:"poi",elementType:"all",stylers:[{hue:"#ffffff"},{saturation:-100},{lightness:100},{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{hue:"#bbc0c4"},{saturation:-93},{lightness:31},{visibility:"simplified"}]},{featureType:"road",elementType:"labels",stylers:[{hue:"#bbc0c4"},{saturation:-93},{lightness:31},{visibility:"on"}]},{featureType:"road.arterial",elementType:"labels",stylers:[{hue:"#bbc0c4"},{saturation:-93},{lightness:-2},{visibility:"simplified"}]},{featureType:"road.local",elementType:"geometry",stylers:[{hue:"#e9ebed"},{saturation:-90},{lightness:-8},{visibility:"simplified"}]},{featureType:"transit",elementType:"all",stylers:[{hue:"#e9ebed"},{saturation:10},{lightness:69},{visibility:"on"}]},{featureType:"water",elementType:"all",stylers:[{hue:"#e9ebed"},{saturation:-78},{lightness:67},{visibility:"simplified"}]}];
+var as_snapzzy_apple_maps = [{featureType:"landscape.man_made",elementType:"geometry",stylers:[{color:"#f7f1df"}]},{featureType:"landscape.natural",elementType:"geometry",stylers:[{color:"#d0e3b4"}]},{featureType:"landscape.natural.terrain",elementType:"geometry",stylers:[{visibility:"off"}]},{featureType:"poi",elementType:"labels",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"poi.medical",elementType:"geometry",stylers:[{color:"#fbd3da"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#bde6ab"}]},{featureType:"road",elementType:"geometry.stroke",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"labels",stylers:[{visibility:"off"}]},{featureType:"road.highway",elementType:"geometry.fill",stylers:[{color:"#ffe15f"}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#efd151"}]},{featureType:"road.arterial",elementType:"geometry.fill",stylers:[{color:"#ffffff"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"black"}]},{featureType:"transit.station.airport",elementType:"geometry.fill",stylers:[{color:"#cfb2db"}]},{featureType:"water",elementType:"geometry",stylers:[{color:"#a2daf2"}]}];
+var as_snapzzy_greyscale = [{"featureType":"all","elementType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}];
+var as_snapzzy_neutral_blue = [{featureType:"water",elementType:"geometry",stylers:[{color:"#193341"}]},{featureType:"landscape",elementType:"geometry",stylers:[{color:"#2c5a71"}]},{featureType:"road",elementType:"geometry",stylers:[{color:"#29768a"},{lightness:-37}]},{featureType:"poi",elementType:"geometry",stylers:[{color:"#406d80"}]},{featureType:"transit",elementType:"geometry",stylers:[{color:"#406d80"}]},{elementType:"labels.text.stroke",stylers:[{visibility:"on"},{color:"#3e606f"},{weight:2},{gamma:.84}]},{elementType:"labels.text.fill",stylers:[{color:"#ffffff"}]},{featureType:"administrative",elementType:"geometry",stylers:[{weight:.6},{color:"#1a3541"}]},{elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#2c5a71"}]}];
+var as_snapzzy_bright_bubbly = [{featureType:"water",stylers:[{color:"#19a0d8"}]},{featureType:"administrative",elementType:"labels.text.stroke",stylers:[{color:"#ffffff"},{weight:6}]},{featureType:"administrative",elementType:"labels.text.fill",stylers:[{color:"#e85113"}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#efe9e4"},{lightness:-40}]},{featureType:"road.arterial",elementType:"geometry.stroke",stylers:[{color:"#efe9e4"},{lightness:-20}]},{featureType:"road",elementType:"labels.text.stroke",stylers:[{lightness:100}]},{featureType:"road",elementType:"labels.text.fill",stylers:[{lightness:-100}]},{featureType:"road.highway",elementType:"labels.icon"},{featureType:"landscape",elementType:"labels",stylers:[{visibility:"off"}]},{featureType:"landscape",stylers:[{lightness:20},{color:"#efe9e4"}]},{featureType:"landscape.man_made",stylers:[{visibility:"off"}]},{featureType:"water",elementType:"labels.text.stroke",stylers:[{lightness:100}]},{featureType:"water",elementType:"labels.text.fill",stylers:[{lightness:-100}]},{featureType:"poi",elementType:"labels.text.fill",stylers:[{hue:"#11ff00"}]},{featureType:"poi",elementType:"labels.text.stroke",stylers:[{lightness:100}]},{featureType:"poi",elementType:"labels.icon",stylers:[{hue:"#4cff00"},{saturation:58}]},{featureType:"poi",elementType:"geometry",stylers:[{visibility:"on"},{color:"#f0e4d3"}]},{featureType:"road.highway",elementType:"geometry.fill",stylers:[{color:"#efe9e4"},{lightness:-25}]},{featureType:"road.arterial",elementType:"geometry.fill",stylers:[{color:"#efe9e4"},{lightness:-10}]},{featureType:"poi",elementType:"labels",stylers:[{visibility:"simplified"}]}];
+var as_snapzzy_icy_blue = [{stylers:[{hue:"#2c3e50"},{saturation:250}]},{featureType:"road",elementType:"geometry",stylers:[{lightness:50},{visibility:"simplified"}]},{featureType:"road",elementType:"labels",stylers:[{visibility:"off"}]}];
+var as_snapzzy_blue_gray = [{featureType:"water",stylers:[{visibility:"on"},{color:"#b5cbe4"}]},{featureType:"landscape",stylers:[{color:"#efefef"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{color:"#83a5b0"}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#bdcdd3"}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#ffffff"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#e3eed3"}]},{featureType:"administrative",stylers:[{visibility:"on"},{lightness:33}]},{featureType:"road"},{featureType:"poi.park",elementType:"labels",stylers:[{visibility:"on"},{lightness:20}]},{},{featureType:"road",stylers:[{lightness:20}]}];
+var as_snapzzy_blue_essence = [{featureType:"landscape.natural",elementType:"geometry.fill",stylers:[{visibility:"on"},{color:"#e0efef"}]},{featureType:"poi",elementType:"geometry.fill",stylers:[{visibility:"on"},{hue:"#1900ff"},{color:"#c0e8e8"}]},{featureType:"road",elementType:"geometry",stylers:[{lightness:100},{visibility:"simplified"}]},{featureType:"road",elementType:"labels",stylers:[{visibility:"off"}]},{featureType:"transit.line",elementType:"geometry",stylers:[{visibility:"on"},{lightness:700}]},{featureType:"water",elementType:"all",stylers:[{color:"#7dcdcd"}]}];
+var as_snapzzy_girly = [{featureType:"administrative",elementType:"labels.text.fill",stylers:[{color:"#444444"}]},{featureType:"landscape",elementType:"all",stylers:[{color:"#f2f2f2"}]},{featureType:"poi",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"all",stylers:[{saturation:-100},{lightness:45}]},{featureType:"road.highway",elementType:"all",stylers:[{visibility:"simplified"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{visibility:"simplified"},{color:"#ff6a6a"},{lightness:"0"}]},{featureType:"road.highway",elementType:"labels.text",stylers:[{visibility:"on"}]},{featureType:"road.highway",elementType:"labels.icon",stylers:[{visibility:"on"}]},{featureType:"road.arterial",elementType:"all",stylers:[{visibility:"on"}]},{featureType:"road.arterial",elementType:"geometry.fill",stylers:[{color:"#ff6a6a"},{lightness:"75"}]},{featureType:"road.arterial",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{lightness:"75"}]},{featureType:"transit",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"transit.line",elementType:"all",stylers:[{visibility:"on"}]},{featureType:"transit.station.bus",elementType:"all",stylers:[{visibility:"on"}]},{featureType:"transit.station.rail",elementType:"all",stylers:[{visibility:"on"}]},{featureType:"transit.station.rail",elementType:"labels.icon",stylers:[{weight:"0.01"},{hue:"#ff0028"},{lightness:"0"}]},{featureType:"water",elementType:"all",stylers:[{visibility:"on"},{color:"#80e4d8"},{lightness:"25"},{saturation:"-23"}]}];
+var as_snapzzy_retro = [{featureType:"administrative",stylers:[{visibility:"off"}]},{featureType:"poi",stylers:[{visibility:"simplified"}]},{featureType:"road",elementType:"labels",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"simplified"}]},{featureType:"transit",stylers:[{visibility:"simplified"}]},{featureType:"landscape",stylers:[{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{visibility:"off"}]},{featureType:"road.local",stylers:[{visibility:"on"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{visibility:"on"}]},{featureType:"water",stylers:[{color:"#84afa3"},{lightness:52}]},{stylers:[{saturation:-17},{gamma:.36}]},{featureType:"transit.line",elementType:"geometry",stylers:[{color:"#3f518c"}]}];
+style_google[1] = as_snapzzy_none;
+style_google[2] = as_snapzzy_subtle_grayscale;
+style_google[3] = as_snapzzy_shades_of_grey;
+style_google[4] = as_snapzzy_blue_water;
+style_google[5] = as_snapzzy_pale_dawn;
+style_google[6] = as_snapzzy_light_monochrome;
+style_google[7] = as_snapzzy_apple_maps;
+style_google[8] = as_snapzzy_greyscale;
+style_google[9] = as_snapzzy_neutral_blue;
+style_google[10] = as_snapzzy_bright_bubbly;
+style_google[11] = as_snapzzy_icy_blue;
+style_google[12] = as_snapzzy_blue_gray;
+style_google[13] = as_snapzzy_blue_essence;
+style_google[14] = as_snapzzy_girly;
+style_google[15] = as_snapzzy_retro;
+
 function as_google_map() {
 	//for google map
 	var elements 	= document.getElementsByClassName('as_googlemap');
@@ -467,11 +509,15 @@ function as_google_map() {
 
 		var zoom_get = elements[i].getAttribute('zoom');
 		var scrwheel = elements[i].getAttribute('scrollwheel');
+        var snappzy = 1;
+        try{
+            snappzy = elements[i].getAttribute('snapzzymap');
+        }catch(err){}
 		myOptions[i] = { 
 			scrollwheel: parseInt(scrwheel), 
 			zoom:parseInt(zoom_get), 
 			center: lating[i], 
-			styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2e5d4"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]}],
+			styles: style_google[parseInt(snappzy)] ,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		map[i] = new google.maps.Map(document.getElementById(elements[i].id), myOptions[i]);
@@ -491,25 +537,13 @@ function as_google_map() {
 		//alert(JSON.stringify(map[i]));
 	}
 }
-jQuery(window).load(function () {
-    as_counter();
-    as_circle_chart();
-    as_testimonials();
-    as_google_map();
-    as_time_circles();
-});
-jQuery(document).ajaxComplete(function () {
-    if (jQuery('body').hasClass('dslca-enabled')) {
-        as_testimonials();
-        as_counter();
-        as_circle_chart();
-        as_timeline();
-        as_time_circles();
-    }
-});
+/* ------------------------------------- */
+/* T I M E L I N E 
+/* ------------------------------------ */
+/*
 jQuery.ajaxPrefilter(function (options, originalOptions, jqXHR) {
 
-    if (originalOptions.data.dslc_module_id == "Anna_Timeline")
+    if (originalOptions.data.dslc_module_id == "AS_Timeline")
     {
         var dslcAccordionCount = 0;
         var dslcAccordionDateVal = "";
@@ -523,54 +557,222 @@ jQuery.ajaxPrefilter(function (options, originalOptions, jqXHR) {
 
             dslcAccordionDateVal += jQuery(this).find('.dslc-accordion-date').text();
         });
-        options.data += "&anna_timeline_date=" + dslcAccordionDateVal;
+        options.data += "&as_timeline_date=" + dslcAccordionDateVal;
     }
 });
-/* ------------------------------------- */
-/* P R I C I N G   JS
- /* ------------------------------------ */
+
 function as_timeline() {
-    jQuery(".cd-container .dslc-accordion-item").removeClass("dslc-inactive");
-    jQuery(".cd-container .dslc-accordion-item").addClass("dslc-active");
-    jQuery(".cd-container .dslc-accordion-item .dslc-accordion-content").css("display", "block");
+    jQuery(".as-timeline-container .dslc-accordion-item").removeClass("dslc-inactive");
+    jQuery(".as-timeline-container .dslc-accordion-item").addClass("dslc-active");
+    jQuery(".as-timeline-container .dslc-accordion-item .dslc-accordion-content").css("display", "block");
 }
 jQuery(document).ready(function ($) {
-	// Owl Carousel
-	var owl_slider_post = $(".owl-carousel");
-	owl_slider_post.owlCarousel({
-		navigation : false, // Show next and prev buttons
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		singleItem: true,
-		//Autoplay
-	    autoPlay : false,
-	    stopOnHover : false,
-	    autoHeight: true
-	});
-
-	// Custom Navigation Events
-	$(".as-btn-slider-post-next").click(function(){
-		owl_slider_post.trigger('owl.next');
-	})
-	$(".as-btn-slider-post-prev").click(function(){
-		owl_slider_post.trigger('owl.prev');
-	})
-    var $timeline_block = $('.cd-timeline-block');
+    var $timeline_block = $('.as-timeline-block');
 
     //hide timeline blocks which are outside the viewport
     $timeline_block.each(function () {
         if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 0.75) {
-            $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+            $(this).find('.as-timeline-img, .as-timeline-content').addClass('is-hidden');
         }
     });
 
     //on scolling, show/animate timeline blocks when enter the viewport
     $(window).on('scroll', function () {
         $timeline_block.each(function () {
-            if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden')) {
-                $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+            if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.as-timeline-img').hasClass('is-hidden')) {
+                $(this).find('.as-timeline-img, .as-timeline-content').removeClass('is-hidden').addClass('bounce-in');
             }
         });
     });
     as_timeline();
+});
+*/
+
+/**
+ *  Before & After Image
+ */
+function as_dragme(id) {
+
+    var $dragMe = jQuery(id + "-dragme");
+    var $beforeAfter = jQuery(id + "-before-after");
+    var $viewAfter = jQuery(id + "-view-after");
+    var $viewBefore = jQuery(id + "-view-before");
+
+    if (jQuery(id + "-dragme").length == 0)
+        return;
+    Draggable.create($dragMe, {
+        type: "left",
+        bounds: $beforeAfter,
+        onDrag: updateImages
+    });
+
+    function updateImages() {
+        TweenLite.set($viewAfter, {width: $dragMe.css("left")}); //or this.x if only dragging
+    }
+
+    //Intro Animation
+	function intro_effect() {
+		var width_img = jQuery('.as-view.as-view-before img').width(),
+	    	haft_img = width_img / 2;
+	    jQuery('.as-view.as-view-after-time img').css('width', width_img);
+	    animateTo(haft_img);
+	    
+	    var height_img_1 = jQuery('.as-view.as-view-after-time img').height(),
+	    	height_img_2 = jQuery('.as-view.as-view-before img').height(),
+	    	summary_height = height_img_1 - height_img_2;
+	    	
+	    if ( summary_height >= 0 ){
+		    jQuery('.as-before-after-time').css('height', height_img_1);
+	    }
+	    else{
+		    jQuery('.as-before-after-time').css('height', height_img_2);
+	    }
+	}
+    intro_effect();
+
+    jQuery(window).resize(function () {
+        intro_effect();
+    });
+    jQuery('.dslc-modules-area').resize(function () {
+        intro_effect();
+    	
+    });
+    
+    //Externall nav
+    var width_img = jQuery('.as-before-after-time').width(),
+		haft_img = width_img / 2;
+    jQuery(id + "to-start").on("click", function () {
+        animateTo(0);
+    });
+
+    jQuery(id + "to-middle").on("click", function () {
+        animateTo(haft_img);
+    });
+	
+    jQuery(id + "to-end").on("click", function () {
+        animateTo(width_img);
+    });
+
+    function animateTo(_left) {
+        TweenLite.to($dragMe, 1, {left: _left, onUpdate: updateImages});
+    }
+
+    //V2 Click added
+    $viewAfter.on("click", function (event) {
+        var eventLeft = event.clientX - $beforeAfter.offset().left;
+        animateTo(eventLeft);
+    });
+    $viewBefore.on("click", function (event) {
+        var eventLeft = event.clientX - $beforeAfter.offset().left;
+        animateTo(eventLeft);
+    });
+}
+
+function as_before_img(){
+	jQuery('.as-compare-img-container').each(function () {
+		var orientation_vertical 	= jQuery(".as-compare-img-container[data-orientation='vertical']"),
+			orientation_horizontal 	= jQuery(".as-compare-img-container[data-orientation!='vertical']"),
+			img_offset				= jQuery('.as-compare-img-container').attr('data-offset');
+		orientation_horizontal.twentytwenty({default_offset_pct: img_offset});
+		orientation_vertical.twentytwenty({default_offset_pct: img_offset, orientation: 'vertical'});
+		jQuery(this).hover(function(){ 
+			jQuery(window).trigger("resize.twentytwenty");
+		});
+	});
+}
+
+
+/**
+ *  Text Rotator
+ */
+function as_text_rotator(){
+	
+	var effect_text = jQuery(".as-text-row-1 .rotate");
+	var effect_speed = jQuery(".as-text-main");
+		anim_text = effect_text.data('anim-text');
+		speed_text = effect_speed.data('speed-text');
+	
+	effect_text.textrotator({
+      	animation: anim_text,
+	  	speed: speed_text
+    });
+}
+/**
+ *  Owl Carousel Post Format
+ */
+function as_gallery_post(){
+	var owl_slider_post = jQuery(".owl-carousel");
+	owl_slider_post.owlCarousel({
+		navigation : false, // Show next and prev buttons
+		slideSpeed : 300,
+		pagination: false,
+		singleItem: true,
+		//Autoplay
+	    autoPlay : true,
+	    stopOnHover : false,
+	    autoHeight: true,
+	    transitionStyle : "fade"
+	});
+
+	// Custom Navigation Events
+	jQuery(".as-btn-slider-post-next").click(function(){
+		owl_slider_post.trigger('owl.next');
+	})
+	jQuery(".as-btn-slider-post-prev").click(function(){
+		owl_slider_post.trigger('owl.prev');
+	})
+}
+/**
+ *  DSLC Carousel Post Format
+ */
+function as_gallery_dslc(){
+	 jQuery('.as-post-galleries').each(function () {
+		 jQuery(this).owlCarousel({
+				navigation : false, // Show next and prev buttons
+				slideSpeed : 300,
+				pagination: false,
+				singleItem: true,
+				//Autoplay
+				autoPlay : true,
+				stopOnHover : false,
+				autoHeight: true,
+				transitionStyle : "fade"
+			});
+			
+			// Custom Navigation Events
+			jQuery(".as-post-gallery-lc-next").click(function(){
+				jQuery('.as-post-galleries').trigger('owl.next');
+			})
+			jQuery(".as-post-gallery-lc-prev").click(function(){
+				jQuery('.as-post-galleries').trigger('owl.prev');
+			});
+	 });
+	
+}
+
+jQuery(window).load(function () {
+	as_gallery_post();
+    as_counter();
+    as_circle_chart();
+    as_testimonials();
+    as_google_map();
+    as_time_circles();
+    as_dragme();
+    as_before_img();
+    as_text_rotator();
+    as_gallery_dslc();
+});
+jQuery(document).ajaxComplete(function () {
+    if (jQuery('body').hasClass('dslca-enabled')) {
+        as_testimonials();
+        as_counter();
+        as_circle_chart();
+        as_google_map();
+        //as_timeline();
+        as_time_circles();
+        as_dragme();
+        as_before_img();
+        as_text_rotator();
+        as_gallery_dslc();
+    }
 });

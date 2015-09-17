@@ -42,7 +42,6 @@
 				'label' => 'Fade In Up',
 				'value' => 'sklcfadeInUp'
 			),
-/*
 			array(
 				'label' => 'Fade In Up Big',
 				'value' => 'sklcfadeInUpBig'
@@ -51,12 +50,10 @@
 				'label' => 'Fade In Up Large',
 				'value' => 'sklcfadeInUpLarge'
 			),
-*/
 			array(
 				'label' => 'Fade In Down',
 				'value' => 'sklcfadeInDown'
 			),
-/*
 			array(
 				'label' => 'Fade In Down Big',
 				'value' => 'sklcfadeInDownBig'
@@ -65,12 +62,10 @@
 				'label' => 'Fade In Down Large',
 				'value' => 'sklcfadeInDownLarge'
 			),
-*/
 			array(
 				'label' => 'Fade In Left',
 				'value' => 'sklcfadeInLeft'
 			),
-/*
 			array(
 				'label' => 'Fade In Left Big',
 				'value' => 'sklcfadeInLeftBig'
@@ -79,12 +74,10 @@
 				'label' => 'Fade In Left Large',
 				'value' => 'sklcfadeInLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Fade In Right',
 				'value' => 'sklcfadeInRight'
 			),
-/*
 			array(
 				'label' => 'Fade In Right Big',
 				'value' => 'sklcfadeInRightBig'
@@ -93,12 +86,10 @@
 				'label' => 'Fade In Right Large',
 				'value' => 'sklcfadeInRightLarge'
 			),
-*/
 			array(
 				'label' => 'Fade In Up Left',
 				'value' => 'sklcfadeInUpLeft'
 			),
-/*
 			array(
 				'label' => 'Fade In Up Left Big',
 				'value' => 'sklcfadeInUpLeftBig'
@@ -107,12 +98,10 @@
 				'label' => 'Fade In Up Left Large',
 				'value' => 'sklcfadeInUpLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Fade In Up Right',
 				'value' => 'sklcfadeInUpRight'
 			),
-/*
 			array(
 				'label' => 'Fade In Up Right Big',
 				'value' => 'sklcfadeInUpRightBig'
@@ -121,12 +110,10 @@
 				'label' => 'Fade In Up Right Large',
 				'value' => 'sklcfadeInUpRightLarge'
 			),
-*/
 			array(
 				'label' => 'Fade In Down Left',
 				'value' => 'sklcfadeInDownLeft'
 			),
-/*
 			array(
 				'label' => 'Fade In Down Left Big',
 				'value' => 'sklcfadeInDownLeftBig'
@@ -135,12 +122,10 @@
 				'label' => 'Fade In Down Left Large',
 				'value' => 'sklcfadeInDownLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Fade In Down Right',
 				'value' => 'sklcfadeInDownRight'
 			),
-/*
 			array(
 				'label' => 'Fade In Down Right Big',
 				'value' => 'sklcfadeInDownRightBig'
@@ -149,8 +134,6 @@
 				'label' => 'Fade In Down Right Large',
 				'value' => 'sklcfadeInDownRightLarge'
 			),
-*/
-/*
 			array(
 				'label' => 'Fade Out',
 				'value' => 'sklcfadeOut'
@@ -251,12 +234,10 @@
 				'label' => 'Fade Out Down Right Large',
 				'value' => 'sklcfadeOutDownRightLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In',
 				'value' => 'sklcbounceIn'
 			),
-/*
 			array(
 				'label' => 'Bounce In Big',
 				'value' => 'sklcbounceInBig'
@@ -265,12 +246,10 @@
 				'label' => 'Bounce In Large',
 				'value' => 'sklcbounceInLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Up',
 				'value' => 'sklcbounceInUp'
 			),
-/*
 			array(
 				'label' => 'Bounce In Up Big',
 				'value' => 'sklcbounceInUpBig'
@@ -279,12 +258,10 @@
 				'label' => 'Bounce In Up Large',
 				'value' => 'sklcbounceInUpLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Down',
 				'value' => 'sklcbounceInDown'
 			),
-/*
 			array(
 				'label' => 'Bounce In Down Big',
 				'value' => 'sklcbounceInDownBig'
@@ -293,12 +270,10 @@
 				'label' => 'Bounce In Down Large',
 				'value' => 'sklcbounceInDownLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Left',
 				'value' => 'sklcbounceInLeft'
 			),
-/*
 			array(
 				'label' => 'Bounce In Left Big',
 				'value' => 'sklcbounceInLeftBig'
@@ -307,12 +282,10 @@
 				'label' => 'Bounce In Left Large',
 				'value' => 'sklcbounceInLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Right',
 				'value' => 'sklcbounceInRight'
 			),
-/*
 			array(
 				'label' => 'Bounce In Right Big',
 				'value' => 'sklcbounceInRightBig'
@@ -321,13 +294,10 @@
 				'label' => 'Bounce In Right Large',
 				'value' => 'sklcbounceInRightLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Up Left',
 				'value' => 'sklcbounceInUpLeft'
-			),
-/*
-			array(
+			),array(
 				'label' => 'Bounce In Up Left Big',
 				'value' => 'sklcbounceInUpLeftBig'
 			),
@@ -335,12 +305,10 @@
 				'label' => 'Bounce In Up Left Large',
 				'value' => 'sklcbounceInUpLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Up Right',
 				'value' => 'sklcbounceInUpRight'
 			),
-/*
 			array(
 				'label' => 'Bounce In Up Right Big',
 				'value' => 'sklcbounceInUpRightBig'
@@ -349,12 +317,10 @@
 				'label' => 'Bounce In Up Right Large',
 				'value' => 'sklcbounceInUpRightLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Down Left',
 				'value' => 'sklcbounceInDownLeft'
 			),
-/*
 			array(
 				'label' => 'Bounce In Down Left Big',
 				'value' => 'sklcbounceInDownLeftBig'
@@ -363,12 +329,10 @@
 				'label' => 'Bounce In Down Left Large',
 				'value' => 'sklcbounceInDownLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Bounce In Down Right',
 				'value' => 'sklcbounceInDownRight'
 			),
-/*
 			array(
 				'label' => 'Bounce In Down Right Big',
 				'value' => 'sklcbounceInDownRightBig'
@@ -377,8 +341,6 @@
 				'label' => 'Bounce In Down Right Large',
 				'value' => 'sklcbounceInDownRightLarge'
 			),
-*/
-/*
 			array(
 				'label' => 'Bounce Out',
 				'value' => 'sklcbounceOut'
@@ -485,7 +447,6 @@
 				'label' => 'Bounce Out Down Right Large',
 				'value' => 'sklcbounceOutDownRightLarge'
 			),
-*/
 			array(
 				'label' => 'Zoom In',
 				'value' => 'sklczoomIn'
@@ -494,7 +455,6 @@
 				'label' => 'Zoom In Up',
 				'value' => 'sklczoomInUp'
 			),
-/*
 			array(
 				'label' => 'Zoom In Up Big',
 				'value' => 'sklczoomInUpBig'
@@ -503,12 +463,10 @@
 				'label' => 'Zoom In Up Large',
 				'value' => 'sklczoomInUpLarge'
 			),
-*/
 			array(
 				'label' => 'Zoom In Down',
 				'value' => 'sklczoomInDown'
 			),
-/*
 			array(
 				'label' => 'Zoom In Down Big',
 				'value' => 'sklczoomInDownBig'
@@ -517,12 +475,10 @@
 				'label' => 'Zoom In Down Large',
 				'value' => 'sklczoomInDownLarge'
 			),
-*/
 			array(
 				'label' => 'Zoom In Left',
 				'value' => 'sklczoomInLeft'
 			),
-/*
 			array(
 				'label' => 'Zoom In Left Big',
 				'value' => 'sklczoomInLeftBig'
@@ -531,12 +487,10 @@
 				'label' => 'Zoom In Left Large',
 				'value' => 'sklczoomInLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Zoom In Right',
 				'value' => 'sklczoomInRight'
 			),
-/*
 			array(
 				'label' => 'Zoom In Right Big',
 				'value' => 'sklczoomInRightBig'
@@ -544,13 +498,10 @@
 			array(
 				'label' => 'Zoom In Right Large',
 				'value' => 'sklczoomInRightLarge'
-			),
-*/
-			array(
+			),array(
 				'label' => 'Zoom In Up Left',
 				'value' => 'sklczoomInUpLeft'
 			),
-/*
 			array(
 				'label' => 'Zoom In Up Left Big',
 				'value' => 'sklczoomInUpLeftBig'
@@ -559,12 +510,10 @@
 				'label' => 'Zoom In Up Left Large',
 				'value' => 'sklczoomInUpLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Zoom In Up Right',
 				'value' => 'sklczoomInUpRight'
 			),
-/*
 			array(
 				'label' => 'Zoom In Up Right Big',
 				'value' => 'sklczoomInUpRightBig'
@@ -573,12 +522,10 @@
 				'label' => 'Zoom In Up Right Large',
 				'value' => 'sklczoomInUpRightLarge'
 			),
-*/
 			array(
 				'label' => 'Zoom In Down Left',
 				'value' => 'sklczoomInDownLeft'
 			),
-/*
 			array(
 				'label' => 'Zoom In Down Left Big',
 				'value' => 'sklczoomInDownLeftBig'
@@ -587,12 +534,10 @@
 				'label' => 'Zoom In Down Left Large',
 				'value' => 'sklczoomInDownLeftLarge'
 			),
-*/
 			array(
 				'label' => 'Zoom In Down Right',
 				'value' => 'sklczoomInDownRight'
 			),
-/*
 			array(
 				'label' => 'Zoom In Down Right Big',
 				'value' => 'sklczoomInDownRightBig'
@@ -601,8 +546,6 @@
 				'label' => 'Zoom In Down Right Large',
 				'value' => 'sklczoomInDownRightLarge'
 			),
-*/
-/*
 			array(
 				'label' => 'Zoom Out',
 				'value' => 'sklczoomOut'
@@ -703,7 +646,6 @@
 				'label' => 'Zoom Out Down Right Large',
 				'value' => 'sklczoomOutDownRightLarge'
 			),
-*/
 			array(
 				'label' => 'Flip In X',
 				'value' => 'sklcflipInX'
@@ -744,7 +686,6 @@
 				'label' => 'Flip In Right Back',
 				'value' => 'sklcflipInRightBack'
 			),
-/*
 			array(
 				'label' => 'Flip Out X',
 				'value' => 'sklcflipOutX'
@@ -785,7 +726,6 @@
 				'label' => 'Flip Out Right Back',
 				'value' => 'sklcflipOutRightBack'
 			),
-*/
 			array(
 				'label' => 'Flash',
 				'value' => 'sklcflash'

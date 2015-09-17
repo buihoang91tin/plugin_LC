@@ -34,6 +34,10 @@ function as_extension_options_about_us() {
     include ( AS_EXTENSION_DIR . '/admin/about.php');
 }
 
+function as_extension_options_manage_feature() {
+    include ( AS_EXTENSION_DIR . '/admin/as-options-framework.php');
+}
+
 /**
  * Add menu item
  */
@@ -48,7 +52,7 @@ function as_extension_setup_menu() {
             'as_extension_options', 'About AS Extension For Live Composer', 'About Us', 'manage_options', 'as_extension_about_us', 'as_extension_options_about_us'
     );
     add_submenu_page(
-            'as_extension_options', 'About AS Extension For Live Composer', 'About Me', 'manage_options', 'as_extension_about_me', 'as_extension_options_about_me'
+            'as_extension_options', 'About AS Extension For Live Composer', 'Manage features modules', 'manage_options', 'as_extension_manage_feature', 'as_extension_options_manage_feature'
     );
 }
 
