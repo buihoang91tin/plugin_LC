@@ -49,10 +49,10 @@ function as_extension_setup_menu() {
             'AS Extension For Live Composer', 'AS Extension', 'manage_options', 'as_extension_options', 'as_extension_options_display'
     );
     add_submenu_page(
-            'as_extension_options', 'About AS Extension For Live Composer', 'About Us', 'manage_options', 'as_extension_about_us', 'as_extension_options_about_us'
+            'as_extension_options', 'About AS Extension For Live Composer', 'About Us', 'manage_options', 'as_extension_options', 'as_extension_options_about_us'
     );
     add_submenu_page(
-            'as_extension_options', 'About AS Extension For Live Composer', 'Manage features modules', 'manage_options', 'as_extension_manage_feature', 'as_extension_options_manage_feature'
+            'as_extension_options', 'Manage AS Extension For Live Composer', 'Manage features modules', 'manage_options', 'as_extension_manage_feature', 'as_extension_options_manage_feature'
     );
 }
 
