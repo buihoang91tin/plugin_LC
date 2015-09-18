@@ -32,15 +32,20 @@ global $dslc_plugin_options;
 							<tr>
 			                <th scope="row">"<?php echo($option_ID); ?>" <small>module</small></th>
 			                <td>
-							<select id='<?php echo $option_ID; ?>' name='<?php echo $section_ID; ?>[<?php echo $option_ID; ?>]'><?php
-								foreach ( $option['choices'] as $choice ) :
-									?><option value="<?php echo $choice['value']; ?>" <?php if ( $choice['value'] == $value ) echo 'selected="selected"'; ?> ><?php echo $choice['label'];?></option><?php
+								<?php foreach ( $option['choices'] as $choice ) : 
+									?>
+									
+									<input type="radio" name="<?php echo $section_ID; ?>[<?php echo $option_ID; ?>]" id="<?php echo $option_ID; ?>" value="<?php echo $choice['value']; ?>" <?php if ( $choice['value'] == $value ) {echo 'checked="checked"';} ?>>
+									<label for="<?php echo $section_ID; ?>[<?php echo $option_ID; ?>]"><?php echo $choice['label']; ?></label>
+									
+									
+									<?php 
 								endforeach;
-							?></select><?php
-							if ( isset( $dslc_plugin_options[$section_ID]['options'][$option_ID]['descr'] ) ) :
-								?><p class="description"><?php echo $dslc_plugin_options[$section_ID]['options'][$option_ID]['descr']; ?></p><?php 
-							endif;
-							?></td>
+								if ( isset( $dslc_plugin_options[$section_ID]['options'][$option_ID]['descr'] ) ) :
+									?><p class="description"><?php echo $dslc_plugin_options[$section_ID]['options'][$option_ID]['descr']; ?></p><?php 
+								endif;
+								?>
+							</td>
 				            </tr>
 				            <?php
 						}

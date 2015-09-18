@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: AS Extension For Live Composer
- * Plugin URI: http://www.example.com/
- * Description: Ultimate live composer extension packs
+ * Plugin URI: http://hqsolu.com
+ * Description: AS Extension - Ultimate live composer extension packs
  * Version: 1.0.0
- * Author: N/A
- * Author URI: N/A
+ * Author: hqsoluteam
+ * Author URI: hqsolu.com
  * License: N/A
  */
 /* Don't load me from dark side */
@@ -17,6 +17,7 @@ define('AS_EXTENSION_DIR', __DIR__);
 define('AS_EXTENSION_DIR_NAME', dirname(plugin_basename(__FILE__)));
 define('AS_EXTENSION_ABS', dirname(__FILE__));
 define('AS_EXTENSION_DEV_MODE', false);
+define('AS_EXTENSION_LINK','index.php?page=as_getting_start');
 
 /* Load this after all */
 
@@ -35,15 +36,22 @@ function as_extension_options_about_us() {
 }
 
 function as_extension_options_manage_feature() {
+    wp_enqueue_style( 'as-checkbox' );
     include ( AS_EXTENSION_DIR . '/admin/as-options-framework.php');
 }
+function as_extension_options_getting_start() {
+    
+    include ( AS_EXTENSION_DIR . '/admin/as-options-getting-start.php');
+}
+
 
 /**
  * Add menu item
  */
 function as_extension_setup_menu() {
-
+    wp_register_style( 'as-checkbox', plugins_url('/admin/css/as-checkbox.css', __FILE__) );
     global $as_extension_options;
+
 
     add_menu_page(
             'AS Extension For Live Composer', 'AS Extension', 'manage_options', 'as_extension_options', 'as_extension_options_display'
@@ -52,8 +60,11 @@ function as_extension_setup_menu() {
             'as_extension_options', 'About AS Extension For Live Composer', 'About Us', 'manage_options', 'as_extension_options', 'as_extension_options_about_us'
     );
     add_submenu_page(
-            'as_extension_options', 'Manage AS Extension For Live Composer', 'Manage features modules', 'manage_options', 'as_extension_manage_feature', 'as_extension_options_manage_feature'
+            'as_extension_options', 'Manage AS Extension For Live Composer', 'Manage modules', 'manage_options', 'as_extension_manage_feature', 'as_extension_options_manage_feature'
     );
+
+     add_dashboard_page( 'AS Extension Getting Start', 'AS Extension', 'manage_options', 'as_getting_start', 'as_extension_options_getting_start');
+     remove_submenu_page( 'index.php', 'as_getting_start' );
 }
 
 add_action('plugins_loaded', 'as_load_this_plugin_last', count(get_option('active_plugins')));
@@ -68,7 +79,25 @@ class asExtensionLoader {
      * AS Extension loader construction
      */
     public function __construct() {
+
         include_once AS_EXTENSION_ABS . DIRECTORY_SEPARATOR . 'loader.php';
     }
 
+}
+
+register_activation_hook( __FILE__, 'my_plugin_activate' );
+add_action('admin_init', 'my_plugin_redirect');
+
+function my_plugin_activate() {
+
+//hook vào after active ko fai hook vao active no chua active thi no ko cho e vao fai roi =.= hieu ko da
+    // Activation code here...
+    add_option('my_plugin_do_activation_redirect', true);
+}
+
+function my_plugin_redirect() {
+    if (get_option('my_plugin_do_activation_redirect', false)) {
+        delete_option('my_plugin_do_activation_redirect');
+        wp_redirect(AS_EXTENSION_LINK);
+    }
 }

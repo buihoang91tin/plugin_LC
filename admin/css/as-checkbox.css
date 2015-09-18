@@ -1,0 +1,69 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.radio-input {
+    display: none!important;
+}
+
+.radio-label {
+    position: relative;
+    cursor: pointer;
+    margin: 30px;
+    padding-left: 28px;
+}
+
+.radio-label:before, .radio-label:after {
+    position: absolute;
+    content: "";
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.radio-label:before {
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #1565C0;
+    -moz-box-shadow: inset 0 0 0 13px #E0E0E0;
+    -webkit-box-shadow: inset 0 0 0 13px #E0E0E0;
+    box-shadow: inset 0 0 0 13px #E0E0E0;
+}
+
+.radio-input:checked + .radio-label:before {
+    -moz-box-shadow: inset 0 0 0 4px #E0E0E0;
+    -webkit-box-shadow: inset 0 0 0 4px #E0E0E0;
+    box-shadow: inset 0 0 0 4px #E0E0E0;
+}
+
+.radio-label:after {
+    top: 49%;
+    left: 9px;
+    width: 54px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.3);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.radio-input:checked + .radio-label:after {
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    -moz-animation: ripple 1s forwards;
+    -webkit-animation: ripple 1s forwards;
+    animation: ripple 1s forwards;
+}
