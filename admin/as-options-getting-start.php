@@ -7,7 +7,7 @@
         <div class="dslc-badge"><img src="http://hqsolu.com/wp-content/uploads/2015/06/logo-white.png"></div>
 
         <h2 class="nav-tab-wrapper">
-			<a class="nav-tab nav-tab-active" href="<?php echo(AS_EXTENSION_LINK); ?>">
+			<a class="nav-tab nav-tab-active" href="<?php echo esc_url(AS_EXTENSION_LINK); ?>">
 				Getting Started			</a>
 		</h2>
 
@@ -19,16 +19,16 @@
 
                 <h4>Usage Documentation</h4>
                 <p>The usage documentation is available online. Make sure you check out those interactive tutorials, they'll give you a jump start at using Live Composer.
-                    <br><a target="_blank" href="<?php echo(AS_EXTENSION_LINK); ?>">Go To Usage Documentation →</a></p>
+                    <br><a target="_blank" href="<?php echo esc_url(AS_EXTENSION_LINK); ?>">Go To Usage Documentation →</a></p>
 
                 <h4>Developer Documentation</h4>
                 <p>If you're a developer who is interested in building custom modules for Live Composer give a check at the developer documentation.
-                    <br><a target="_blank" href="<?php echo(AS_EXTENSION_LINK); ?>">Go To Developer Documentation →</a></p>
+                    <br><a target="_blank" href="<?php echo esc_url(AS_EXTENSION_LINK); ?>">Go To Developer Documentation →</a></p>
 
                 <h4>Support</h4>
                 <p>If you run into any bugs or issues do let us know.
                     <br><strong>There is currently a discount on the premium version of support at $29 instead of $50.</strong>
-                    <br><a target="_blank" href="<?php echo(AS_EXTENSION_LINK); ?>">Go To Support →</a></p>
+                    <br><a target="_blank" href="<?php echo esc_url(AS_EXTENSION_LINK); ?>">Go To Support →</a></p>
 
             </div>
             <!-- .feature-section -->
@@ -44,11 +44,11 @@
 
                 <h4>Themes</h4>
                 <p>There are a lot of free and premium themes powered by Live Composer.
-                    <br><a target="_blank" href="<?php echo(AS_EXTENSION_LINK); ?>">Check Out The Themes →</a></p>
+                    <br><a target="_blank" href="<?php echo esc_url(AS_EXTENSION_LINK); ?>">Check Out The Themes →</a></p>
 
                 <h4>Add-Ons</h4>
                 <p>If you are looking for some extra functionality ( features, modules... ) there are free and premium add-ons.
-                    <br><a target="_blank" href="<?php echo(AS_EXTENSION_LINK); ?>">Check Out The Add-Ons →</a></p>
+                    <br><a target="_blank" href="<?php echo esc_url(AS_EXTENSION_LINK); ?>">Check Out The Add-Ons →</a></p>
 
             </div>
             <!-- .feature-section -->
