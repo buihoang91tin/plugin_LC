@@ -1,3 +1,11 @@
+<style>
+    .about-wrap .dslc-badge {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 150px!important;
+    }
+</style>
 <div id="wpbody-content" aria-label="Main content" tabindex="0">
 
     <div class="wrap about-wrap">

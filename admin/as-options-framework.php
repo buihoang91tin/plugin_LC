@@ -44,15 +44,21 @@ global $dslc_plugin_options;
 							<?php endif; ?>
 			                <th scope="row"><?php echo($option['label']); ?></th>
 			                <td>
+			                	<div class="switch switch-blue">
+
 								<?php foreach ( $option['choices'] as $choice ) : 
 									?>
-									<label for="<?php echo esc_attr($section_ID); ?>[<?php echo esc_attr($option_ID); ?>]"><?php if(strpos($choice['label'], 'Enabled')!==false){ echo 'ON';}else{echo 'OFF';} ?>
-									<input class="option-input radio" type="radio" name="<?php echo esc_attr($section_ID); ?>[<?php echo $option_ID; ?>]" id="<?php echo esc_attr($option_ID); ?>" value="<?php echo esc_attr($choice['value']); ?>" <?php if ( $choice['value'] == $value ) {echo 'checked="checked"';} ?>>
+									
+									<input class="switch-input" type="radio" name="<?php echo esc_attr($section_ID); ?>[<?php echo $option_ID; ?>]" id="<?php if ( strpos($choice['value'],'enabled') !== false ){echo esc_attr($option_ID).'_ON';}else {echo esc_attr($option_ID).'_OFF';} ?>" value="<?php echo esc_attr($choice['value']); ?>" <?php if ( $choice['value'] == $value ) {echo 'checked="checked"';} ?>>
+
+									<label for="<?php if ( strpos($choice['value'],'enabled') !== false ){echo esc_attr($option_ID).'_ON';}else {echo esc_attr($option_ID).'_OFF';} ?>" class="<?php if ( $choice['value'] == $value ) {echo 'switch-label switch-label-on';}else{echo 'switch-label switch-label-off';} ?>"><?php if(strpos($choice['label'], 'Enabled')!==false){ echo 'ON';}else{echo 'OFF';} ?>
 									</label>
-									
-									
+														
 									<?php 
-								endforeach;
+								endforeach; ?>
+									 
+								</div>
+								<?php
 								if ( isset( $dslc_plugin_options[$section_ID]['options'][$option_ID]['descr'] ) ) :
 									?><p class="description"><?php echo $dslc_plugin_options[$section_ID]['options'][$option_ID]['descr']; ?></p><?php 
 								endif;
@@ -76,6 +82,8 @@ global $dslc_plugin_options;
         <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes">
     </p>
 </form>
+<?php else : ?>
+	<h2 class="active_module_lc"> Live composer isn't Active! Plz Install or active Live Composer before use us Services</h2>
 <?php endif; ?>
 </div>
 </div>

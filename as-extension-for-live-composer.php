@@ -32,11 +32,14 @@ function as_extension_options_display($tab = '') {
 }
 
 function as_extension_options_about_us() {
+    wp_enqueue_style( 'about' );
+    wp_enqueue_style( 'about-rev' );
     include ( AS_EXTENSION_DIR . '/admin/about.php');
 }
 
 function as_extension_options_manage_feature() {
     wp_enqueue_style( 'as-checkbox' );
+    wp_enqueue_script('script_radio');
     include ( AS_EXTENSION_DIR . '/admin/as-options-framework.php');
 }
 function as_extension_options_getting_start() {
@@ -50,6 +53,9 @@ function as_extension_options_getting_start() {
  */
 function as_extension_setup_menu() {
     wp_register_style( 'as-checkbox', plugins_url('/admin/css/as-checkbox.css', __FILE__) );
+    wp_register_style( 'about', plugins_url('/admin/css/about.css', __FILE__) );
+    wp_register_style( 'about-rev', plugins_url('/admin/css/reponsive-about.css', __FILE__) );
+    wp_register_script( 'script_radio', plugins_url( '/admin/js/script.js', __FILE__ ) );
     global $as_extension_options;
 
 
