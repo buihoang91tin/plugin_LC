@@ -39,6 +39,10 @@ img.emoji{
     top: 20px;
     right: 0;
     width: 150px!important;
+    height: 150px;
+    background-image:url(../img/logo.png);
+    background-repeat:no-repeat;
+    background-size:contain;
 }
 
 

@@ -1,0 +1,58 @@
+.as-pricing-style-3 {
+	.as-pricing-title h3:before, 
+	.as-pricing-title h3:after{
+		display: none;
+	}
+    .as-pricing-title {
+        h3 {
+            position: relative;
+            display: block;
+        }
+        .as-icon-style {
+            margin-top: -10px;
+            width: 40px;
+            height: 40px;
+            display: inline;
+            float: right;
+            margin-right: 20px;
+            .relative-wraper {
+                .dslc-icon {
+                    position: relative;
+                    top: 5px;
+                    left: 7px;
+                }
+            }
+        }
+        .dslca-editable-content {
+            margin: 0 0 0 20px;
+            width: 70%;
+        }
+    }
+    .as-list-pricing-option-wrapper {
+        .dslc-accordion-item.dslc-inactive {
+            .dslc-accordion-header {
+                .dslc-accordion-title {
+                    margin: 0 0 0 20px;
+                    width: 50%;
+                }
+                .dslc-accordion-title_2 {
+                    float: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .dslc-accordion-item {
+            border-bottom: 1px solid #4c5f81;
+        }
+    }
+    .as-pricing-number-wrapper {
+        display: inline;
+        margin: 0 0 0 20px;
+        width: 70%;
+    }
+    .as-button-pricing {
+        display: inline;
+        float: right;
+        margin-right: 20px;
+    }
+}

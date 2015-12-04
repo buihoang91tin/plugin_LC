@@ -1,0 +1,59 @@
+.dslc-accordion-title .dslc-icon {
+    display: block;
+    width: 16px;
+    height: 100%;
+    position: absolute;
+    visibility: visible;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    border-left: 1px solid #eceef0;
+}
+
+.as-action-hook-accordion {
+    right: 80px;
+}
+
+.as-accordion-title,
+.as-accordion-title .dslc-icon {
+    @include transition (all .3s ease);
+}
+
+.as-accordion-item {
+    margin-top: 0 !important;
+    .as-accordion-header-color {
+        @include transition(0.5s);
+    }
+}
+
+.as-accordion-title {
+    position: relative;
+}
+
+.as-accordion-header-color {
+    .dslc-icon-angle-down {
+        position: absolute;
+        right: 1%;
+        top: 27%;
+        font-size: 1.5em;
+        color: red;
+        font-weight: 800;
+    }
+}
+
+.as-accordion-item.dslc-active {
+    .as-accordion-header-color {
+        .as-icon-arrow.dslc-icon-angle-down {
+            @include transform (rotate(180deg));
+        }
+    }
+}
+
+.as-icon-arrow {
+    @include transition (0.8s);
+}
+
+.as-accordion-delete.dslca-delete-accordion-hook {
+    margin-right: -20px !important;
+    margin-left: 20px !important;
+}

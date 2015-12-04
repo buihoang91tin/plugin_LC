@@ -1,0 +1,89 @@
+// This is link import file mixin.scss. The file description for css3 prefix, animation ... 
+@import "mixin/mixin";
+
+/* ---------------------------------------- */
+/* 1.  Base Style
+/* ---------------------------------------- */
+@import "customize";
+@import "general";
+@import "animation";
+@import "reponsive";
+
+/* ---------------------------------------- */
+/* 2.  Module Style
+/* ---------------------------------------- */
+
+/*** Befor After Image ***/
+@import "module/before_after/before_after_image";
+
+/*** Heading ***/
+@import "module/heading/heading_2";
+@import "module/heading/heading_3";
+
+/*** Infobox ***/
+@import "module/infobox/infobox_3";
+@import "module/infobox/infobox_5";
+@import "module/infobox/infobox_image";
+
+/*** Pricing ***/
+@import "module/pricing/pricing";
+@import "module/pricing/pricing_3";
+@import "module/pricing/pricing_table_2";
+
+/*** Accordion ***/
+@import "module/accordion";
+
+/*** Cicle Chart ***/
+@import "module/circle_chart";
+
+/*** Count Down ***/
+@import "module/count_down";
+
+/*** Counter ***/
+@import "module/counter";
+
+/*** Image ***/
+@import "module/image/image";
+@import "module/image/effect_image";
+
+/*** Partner ***/
+@import "module/partner";
+
+/*** Portfolio ***/
+@import "module/portfolio";
+
+/*** Post ***/
+@import "module/post";
+
+/*** Project Bar ***/
+@import "module/project_bar";
+
+/*** Rotating ***/
+@import "module/rotating";
+
+/*** Share Social ***/
+@import "module/share_social";
+
+/*** Staff ***/
+@import "module/staff";
+
+/*** Tabs ***/
+@import "module/tabs";
+
+/*** Testimonial ***/
+@import "module/testimonial";
+
+/*** Timeline ***/
+@import "module/timeline";
+
+/*** Video ***/
+@import "module/video";
+
+/*** Woo Product ***/
+@import "module/woo_product";
+
+/*** Subscribe ***/
+@import "widget/subscribe";
+
+/*** Newsletters ***/
+@import "widget/newsletters";

@@ -1,0 +1,40 @@
+.chart {
+    .percent-chart {
+        display: inline-block;
+        z-index: 2;
+        font-size: 25px;
+        line-height: 155px;
+        &:after {
+            content: '%';
+            margin-left: 0.1em;
+            font-size: 25px;
+        }
+    }
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.pie-column {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.pie-content {
+    h2 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-top: 5px;
+        letter-spacing: 1px;
+    }
+}

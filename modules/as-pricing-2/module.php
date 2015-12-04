@@ -1,7 +1,6 @@
 <?php
 
-class AS_Pricing_2 extends DSLC_Module
-{
+class AS_Pricing_2 extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -9,8 +8,7 @@ class AS_Pricing_2 extends DSLC_Module
     var $module_category;
     var $handle_like;
 
-    function __construct()
-    {
+    function __construct() {
 
         $this->module_id       = 'AS_Pricing_2';
         $this->module_title    = __('Pricing Table 2', 'dslc_string');
@@ -19,8 +17,7 @@ class AS_Pricing_2 extends DSLC_Module
         $this->handle_like     = 'accordion';
     }
 
-    function options()
-    {
+    function options() {
 
         $dslc_options = array(
             array(
@@ -44,23 +41,22 @@ class AS_Pricing_2 extends DSLC_Module
                 ),
             ),
             array(
-				'label'     => __( 'Style of Pricing', 'dslc_string' ),
-				'id'        => 'as_style_pricing',
-				'std'       => 'style_2',
-				'type'      => 'select',
-				'choices'   => array(
-					array(
-						'label' => __( 'Style 1 with button on top', 'dslc_string' ),
-						'value' => 'style_1'
-					),
-					array(
-						'label' => __( 'Style 2 with Button on bottom', 'dslc_string' ),
-						'value' => 'style_2'
-					),
-				),
-				'refresh_on_change' => true,
-			),
-			
+                'label'             => __('Style of Pricing', 'dslc_string'),
+                'id'                => 'as_style_pricing',
+                'std'               => 'style_2',
+                'type'              => 'select',
+                'choices'           => array(
+                    array(
+                        'label' => __('Style 1 with button on top', 'dslc_string'),
+                        'value' => 'style_1'
+                    ),
+                    array(
+                        'label' => __('Style 2 with Button on bottom', 'dslc_string'),
+                        'value' => 'style_2'
+                    ),
+                ),
+                'refresh_on_change' => true,
+            ),
             array(
                 'label'      => __('(hidden) Pricing Title', 'dslc_string'),
                 'id'         => 'as_pricing_title',
@@ -88,7 +84,6 @@ class AS_Pricing_2 extends DSLC_Module
             /**
              * General
              */
-            
             array(
                 'label'                 => __('BG Color', 'dslc_string'),
                 'id'                    => 'as_pricing_css_bg_color',
@@ -149,16 +144,16 @@ class AS_Pricing_2 extends DSLC_Module
                 'section'               => 'styling',
             ),
             array(
-				'label'                 => __( 'Border Radius', 'dslc_string' ),
-				'id'                    => 'as_pricing_css_border_radius',
-				'std'                   => '3',
-				'type'                  => 'slider',
-				'refresh_on_change'     => false,
-				'affect_on_change_el'   => '.as-pricing-wrapper',
-				'affect_on_change_rule' => 'border-radius',
-				'section'               => 'styling',
-				'ext'                   => 'px'
-			),
+                'label'                 => __('Border Radius', 'dslc_string'),
+                'id'                    => 'as_pricing_css_border_radius',
+                'std'                   => '3',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-pricing-wrapper',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'styling',
+                'ext'                   => 'px'
+            ),
             array(
                 'label'                 => __('Margin Bottom', 'dslc_string'),
                 'id'                    => 'as_pricing_css_margin_bottom',
@@ -217,29 +212,27 @@ class AS_Pricing_2 extends DSLC_Module
                 'section'               => 'styling',
                 'tab'                   => __('title', 'dslc_string')
             ),
-
             array(
-                'label' => __( 'Pricing Line Bottom', 'dslc_string' ),
-                'id' => 'as_pricing_css_title_line_bottom_text',
-                'std' => 'none',
-                'type' => 'select',
-                'choices' => array(
+                'label'                 => __('Pricing Line Bottom', 'dslc_string'),
+                'id'                    => 'as_pricing_css_title_line_bottom_text',
+                'std'                   => 'none',
+                'type'                  => 'select',
+                'choices'               => array(
                     array(
-                        'label' => __( 'Disable', 'dslc_string' ),
+                        'label' => __('Disable', 'dslc_string'),
                         'value' => 'none',
                     ),
                     array(
-                        'label' => __( 'Enable', 'dslc_string' ),
+                        'label' => __('Enable', 'dslc_string'),
                         'value' => '',
                     ),
                 ),
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-wrapper.as-pricing-style-2 .as-pricing-title h3:before,.as-pricing-wrapper.as-pricing-style-2 .as-pricing-title h3:after',
                 'affect_on_change_rule' => 'content',
-                'section'   => 'styling',
-                'tab'       => __('title', 'dslc_string')
+                'section'               => 'styling',
+                'tab'                   => __('title', 'dslc_string')
             ),
-
             array(
                 'label'                 => __('Border Width', 'dslc_string'),
                 'id'                    => 'as_pricing_css_title_border_width',
@@ -282,29 +275,29 @@ class AS_Pricing_2 extends DSLC_Module
                 'tab'                   => __('title', 'dslc_string')
             ),
             array(
-				'label'                 => __( 'Border Radius - Top', 'dslc_string' ),
-				'id'                    => 'as_pricing_css_title_border_radius_top',
-				'std'                   => '4',
-				'type'                  => 'slider',
-				'refresh_on_change'     => false,
-				'affect_on_change_el'   => '.as-pricing-title',
-				'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
-				'section'               => 'styling',
-				'tab'                   => __('title', 'dslc_string'),
-				'ext'                   => 'px'
-			),
-			array(
-				'label'                 => __( 'Border Radius - Bottom', 'dslc_string' ),
-				'id'                    => 'as_pricing_css_title_border_radius_bottom',
-				'std'                   => '0',
-				'type'                  => 'slider',
-				'refresh_on_change'     => false,
-				'affect_on_change_el'   => '.as-pricing-title',
-				'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
-				'section'               => 'styling',
-				'tab'                   => __('title', 'dslc_string'),
-				'ext'                   => 'px'
-			),
+                'label'                 => __('Border Radius - Top', 'dslc_string'),
+                'id'                    => 'as_pricing_css_title_border_radius_top',
+                'std'                   => '4',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
+                'section'               => 'styling',
+                'tab'                   => __('title', 'dslc_string'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Border Radius - Bottom', 'dslc_string'),
+                'id'                    => 'as_pricing_css_title_border_radius_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
+                'section'               => 'styling',
+                'tab'                   => __('title', 'dslc_string'),
+                'ext'                   => 'px'
+            ),
             array(
                 'label'                 => __('Color', 'dslc_string'),
                 'id'                    => 'as_pricing_css_title_color',
@@ -441,24 +434,23 @@ class AS_Pricing_2 extends DSLC_Module
              * Pricing Icon
              */
             array(
-                'label' => __( 'Pricing Icon', 'dslc_string' ),
-                'id' => 'as_pricing_label',
-                'std' => 'none',
-                'type' => 'select',
+                'label'   => __('Pricing Icon', 'dslc_string'),
+                'id'      => 'as_pricing_label',
+                'std'     => 'none',
+                'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __( 'Disable', 'dslc_string' ),
+                        'label' => __('Disable', 'dslc_string'),
                         'value' => 'none',
                     ),
                     array(
-                        'label' => __( 'Enable', 'dslc_string' ),
+                        'label' => __('Enable', 'dslc_string'),
                         'value' => 'free_label',
                     ),
                 ),
-                'section'   => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string')
+                'section' => 'styling',
+                'tab'     => __('pricing icon', 'dslc_string')
             ),
-
             array(
                 'label'                 => __('Square Size', 'dslc_string'),
                 'id'                    => 'as_pricing_icon_css_square_size',
@@ -468,10 +460,9 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string'),
+                'tab'                   => __('pricing icon', 'dslc_string'),
                 'ext'                   => 'px',
             ),
-
             array(
                 'label'                 => __('Top Icon', 'dslc_string'),
                 'id'                    => 'as_pricing_icon_css_top',
@@ -481,12 +472,11 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'top',
                 'section'               => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string'),
+                'tab'                   => __('pricing icon', 'dslc_string'),
                 'ext'                   => 'px',
-                'max'					=> 0,
-                'min'					=> -100,
+                'max'                   => 0,
+                'min'                   => -100,
             ),
-
             array(
                 'label'                 => __('Border Radius', 'dslc_string'),
                 'id'                    => 'as_pricing_icon_css_border_radius',
@@ -496,10 +486,9 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string'),
+                'tab'                   => __('pricing icon', 'dslc_string'),
                 'ext'                   => 'px',
             ),
-
             array(
                 'label'                 => __('Text Align', 'dslc_string'),
                 'id'                    => 'as_pricing_css_icon_align',
@@ -511,16 +500,15 @@ class AS_Pricing_2 extends DSLC_Module
                 'section'               => 'styling',
                 'tab'                   => __('pricing icon', 'dslc_string'),
             ),
-
             array(
-				'label' => __( 'Icon', 'dslc_string' ),
-				'id' => 'icon_id',
-				'std' => 'comments',
-				'type' => 'icon',
-				'section' => 'styling',
-				'tab' => __( 'pricing icon', 'dslc_string' ),
-				'include_in_preset' => false
-			),
+                'label'             => __('Icon', 'dslc_string'),
+                'id'                => 'icon_id',
+                'std'               => 'comments',
+                'type'              => 'icon',
+                'section'           => 'styling',
+                'tab'               => __('pricing icon', 'dslc_string'),
+                'include_in_preset' => false
+            ),
             array(
                 'label'                 => __('BG Color', 'dslc_string'),
                 'id'                    => 'as_pricing_icon_bg_color',
@@ -530,9 +518,8 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string')
+                'tab'                   => __('pricing icon', 'dslc_string')
             ),
-
             array(
                 'label'                 => __('Color Label', 'dslc_string'),
                 'id'                    => 'as_pricing_label_css_number_color',
@@ -542,7 +529,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string')
+                'tab'                   => __('pricing icon', 'dslc_string')
             ),
             array(
                 'label'                 => __('Font Size', 'dslc_string'),
@@ -553,7 +540,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string'),
+                'tab'                   => __('pricing icon', 'dslc_string'),
                 'ext'                   => 'px',
             ),
             array(
@@ -565,10 +552,9 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'padding',
                 'section'               => 'styling',
-                'tab'       => __('pricing icon', 'dslc_string'),
+                'tab'                   => __('pricing icon', 'dslc_string'),
                 'ext'                   => 'px',
             ),
-
             /**
              * Pricing Number
              */
@@ -583,7 +569,6 @@ class AS_Pricing_2 extends DSLC_Module
                 'section'               => 'styling',
                 'tab'                   => __('pricing number', 'dslc_string')
             ),
-
             array(
                 'label'                 => __('Background', 'dslc_string'),
                 'id'                    => 'as_pricing_css_number_background',
@@ -595,7 +580,6 @@ class AS_Pricing_2 extends DSLC_Module
                 'section'               => 'styling',
                 'tab'                   => __('pricing number', 'dslc_string')
             ),
-
             array(
                 'label'             => __('Pricing Number', 'dslc_string'),
                 'id'                => 'as_pricing_css_number',
@@ -625,7 +609,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing number', 'dslc_string'),
+                'tab'                   => __('pricing number', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -637,7 +621,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing number', 'dslc_string'),
+                'tab'                   => __('pricing number', 'dslc_string'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
@@ -652,7 +636,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing number', 'dslc_string'),
+                'tab'                   => __('pricing number', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Line Height', 'dslc_string'),
@@ -663,7 +647,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing number', 'dslc_string'),
+                'tab'                   => __('pricing number', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -676,7 +660,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'               	=> __('pricing number', 'dslc_string'),
+                'tab'                   => __('pricing number', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'dslc_string'),
@@ -688,30 +672,30 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'               	=> __('pricing number', 'dslc_string'),
+                'tab'                   => __('pricing number', 'dslc_string'),
             ),
             /**
              * Currency
              */
             array(
-				'label'     => __( 'Position of Currency', 'dslc_string' ),
-				'id'        => 'as_style_position_currency',
-				'std'       => 'style_1',
-				'type'      => 'select',
-				'choices'   => array(
-					array(
-						'label' => __( 'Position top left', 'dslc_string' ),
-						'value' => 'style_1'
-					),
-					array(
-						'label' => __( 'Position top right', 'dslc_string' ),
-						'value' => 'style_2'
-					),
-				),
-				'refresh_on_change' => true,
-				'section'           => 'styling',
-				'tab'               => __('pricing currency', 'dslc_string')
-			),
+                'label'             => __('Position of Currency', 'dslc_string'),
+                'id'                => 'as_style_position_currency',
+                'std'               => 'style_1',
+                'type'              => 'select',
+                'choices'           => array(
+                    array(
+                        'label' => __('Position top left', 'dslc_string'),
+                        'value' => 'style_1'
+                    ),
+                    array(
+                        'label' => __('Position top right', 'dslc_string'),
+                        'value' => 'style_2'
+                    ),
+                ),
+                'refresh_on_change' => true,
+                'section'           => 'styling',
+                'tab'               => __('pricing currency', 'dslc_string')
+            ),
             array(
                 'label'             => __('Pricing Currency', 'dslc_string'),
                 'id'                => 'as_pricing_css_currency',
@@ -732,7 +716,6 @@ class AS_Pricing_2 extends DSLC_Module
                 'section'               => 'styling',
                 'tab'                   => __('pricing currency', 'dslc_string')
             ),
-
             array(
                 'label'                 => __('Font Size', 'dslc_string'),
                 'id'                    => 'as_pricing_css_currency_font_size',
@@ -742,7 +725,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing currency', 'dslc_string'),
+                'tab'                   => __('pricing currency', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -754,7 +737,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing currency', 'dslc_string'),
+                'tab'                   => __('pricing currency', 'dslc_string'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
@@ -769,7 +752,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing currency', 'dslc_string'),
+                'tab'                   => __('pricing currency', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Line Height', 'dslc_string'),
@@ -780,7 +763,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing currency', 'dslc_string'),
+                'tab'                   => __('pricing currency', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -792,7 +775,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing currency', 'dslc_string'),
+                'tab'                   => __('pricing currency', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             /**
@@ -827,7 +810,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing time', 'dslc_string'),
+                'tab'                   => __('pricing time', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -839,7 +822,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing time', 'dslc_string'),
+                'tab'                   => __('pricing time', 'dslc_string'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
@@ -854,7 +837,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing time', 'dslc_string'),
+                'tab'                   => __('pricing time', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Line Height', 'dslc_string'),
@@ -865,7 +848,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing time', 'dslc_string'),
+                'tab'                   => __('pricing time', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -877,7 +860,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing time', 'dslc_string'),
+                'tab'                   => __('pricing time', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             /**
@@ -891,8 +874,8 @@ class AS_Pricing_2 extends DSLC_Module
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'text-align',
-                'section' 				=> 'styling',
-				'tab' 					=> __( 'pricing option', 'dslc_string' ),
+                'section'               => 'styling',
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('BG Color of nth-child(odd)', 'dslc_string'),
@@ -903,7 +886,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item:nth-child(odd)',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab' 					=> __( 'pricing option', 'dslc_string' ),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('BG Color of nth-child(even)', 'dslc_string'),
@@ -914,7 +897,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item:nth-child(even)',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab' 					=> __( 'pricing option', 'dslc_string' ),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Border Color', 'dslc_string'),
@@ -925,7 +908,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab' 					=> __( 'pricing option', 'dslc_string' ),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Border Width', 'dslc_string'),
@@ -937,7 +920,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab' 					=> __( 'pricing option', 'dslc_string' ),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Borders', 'dslc_string'),
@@ -966,10 +949,9 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab' 					=> __( 'pricing option', 'dslc_string' ),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
-            
-			array(
+            array(
                 'label'                 => __('Color', 'dslc_string'),
                 'id'                    => 'as_pricing_css_option_color',
                 'std'                   => '#2B3D4E',
@@ -989,7 +971,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -1001,7 +983,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
@@ -1016,7 +998,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Line Height', 'dslc_string'),
@@ -1027,7 +1009,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -1039,7 +1021,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -1052,7 +1034,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Padding Vertical', 'dslc_string'),
@@ -1064,7 +1046,7 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'dslc_string'),
@@ -1076,48 +1058,46 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'               	=> __('pricing option', 'dslc_string'),
+                'tab'                   => __('pricing option', 'dslc_string'),
             ),
-            
             /**
              *  Pricing Button Style
              */
             array(
-                'label'      => __( 'Button Text', 'dslc_string' ),
+                'label'      => __('Button Text', 'dslc_string'),
                 'id'         => 'as_button_text',
                 'std'        => 'CLICK TO EDIT',
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
             array(
-                'label'     => __( 'URL', 'dslc_string' ),
-                'id'        => 'as_button_url',
-                'std'       => '#',
-                'type'      => 'text',
-                'section'   => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'label'   => __('URL', 'dslc_string'),
+                'id'      => 'as_button_url',
+                'std'     => '#',
+                'type'    => 'text',
+                'section' => 'styling',
+                'tab'     => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'   => __( 'Open in', 'dslc_string' ),
+                'label'   => __('Open in', 'dslc_string'),
                 'id'      => 'as_button_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __( 'Same Tab', 'dslc_string' ),
+                        'label' => __('Same Tab', 'dslc_string'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __( 'New Tab', 'dslc_string' ),
+                        'label' => __('New Tab', 'dslc_string'),
                         'value' => '_blank',
                     ),
                 ),
-                'section'   => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'section' => 'styling',
+                'tab'     => __('pricing button', 'dslc_string'),
             ),
-
             array(
-                'label'                 => __( 'Align', 'dslc_string' ),
+                'label'                 => __('Align', 'dslc_string'),
                 'id'                    => 'as_button_css_align_position',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -1125,10 +1105,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'BG Color', 'dslc_string' ),
+                'label'                 => __('BG Color', 'dslc_string'),
                 'id'                    => 'as_button_css_bg_color',
                 'std'                   => '#ef3a43',
                 'type'                  => 'color',
@@ -1136,10 +1116,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'BG Color - Hover', 'dslc_string' ),
+                'label'                 => __('BG Color - Hover', 'dslc_string'),
                 'id'                    => 'as_button_css_bg_color_hover',
                 'std'                   => '#f86970',
                 'type'                  => 'color',
@@ -1147,10 +1127,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Border Color', 'dslc_string' ),
+                'label'                 => __('Border Color', 'dslc_string'),
                 'id'                    => 'as_button_css_border_color',
                 'std'                   => '#ef3a43',
                 'type'                  => 'color',
@@ -1158,10 +1138,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Border Color - Hover', 'dslc_string' ),
+                'label'                 => __('Border Color - Hover', 'dslc_string'),
                 'id'                    => 'as_button_css_border_color_hover',
                 'std'                   => '#f86970',
                 'type'                  => 'color',
@@ -1169,19 +1149,19 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'             => __( 'Duration when hover(ms)', 'dslc_string' ),
+                'label'             => __('Duration when hover(ms)', 'dslc_string'),
                 'id'                => 'as_button_css_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'               => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Border Width', 'dslc_string' ),
+                'label'                 => __('Border Width', 'dslc_string'),
                 'id'                    => 'as_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1190,28 +1170,28 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'   => __( 'Borders', 'dslc_string' ),
-                'id'      => 'as_button_css_border_trbl',
-                'std'     => 'top right bottom left',
-                'type'    => 'checkbox',
-                'choices' => array(
+                'label'                 => __('Borders', 'dslc_string'),
+                'id'                    => 'as_button_css_border_trbl',
+                'std'                   => 'top right bottom left',
+                'type'                  => 'checkbox',
+                'choices'               => array(
                     array(
-                        'label' => __( 'Top', 'dslc_string' ),
+                        'label' => __('Top', 'dslc_string'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __( 'Right', 'dslc_string' ),
+                        'label' => __('Right', 'dslc_string'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __( 'Bottom', 'dslc_string' ),
+                        'label' => __('Bottom', 'dslc_string'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __( 'Left', 'dslc_string' ),
+                        'label' => __('Left', 'dslc_string'),
                         'value' => 'left'
                     ),
                 ),
@@ -1219,10 +1199,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Border Radius', 'dslc_string' ),
+                'label'                 => __('Border Radius', 'dslc_string'),
                 'id'                    => 'as_button_css_border_radius',
                 'std'                   => '34',
                 'type'                  => 'slider',
@@ -1231,10 +1211,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Margin Top', 'dslc_string' ),
+                'label'                 => __('Margin Top', 'dslc_string'),
                 'id'                    => 'as_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1243,10 +1223,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Margin Bottom', 'dslc_string' ),
+                'label'                 => __('Margin Bottom', 'dslc_string'),
                 'id'                    => 'as_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1255,10 +1235,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Padding Vertical', 'dslc_string' ),
+                'label'                 => __('Padding Vertical', 'dslc_string'),
                 'id'                    => 'as_button_css_padding_vertical',
                 'std'                   => '7',
                 'type'                  => 'slider',
@@ -1267,10 +1247,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Padding Horizontal', 'dslc_string' ),
+                'label'                 => __('Padding Horizontal', 'dslc_string'),
                 'id'                    => 'as_button_css_padding_horizontal',
                 'std'                   => '19',
                 'type'                  => 'slider',
@@ -1279,20 +1259,20 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             array(
-                'label'   => __( 'Width', 'dslc_string' ),
-                'id'      => 'as_button_css_width',
-                'std'     => 'inline-block',
-                'type'    => 'select',
-                'choices' => array(
+                'label'                 => __('Width', 'dslc_string'),
+                'id'                    => 'as_button_css_width',
+                'std'                   => 'inline-block',
+                'type'                  => 'select',
+                'choices'               => array(
                     array(
-                        'label' => __( 'Automatic', 'dslc_string' ),
+                        'label' => __('Automatic', 'dslc_string'),
                         'value' => 'inline-block'
                     ),
                     array(
-                        'label' => __( 'Full Width', 'dslc_string' ),
+                        'label' => __('Full Width', 'dslc_string'),
                         'value' => 'block'
                     ),
                 ),
@@ -1300,13 +1280,13 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'display',
                 'section'               => 'styling',
-                'tab'       => __('pricing button', 'dslc_string'),
+                'tab'                   => __('pricing button', 'dslc_string'),
             ),
             /**
              * Out line Style
              */
             array(
-                'label'                 => __( 'Out Line Width', 'dslc_string' ),
+                'label'                 => __('Out Line Width', 'dslc_string'),
                 'id'                    => 'as_button_out_line_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1314,11 +1294,11 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __( 'Out Line Style', 'dslc_string' ),
+                'tab'                   => __('Out Line Style', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __( 'Out Line Offset', 'dslc_string' ),
+                'label'                 => __('Out Line Offset', 'dslc_string'),
                 'id'                    => 'as_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1326,11 +1306,11 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __( 'Out Line Style', 'dslc_string' ),
+                'tab'                   => __('Out Line Style', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __( 'Out Line Color', 'dslc_string' ),
+                'label'                 => __('Out Line Color', 'dslc_string'),
                 'id'                    => 'as_button_out_line_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -1338,10 +1318,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __( 'Out Line Style', 'dslc_string' ),
+                'tab'                   => __('Out Line Style', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Out Line Color Hover', 'dslc_string' ),
+                'label'                 => __('Out Line Color Hover', 'dslc_string'),
                 'id'                    => 'as_button_out_line_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -1349,28 +1329,28 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __( 'Out Line Style', 'dslc_string' ),
+                'tab'                   => __('Out Line Style', 'dslc_string'),
             ),
             array(
-                'label'   => __( 'Out Line Style', 'dslc_string' ) ,
-                'id'      => 'as_button_out_line_style',
-                'std'     => 'solid',
-                'type'    => 'select',
-                'choices' => array(
+                'label'                 => __('Out Line Style', 'dslc_string'),
+                'id'                    => 'as_button_out_line_style',
+                'std'                   => 'solid',
+                'type'                  => 'select',
+                'choices'               => array(
                     array(
-                        'label' => __( 'Invisible', 'dslc_string' ) ,
+                        'label' => __('Invisible', 'dslc_string'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __( 'Solid', 'dslc_string' ) ,
+                        'label' => __('Solid', 'dslc_string'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __( 'Dashed', 'dslc_string' ) ,
+                        'label' => __('Dashed', 'dslc_string'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __( 'Dotted', 'dslc_string' ) ,
+                        'label' => __('Dotted', 'dslc_string'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -1378,14 +1358,13 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __( 'Out Line Style', 'dslc_string' ),
+                'tab'                   => __('Out Line Style', 'dslc_string'),
             ),
             /**
              * Typography
              */
-
             array(
-                'label'                 => __( 'Color', 'dslc_string' ),
+                'label'                 => __('Color', 'dslc_string'),
                 'id'                    => 'as_button_css_button_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -1393,10 +1372,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __( 'typography button', 'dslc_string' ),
+                'tab'                   => __('typography button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Color - Hover', 'dslc_string' ),
+                'label'                 => __('Color - Hover', 'dslc_string'),
                 'id'                    => 'as_button_css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -1404,10 +1383,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __( 'typography button', 'dslc_string' ),
+                'tab'                   => __('typography button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Font Size', 'dslc_string' ),
+                'label'                 => __('Font Size', 'dslc_string'),
                 'id'                    => 'as_button_css_button_font_size',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1415,11 +1394,11 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __( 'typography button', 'dslc_string' ),
+                'tab'                   => __('typography button', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __( 'Font Weight', 'dslc_string' ),
+                'label'                 => __('Font Weight', 'dslc_string'),
                 'id'                    => 'as_button_css_button_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1427,14 +1406,14 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __( 'typography button', 'dslc_string' ),
+                'tab'                   => __('typography button', 'dslc_string'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __( 'Font Family', 'dslc_string' ),
+                'label'                 => __('Font Family', 'dslc_string'),
                 'id'                    => 'as_button_css_button_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1442,10 +1421,10 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __( 'typography button', 'dslc_string' ),
+                'tab'                   => __('typography button', 'dslc_string'),
             ),
             array(
-                'label'                 => __( 'Letter Spacing', 'dslc_string' ),
+                'label'                 => __('Letter Spacing', 'dslc_string'),
                 'id'                    => 'as_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1453,136 +1432,1482 @@ class AS_Pricing_2 extends DSLC_Module
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __( 'typography button', 'dslc_string' ),
+                'tab'                   => __('typography button', 'dslc_string'),
                 'ext'                   => 'px'
             ),
-
-            /**
-             * Responsive Tablet
-             */
-            array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+            /**             * Responsive Tablet */
+            array
+                (
+                'label'   => 'Responsive Styling',
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
-                'choices' => array(
-                    array(
-                        'label' => __('Disabled', 'dslc_string'),
+                'choices' => array
+                    (
+                    0 => array
+                        (
+                        'label' => 'Disabled',
                         'value' => 'disabled'
                     ),
-                    array(
-                        'label' => __('Enabled', 'dslc_string'),
+                    1 => array
+                        (
+                        'label' => 'Enabled',
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => 'tablet',
             ),
-            array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
-                'id'                    => 'css_res_t_margin_bottom',
+            array
+                (
+                'label'                 => __('Border Width ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-wrapper',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_border_radius',
+                'std'                   => '3',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-wrapper',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_margin_bottom',
+                'std'                   => '45',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
                 'affect_on_change_el'   => '.as-pricing-wrapper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px',
+                'tab'                   => 'tablet'
             ),
-            array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
-                'id'                    => 'css_res_t_padding_vertical',
+            array
+                (
+                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
+                'refresh_on_change'     => '',
                 'affect_on_change_el'   => '.as-pricing-wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px',
+                'tab'                   => 'tablet'
             ),
-            array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
-                'id'                    => 'css_res_t_padding_horizontal',
+            array
+                (
+                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
+                'refresh_on_change'     => '',
                 'affect_on_change_el'   => '.as-pricing-wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px',
+                'tab'                   => 'tablet'
             ),
-            
-            /**
-             * Responsive phone
-             */
-            array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+            array
+                (
+                'label'                 => __('Border Width( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius - Top( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_border_radius_top',
+                'std'                   => '4',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius - Bottom( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_border_radius_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_font_size',
+                'std'                   => '22',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Margin Top( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_margin_top',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'margin-top',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_letter',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_margin_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_padding_vertical',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_title_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Square Size( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_icon_css_square_size',
+                'std'                   => '60',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'width,height',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Top Icon( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_icon_css_top',
+                'std'                   => '-30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'top',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px',
+                'max'                   => '0',
+                'min'                   => '-100'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_icon_css_border_radius',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_icon_css_font_size',
+                'std'                   => '40',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Padding( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_icon_css_padding',
+                'std'                   => '10',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'padding',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_number_font_size',
+                'std'                   => '36',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_number_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_number_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_number_padding_vertical',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number-wrapper',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_number_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number-wrapper',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_currency_font_size',
+                'std'                   => '18',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_currency_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_currency_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_currency_letter',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_time_font_size',
+                'std'                   => '18',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_time_font_weight',
+                'std'                   => '600',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_time_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_time_letter',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Border Width( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_option_line_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_option_font_size',
+                'std'                   => '14',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_option_font_weight',
+                'std'                   => '600',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_option_lheight',
+                'std'                   => '18',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_option_letter',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Margin bottom( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_margin_bottom_option',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_padding_vertical_option',
+                'std'                   => '20',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_pricing_css_padding_horizontal_option',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Border Width( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_border_radius',
+                'std'                   => '34',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Margin Top( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_margin_top',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing',
+                'affect_on_change_rule' => 'margin-top',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_margin_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_padding_vertical',
+                'std'                   => '7',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_padding_horizontal',
+                'std'                   => '19',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_out_line_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'outline-width',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_out_line_offset',
+                'std'                   => '3',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'outline-offset',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( typography button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_button_font_size',
+                'std'                   => '16',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( typography button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_button_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( typography button ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_as_button_css_button_letter_spacing',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            /**             * Responsive phone */
+            array
+                (
+                'label'   => 'Responsive Styling',
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
-                'choices' => array(
-                    array(
-                        'label' => __('Disabled', 'dslc_string'),
+                'choices' => array
+                    (
+                    0 => array
+                        (
+                        'label' => 'Disabled',
                         'value' => 'disabled'
                     ),
-                    array(
-                        'label' => __('Enabled', 'dslc_string'),
+                    1 => array
+                        (
+                        'label' => 'Enabled',
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'dslc_string'),
+                'tab'     => 'phone',
             ),
-            array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
-                'id'                    => 'css_res_p_margin_bottom',
+            array
+                (
+                'label'                 => __('Border Width ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-wrapper',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_border_radius',
+                'std'                   => '3',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-wrapper',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_margin_bottom',
+                'std'                   => '45',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
                 'affect_on_change_el'   => '.as-pricing-wrapper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px',
+                'tab'                   => 'phone'
             ),
-            array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
-                'id'                    => 'css_res_p_padding_vertical',
+            array
+                (
+                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
+                'refresh_on_change'     => '',
                 'affect_on_change_el'   => '.as-pricing-wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px',
+                'tab'                   => 'phone'
             ),
-            array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
-                'id'                    => 'css_res_p_padding_horizontal',
+            array
+                (
+                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
+                'refresh_on_change'     => '',
                 'affect_on_change_el'   => '.as-pricing-wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px',
+                'tab'                   => 'phone'
             ),
-            
+            array
+                (
+                'label'                 => __('Border Width( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius - Top( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_border_radius_top',
+                'std'                   => '4',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius - Bottom( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_border_radius_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_font_size',
+                'std'                   => '22',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Margin Top( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_margin_top',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'margin-top',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_letter',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title h3',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_margin_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_padding_vertical',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( title ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_title_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-title',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Square Size( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_icon_css_square_size',
+                'std'                   => '60',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'width,height',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Top Icon( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_icon_css_top',
+                'std'                   => '-30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'top',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px',
+                'max'                   => '0',
+                'min'                   => '-100'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_icon_css_border_radius',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_icon_css_font_size',
+                'std'                   => '40',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Padding( pricing icon ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_icon_css_padding',
+                'std'                   => '10',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.dslc-icon',
+                'affect_on_change_rule' => 'padding',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_number_font_size',
+                'std'                   => '36',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_number_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_number_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_number_padding_vertical',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number-wrapper',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( pricing number ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_number_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-number-wrapper',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_currency_font_size',
+                'std'                   => '18',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_currency_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_currency_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( pricing currency ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_currency_letter',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-currency',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_time_font_size',
+                'std'                   => '18',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_time_font_weight',
+                'std'                   => '600',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_time_lheight',
+                'std'                   => '24',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( pricing time ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_time_letter',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-pricing-time',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Border Width( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_option_line_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_option_font_size',
+                'std'                   => '14',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_option_font_weight',
+                'std'                   => '600',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Line Height( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_option_lheight',
+                'std'                   => '18',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_option_letter',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Margin bottom( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_margin_bottom_option',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_padding_vertical_option',
+                'std'                   => '20',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( pricing option ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_pricing_css_padding_horizontal_option',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Border Width( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_border_radius',
+                'std'                   => '34',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Margin Top( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_margin_top',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing',
+                'affect_on_change_rule' => 'margin-top',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_margin_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Padding Vertical( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_padding_vertical',
+                'std'                   => '7',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Padding Horizontal( pricing button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_padding_horizontal',
+                'std'                   => '19',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_out_line_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'outline-width',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_out_line_offset',
+                'std'                   => '3',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'outline-offset',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Size( typography button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_button_font_size',
+                'std'                   => '16',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array
+                (
+                'label'                 => __('Font Weight( typography button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_button_font_weight',
+                'std'                   => '700',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '',
+                'min'                   => '100',
+                'max'                   => '900',
+                'increment'             => '100'
+            ),
+            array
+                (
+                'label'                 => __('Letter Spacing( typography button ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_as_button_css_button_letter_spacing',
+                'std'                   => '1',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-button-pricing a',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            )
+                ,
         );
-
         $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
         $dslc_options = array_merge($dslc_options, $this->presets_options());
 
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options)
-    {
+    function output($options) {
 
         global $dslc_active;
 
@@ -1597,99 +2922,102 @@ class AS_Pricing_2 extends DSLC_Module
 
         $accordion_nav = explode('(dslc_sep)', trim($options['accordion_nav']));
         ?>
-		<?php 
-	        $style_pricing = '';
-	        if( $options['as_style_pricing'] == 'style_2'){ 
-				$style_pricing = ' as-pricing-style-2';
-			}       
-	    ?>
+        <?php
+        $style_pricing = '';
+        if ($options['as_style_pricing'] == 'style_2') {
+            $style_pricing = ' as-pricing-style-2';
+        }
+        ?>
         <div class="dslc-accordion as-pricing-wrapper as-no-hidden as-pricing-style-2">
-	        <?php if( $options['as_pricing_label'] != 'none'){?>
-	        		<div class="dslc-info-box-icon">
-						<span class="dslc-icon dslc-icon-<?php echo $options['icon_id']; ?>"></span>
-					</div>
-	        <?php } ?>
-	        
-            <div class="as-pricing-title"><h3 class="dslca-editable-content" data-id="as_pricing_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo trim($options['as_pricing_title']); ?></h3></div>
+            <?php if ($options['as_pricing_label'] != 'none') { ?>
+                <div class="dslc-info-box-icon">
+                    <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['icon_id']); ?>"></span>
+                </div>
+            <?php } ?>
+
+            <div class="as-pricing-title"><h3 class="dslca-editable-content" data-id="as_pricing_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_pricing_title']); ?></h3></div>
             <div class="as-pricing-number-wrapper">
-	            <?php if( $options['as_style_position_currency'] == 'style_1' ){?>
-	            	<sup class="as-pricing-currency"><?php echo trim($options['as_pricing_css_currency']); ?></sup>
-	            <?php } ?>
-	            <span class="as-pricing-number"><?php echo trim($options['as_pricing_css_number']); ?></span>
-	            <?php if( $options['as_style_position_currency'] == 'style_2' ){?>
-	            	<sup class="as-pricing-currency"><?php echo trim($options['as_pricing_css_currency']); ?></sup>
-	            <?php } ?>
-	            <span class="as-pricing-time"><?php echo trim($options['as_pricing_css_time']); ?></span>
-	        </div>
-	        <?php if( $options['as_style_pricing'] == 'style_1'){ ?>
-		        <div class="as-button-pricing">
-		            <?php
-		                $duration_hover = '';
-		                $value_duration = $options['as_button_css_duration_hover'];
-		                if ( $value_duration != '' ){
-		                    $duration_hover = 'style="-webkit-transition: all '. $value_duration .'ms ease;-moz-transition: all '. $value_duration .'ms ease;-ms-transition: all '. $value_duration .'ms ease;-o-transition: all '. $value_duration .'ms ease;transition: all '. $value_duration .'ms ease;"';
-		                }
-		            ?>
-		            <a href="<?php echo do_shortcode( $options['as_button_url'] ); ?>" target="<?php echo $options['as_button_target']; ?>" <?php echo $duration_hover; ?>>
-		                <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ( $dslc_is_admin ) echo 'contenteditable'; ?>><?php echo $options['as_button_text']; ?></span>
-		            </a>
-		        </div>
-		    <?php } ?>
-	        <ul class="as-list-pricing-option-wrapper">
-	            <?php if (is_array($accordion_nav) && count($accordion_nav) > 0) : ?>
-	                <?php foreach ($accordion_nav as $accordion_nav_content) : ?>
-	
-	                    <li class="dslc-accordion-item">
-	                        <div class="dslc-accordion-header">
-	                            <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($accordion_nav_content); ?></span>
-	                            <?php if ($dslc_is_admin) : ?>
-	                                <div class="dslca-accordion-action-hooks">
-	                                    <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
-	                                    <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
-	                                    <span class="dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
-	                                </div>
-	                            <?php endif; ?>
-	                        </div>
-	                    </li><!-- .dslc-accordion-item -->
-	
-	                <?php endforeach; ?>
-	
-	            <?php else : ?>
-	
-	                <li class="dslc-accordion-item">
-	                    <div class="dslc-accordion-header">
-	                        <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'dslc_string'); ?></span>
-	                        <?php if ($dslc_is_admin) : ?>
-	                            <div class="dslca-accordion-action-hooks">
-	                                <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
-	                                <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
-	                                <span class="dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
-	                            </div>
-	                        <?php endif; ?>
-	                    </div>
-	                </li><!-- .dslc-accordion-item -->
-	
-	            <?php endif; ?>
-			</ul>
+                <?php if ($options['as_style_position_currency'] == 'style_1') { ?>
+                    <sup class="as-pricing-currency"><?php echo esc_html($options['as_pricing_css_currency']); ?></sup>
+                <?php } ?>
+                <span class="as-pricing-number"><?php echo esc_html($options['as_pricing_css_number']); ?></span>
+                <?php if ($options['as_style_position_currency'] == 'style_2') { ?>
+                    <sup class="as-pricing-currency"><?php echo esc_html($options['as_pricing_css_currency']); ?></sup>
+                <?php } ?>
+                <span class="as-pricing-time"><?php echo esc_html($options['as_pricing_css_time']); ?></span>
+            </div>
+            <?php if ($options['as_style_pricing'] == 'style_1') { ?>
+                <div class="as-button-pricing">
+                    <?php
+                    $duration_hover = '';
+                    $value_duration = $options['as_button_css_duration_hover'];
+                    if ($value_duration != '') {
+                        $duration_hover = 'style="-webkit-transition: all ' . $value_duration . 'ms ease;-moz-transition: all ' . $value_duration . 'ms ease;-ms-transition: all ' . $value_duration . 'ms ease;-o-transition: all ' . $value_duration . 'ms ease;transition: all ' . $value_duration . 'ms ease;"';
+                    }
+                    ?>
+                    <a href="<?php echo do_shortcode($options['as_button_url']); ?>" target="<?php echo esc_attr($options['as_button_target']); ?>" <?php echo $duration_hover; ?>>
+                        <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_button_text']); ?></span>
+                    </a>
+                </div>
+            <?php } ?>
+            <ul class="as-list-pricing-option-wrapper">
+                <?php if (is_array($accordion_nav) && count($accordion_nav) > 0) : ?>
+                    <?php
+                    foreach ($accordion_nav as
+                            $accordion_nav_content) :
+                        ?>
+
+                        <li class="dslc-accordion-item">
+                            <div class="dslc-accordion-header">
+                                <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($accordion_nav_content); ?></span>
+                                <?php if ($dslc_is_admin) : ?>
+                                    <div class="dslca-accordion-action-hooks">
+                                        <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
+                                        <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
+                                        <span class="dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </li><!-- .dslc-accordion-item -->
+
+                    <?php endforeach; ?>
+
+                <?php else : ?>
+
+                    <li class="dslc-accordion-item">
+                        <div class="dslc-accordion-header">
+                            <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'dslc_string'); ?></span>
+                            <?php if ($dslc_is_admin) : ?>
+                                <div class="dslca-accordion-action-hooks">
+                                    <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
+                                    <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
+                                    <span class="dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </li><!-- .dslc-accordion-item -->
+
+                <?php endif; ?>
+            </ul>
             <?php if ($dslc_is_admin) : ?>
                 <div class="dslca-add-accordion">
                     <span class="dslca-add-accordion-hook"><span class="dslca-icon dslc-icon-plus"></span></span>
                 </div>
             <?php endif; ?>
-			<?php if( $options['as_style_pricing'] == 'style_2'){ ?>
-		        <div class="as-button-pricing">
-		            <?php
-		                $duration_hover = '';
-		                $value_duration = $options['as_button_css_duration_hover'];
-		                if ( $value_duration != '' ){
-		                    $duration_hover = 'style="-webkit-transition: all '. $value_duration .'ms ease;-moz-transition: all '. $value_duration .'ms ease;-ms-transition: all '. $value_duration .'ms ease;-o-transition: all '. $value_duration .'ms ease;transition: all '. $value_duration .'ms ease;"';
-		                }
-		            ?>
-		            <a href="<?php echo do_shortcode( $options['as_button_url'] ); ?>" target="<?php echo $options['as_button_target']; ?>" <?php echo $duration_hover; ?>>
-		                <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ( $dslc_is_admin ) echo 'contenteditable'; ?>><?php echo $options['as_button_text']; ?></span>
-		            </a>
-		        </div>
-		    <?php } ?>
+            <?php if ($options['as_style_pricing'] == 'style_2') { ?>
+                <div class="as-button-pricing">
+                    <?php
+                    $duration_hover = '';
+                    $value_duration = $options['as_button_css_duration_hover'];
+                    if ($value_duration != '') {
+                        $duration_hover = 'style="-webkit-transition: all ' . $value_duration . 'ms ease;-moz-transition: all ' . $value_duration . 'ms ease;-ms-transition: all ' . $value_duration . 'ms ease;-o-transition: all ' . $value_duration . 'ms ease;transition: all ' . $value_duration . 'ms ease;"';
+                    }
+                    ?>
+                    <a href="<?php echo do_shortcode($options['as_button_url']); ?>" target="<?php echo esc_attr($options['as_button_target']); ?>" <?php echo $duration_hover; ?>>
+                        <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_button_text']); ?></span>
+                    </a>
+                </div>
+            <?php } ?>
         </div><!-- .dslc-accordion -->
 
         <?php

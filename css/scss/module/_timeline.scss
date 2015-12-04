@@ -1,0 +1,401 @@
+#as-timeline {
+    position: relative;
+    padding: 5em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    &:before {
+        /* this is the vertical line */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+        background: #d7e4ed;
+    }
+}
+
+.as-timeline-block {
+    position: relative;
+    margin: 2em 0;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .as-timeline-block {
+        margin: 4em 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.as-timeline-img {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #d9e2e9, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+    }
+}
+
+.as-timeline-img.first {
+    top: 0px;
+}
+
+.as-timeline-img.last {
+    bottom: 0;
+    top: inherit;
+}
+
+.as-timeline-img.as-movie {
+    background: #c03b44;
+}
+
+.as-timeline-img.as-location {
+    background: #f0ca45;
+}
+
+@media only screen and (min-width: 1170px) {
+    .as-timeline-img {
+        width: 30px;
+        height: 30px;
+        left: 51.1%;
+        margin-left: -30px;
+        /* Force Hardware Acceleration in WebKit */
+        @include transform(translateZ(0));
+        @include backface-visibility(hidden);
+        @include transition(0.3s ease-in-out);
+        &:hover {
+            width: 60px;
+            height: 60px;
+            left: 50%;
+            top: 0px;
+        }
+    }
+    .as-timeline-img.first {
+        &:hover {
+            width: 30px;
+            height: 30px;
+            left: 51.1%;
+            top: 0px;
+        }
+    }
+    .as-timeline-img.last {
+        &:hover {
+            width: 30px;
+            height: 30px;
+            left: 51.1%;
+            bottom: 0;
+            top: inherit;
+        }
+    }
+    .as-timeline-thumb {
+        display: inline-block;
+    }
+    .cssanimations {
+        .as-timeline-img.is-hidden {
+            visibility: hidden;
+        }
+        .as-timeline-img.bounce-in {
+            visibility: visible;
+            @include animation(as-bounce-1 0.6s);
+        }
+    }
+}
+
+@-webkit-keyframes as-bounce-1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes as-bounce-1 {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: scale(1.2);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+@keyframes as-bounce-1 {
+    0% {
+        opacity: 0;
+        @include transform(scale(0.5));
+    }
+    60% {
+        opacity: 1;
+        @include transform(scale(1.2));
+    }
+    100% {
+        @include transform(scale(1));
+    }
+}
+
+.as-timeline-content {
+    position: relative;
+    margin-left: 60px;
+    background: white;
+    border-radius: 0.25em;
+    box-shadow: 0 3px 0 #d7e4ed;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid white;
+    }
+    h2 {
+        color: #303e49;
+    }
+    p,
+    .as-read-more,
+    .as-date {
+        font-size: 13px;
+        font-size: 0.8125rem;
+    }
+    .as-read-more,
+    .as-date {
+        display: inline-block;
+    }
+    p {
+        margin: 0 0;
+        line-height: 1.6;
+    }
+    .as-read-more {
+        float: right;
+        padding: .8em 1em;
+        color: white;
+        border-radius: 0.25em;
+        &:hover {
+            background-color: #bac4cb;
+        }
+    }
+    .as-date {
+        float: left;
+        padding: .8em 0;
+        opacity: .7;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .as-timeline-content {
+        h2 {
+            font-size: 20px;
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: 16px;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .as-timeline-content {
+        margin-left: 0;
+        padding: 1.6em;
+        width: 45%;
+        &:before {
+            top: 24px;
+            left: 100%;
+            border-color: transparent;
+            border-left-color: white;
+        }
+        .as-read-more {
+            float: left;
+        }
+        .as-date {
+            position: absolute;
+            width: 100%;
+            left: 122%;
+            top: 6px;
+            font-size: 16px;
+            font-size: 1rem;
+        }
+    }
+    .as-timeline-block:nth-child(even) {
+        .as-timeline-content {
+            float: right;
+            &:before {
+                top: 24px;
+                left: auto;
+                right: 100%;
+                border-color: transparent;
+                border-right-color: white;
+            }
+            .as-read-more {
+                float: right;
+            }
+            .as-date {
+                left: auto;
+                right: 122%;
+                text-align: right;
+            }
+        }
+    }
+    .cssanimations {
+        .as-timeline-content.is-hidden {
+            visibility: hidden;
+        }
+        .as-timeline-content.bounce-in {
+            visibility: visible;
+            @include animation(as-bounce-2 0.6s);
+        }
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    /* inverse bounce effect on even content blocks */
+    .cssanimations {
+        .as-timeline-block {
+            &:nth-child(even) {
+                .as-timeline-content.bounce-in {
+                    @include animation(as-bounce-2 0.6s);
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes as-bounce-2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(20px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes as-bounce-2 {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-100px);
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translateX(20px);
+    }
+    100% {
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes as-bounce-2 {
+    0% {
+        opacity: 0;
+        @include transform(translateX(-100px));
+    }
+    60% {
+        opacity: 1;
+        @include transform(translateX(20px));
+    }
+    100% {
+        @include transform(translateX(0));
+    }
+}
+
+@-webkit-keyframes as-bounce-2-inverse {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(-20px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes as-bounce-2-inverse {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(100px);
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translateX(-20px);
+    }
+    100% {
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes as-bounce-2-inverse {
+    0% {
+        opacity: 0;
+        @include transform(translateX(-100px));
+        transform: translateX(100px);
+    }
+    60% {
+        opacity: 1;
+        @include transform(translateX(-20px));
+    }
+    100% {
+        @include transform(translateX(0));
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    #as-timeline {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        &:before {
+            left: 50%;
+            margin-left: -2px;
+        }
+    }
+}

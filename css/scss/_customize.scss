@@ -1,0 +1,34 @@
+@import 'magnificPopup-animation.css';
+
+.widget_newsletters_1 .dslc-widget-wrap .widget_wysija_cont .wysija-submit,
+#as-controls li,
+#dslc-content .dslc-projects .dslc-project-thumb img,
+#dslc-content .dslc-projects .dslc-project-main .dslc-project-title h2 a,
+.as-portfolio-ajax-wrapper .as-port-control a.close-port,
+.as-portfolio-ajax-wrapper .as-port-control a.prev span.dslc-icon,
+.as-portfolio-ajax-wrapper .as-port-control a.next span.dslc-icon,
+.as-port-ajax-social-share .as-get-in-touch-prj-ajax,
+.as-port-ajax-list-social li a,
+#dslc-content .as-project-custom.dslc-project-thumb .dslc-project-title,
+#dslc-content .as-project-custom.dslc-project-thumb .dslc-project-cats,
+.as-staff-list-social a,
+.as-staff-list-social a span,
+.dslc-post.dslc-staff-member .as-staff-inner-content-thumb-wrapper .dslc-staff-member-title,
+.dslc-post.dslc-staff-member .as-staff-inner-content-thumb-wrapper .dslc-staff-member-position,
+.as-staff-inner-content-thumb-wrapper{
+    @include transition(all .3s ease);
+}
+.as-dragme-time .as-circle-drag,
+.as-portfolio-ajax-wrapper .as-port-control a.close-port,
+.as-port-ajax-list-social li a,
+#dslc-content .as-project-custom.dslc-project-thumb .as-group-icon-project a{
+    @include border-radius(50%);
+}
+
+/* ------------------------------------------------ */
+/* M E T A   M O D U L E
+/* ------------------------------------------------ */
+.dslc-icon-meta{
+    font-size: 16px;
+    margin-right: 10px;
+}

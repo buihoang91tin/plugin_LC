@@ -1,0 +1,24 @@
+.as-heading-title-2 {
+    .as-big-title-heading {
+        position: relative;
+        display: inline-block;
+        color: #403c34;
+        font-size: 24px;
+        font-weight: 700;
+        &:before,
+            &:after {
+            content: '';
+            position: absolute;
+            width: 125px;
+            height: 1px;
+            background-color: #212121;
+            top: 20px;
+        }
+        &:before {
+            left: -150px
+        }
+        &:after {
+            right: -150px
+        }
+    }
+}

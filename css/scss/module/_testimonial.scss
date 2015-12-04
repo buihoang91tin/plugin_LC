@@ -1,0 +1,67 @@
+.as-testimonials-simple {
+    display: block;
+    position: relative;
+    z-index: 9;
+}
+
+.as-testimonials-simple-item {
+    text-align: center;
+    display: block;
+}
+
+.as-testimonials-simple-avatar-img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.as-testimonials-simple-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.as-testimonials-simple-info {
+    > span {
+        display: block;
+        text-align: left;
+    }
+}
+
+.as-customNavigation {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.as-customNavigation {
+    > span {
+        position: absolute;
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        z-index: 10;
+    }
+}
+
+.as-customNavigation {
+    > span {
+        > span {
+            display: block;
+        }
+    }
+}
+
+.as-customNavigation {
+    .as-testimonials-simple-next {
+        left: 0;
+    }
+    .as-testimonials-simple-prev {
+        right: 0;
+    }
+    > span {
+        > span {
+            &:hover {
+                @include transition(all 0.3s ease-out);
+            }
+        }
+    }
+}

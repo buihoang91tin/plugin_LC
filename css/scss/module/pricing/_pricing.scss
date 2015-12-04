@@ -1,0 +1,92 @@
+.as-pricing-wrapper {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    /* this fixes the overflow:hidden in Chrome */
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    .as-pricing-label {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 70px 70px 70px;
+        border-color: transparent transparent #007bff transparent;
+        @include transform(rotate(-45deg));
+        position: absolute;
+        top: -11px;
+        left: -46px;
+        z-index: 2;
+        span {
+            font-size: 20px;
+            display: block;
+            position: relative;
+            top: 30px;
+            left: -27px;
+        }
+    }
+    .as-pricing-title {
+        h3 {
+            position: relative;
+            display: block;
+            margin: 0;
+            &:before,
+                &:after {
+                content: '';
+                position: absolute;
+                width: 75px;
+                height: 3px;
+                background: none;
+                border: 1px solid;
+                border-left: none;
+                border-right: 0;
+                border-color: #ccc;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: -15px;
+                @include transition(0.3s ease-in-out);
+            }
+            &:after {
+                width: 0;
+                border-color: #ccc;
+            }
+        }
+    }
+    &:hover {
+        .as-pricing-title {
+            h3 {
+                &:after {
+                    width: 75px;
+                }
+            }
+        }
+    }
+    .as-pricing-number-wrapper {
+        .as-pricing-time {
+            display: inline-block;
+            position: relative;
+            padding-left: 15px;
+            &:before {
+                content: '/';
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    .as-list-pricing-option-wrapper {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        .dslc-accordion-item {
+            margin: 0;
+            .dslc-accordion-header {
+                .dslc-accordion-title {
+                    display: inline-block;
+                }
+                .dslca-accordion-action-hooks {
+                    z-index: 9;
+                }
+            }
+        }
+    }
+}

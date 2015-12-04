@@ -12,7 +12,7 @@
         <h1>Welcome to AS Extension</h1>
 
         <div class="about-text">Thank you for using AS Extension! We hope you will enjoy it and build awesome stuff with it.</div>
-        <div class="dslc-badge"><img src="http://hqsolu.com/wp-content/uploads/2015/06/logo-white.png"></div>
+        <div class="dslc-badge"></div>
 
         <h2 class="nav-tab-wrapper">
 			<a class="nav-tab nav-tab-active" href="<?php echo esc_url(AS_EXTENSION_LINK); ?>">

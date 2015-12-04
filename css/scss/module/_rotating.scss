@@ -1,0 +1,64 @@
+.rotating.flip {
+    position: relative;
+    .front {
+        z-index: 1;
+    }
+    .back {
+        z-index: 2;
+        display: block;
+        opacity: 1;
+        @include transform(rotateY(180deg) translate3d(0, 0, 0));
+    }
+}
+
+.rotating {
+    display: inline-block;
+    @include transform-style(preserve-3d);
+    @include transition(0.5s);
+    @include transform(rotateX(0) rotateY(0) rotateZ(0));
+    -webkit-transform-origin-x: 50%;
+    -moz-transform-origin-x: 50%;
+    -ms-transform-origin-x: 50%;
+    -o-transform-origin-x: 50%;
+    transform-origin-x: 50%;
+    .front,
+    .back {
+        left: 0;
+        top: 0;
+        @include backface-visibility(hidden);
+    }
+    .front {
+        position: absolute;
+        display: inline-block;
+        @include transform(translate3d(0, 0, 1px));
+    }
+    .back {
+        display: block;
+        opacity: 0;
+    }
+}
+
+.rotating.spin {
+    @include transform(rotate(360deg) scale(0));
+}
+
+.rotating.flip.up {
+    .back {
+        @include transform(rotateX(180deg) translate3d(0, 0, 0));
+    }
+}
+
+.rotating.flip.cube {
+    .front {
+        @include transform(translate3d(0, 0, 100px) scale(0.9, 0.9));
+    }
+    .back {
+        @include transform(rotateY(180deg) translate3d(0, 0, 100px) scale(0.9, 0.9));
+    }
+}
+
+.rotating.flip.cube.up {
+    .back {
+        @include transform(rotateX(180deg) translate3d(0, 0, 100px) scale(0.9, 0.9));
+    }
+}

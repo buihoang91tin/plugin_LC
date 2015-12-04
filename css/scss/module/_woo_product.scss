@@ -1,0 +1,161 @@
+/* ------------------------------------------------ */
+/* W O O   P R O D U C T   M O D U L E
+/* ------------------------------------------------ */
+.dslca-enabled .as-product-customize:first-child .product_listing_buttons_wrapper {
+    @include transform ( translateY(0) !important );
+}
+.dslc-product-title h2 a{
+    @include transition();
+    text-align: center;
+}
+.as-product-customize {
+    .dslc-product-thumb-inner{
+        position: relative;
+        .secondary-image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+        }
+        .onsale{
+            position: absolute;
+            z-index: 2;
+            padding: 15px;
+            background-color: #CF4300;
+            color: #fff;
+            font-size: 12px;
+            left: 10px;
+            top: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .secondary-image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transform( scale(.8));
+            @include transition( all 1.2s cubic-bezier(0.7, 0, 0.175, 1) );
+        }
+        &:hover{
+            .secondary-image{
+                opacity: 1;
+                visibility: visible;
+                @include transform( scale(1));
+            }
+        }
+    }
+    &:hover{
+        .product_listing_buttons_wrapper{
+            @include transform ( translateY(0) );
+        }
+    }
+    a.as_button .as-tooltip-button-woo{
+        position: absolute;
+        font-size: 12px;
+        min-width: 100px;
+        padding: 5px;
+        background-color: #00bad0;
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        @include transition ( all .5s cubic-bezier(0.7, 0, 0.175, 1) );
+    }
+    .woocommerce-product-rating .star-rating,
+    .dslc-product-price-secondary{
+        float: none !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    .dslc-product-price-secondary del{
+        display: inline-block !important;
+        margin-right: 10px;
+    }
+}
+.product_listing_buttons_wrapper{
+    position: absolute;
+    height: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9;
+    background: rgba(255, 255, 255, .5);
+    @include transition ( all .5s cubic-bezier(0.7, 0, 0.175, 1) );
+    @include transform ( translateY(-100%) );
+    .product_listing_buttons{
+        position: absolute;
+        top: 50%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        @include transform( translateY(-50%) );
+    }
+    .added_to_cart.wc-forward{
+        display: none !important;
+    }
+    a{
+        display: block;
+        &.as_button{
+            position: relative;
+            vertical-align: middle;
+            width: 25%;
+            min-height: 40px;
+            margin: 25px auto;
+            float: left;
+            font-size: 20px;
+            @include transition ();
+            span.dslc-icon{
+                line-height: 2;
+            }
+            &.added,
+            &.loading {
+                span.dslc-icon{
+                    display: none;
+                }
+            }
+            &.loading .as-loading-woo-img{
+                display: block;
+            }
+            &.added:before{
+                font-family: 'DSLCFontAwesome';
+                content: "\f00c";
+                position: absolute;
+                font-size: 20px;
+                color: #fff;
+                left: 50%;
+                margin-left: -10px;
+                top: 50%;
+                @include transform( translateY(-50%) );
+            }
+        }
+    }
+    /*
+            .as-loading-woo-img{
+                    background: url(../../img/woocommerce/ajax-loader.gif) no-repeat center center;
+                    width: 45px;
+                    height: 45px;
+                    display: none;
+            }
+    */
+}
+/*
+.as-product-customize a.as_button .as-tooltip-button-woo:before{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 6px 7px 0;
+        border-color: transparent #00bad0 transparent transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -7px;
+}
+.as-product-customize a.as_button:hover .as-tooltip-button-woo{
+        left: 58px;
+        visibility: visible;
+        opacity: 1;
+}
+*/

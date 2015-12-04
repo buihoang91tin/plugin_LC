@@ -8,7 +8,7 @@ global $dslc_plugin_options;
 	<h1>Welcome to AS Extension</h1>
 
     <div class="about-text">Manage Features Control AS Extension</div>
-    <div class="dslc-badge"><img src="http://hqsolu.com/wp-content/uploads/2015/06/logo-white.png"></div>
+    <div class="dslc-badge"></div>
     <h2 class="nav-tab-wrapper">
 		<a class="nav-tab nav-tab-active" href="javascript:history.go(0)">
 			Features Control			</a>

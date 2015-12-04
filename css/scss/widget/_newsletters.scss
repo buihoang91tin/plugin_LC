@@ -1,0 +1,39 @@
+.widget_newsletters_1 {
+    .dslc-widget-wrap {
+        .wysija-paragraph {
+            display: inline-block !important;
+            vertical-align: middle;
+            margin-bottom: 0;
+            width: 50%;
+            margin-right: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px 15px;
+            @include border-radius(0);
+        }
+        .widget_wysija_cont {
+            .wysija-submit {
+                display: inline-block !important;
+                border: 1px solid #bdc3c7;
+                border-radius: 0;
+                @include border-radius(0);
+                padding: 13px 40px;
+                color: #bdc3c7;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                outline-width: 1px;
+                outline-offset: 1px;
+                outline-color: #bdc3c7;
+                outline-style: solid;
+                background: none;
+                margin: 0;
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

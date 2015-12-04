@@ -1,0 +1,31 @@
+.border-none-right {
+    .dslc-partner.dslc-last-col {
+        .dslc-partner-thumb {
+            border-right: none !important;
+        }
+    }
+}
+
+.border-none-left {
+    .dslc-partner.dslc-last-col {
+        .dslc-partner-thumb {
+            border-left: none !important;
+        }
+    }
+}
+
+.border-none-top {
+    .dslc-partner.dslc-last-col {
+        .dslc-partner-thumb {
+            border-top: none !important;
+        }
+    }
+}
+
+.border-none-bottom {
+    .dslc-partner.dslc-last-col {
+        .dslc-partner-thumb {
+            border-bottom: none !important;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.as-line-post {
+    width: 5px;
+    height: 1px;
+    background-color: #aaa;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 7px;
+}
+
+.as-custom-post-class {
+    .dslc-cpt-post-meta-date,
+    .dslc-cpt-post-meta-author,
+    .dslc-cpt-post-meta-category {
+        float: none !important;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .dslc-cpt-post-read-more {
+        overflow: hidden;
+        .as-btn-read-more {
+            float: left
+        }
+        .as-post-like-share {
+            float: right;
+            position: relative;
+            .as-btn-heart-blog,
+            .as-btn-share-social-blog {
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+            }
+            .as-btn-heart-blog {
+                a.as-post-like {
+                    color: #a6a6a6;
+                    &:hover,
+                        &.active {
+                        .dslc-icon {
+                            color: #F50057;
+                        }
+                    }
+                }
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 2px;
+                }
+            }
+        }
+    }
+}

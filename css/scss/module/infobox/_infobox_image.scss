@@ -1,0 +1,13 @@
+.as-info-box-image-wrapper {
+    .dslc-info-box-image {
+        line-height: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .dslc-info-box-button{
+        a{
+            @include transition();
+        }
+    }
+}

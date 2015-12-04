@@ -1,45 +1,44 @@
 <?php
 
-class AS_Circle_Chart_Module extends DSLC_Module
-{
-	// Module Attributes
-	var $module_id;
-	var $module_title;
-	var $module_icon;
-	var $module_category;
+class AS_Circle_Chart_Module extends DSLC_Module {
 
-	function __construct() {
+    // Module Attributes
+    var $module_id;
+    var $module_title;
+    var $module_icon;
+    var $module_category;
 
-		$this->module_id = 'AS_Circle_Chart_Module';
-		$this->module_title = __( 'Circle Chart', 'dslc_string' );
-		$this->module_icon = 'circle-blank';
-		$this->module_category = 'as - Counter';
+    function __construct() {
 
-	}
+        $this->module_id       = 'AS_Circle_Chart_Module';
+        $this->module_title    = __('AS - Circle Chart', 'dslc_string');
+        $this->module_icon     = 'circle-blank';
+        $this->module_category = 'as - Counter';
+    }
 
     // Module Options
-    function options(){
+    function options() {
         // The options array
         $dslc_options = array(
             /**
              * General
              */
             array(
-				'label'   => __( 'Show On', 'dslc_string' ),
-				'id'      => 'css_show_on',
-				'std'     => 'desktop tablet phone',
-				'type'    => 'checkbox',
-				'choices' => array(
+                'label'   => __('Show On', 'dslc_string'),
+                'id'      => 'css_show_on',
+                'std'     => 'desktop tablet phone',
+                'type'    => 'checkbox',
+                'choices' => array(
                     array(
-                        'label' => __( 'Desktop', 'dslc_string' ),
+                        'label' => __('Desktop', 'dslc_string'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __( 'Tablet', 'dslc_string' ),
+                        'label' => __('Tablet', 'dslc_string'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __( 'Phone', 'dslc_string' ),
+                        'label' => __('Phone', 'dslc_string'),
                         'value' => 'phone'
                     ),
                 ),
@@ -360,38 +359,38 @@ class AS_Circle_Chart_Module extends DSLC_Module
                 'section' => 'styling',
                 'tab'     => 'Circle Chart',
             ),
-            array(                
-                'label' => __( 'Line Width (px)', 'dslc_string' ),
-				'id' => 'circle_chart_width',
-				'std' => '5',
-				'type' => 'slider',
-				'affect_on_change_el'   => '',
-                'affect_on_change_rule' => '',
-				'section' => 'styling',
-				'tab' => __( 'Circle Chart', 'dslc_string' ),
-				'ext' => '',
-				'min' => 0,
-				'max' => 30
-            ),
             array(
-                'label'   => __('Track Color', 'dslc_string'),
-                'id'      => 'circle_chart_track',
-                'std'     => '#f2f2f2',
+                'label'                 => __('Line Width (px)', 'dslc_string'),
+                'id'                    => 'circle_chart_width',
+                'std'                   => '5',
+                'type'                  => 'slider',
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
-                'type'    => 'color',
-                'section' => 'styling',
-                'tab'     => 'Circle Chart',
+                'section'               => 'styling',
+                'tab'                   => __('Circle Chart', 'dslc_string'),
+                'ext'                   => '',
+                'min'                   => 0,
+                'max'                   => 30
             ),
             array(
-                'label'   => __('Bar Color', 'dslc_string'),
-                'id'      => 'circle_chart_bar',
-                'std'     => '#5ac3bc',
+                'label'                 => __('Track Color', 'dslc_string'),
+                'id'                    => 'circle_chart_track',
+                'std'                   => '#f2f2f2',
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
-                'type'    => 'color',
-                'section' => 'styling',
-                'tab'     => 'Circle Chart',
+                'type'                  => 'color',
+                'section'               => 'styling',
+                'tab'                   => 'Circle Chart',
+            ),
+            array(
+                'label'                 => __('Bar Color', 'dslc_string'),
+                'id'                    => 'circle_chart_bar',
+                'std'                   => '#5ac3bc',
+                'affect_on_change_el'   => '',
+                'affect_on_change_rule' => '',
+                'type'                  => 'color',
+                'section'               => 'styling',
+                'tab'                   => 'Circle Chart',
             ),
             array(
                 'label'   => __('Size', 'dslc_string'),
@@ -562,6 +561,30 @@ class AS_Circle_Chart_Module extends DSLC_Module
                 'tab'     => 'tablet',
             ),
             array(
+                'label'                 => __('Border Width', 'dslc_string'),
+                'id'                    => 'css_res_t_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px',
+            ),
+            array(
+                'label'                 => __('Border Radius', 'dslc_string'),
+                'id'                    => 'css_res_t_border_radius',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array(
                 'label'                 => __('Margin Bottom', 'dslc_string'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
@@ -572,6 +595,95 @@ class AS_Circle_Chart_Module extends DSLC_Module
                 'section'               => 'responsive',
                 'tab'                   => 'tablet',
                 'ext'                   => 'px',
+            ),
+            array(
+                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'id'                    => 'css_res_t_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'id'                    => 'css_res_t_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Width', 'dslc_string'),
+                'id'                    => 'css_res_t_content_width',
+                'std'                   => '100',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'max-width',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '%'
+            ),
+            array(
+                'label'                 => __('Font Size(Circle Chart)', 'dslc_string'),
+                'id'                    => 'css_res_t_percent_chart_font_size',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.percent-chart',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight (Circle Chart)', 'dslc_string'),
+                'id'                    => 'css_res_t_percent_chart_font_weight',
+                'std'                   => '400',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.percent-chart',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Size(Title)', 'dslc_string'),
+                'id'                    => 'css_res_t_title_font_size',
+                'std'                   => '25',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.pie-content h2',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Line Height (Title)', 'dslc_string'),
+                'id'                    => 'css_res_t_title_line_height',
+                'std'                   => '40',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.pie-content h2',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet',
+                'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
@@ -595,6 +707,30 @@ class AS_Circle_Chart_Module extends DSLC_Module
                 'tab'     => 'phone',
             ),
             array(
+                'label'                 => __('Border Width', 'dslc_string'),
+                'id'                    => 'css_res_p_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px',
+            ),
+            array(
+                'label'                 => __('Border Radius', 'dslc_string'),
+                'id'                    => 'css_res_p_border_radius',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array(
                 'label'                 => __('Margin Bottom', 'dslc_string'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
@@ -606,18 +742,106 @@ class AS_Circle_Chart_Module extends DSLC_Module
                 'tab'                   => 'phone',
                 'ext'                   => 'px',
             ),
+            array(
+                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'id'                    => 'css_res_p_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'id'                    => 'css_res_p_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Width', 'dslc_string'),
+                'id'                    => 'css_res_p_content_width',
+                'std'                   => '100',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.circle-chart-wrapper',
+                'affect_on_change_rule' => 'max-width',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '%'
+            ),
+            array(
+                'label'                 => __('Font Size(Circle Chart)', 'dslc_string'),
+                'id'                    => 'css_res_p_percent_chart_font_size',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.percent-chart',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight (Circle Chart)', 'dslc_string'),
+                'id'                    => 'css_res_p_percent_chart_font_weight',
+                'std'                   => '400',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.percent-chart',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Size(Title)', 'dslc_string'),
+                'id'                    => 'css_res_p_title_font_size',
+                'std'                   => '25',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.pie-content h2',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Line Height (Title)', 'dslc_string'),
+                'id'                    => 'css_res_p_title_line_height',
+                'std'                   => '40',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.pie-content h2',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => 'phone',
+                'ext'                   => 'px'
+            ),
         );
 
-        $dslc_options = array_merge( $dslc_options, $this->shared_options('animation_options') );
-		$dslc_options = array_merge( $dslc_options, $this->presets_options() );
+        $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
+        $dslc_options = array_merge($dslc_options, $this->presets_options());
 
         // Return the array
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
     // Module Output
-    function output($options)
-    {
+    function output($options) {
 
         global $dslc_active;
 
@@ -639,14 +863,14 @@ class AS_Circle_Chart_Module extends DSLC_Module
           $elements = array(); */
         ?>
         <div class="circle-chart-wrapper">
-            <span class="chart" data-percent="<?php echo $options['circle_chart_percent']; ?>" data-easing="<?php echo $options['circle_chart_animation']; ?>" data-duration="<?php echo $options['circle_chart_duration']; ?>" data-line-cap="<?php echo $options['circle_chart_cap']; ?>" data-line-width="<?php echo $options['circle_chart_width']; ?>" data-track-color="<?php echo $options['circle_chart_track']; ?>" data-bar-color="<?php echo $options['circle_chart_bar']; ?>" data-size="<?php echo $options['circle_chart_size']; ?>" style="width:<?php echo $options['circle_chart_size']; ?>px;height:<?php echo $options['circle_chart_size']; ?>px;">
-                <span class="percent-chart <?php echo as_is_active_lc() ? 'active-lc' : ''; ?>" data-from="0" data-to="<?php echo $options['circle_chart_percent']; ?>" data-speed="1500" data-refresh-interval="25" style="line-height:<?php echo $options['circle_chart_size']; ?>px;"><?php echo $options['circle_chart_percent']; ?></span>
+            <span class="chart" data-percent="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-easing="<?php echo esc_attr($options['circle_chart_animation']); ?>" data-duration="<?php echo esc_attr($options['circle_chart_duration']); ?>" data-line-cap="<?php echo esc_attr($options['circle_chart_cap']); ?>" data-line-width="<?php echo esc_attr($options['circle_chart_width']); ?>" data-track-color="<?php echo esc_attr($options['circle_chart_track']); ?>" data-bar-color="<?php echo esc_attr($options['circle_chart_bar']); ?>" data-size="<?php echo esc_attr($options['circle_chart_size']); ?>" style="width:<?php echo esc_attr($options['circle_chart_size']); ?>px;height:<?php echo esc_attr($options['circle_chart_size']); ?>px;">
+                <span class="percent-chart  <?php //if ($dslc_is_admin) echo 'active-lc'; ?>" data-from="0" data-to="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-speed="1500" data-refresh-interval="25" style="line-height:<?php echo esc_attr($options['circle_chart_size']); ?>px;"><?php echo esc_attr($options['circle_chart_percent']); ?></span
             </span>
             <div class="pie-content">
                 <?php if ($dslc_is_admin) : ?>
-                    <h2 class="dslca-editable-content title" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo $options['title']; ?></h2>
+                    <h2 class="dslca-editable-content title" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['title'], 'alenastudio'); ?></h2>
                 <?php else : ?>
-                    <h2 class="title"><?php echo $options['title']; ?></h2>
+                    <h2 class="title"><?php echo esc_html($options['title'], 'alenastudio'); ?></h2>
                 <?php endif; ?>
             </div>
         </div>

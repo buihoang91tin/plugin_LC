@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: AS Extension For Live Composer
- * Plugin URI: http://hqsolu.com
+ * Plugin URI: monalisa.alenastudio.com
  * Description: AS Extension - Ultimate live composer extension packs
  * Version: 1.0.0
- * Author: hqsoluteam
- * Author URI: hqsolu.com
+ * Author: Alena Studio
+ * Author URI: monalisa.alenastudio.com
  * License: N/A
  */
 /* Don't load me from dark side */
@@ -93,7 +93,6 @@ class asExtensionLoader {
 
 register_activation_hook( __FILE__, 'my_plugin_activate' );
 add_action('admin_init', 'my_plugin_redirect');
-
 function my_plugin_activate() {
 
 //hook vào after active ko fai hook vao active no chua active thi no ko cho e vao fai roi =.= hieu ko da
@@ -101,9 +100,18 @@ function my_plugin_activate() {
     add_option('my_plugin_do_activation_redirect', true);
 }
 
+function my_admin_notice() {
+	if (!(function_exists('dslc_register_modules'))){
+   ?>
+    <div class="updated">
+        <p><?php _e( 'Live Composer is not install <a style="color:red;">Plese install this plugin</a>', 'alenastudio'); ?></p>
+    </div>
+	<?php }
+}
 function my_plugin_redirect() {
     if (get_option('my_plugin_do_activation_redirect', false)) {
-        delete_option('my_plugin_do_activation_redirect');
-        wp_redirect(AS_EXTENSION_LINK);
+		add_action( 'admin_notices', 'my_admin_notice' );
+      //  delete_option('my_plugin_do_activation_redirect');
+       // wp_redirect(AS_EXTENSION_LINK);
     }
 }

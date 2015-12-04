@@ -7,17 +7,15 @@ class AS_Before_After extends DSLC_Module {
     var $module_icon;
     var $module_category;
 
-    function __construct()
-    {
+    function __construct() {
 
         $this->module_id       = 'AS_Before_After';
         $this->module_title    = __('AS - Before After Image', 'dslc_string');
         $this->module_icon     = 'picture';
-        $this->module_category = 'as - Before After';
+        $this->module_category = 'as - element';
     }
 
-    function options()
-    {
+    function options() {
 
         $dslc_options = array(
             array(
@@ -43,21 +41,21 @@ class AS_Before_After extends DSLC_Module {
             array(
                 'label'      => __('CT', 'dslc_string'),
                 'id'         => 'custom_text',
-                'std' 		 => __( 'BEFORE', 'dslc_string' ),
+                'std'        => __('BEFORE', 'dslc_string'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
                 'label'      => __('CT', 'dslc_string'),
                 'id'         => 'custom_text_2',
-                'std' 		 => __( 'MIDDLE', 'dslc_string' ),
+                'std'        => __('MIDDLE', 'dslc_string'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
                 'label'      => __('CT', 'dslc_string'),
                 'id'         => 'custom_text_3',
-                'std' 		 => __( 'AFTER' ),
+                'std'        => __('AFTER', 'alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
@@ -74,34 +72,34 @@ class AS_Before_After extends DSLC_Module {
                 'type'  => 'image',
             ),
             array(
-                'label' => __('Orientation', 'dslc_string'),
-                'id'    => 'orientation_img',
-                'std'   => 'horizontal',
-            	'refresh_on_change'=> true,
-                'type'  => 'select',
-            		'choices' => array(
-            				array(
-            						'label' => __('Horizontal', 'dslc_string'),
-            						'value' => 'horizontal'
-            				),
-            				array(
-            						'label' => __('Vertical', 'dslc_string'),
-            						'value' => 'vertical'
-            				),
-            		),
+                'label'             => __('Orientation', 'dslc_string'),
+                'id'                => 'orientation_img',
+                'std'               => 'horizontal',
+                'refresh_on_change' => true,
+                'type'              => 'select',
+                'choices'           => array(
+                    array(
+                        'label' => __('Horizontal', 'dslc_string'),
+                        'value' => 'horizontal'
+                    ),
+                    array(
+                        'label' => __('Vertical', 'dslc_string'),
+                        'value' => 'vertical'
+                    ),
+                ),
             ),
             array(
-                'label' => __('Offset Image', 'dslc_string'),
-                'id'    => 'offset_img',
-                'std'   => '.5',
-            	'refresh_on_change'=> true,
-                'type'  => 'slider',
+                'label'                 => __('Offset Image', 'dslc_string'),
+                'id'                    => 'offset_img',
+                'std'                   => '.5',
+                'refresh_on_change'     => true,
+                'type'                  => 'slider',
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'ext'                   => '',
-                'min' => 0,
-				'max' => 1.01,
-				'increment' => 0.1,
+                'min'                   => 0,
+                'max'                   => 1.01,
+                'increment'             => 0.1,
             ),
             /**
              * Styling
@@ -202,7 +200,6 @@ class AS_Before_After extends DSLC_Module {
                 'min'                   => -100,
                 'max'                   => 100
             ),
-            
             /**
              * Custom DragBar
              */
@@ -251,17 +248,17 @@ class AS_Before_After extends DSLC_Module {
                 'tab'                   => __('drag bar', 'dslc_string'),
             ),
             array(
-				'label' => __( 'Border Radius', 'dslc_string' ),
-				'id' => 'css_drag_bar_border_radius',
-				'std' => '100',
-				'type' => 'slider',
-				'refresh_on_change' => false,
-				'affect_on_change_el' => '.twentytwenty-handle',
-				'affect_on_change_rule' => 'border-radius',
-				'section' => 'styling',
-				'ext' => 'px',
-				'tab' => __( 'drag bar', 'dslc_string' ),
-			),
+                'label'                 => __('Border Radius', 'dslc_string'),
+                'id'                    => 'css_drag_bar_border_radius',
+                'std'                   => '100',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.twentytwenty-handle',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'styling',
+                'ext'                   => 'px',
+                'tab'                   => __('drag bar', 'dslc_string'),
+            ),
             array(
                 'label'                 => __('Color Icon Right', 'dslc_string'),
                 'id'                    => 'css_drag_bar_icon_color_right',
@@ -306,82 +303,223 @@ class AS_Before_After extends DSLC_Module {
                 'section'               => 'styling',
                 'tab'                   => __('drag bar', 'dslc_string'),
             ),
-            /**
-             * Responsive Tablet
-             */
-            array(
-                'label'   => __('Responsive', 'dslc_string'),
+            /**             * Responsive Tablet */
+            array
+                (
+                'label'   => 'Responsive Styling',
                 'id'      => 'css_res_t',
-                'std'     => ' ',
+                'std'     => 'disabled',
                 'type'    => 'select',
-                'choices' => array(
-                    array(
-                        'label' => __('Disabled', 'dslc_string'),
+                'choices' => array
+                    (
+                    0 => array
+                        (
+                        'label' => 'Disabled',
                         'value' => 'disabled'
                     ),
-                    array(
-                        'label' => __('Enabled', 'dslc_string'),
+                    1 => array
+                        (
+                        'label' => 'Enabled',
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => 'tablet',
             ),
-            array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
-                'id'                    => 'css_res_t_margin_bottom',
+            array
+                (
+                'label'                 => __('Border Width ', 'alenastudio'),
+                'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-before-after-time',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius ', 'alenastudio'),
+                'id'                    => 'css_res_t_css_border_radius',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img, .as-before-img-container img',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Margin Top ', 'alenastudio'),
+                'id'                    => 'css_res_t_css_margin_top',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img',
+                'affect_on_change_rule' => 'margin-top',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'min'                   => '-100',
+                'max'                   => '100',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'id'                    => 'css_res_t_css_margin_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px',
+                'min'                   => '-100',
+                'max'                   => '100',
+                'tab'                   => 'tablet'
             ),
-            /**
-             * Responsive Phone
-             */
-            array(
-                'label'   => __('Responsive', 'dslc_string'),
+            array
+                (
+                'label'                 => __('Border Width Circle( drag bar ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_css_drag_bar_circle_border_width',
+                'std'                   => '3',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.twentytwenty-handle',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'tab'                   => 'tablet'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius( drag bar ) ', 'alenastudio'),
+                'id'                    => 'css_res_t_css_drag_bar_border_radius',
+                'std'                   => '100',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.twentytwenty-handle',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'tablet'
+            ),
+            /**             * Responsive phone */
+            array
+                (
+                'label'   => 'Responsive Styling',
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
-                'choices' => array(
-                    array(
-                        'label' => __('Disabled', 'dslc_string'),
+                'choices' => array
+                    (
+                    0 => array
+                        (
+                        'label' => 'Disabled',
                         'value' => 'disabled'
                     ),
-                    array(
-                        'label' => __('Enabled', 'dslc_string'),
+                    1 => array
+                        (
+                        'label' => 'Enabled',
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'dslc_string'),
+                'tab'     => 'phone',
             ),
-            array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
-                'id'                    => 'css_res_p_margin_bottom',
+            array
+                (
+                'label'                 => __('Border Width ', 'alenastudio'),
+                'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-before-after-time',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius ', 'alenastudio'),
+                'id'                    => 'css_res_p_css_border_radius',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img, .as-before-img-container img',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Margin Top ', 'alenastudio'),
+                'id'                    => 'css_res_p_css_margin_top',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img',
+                'affect_on_change_rule' => 'margin-top',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'min'                   => '-100',
+                'max'                   => '100',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'id'                    => 'css_res_p_css_margin_bottom',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.as-before-img',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px',
+                'min'                   => '-100',
+                'max'                   => '100',
+                'tab'                   => 'phone'
             ),
+            array
+                (
+                'label'                 => __('Border Width Circle( drag bar ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_css_drag_bar_circle_border_width',
+                'std'                   => '3',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.twentytwenty-handle',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'responsive',
+                'tab'                   => 'phone'
+            ),
+            array
+                (
+                'label'                 => __('Border Radius( drag bar ) ', 'alenastudio'),
+                'id'                    => 'css_res_p_css_drag_bar_border_radius',
+                'std'                   => '100',
+                'type'                  => 'slider',
+                'refresh_on_change'     => '',
+                'affect_on_change_el'   => '.twentytwenty-handle',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'responsive',
+                'ext'                   => 'px',
+                'tab'                   => 'phone'
+            )
+                ,
         );
-
-       // $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
+        // $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
         $dslc_options = array_merge($dslc_options, $this->presets_options());
 
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options)
-    {
+    function output($options) {
 
         $this->module_start($options);
 
@@ -394,27 +532,28 @@ class AS_Before_After extends DSLC_Module {
         else
             $dslc_is_admin = false;
         ?>
-          	<?php if ( empty($options['image']) || empty($options['image_2']) ) : ?>
-        	<div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'dslc_string'); ?></div>
-			<?php else : ?>		
-			    <div class="as-before-img">
-					<?php  
-						$orientation_img = '';
-						if ( $options['orientation_img'] == 'vertical'){
-							$orientation_img = 'vertical';
-						}else{
-							$orientation_img = '';
-						}
-					?>
-			        <div class="as-compare-img-container" data-orientation="<?php echo esc_attr( $orientation_img );?>" data-offset="<?php echo esc_attr( $options['offset_img'] );?>">
-			        	<img src="<?php echo esc_url($options['image']);?>" />
-						<img src="<?php echo esc_url($options['image_2']);?>" />
-			        </div>
-			    </div>
+        <?php if (empty($options['image']) || empty($options['image_2'])) : ?>
+            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'dslc_string'); ?></div>
+        <?php else : ?>		
+            <div class="as-before-img">
+                <?php
+                $orientation_img = '';
+                if ($options['orientation_img'] == 'vertical') {
+                    $orientation_img = 'vertical';
+                }
+                else {
+                    $orientation_img = '';
+                }
+                ?>
+                <div class="as-compare-img-container" data-orientation="<?php echo esc_attr($orientation_img); ?>" data-offset="<?php echo esc_attr($options['offset_img']); ?>">
+                    <img src="<?php echo esc_url($options['image']); ?>" alt="Fist image"/>
+                    <img src="<?php echo esc_url($options['image_2']); ?>" alt="Second image" />
+                </div>
+            </div>
 
-			 
-			<?php endif;?>
-	        <!-- end / before after image -->
+
+        <?php endif; ?>
+        <!-- end / before after image -->
 
         <?php
         /* Module output ends here */

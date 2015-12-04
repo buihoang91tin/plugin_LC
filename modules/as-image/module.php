@@ -1,30 +1,27 @@
 <?php
 
-class AS_Image extends DSLC_Module
-{
+class AS_Image extends DSLC_Module {
 
     var $module_id;
-	var $module_title;
-	var $module_icon;
-	var $module_category;
+    var $module_title;
+    var $module_icon;
+    var $module_category;
 
-	function __construct() {
+    function __construct() {
 
-		$this->module_id = 'AS_Image';
-		$this->module_title = __( 'AS - Custom Image', 'dslc_string' );
-		$this->module_icon = 'picture';
-		$this->module_category = 'as - element';
+        $this->module_id       = 'AS_Image';
+        $this->module_title    = __('AS - Custom Image', 'dslc_string');
+        $this->module_icon     = 'picture';
+        $this->module_category = 'as - element';
+    }
 
-	}
-
-    function options()
-    {
+    function options() {
 
         $dslc_options = array(
             array(
                 'label'      => __('CT', 'dslc_string'),
                 'id'         => 'custom_text',
-                'std' 		 => __( 'This is just some placeholder text. Click to edit it.', 'dslc_string' ),
+                'std'        => __('This is just some placeholder text. Click to edit it.', 'dslc_string'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
@@ -98,22 +95,93 @@ class AS_Image extends DSLC_Module
                 'std'   => '',
                 'type'  => 'text',
             ),
-			array(
-				'label' => __( 'Image - ALT attribute', 'dslc_string' ),
-				'id' => 'image_alt',
-				'std' => '',
-				'type' => 'text',
-			),
-			
-			array(
-				'label' => __( 'Image - TITLE attribute', 'dslc_string' ),
-				'id' => 'image_title',
-				'std' => '',
-				'type' => 'text',
-			),
+            array(
+                'label' => __('Image - ALT attribute', 'dslc_string'),
+                'id'    => 'image_alt',
+                'std'   => '',
+                'type'  => 'text',
+            ),
+            array(
+                'label' => __('Image - TITLE attribute', 'dslc_string'),
+                'id'    => 'image_title',
+                'std'   => '',
+                'type'  => 'text',
+            ),
             /**
              * Styling
              */
+            array(
+                'label'                 => __('Effect Style', 'dslc_string'),
+                'id'                    => 'as_image_effect_style',
+                'std'                   => 'default',
+                'type'                  => 'select',
+                'refresh_on_change'     => true,
+                'affect_on_change_el'   => '',
+                'affect_on_change_rule' => '',
+                'section'               => 'styling',
+                'choices'               => array(
+                    array(
+                        'label' => __('Default', 'dslc_string'),
+                        'value' => 'default',
+                    ),
+                    array(
+                        'label' => __('1977', 'dslc_string'),
+                        'value' => '_1977',
+                    ),
+                    array(
+                        'label' => __('Aden', 'dslc_string'),
+                        'value' => 'aden',
+                    ),
+                    array(
+                        'label' => __('Brooklyn', 'dslc_string'),
+                        'value' => 'brooklyn',
+                    ),
+                    array(
+                        'label' => __('Earlybird', 'dslc_string'),
+                        'value' => 'earlybird',
+                    ),
+                    array(
+                        'label' => __('Gingham', 'dslc_string'),
+                        'value' => 'gingham',
+                    ),
+                    array(
+                        'label' => __('Hudson', 'dslc_string'),
+                        'value' => 'hudson',
+                    ),
+                    array(
+                        'label' => __('Inkwell', 'dslc_string'),
+                        'value' => 'inkwell',
+                    ),
+                    array(
+                        'label' => __('Lofi', 'dslc_string'),
+                        'value' => 'lofi',
+                    ),
+                    array(
+                        'label' => __('Mayfair', 'dslc_string'),
+                        'value' => 'mayfair',
+                    ),
+                    array(
+                        'label' => __('Perpetua', 'dslc_string'),
+                        'value' => 'perpetua',
+                    ),
+                    array(
+                        'label' => __('Reyes', 'dslc_string'),
+                        'value' => 'reyes',
+                    ),
+                    array(
+                        'label' => __('Toaster', 'dslc_string'),
+                        'value' => 'toaster',
+                    ),
+                    array(
+                        'label' => __('Walden', 'dslc_string'),
+                        'value' => 'walden',
+                    ),
+                    array(
+                        'label' => __('Xpro2', 'dslc_string'),
+                        'value' => 'xpro2',
+                    ),
+                )
+            ),
             array(
                 'label'                 => __('Align', 'dslc_string'),
                 'id'                    => 'css_align',
@@ -272,7 +340,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab' 					=> __( 'custom text', 'dslc_string' ),
+                'tab'                   => __('custom text', 'dslc_string'),
                 'choices'               => array(
                     array(
                         'label' => __('Left', 'dslc_string'),
@@ -301,7 +369,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab' => __( 'custom text', 'dslc_string' ),
+                'tab'                   => __('custom text', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Font Size', 'dslc_string'),
@@ -312,7 +380,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab' => __( 'custom text', 'dslc_string' ),
+                'tab'                   => __('custom text', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -324,7 +392,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab' => __( 'custom text', 'dslc_string' ),
+                'tab'                   => __('custom text', 'dslc_string'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
@@ -339,7 +407,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab' => __( 'custom text', 'dslc_string' ),
+                'tab'                   => __('custom text', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Line Height', 'dslc_string'),
@@ -350,7 +418,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab' => __( 'custom text', 'dslc_string' ),
+                'tab'                   => __('custom text', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -363,7 +431,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab' => __( 'custom text', 'dslc_string' ),
+                'tab'                   => __('custom text', 'dslc_string'),
             ),
             /**
              * Responsive Tablet
@@ -384,7 +452,7 @@ class AS_Image extends DSLC_Module
                     ),
                 ),
                 'section' => 'responsive',
-                'tab' => __( 'tablet', 'dslc_string' ),
+                'tab'     => __('tablet', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Margin Bottom', 'dslc_string'),
@@ -395,7 +463,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab' => __( 'tablet', 'dslc_string' ),
+                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px',
             ),
             array(
@@ -407,7 +475,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab' => __( 'tablet', 'dslc_string' ),
+                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -419,7 +487,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab' => __( 'tablet', 'dslc_string' ),
+                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -431,7 +499,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab' => __( 'tablet', 'dslc_string' ),
+                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -443,7 +511,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab' => __( 'tablet', 'dslc_string' ),
+                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -455,7 +523,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab' => __( 'tablet', 'dslc_string' ),
+                'tab'                   => __('tablet', 'dslc_string'),
                 'ext'                   => 'px',
             ),
             /**
@@ -477,7 +545,7 @@ class AS_Image extends DSLC_Module
                     ),
                 ),
                 'section' => 'responsive',
-                'tab' => __( 'phone', 'dslc_string' ),
+                'tab'     => __('phone', 'dslc_string'),
             ),
             array(
                 'label'                 => __('Margin Bottom', 'dslc_string'),
@@ -488,7 +556,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab' => __( 'phone', 'dslc_string' ),
+                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px',
             ),
             array(
@@ -500,7 +568,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab' => __( 'phone', 'dslc_string' ),
+                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -512,7 +580,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab' => __( 'phone', 'dslc_string' ),
+                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -524,7 +592,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab' => __( 'phone', 'dslc_string' ),
+                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -536,7 +604,7 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab' => __( 'phone', 'dslc_string' ),
+                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px'
             ),
             array(
@@ -548,19 +616,18 @@ class AS_Image extends DSLC_Module
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab' => __( 'phone', 'dslc_string' ),
+                'tab'                   => __('phone', 'dslc_string'),
                 'ext'                   => 'px',
             ),
         );
 
-        $dslc_options = array_merge( $dslc_options, $this->shared_options('animation_options') );
-		$dslc_options = array_merge( $dslc_options, $this->presets_options() );
+        $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
+        $dslc_options = array_merge($dslc_options, $this->presets_options());
 
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options)
-    {
+    function output($options) {
 
         $this->module_start($options);
 
@@ -583,8 +650,7 @@ class AS_Image extends DSLC_Module
         if ($options['link_url'] !== '')
             $anchor_href = $options['link_url'];
 
-        if ($options['link_type'] == 'lightbox' && $options['link_lb_image'] !== '')
-        {
+        if ($options['link_type'] == 'lightbox' && $options['link_lb_image'] !== '') {
             $anchor_class .= 'dslc-lightbox-image ';
             $anchor_href = $options['link_lb_image'];
         }
@@ -592,7 +658,7 @@ class AS_Image extends DSLC_Module
 
         <div class="dslc-image">
 
-        <?php if (empty($options['image'])) : ?>
+            <?php if (empty($options['image'])) : ?>
 
                 <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'dslc_string'); ?></div>
 
@@ -601,8 +667,7 @@ class AS_Image extends DSLC_Module
                 <?php
                 $resize    = false;
                 $the_image = $options['image'];
-                if ($options['resize_width'] != '' || $options['resize_height'] != '')
-                {
+                if ($options['resize_width'] != '' || $options['resize_height'] != '') {
 
                     $resize        = true;
                     $resize_width  = false;
@@ -618,29 +683,32 @@ class AS_Image extends DSLC_Module
                 }
                 ?>
 
-					<?php if ( $options['link_type'] !== 'none' ) : ?>
-						<a class="<?php echo $anchor_class; ?>" href="<?php echo $anchor_href; ?>" target="<?php echo $anchor_target; ?>">
-					<?php endif; ?>
-						<img src="<?php echo $the_image ?>" alt="<?php echo $options['image_alt']; ?>" title="<?php echo $options['image_title']; ?>" />
-					<?php if ( $options['link_type'] !== 'none' ) : ?>
-						</a>
-					<?php endif; ?>
+                <?php if ($options['link_type'] !== 'none') : ?>
+                    <a class="<?php echo esc_attr($anchor_class); ?>" href="<?php echo esc_url($anchor_href); ?>" target="<?php echo esc_attr($anchor_target); ?>">
+                    <?php endif; ?>
+                    <div class="as-effect-style <?php echo esc_attr($options['as_image_effect_style']); ?>">
+                        <img src="<?php echo esc_url($the_image) ?>" alt="<?php echo esc_attr($options['image_alt']); ?>" title="<?php echo esc_attr($options['image_title']); ?>" />
 
-            <?php if ($options['custom_text_state'] == 'enabled') : ?>
+                    </div>
+                    <?php if ($options['link_type'] !== 'none') : ?>
+                    </a>
+                <?php endif; ?>
+
+                <?php if ($options['custom_text_state'] == 'enabled') : ?>
 
                     <div class="dslc-image-caption">
 
                         <?php if ($dslc_is_admin) : ?>
-                            <div class="dslca-editable-content" data-id="custom_text" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo $options['custom_text']; ?></div>
+                            <div class="dslca-editable-content" data-id="custom_text" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['custom_text'], 'alenastudio'); ?></div>
                         <?php else : ?>
-                            <?php echo $options['custom_text']; ?>
-                <?php endif; ?>
+                            <?php echo esc_html($options['custom_text'], 'alenastudio'); ?>
+                        <?php endif; ?>
 
                     </div>
 
                 <?php endif; ?>
 
-        <?php endif; ?>
+            <?php endif; ?>
 
         </div><!-- .dslc-image -->
 

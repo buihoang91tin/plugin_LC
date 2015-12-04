@@ -1,5 +1,3 @@
-<?php define('AS_DOMAIN', 'alenastudio'); ?>
-
 <style>
 	h2.as-big-title{
 		font-size: 22px;
@@ -22,7 +20,7 @@
 		</div><!--left-content-section-->
 		
 		<div class="right-logo-section">
-			<div class="bsf-company-logo"><img src="http://hqsolu.com/wp-content/uploads/2015/06/logo-white.png">
+			<div class="bsf-company-logo">
 			</div><!--company-logo-->
 		</div><!--right-logo-section-->
 	</div>	<!--heading section-->

@@ -1,0 +1,48 @@
+.as-heading-title-3 {
+    .as-heading-icon {
+        .dslc-icon {
+            display: inline-block;
+        }
+    }
+    .as-line-heading-wrapper {
+        .as-line-heading-left,
+        .as-line-heading-right {
+            width: 55px;
+            height: 0;
+            border-top: 1px dashed #e3e3e3;
+            display: inline-block;
+            margin: 0 15px;
+            vertical-align: middle;
+        }
+        .as-line-heading-left {
+            margin-right: 30px;
+        }
+        .as-line-heading-right {
+            margin-left: 30px;
+        }
+    }
+    .as-line-heading-middle {
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        margin: 0 auto;
+        vertical-align: middle;
+        position: relative;
+        background: #e3e3e3;
+        &:before,
+            &:after {
+            content: '';
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background: #f3f3f3;
+            top: 3px;
+        }
+        &:before {
+            left: -20px;
+        }
+        &:after {
+            right: -20px;
+        }
+    }
+}

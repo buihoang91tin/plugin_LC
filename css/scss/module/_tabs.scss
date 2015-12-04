@@ -1,0 +1,14 @@
+.as-vertical-tabs {
+    .dslc-tabs-nav {
+        float: left;
+        .dslc-tabs-nav-hook {
+            width: 100%;
+        }
+    }
+    .dslc-tabs-content {
+        float: left;
+    }
+    .dslc-tabs-content.as-tabs-content-text{
+        width: 80% !important;
+    }
+}
