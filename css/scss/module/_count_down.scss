@@ -1,256 +1,83 @@
-.coming_soon_ctn {
-    margin: 0 auto;
-    max-width: 100%;
-    width: 700px;
-    .timing {
-        margin: 105px auto 135px;
-        max-width: 100%;
-        .as_count_down {
-            .time_circles {
-                > div {
-                    position: absolute;
-                    text-align: center;
-                    > h4 {
-                        color: #a1b1bc;
-                        font-size: 18px;
-                        font-weight: 400;
-                        margin: 0;
-                        padding: 50px 0 0;
-                        text-align: center;
-                    }
-                    span {
-                        color: #2f383d;
-                        display: block;
-                        font-size: 48px;
-                        font-weight: 300;
-                        line-height: 48px;
-                        text-align: center;
-                        width: 100%;
-                    }
-                }
-                height: 100%;
-                position: relative;
-                width: 100%;
-                canvas {
-                    max-width: 100%;
-                }
-            }
-        }
-    }
+.as-countdown-container {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+
 }
 
-.coming_soon_text {
-    color: #a1b1bc;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    margin-top: 196px;
-    text-align: center;
-    text-transform: uppercase;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.as-clock-item .inner {
+	height: 0px;
+	padding-bottom: 100%;
+	position: relative;	
+	width: 100%;
+}
+.as-clock-item{
+    margin-right: 5px !important;
+}
+.as-clock-canvas {
+	background-color: rgba(255, 255, 255, .1);
+	border-radius: 50%;
+	height: 0px;
+	padding-bottom: 100%;
+}
+.kineticjs-content{
+    border-width: 6px ;
+    border-style: solid;
+    border-radius: 100%;
+}
+.as-cowntdown-number{
+    margin-bottom: 0;
+}
+.as-text {
+	color: #fff;	
+	font-size: 30px;
+	font-weight: bold;	
+	margin-top: -50px;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	width: 100%;
 }
 
-#dark_csp .coming_soon_text {
-    color: #fff;
+.as-text .val {
+	font-size: 50px;
 }
 
-#dark_csp .time_circles>div>h4 {
-    color: #fff;
+.as-text .as-time {
+	font-size: 20px;
 }
 
-#dark_csp .time_circles>div>span {
-    color: #fff;
+@media (min-width: 768px) and (max-width: 991px) {
+	.as-clock-item {
+		margin-bottom: 30px;		
+	}
 }
 
-#coming_soon_form {
-    margin: 0 auto 100px;
-    max-width: 100%;
-    position: relative;
-    width: 440px;
+@media (max-width: 767px) {
+	.as-clock-item {
+		margin: 0px 30px 30px 30px;
+	}
 }
-
-#coming_soon_form input[type=email] {
-    background: #fff;
-    border: 1px solid #eceef0;
-    border-radius: 3px;
-    color: #a1b1bc;
-    margin: 0;
-    padding: 14px 20px;
-}
-
-#dark_csp #coming_soon_form input[type=email] {
-    background: #222533;
-    border: 1px solid #16181A;
-    color: #a1b1bc;
-}
-
-#coming_soon_form input[type=button] {
-    background: #1ABC9C;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    font-family: Fontawesome;
-    font-size: 16px;
-    height: 50px;
-    line-height: 54px;
-    outline: 0;
-    padding: 0 19px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    @include transition(all .2s linear);
-}
-
-#coming_soon_form input[type=button],
-#style-selection {
-    @include transition(all .2s linear);
-}
-
-#coming_soon_form input[type=button]:hover {
-    background: #2c3e50;
-}
-
-.coming_soon_ctn .timing {
-    margin: 0px auto 0px;
-}
-
-@-webkit-keyframes loader_spin {
-    0% {
-        @include transform(rotate(0));
-    }
-    100% {
-        @include transform(rotate(360deg));
-    }
-}
-
-@keyframes loader_spin {
-    0% {
-        @include transform(rotate(0));
-    }
-    100% {
-        @include transform(rotate(360deg));
-    }
-}
-
-@-webkit-keyframes progress {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -60px -60px;
-    }
-}
-
-@-moz-keyframes progress {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -60px -60px;
-    }
-}
-
-@-ms-keyframes progress {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -60px -60px;
-    }
-}
-
-@-o-keyframes progress {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -60px -60px;
-    }
-}
-
-@keyframes progress {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -60px -60px;
-    }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    #tiptip_content {
-        background-color: #2c3e50;
-        padding: 2px 8px 3px;
-    }
-    #tiptip_holder.tip_bottom #tiptip_arrow_inner {
-        border-bottom-color: #2c3e50;
-    }
-    #tiptip_holder.tip_top #tiptip_arrow_inner {
-        border-top-color: #2c3e50;
-    }
-}
-.textDiv_Days,
-.textDiv_Hours,
-.textDiv_Minutes,
-.textDiv_Seconds {
-    @media only screen and (max-width: 769px) {     
-        top: 28px !important;
-        width: 50px !important;
-    }
-    @media only screen and (max-width: 480px) {
-        top: 13px !important;
-        width: 50px !important;
-    }
-    span {
-        @media only screen and (max-width: 769px) {
-            font-size: 2em !important;
-        }
-        @media only screen and (max-width: 480px) {
-            font-size: 1.5em !important;
-        }
-    }
-    h4 {
-        @media only screen and (max-width: 769px) {
-            padding-top: 20px !important;
-        }
-        @media only screen and (max-width: 480px) {
-            padding-top: 10px !important;
-        }
-        @media only screen and (max-width: 320px) {
-            font-size: 13px !important;
-        }
-    }
-}
-.textDiv_Days {
-    @media only screen and (max-width: 769px) {
-        left: 25px !important;
-    }
-    @media only screen and (max-width: 480px) {
-        left: 12px !important;
-    }
-}
-.textDiv_Hours {
-    @media only screen and (max-width: 769px) {
-        left: 125px !important;
-    }
-    @media only screen and (max-width: 480px) {
-        left: 80px !important;
-    }
-}
-.textDiv_Minutes {
-    @media only screen and (max-width: 769px) {
-        left: 225px !important;
-    }
-    @media only screen and (max-width: 480px) {
-        left: 150px !important;
-    }
-}
-.textDiv_Seconds {
-    @media only screen and (max-width: 769px) {
-        left: 325px !important;
-    }
-    @media only screen and (max-width: 480px) {
-        left: 225px !important;
-    }
-}
-

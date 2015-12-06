@@ -22,7 +22,7 @@ include AS_EXTENSION_ABS . '/modules/as-infobox-2/module.php';
 include AS_EXTENSION_ABS . '/modules/as-infobox-3/module.php';
 include AS_EXTENSION_ABS . '/modules/as-infobox-4/module.php';
 include AS_EXTENSION_ABS . '/modules/as-infobox-5/module.php';
-include AS_EXTENSION_ABS . '/modules/as-projects/module.php';
+//include AS_EXTENSION_ABS . '/modules/as-projects/module.php';
 include AS_EXTENSION_ABS . '/modules/as-staff/module.php';
 include AS_EXTENSION_ABS . '/modules/as-testimonials/module.php';
 include AS_EXTENSION_ABS . '/modules/as-pricing/module.php';
@@ -39,9 +39,9 @@ include AS_EXTENSION_ABS . '/modules/as-text-rotator/module.php';
 //include AS_EXTENSION_ABS . '/modules/as-res-menu/module.php';
 include AS_EXTENSION_ABS . '/modules/as-introduce/module.php';
 include AS_EXTENSION_ABS . '/modules/as-video/module.php';
-if ( class_exists( 'WooCommerce' ) ) {    
-include AS_EXTENSION_ABS . '/modules/as-woocommerce/module.php';
-}
+//if ( class_exists( 'WooCommerce' ) ) {    
+//include AS_EXTENSION_ABS . '/modules/as-woocommerce/module.php';
+//}
 
 // Register JS & CSS libary
 function as_load_script() {
@@ -58,6 +58,8 @@ function as_load_script() {
       wp_enqueue_script('as-circle-char', AS_EXTENSION_URL . 'js/circle-char.js', array(
         'jquery'));
     wp_enqueue_script('as-twentytwenty', AS_EXTENSION_URL . 'js/jquery.twentytwenty.js', array(
+        'jquery'));
+    wp_enqueue_script('as-countdown', AS_EXTENSION_URL . 'js/jquery.countdown.js', array(
         'jquery'));
     wp_enqueue_script('as-googlemap-js', 'http://maps.google.com/maps/api/js?sensor=false&v=3.5', array(
         'jquery'));
@@ -77,7 +79,7 @@ add_action('dslc_hook_register_modules', create_function('', 'return dslc_regist
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_3" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_4" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_5" );'));
-add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Projects" );'));
+//add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Projects" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Staff" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Heading_Title_Module" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Heading_Title_Module_2" );'));
@@ -96,9 +98,9 @@ add_action('dslc_hook_register_modules', create_function('', 'return dslc_regist
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_text_rotator" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Introduce" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_video" );'));
-if ( class_exists( 'WooCommerce' ) ) {
-    add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_WooCommerce_Products" );'));
-}
+//if ( class_exists( 'WooCommerce' ) ) {
+//    add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_WooCommerce_Products" );'));
+//}
 //add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Res_Menu" );'));
 // Add galleries to post
 global $dslc_var_post_options;

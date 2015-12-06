@@ -153,12 +153,47 @@ function as_counter() {
     });
 }
 /**
+ * Countdown
+ */
+function as_countdown() {
+    jQuery('document').ready(function () {
+        jQuery(".as-cowntdown-data").each(function() {
+            var as_date_time = jQuery(this).data('date');
+        var end_time = Date.parse(as_date_time);
+         console.log(end_time);
+        'use strict';
+        jQuery('.as-countdown').final_countdown({
+            'start': (jQuery.now())/1000,
+            'end': end_time/1000,
+            'now': (jQuery.now())/1000,
+    seconds: {
+        borderColor: '#ECECEC',
+        borderWidth: '6'
+    },
+    minutes: {
+        borderColor: '#ECECEC',
+        borderWidth: '6'
+    },
+    hours: {
+        borderColor: '#ECECEC',
+        borderWidth: '6'
+    },
+    days: {
+        borderColor: '#ECECEC',
+        borderWidth: '6'
+    }
+        });
+    });
+    });
+}
+
+/**
  * Initiate Testimonials
  */
 function as_testimonials() {
     jQuery('.as-testimonials-simple').each(function () {
         var slide_owl = jQuery(this),
-                data_pagination = slide_owl.attr('data-pagination');
+         data_pagination = slide_owl.attr('data-pagination');
         data_effect = slide_owl.attr('data-effect');
         data_auto = slide_owl.attr('data-auto');
         var temp = true;
@@ -1774,6 +1809,7 @@ function as_gallery_dslc() {
 
 
 jQuery(window).load(function () {
+    as_countdown();
     as_gallery_post();
     as_counter();
     as_circle_chart();
@@ -1786,6 +1822,7 @@ jQuery(window).load(function () {
 });
 jQuery(document).ajaxComplete(function () {
     if (jQuery('body').hasClass('dslca-enabled')) {
+        as_countdown();
         as_testimonials();
         as_counter();
         as_circle_chart();

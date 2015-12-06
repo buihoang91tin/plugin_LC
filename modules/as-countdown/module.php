@@ -43,12 +43,6 @@ class AS_Countdown extends DSLC_Module {
                     ),
                 ),
             ),
-//             array(
-// 				'label' => __( 'Time to Countdown', 'dslc_string' ),
-// 				'id' => 'time_countdown',
-// 				'std' => '2016-07-26 00:00:00',
-// 				'type' => 'text',
-// 			),
             array(
                 'label'                 => __('year', 'dslc_string'),
                 'id'                    => 'time_countdown_year',
@@ -351,19 +345,12 @@ class AS_Countdown extends DSLC_Module {
                 'type'              => 'text',
             ),
             array(
-                'label'             => __('Second2', 'dslc_string'),
-                'id'                => 'time_countdown_second2',
-                'std'               => '07',
-                'refresh_on_change' => true,
-                'type'              => 'text',
-            ),
-            array(
                 'label'                 => __('Margin Top', 'dslc_string'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.coming_soon_ctn',
+                'affect_on_change_el'   => '.as-countdown',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
@@ -376,14 +363,205 @@ class AS_Countdown extends DSLC_Module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.coming_soon_ctn',
+                'affect_on_change_el'   => '.as-countdown',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100,
             ),
+            array(
+                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'id'                    => 'css_res_t_padding_vertical_form',
+                'std'                   => '5',
+                'type'                  => 'slider',
+                'refresh_on_change'     => true,
+                'affect_on_change_el'   => '.as-countdown',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'styling',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'id'                    => 'css_res_t_padding_horizontal_form',
+                'std'                   => '5',
+                'type'                  => 'slider',
+                'refresh_on_change'     => true,
+                'affect_on_change_el'   => '.as-countdown',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'styling',
+                'ext'                   => 'px'
+            ),
             /**
+             * Timing
+             */
+            array(
+                'label'                 => __('Date  Color', 'dslc_string'),
+                'id'                    => 'as_timing_date_color',
+                'std'                   => '#21c2f8',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-canvas-day >.kineticjs-content',
+                'affect_on_change_rule' => 'border-color',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Hours  Color', 'dslc_string'),
+                'id'                    => 'as_timing_hours_color',
+                'std'                   => '#f28776',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-canvas-hours >.kineticjs-content',
+                'affect_on_change_rule' => 'border-color',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Minutes  Color', 'dslc_string'),
+                'id'                    => 'as_timing_minutes_color',
+                'std'                   => '#9675ed',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-canvas-minute >.kineticjs-content',
+                'affect_on_change_rule' => 'border-color',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Seconds  Color', 'dslc_string'),
+                'id'                    => 'as_timing_seconds_color',
+                'std'                   => '#facc43',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-canvas-second >.kineticjs-content',
+                'affect_on_change_rule' => 'border-color',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Number Color', 'dslc_string'),
+                'id'                    => 'css_number_text_color',
+                'std'                   => '#272822',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-cowntdown-number',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Font Size ( Number )', 'dslc_string'),
+                'id'                    => 'css_number_font_size',
+                'std'                   => '40',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-cowntdown-number',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight ( Number)', 'dslc_string'),
+                'id'                    => 'css_number_font_weight',
+                'std'                   => '600',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-cowntdown-number',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Family', 'dslc_string'),
+                'id'                    => 'css_number_font_family',
+                'std'                   => 'Open Sans',
+                'type'                  => 'font',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-cowntdown-number',
+                'affect_on_change_rule' => 'font-family',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Text Color', 'dslc_string'),
+                'id'                    => 'css_text_color',
+                'std'                   => '#a1b1bc',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-countdown-text',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Font Size Text', 'dslc_string'),
+                'id'                    => 'css_text_font_size',
+                'std'                   => '15',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-countdown-text',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight Text', 'dslc_string'),
+                'id'                    => 'css_text_font_weight',
+                'std'                   => '400',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-countdown-text',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Family Text', 'dslc_string'),
+                'id'                    => 'css_text_font_family',
+                'std'                   => 'Raleway',
+                'type'                  => 'font',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-countdown-text',
+                'affect_on_change_rule' => 'font-family',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+            ),
+            array(
+                'label'                 => __('Line Height Text', 'dslc_string'),
+                'id'                    => 'css_text_lheight',
+                'std'                   => '23',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-countdown-text',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+                'ext'                   => 'px'
+            ),
+             array(
+                'label'                 => __('Margin Top', 'dslc_string'),
+                'id'                    => 'css_text_mgtop',
+                'std'                   => '76',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text',
+                'affect_on_change_rule' => 'top',
+                'section'               => 'styling',
+                'tab'                   => __('Timing', 'dslc_string'),
+                'ext'                   => 'px',
+            ),
+             /**
              * Responsive Tablet
              */
             array(
@@ -410,33 +588,11 @@ class AS_Countdown extends DSLC_Module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => true,
-                'affect_on_change_el'   => '.as_count_down',
+                'affect_on_change_el'   => '.as_countdown',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'tab'                   => 'tablet',
                 'ext'                   => 'px',
-            ),
-            array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
-                'id'                    => 'css_res_t_padding_vertical_form',
-                'std'                   => '5',
-                'type'                  => 'slider',
-                'refresh_on_change'     => true,
-                'affect_on_change_el'   => '.as_count_down',
-                'affect_on_change_rule' => 'padding-top,padding-bottom',
-                'section'               => 'styling',
-                'ext'                   => 'px'
-            ),
-            array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
-                'id'                    => 'css_res_t_padding_horizontal_form',
-                'std'                   => '5',
-                'type'                  => 'slider',
-                'refresh_on_change'     => true,
-                'affect_on_change_el'   => '.as_count_down',
-                'affect_on_change_rule' => 'padding-left,padding-right',
-                'section'               => 'styling',
-                'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
@@ -465,7 +621,7 @@ class AS_Countdown extends DSLC_Module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => true,
-                'affect_on_change_el'   => '.as_count_down',
+                'affect_on_change_el'   => '.as_countdown',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
@@ -477,7 +633,7 @@ class AS_Countdown extends DSLC_Module {
                 'std'                   => '5',
                 'type'                  => 'slider',
                 'refresh_on_change'     => true,
-                'affect_on_change_el'   => '.as_count_down',
+                'affect_on_change_el'   => '.as_countdown',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
@@ -489,179 +645,10 @@ class AS_Countdown extends DSLC_Module {
                 'std'                   => '5',
                 'type'                  => 'slider',
                 'refresh_on_change'     => true,
-                'affect_on_change_el'   => '.as_count_down',
+                'affect_on_change_el'   => '.as_countdown',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
-                'ext'                   => 'px'
-            ),
-            /**
-             * Timing
-             */
-            array(
-                'label'                 => __('Date  Color', 'dslc_string'),
-                'id'                    => 'as_timing_date_color',
-                'std'                   => '#21c2f8',
-                'type'                  => 'color',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '',
-                'affect_on_change_rule' => '',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Hours  Color', 'dslc_string'),
-                'id'                    => 'as_timing_hours_color',
-                'std'                   => '#f28776',
-                'type'                  => 'color',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '',
-                'affect_on_change_rule' => '',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Minutes  Color', 'dslc_string'),
-                'id'                    => 'as_timing_minutes_color',
-                'std'                   => '#9675ed',
-                'type'                  => 'color',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '',
-                'affect_on_change_rule' => '',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Seconds  Color', 'dslc_string'),
-                'id'                    => 'as_timing_seconds_color',
-                'std'                   => '#facc43',
-                'type'                  => 'color',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '',
-                'affect_on_change_rule' => '',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Number Text Color', 'dslc_string'),
-                'id'                    => 'css_number_text_color',
-                'std'                   => '#272822',
-                'type'                  => 'color',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>span',
-                'affect_on_change_rule' => 'color',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Font Size', 'dslc_string'),
-                'id'                    => 'css_number_font_size',
-                'std'                   => '48',
-                'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>span',
-                'affect_on_change_rule' => 'font-size',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-                'ext'                   => 'px'
-            ),
-            array(
-                'label'                 => __('Font Weight', 'dslc_string'),
-                'id'                    => 'css_number_font_weight',
-                'std'                   => '300',
-                'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>span',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-                'ext'                   => '',
-                'min'                   => 100,
-                'max'                   => 900,
-                'increment'             => 100
-            ),
-            array(
-                'label'                 => __('Font Family', 'dslc_string'),
-                'id'                    => 'css_number_font_family',
-                'std'                   => 'Open Sans',
-                'type'                  => 'font',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>span',
-                'affect_on_change_rule' => 'font-family',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Line Height', 'dslc_string'),
-                'id'                    => 'css_number_lheight',
-                'std'                   => '48',
-                'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>span',
-                'affect_on_change_rule' => 'line-height',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-                'ext'                   => 'px'
-            ),
-            array(
-                'label'                 => __('Text Color', 'dslc_string'),
-                'id'                    => 'css_text_color',
-                'std'                   => '#a1b1bc',
-                'type'                  => 'color',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>h4',
-                'affect_on_change_rule' => 'color',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Font Size Text', 'dslc_string'),
-                'id'                    => 'css_text_font_size',
-                'std'                   => '18',
-                'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>h4',
-                'affect_on_change_rule' => 'font-size',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-                'ext'                   => 'px'
-            ),
-            array(
-                'label'                 => __('Font Weight Text', 'dslc_string'),
-                'id'                    => 'css_text_font_weight',
-                'std'                   => '600',
-                'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>h4',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-                'ext'                   => '',
-                'min'                   => 100,
-                'max'                   => 900,
-                'increment'             => 100
-            ),
-            array(
-                'label'                 => __('Font Family Text', 'dslc_string'),
-                'id'                    => 'css_text_font_family',
-                'std'                   => 'Raleway',
-                'type'                  => 'font',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>h4',
-                'affect_on_change_rule' => 'font-family',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
-            ),
-            array(
-                'label'                 => __('Line Height Text', 'dslc_string'),
-                'id'                    => 'css_text_lheight',
-                'std'                   => '23',
-                'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.time_circles>div>h4',
-                'affect_on_change_rule' => 'line-height',
-                'section'               => 'styling',
-                'tab'                   => __('Timing', 'dslc_string'),
                 'ext'                   => 'px'
             ),
         );
@@ -708,21 +695,58 @@ class AS_Countdown extends DSLC_Module {
         $options['time_countdown'].= ":" . $options['time_countdown_second'];
 
         // Module output stars here 
-
         $elementID = uniqid('as_googlemap_');
         ?>
 
 
-        <?php if ((empty($options['time_countdown']))): ?>
-            <div class="dslc-notification dslc-red"><?php _e('Time CountDown preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing time countdown.', 'alenastudio'); ?><br></div>
-        <?php else: ?>
-            <div class="coming_soon_ctn">
-                <div class="timing" style="width:100%;">
-                    <div class="as_count_down" id="<?php echo $elementID; ?>" data-date="<?php echo esc_attr($options['time_countdown']); ?>" date-color="<?php echo esc_attr($options['as_timing_date_color']); ?>" hours-color="<?php echo esc_attr($options['as_timing_hours_color']); ?>" minutes-color="<?php echo esc_attr($options['as_timing_minutes_color']); ?>" seconds-color="<?php echo esc_attr($options['as_timing_seconds_color']); ?>" ></div>
-                </div>
-            </div>   
-
-        <?php endif ?>        
+<div class="as-countdown as-countdown-container">
+    <div class=" as-cowntdown-data" data-date="<?php echo $options['time_countdown'];?>">
+        <div class="as-clock-item clock-days  dslc-col dslc-3-col">
+            <div class="as-wrap">
+                <div class="inner">
+                    <div id="canvas-days" class="as-clock-canvas as-canvas-day"></div>
+                    <div class="as-text">
+                        <p class="as-cowntdown-number val">0</p>
+                        <p class="as-days as-time as-countdown-text">DAYS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.as-wrap -->
+        </div><!-- /.as-clock-item -->
+        <div class="as-clock-item clock-hours  dslc-col dslc-3-col">
+            <div class="as-wrap">
+                <div class="inner">
+                    <div id="canvas-hours" class="as-clock-canvas as-canvas-hours"></div>
+                    <div class="as-text">
+                        <p class="as-cowntdown-number val">0</p>
+                        <p class="as-hours as-time as-countdown-text">HOURS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.as-wrap -->
+        </div><!-- /.as-clock-item -->
+        <div class="as-clock-item clock-minutes  dslc-col dslc-3-col">
+            <div class="as-wrap">
+                <div class="inner">
+                    <div id="canvas-minutes" class="as-clock-canvas as-canvas-minute"></div>
+                    <div class="as-text">
+                        <p class="as-cowntdown-number val">0</p>
+                        <p class="as-minutes as-time as-countdown-text">MINUTES</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.as-wrap -->
+        </div><!-- /.as-clock-item -->
+        <div class="as-clock-item clock-seconds  dslc-col dslc-3-col">
+            <div class="as-wrap">
+                <div class="inner">
+                    <div id="canvas-seconds" class="as-clock-canvas as-canvas-second"></div>
+                    <div class="as-text">
+                        <p class="as-cowntdown-number val">0</p>
+                        <p class="as-seconds as-time as-countdown-text">SECONDS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.as-wrap -->
+        </div><!-- /.as-as-clock-item -->
+    </div><!-- /.clock -->
+</div><!-- /.countdown-wrapper -->
 
         <?php
         // REQUIRED
