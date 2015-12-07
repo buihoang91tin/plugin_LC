@@ -104,7 +104,10 @@ function my_admin_notice() {
 	if (!(function_exists('dslc_register_modules'))){
    ?>
     <div class="updated">
-        <p><?php _e( 'Live Composer is not install <a style="color:red;">Plese install this plugin</a>', 'alenastudio'); ?></p>
+        <?php
+        $admin_url = admin_url().'plugin-install.php?tab=plugin-information&plugin=live-composer-page-builder&TB_iframe=true&width=300&height=300';
+        ?>
+        <p><?php _e( 'AS Extension need Live Composer plugin <a target="_blank" href="'.$admin_url.'" style="color:red;">Please install this plugin</a>', 'alenastudio'); ?></p>
     </div>
 	<?php }
 }

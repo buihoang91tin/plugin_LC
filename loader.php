@@ -33,7 +33,7 @@ include AS_EXTENSION_ABS . '/modules/as-pricing-3/module.php';
 include AS_EXTENSION_ABS . '/modules/as-googlemap/module.php';
 include AS_EXTENSION_ABS . '/modules/as-subscription/module.php';
 include AS_EXTENSION_ABS . '/modules/as-before-after/module.php';
-include AS_EXTENSION_ABS . '/modules/as-countdown/module.php';
+//include AS_EXTENSION_ABS . '/modules/as-countdown/module.php';
 include AS_EXTENSION_ABS . '/modules/as-listing/module.php';
 include AS_EXTENSION_ABS . '/modules/as-text-rotator/module.php';
 //include AS_EXTENSION_ABS . '/modules/as-res-menu/module.php';
@@ -92,7 +92,7 @@ add_action('dslc_hook_register_modules', create_function('', 'return dslc_regist
 //add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Tabs" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Google_Map" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_SubscriptionBox" );'));
-add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Countdown" );'));
+//add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Countdown" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Before_After" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Listing" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_text_rotator" );'));

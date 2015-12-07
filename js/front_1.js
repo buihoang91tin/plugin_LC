@@ -155,48 +155,48 @@ function as_counter() {
 /**
  * Countdown
  */
-//function as_countdown() {
-//    jQuery('document').ready(function () {
-//        jQuery(".as-cowntdown-data").each(function () {
-//            var data_id = jQuery(this).attr('id');
-//            var as_data_date = jQuery(this).attr('data-date');
-//            var end_time = Date.parse(as_data_date);
-//            console.log(as_data_date);
-//            'use strict';
-//            jQuery('#'+data_id).final_countdown({
-//                'start': (jQuery.now()) / 1000,
-//                'end': end_time / 1000,
-//                'now': (jQuery.now()) / 1000,
-//                    selectors: {
-//        value_seconds: '.clock-seconds .'+data_id+'.val',
-//        canvas_seconds: 'canvas-seconds',
-//        value_minutes: '.clock-minutes .'+data_id+'.val',
-//        canvas_minutes: 'canvas-minutes',
-//        value_hours: '.clock-hours .'+data_id+'.val',
-//        canvas_hours: 'canvas-hours',
-//        value_days: '.clock-days .'+data_id+'.val',
-//        canvas_days: 'canvas-days'
-//    },
-//                seconds: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                },
-//                minutes: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                },
-//                hours: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                },
-//                days: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                }
-//            });
-//        });
-//    });
-//}
+function as_countdown() {
+    jQuery('document').ready(function () {
+        jQuery(".as-cowntdown-data").each(function () {
+            var data_id = jQuery(this).attr('id');
+            var as_data_date = jQuery(this).attr('data-date');
+            var end_time = Date.parse(as_data_date);
+            console.log(as_data_date);
+            'use strict';
+            jQuery('#'+data_id).final_countdown({
+                'start': (jQuery.now()) / 1000,
+                'end': end_time / 1000,
+                'now': (jQuery.now()) / 1000,
+                    selectors: {
+        value_seconds: '.clock-seconds .'+data_id+'.val',
+        canvas_seconds: 'canvas-seconds',
+        value_minutes: '.clock-minutes .'+data_id+'.val',
+        canvas_minutes: 'canvas-minutes',
+        value_hours: '.clock-hours .'+data_id+'.val',
+        canvas_hours: 'canvas-hours',
+        value_days: '.clock-days .'+data_id+'.val',
+        canvas_days: 'canvas-days'
+    },
+                seconds: {
+                    borderColor: '#ECECEC',
+                    borderWidth: '6'
+                },
+                minutes: {
+                    borderColor: '#ECECEC',
+                    borderWidth: '6'
+                },
+                hours: {
+                    borderColor: '#ECECEC',
+                    borderWidth: '6'
+                },
+                days: {
+                    borderColor: '#ECECEC',
+                    borderWidth: '6'
+                }
+            });
+        });
+    });
+}
 
 /**
  * Initiate Testimonials
@@ -291,34 +291,32 @@ function as_time_circles() {
         var second_color = jQuery(this).attr('seconds-color');
         jQuery('#' + id_time_circles).TimeCircles(
                 {
-                    circle_bg_color: "transperant",
+                    circle_bg_color: "#ccd3d7",
                     use_background: true,
                     bg_width: 1.0,
                     fg_width: 0.02,
                     time: {
                         Days: {
-                            color: 'rgba(255,255,255,0)',
+                            color: date_color,
                             text: "Days"
                         },
                         Hours: {
-                            color: 'rgba(255,255,255,0)',
+                            color: hour_color,
                             text: "Hours"
                         },
                         Minutes: {
-                            color: 'rgba(255,255,255,0)',
+                            color: minute_color,
                             text: "Minutes"
                         },
                         Seconds: {
-                            color: 'rgba(255,255,255,0)',
+                            color: second_color,
                             text: "Seconds"
                         }
                     }
                 }
         );
         //test
-        
     });
-    //  jQuery("canvas").remove();
 }
 
 /**
@@ -1822,7 +1820,7 @@ function as_gallery_dslc() {
 
 
 jQuery(window).load(function () {
-   // as_countdown();
+    as_countdown();
     as_gallery_post();
     as_counter();
     as_circle_chart();
@@ -1835,7 +1833,7 @@ jQuery(window).load(function () {
 });
 jQuery(document).ajaxComplete(function () {
     if (jQuery('body').hasClass('dslca-enabled')) {
-       // as_countdown();
+        as_countdown();
         as_testimonials();
         as_counter();
         as_circle_chart();
