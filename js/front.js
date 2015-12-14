@@ -1754,16 +1754,15 @@ function as_before_img() {
  *  Text Rotator
  */
 function as_text_rotator() {
+    jQuery(".as-text-row-1 .rotate").each(function(){
+        anim_text = jQuery(this).data('anim-text');
+    speed_text = jQuery(this).data('speed-text');
 
-    var effect_text = jQuery(".as-text-row-1 .rotate");
-    var effect_speed = jQuery(".as-text-main");
-    anim_text = effect_text.data('anim-text');
-    speed_text = effect_speed.data('speed-text');
-
-    effect_text.textrotator({
+    jQuery(this).textrotator({
         animation: anim_text,
         speed: speed_text
     });
+        });
 }
 /**
  *  Owl Carousel Post Format

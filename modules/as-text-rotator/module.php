@@ -48,14 +48,14 @@ class AS_text_rotator extends DSLC_Module {
             array(
                 'label'             => __('TEXT II', 'dslc_string'),
                 'id'                => 'as_rotator_2',
-                'std'               => 'man,power,hacker',
+                'std'               => 'Easy, Simple, Customizable',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
                 'label'             => __('TEXT III', 'dslc_string'),
                 'id'                => 'as_rotator_3',
-                'std'               => 'code',
+                'std'               => 'Text Rotator with Style',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
@@ -469,8 +469,8 @@ class AS_text_rotator extends DSLC_Module {
         <div class="as-text-body">
             <div class="as-text-wraper">
 
-                <div class="as-text-main" data-speed-text = "<?php echo esc_attr($as_speed_text); ?>">
-                    <h1 class="as-text-row-1"><?php echo esc_attr($options['as_rotator_1']); ?> <span class="rotate" data-anim-text="<?php echo esc_attr($options['as_rotator_style']); ?>"><?php echo esc_attr($options['as_rotator_2']); ?></span> <?php echo esc_attr($options['as_rotator_3']); ?></h1>
+                <div class="as-text-main">
+                    <h1 class="as-text-row-1"><?php echo esc_attr($options['as_rotator_1']); ?> <span class="rotate" data-anim-text="<?php echo esc_attr($options['as_rotator_style']); ?>"data-speed-text = "<?php echo esc_attr($as_speed_text); ?>"><?php echo esc_attr($options['as_rotator_2']); ?></span> <?php echo esc_attr($options['as_rotator_3']); ?></h1>
                 </div>
             </div>
         </div>	

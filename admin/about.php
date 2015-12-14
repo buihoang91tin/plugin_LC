@@ -16,7 +16,7 @@
 		<div class="wrap left-content-section">
 		
 			<h2><?php echo __('AS Extension For Live Composer','as_extension'); ?></h2>
-			<p><?php  _e('Ultimate '.ULTIMATE_VERSION.' is installed and you are set to take your website design experience to the next level.','as_extension'); ?></p>
+			<p><?php // _e('Ultimate '.ULTIMATE_VERSION.' is installed and you are set to take your website design experience to the next level.','as_extension'); ?></p>
 		</div><!--left-content-section-->
 		
 		<div class="right-logo-section">
