@@ -10,7 +10,7 @@ class AS_text_rotator extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_text_rotator';
-        $this->module_title    = __('AS - Text Rotator', 'dslc_string');
+        $this->module_title    = __('AS - Text Rotator', 'alenastudio_plugin');
         $this->module_icon     = 'quote-right';
         $this->module_category = 'as - element';
     }
@@ -19,87 +19,87 @@ class AS_text_rotator extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'             => __('TEXT I', 'dslc_string'),
+                'label'             => __('TEXT I', 'alenastudio_plugin'),
                 'id'                => 'as_rotator_1',
                 'std'               => 'Super',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
-                'label'             => __('TEXT II', 'dslc_string'),
+                'label'             => __('TEXT II', 'alenastudio_plugin'),
                 'id'                => 'as_rotator_2',
                 'std'               => 'Easy, Simple, Customizable',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
-                'label'             => __('TEXT III', 'dslc_string'),
+                'label'             => __('TEXT III', 'alenastudio_plugin'),
                 'id'                => 'as_rotator_3',
                 'std'               => 'Text Rotator with Style',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
-                'label'   => __('Style', 'dslc_string'),
+                'label'   => __('Style', 'alenastudio_plugin'),
                 'id'      => 'as_rotator_style',
                 'std'     => 'spin',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Fade', 'dslc_string'),
+                        'label' => __('Fade', 'alenastudio_plugin'),
                         'value' => 'fade',
                     ),
                     array(
-                        'label' => __('Flip', 'dslc_string'),
+                        'label' => __('Flip', 'alenastudio_plugin'),
                         'value' => 'flip',
                     ),
                     array(
-                        'label' => __('FlipCube', 'dslc_string'),
+                        'label' => __('FlipCube', 'alenastudio_plugin'),
                         'value' => 'flipCube',
                     ),
                     array(
-                        'label' => __('FlipUp', 'dslc_string'),
+                        'label' => __('FlipUp', 'alenastudio_plugin'),
                         'value' => 'flipUp',
                     ),
                     array(
-                        'label' => __('Spin', 'dslc_string'),
+                        'label' => __('Spin', 'alenastudio_plugin'),
                         'value' => 'spin',
                     ),
                 ),
             ),
             array(
-                'label'             => __('Speed', 'dslc_string'),
+                'label'             => __('Speed', 'alenastudio_plugin'),
                 'id'                => 'as_rotator_speed',
                 'std'               => '500',
                 'type'              => 'text',
                 'refresh_on_change' => true,
-                'help'              => __('Just only type numper. Ex: 1 -> 5000', 'dslc_string'),
+                'help'              => __('Just only type numper. Ex: 1 -> 5000', 'alenastudio_plugin'),
             ),
             /**
              * General
              */
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -107,10 +107,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BORDER COLOR', 'dslc_string'),
+                'label'                 => __('BORDER COLOR', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_boder_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -118,10 +118,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_boder_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -130,28 +130,28 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_boder',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -159,10 +159,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -170,11 +170,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -182,11 +182,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -194,13 +194,13 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-body',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -208,11 +208,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-body',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -220,14 +220,14 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'dslc_string'),
+                'tab'                   => __('General', 'alenastudio_plugin'),
                 'ext'                   => '%'
             ),
             /**
              * TEXT
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_title_color',
                 'std'                   => 'rgb(61, 61, 61)',
                 'type'                  => 'color',
@@ -235,10 +235,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'dslc_string'),
+                'tab'                   => __('TEXT', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_title_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -246,11 +246,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'dslc_string'),
+                'tab'                   => __('TEXT', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -258,14 +258,14 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'dslc_string'),
+                'tab'                   => __('TEXT', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -273,10 +273,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'dslc_string'),
+                'tab'                   => __('TEXT', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'as_rotator_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -284,32 +284,32 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'dslc_string'),
+                'tab'                   => __('TEXT', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -317,11 +317,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -329,13 +329,13 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -343,11 +343,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -355,32 +355,32 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'dslc_string'),
+                'tab'     => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -388,11 +388,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -400,13 +400,13 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -414,11 +414,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -426,7 +426,7 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
         );

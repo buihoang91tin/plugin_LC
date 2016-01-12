@@ -11,7 +11,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Circle_Chart_Module';
-        $this->module_title    = __('AS - Circle Chart', 'dslc_string');
+        $this->module_title    = __('AS - Circle Chart', 'alenastudio_plugin');
         $this->module_icon     = 'circle-blank';
         $this->module_category = 'as - Counter';
     }
@@ -24,49 +24,49 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Title', 'dslc_string'),
+                'label'      => __('Title', 'alenastudio_plugin'),
                 'id'         => 'title',
-                'std'        => 'CLICK TO EDIT',
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'alenastudio_plugin'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                 ),
@@ -76,25 +76,25 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -104,7 +104,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -114,7 +114,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -125,7 +125,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,7 +136,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -147,7 +147,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -160,7 +160,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -171,7 +171,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -185,7 +185,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Circle Chart
              */
             array(
-                'label'   => __('On Load Animation', 'dslc_string'),
+                'label'   => __('On Load Animation', 'alenastudio_plugin'),
                 'id'      => 'circle_chart_animation',
                 'std'     => 'easeOutExpo',
                 'type'    => 'select',
@@ -319,7 +319,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'             => __('Percent Circle Chart', 'dslc_string'),
+                'label'             => __('Percent Circle Chart', 'alenastudio_plugin'),
                 'id'                => 'circle_chart_percent',
                 'std'               => 50,
                 'refresh_on_change' => true,
@@ -330,7 +330,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'               => 'Circle Chart',
             ),
             array(
-                'label'   => __('Duration', 'dslc_string'),
+                'label'   => __('Duration', 'alenastudio_plugin'),
                 'id'      => 'circle_chart_duration',
                 'std'     => '4000',
                 'type'    => 'text',
@@ -338,7 +338,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'   => __('Type chart', 'dslc_string'),
+                'label'   => __('Type chart', 'alenastudio_plugin'),
                 'id'      => 'circle_chart_cap',
                 'std'     => 'butt',
                 'type'    => 'select',
@@ -360,20 +360,20 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Line Width (px)', 'dslc_string'),
+                'label'                 => __('Line Width (px)', 'alenastudio_plugin'),
                 'id'                    => 'circle_chart_width',
                 'std'                   => '5',
                 'type'                  => 'slider',
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'section'               => 'styling',
-                'tab'                   => __('Circle Chart', 'dslc_string'),
+                'tab'                   => __('Circle Chart', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 0,
                 'max'                   => 30
             ),
             array(
-                'label'                 => __('Track Color', 'dslc_string'),
+                'label'                 => __('Track Color', 'alenastudio_plugin'),
                 'id'                    => 'circle_chart_track',
                 'std'                   => '#f2f2f2',
                 'affect_on_change_el'   => '',
@@ -383,7 +383,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Bar Color', 'dslc_string'),
+                'label'                 => __('Bar Color', 'alenastudio_plugin'),
                 'id'                    => 'circle_chart_bar',
                 'std'                   => '#5ac3bc',
                 'affect_on_change_el'   => '',
@@ -393,7 +393,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'   => __('Size', 'dslc_string'),
+                'label'   => __('Size', 'alenastudio_plugin'),
                 'id'      => 'circle_chart_size',
                 'std'     => '150',
                 'type'    => 'select',
@@ -415,7 +415,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_percent_chart_color',
                 'std'                   => 'rgb(44, 62, 80)',
                 'type'                  => 'color',
@@ -426,7 +426,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -438,7 +438,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -453,7 +453,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_percent_chart_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -467,7 +467,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -478,7 +478,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Title'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -490,7 +490,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -505,7 +505,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
@@ -516,7 +516,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -528,7 +528,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -543,17 +543,17 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'dslc_string'),
+                'label'   => __('Responsive', 'alenastudio_plugin'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -561,7 +561,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'tablet',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -573,7 +573,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -585,7 +585,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -597,7 +597,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -611,7 +611,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -623,7 +623,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -635,7 +635,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Font Size(Circle Chart)', 'dslc_string'),
+                'label'                 => __('Font Size(Circle Chart)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -647,7 +647,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Circle Chart)', 'dslc_string'),
+                'label'                 => __('Font Weight (Circle Chart)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -662,7 +662,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size(Title)', 'dslc_string'),
+                'label'                 => __('Font Size(Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -674,7 +674,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'dslc_string'),
+                'label'                 => __('Line Height (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -689,17 +689,17 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'dslc_string'),
+                'label'   => __('Responsive', 'alenastudio_plugin'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -707,7 +707,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'phone',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -719,7 +719,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -731,7 +731,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -743,7 +743,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -757,7 +757,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -769,7 +769,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -781,7 +781,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Font Size(Circle Chart)', 'dslc_string'),
+                'label'                 => __('Font Size(Circle Chart)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -793,7 +793,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Circle Chart)', 'dslc_string'),
+                'label'                 => __('Font Weight (Circle Chart)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -808,7 +808,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size(Title)', 'dslc_string'),
+                'label'                 => __('Font Size(Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -820,7 +820,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'dslc_string'),
+                'label'                 => __('Line Height (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',

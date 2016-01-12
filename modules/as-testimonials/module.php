@@ -10,7 +10,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Testimonials_Simple';
-        $this->module_title    = __('Testimonials Simple', 'dslc_string');
+        $this->module_title    = __('Testimonials Simple', 'alenastudio_plugin');
         $this->module_icon     = 'quote-right';
         $this->module_category = 'as - posts';
     }
@@ -30,89 +30,89 @@ class AS_Testimonials_Simple extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Posts Per Page', 'dslc_string'),
+                'label' => __('Posts Per Page', 'alenastudio_plugin'),
                 'id'    => 'amount',
                 'std'   => '8',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Order By', 'dslc_string'),
+                'label'   => __('Order By', 'alenastudio_plugin'),
                 'id'      => 'orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Publish Date', 'dslc_string'),
+                        'label' => __('Publish Date', 'alenastudio_plugin'),
                         'value' => 'date'
                     ),
                     array(
-                        'label' => __('Modified Date', 'dslc_string'),
+                        'label' => __('Modified Date', 'alenastudio_plugin'),
                         'value' => 'modified'
                     ),
                     array(
-                        'label' => __('Random', 'dslc_string'),
+                        'label' => __('Random', 'alenastudio_plugin'),
                         'value' => 'rand'
                     ),
                     array(
-                        'label' => __('Alphabetic', 'dslc_string'),
+                        'label' => __('Alphabetic', 'alenastudio_plugin'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Comment Count', 'dslc_string'),
+                        'label' => __('Comment Count', 'alenastudio_plugin'),
                         'value' => 'comment_count'
                     ),
                 )
             ),
             array(
-                'label'   => __('Order', 'dslc_string'),
+                'label'   => __('Order', 'alenastudio_plugin'),
                 'id'      => 'order',
                 'std'     => 'DESC',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Ascending', 'dslc_string'),
+                        'label' => __('Ascending', 'alenastudio_plugin'),
                         'value' => 'ASC'
                     ),
                     array(
-                        'label' => __('Descending', 'dslc_string'),
+                        'label' => __('Descending', 'alenastudio_plugin'),
                         'value' => 'DESC'
                     )
                 )
             ),
             array(
-                'label' => __('Offset', 'dslc_string'),
+                'label' => __('Offset', 'alenastudio_plugin'),
                 'id'    => 'offset',
                 'std'   => '0',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Include (IDs)', 'dslc_string'),
+                'label' => __('Include (IDs)', 'alenastudio_plugin'),
                 'id'    => 'query_post_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Exclude (IDs)', 'dslc_string'),
+                'label' => __('Exclude (IDs)', 'alenastudio_plugin'),
                 'id'    => 'query_post_not_in',
                 'std'   => '',
                 'type'  => 'text',
@@ -121,49 +121,49 @@ class AS_Testimonials_Simple extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Post Elements', 'dslc_string'),
+                'label'   => __('Post Elements', 'alenastudio_plugin'),
                 'id'      => 'post_elements',
                 'std'     => 'quote avatar name position arrow pagination',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Quote', 'dslc_string'),
+                        'label' => __('Quote', 'alenastudio_plugin'),
                         'value' => 'quote',
                     ),
                     array(
-                        'label' => __('Avatar', 'dslc_string'),
+                        'label' => __('Avatar', 'alenastudio_plugin'),
                         'value' => 'avatar',
                     ),
                     array(
-                        'label' => __('Name', 'dslc_string'),
+                        'label' => __('Name', 'alenastudio_plugin'),
                         'value' => 'name',
                     ),
                     array(
-                        'label' => __('Position', 'dslc_string'),
+                        'label' => __('Position', 'alenastudio_plugin'),
                         'value' => 'position',
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Carousel Elements', 'dslc_string'),
+                'label'   => __('Carousel Elements', 'alenastudio_plugin'),
                 'id'      => 'circles_carousel_elements',
                 'std'     => 'arrows circles',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Arrows', 'dslc_string'),
+                        'label' => __('Arrows', 'alenastudio_plugin'),
                         'value' => 'arrows'
                     ),
                     array(
-                        'label' => __('Circles', 'dslc_string'),
+                        'label' => __('Circles', 'alenastudio_plugin'),
                         'value' => 'circles'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Margin Top', 'dslc_string'),
+                'label'                 => __('Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_body_carousel_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -176,7 +176,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'max'                   => 200,
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_body_carousel_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -187,21 +187,21 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'             => __('Effect Slider', 'dslc_string'),
+                'label'             => __('Effect Slider', 'alenastudio_plugin'),
                 'id'                => 'effect_slide_carousel',
                 'std'               => 'fade',
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Fade', 'dslc_string'),
+                        'label' => __('Fade', 'alenastudio_plugin'),
                         'value' => 'fade',
                     ),
                     array(
-                        'label' => __('BackSlide', 'dslc_string'),
+                        'label' => __('BackSlide', 'alenastudio_plugin'),
                         'value' => 'backSlide',
                     ),
                     array(
-                        'label' => __('goDown', 'dslc_string'),
+                        'label' => __('goDown', 'alenastudio_plugin'),
                         'value' => 'goDown',
                     ),
                 ),
@@ -209,7 +209,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'section'           => 'styling',
             ),
             array(
-                'label'                 => __('Time Auto Slide', 'dslc_string'),
+                'label'                 => __('Time Auto Slide', 'alenastudio_plugin'),
                 'id'                    => 'auto_time_carousel',
                 'std'                   => '3000',
                 'type'                  => 'slider',
@@ -226,7 +226,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
              * Main
              */
             array(
-                'label'                 => __('Text Align', 'dslc_string'),
+                'label'                 => __('Text Align', 'alenastudio_plugin'),
                 'id'                    => 'css_main_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -234,10 +234,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -245,10 +245,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Image', 'dslc_string'),
+                'label'                 => __('BG Image', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -256,28 +256,28 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'background-image',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'dslc_string'),
+                'label'                 => __('BG Image Repeat', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'dslc_string'),
+                        'label' => __('Repeat', 'alenastudio_plugin'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'dslc_string'),
+                        'label' => __('Repeat Horizontal', 'alenastudio_plugin'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'dslc_string'),
+                        'label' => __('Repeat Vertical', 'alenastudio_plugin'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'dslc_string'),
+                        'label' => __('Do NOT Repeat', 'alenastudio_plugin'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -285,20 +285,20 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'dslc_string'),
+                'label'                 => __('BG Image Attachment', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'dslc_string'),
+                        'label' => __('Scroll', 'alenastudio_plugin'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'dslc_string'),
+                        'label' => __('Fixed', 'alenastudio_plugin'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -306,48 +306,48 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'background-attachment',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Image Position', 'dslc_string'),
+                'label'                 => __('BG Image Position', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'dslc_string'),
+                        'label' => __('Top Left', 'alenastudio_plugin'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'dslc_string'),
+                        'label' => __('Top Right', 'alenastudio_plugin'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'dslc_string'),
+                        'label' => __('Top Center', 'alenastudio_plugin'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'dslc_string'),
+                        'label' => __('Center Left', 'alenastudio_plugin'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'dslc_string'),
+                        'label' => __('Center Right', 'alenastudio_plugin'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'alenastudio_plugin'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'dslc_string'),
+                        'label' => __('Bottom Left', 'alenastudio_plugin'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'dslc_string'),
+                        'label' => __('Bottom Right', 'alenastudio_plugin'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'dslc_string'),
+                        'label' => __('Bottom Center', 'alenastudio_plugin'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -355,10 +355,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'background-position',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_main_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -366,10 +366,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_main_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -378,28 +378,28 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_main_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -407,10 +407,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'dslc_string'),
+                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
                 'id'                    => 'css_main_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -418,11 +418,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'dslc_string'),
+                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_main_border_radius_bottom',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -430,11 +430,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-item',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_main_padding_vertical',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -443,10 +443,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_main_padding_horizontal',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -455,13 +455,13 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'dslc_string'),
+                'tab'                   => __('Main', 'alenastudio_plugin'),
             ),
             /**
              * Quote
              */
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -469,10 +469,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_border_width',
                 'std'                   => '',
                 'type'                  => 'slider',
@@ -481,28 +481,28 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_border_trbl',
                 'std'                   => 'bottom',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -510,10 +510,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -521,10 +521,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -532,11 +532,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -544,14 +544,14 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_font_family',
                 'std'                   => 'Roboto',
                 'type'                  => 'font',
@@ -559,10 +559,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_line_height',
                 'std'                   => '29',
                 'type'                  => 'slider',
@@ -570,11 +570,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Top', 'dslc_string'),
+                'label'                 => __('Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_margin_top',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -583,10 +583,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_margin_bottom',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -595,10 +595,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Bottom', 'dslc_string'),
+                'label'                 => __('Padding Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_padding_bottom',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -607,10 +607,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Top', 'dslc_string'),
+                'label'                 => __('Padding Top', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_padding_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -619,10 +619,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Text Align', 'dslc_string'),
+                'label'                 => __('Text Align', 'alenastudio_plugin'),
                 'id'                    => 'css_quote_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -630,36 +630,36 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('quote', 'dslc_string'),
+                'tab'                   => __('quote', 'alenastudio_plugin'),
             ),
             /**
              * Avatar
              */
             array(
-                'label'             => __('Position Avatar', 'dslc_string'),
+                'label'             => __('Position Avatar', 'alenastudio_plugin'),
                 'id'                => 'css_avatar_position',
                 'std'               => 'top',
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Avatar on top & Text bottom', 'dslc_string'),
+                        'label' => __('Avatar on top & Text bottom', 'alenastudio_plugin'),
                         'value' => 'style_top_bottom'
                     )
                 ),
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('avatar', 'dslc_string'),
+                'tab'               => __('avatar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -667,10 +667,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-avatar-img',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -678,10 +678,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-avatar-img img',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -690,28 +690,28 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -719,10 +719,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-avatar-img img',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_border_radius_top',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -730,11 +730,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-avatar-img img, .as-testimonials-simple-avatar-img',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Right', 'dslc_string'),
+                'label'                 => __('Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_margin_right',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -742,11 +742,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-avatar-img',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding', 'dslc_string'),
+                'label'                 => __('Padding', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_padding',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -755,10 +755,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Size', 'dslc_string'),
+                'label'                 => __('Size', 'alenastudio_plugin'),
                 'id'                    => 'css_avatar_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -766,7 +766,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-avatar-img img',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
-                'tab'                   => __('avatar', 'dslc_string'),
+                'tab'                   => __('avatar', 'alenastudio_plugin'),
                 'min'                   => 1,
                 'max'                   => 200,
                 'ext'                   => 'px'
@@ -775,7 +775,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_name_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -783,10 +783,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_name_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -794,11 +794,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_name_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -806,14 +806,14 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_name_font_family',
                 'std'                   => 'Roboto',
                 'type'                  => 'font',
@@ -821,10 +821,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_name_line_height',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -832,11 +832,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
                 'ext'                   => ''
             ),
             array(
-                'label'                 => __('Font Style', 'dslc_string'),
+                'label'                 => __('Font Style', 'alenastudio_plugin'),
                 'id'                    => 'css_name_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -844,20 +844,20 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'dslc_string'),
+                        'label' => __('Normal', 'alenastudio_plugin'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'dslc_string'),
+                        'label' => __('Italic', 'alenastudio_plugin'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_name_margin_bottom',
                 'std'                   => '8',
                 'type'                  => 'slider',
@@ -866,10 +866,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Top', 'dslc_string'),
+                'label'                 => __('Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_name_margin_top',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -878,13 +878,13 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('name', 'dslc_string'),
+                'tab'                   => __('name', 'alenastudio_plugin'),
             ),
             /**
              * Position
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_position_color',
                 'std'                   => '#cddef7',
                 'type'                  => 'color',
@@ -892,10 +892,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('position', 'dslc_string'),
+                'tab'                   => __('position', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_position_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -903,11 +903,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('position', 'dslc_string'),
+                'tab'                   => __('position', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_position_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -915,14 +915,14 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('position', 'dslc_string'),
+                'tab'                   => __('position', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_position_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
@@ -930,10 +930,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('position', 'dslc_string'),
+                'tab'                   => __('position', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Style', 'dslc_string'),
+                'label'                 => __('Font Style', 'alenastudio_plugin'),
                 'id'                    => 'css_position_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -941,14 +941,14 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('position', 'dslc_string'),
+                'tab'                   => __('position', 'alenastudio_plugin'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'dslc_string'),
+                        'label' => __('Normal', 'alenastudio_plugin'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'dslc_string'),
+                        'label' => __('Italic', 'alenastudio_plugin'),
                         'value' => 'italic',
                     ),
                 )
@@ -957,7 +957,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
              * Circle Pagination
              */
             array(
-                'label'                 => __('Background Circle', 'dslc_string'),
+                'label'                 => __('Background Circle', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_pagination_background',
                 'std'                   => 'rgb(216, 216, 216)',
                 'type'                  => 'color',
@@ -965,10 +965,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.owl-theme .owl-controls .owl-page span',
                 'affect_on_change_rule' => 'background',
                 'section'               => 'styling',
-                'tab'                   => __('Circle Pagination', 'dslc_string'),
+                'tab'                   => __('Circle Pagination', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Size', 'dslc_string'),
+                'label'                 => __('Size', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_pagination_size',
                 'std'                   => '6',
                 'type'                  => 'slider',
@@ -976,13 +976,13 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.owl-theme .owl-controls .owl-page span',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
-                'tab'                   => __('Circle Pagination', 'dslc_string'),
+                'tab'                   => __('Circle Pagination', 'alenastudio_plugin'),
                 'ext'                   => 'px',
                 'min'                   => 5,
                 'max'                   => 100,
             ),
             array(
-                'label'                 => __('Spacing Circle', 'dslc_string'),
+                'label'                 => __('Spacing Circle', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_pagination_spacing',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -990,7 +990,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.owl-theme .owl-controls .owl-page span',
                 'affect_on_change_rule' => 'margin-right,margin-left',
                 'section'               => 'styling',
-                'tab'                   => __('Circle Pagination', 'dslc_string'),
+                'tab'                   => __('Circle Pagination', 'alenastudio_plugin'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100,
@@ -999,7 +999,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
              * Arrow Slider Carousel
              */
             array(
-                'label'                 => __('Margin Top', 'dslc_string'),
+                'label'                 => __('Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_margin_top',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1007,13 +1007,13 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next, .as-testimonials-simple-prev',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
                 'ext'                   => '%',
                 'min'                   => 0,
                 'max'                   => 100,
             ),
             array(
-                'label'                 => __('Background Circle', 'dslc_string'),
+                'label'                 => __('Background Circle', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_background',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1021,10 +1021,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next, .as-testimonials-simple-prev',
                 'affect_on_change_rule' => 'background',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Size', 'dslc_string'),
+                'label'                 => __('Size', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1032,13 +1032,13 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next, .as-testimonials-simple-prev',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100,
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1046,10 +1046,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next, .as-testimonials-simple-prev',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1058,28 +1058,28 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -1087,10 +1087,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next, .as-testimonials-simple-prev',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_border_radius_top',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1098,11 +1098,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next, .as-testimonials-simple-prev',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Padding', 'dslc_string'),
+                'label'                 => __('Padding', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_padding',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1111,10 +1111,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color Icon', 'dslc_string'),
+                'label'                 => __('Color Icon', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_font_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -1122,10 +1122,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next > span, .as-testimonials-simple-prev > span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color Icon Hover', 'dslc_string'),
+                'label'                 => __('Color Icon Hover', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_font_color_hover',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -1133,10 +1133,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next > span:hover, .as-testimonials-simple-prev > span:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size Icon', 'dslc_string'),
+                'label'                 => __('Font Size Icon', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1144,11 +1144,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next > span, .as-testimonials-simple-prev > span',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon Margin Top', 'dslc_string'),
+                'label'                 => __('Icon Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_circle_arrow_margin_top_icon',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1156,7 +1156,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-next > span, .as-testimonials-simple-prev > span',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Arrow Slider', 'dslc_string'),
+                'tab'                   => __('Arrow Slider', 'alenastudio_plugin'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100,
@@ -1165,25 +1165,25 @@ class AS_Testimonials_Simple extends DSLC_Module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1191,11 +1191,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-testimonials',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'dslc_string'),
+                'label'                 => __('Separator - Height', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1206,10 +1206,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Main - Padding Vertical', 'dslc_string'),
+                'label'                 => __('Main - Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_main_padding_vertical',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1218,10 +1218,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Main - Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Main - Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_main_padding_horizontal',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1230,10 +1230,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Quote - Font Size', 'dslc_string'),
+                'label'                 => __('Quote - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_quote_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1241,11 +1241,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Quote - Line Height', 'dslc_string'),
+                'label'                 => __('Quote - Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_quote_line_height',
                 'std'                   => '29',
                 'type'                  => 'slider',
@@ -1253,11 +1253,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Quote - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Quote - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_quote_margin',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1266,10 +1266,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Quote - Padding Bottom', 'dslc_string'),
+                'label'                 => __('Quote - Padding Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_quote_padding_bottom',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1278,10 +1278,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Quote - Padding Top', 'dslc_string'),
+                'label'                 => __('Quote - Padding Top', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_quote_padding_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1290,10 +1290,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Author - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Author - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_author_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1302,10 +1302,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Author - Margin Top', 'dslc_string'),
+                'label'                 => __('Author - Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_author_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1314,10 +1314,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Author - Margin Left', 'dslc_string'),
+                'label'                 => __('Author - Margin Left', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_author_margin_left',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1326,11 +1326,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'min'                   => -100
             ),
             array(
-                'label'                 => __('Author - Margin Right', 'dslc_string'),
+                'label'                 => __('Author - Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_author_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1339,11 +1339,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'min'                   => -100
             ),
             array(
-                'label'                 => __('Avatar - Margin Right', 'dslc_string'),
+                'label'                 => __('Avatar - Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_avatar_margin_right',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1351,11 +1351,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-testimonial-author-avatar',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Avatar - Padding', 'dslc_string'),
+                'label'                 => __('Avatar - Padding', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_avatar_padding',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1364,10 +1364,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Avatar - Size', 'dslc_string'),
+                'label'                 => __('Avatar - Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_avatar_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -1375,13 +1375,13 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-testimonial-author-avatar img',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'min'                   => 1,
                 'max'                   => 100,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Name - Font Size', 'dslc_string'),
+                'label'                 => __('Name - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_name_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1389,11 +1389,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Name - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Name - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_name_margin_bottom',
                 'std'                   => '8',
                 'type'                  => 'slider',
@@ -1402,10 +1402,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Name - Margin Top', 'dslc_string'),
+                'label'                 => __('Name - Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_name_margin_top',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1414,10 +1414,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Position - Font Size', 'dslc_string'),
+                'label'                 => __('Position - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_position_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1425,32 +1425,32 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'dslc_string'),
+                'tab'     => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1458,11 +1458,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-testimonials',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'dslc_string'),
+                'label'                 => __('Separator - Height', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1473,10 +1473,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Main - Padding Vertical', 'dslc_string'),
+                'label'                 => __('Main - Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_main_padding_vertical',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1485,10 +1485,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Main - Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Main - Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_main_padding_horizontal',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1497,10 +1497,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Quote - Font Size', 'dslc_string'),
+                'label'                 => __('Quote - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_quote_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1508,11 +1508,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Quote - Line Height', 'dslc_string'),
+                'label'                 => __('Quote - Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_quote_line_height',
                 'std'                   => '29',
                 'type'                  => 'slider',
@@ -1520,11 +1520,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Quote - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Quote - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_quote_margin',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1533,10 +1533,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Quote - Padding Bottom', 'dslc_string'),
+                'label'                 => __('Quote - Padding Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_quote_padding_bottom',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1545,10 +1545,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Quote - Padding Top', 'dslc_string'),
+                'label'                 => __('Quote - Padding Top', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_quote_padding_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1557,10 +1557,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Author - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Author - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_author_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1569,10 +1569,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Author - Margin Top', 'dslc_string'),
+                'label'                 => __('Author - Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_author_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1581,10 +1581,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Author - Margin Left', 'dslc_string'),
+                'label'                 => __('Author - Margin Left', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_author_margin_left',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1593,11 +1593,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'min'                   => -100
             ),
             array(
-                'label'                 => __('Author - Margin Right', 'dslc_string'),
+                'label'                 => __('Author - Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_author_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1606,11 +1606,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'min'                   => -100
             ),
             array(
-                'label'                 => __('Avatar - Margin Right', 'dslc_string'),
+                'label'                 => __('Avatar - Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_avatar_margin_right',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1618,11 +1618,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-testimonial-author-avatar',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Avatar - Padding', 'dslc_string'),
+                'label'                 => __('Avatar - Padding', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_avatar_padding',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1631,10 +1631,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'padding',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Avatar - Size', 'dslc_string'),
+                'label'                 => __('Avatar - Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_avatar_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -1642,13 +1642,13 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-testimonial-author-avatar img',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'min'                   => 1,
                 'max'                   => 100,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Name - Font Size', 'dslc_string'),
+                'label'                 => __('Name - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_name_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1656,11 +1656,11 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Name - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Name - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_name_margin_bottom',
                 'std'                   => '8',
                 'type'                  => 'slider',
@@ -1669,10 +1669,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Name - Margin Top', 'dslc_string'),
+                'label'                 => __('Name - Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_name_margin_top',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1681,10 +1681,10 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Position - Font Size', 'dslc_string'),
+                'label'                 => __('Position - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_position_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1692,7 +1692,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
         );
@@ -1846,7 +1846,7 @@ class AS_Testimonials_Simple extends DSLC_Module {
         }else {
             if ($dslc_is_admin) :
                 ?>
-                <div class="dslc-notification dslc-red"><?php _e('You do not have any testimonials at the moment. Go to <strong>WP Admin &rarr; Testimonials</strong> to add some.', 'dslc_string'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div>
+                <div class="dslc-notification dslc-red"><?php _e('You do not have any testimonials at the moment. Go to <strong>WP Admin &rarr; Testimonials</strong> to add some.', 'alenastudio_plugin'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div>
                 <?php
             endif;
         }

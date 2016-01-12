@@ -1942,7 +1942,7 @@ class AS_WooCommerce_Products extends DSLC_Module {
 
                         <div class="dslc-post-filters">
 
-                            <span class="dslc-post-filter dslc-active" data-id=" "><?php _ex('All', 'Post Filter', 'dslc_string'); ?></span>
+                            <span class="dslc-post-filter dslc-active" data-id=" "><?php _ex('All', 'Post Filter', 'live-composer-page-builder'); ?></span>
 
                             <?php
                             foreach ($cats_array as

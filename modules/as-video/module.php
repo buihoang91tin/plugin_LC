@@ -478,7 +478,7 @@ class AS_video extends DSLC_Module {
 
                     // Show meessage if editor is active
                     if (dslc_is_editor_active()) {
-                        ?><div class="as-notification as-red"><?php _e('Make sure you entered a valid URL ( ex. https://www.youtube.com/watch?v=ONHBaC-pfsk )', 'alenastudio'); ?><?php
+                        ?><div class="as-notification as-red"><?php _e('Make sure you entered a valid URL ( ex. https://www.youtube.com/watch?v=ONHBaC-pfsk )', 'alenastudio'); ?></div><?php
                     }
 
                     // If embed code ok, display it

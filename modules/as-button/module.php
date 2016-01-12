@@ -10,7 +10,7 @@ class AS_Button extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Button';
-        $this->module_title    = __('AS - Button Simple', 'dslc_string');
+        $this->module_title    = __('AS - Button Simple', 'alenastudio_plugin');
         $this->module_icon     = 'link';
         $this->module_category = 'as - element';
     }
@@ -19,21 +19,21 @@ class AS_Button extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
@@ -42,36 +42,36 @@ class AS_Button extends DSLC_Module {
              * Styling
              */
             array(
-                'label'      => __('Button Text', 'dslc_string'),
+                'label'      => __('Button Text', 'alenastudio_plugin'),
                 'id'         => 'as_button_text',
-                'std'        => 'CLICK TO EDIT',
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
             array(
-                'label' => __('URL', 'dslc_string'),
+                'label' => __('URL', 'alenastudio_plugin'),
                 'id'    => 'as_button_url',
                 'std'   => '#',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Open in', 'dslc_string'),
+                'label'   => __('Open in', 'alenastudio_plugin'),
                 'id'      => 'as_button_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'dslc_string'),
+                        'label' => __('Same Tab', 'alenastudio_plugin'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'dslc_string'),
+                        'label' => __('New Tab', 'alenastudio_plugin'),
                         'value' => '_blank',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_align_position',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -81,7 +81,7 @@ class AS_Button extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Padding Vertical Wrapper', 'dslc_string'),
+                'label'                 => __('Padding Vertical Wrapper', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_padding_vertical_wrapper',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -92,7 +92,7 @@ class AS_Button extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal Wrapper', 'dslc_string'),
+                'label'                 => __('Padding Horizontal Wrapper', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_padding_horizontal_wrapper',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -103,7 +103,7 @@ class AS_Button extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -113,7 +113,7 @@ class AS_Button extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'dslc_string'),
+                'label'                 => __('BG Color - Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_bg_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -123,7 +123,7 @@ class AS_Button extends DSLC_Module {
                 'section'               => 'styling'
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_border_color',
                 'std'                   => '#212121',
                 'type'                  => 'color',
@@ -133,7 +133,7 @@ class AS_Button extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'dslc_string'),
+                'label'                 => __('Border Color - Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_border_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -143,7 +143,7 @@ class AS_Button extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'dslc_string'),
+                'label'             => __('Duration when hover(ms)', 'alenastudio_plugin'),
                 'id'                => 'as_button_css_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
@@ -151,7 +151,7 @@ class AS_Button extends DSLC_Module {
                 'section'           => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -162,25 +162,25 @@ class AS_Button extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -190,7 +190,7 @@ class AS_Button extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -201,7 +201,7 @@ class AS_Button extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -212,7 +212,7 @@ class AS_Button extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -223,7 +223,7 @@ class AS_Button extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -234,17 +234,17 @@ class AS_Button extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_width',
                 'std'                   => 'inline-block',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Automatic', 'dslc_string'),
+                        'label' => __('Automatic', 'alenastudio_plugin'),
                         'value' => 'inline-block'
                     ),
                     array(
-                        'label' => __('Full Width', 'dslc_string'),
+                        'label' => __('Full Width', 'alenastudio_plugin'),
                         'value' => 'block'
                     ),
                 ),
@@ -257,7 +257,7 @@ class AS_Button extends DSLC_Module {
              * Out line Style
              */
             array(
-                'label'                 => __('Out Line Width', 'dslc_string'),
+                'label'                 => __('Out Line Width', 'alenastudio_plugin'),
                 'id'                    => 'as_button_out_line_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -265,11 +265,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Offset', 'dslc_string'),
+                'label'                 => __('Out Line Offset', 'alenastudio_plugin'),
                 'id'                    => 'as_button_out_line_offset',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -277,11 +277,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Color', 'dslc_string'),
+                'label'                 => __('Out Line Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_out_line_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -289,10 +289,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Out Line Color Hover', 'dslc_string'),
+                'label'                 => __('Out Line Color Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_out_line_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -300,28 +300,28 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Out Line Style', 'dslc_string'),
+                'label'                 => __('Out Line Style', 'alenastudio_plugin'),
                 'id'                    => 'as_button_out_line_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'dslc_string'),
+                        'label' => __('Invisible', 'alenastudio_plugin'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'dslc_string'),
+                        'label' => __('Solid', 'alenastudio_plugin'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'dslc_string'),
+                        'label' => __('Dashed', 'alenastudio_plugin'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'dslc_string'),
+                        'label' => __('Dotted', 'alenastudio_plugin'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -329,13 +329,13 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
             ),
             /**
              * Typography
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_button_color',
                 'std'                   => '#212121',
                 'type'                  => 'color',
@@ -343,10 +343,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'dslc_string'),
+                'label'                 => __('Color - Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -354,10 +354,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -365,11 +365,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -377,14 +377,14 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_button_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -392,10 +392,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'dslc_string'),
+                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -403,58 +403,58 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Icon
              */
             array(
-                'label'   => __('Enable/Disable', 'dslc_string'),
+                'label'   => __('Enable/Disable', 'alenastudio_plugin'),
                 'id'      => 'as_button_state',
                 'std'     => 'enabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('icon', 'dslc_string'),
+                'tab'     => __('icon', 'alenastudio_plugin'),
             ),
             array(
-                'label'   => __('Position Icon', 'dslc_string'),
+                'label'   => __('Position Icon', 'alenastudio_plugin'),
                 'id'      => 'as_button_position_icon',
                 'std'     => 'left',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('icon', 'dslc_string'),
+                'tab'     => __('icon', 'alenastudio_plugin'),
             ),
             array(
-                'label'   => __('Icon', 'dslc_string'),
+                'label'   => __('Icon', 'alenastudio_plugin'),
                 'id'      => 'as_button_icon_id',
                 'std'     => 'link',
                 'type'    => 'icon',
                 'section' => 'styling',
-                'tab'     => __('icon', 'dslc_string'),
+                'tab'     => __('icon', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_icon_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -462,10 +462,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'dslc_string'),
+                'tab'                   => __('icon', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'dslc_string'),
+                'label'                 => __('Color - Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_icon_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -473,10 +473,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a:hover .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'dslc_string'),
+                'tab'                   => __('icon', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Right', 'dslc_string'),
+                'label'                 => __('Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_icon_margin_right',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -485,10 +485,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'dslc_string'),
+                'tab'                   => __('icon', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Left', 'dslc_string'),
+                'label'                 => __('Margin Left', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_icon_margin_left',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -497,13 +497,13 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'dslc_string'),
+                'tab'                   => __('icon', 'alenastudio_plugin'),
             ),
             /**
              * Wrapper
              */
             array(
-                'label'                 => __(' BG Color', 'dslc_string'),
+                'label'                 => __(' BG Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -511,10 +511,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('BG Image', 'dslc_string'),
+                'label'                 => __('BG Image', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -522,28 +522,28 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-image',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'dslc_string'),
+                'label'                 => __('BG Image Repeat', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'dslc_string'),
+                        'label' => __('Repeat', 'alenastudio_plugin'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'dslc_string'),
+                        'label' => __('Repeat Horizontal', 'alenastudio_plugin'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'dslc_string'),
+                        'label' => __('Repeat Vertical', 'alenastudio_plugin'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'dslc_string'),
+                        'label' => __('Do NOT Repeat', 'alenastudio_plugin'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -551,20 +551,20 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'dslc_string'),
+                'label'                 => __('BG Image Attachment', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'dslc_string'),
+                        'label' => __('Scroll', 'alenastudio_plugin'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'dslc_string'),
+                        'label' => __('Fixed', 'alenastudio_plugin'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -572,48 +572,48 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-attachment',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('BG Image Position', 'dslc_string'),
+                'label'                 => __('BG Image Position', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'dslc_string'),
+                        'label' => __('Top Left', 'alenastudio_plugin'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'dslc_string'),
+                        'label' => __('Top Right', 'alenastudio_plugin'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'dslc_string'),
+                        'label' => __('Top Center', 'alenastudio_plugin'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'dslc_string'),
+                        'label' => __('Center Left', 'alenastudio_plugin'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'dslc_string'),
+                        'label' => __('Center Right', 'alenastudio_plugin'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'alenastudio_plugin'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'dslc_string'),
+                        'label' => __('Bottom Left', 'alenastudio_plugin'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'dslc_string'),
+                        'label' => __('Bottom Right', 'alenastudio_plugin'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'dslc_string'),
+                        'label' => __('Bottom Center', 'alenastudio_plugin'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -621,10 +621,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-position',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -632,10 +632,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -644,28 +644,28 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -673,10 +673,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'dslc_string'),
+                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -685,10 +685,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'dslc_string'),
+                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -697,10 +697,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -709,10 +709,10 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -721,31 +721,31 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'dslc_string')
+                'tab'                   => __('wrapper', 'alenastudio_plugin')
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -753,11 +753,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -765,11 +765,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -777,11 +777,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -789,11 +789,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'dslc_string'),
+                'label'                 => __('Icon - Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -801,11 +801,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_align',
                 'std'                   => 'left',
                 'type'                  => 'select',
@@ -813,18 +813,18 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'alenastudio_plugin'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right',
                     ),
                 )
@@ -833,25 +833,25 @@ class AS_Button extends DSLC_Module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'dslc_string'),
+                'tab'     => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -859,11 +859,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -871,11 +871,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -883,11 +883,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -895,11 +895,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'dslc_string'),
+                'label'                 => __('Icon - Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -907,11 +907,11 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'css_res_ph_align',
                 'std'                   => 'left',
                 'type'                  => 'select',
@@ -919,18 +919,18 @@ class AS_Button extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'alenastudio_plugin'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right',
                     ),
                 )

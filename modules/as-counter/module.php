@@ -11,7 +11,7 @@ class AS_Counter_Module extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Counter_Module';
-        $this->module_title    = __('AS - Counter Number', 'dslc_string');
+        $this->module_title    = __('AS - Counter Number', 'alenastudio_plugin');
         $this->module_icon     = 'bar-chart';
         $this->module_category = 'as - Counter';
     }
@@ -22,21 +22,21 @@ class AS_Counter_Module extends DSLC_Module {
         // The options array
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
@@ -57,32 +57,32 @@ class AS_Counter_Module extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Elements', 'dslc_string'),
+                'label'   => __('Elements', 'alenastudio_plugin'),
                 'id'      => 'elements',
                 'std'     => 'icon title',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Icon', 'dslc_string'),
+                        'label' => __('Icon', 'alenastudio_plugin'),
                         'value' => 'icon'
                     ),
                     array(
-                        'label' => __('Title', 'dslc_string'),
+                        'label' => __('Title', 'alenastudio_plugin'),
                         'value' => 'title'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'      => __('Title', 'dslc_string'),
+                'label'      => __('Title', 'alenastudio_plugin'),
                 'id'         => 'as_counter_title',
-                'std'        => 'CLICK TO EDIT',
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Number', 'dslc_string'),
+                'label'      => __('Number', 'alenastudio_plugin'),
                 'id'         => 'as_counter_number',
                 'std'        => '1989',
                 'type'       => 'textarea',
@@ -90,21 +90,21 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'    => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'alenastudio_plugin'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                 ),
@@ -114,7 +114,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'css_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -125,7 +125,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __(' BG Color', 'dslc_string'),
+                'label'                 => __(' BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -135,7 +135,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image', 'dslc_string'),
+                'label'                 => __('BG Image', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -145,25 +145,25 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'dslc_string'),
+                'label'                 => __('BG Image Repeat', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'dslc_string'),
+                        'label' => __('Repeat', 'alenastudio_plugin'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'dslc_string'),
+                        'label' => __('Repeat Horizontal', 'alenastudio_plugin'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'dslc_string'),
+                        'label' => __('Repeat Vertical', 'alenastudio_plugin'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'dslc_string'),
+                        'label' => __('Do NOT Repeat', 'alenastudio_plugin'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -173,45 +173,45 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Position', 'dslc_string'),
+                'label'                 => __('BG Image Position', 'alenastudio_plugin'),
                 'id'                    => 'css_main_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'dslc_string'),
+                        'label' => __('Top Left', 'alenastudio_plugin'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'dslc_string'),
+                        'label' => __('Top Right', 'alenastudio_plugin'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'dslc_string'),
+                        'label' => __('Top Center', 'alenastudio_plugin'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'dslc_string'),
+                        'label' => __('Center Left', 'alenastudio_plugin'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'dslc_string'),
+                        'label' => __('Center Right', 'alenastudio_plugin'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'alenastudio_plugin'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'dslc_string'),
+                        'label' => __('Bottom Left', 'alenastudio_plugin'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'dslc_string'),
+                        'label' => __('Bottom Right', 'alenastudio_plugin'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'dslc_string'),
+                        'label' => __('Bottom Center', 'alenastudio_plugin'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -221,25 +221,25 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -249,7 +249,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -259,7 +259,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -270,7 +270,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -282,7 +282,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => '300',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -293,7 +293,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -306,7 +306,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -320,7 +320,7 @@ class AS_Counter_Module extends DSLC_Module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_title_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -331,7 +331,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Title'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -343,7 +343,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -358,7 +358,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_title_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -369,7 +369,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -381,7 +381,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'dslc_string'),
+                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -393,7 +393,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -408,7 +408,7 @@ class AS_Counter_Module extends DSLC_Module {
              * Number
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_number_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -419,7 +419,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Number'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -431,7 +431,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -446,7 +446,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_number_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
@@ -457,7 +457,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Number',
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -469,7 +469,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -484,7 +484,7 @@ class AS_Counter_Module extends DSLC_Module {
              * Icon
              */
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -495,7 +495,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_border_color',
                 'std'                   => 'rgb(90, 195, 188)',
                 'type'                  => 'color',
@@ -506,7 +506,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -518,25 +518,25 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -547,7 +547,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Icon'
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -559,7 +559,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_color',
                 'std'                   => 'rgb(90, 195, 188)',
                 'type'                  => 'color',
@@ -570,7 +570,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'   => __('Icon', 'dslc_string'),
+                'label'   => __('Icon', 'alenastudio_plugin'),
                 'id'      => 'as_counter_icon_id',
                 'std'     => 'comments',
                 'type'    => 'icon',
@@ -578,7 +578,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'     => 'Icon',
             ),
             array(
-                'label'                 => __('Margin Top', 'dslc_string'),
+                'label'                 => __('Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -592,7 +592,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right', 'dslc_string'),
+                'label'                 => __('Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -606,7 +606,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -620,7 +620,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -632,7 +632,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'dslc_string'),
+                'label'                 => __('Size ( Wrapper )', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -646,7 +646,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'dslc_string'),
+                'label'                 => __('Size ( Icon )', 'alenastudio_plugin'),
                 'id'                    => 'as_counter_css_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -661,17 +661,17 @@ class AS_Counter_Module extends DSLC_Module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'dslc_string'),
+                'label'   => __('Responsive', 'alenastudio_plugin'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -679,7 +679,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'     => 'tablet',
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -691,7 +691,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -703,7 +703,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -715,7 +715,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -729,7 +729,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -741,7 +741,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Title)', 'dslc_string'),
+                'label'                 => __('Font Size (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -753,7 +753,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Title)', 'dslc_string'),
+                'label'                 => __('Font Weight (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -768,7 +768,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'dslc_string'),
+                'label'                 => __('Line Height (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -780,7 +780,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing (Title)', 'dslc_string'),
+                'label'                 => __('Letter Spacing (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -792,7 +792,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Title)', 'dslc_string'),
+                'label'                 => __('Margin Bottom (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -804,7 +804,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Number)', 'dslc_string'),
+                'label'                 => __('Font Size (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -816,7 +816,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Number)', 'dslc_string'),
+                'label'                 => __('Font Weight (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -831,7 +831,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Number)', 'dslc_string'),
+                'label'                 => __('Line Height (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -843,7 +843,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Number)', 'dslc_string'),
+                'label'                 => __('Margin Bottom (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -855,7 +855,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Width (Icon)', 'dslc_string'),
+                'label'                 => __('Border Width (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -867,7 +867,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius (Icon)', 'dslc_string'),
+                'label'                 => __('Border Radius (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -879,7 +879,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top (Icon)', 'dslc_string'),
+                'label'                 => __('Margin Top (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -893,7 +893,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right (Icon)', 'dslc_string'),
+                'label'                 => __('Margin Right (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -907,7 +907,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical (Icon)', 'dslc_string'),
+                'label'                 => __('Padding Vertical (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -921,7 +921,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal (Icon)', 'dslc_string'),
+                'label'                 => __('Padding Horizontal (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -933,7 +933,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper (Icon) )', 'dslc_string'),
+                'label'                 => __('Size ( Wrapper (Icon) )', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -947,7 +947,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'dslc_string'),
+                'label'                 => __('Size ( Icon )', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -962,17 +962,17 @@ class AS_Counter_Module extends DSLC_Module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'dslc_string'),
+                'label'   => __('Responsive', 'alenastudio_plugin'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -980,7 +980,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'tab'     => 'phone',
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -992,7 +992,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1004,7 +1004,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1016,7 +1016,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1030,7 +1030,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1042,7 +1042,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Title)', 'dslc_string'),
+                'label'                 => __('Font Size (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -1054,7 +1054,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Title)', 'dslc_string'),
+                'label'                 => __('Font Weight (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -1069,7 +1069,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'dslc_string'),
+                'label'                 => __('Line Height (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -1081,7 +1081,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing (Title)', 'dslc_string'),
+                'label'                 => __('Letter Spacing (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1093,7 +1093,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Title)', 'dslc_string'),
+                'label'                 => __('Margin Bottom (Title)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1105,7 +1105,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Number)', 'dslc_string'),
+                'label'                 => __('Font Size (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -1117,7 +1117,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Number)', 'dslc_string'),
+                'label'                 => __('Font Weight (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -1132,7 +1132,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Number)', 'dslc_string'),
+                'label'                 => __('Line Height (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1144,7 +1144,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Number)', 'dslc_string'),
+                'label'                 => __('Margin Bottom (Number)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1156,7 +1156,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Width (Icon)', 'dslc_string'),
+                'label'                 => __('Border Width (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -1168,7 +1168,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius (Icon)', 'dslc_string'),
+                'label'                 => __('Border Radius (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1180,7 +1180,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top (Icon)', 'dslc_string'),
+                'label'                 => __('Margin Top (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1194,7 +1194,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right (Icon)', 'dslc_string'),
+                'label'                 => __('Margin Right (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1208,7 +1208,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical (Icon)', 'dslc_string'),
+                'label'                 => __('Padding Vertical (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1222,7 +1222,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal (Icon)', 'dslc_string'),
+                'label'                 => __('Padding Horizontal (Icon)', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1234,7 +1234,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper (Icon) )', 'dslc_string'),
+                'label'                 => __('Size ( Wrapper (Icon) )', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -1248,7 +1248,7 @@ class AS_Counter_Module extends DSLC_Module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'dslc_string'),
+                'label'                 => __('Size ( Icon )', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',

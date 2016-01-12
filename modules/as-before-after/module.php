@@ -10,7 +10,7 @@ class AS_Before_After extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Before_After';
-        $this->module_title    = __('AS - Before After Image', 'dslc_string');
+        $this->module_title    = __('AS - Before After Image', 'alenastudio_plugin');
         $this->module_icon     = 'picture';
         $this->module_category = 'as - element';
     }
@@ -19,77 +19,77 @@ class AS_Before_After extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('CT', 'dslc_string'),
+                'label'      => __('CT', 'alenastudio_plugin'),
                 'id'         => 'custom_text',
-                'std'        => __('BEFORE', 'dslc_string'),
+                'std'        => __('BEFORE', 'alenastudio_plugin'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'dslc_string'),
+                'label'      => __('CT', 'alenastudio_plugin'),
                 'id'         => 'custom_text_2',
-                'std'        => __('MIDDLE', 'dslc_string'),
+                'std'        => __('MIDDLE', 'alenastudio_plugin'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'dslc_string'),
+                'label'      => __('CT', 'alenastudio_plugin'),
                 'id'         => 'custom_text_3',
                 'std'        => __('AFTER', 'alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label' => __('Image', 'dslc_string'),
+                'label' => __('Image', 'alenastudio_plugin'),
                 'id'    => 'image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label' => __('Image 2', 'dslc_string'),
+                'label' => __('Image 2', 'alenastudio_plugin'),
                 'id'    => 'image_2',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'             => __('Orientation', 'dslc_string'),
+                'label'             => __('Orientation', 'alenastudio_plugin'),
                 'id'                => 'orientation_img',
                 'std'               => 'horizontal',
                 'refresh_on_change' => true,
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Horizontal', 'dslc_string'),
+                        'label' => __('Horizontal', 'alenastudio_plugin'),
                         'value' => 'horizontal'
                     ),
                     array(
-                        'label' => __('Vertical', 'dslc_string'),
+                        'label' => __('Vertical', 'alenastudio_plugin'),
                         'value' => 'vertical'
                     ),
                 ),
             ),
             array(
-                'label'                 => __('Offset Image', 'dslc_string'),
+                'label'                 => __('Offset Image', 'alenastudio_plugin'),
                 'id'                    => 'offset_img',
                 'std'                   => '.5',
                 'refresh_on_change'     => true,
@@ -105,7 +105,7 @@ class AS_Before_After extends DSLC_Module {
              * Styling
              */
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -115,7 +115,7 @@ class AS_Before_After extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -125,7 +125,7 @@ class AS_Before_After extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,25 +136,25 @@ class AS_Before_After extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -164,7 +164,7 @@ class AS_Before_After extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -175,7 +175,7 @@ class AS_Before_After extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'dslc_string'),
+                'label'                 => __('Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -188,7 +188,7 @@ class AS_Before_After extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -200,11 +200,33 @@ class AS_Before_After extends DSLC_Module {
                 'min'                   => -100,
                 'max'                   => 100
             ),
+            array(
+                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'id'                    => 'css_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-before-img',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'styling',
+                'ext'                   => 'px',
+            ),
+            array(
+                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'id'                    => 'css_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-before-img',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'styling',
+                'ext'                   => 'px',
+            ),
             /**
              * Custom DragBar
              */
             array(
-                'label'                 => __('BG Color Bar', 'dslc_string'),
+                'label'                 => __('BG Color Bar', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_bg_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -212,10 +234,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after, .twentytwenty-vertical .twentytwenty-handle:before, .twentytwenty-vertical .twentytwenty-handle:after',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Color Circle', 'dslc_string'),
+                'label'                 => __('BG Color Circle', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_circle_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -223,10 +245,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color Circle', 'dslc_string'),
+                'label'                 => __('Border Color Circle', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_circle_border_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -234,10 +256,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width Circle', 'dslc_string'),
+                'label'                 => __('Border Width Circle', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -245,10 +267,11 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'ext'                   => 'px',
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -257,10 +280,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color Icon Right', 'dslc_string'),
+                'label'                 => __('Color Icon Right', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_icon_color_right',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -268,10 +291,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-left-arrow',
                 'affect_on_change_rule' => 'border-right-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color Icon Left', 'dslc_string'),
+                'label'                 => __('Color Icon Left', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_icon_color_left',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -279,10 +302,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-right-arrow',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color Icon Up', 'dslc_string'),
+                'label'                 => __('Color Icon Up', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_icon_color_down',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -290,10 +313,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-up-arrow',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color Icon Down', 'dslc_string'),
+                'label'                 => __('Color Icon Down', 'alenastudio_plugin'),
                 'id'                    => 'css_drag_bar_icon_color_up',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -301,7 +324,7 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-down-arrow',
                 'affect_on_change_rule' => 'border-top-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'dslc_string'),
+                'tab'                   => __('drag bar', 'alenastudio_plugin'),
             ),
             /**             * Responsive Tablet */
             array
@@ -513,7 +536,7 @@ class AS_Before_After extends DSLC_Module {
             )
                 ,
         );
-        // $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
+        $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
         $dslc_options = array_merge($dslc_options, $this->presets_options());
 
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
@@ -533,7 +556,7 @@ class AS_Before_After extends DSLC_Module {
             $dslc_is_admin = false;
         ?>
         <?php if (empty($options['image']) || empty($options['image_2'])) : ?>
-            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'dslc_string'); ?></div>
+            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'alenastudio_plugin'); ?></div>
         <?php else : ?>		
             <div class="as-before-img">
                 <?php

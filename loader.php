@@ -75,7 +75,7 @@ add_action('dslc_hook_register_modules', create_function('', 'return dslc_regist
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Progress_Bars" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Image" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box" );'));
-add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_2" );'));
+add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_6" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_3" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_4" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Info_Box_5" );'));

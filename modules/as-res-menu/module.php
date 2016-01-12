@@ -10,7 +10,7 @@ class AS_Res_Menu extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Res_Menu';
-        $this->module_title    = __('Restaurant Menu', 'dslc_string');
+        $this->module_title    = __('Restaurant Menu', 'alenastudio_plugin');
         $this->module_icon     = 'info';
         $this->module_category = 'as - res - menu';
     }
@@ -19,21 +19,21 @@ class AS_Res_Menu extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
@@ -42,32 +42,32 @@ class AS_Res_Menu extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Elements', 'dslc_string'),
+                'label'   => __('Elements', 'alenastudio_plugin'),
                 'id'      => 'elements',
                 'std'     => 'icon title content button image label',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Title', 'dslc_string'),
+                        'label' => __('Title', 'alenastudio_plugin'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Content', 'dslc_string'),
+                        'label' => __('Content', 'alenastudio_plugin'),
                         'value' => 'content'
                     ),
                     array(
-                        'label' => __('Image', 'dslc_string'),
+                        'label' => __('Image', 'alenastudio_plugin'),
                         'value' => 'image'
                     ),
                     array(
-                        'label' => __('Label', 'dslc_string'),
+                        'label' => __('Label', 'alenastudio_plugin'),
                         'value' => 'label'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -77,7 +77,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -88,25 +88,25 @@ class AS_Res_Menu extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -116,7 +116,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -127,7 +127,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -138,7 +138,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -151,7 +151,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -162,7 +162,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'alenastudio_plugin'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -176,7 +176,7 @@ class AS_Res_Menu extends DSLC_Module {
              * Image
              */
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -184,10 +184,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -195,10 +195,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Image', 'dslc_string'),
+                'label'                 => __('BG Image', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_bg_img',
                 'std'                   => 'http://www.freewebsitetemplates.com/images/forum/500/restaurantwebsitetemplate.jpg',
                 'type'                  => 'image',
@@ -206,62 +206,62 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'dslc_string'),
+                'label'                 => __('BG Image Repeat', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_bg_img_repeat',
                 'std'                   => 'no-repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'dslc_string'),
+                        'label' => __('Repeat', 'alenastudio_plugin'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'dslc_string'),
+                        'label' => __('Repeat Horizontal', 'alenastudio_plugin'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'dslc_string'),
+                        'label' => __('Repeat Vertical', 'alenastudio_plugin'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'dslc_string'),
+                        'label' => __('Do NOT Repeat', 'alenastudio_plugin'),
                         'value' => 'no-repeat',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Image Size', 'dslc_string'),
+                'label'                 => __('BG Image Size', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_bg_img_size',
                 'std'                   => 'auto',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Original', 'dslc_string'),
+                        'label' => __('Original', 'alenastudio_plugin'),
                         'value' => 'auto',
                     ),
                     array(
-                        'label' => __('Cover', 'dslc_string'),
+                        'label' => __('Cover', 'alenastudio_plugin'),
                         'value' => 'cover',
                     ),
                     array(
-                        'label' => __('Contain', 'dslc_string'),
+                        'label' => __('Contain', 'alenastudio_plugin'),
                         'value' => 'contain',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-size',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -269,10 +269,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -281,28 +281,28 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -310,10 +310,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -321,11 +321,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'dslc_string'),
+                'label'                 => __('Margin Top', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_margin_top',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -333,13 +333,13 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
                 'ext'                   => 'px',
                 'min'                   => -100,
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right', 'dslc_string'),
+                'label'                 => __('Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -347,13 +347,13 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_margin_bottom',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -361,34 +361,34 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'dslc_string'),
+                'tab'                   => __('Image', 'alenastudio_plugin'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'   => __('Position', 'dslc_string'),
+                'label'   => __('Position', 'alenastudio_plugin'),
                 'id'      => 'icon_position',
                 'std'     => 'above',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Above', 'dslc_string'),
+                        'label' => __('Above', 'alenastudio_plugin'),
                         'value' => 'above',
                     ),
                     array(
-                        'label' => __('Aside', 'dslc_string'),
+                        'label' => __('Aside', 'alenastudio_plugin'),
                         'value' => 'aside',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Image', 'dslc_string'),
+                'tab'     => __('Image', 'alenastudio_plugin'),
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -396,10 +396,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -407,10 +407,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -418,11 +418,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -430,14 +430,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -445,10 +445,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -456,11 +456,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -468,14 +468,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Content
              */
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -483,10 +483,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'dslc_string'),
+                'tab'                   => __('Content', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -494,10 +494,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'dslc_string'),
+                'tab'                   => __('Content', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -505,11 +505,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'dslc_string'),
+                'tab'                   => __('Content', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -517,14 +517,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'dslc_string'),
+                'tab'                   => __('Content', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -532,10 +532,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'dslc_string'),
+                'tab'                   => __('Content', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -543,11 +543,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'dslc_string'),
+                'tab'                   => __('Content', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -555,14 +555,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'dslc_string'),
+                'tab'                   => __('Content', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Prices
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -570,10 +570,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'dslc_string'),
+                'tab'                   => __('Prices', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -581,11 +581,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'dslc_string'),
+                'tab'                   => __('Prices', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -593,14 +593,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'dslc_string'),
+                'tab'                   => __('Prices', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -608,10 +608,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'dslc_string'),
+                'tab'                   => __('Prices', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -619,11 +619,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'dslc_string'),
+                'tab'                   => __('Prices', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -631,14 +631,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box-price',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('prices', 'dslc_string'),
+                'tab'                   => __('prices', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * label
              */
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#BF9553',
                 'type'                  => 'color',
@@ -646,10 +646,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'dslc_string'),
+                'tab'                   => __('Label', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -657,10 +657,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'dslc_string'),
+                'tab'                   => __('Label', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -668,11 +668,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'dslc_string'),
+                'tab'                   => __('Label', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -680,14 +680,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'dslc_string'),
+                'tab'                   => __('Label', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -695,10 +695,10 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'dslc_string'),
+                'tab'                   => __('Label', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'alenastudio_plugin'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -706,11 +706,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'dslc_string'),
+                'tab'                   => __('Label', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -718,14 +718,14 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'dslc_string'),
+                'tab'                   => __('Label', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Hidden
              */
             array(
-                'label'      => __('Title', 'dslc_string'),
+                'label'      => __('Title', 'alenastudio_plugin'),
                 'id'         => 'title',
                 'std'        => 'CLICK TO EDIT',
                 'type'       => 'textarea',
@@ -733,7 +733,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Content', 'dslc_string'),
+                'label'      => __('Content', 'alenastudio_plugin'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
                 'type'       => 'textarea',
@@ -741,7 +741,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('price', 'dslc_string'),
+                'label'      => __('price', 'alenastudio_plugin'),
                 'id'         => 'price',
                 'std'        => '$  Edit',
                 'type'       => 'textarea',
@@ -749,7 +749,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('label', 'dslc_string'),
+                'label'      => __('label', 'alenastudio_plugin'),
                 'id'         => 'label',
                 'std'        => 'Edit label',
                 'type'       => 'textarea',
@@ -760,25 +760,25 @@ class AS_Res_Menu extends DSLC_Module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -786,11 +786,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -798,13 +798,13 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -812,32 +812,32 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'dslc_string'),
+                'tab'     => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -845,11 +845,11 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -857,13 +857,13 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -871,7 +871,7 @@ class AS_Res_Menu extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
         );

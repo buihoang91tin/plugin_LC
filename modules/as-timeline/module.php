@@ -12,7 +12,7 @@ class AS_Timeline extends DSLC_Module {
 
     function __construct() {
         $this->module_id       = 'AS_Timeline';
-        $this->module_title    = __('Timeline', 'dslc_string');
+        $this->module_title    = __('Timeline', 'alenastudio_plugin');
         $this->module_icon     = 'history';
         $this->module_category = 'as - posts';
         $this->handle_like     = 'accordion';
@@ -34,46 +34,46 @@ class AS_Timeline extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Open by default', 'dslc_string'),
+                'label' => __('Open by default', 'alenastudio_plugin'),
                 'id'    => 'open_by_default',
                 'std'   => '1',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Categories', 'dslc_string'),
+                'label'   => __('Categories', 'alenastudio_plugin'),
                 'id'      => 'as_categories',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => $cats_choices
             ),
             array(
-                'label'   => __('Order By', 'dslc_string'),
+                'label'   => __('Order By', 'alenastudio_plugin'),
                 'id'      => 'as_orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Publish Date', 'dslc_string'),
+                        'label' => __('Publish Date', 'alenastudio_plugin'),
                         'value' => 'date'
                     ),
                     array(

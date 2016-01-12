@@ -11,7 +11,7 @@ class AS_SubscriptionBox extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_SubscriptionBox';
-        $this->module_title    = __('AS - Mailchimp Subscription', 'dslc_string');
+        $this->module_title    = __('AS - Mailchimp Subscription', 'alenastudio_plugin');
         $this->module_icon     = 'envelope-alt';
         $this->module_category = 'as - element';
     }
@@ -22,7 +22,7 @@ class AS_SubscriptionBox extends DSLC_Module {
         $dslc_options = array(
             /* CLIKC TO EDIT */
             array(
-                'label' => __('MailChimp URL', 'dslc_string'),
+                'label' => __('MailChimp URL', 'alenastudio_plugin'),
                 'id'    => 'as_mailchimp_url',
                 'std'   => 'http://alenastudio.us10.list-manage.com/subscribe?u=f2e21eb858ed6d4d505e8e877&id=ffdd9414e1',
                 'type'  => 'text',
@@ -32,27 +32,27 @@ class AS_SubscriptionBox extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'as_css_main_newsletter_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -62,7 +62,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Background', 'dslc_string'),
+                'label'                 => __('Background', 'alenastudio_plugin'),
                 'id'                    => 'as_css_background_form',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -72,7 +72,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -83,7 +83,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_css_padding_vertical_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -94,7 +94,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_css_padding_horizontal_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -108,7 +108,7 @@ class AS_SubscriptionBox extends DSLC_Module {
              * Button Styling
              */
             array(
-                'label'                 => __('Width (%)', 'dslc_string'),
+                'label'                 => __('Width (%)', 'alenastudio_plugin'),
                 'id'                    => 'as_css_input_width',
                 'std'                   => '70',
                 'type'                  => 'slider',
@@ -117,10 +117,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_css_input_color',
                 'std'                   => '#ccc',
                 'type'                  => 'color',
@@ -128,10 +128,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Right', 'dslc_string'),
+                'label'                 => __('Margin Right', 'alenastudio_plugin'),
                 'id'                    => 'as_css_input_margin_right',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -140,10 +140,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_css_input_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -152,10 +152,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_css_input_padding_vertical_form',
                 'std'                   => '9',
                 'type'                  => 'slider',
@@ -164,10 +164,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_css_input_padding_horizontal_form',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -176,10 +176,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'as_input_css_newsletter_bg_color',
                 'std'                   => 'rgb(255, 255, 255)',
                 'type'                  => 'color',
@@ -187,10 +187,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'as_input_css_newsletter_border_color',
                 'std'                   => '#ccc',
                 'type'                  => 'color',
@@ -198,10 +198,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'as_input_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -210,21 +210,21 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'dslc_string'),
+                'tab'                   => __('Input Form', 'alenastudio_plugin'),
             ),
             /**
              * Button Styling
              */
             array(
-                'label'   => __('Button Text', 'dslc_string'),
+                'label'   => __('Button Text', 'alenastudio_plugin'),
                 'id'      => 'as_button_text',
                 'std'     => 'Subscribe',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Button Style', 'dslc_string'),
+                'tab'     => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'alenastudio_plugin'),
                 'id'                    => 'as_button_newsletter_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -232,10 +232,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_bg_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -243,10 +243,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'dslc_string'),
+                'label'                 => __('BG Color - Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_bg_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -254,10 +254,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_border_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -265,10 +265,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'dslc_string'),
+                'label'                 => __('Border Color - Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_border_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -276,19 +276,19 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'dslc_string'),
+                'label'             => __('Duration when hover(ms)', 'alenastudio_plugin'),
                 'id'                => 'as_button_css_newsletter_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('Button Style', 'dslc_string'),
+                'tab'               => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -297,28 +297,28 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -326,10 +326,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -338,10 +338,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -350,10 +350,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -362,10 +362,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -374,13 +374,13 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'dslc_string'),
+                'tab'                   => __('Button Style', 'alenastudio_plugin'),
             ),
             /**
              * Out line Style
              */
             array(
-                'label'                 => __('Out Line Width', 'dslc_string'),
+                'label'                 => __('Out Line Width', 'alenastudio_plugin'),
                 'id'                    => 'as_button_newsletter_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -388,11 +388,11 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Offset', 'dslc_string'),
+                'label'                 => __('Out Line Offset', 'alenastudio_plugin'),
                 'id'                    => 'as_button_newsletter_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -400,11 +400,11 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Color', 'dslc_string'),
+                'label'                 => __('Out Line Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_newsletter_out_line_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -412,10 +412,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Out Line Color Hover', 'dslc_string'),
+                'label'                 => __('Out Line Color Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_newsletter_out_line_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -423,28 +423,28 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Out Line Style', 'dslc_string'),
+                'label'                 => __('Out Line Style', 'alenastudio_plugin'),
                 'id'                    => 'as_button_newsletter_out_line_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'dslc_string'),
+                        'label' => __('Invisible', 'alenastudio_plugin'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'dslc_string'),
+                        'label' => __('Solid', 'alenastudio_plugin'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'dslc_string'),
+                        'label' => __('Dashed', 'alenastudio_plugin'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'dslc_string'),
+                        'label' => __('Dotted', 'alenastudio_plugin'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -452,13 +452,13 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'dslc_string'),
+                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
             ),
             /**
              * Typography
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -466,10 +466,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'dslc_string'),
+                'label'                 => __('Color - Hover', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -477,10 +477,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -488,11 +488,11 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -500,14 +500,14 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -515,10 +515,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'dslc_string'),
+                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
                 'id'                    => 'as_button_css_newsletter_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -526,7 +526,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'dslc_string'),
+                'tab'                   => __('typography', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             /**             * Responsive Tablet */

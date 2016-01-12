@@ -10,7 +10,7 @@ class AS_Progress_Bars extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Progress_Bars';
-        $this->module_title    = __('AS - Progress Bar', 'dslc_string');
+        $this->module_title    = __('AS - Progress Bar', 'alenastudio_plugin');
         $this->module_icon     = 'tasks';
         $this->module_category = 'as - Counter';
     }
@@ -19,29 +19,29 @@ class AS_Progress_Bars extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Label', 'dslc_string'),
+                'label'      => __('Label', 'alenastudio_plugin'),
                 'id'         => 'label',
-                'std'        => __('CLICK TO EDIT', 'dslc_string'),
+                'std'        => __('CLICK TO EDIT', 'alenastudio_plugin'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'functionality',
@@ -50,7 +50,7 @@ class AS_Progress_Bars extends DSLC_Module {
              * General Settings
              */
             array(
-                'label'                 => __('Amount', 'dslc_string'),
+                'label'                 => __('Amount', 'alenastudio_plugin'),
                 'id'                    => 'amount',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -61,41 +61,41 @@ class AS_Progress_Bars extends DSLC_Module {
                 'section'               => 'functionality',
             ),
             array(
-                'label'   => __('Show / Hide Tooltip', 'dslc_string'),
+                'label'   => __('Show / Hide Tooltip', 'alenastudio_plugin'),
                 'id'      => 'number_percent',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled ', 'dslc_string'),
+                        'label' => __('Enabled ', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'functionality',
             ),
             array(
-                'label'   => __('Animation', 'dslc_string'),
+                'label'   => __('Animation', 'alenastudio_plugin'),
                 'id'      => 'animation',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled ', 'dslc_string'),
+                        'label' => __('Enabled ', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'functionality',
             ),
             array(
-                'label'   => __('Animation Speed ( miliseconds )', 'dslc_string'),
+                'label'   => __('Animation Speed ( miliseconds )', 'alenastudio_plugin'),
                 'id'      => 'animation_speed',
                 'std'     => '1000',
                 'type'    => 'text',
@@ -105,7 +105,7 @@ class AS_Progress_Bars extends DSLC_Module {
              * Wrapper Style
              */
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -115,7 +115,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -125,7 +125,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,25 +136,25 @@ class AS_Progress_Bars extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -164,7 +164,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'dslc_string'),
+                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -175,7 +175,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'dslc_string'),
+                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -186,7 +186,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -197,7 +197,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Minimum Height', 'dslc_string'),
+                'label'                 => __('Minimum Height', 'alenastudio_plugin'),
                 'id'                    => 'css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -211,7 +211,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'increment'             => 5
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -222,7 +222,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -236,7 +236,7 @@ class AS_Progress_Bars extends DSLC_Module {
              * Label
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_label_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -244,10 +244,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_label_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -255,11 +255,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'alenastudio_plugin'),
                 'id'                    => 'css_label_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -267,14 +267,14 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'alenastudio_plugin'),
                 'id'                    => 'css_label_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
@@ -282,10 +282,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_label_margin',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -293,11 +293,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_label_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -306,10 +306,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_label_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -318,31 +318,31 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Title', 'dslc_string'),
+                'tab'                   => __('Title', 'alenastudio_plugin'),
             ),
             array(
-                'label'   => __('Position', 'dslc_string'),
+                'label'   => __('Position', 'alenastudio_plugin'),
                 'id'      => 'label_position',
                 'std'     => 'above',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Above', 'dslc_string'),
+                        'label' => __('Above', 'alenastudio_plugin'),
                         'value' => 'above'
                     ),
                     array(
-                        'label' => __('Inside ', 'dslc_string'),
+                        'label' => __('Inside ', 'alenastudio_plugin'),
                         'value' => 'inside'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('title', 'dslc_string'),
+                'tab'     => __('title', 'alenastudio_plugin'),
             ),
             /**
              * Loader
              */
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_bg_color',
                 'std'                   => '#f1f1f1',
                 'type'                  => 'color',
@@ -350,10 +350,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -361,10 +361,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -373,28 +373,28 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -402,10 +402,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_border_radius',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -414,10 +414,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_color',
                 'std'                   => '#62cbd7',
                 'type'                  => 'color',
@@ -425,10 +425,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader-inner',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -437,10 +437,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -449,10 +449,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -461,10 +461,10 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Size', 'dslc_string'),
+                'label'                 => __('Size', 'alenastudio_plugin'),
                 'id'                    => 'css_loader_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -473,31 +473,31 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_rule' => 'height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'dslc_string'),
+                'tab'                   => __('bar', 'alenastudio_plugin'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => __('tablet', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -505,11 +505,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -517,11 +517,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -529,11 +529,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Font Size', 'dslc_string'),
+                'label'                 => __('Title - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_label_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -541,11 +541,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Title - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_label_margin',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -553,11 +553,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Title - Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_label_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -565,11 +565,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Padding Vertical', 'dslc_string'),
+                'label'                 => __('Title - Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_label_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -577,11 +577,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Bar - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_loader_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -589,11 +589,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Vertical', 'dslc_string'),
+                'label'                 => __('Bar - Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_loader_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -601,11 +601,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Bar - Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_loader_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -613,11 +613,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Size', 'dslc_string'),
+                'label'                 => __('Bar - Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_t_loader_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -625,32 +625,32 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader, .dslc-progress-bar-loader-inner',
                 'affect_on_change_rule' => 'height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'dslc_string'),
+                'tab'     => __('phone', 'alenastudio_plugin'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -658,11 +658,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -670,11 +670,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -682,11 +682,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Font Size', 'dslc_string'),
+                'label'                 => __('Title - Font Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_label_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -694,11 +694,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Title - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_label_margin',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -706,11 +706,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Title - Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_label_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -718,11 +718,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Padding Vertical', 'dslc_string'),
+                'label'                 => __('Title - Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_label_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -730,11 +730,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Margin Bottom', 'dslc_string'),
+                'label'                 => __('Bar - Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_loader_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -742,11 +742,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Vertical', 'dslc_string'),
+                'label'                 => __('Bar - Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_loader_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -754,11 +754,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Bar - Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_loader_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -766,11 +766,11 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Size', 'dslc_string'),
+                'label'                 => __('Bar - Size', 'alenastudio_plugin'),
                 'id'                    => 'css_res_p_loader_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -778,7 +778,7 @@ class AS_Progress_Bars extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader, .dslc-progress-bar-loader-inner',
                 'affect_on_change_rule' => 'height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'alenastudio_plugin'),
                 'ext'                   => 'px',
             ),
         );

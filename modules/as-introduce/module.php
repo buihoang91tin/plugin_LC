@@ -338,7 +338,7 @@ class AS_Introduce extends DSLC_Module {
                 'tab'               => 'Image',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'as_introduce_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -350,7 +350,7 @@ class AS_Introduce extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Size', 'dslc_string'),
+                'label'                 => __('Size', 'alenastudio_plugin'),
                 'id'                    => 'as_introduce_size',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -362,7 +362,7 @@ class AS_Introduce extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'as_introduce_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -619,7 +619,7 @@ class AS_Introduce extends DSLC_Module {
                 'tab'                   => __('Socials', 'alenastudio'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'as_introduce_social_border',
                 'std'                   => 'rgba(189, 36, 36, 0)',
                 'type'                  => 'color',
@@ -630,7 +630,7 @@ class AS_Introduce extends DSLC_Module {
                 'tab'                   => __('Socials', 'alenastudio'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'as_introduce_social_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -699,7 +699,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'      => __('Title', 'alenastudio'),
                 'id'         => 'title',
-                'std'        => 'CLICK TO EDIT',
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -715,7 +715,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'      => __('Button Title', 'alenastudio'),
                 'id'         => 'button_title',
-                'std'        => 'CLICK TO EDIT',
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -723,7 +723,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'      => __('Button Title', 'alenastudio'),
                 'id'         => 'button_2_title',
-                'std'        => 'CLICK TO EDIT',
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'

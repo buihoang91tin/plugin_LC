@@ -11,7 +11,7 @@ class AS_Google_Map extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Google_Map';
-        $this->module_title    = __('AS - Google Map', 'dslc_string');
+        $this->module_title    = __('AS - Google Map', 'alenastudio_plugin');
         $this->module_icon     = 'globe';
         $this->module_category = 'as - element';
     }
@@ -24,121 +24,121 @@ class AS_Google_Map extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'alenastudio_plugin'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'alenastudio_plugin'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'alenastudio_plugin'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'alenastudio_plugin'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Title', 'dslc_string'),
+                'label'      => __('Title', 'alenastudio_plugin'),
                 'id'         => 'title',
-                'std'        => 'CLICK TO EDIT',
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'   => __('Google Map Scrool Wheel', 'dslc_string'),
+                'label'   => __('Google Map Scrool Wheel', 'alenastudio_plugin'),
                 'id'      => 'googlemap_scrlwheel',
                 'std'     => '0',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'alenastudio_plugin'),
                         'value' => '0'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'alenastudio_plugin'),
                         'value' => '1'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Snazzy Maps', 'dslc_string'),
+                'label'   => __('Snazzy Maps', 'alenastudio_plugin'),
                 'id'      => 'googlemap_snazzy_map',
                 'std'     => '1',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('None', 'dslc_string'),
+                        'label' => __('None', 'alenastudio_plugin'),
                         'value' => '1'
                     ),
                     array(
-                        'label' => __('Subtle Grayscale', 'dslc_string'),
+                        'label' => __('Subtle Grayscale', 'alenastudio_plugin'),
                         'value' => '2'
                     ),
                     array(
-                        'label' => __('Shades of Grey', 'dslc_string'),
+                        'label' => __('Shades of Grey', 'alenastudio_plugin'),
                         'value' => '3'
                     ),
                     array(
-                        'label' => __('Blue water', 'dslc_string'),
+                        'label' => __('Blue water', 'alenastudio_plugin'),
                         'value' => '4'
                     ),
                     array(
-                        'label' => __('Pale Dawn', 'dslc_string'),
+                        'label' => __('Pale Dawn', 'alenastudio_plugin'),
                         'value' => '5'
                     ),
                     array(
-                        'label' => __('Light Monochrome', 'dslc_string'),
+                        'label' => __('Light Monochrome', 'alenastudio_plugin'),
                         'value' => '6'
                     ),
                     array(
-                        'label' => __('Apple Maps-esque', 'dslc_string'),
+                        'label' => __('Apple Maps-esque', 'alenastudio_plugin'),
                         'value' => '7'
                     ),
                     array(
-                        'label' => __('Greyscale', 'dslc_string'),
+                        'label' => __('Greyscale', 'alenastudio_plugin'),
                         'value' => '8'
                     ),
                     array(
-                        'label' => __('Neutral Blue', 'dslc_string'),
+                        'label' => __('Neutral Blue', 'alenastudio_plugin'),
                         'value' => '9'
                     ),
                     array(
-                        'label' => __('Bright & Bubbly', 'dslc_string'),
+                        'label' => __('Bright & Bubbly', 'alenastudio_plugin'),
                         'value' => '10'
                     ),
                     array(
-                        'label' => __('Icy Blue', 'dslc_string'),
+                        'label' => __('Icy Blue', 'alenastudio_plugin'),
                         'value' => '11'
                     ),
                     array(
-                        'label' => __('Blue Gray', 'dslc_string'),
+                        'label' => __('Blue Gray', 'alenastudio_plugin'),
                         'value' => '12'
                     ),
                     array(
-                        'label' => __('Blue Essence', 'dslc_string'),
+                        'label' => __('Blue Essence', 'alenastudio_plugin'),
                         'value' => '13'
                     ),
                     array(
-                        'label' => __('Girly', 'dslc_string'),
+                        'label' => __('Girly', 'alenastudio_plugin'),
                         'value' => '14'
                     ),
                     array(
-                        'label' => __('Retro', 'dslc_string'),
+                        'label' => __('Retro', 'alenastudio_plugin'),
                         'value' => '15'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Width Google Map', 'dslc_string'),
+                'label'                 => __('Width Google Map', 'alenastudio_plugin'),
                 'id'                    => 'as_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -150,7 +150,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Height Google Map', 'dslc_string'),
+                'label'                 => __('Height Google Map', 'alenastudio_plugin'),
                 'id'                    => 'as_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -162,48 +162,48 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'   => __('Goole Map Center X', 'dslc_string'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'dslc_string'),
+                'label'   => __('Goole Map Center X', 'alenastudio_plugin'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'alenastudio_plugin'),
                 'id'      => 'googlemap_x',
                 'std'     => '12.238791',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Center Y', 'dslc_string'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'dslc_string'),
+                'label'   => __('Goole Map Center Y', 'alenastudio_plugin'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'alenastudio_plugin'),
                 'id'      => 'googlemap_y',
                 'std'     => '109.196749',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Zoom', 'dslc_string'),
+                'label'   => __('Goole Map Zoom', 'alenastudio_plugin'),
                 'id'      => 'googlemap_zoom',
                 'std'     => '13',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'alenastudio_plugin'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'alenastudio_plugin'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'alenastudio_plugin'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'alenastudio_plugin'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'alenastudio_plugin'),
                         'value' => 'left'
                     ),
                 ),
@@ -213,7 +213,7 @@ class AS_Google_Map extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'alenastudio_plugin'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -223,7 +223,7 @@ class AS_Google_Map extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'alenastudio_plugin'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -234,7 +234,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'alenastudio_plugin'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -245,7 +245,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -256,7 +256,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -269,7 +269,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -282,7 +282,7 @@ class AS_Google_Map extends DSLC_Module {
             /* For mark
              */
             array(
-                'label'   => __('Goole Map Mark X', 'dslc_string'),
+                'label'   => __('Goole Map Mark X', 'alenastudio_plugin'),
                 'id'      => 'googlemap_x_mark',
                 'std'     => '12.238791',
                 'type'    => 'text',
@@ -290,7 +290,7 @@ class AS_Google_Map extends DSLC_Module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Map Mark Y', 'dslc_string'),
+                'label'   => __('Goole Map Mark Y', 'alenastudio_plugin'),
                 'id'      => 'googlemap_y_mark',
                 'std'     => '109.196749',
                 'type'    => 'text',
@@ -298,7 +298,7 @@ class AS_Google_Map extends DSLC_Module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Mark Title', 'dslc_string'),
+                'label'   => __('Goole Mark Title', 'alenastudio_plugin'),
                 'id'      => 'google_title_mark',
                 'std'     => 'Dong Hoi City',
                 'type'    => 'text',
