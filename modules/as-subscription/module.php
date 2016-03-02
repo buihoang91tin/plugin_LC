@@ -1,6 +1,6 @@
 <?php
 
-class AS_SubscriptionBox extends DSLC_Module {
+class AS_SubscriptionBox extends as_module {
 
     // Module Attributes
     var $module_id;
@@ -11,7 +11,7 @@ class AS_SubscriptionBox extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_SubscriptionBox';
-        $this->module_title    = __('AS - Mailchimp Subscription', 'alenastudio_plugin');
+        $this->module_title    = __('AS - Mailchimp Subscription', 'live-composer-page-builder');
         $this->module_icon     = 'envelope-alt';
         $this->module_category = 'as - element';
     }
@@ -22,7 +22,7 @@ class AS_SubscriptionBox extends DSLC_Module {
         $dslc_options = array(
             /* CLIKC TO EDIT */
             array(
-                'label' => __('MailChimp URL', 'alenastudio_plugin'),
+                'label' => __('MailChimp URL', 'live-composer-page-builder'),
                 'id'    => 'as_mailchimp_url',
                 'std'   => 'http://alenastudio.us10.list-manage.com/subscribe?u=f2e21eb858ed6d4d505e8e877&id=ffdd9414e1',
                 'type'  => 'text',
@@ -32,27 +32,27 @@ class AS_SubscriptionBox extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'as_css_main_newsletter_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -62,7 +62,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Background', 'alenastudio_plugin'),
+                'label'                 => __('Background', 'live-composer-page-builder'),
                 'id'                    => 'as_css_background_form',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -72,7 +72,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -83,7 +83,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_css_padding_vertical_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -94,7 +94,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_css_padding_horizontal_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -108,7 +108,7 @@ class AS_SubscriptionBox extends DSLC_Module {
              * Button Styling
              */
             array(
-                'label'                 => __('Width (%)', 'alenastudio_plugin'),
+                'label'                 => __('Width (%)', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_width',
                 'std'                   => '70',
                 'type'                  => 'slider',
@@ -117,10 +117,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_color',
                 'std'                   => '#ccc',
                 'type'                  => 'color',
@@ -128,10 +128,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Right', 'alenastudio_plugin'),
+                'label'                 => __('Margin Right', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_margin_right',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -140,10 +140,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -152,10 +152,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_padding_vertical_form',
                 'std'                   => '9',
                 'type'                  => 'slider',
@@ -164,10 +164,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_padding_horizontal_form',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -176,10 +176,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_input_css_newsletter_bg_color',
                 'std'                   => 'rgb(255, 255, 255)',
                 'type'                  => 'color',
@@ -187,10 +187,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_input_css_newsletter_border_color',
                 'std'                   => '#ccc',
                 'type'                  => 'color',
@@ -198,10 +198,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'as_input_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -210,21 +210,21 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'alenastudio_plugin'),
+                'tab'                   => __('Input Form', 'live-composer-page-builder'),
             ),
             /**
              * Button Styling
              */
             array(
-                'label'   => __('Button Text', 'alenastudio_plugin'),
+                'label'   => __('Button Text', 'live-composer-page-builder'),
                 'id'      => 'as_button_text',
                 'std'     => 'Subscribe',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Button Style', 'alenastudio_plugin'),
+                'tab'     => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'as_button_newsletter_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -232,10 +232,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_bg_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -243,10 +243,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('BG Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_bg_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -254,10 +254,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_border_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -265,10 +265,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_border_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -276,19 +276,19 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'alenastudio_plugin'),
+                'label'             => __('Duration when hover(ms)', 'live-composer-page-builder'),
                 'id'                => 'as_button_css_newsletter_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('Button Style', 'alenastudio_plugin'),
+                'tab'               => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -297,28 +297,28 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -326,10 +326,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -338,10 +338,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -350,10 +350,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -362,10 +362,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -374,13 +374,13 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'alenastudio_plugin'),
+                'tab'                   => __('Button Style', 'live-composer-page-builder'),
             ),
             /**
              * Out line Style
              */
             array(
-                'label'                 => __('Out Line Width', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Width', 'live-composer-page-builder'),
                 'id'                    => 'as_button_newsletter_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -388,11 +388,11 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Offset', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Offset', 'live-composer-page-builder'),
                 'id'                    => 'as_button_newsletter_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -400,11 +400,11 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Color', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_newsletter_out_line_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -412,10 +412,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Out Line Color Hover', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Color Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_newsletter_out_line_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -423,28 +423,28 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Out Line Style', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Style', 'live-composer-page-builder'),
                 'id'                    => 'as_button_newsletter_out_line_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'alenastudio_plugin'),
+                        'label' => __('Invisible', 'live-composer-page-builder'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'alenastudio_plugin'),
+                        'label' => __('Solid', 'live-composer-page-builder'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'alenastudio_plugin'),
+                        'label' => __('Dashed', 'live-composer-page-builder'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'alenastudio_plugin'),
+                        'label' => __('Dotted', 'live-composer-page-builder'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -452,13 +452,13 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
             ),
             /**
              * Typography
              */
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -466,10 +466,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'alenastudio_plugin'),
+                'tab'                   => __('typography', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -477,10 +477,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'alenastudio_plugin'),
+                'tab'                   => __('typography', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -488,11 +488,11 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'alenastudio_plugin'),
+                'tab'                   => __('typography', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -500,14 +500,14 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'alenastudio_plugin'),
+                'tab'                   => __('typography', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -515,10 +515,10 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'alenastudio_plugin'),
+                'tab'                   => __('typography', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -526,7 +526,7 @@ class AS_SubscriptionBox extends DSLC_Module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'alenastudio_plugin'),
+                'tab'                   => __('typography', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /**             * Responsive Tablet */

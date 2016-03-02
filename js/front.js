@@ -79,20 +79,10 @@
         return value.toFixed(settings.decimals);
     }
 }(jQuery));
-//
-///** 
-// * Merge Icon Font
-// */
-//var asNewIconFontsArray = ["as-heart", "as-cloud", "as-star", "as-tv", "as-sound", "as-video", "as-trash", "as-user", "as-key", "as-search", "as-settings", "as-camera", "as-tag", "as-lock", "as-bulb", "as-pen", "as-diamond", "as-display", "as-location", "as-eye", "as-bubble", "as-stack", "as-cup", "as-phone", "as-news", "as-mail", "as-like", "as-photo", "as-note", "as-clock", "as-paperplane", "as-params", "as-banknote", "as-data", "as-music", "as-megaphone", "as-study", "as-lab", "as-food", "as-t-shirt", "as-fire", "as-clip", "as-shop", "as-calendar", "as-wallet", "as-vynil", "as-truck", "as-world", "as-mobile", "as-laptop", "as-desktop", "as-tablet", "as-phone2", "as-document", "as-documents", "as-search2", "as-clipboard", "as-newspaper", "as-notebook", "as-book-open", "as-browser", "as-calendar2", "as-presentation", "as-picture", "as-pictures", "as-video2", "as-camera2", "as-printer", "as-toolbox", "as-briefcase", "as-wallet2", "as-gift", "as-bargraph", "as-grid", "as-expand", "as-focus", "as-edit", "as-adjustments", "as-ribbon", "as-hourglass", "as-lock2", "as-megaphone2", "as-shield", "as-trophy", "as-flag", "as-map", "as-puzzle", "as-basket", "as-envelope", "as-streetsign", "as-telescope", "as-gears", "as-key2", "as-paperclip", "as-attachment", "as-pricetags", "as-lightbulb", "as-layers", "as-pencil", "as-tools", "as-tools-2", "as-scissors", "as-paintbrush", "as-magnifying-glass", "as-circle-compass", "as-linegraph", "as-mic", "as-strategy", "as-beaker", "as-caution", "as-recycle", "as-anchor", "as-profile-male", "as-profile-female", "as-bike", "as-wine", "as-hotairballoon", "as-globe", "as-genius", "as-map-pin", "as-dial", "as-chat", "as-heart2", "as-cloud2", "as-upload", "as-download", "as-target", "as-hazardous", "as-piechart", "as-speedometer", "as-global", "as-compass", "as-lifesaver", "as-clock2", "as-aperture", "as-quote", "as-scope", "as-alarmclock", "as-refresh", "as-happy", "as-sad", "as-facebook", "as-twitter", "as-googleplus", "as-rss", "as-tumblr", "as-linkedin", "as-dribbble"];
-//if (typeof (dslcFontAwesomeArray) != "object") {
-//    var dslcFontAwesomeArray = [];
-//}
-//var dslcFontAwesomeArray = dslcFontAwesomeArray.concat(asNewIconFontsArray);
 
 /** 
  * Init Lightbox
  */
-
 function dslc_init_lightbox() {
 
     jQuery('.dslc-lightbox-image').each(function () {
@@ -137,7 +127,6 @@ function dslc_init_lightbox() {
     });
 
 }
-
 /**
  * Initiate Counter
  */
@@ -152,52 +141,6 @@ function as_counter() {
         });
     });
 }
-/**
- * Countdown
- */
-//function as_countdown() {
-//    jQuery('document').ready(function () {
-//        jQuery(".as-cowntdown-data").each(function () {
-//            var data_id = jQuery(this).attr('id');
-//            var as_data_date = jQuery(this).attr('data-date');
-//            var end_time = Date.parse(as_data_date);
-//            console.log(as_data_date);
-//            'use strict';
-//            jQuery('#'+data_id).final_countdown({
-//                'start': (jQuery.now()) / 1000,
-//                'end': end_time / 1000,
-//                'now': (jQuery.now()) / 1000,
-//                    selectors: {
-//        value_seconds: '.clock-seconds .'+data_id+'.val',
-//        canvas_seconds: 'canvas-seconds',
-//        value_minutes: '.clock-minutes .'+data_id+'.val',
-//        canvas_minutes: 'canvas-minutes',
-//        value_hours: '.clock-hours .'+data_id+'.val',
-//        canvas_hours: 'canvas-hours',
-//        value_days: '.clock-days .'+data_id+'.val',
-//        canvas_days: 'canvas-days'
-//    },
-//                seconds: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                },
-//                minutes: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                },
-//                hours: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                },
-//                days: {
-//                    borderColor: '#ECECEC',
-//                    borderWidth: '6'
-//                }
-//            });
-//        });
-//    });
-//}
-
 /**
  * Initiate Testimonials
  */
@@ -257,6 +200,7 @@ function as_circle_chart() {
                 size: data_size,
                 scaleColor: false,
             });
+
             element.appear(function () {
                 if (!element.hasClass('animated')) {
                     element.addClass('animated');
@@ -291,34 +235,32 @@ function as_time_circles() {
         var second_color = jQuery(this).attr('seconds-color');
         jQuery('#' + id_time_circles).TimeCircles(
                 {
-                    circle_bg_color: "transperant",
+                    circle_bg_color: "#ccd3d7",
                     use_background: true,
                     bg_width: 1.0,
                     fg_width: 0.02,
                     time: {
                         Days: {
-                            color: 'rgba(255,255,255,0)',
+                            color: date_color,
                             text: "Days"
                         },
                         Hours: {
-                            color: 'rgba(255,255,255,0)',
+                            color: hour_color,
                             text: "Hours"
                         },
                         Minutes: {
-                            color: 'rgba(255,255,255,0)',
+                            color: minute_color,
                             text: "Minutes"
                         },
                         Seconds: {
-                            color: 'rgba(255,255,255,0)',
+                            color: second_color,
                             text: "Seconds"
                         }
                     }
                 }
         );
         //test
-        
     });
-    //  jQuery("canvas").remove();
 }
 
 /**
@@ -1677,56 +1619,6 @@ function as_google_map() {
         //alert(JSON.stringify(map[i]));
     }
 }
-/* ------------------------------------- */
-/* T I M E L I N E 
- /* ------------------------------------ */
-/*
- jQuery.ajaxPrefilter(function (options, originalOptions, jqXHR) {
- 
- if (originalOptions.data.dslc_module_id == "AS_Timeline")
- {
- var dslcAccordionCount = 0;
- var dslcAccordionDateVal = "";
- jQuery('#dslc-module-' + originalOptions.data.module_instance_id + ' .dslc-accordion-item').each(function () {
- 
- dslcAccordionCount++;
- 
- if (dslcAccordionCount > 1) {
- dslcAccordionDateVal += ' (dslc_sep) ';
- }
- 
- dslcAccordionDateVal += jQuery(this).find('.dslc-accordion-date').text();
- });
- options.data += "&as_timeline_date=" + dslcAccordionDateVal;
- }
- });
- 
- function as_timeline() {
- jQuery(".as-timeline-container .dslc-accordion-item").removeClass("dslc-inactive");
- jQuery(".as-timeline-container .dslc-accordion-item").addClass("dslc-active");
- jQuery(".as-timeline-container .dslc-accordion-item .dslc-accordion-content").css("display", "block");
- }
- jQuery(document).ready(function ($) {
- var $timeline_block = $('.as-timeline-block');
- 
- //hide timeline blocks which are outside the viewport
- $timeline_block.each(function () {
- if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 0.75) {
- $(this).find('.as-timeline-img, .as-timeline-content').addClass('is-hidden');
- }
- });
- 
- //on scolling, show/animate timeline blocks when enter the viewport
- $(window).on('scroll', function () {
- $timeline_block.each(function () {
- if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.as-timeline-img').hasClass('is-hidden')) {
- $(this).find('.as-timeline-img, .as-timeline-content').removeClass('is-hidden').addClass('bounce-in');
- }
- });
- });
- as_timeline();
- });
- */
 
 /**
  *  Before & After Image
@@ -1749,21 +1641,21 @@ function as_before_img() {
     });
 }
 
-
 /**
  *  Text Rotator
  */
 function as_text_rotator() {
-    jQuery(".as-text-row-1 .rotate").each(function(){
-        anim_text = jQuery(this).data('anim-text');
-    speed_text = jQuery(this).data('speed-text');
+    jQuery(".as-text-rotate-wrapper .as-rotate").each(function(){
+        anim_text  = jQuery(this).data('anim-text');
+		speed_text = jQuery(this).data('speed-text');
 
-    jQuery(this).textrotator({
-        animation: anim_text,
-        speed: speed_text
+	    jQuery(this).textrotator({
+	        animation: anim_text,
+	        speed: speed_text
+	    });
     });
-        });
 }
+
 /**
  *  Owl Carousel Post Format
  */
@@ -1816,12 +1708,7 @@ function as_gallery_dslc() {
     });
 
 }
-
-
-
-
 jQuery(window).load(function () {
-   // as_countdown();
     as_gallery_post();
     as_counter();
     as_circle_chart();
@@ -1834,12 +1721,10 @@ jQuery(window).load(function () {
 });
 jQuery(document).ajaxComplete(function () {
     if (jQuery('body').hasClass('dslca-enabled')) {
-       // as_countdown();
         as_testimonials();
         as_counter();
         as_circle_chart();
         as_google_map();
-        //as_timeline();
         as_time_circles();
         as_before_img();
         as_text_rotator();

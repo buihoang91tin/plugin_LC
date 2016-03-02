@@ -1,6 +1,6 @@
 <?php
 
-class AS_Social extends DSLC_Module {
+class AS_Social extends as_module {
 
     var $module_id;
     var $module_title;
@@ -36,21 +36,21 @@ class AS_Social extends DSLC_Module {
              * General
              */
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'text_align',
                 'std'                   => 'left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'alenastudio_plugin'),
+                        'label' => __('Center', 'live-composer-page-builder'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                 ),
@@ -60,25 +60,25 @@ class AS_Social extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -88,7 +88,7 @@ class AS_Social extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -98,7 +98,7 @@ class AS_Social extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -109,7 +109,7 @@ class AS_Social extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -120,7 +120,7 @@ class AS_Social extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -131,7 +131,7 @@ class AS_Social extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -144,7 +144,7 @@ class AS_Social extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -155,7 +155,7 @@ class AS_Social extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio_plugin'),
+                'label'                 => __('Width', 'live-composer-page-builder'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -169,7 +169,7 @@ class AS_Social extends DSLC_Module {
              * Title
              */
             array(
-                'label'   => __('Title Share', 'alenastudio_plugin'),
+                'label'   => __('Title Share', 'live-composer-page-builder'),
                 'id'      => 'text_input_social_share',
                 'std'     => 'Share our portfolio :',
                 'type'    => 'text',
@@ -177,7 +177,7 @@ class AS_Social extends DSLC_Module {
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Icon', 'alenastudio_plugin'),
+                'label'   => __('Icon', 'live-composer-page-builder'),
                 'id'      => 'icon_title_share_id',
                 'std'     => 'share',
                 'type'    => 'icon',
@@ -185,7 +185,7 @@ class AS_Social extends DSLC_Module {
                 'tab'     => 'Title',
             ),
             array(
-                'label'                 => __('Margin Right', 'alenastudio_plugin'),
+                'label'                 => __('Margin Right', 'live-composer-page-builder'),
                 'id'                    => 'icon_title_share_margin_right',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -199,7 +199,7 @@ class AS_Social extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -210,7 +210,7 @@ class AS_Social extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Margin Right', 'alenastudio_plugin'),
+                'label'                 => __('Margin Right', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_margin_right',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -224,7 +224,7 @@ class AS_Social extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_font_size',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -236,7 +236,7 @@ class AS_Social extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -251,7 +251,7 @@ class AS_Social extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -262,7 +262,7 @@ class AS_Social extends DSLC_Module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -275,29 +275,29 @@ class AS_Social extends DSLC_Module {
             ),
             // LIST ICON SHARE SOCIAL
             array(
-                'label'   => __('Twitter', 'alenastudio_plugin'),
+                'label'   => __('Twitter', 'live-composer-page-builder'),
                 'id'      => 'list_icon_share_social',
                 'std'     => "facebook google twitter",
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Facebook', 'alenastudio_plugin'),
+                        'label' => __('Facebook', 'live-composer-page-builder'),
                         'value' => "facebook",
                     ),
                     array(
-                        'label' => __('Google+', 'alenastudio_plugin'),
+                        'label' => __('Google+', 'live-composer-page-builder'),
                         'value' => "google",
                     ),
                     array(
-                        'label' => __('Twitter', 'alenastudio_plugin'),
+                        'label' => __('Twitter', 'live-composer-page-builder'),
                         'value' => "twitter",
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('icon', 'alenastudio_plugin'),
+                'tab'     => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Size', 'alenastudio_plugin'),
+                'label'                 => __('Size', 'live-composer-page-builder'),
                 'id'                    => 'css_size_list_icon_share_social',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -306,10 +306,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_font_size_list_icon_share_social',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -318,10 +318,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_line_height_list_icon_share_social',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -330,10 +330,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_border_color_list_icon_share_social',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -341,10 +341,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_border_color_hover_list_icon_share_social',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -352,10 +352,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_border_width_list_icon_share_social',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -364,28 +364,28 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_border_trbl_list_icon_share_social',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -393,10 +393,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_border_radius_list_icon_share_social',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -405,10 +405,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Twitter', 'alenastudio_plugin'),
+                'label'                 => __('Color Twitter', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color_twitter',
                 'std'                   => '#2c3e50',
                 'type'                  => 'color',
@@ -416,10 +416,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-twitter',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Twitter - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Color Twitter - Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color_twitter_hover',
                 'std'                   => '#40bde6',
                 'type'                  => 'color',
@@ -427,10 +427,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-twitter:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Facebook', 'alenastudio_plugin'),
+                'label'                 => __('Color Facebook', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color_facebook',
                 'std'                   => '#2c3e50',
                 'type'                  => 'color',
@@ -438,10 +438,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-facebook',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Facebook - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Color Facebook - Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color_facebook_hover',
                 'std'                   => '#3b5998',
                 'type'                  => 'color',
@@ -449,10 +449,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-facebook:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Google Plus', 'alenastudio_plugin'),
+                'label'                 => __('Color Google Plus', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color_google',
                 'std'                   => '#2c3e50',
                 'type'                  => 'color',
@@ -460,10 +460,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-google',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Google Plus - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Color Google Plus - Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color_google_hover',
                 'std'                   => '#d13f2d',
                 'type'                  => 'color',
@@ -471,10 +471,10 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-google:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_spacing_list_icon_share_social',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -483,31 +483,31 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'alenastudio_plugin'),
+                'tab'                   => __('icon', 'live-composer-page-builder'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'alenastudio_plugin'),
+                'label'   => __('Responsive', 'live-composer-page-builder'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'alenastudio_plugin'),
+                'tab'     => __('tablet', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -515,11 +515,11 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.share-social',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'alenastudio_plugin'),
+                'label'                 => __('Size ( Wrapper )', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -527,11 +527,11 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'alenastudio_plugin'),
+                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_icon_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -539,11 +539,11 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a span.dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_spacing',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -551,32 +551,32 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'alenastudio_plugin'),
+                'label'   => __('Responsive', 'live-composer-page-builder'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'alenastudio_plugin'),
+                'tab'     => __('phone', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -584,11 +584,11 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.share-social',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'alenastudio_plugin'),
+                'label'                 => __('Size ( Wrapper )', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -596,11 +596,11 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'alenastudio_plugin'),
+                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_icon_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -608,11 +608,11 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li a span.dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_spacing',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -620,7 +620,7 @@ class AS_Social extends DSLC_Module {
                 'affect_on_change_el'   => '.list-social-share li',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
         );

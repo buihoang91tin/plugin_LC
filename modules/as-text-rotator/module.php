@@ -1,6 +1,6 @@
 <?php
 
-class AS_text_rotator extends DSLC_Module {
+class AS_text_rotator extends as_module {
 
     var $module_id;
     var $module_title;
@@ -10,7 +10,7 @@ class AS_text_rotator extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_text_rotator';
-        $this->module_title    = __('AS - Text Rotator', 'alenastudio_plugin');
+        $this->module_title    = __('AS - Text Rotator', 'live-composer-page-builder');
         $this->module_icon     = 'quote-right';
         $this->module_category = 'as - element';
     }
@@ -19,87 +19,88 @@ class AS_text_rotator extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'             => __('TEXT I', 'alenastudio_plugin'),
+                'label'             => __('Text before', 'live-composer-page-builder'),
                 'id'                => 'as_rotator_1',
                 'std'               => 'Super',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
-                'label'             => __('TEXT II', 'alenastudio_plugin'),
+                'label'             => __('Text rotate', 'live-composer-page-builder'),
                 'id'                => 'as_rotator_2',
                 'std'               => 'Easy, Simple, Customizable',
                 'type'              => 'text',
                 'refresh_on_change' => true,
+                'help'              => __('Words separated by ","', 'live-composer-page-builder'),
             ),
             array(
-                'label'             => __('TEXT III', 'alenastudio_plugin'),
+                'label'             => __('Text after', 'live-composer-page-builder'),
                 'id'                => 'as_rotator_3',
                 'std'               => 'Text Rotator with Style',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
-                'label'   => __('Style', 'alenastudio_plugin'),
+                'label'   => __('Effect Word', 'live-composer-page-builder'),
                 'id'      => 'as_rotator_style',
                 'std'     => 'spin',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Fade', 'alenastudio_plugin'),
+                        'label' => __('Fade', 'live-composer-page-builder'),
                         'value' => 'fade',
                     ),
                     array(
-                        'label' => __('Flip', 'alenastudio_plugin'),
+                        'label' => __('Flip', 'live-composer-page-builder'),
                         'value' => 'flip',
                     ),
                     array(
-                        'label' => __('FlipCube', 'alenastudio_plugin'),
+                        'label' => __('FlipCube', 'live-composer-page-builder'),
                         'value' => 'flipCube',
                     ),
                     array(
-                        'label' => __('FlipUp', 'alenastudio_plugin'),
+                        'label' => __('FlipUp', 'live-composer-page-builder'),
                         'value' => 'flipUp',
                     ),
                     array(
-                        'label' => __('Spin', 'alenastudio_plugin'),
+                        'label' => __('Spin', 'live-composer-page-builder'),
                         'value' => 'spin',
                     ),
                 ),
             ),
             array(
-                'label'             => __('Speed', 'alenastudio_plugin'),
+                'label'             => __('Speed', 'live-composer-page-builder'),
                 'id'                => 'as_rotator_speed',
-                'std'               => '500',
+                'std'               => '1500',
                 'type'              => 'text',
                 'refresh_on_change' => true,
-                'help'              => __('Just only type numper. Ex: 1 -> 5000', 'alenastudio_plugin'),
+                'help'              => __('Just only type numper. Ex: 1 -> 5000', 'live-composer-page-builder'),
             ),
             /**
              * General
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -107,10 +108,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BORDER COLOR', 'alenastudio_plugin'),
+                'label'                 => __('BORDER COLOR', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_boder_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -118,10 +119,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_boder_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -130,28 +131,28 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_boder',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -159,10 +160,10 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -170,11 +171,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -182,11 +183,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -194,13 +195,13 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-body',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -208,11 +209,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-body',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio_plugin'),
+                'label'                 => __('Width', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -220,96 +221,187 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'styling',
-                'tab'                   => __('General', 'alenastudio_plugin'),
+                'tab'                   => __('General', 'live-composer-page-builder'),
                 'ext'                   => '%'
             ),
             /**
              * TEXT
              */
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
-                'id'                    => 'as_rotator_title_color',
+                'label'                 => __('Color', 'live-composer-page-builder'),
+                'id'                    => 'as_title_color',
                 'std'                   => 'rgb(61, 61, 61)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
+                'affect_on_change_el'   => '.as-text-rotate-wrapper',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'alenastudio_plugin'),
+                'tab'                   => __('text', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
-                'id'                    => 'as_rotator_title_font_size',
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'id'                    => 'as_title_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
+                'affect_on_change_el'   => '.as-text-rotate-wrapper',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'alenastudio_plugin'),
+                'tab'                   => __('text', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
-                'id'                    => 'as_rotator_title_font_weight',
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'id'                    => 'as_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
+                'affect_on_change_el'   => '.as-text-rotate-wrapper',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'alenastudio_plugin'),
+                'tab'                   => __('text', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'id'                    => 'as_title_font_family',
+                'std'                   => 'Lato',
+                'type'                  => 'font',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
+                'affect_on_change_rule' => 'font-family',
+                'section'               => 'styling',
+                'tab'                   => __('text', 'live-composer-page-builder'),
+            ),
+            array(
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'id'                    => 'as_title_line_height',
+                'std'                   => '53',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'styling',
+                'tab'                   => __('text', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            /**
+             * Text Rotate
+             */
+
+            array(
+                'label'                 => __('Color', 'live-composer-page-builder'),
+                'id'                    => 'as_rotator_title_color',
+                'std'                   => 'rgb(61, 61, 61)',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('text rotator', 'live-composer-page-builder'),
+            ),
+            array(
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'id'                    => 'as_rotator_title_font_size',
+                'std'                   => '30',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'styling',
+                'tab'                   => __('text rotator', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'id'                    => 'as_rotator_title_font_weight',
+                'std'                   => '800',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'styling',
+                'tab'                   => __('text rotator', 'live-composer-page-builder'),
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
+                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'alenastudio_plugin'),
+                'tab'                   => __('text rotator', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
+                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('TEXT', 'alenastudio_plugin'),
+                'tab'                   => __('text rotator', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'id'                    => 'as_rotator_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'styling',
+                'tab'                   => __('text rotator', 'live-composer-page-builder'),
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'id'                    => 'as_rotator_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'styling',
+                'tab'                   => __('text rotator', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'alenastudio_plugin'),
+                'tab'     => __('tablet', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -317,11 +409,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -329,13 +421,13 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -343,44 +435,44 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
+                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'alenastudio_plugin'),
+                'tab'     => __('phone', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -388,11 +480,11 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -400,13 +492,13 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -414,19 +506,19 @@ class AS_text_rotator extends DSLC_Module {
                 'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-row-1,as-text-row-1 span',
+                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
         );
@@ -468,9 +560,12 @@ class AS_text_rotator extends DSLC_Module {
         <!-- Module output stars here -->
         <div class="as-text-body">
             <div class="as-text-wraper">
-
                 <div class="as-text-main">
-                    <h1 class="as-text-row-1"><?php echo esc_attr($options['as_rotator_1']); ?> <span class="rotate" data-anim-text="<?php echo esc_attr($options['as_rotator_style']); ?>"data-speed-text = "<?php echo esc_attr($as_speed_text); ?>"><?php echo esc_attr($options['as_rotator_2']); ?></span> <?php echo esc_attr($options['as_rotator_3']); ?></h1>
+                    <div class="as-text-rotate-wrapper">
+	                    <?php echo esc_attr($options['as_rotator_1']); ?> 
+	                    <span class="as-rotate" data-anim-text="<?php echo esc_attr($options['as_rotator_style']); ?>"data-speed-text = "<?php echo esc_attr($as_speed_text); ?>"><?php echo esc_attr($options['as_rotator_2']); ?></span> 
+	                    <?php echo esc_attr($options['as_rotator_3']); ?>
+	                </div>
                 </div>
             </div>
         </div>	

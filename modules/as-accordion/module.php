@@ -1,6 +1,6 @@
 <?php
 
-class AS_Accordion extends DSLC_Module {
+class AS_Accordion extends as_module {
 
     var $module_id;
     var $module_title;
@@ -18,7 +18,7 @@ class AS_Accordion extends DSLC_Module {
     }
 
     function options() {
-
+        global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'alenastudio'),
@@ -398,7 +398,7 @@ class AS_Accordion extends DSLC_Module {
             array(
                 'label'                 => __('Color', 'alenastudio'),
                 'id'                    => 'css_title_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-title',
@@ -447,7 +447,7 @@ class AS_Accordion extends DSLC_Module {
             array(
                 'label'                 => __('Font Family', 'alenastudio'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => 'Open Sans',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-title',
@@ -571,7 +571,7 @@ class AS_Accordion extends DSLC_Module {
             array(
                 'label'                 => __('Color', 'alenastudio'),
                 'id'                    => 'css_content_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-content',
@@ -609,7 +609,7 @@ class AS_Accordion extends DSLC_Module {
             array(
                 'label'                 => __('Font Family', 'alenastudio'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => 'Open Sans',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-content',
@@ -1078,7 +1078,8 @@ class AS_Accordion extends DSLC_Module {
 
             <?php if (is_array($accordion_contents) && count($accordion_contents) > 0) : ?>
 
-                <?php foreach ($accordion_contents as
+                <?php
+                foreach ($accordion_contents as
                         $accordion_content) :
                     ?>
 
@@ -1086,13 +1087,13 @@ class AS_Accordion extends DSLC_Module {
 
                         <div class="dslc-accordion-header as-accordion-header-color dslc-accordion-hook">
                             <span class="dslc-accordion-title as-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($accordion_nav[$count]); ?></span>
-                <?php if ($dslc_is_admin) : ?>
+                            <?php if ($dslc_is_admin) : ?>
                                 <div class="dslca-accordion-action-hooks as-action-hook-accordion">
                                     <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
                                     <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
                                     <span class="as-accordion-delete dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
                                 </div>
-                <?php endif; ?>
+                            <?php endif; ?>
                             <span class="dslca-icon as-icon-arrow dslc-icon-angle-down"></span>
                         </div>
 
@@ -1105,31 +1106,32 @@ class AS_Accordion extends DSLC_Module {
                                 echo do_shortcode($accordion_content_output);
                                 ?>
                             </div>
-                <?php if ($dslc_is_admin) : ?>
+                            <?php if ($dslc_is_admin) : ?>
                                 <textarea class="dslca-accordion-plain-content"><?php echo trim($accordion_content_output); ?></textarea>
                                 <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'alenastudio'); ?></span></div>
-                <?php endif; ?>
+                            <?php endif; ?>
                         </div><!-- .dslc-accordion-content -->
 
                     </div><!-- .dslc-accordion-item -->
 
-                    <?php $count++;
+                    <?php
+                    $count++;
                 endforeach;
                 ?>
 
-        <?php else : ?>
+            <?php else : ?>
 
                 <div class="dslc-accordion-item as-accordion-item">
 
                     <div class="dslc-accordion-header as-accordion-header-color dslc-accordion-hook">
                         <span class="dslc-accordion-title as-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'alenastudio'); ?></span>
-            <?php if ($dslc_is_admin) : ?>
+                        <?php if ($dslc_is_admin) : ?>
                             <div class="dslca-accordion-action-hooks as-action-hook-accordion">
                                 <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
                                 <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
                                 <span class="as-accordion-delete dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
                             </div>
-            <?php endif; ?>
+                        <?php endif; ?>
                         <span class="dslca-icon as-icon-arrow dslc-icon-angle-down"></span>
                     </div>
 
@@ -1145,18 +1147,18 @@ class AS_Accordion extends DSLC_Module {
                         <?php if ($dslc_is_admin) : ?>
                             <textarea class="dslca-accordion-plain-content">Placeholder content. Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
                             <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'alenastudio'); ?></span></div>
-            <?php endif; ?>
+                        <?php endif; ?>
                     </div><!-- .dslc-accordion-content -->
 
                 </div><!-- .dslc-accordion-item -->
 
             <?php endif; ?>
 
-        <?php if ($dslc_is_admin) : ?>
+            <?php if ($dslc_is_admin) : ?>
                 <div class="dslca-add-accordion">
                     <span class="dslca-add-accordion-hook"><span class="dslca-icon dslc-icon-plus"></span></span>
                 </div>
-        <?php endif; ?>
+            <?php endif; ?>
 
         </div><!-- .dslc-accordion -->
 

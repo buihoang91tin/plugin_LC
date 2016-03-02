@@ -1,6 +1,6 @@
 <?php
 
-class AS_Tabs extends DSLC_Module {
+class AS_Tabs extends as_module {
 
     var $module_id;
     var $module_title;
@@ -11,7 +11,7 @@ class AS_Tabs extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Tabs';
-        $this->module_title    = __('AS Tabs', 'alenastudio_plugin');
+        $this->module_title    = __('AS Tabs', 'live-composer-page-builder');
         $this->module_icon     = 'list';
         $this->module_category = 'as - element';
         $this->handle_like     = 'tabs';
@@ -21,27 +21,27 @@ class AS_Tabs extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('(hidden) Tabs Content', 'alenastudio_plugin'),
+                'label'      => __('(hidden) Tabs Content', 'live-composer-page-builder'),
                 'id'         => 'tabs_content',
                 'std'        => '',
                 'type'       => 'textarea',
@@ -49,7 +49,7 @@ class AS_Tabs extends DSLC_Module {
                 'section'    => 'styling',
             ),
             array(
-                'label'      => __('(hidden) Tabs Nav', 'alenastudio_plugin'),
+                'label'      => __('(hidden) Tabs Nav', 'live-composer-page-builder'),
                 'id'         => 'tabs_nav',
                 'std'        => '',
                 'type'       => 'textarea',
@@ -60,7 +60,7 @@ class AS_Tabs extends DSLC_Module {
              * Tabs Nav
              */
             array(
-                'label'                 => __('Navigation Width', 'alenastudio_plugin'),
+                'label'                 => __('Navigation Width', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_tabs_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -69,10 +69,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_bg_color',
                 'std'                   => '#fbfbfb',
                 'type'                  => 'color',
@@ -80,10 +80,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -91,10 +91,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -103,28 +103,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -132,10 +132,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_radius_top',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -143,11 +143,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -155,11 +155,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __(' Color', 'alenastudio_plugin'),
+                'label'                 => __(' Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_color',
                 'std'                   => '#8d8d8d',
                 'type'                  => 'color',
@@ -167,10 +167,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -178,11 +178,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -190,14 +190,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -205,10 +205,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_padding_vertical',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -217,10 +217,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_padding_horizontal',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -229,10 +229,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Spacing - Items', 'alenastudio_plugin'),
+                'label'                 => __('Spacing - Items', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_item_margin_right',
                 'std'                   => '-1',
                 'type'                  => 'slider',
@@ -241,12 +241,12 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
                 'min'                   => -10,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Spacing - Nav and Content', 'alenastudio_plugin'),
+                'label'                 => __('Spacing - Nav and Content', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_content_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -255,13 +255,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation', 'live-composer-page-builder'),
             ),
             /**
              * Tabs Nav - Active
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_active_bg_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -269,10 +269,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_color_active',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -280,10 +280,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-left-color,border-right-color,border-top-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Bottom Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Bottom Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_bottom_color_active',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -291,10 +291,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Left Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Left Color', 'live-composer-page-builder'),
                 'id'                    => 'as-css_nav_border_bottom_color_active',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -302,10 +302,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Left Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Left Width', 'live-composer-page-builder'),
                 'id'                    => 'ascss_content_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -314,28 +314,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-left-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation Active', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_border_trbl_active',
                 'std'                   => 'top bottom right left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -343,10 +343,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_active_color',
                 'std'                   => '#8d8d8d',
                 'type'                  => 'color',
@@ -354,13 +354,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'alenastudio_plugin'),
+                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
             ),
             /**
              * Tabs Content
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_bg_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -370,7 +370,7 @@ class AS_Tabs extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -380,7 +380,7 @@ class AS_Tabs extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_content_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -391,25 +391,25 @@ class AS_Tabs extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_content_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -419,7 +419,7 @@ class AS_Tabs extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_content_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -430,7 +430,7 @@ class AS_Tabs extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_content_border_radius_bottom',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -441,7 +441,7 @@ class AS_Tabs extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -452,7 +452,7 @@ class AS_Tabs extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_content_padding_vertical',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -463,7 +463,7 @@ class AS_Tabs extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_content_padding_horizontal',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -477,25 +477,25 @@ class AS_Tabs extends DSLC_Module {
              * Icon
              */
             array(
-                'label'   => __('Hide / Show Icon', 'alenastudio_plugin'),
+                'label'   => __('Hide / Show Icon', 'live-composer-page-builder'),
                 'id'      => 'css_icon_hide_show',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Icon', 'alenastudio_plugin'),
+                'tab'     => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -503,10 +503,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Hover', 'alenastudio_plugin'),
+                'label'                 => __('Color Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color_hover',
                 'std'                   => '#cccccc',
                 'type'                  => 'color',
@@ -514,10 +514,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook:hover .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Active', 'alenastudio_plugin'),
+                'label'                 => __('Color Active', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color_active',
                 'std'                   => '#cccccc',
                 'type'                  => 'color',
@@ -525,10 +525,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-active.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '#cccccc',
                 'type'                  => 'color',
@@ -536,19 +536,19 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'             => __('Icon', 'alenastudio_plugin'),
+                'label'             => __('Icon', 'live-composer-page-builder'),
                 'id'                => 'icon_id',
                 'std'               => 'comments',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Icon', 'alenastudio_plugin'),
+                'tab'               => __('Icon', 'live-composer-page-builder'),
                 'include_in_preset' => false
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'alenastudio_plugin'),
+                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
                 'id'                    => 'as-css_icon_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -556,11 +556,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as-css_icon_title-line-height',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -568,11 +568,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Left Icon', 'alenastudio_plugin'),
+                'label'                 => __('Padding Left Icon', 'live-composer-page-builder'),
                 'id'                    => 'as-css_tabs_icon_padding_left',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -580,11 +580,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'padding-left',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Right Icon', 'alenastudio_plugin'),
+                'label'                 => __('Padding Right Icon', 'live-composer-page-builder'),
                 'id'                    => 'as-css_tabs_icon_padding_right',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -592,12 +592,12 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'alenastudio_plugin'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /* Content */
             array(
-                'label'                 => __('Content Width', 'alenastudio_plugin'),
+                'label'                 => __('Content Width', 'live-composer-page-builder'),
                 'id'                    => 'as-css_content_tabs_width',
                 'std'                   => '80',
                 'type'                  => 'slider',
@@ -606,10 +606,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __(' Color', 'alenastudio_plugin'),
+                'label'                 => __(' Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
                 'std'                   => '#8d8d8d',
                 'type'                  => 'color',
@@ -617,10 +617,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -629,10 +629,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -644,10 +644,10 @@ class AS_Tabs extends DSLC_Module {
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100,
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -655,10 +655,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -667,10 +667,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom ( paragraph )', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom ( paragraph )', 'live-composer-page-builder'),
                 'id'                    => 'css_content_margin_bottom',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -679,10 +679,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -690,13 +690,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio_plugin'),
+                'tab'                   => __('content', 'live-composer-page-builder'),
             ),
             /**
              * Heading 1
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -704,10 +704,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -715,10 +715,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -727,28 +727,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -756,10 +756,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -768,10 +768,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -780,10 +780,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -791,10 +791,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -802,11 +802,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -814,14 +814,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -829,10 +829,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Style', 'alenastudio_plugin'),
+                'label'                 => __('Font Style', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -840,20 +840,20 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'alenastudio_plugin'),
+                        'label' => __('Italic', 'live-composer-page-builder'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_line_height',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -861,11 +861,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -873,11 +873,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -886,10 +886,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -898,10 +898,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -909,13 +909,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'alenastudio_plugin'),
+                'tab'                   => __('h1', 'live-composer-page-builder'),
             ),
             /**
              * Heading 2
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -923,10 +923,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -934,10 +934,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -946,28 +946,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -975,10 +975,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -987,10 +987,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -999,10 +999,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1010,10 +1010,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_font_size',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1021,11 +1021,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1033,14 +1033,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1048,10 +1048,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Style', 'alenastudio_plugin'),
+                'label'                 => __('Font Style', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1059,20 +1059,20 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h2', 'alenastudio_plugin'),
+                'tab'                   => __('h2', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'alenastudio_plugin'),
+                        'label' => __('Italic', 'live-composer-page-builder'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_line_height',
                 'std'                   => '33',
                 'type'                  => 'slider',
@@ -1080,11 +1080,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1092,11 +1092,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1105,10 +1105,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1117,10 +1117,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1128,13 +1128,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'alenastudio_plugin'),
+                'tab'                   => __('H2', 'live-composer-page-builder'),
             ),
             /**
              * Heading 3
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1142,10 +1142,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1153,10 +1153,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1165,28 +1165,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -1194,10 +1194,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1206,10 +1206,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1218,10 +1218,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1229,10 +1229,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_font_size',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -1240,11 +1240,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1252,14 +1252,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1267,10 +1267,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Style', 'alenastudio_plugin'),
+                'label'                 => __('Font Style', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1278,20 +1278,20 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'alenastudio_plugin'),
+                        'label' => __('Italic', 'live-composer-page-builder'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_line_height',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -1299,11 +1299,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1311,11 +1311,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1324,10 +1324,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1336,10 +1336,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1347,13 +1347,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'alenastudio_plugin'),
+                'tab'                   => __('h3', 'live-composer-page-builder'),
             ),
             /**
              * Heading 4
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1361,10 +1361,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1372,10 +1372,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1384,28 +1384,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -1413,10 +1413,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1425,10 +1425,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1437,10 +1437,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1448,10 +1448,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_font_size',
                 'std'                   => '19',
                 'type'                  => 'slider',
@@ -1459,11 +1459,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1471,14 +1471,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1486,10 +1486,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Style', 'alenastudio_plugin'),
+                'label'                 => __('Font Style', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1497,20 +1497,20 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'alenastudio_plugin'),
+                        'label' => __('Italic', 'live-composer-page-builder'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_line_height',
                 'std'                   => '29',
                 'type'                  => 'slider',
@@ -1518,11 +1518,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1530,11 +1530,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1543,10 +1543,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1555,10 +1555,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1566,13 +1566,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'alenastudio_plugin'),
+                'tab'                   => __('h4', 'live-composer-page-builder'),
             ),
             /**
              * Heading 5
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1580,10 +1580,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1591,10 +1591,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1603,28 +1603,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -1632,10 +1632,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1644,10 +1644,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1656,10 +1656,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1667,10 +1667,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1678,11 +1678,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1690,14 +1690,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1705,10 +1705,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Style', 'alenastudio_plugin'),
+                'label'                 => __('Font Style', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1716,20 +1716,20 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'alenastudio_plugin'),
+                        'label' => __('Italic', 'live-composer-page-builder'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_line_height',
                 'std'                   => '27',
                 'type'                  => 'slider',
@@ -1737,11 +1737,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1749,11 +1749,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1762,10 +1762,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1774,10 +1774,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1785,13 +1785,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'alenastudio_plugin'),
+                'tab'                   => __('h5', 'live-composer-page-builder'),
             ),
             /**
              * Heading 6
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1799,10 +1799,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1810,10 +1810,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1822,28 +1822,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -1851,10 +1851,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1863,10 +1863,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1875,10 +1875,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1886,10 +1886,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1897,11 +1897,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1909,14 +1909,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1924,10 +1924,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Style', 'alenastudio_plugin'),
+                'label'                 => __('Font Style', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1935,20 +1935,20 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'alenastudio_plugin'),
+                        'label' => __('Italic', 'live-composer-page-builder'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_line_height',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1956,11 +1956,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1968,11 +1968,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1981,10 +1981,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1993,10 +1993,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -2004,13 +2004,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'alenastudio_plugin'),
+                'tab'                   => __('h6', 'live-composer-page-builder'),
             ),
             /**
              * Links
              */
             array(
-                'label'                 => __('Link Color', 'alenastudio_plugin'),
+                'label'                 => __('Link Color', 'live-composer-page-builder'),
                 'id'                    => 'css_link_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2018,10 +2018,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('links', 'alenastudio_plugin'),
+                'tab'                   => __('links', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Link - Hover Color', 'alenastudio_plugin'),
+                'label'                 => __('Link - Hover Color', 'live-composer-page-builder'),
                 'id'                    => 'css_link_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2029,13 +2029,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('links', 'alenastudio_plugin'),
+                'tab'                   => __('links', 'live-composer-page-builder'),
             ),
             /**
              * Lists
              */
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_li_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2043,10 +2043,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_li_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2054,11 +2054,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_li_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -2066,14 +2066,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_li_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -2081,10 +2081,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_li_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2092,11 +2092,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_ul_margin_bottom',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -2104,11 +2104,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content ul,.dslc-tabs-content ol',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Left', 'alenastudio_plugin'),
+                'label'                 => __('Margin Left', 'live-composer-page-builder'),
                 'id'                    => 'css_ul_margin_left',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -2116,189 +2116,189 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content ul,.dslc-tabs-content ol',
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Unordered Style', 'alenastudio_plugin'),
+                'label'                 => __('Unordered Style', 'live-composer-page-builder'),
                 'id'                    => 'css_ul_style',
                 'std'                   => 'disc',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Armenian', 'alenastudio_plugin'),
+                        'label' => __('Armenian', 'live-composer-page-builder'),
                         'value' => 'armenian'
                     ),
                     array(
-                        'label' => __('Circle', 'alenastudio_plugin'),
+                        'label' => __('Circle', 'live-composer-page-builder'),
                         'value' => 'circle'
                     ),
                     array(
-                        'label' => __('cjk-ideographic', 'alenastudio_plugin'),
+                        'label' => __('cjk-ideographic', 'live-composer-page-builder'),
                         'value' => 'cjk-ideographic'
                     ),
                     array(
-                        'label' => __('Decimal', 'alenastudio_plugin'),
+                        'label' => __('Decimal', 'live-composer-page-builder'),
                         'value' => 'decimal'
                     ),
                     array(
-                        'label' => __('Decimal Leading Zero', 'alenastudio_plugin'),
+                        'label' => __('Decimal Leading Zero', 'live-composer-page-builder'),
                         'value' => 'decimal-leading-zero'
                     ),
                     array(
-                        'label' => __('Hebrew', 'alenastudio_plugin'),
+                        'label' => __('Hebrew', 'live-composer-page-builder'),
                         'value' => 'hebrew'
                     ),
                     array(
-                        'label' => __('Hiragana', 'alenastudio_plugin'),
+                        'label' => __('Hiragana', 'live-composer-page-builder'),
                         'value' => 'hiragana'
                     ),
                     array(
-                        'label' => __('Hiragana Iroha', 'alenastudio_plugin'),
+                        'label' => __('Hiragana Iroha', 'live-composer-page-builder'),
                         'value' => 'hiragana-iroha'
                     ),
                     array(
-                        'label' => __('Katakana', 'alenastudio_plugin'),
+                        'label' => __('Katakana', 'live-composer-page-builder'),
                         'value' => 'katakana'
                     ),
                     array(
-                        'label' => __('Katakana Iroha', 'alenastudio_plugin'),
+                        'label' => __('Katakana Iroha', 'live-composer-page-builder'),
                         'value' => 'katakana-iroha'
                     ),
                     array(
-                        'label' => __('Lower Alpha', 'alenastudio_plugin'),
+                        'label' => __('Lower Alpha', 'live-composer-page-builder'),
                         'value' => 'lower-alpha'
                     ),
                     array(
-                        'label' => __('Lower Greek', 'alenastudio_plugin'),
+                        'label' => __('Lower Greek', 'live-composer-page-builder'),
                         'value' => 'lower-greek'
                     ),
                     array(
-                        'label' => __('Lower Latin', 'alenastudio_plugin'),
+                        'label' => __('Lower Latin', 'live-composer-page-builder'),
                         'value' => 'lower-latin'
                     ),
                     array(
-                        'label' => __('Lower Roman', 'alenastudio_plugin'),
+                        'label' => __('Lower Roman', 'live-composer-page-builder'),
                         'value' => 'lower-roman'
                     ),
                     array(
-                        'label' => __('None', 'alenastudio_plugin'),
+                        'label' => __('None', 'live-composer-page-builder'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Upper Alpha', 'alenastudio_plugin'),
+                        'label' => __('Upper Alpha', 'live-composer-page-builder'),
                         'value' => 'upper-alpha'
                     ),
                     array(
-                        'label' => __('Upper Latin', 'alenastudio_plugin'),
+                        'label' => __('Upper Latin', 'live-composer-page-builder'),
                         'value' => 'upper-latin'
                     ),
                     array(
-                        'label' => __('Upper Roman', 'alenastudio_plugin'),
+                        'label' => __('Upper Roman', 'live-composer-page-builder'),
                         'value' => 'upper-roman'
                     ),
                     array(
-                        'label' => __('Inherit', 'alenastudio_plugin'),
+                        'label' => __('Inherit', 'live-composer-page-builder'),
                         'value' => 'inherit'
                     ),
                 ),
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content ul',
                 'affect_on_change_rule' => 'list-style-type',
             ),
             array(
-                'label'                 => __('Ordered Style', 'alenastudio_plugin'),
+                'label'                 => __('Ordered Style', 'live-composer-page-builder'),
                 'id'                    => 'css_ol_style',
                 'std'                   => 'decimal',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Armenian', 'alenastudio_plugin'),
+                        'label' => __('Armenian', 'live-composer-page-builder'),
                         'value' => 'armenian'
                     ),
                     array(
-                        'label' => __('Circle', 'alenastudio_plugin'),
+                        'label' => __('Circle', 'live-composer-page-builder'),
                         'value' => 'circle'
                     ),
                     array(
-                        'label' => __('cjk-ideographic', 'alenastudio_plugin'),
+                        'label' => __('cjk-ideographic', 'live-composer-page-builder'),
                         'value' => 'cjk-ideographic'
                     ),
                     array(
-                        'label' => __('Decimal', 'alenastudio_plugin'),
+                        'label' => __('Decimal', 'live-composer-page-builder'),
                         'value' => 'decimal'
                     ),
                     array(
-                        'label' => __('Decimal Leading Zero', 'alenastudio_plugin'),
+                        'label' => __('Decimal Leading Zero', 'live-composer-page-builder'),
                         'value' => 'decimal-leading-zero'
                     ),
                     array(
-                        'label' => __('Hebrew', 'alenastudio_plugin'),
+                        'label' => __('Hebrew', 'live-composer-page-builder'),
                         'value' => 'hebrew'
                     ),
                     array(
-                        'label' => __('Hiragana', 'alenastudio_plugin'),
+                        'label' => __('Hiragana', 'live-composer-page-builder'),
                         'value' => 'hiragana'
                     ),
                     array(
-                        'label' => __('Hiragana Iroha', 'alenastudio_plugin'),
+                        'label' => __('Hiragana Iroha', 'live-composer-page-builder'),
                         'value' => 'hiragana-iroha'
                     ),
                     array(
-                        'label' => __('Katakana', 'alenastudio_plugin'),
+                        'label' => __('Katakana', 'live-composer-page-builder'),
                         'value' => 'katakana'
                     ),
                     array(
-                        'label' => __('Katakana Iroha', 'alenastudio_plugin'),
+                        'label' => __('Katakana Iroha', 'live-composer-page-builder'),
                         'value' => 'katakana-iroha'
                     ),
                     array(
-                        'label' => __('Lower Alpha', 'alenastudio_plugin'),
+                        'label' => __('Lower Alpha', 'live-composer-page-builder'),
                         'value' => 'lower-alpha'
                     ),
                     array(
-                        'label' => __('Lower Greek', 'alenastudio_plugin'),
+                        'label' => __('Lower Greek', 'live-composer-page-builder'),
                         'value' => 'lower-greek'
                     ),
                     array(
-                        'label' => __('Lower Latin', 'alenastudio_plugin'),
+                        'label' => __('Lower Latin', 'live-composer-page-builder'),
                         'value' => 'lower-latin'
                     ),
                     array(
-                        'label' => __('Lower Roman', 'alenastudio_plugin'),
+                        'label' => __('Lower Roman', 'live-composer-page-builder'),
                         'value' => 'lower-roman'
                     ),
                     array(
-                        'label' => __('None', 'alenastudio_plugin'),
+                        'label' => __('None', 'live-composer-page-builder'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Upper Alpha', 'alenastudio_plugin'),
+                        'label' => __('Upper Alpha', 'live-composer-page-builder'),
                         'value' => 'upper-alpha'
                     ),
                     array(
-                        'label' => __('Upper Latin', 'alenastudio_plugin'),
+                        'label' => __('Upper Latin', 'live-composer-page-builder'),
                         'value' => 'upper-latin'
                     ),
                     array(
-                        'label' => __('Upper Roman', 'alenastudio_plugin'),
+                        'label' => __('Upper Roman', 'live-composer-page-builder'),
                         'value' => 'upper-roman'
                     ),
                     array(
-                        'label' => __('Inherit', 'alenastudio_plugin'),
+                        'label' => __('Inherit', 'live-composer-page-builder'),
                         'value' => 'inherit'
                     ),
                 ),
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content ol',
                 'affect_on_change_rule' => 'list-style-type',
             ),
             array(
-                'label'                 => __('Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_ul_li_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -2306,11 +2306,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Item - BG Color', 'alenastudio_plugin'),
+                'label'                 => __('Item - BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_li_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2318,10 +2318,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Item - Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Item - Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_li_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2329,10 +2329,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Item - Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Item - Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_li_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2341,28 +2341,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Item - Borders', 'alenastudio_plugin'),
+                'label'                 => __('Item - Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_li_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -2370,10 +2370,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Item - Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Item - Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_li_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2382,10 +2382,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Item - Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Item - Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_li_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2394,10 +2394,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Item - Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Item - Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_li_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2405,11 +2405,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content li',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Item - Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Item - Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_li_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2418,13 +2418,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('lists', 'alenastudio_plugin'),
+                'tab'                   => __('lists', 'live-composer-page-builder'),
             ),
             /**
              * Inputs
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_bg_color',
                 'std'                   => '#fff',
                 'type'                  => 'color',
@@ -2432,10 +2432,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_border_color',
                 'std'                   => '#ddd',
                 'type'                  => 'color',
@@ -2443,10 +2443,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2455,28 +2455,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -2484,10 +2484,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2496,10 +2496,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_color',
                 'std'                   => '#4d4d4d',
                 'type'                  => 'color',
@@ -2507,10 +2507,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2518,11 +2518,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_font_weight',
                 'std'                   => '500',
                 'type'                  => 'slider',
@@ -2530,14 +2530,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -2545,10 +2545,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -2556,11 +2556,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'textarea',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -2569,10 +2569,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_padding_vertical',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -2581,10 +2581,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_padding_horizontal',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -2593,13 +2593,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('inputs', 'alenastudio_plugin'),
+                'tab'                   => __('inputs', 'live-composer-page-builder'),
             ),
             /**
              * Blockquote
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2607,10 +2607,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'blockquote',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2618,10 +2618,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'blockquote',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2630,28 +2630,28 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -2659,10 +2659,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'blockquote',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2671,10 +2671,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2683,10 +2683,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -2694,10 +2694,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content blockquote, .dslc-tabs-content blockquote p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2705,11 +2705,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content blockquote, .dslc-tabs-content blockquote p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -2717,14 +2717,14 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content blockquote, .dslc-tabs-content blockquote p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -2732,10 +2732,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content blockquote, .dslc-tabs-content blockquote p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2743,11 +2743,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content blockquote, .dslc-tabs-content blockquote p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2756,10 +2756,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Left', 'alenastudio_plugin'),
+                'label'                 => __('Margin Left', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_margin_left',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2768,10 +2768,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2780,10 +2780,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2792,10 +2792,10 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -2803,31 +2803,31 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => 'blockquote',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('blockquote', 'alenastudio_plugin'),
+                'tab'                   => __('blockquote', 'live-composer-page-builder'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'alenastudio_plugin'),
+                'tab'     => __('tablet', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_content_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2835,11 +2835,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -2847,11 +2847,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2859,11 +2859,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_content_padding_vertical',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -2871,11 +2871,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-tab-content',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_content_padding_horizontal',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -2883,11 +2883,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-tab-content',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Nav - Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_nav_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2895,11 +2895,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Nav - Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_nav_padding_vertical',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -2907,11 +2907,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Nav - Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_nav_padding_horizontal',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -2919,11 +2919,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Nav - Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_nav_item_margin_right',
                 'std'                   => '-1',
                 'type'                  => 'slider',
@@ -2931,13 +2931,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
                 'min'                   => -10,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Spacing - Nav and Content', 'alenastudio_plugin'),
+                'label'                 => __('Spacing - Nav and Content', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_nav_content_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2945,32 +2945,32 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'alenastudio_plugin'),
+                'tab'     => __('phone', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_content_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2978,11 +2978,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -2990,11 +2990,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -3002,11 +3002,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_content_padding_vertical',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -3014,11 +3014,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-tab-content',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_content_padding_horizontal',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -3026,11 +3026,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-tab-content',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Nav - Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_nav_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -3038,11 +3038,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Nav - Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_nav_padding_vertical',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -3050,11 +3050,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Nav - Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_nav_padding_horizontal',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -3062,11 +3062,11 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Nav - Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Nav - Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_nav_item_margin_right',
                 'std'                   => '-1',
                 'type'                  => 'slider',
@@ -3074,13 +3074,13 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
                 'min'                   => -10,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Spacing - Nav and Content', 'alenastudio_plugin'),
+                'label'                 => __('Spacing - Nav and Content', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_nav_content_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -3088,7 +3088,7 @@ class AS_Tabs extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-tabs-nav',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
         );
@@ -3139,7 +3139,7 @@ class AS_Tabs extends DSLC_Module {
 
                 <?php else : ?>
                     <span class="dslc-tabs-nav-hook">
-                        <span class="dslc-tabs-nav-hook-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('Click to edit', 'alenastudio_plugin'); ?></span>
+                        <span class="dslc-tabs-nav-hook-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('Click to edit', 'live-composer-page-builder'); ?></span>
                         <?php if ($dslc_is_admin) : ?>
                             <span class="dslca-delete-tab-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
                         <?php endif; ?>
@@ -3178,7 +3178,7 @@ class AS_Tabs extends DSLC_Module {
                             </div>
                             <?php if ($dslc_is_admin) : ?>
                                 <textarea class="dslca-tab-plain-content"><?php echo $tab_content_output; ?></textarea>
-                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'alenastudio_plugin'); ?></span></div>
+                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'live-composer-page-builder'); ?></span></div>
                             <?php endif; ?>
                         </div><!-- .dslc-tabs-tab-content -->
 
@@ -3192,11 +3192,11 @@ class AS_Tabs extends DSLC_Module {
                     <div class="dslc-tabs-tab-content">
                         <h4 class="dslc-tabs-nav-hook"><?php _e('CLICK TO EDIT', 'alenastudio'); ?></h4>
                         <div class="dslca-editable-content">
-                            <?php _e('This is just placeholder text.', 'alenastudio_plugin'); ?>
+                            <?php _e('This is just placeholder text.', 'live-composer-page-builder'); ?>
                         </div>
                         <?php if ($dslc_is_admin) : ?>
-                            <textarea class="dslca-tab-plain-content"><?php _e('This is just placeholder text.', 'alenastudio_plugin'); ?></textarea>
-                            <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'alenastudio_plugin'); ?></span></div>
+                            <textarea class="dslca-tab-plain-content"><?php _e('This is just placeholder text.', 'live-composer-page-builder'); ?></textarea>
+                            <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'live-composer-page-builder'); ?></span></div>
                             <?php endif; ?>
                     </div><!-- .dslc-tabs-tab-content -->
                 <?php endif; ?>

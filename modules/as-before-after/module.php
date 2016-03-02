@@ -1,6 +1,6 @@
 <?php
 
-class AS_Before_After extends DSLC_Module {
+class AS_Before_After extends as_module {
 
     var $module_id;
     var $module_title;
@@ -10,86 +10,85 @@ class AS_Before_After extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Before_After';
-        $this->module_title    = __('AS - Before After Image', 'alenastudio_plugin');
+        $this->module_title    = __('AS - Before After Image', 'live-composer-page-builder');
         $this->module_icon     = 'picture';
         $this->module_category = 'as - element';
     }
 
     function options() {
-
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('CT', 'alenastudio_plugin'),
+                'label'      => __('CT', 'live-composer-page-builder'),
                 'id'         => 'custom_text',
-                'std'        => __('BEFORE', 'alenastudio_plugin'),
+                'std'        => __('BEFORE', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'alenastudio_plugin'),
+                'label'      => __('CT', 'live-composer-page-builder'),
                 'id'         => 'custom_text_2',
-                'std'        => __('MIDDLE', 'alenastudio_plugin'),
+                'std'        => __('MIDDLE', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'alenastudio_plugin'),
+                'label'      => __('CT', 'live-composer-page-builder'),
                 'id'         => 'custom_text_3',
                 'std'        => __('AFTER', 'alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label' => __('Image', 'alenastudio_plugin'),
+                'label' => __('Image', 'live-composer-page-builder'),
                 'id'    => 'image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label' => __('Image 2', 'alenastudio_plugin'),
+                'label' => __('Image 2', 'live-composer-page-builder'),
                 'id'    => 'image_2',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'             => __('Orientation', 'alenastudio_plugin'),
+                'label'             => __('Orientation', 'live-composer-page-builder'),
                 'id'                => 'orientation_img',
                 'std'               => 'horizontal',
                 'refresh_on_change' => true,
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Horizontal', 'alenastudio_plugin'),
+                        'label' => __('Horizontal', 'live-composer-page-builder'),
                         'value' => 'horizontal'
                     ),
                     array(
-                        'label' => __('Vertical', 'alenastudio_plugin'),
+                        'label' => __('Vertical', 'live-composer-page-builder'),
                         'value' => 'vertical'
                     ),
                 ),
             ),
             array(
-                'label'                 => __('Offset Image', 'alenastudio_plugin'),
+                'label'                 => __('Offset Image', 'live-composer-page-builder'),
                 'id'                    => 'offset_img',
                 'std'                   => '.5',
                 'refresh_on_change'     => true,
@@ -105,7 +104,7 @@ class AS_Before_After extends DSLC_Module {
              * Styling
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -115,7 +114,7 @@ class AS_Before_After extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -125,7 +124,7 @@ class AS_Before_After extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,25 +135,25 @@ class AS_Before_After extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -164,7 +163,7 @@ class AS_Before_After extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -175,7 +174,7 @@ class AS_Before_After extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'alenastudio_plugin'),
+                'label'                 => __('Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -188,7 +187,7 @@ class AS_Before_After extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -226,7 +225,7 @@ class AS_Before_After extends DSLC_Module {
              * Custom DragBar
              */
             array(
-                'label'                 => __('BG Color Bar', 'alenastudio_plugin'),
+                'label'                 => __('BG Color Bar', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_bg_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -234,10 +233,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after, .twentytwenty-vertical .twentytwenty-handle:before, .twentytwenty-vertical .twentytwenty-handle:after',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color Circle', 'alenastudio_plugin'),
+                'label'                 => __('BG Color Circle', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_circle_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -245,10 +244,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color Circle', 'alenastudio_plugin'),
+                'label'                 => __('Border Color Circle', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_circle_border_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -256,10 +255,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width Circle', 'alenastudio_plugin'),
+                'label'                 => __('Border Width Circle', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -268,10 +267,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -280,10 +279,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Icon Right', 'alenastudio_plugin'),
+                'label'                 => __('Color Icon Right', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_icon_color_right',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -291,10 +290,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-left-arrow',
                 'affect_on_change_rule' => 'border-right-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Icon Left', 'alenastudio_plugin'),
+                'label'                 => __('Color Icon Left', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_icon_color_left',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -302,10 +301,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-right-arrow',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Icon Up', 'alenastudio_plugin'),
+                'label'                 => __('Color Icon Up', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_icon_color_down',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -313,10 +312,10 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-up-arrow',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color Icon Down', 'alenastudio_plugin'),
+                'label'                 => __('Color Icon Down', 'live-composer-page-builder'),
                 'id'                    => 'css_drag_bar_icon_color_up',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -324,7 +323,7 @@ class AS_Before_After extends DSLC_Module {
                 'affect_on_change_el'   => '.twentytwenty-down-arrow',
                 'affect_on_change_rule' => 'border-top-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'alenastudio_plugin'),
+                'tab'                   => __('drag bar', 'live-composer-page-builder'),
             ),
             /**             * Responsive Tablet */
             array
@@ -556,7 +555,7 @@ class AS_Before_After extends DSLC_Module {
             $dslc_is_admin = false;
         ?>
         <?php if (empty($options['image']) || empty($options['image_2'])) : ?>
-            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'alenastudio_plugin'); ?></div>
+            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'live-composer-page-builder'); ?></div>
         <?php else : ?>		
             <div class="as-before-img">
                 <?php

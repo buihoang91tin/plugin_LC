@@ -1,6 +1,6 @@
 <?php
 
-class AS_Circle_Chart_Module extends DSLC_Module {
+class AS_Circle_Chart_Module extends as_module {
 
     // Module Attributes
     var $module_id;
@@ -11,62 +11,62 @@ class AS_Circle_Chart_Module extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Circle_Chart_Module';
-        $this->module_title    = __('AS - Circle Chart', 'alenastudio_plugin');
+        $this->module_title    = __('AS - Circle Chart', 'live-composer-page-builder');
         $this->module_icon     = 'circle-blank';
         $this->module_category = 'as - Counter';
     }
 
     // Module Options
     function options() {
-        // The options array
+        global $as_ex_options;
         $dslc_options = array(
             /**
              * General
              */
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Title', 'alenastudio_plugin'),
+                'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT', 'alenastudio'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'alenastudio_plugin'),
+                        'label' => __('Center', 'live-composer-page-builder'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                 ),
@@ -76,25 +76,25 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -104,7 +104,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -114,7 +114,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -125,7 +125,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,7 +136,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -147,7 +147,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -160,7 +160,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -171,7 +171,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio_plugin'),
+                'label'                 => __('Width', 'live-composer-page-builder'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -185,7 +185,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Circle Chart
              */
             array(
-                'label'   => __('On Load Animation', 'alenastudio_plugin'),
+                'label'   => __('On Load Animation', 'live-composer-page-builder'),
                 'id'      => 'circle_chart_animation',
                 'std'     => 'easeOutExpo',
                 'type'    => 'select',
@@ -319,7 +319,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'             => __('Percent Circle Chart', 'alenastudio_plugin'),
+                'label'             => __('Percent Circle Chart', 'live-composer-page-builder'),
                 'id'                => 'circle_chart_percent',
                 'std'               => 50,
                 'refresh_on_change' => true,
@@ -330,7 +330,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'               => 'Circle Chart',
             ),
             array(
-                'label'   => __('Duration', 'alenastudio_plugin'),
+                'label'   => __('Duration', 'live-composer-page-builder'),
                 'id'      => 'circle_chart_duration',
                 'std'     => '4000',
                 'type'    => 'text',
@@ -338,7 +338,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'   => __('Type chart', 'alenastudio_plugin'),
+                'label'   => __('Type chart', 'live-composer-page-builder'),
                 'id'      => 'circle_chart_cap',
                 'std'     => 'butt',
                 'type'    => 'select',
@@ -360,20 +360,20 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Line Width (px)', 'alenastudio_plugin'),
+                'label'                 => __('Line Width (px)', 'live-composer-page-builder'),
                 'id'                    => 'circle_chart_width',
                 'std'                   => '5',
                 'type'                  => 'slider',
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'section'               => 'styling',
-                'tab'                   => __('Circle Chart', 'alenastudio_plugin'),
+                'tab'                   => __('Circle Chart', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 0,
                 'max'                   => 30
             ),
             array(
-                'label'                 => __('Track Color', 'alenastudio_plugin'),
+                'label'                 => __('Track Color', 'live-composer-page-builder'),
                 'id'                    => 'circle_chart_track',
                 'std'                   => '#f2f2f2',
                 'affect_on_change_el'   => '',
@@ -383,7 +383,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Bar Color', 'alenastudio_plugin'),
+                'label'                 => __('Bar Color', 'live-composer-page-builder'),
                 'id'                    => 'circle_chart_bar',
                 'std'                   => '#5ac3bc',
                 'affect_on_change_el'   => '',
@@ -393,7 +393,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'   => __('Size', 'alenastudio_plugin'),
+                'label'   => __('Size', 'live-composer-page-builder'),
                 'id'      => 'circle_chart_size',
                 'std'     => '150',
                 'type'    => 'select',
@@ -415,9 +415,9 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_percent_chart_color',
-                'std'                   => 'rgb(44, 62, 80)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.percent-chart',
@@ -426,7 +426,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -438,7 +438,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -453,7 +453,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_percent_chart_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -467,9 +467,9 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => '#797979',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.pie-content h2',
@@ -478,7 +478,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Title'
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -490,7 +490,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -505,7 +505,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
@@ -516,7 +516,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -528,7 +528,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -543,17 +543,17 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'alenastudio_plugin'),
+                'label'   => __('Responsive', 'live-composer-page-builder'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -561,7 +561,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'tablet',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -573,7 +573,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -585,7 +585,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -597,7 +597,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -611,7 +611,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -623,7 +623,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio_plugin'),
+                'label'                 => __('Width', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -635,7 +635,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Font Size(Circle Chart)', 'alenastudio_plugin'),
+                'label'                 => __('Font Size(Circle Chart)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -647,7 +647,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Circle Chart)', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight (Circle Chart)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -662,7 +662,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size(Title)', 'alenastudio_plugin'),
+                'label'                 => __('Font Size(Title)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -674,7 +674,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'alenastudio_plugin'),
+                'label'                 => __('Line Height (Title)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -689,17 +689,17 @@ class AS_Circle_Chart_Module extends DSLC_Module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'alenastudio_plugin'),
+                'label'   => __('Responsive', 'live-composer-page-builder'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -707,7 +707,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'tab'     => 'phone',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -719,7 +719,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -731,7 +731,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -743,7 +743,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -757,7 +757,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -769,7 +769,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio_plugin'),
+                'label'                 => __('Width', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -781,7 +781,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Font Size(Circle Chart)', 'alenastudio_plugin'),
+                'label'                 => __('Font Size(Circle Chart)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -793,7 +793,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Circle Chart)', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight (Circle Chart)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -808,7 +808,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size(Title)', 'alenastudio_plugin'),
+                'label'                 => __('Font Size(Title)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -820,7 +820,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'alenastudio_plugin'),
+                'label'                 => __('Line Height (Title)', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -864,7 +864,7 @@ class AS_Circle_Chart_Module extends DSLC_Module {
         ?>
         <div class="circle-chart-wrapper">
             <span class="chart" data-percent="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-easing="<?php echo esc_attr($options['circle_chart_animation']); ?>" data-duration="<?php echo esc_attr($options['circle_chart_duration']); ?>" data-line-cap="<?php echo esc_attr($options['circle_chart_cap']); ?>" data-line-width="<?php echo esc_attr($options['circle_chart_width']); ?>" data-track-color="<?php echo esc_attr($options['circle_chart_track']); ?>" data-bar-color="<?php echo esc_attr($options['circle_chart_bar']); ?>" data-size="<?php echo esc_attr($options['circle_chart_size']); ?>" style="width:<?php echo esc_attr($options['circle_chart_size']); ?>px;height:<?php echo esc_attr($options['circle_chart_size']); ?>px;">
-                <span class="percent-chart  <?php //if ($dslc_is_admin) echo 'active-lc'; ?>" data-from="0" data-to="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-speed="1500" data-refresh-interval="25" style="line-height:<?php echo esc_attr($options['circle_chart_size']); ?>px;"><?php echo esc_attr($options['circle_chart_percent']); ?></span
+                <span class="percent-chart <?php echo as_is_active_lc() ? 'active-lc' : ''; ?>" data-from="0" data-to="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-speed="1500" data-refresh-interval="25" style="line-height:<?php echo esc_attr($options['circle_chart_size']); ?>px;"><?php echo esc_attr($options['circle_chart_percent']); ?></span>
             </span>
             <div class="pie-content">
                 <?php if ($dslc_is_admin) : ?>

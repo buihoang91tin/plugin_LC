@@ -1,6 +1,6 @@
 <?php
 
-class AS_Introduce extends DSLC_Module {
+class AS_Introduce extends as_module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Introduce extends DSLC_Module {
     }
 
     function options() {
-
+        global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'alenastudio'),
@@ -255,7 +255,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'                 => __('Color', 'alenastudio'),
                 'id'                    => 'css_title_color',
-                'std'                   => '#3d3d3d',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -293,7 +293,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'                 => __('Font Family', 'alenastudio'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -338,7 +338,7 @@ class AS_Introduce extends DSLC_Module {
                 'tab'               => 'Image',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'as_introduce_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -350,7 +350,7 @@ class AS_Introduce extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Size', 'alenastudio_plugin'),
+                'label'                 => __('Size', 'live-composer-page-builder'),
                 'id'                    => 'as_introduce_size',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -362,7 +362,7 @@ class AS_Introduce extends DSLC_Module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_introduce_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -390,7 +390,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'                 => __('Color', 'alenastudio'),
                 'id'                    => 'css_content_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -428,7 +428,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'                 => __('Font Family', 'alenastudio'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -610,7 +610,7 @@ class AS_Introduce extends DSLC_Module {
             array(
                 'label'                 => __('Color', 'alenastudio'),
                 'id'                    => 'as_introduce_social_color',
-                'std'                   => 'rgb(0, 179, 253)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-introduce-social a',
@@ -619,7 +619,7 @@ class AS_Introduce extends DSLC_Module {
                 'tab'                   => __('Socials', 'alenastudio'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_introduce_social_border',
                 'std'                   => 'rgba(189, 36, 36, 0)',
                 'type'                  => 'color',
@@ -630,7 +630,7 @@ class AS_Introduce extends DSLC_Module {
                 'tab'                   => __('Socials', 'alenastudio'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_introduce_social_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',

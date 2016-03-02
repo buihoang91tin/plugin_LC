@@ -2,7 +2,7 @@
 if (dslc_is_module_active('DSLC_Staff'))
     include AS_EXTENSION_ABS . '/modules/as-staff/functions.php';
 
-class AS_Staff extends DSLC_Module {
+class AS_Staff extends as_module {
 
     var $module_id;
     var $module_title;
@@ -12,7 +12,7 @@ class AS_Staff extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Staff';
-        $this->module_title    = __('Staff Simple', 'alenastudio_plugin');
+        $this->module_title    = __('Staff Simple', 'live-composer-page-builder');
         $this->module_icon     = 'group';
         $this->module_category = 'as - posts';
     }
@@ -32,236 +32,260 @@ class AS_Staff extends DSLC_Module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'   => __('Type', 'alenastudio_plugin'),
+                'label'   => __('Type', 'live-composer-page-builder'),
                 'id'      => 'type',
                 'std'     => 'grid',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Grid', 'alenastudio_plugin'),
+                        'label' => __('Grid', 'live-composer-page-builder'),
                         'value' => 'grid'
                     ),
                     array(
-                        'label' => __('Masonry Grid', 'alenastudio_plugin'),
+                        'label' => __('Masonry Grid', 'live-composer-page-builder'),
                         'value' => 'masonry'
                     ),
                     array(
-                        'label' => __('Carousel', 'alenastudio_plugin'),
+                        'label' => __('Carousel', 'live-composer-page-builder'),
                         'value' => 'carousel'
                     )
                 )
             ),
             array(
-                'label' => __('Posts Per Page', 'alenastudio_plugin'),
+                'label' => __('Posts Per Page', 'live-composer-page-builder'),
                 'id'    => 'amount',
                 'std'   => '4',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Pagination', 'alenastudio_plugin'),
+                'label'   => __('Pagination', 'live-composer-page-builder'),
                 'id'      => 'pagination_type',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled',
                     ),
                     array(
-                        'label' => __('Numbered', 'alenastudio_plugin'),
+                        'label' => __('Numbered', 'live-composer-page-builder'),
                         'value' => 'numbered',
                     ),
                     array(
-                        'label' => __('Prev/Next', 'alenastudio_plugin'),
+                        'label' => __('Prev/Next', 'live-composer-page-builder'),
                         'value' => 'prevnext',
                     )
                 ),
             ),
             array(
-                'label'   => __('Items Per Row', 'alenastudio_plugin'),
+                'label'   => __('Items Per Row', 'live-composer-page-builder'),
                 'id'      => 'columns',
                 'std'     => '3',
                 'type'    => 'select',
                 'choices' => $this->shared_options('posts_per_row_choices'),
             ),
             array(
-                'label'   => __('Categories', 'alenastudio_plugin'),
+                'label'   => __('Categories', 'live-composer-page-builder'),
                 'id'      => 'categories',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => $cats_choices
             ),
             array(
-                'label'   => __('Categories Operator', 'alenastudio_plugin'),
+                'label'   => __('Categories Operator', 'live-composer-page-builder'),
                 'id'      => 'categories_operator',
                 'std'     => 'IN',
-                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'alenastudio_plugin'),
+                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'live-composer-page-builder'),
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('IN', 'alenastudio_plugin'),
+                        'label' => __('IN', 'live-composer-page-builder'),
                         'value' => 'IN',
                     ),
                     array(
-                        'label' => __('AND', 'alenastudio_plugin'),
+                        'label' => __('AND', 'live-composer-page-builder'),
                         'value' => 'AND',
                     ),
                     array(
-                        'label' => __('NOT IN', 'alenastudio_plugin'),
+                        'label' => __('NOT IN', 'live-composer-page-builder'),
                         'value' => 'NOT IN',
                     ),
                 )
             ),
             array(
-                'label'   => __('Order By', 'alenastudio_plugin'),
+                'label'   => __('Order By', 'live-composer-page-builder'),
                 'id'      => 'orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Publish Date', 'alenastudio_plugin'),
+                        'label' => __('Publish Date', 'live-composer-page-builder'),
                         'value' => 'date'
                     ),
                     array(
-                        'label' => __('Modified Date', 'alenastudio_plugin'),
+                        'label' => __('Modified Date', 'live-composer-page-builder'),
                         'value' => 'modified'
                     ),
                     array(
-                        'label' => __('Random', 'alenastudio_plugin'),
+                        'label' => __('Random', 'live-composer-page-builder'),
                         'value' => 'rand'
                     ),
                     array(
-                        'label' => __('Alphabetic', 'alenastudio_plugin'),
+                        'label' => __('Alphabetic', 'live-composer-page-builder'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Comment Count', 'alenastudio_plugin'),
+                        'label' => __('Comment Count', 'live-composer-page-builder'),
                         'value' => 'comment_count'
                     ),
                 )
             ),
             array(
-                'label'   => __('Order', 'alenastudio_plugin'),
+                'label'   => __('Order', 'live-composer-page-builder'),
                 'id'      => 'order',
                 'std'     => 'DESC',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Ascending', 'alenastudio_plugin'),
+                        'label' => __('Ascending', 'live-composer-page-builder'),
                         'value' => 'ASC'
                     ),
                     array(
-                        'label' => __('Descending', 'alenastudio_plugin'),
+                        'label' => __('Descending', 'live-composer-page-builder'),
                         'value' => 'DESC'
                     )
                 )
             ),
             array(
-                'label' => __('Offset', 'alenastudio_plugin'),
+                'label' => __('Offset', 'live-composer-page-builder'),
                 'id'    => 'offset',
                 'std'   => '0',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Include (IDs)', 'alenastudio_plugin'),
+                'label' => __('Include (IDs)', 'live-composer-page-builder'),
                 'id'    => 'query_post_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Exclude (IDs)', 'alenastudio_plugin'),
+                'label' => __('Exclude (IDs)', 'live-composer-page-builder'),
                 'id'    => 'query_post_not_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Social - Link Behaviour', 'alenastudio_plugin'),
+                'label'   => __('Social - Link Behaviour', 'live-composer-page-builder'),
                 'id'      => 'social_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Open in same tab', 'alenastudio_plugin'),
+                        'label' => __('Open in same tab', 'live-composer-page-builder'),
                         'value' => '_self'
                     ),
                     array(
-                        'label' => __('Open in new tab', 'alenastudio_plugin'),
+                        'label' => __('Open in new tab', 'live-composer-page-builder'),
                         'value' => '_blank'
                     )
                 ),
-                'tab'     => __('Other', 'alenastudio_plugin'),
+                'tab'     => __('Other', 'live-composer-page-builder'),
             ),
             /**
              * General
              */
             array(
-                'label'   => __('Post Elements', 'alenastudio_plugin'),
+                'label'   => __('Post Elements', 'live-composer-page-builder'),
                 'id'      => 'post_elements',
                 'std'     => 'thumbnail social title position excerpt',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Thumbnail', 'alenastudio_plugin'),
+                        'label' => __('Thumbnail', 'live-composer-page-builder'),
                         'value' => 'thumbnail',
                     ),
                     array(
-                        'label' => __('Social Links', 'alenastudio_plugin'),
+                        'label' => __('Social Links', 'live-composer-page-builder'),
                         'value' => 'social',
                     ),
                     array(
-                        'label' => __('Title', 'alenastudio_plugin'),
+                        'label' => __('Title', 'live-composer-page-builder'),
                         'value' => 'title',
                     ),
                     array(
-                        'label' => __('Position', 'alenastudio_plugin'),
+                        'label' => __('Position', 'live-composer-page-builder'),
                         'value' => 'position',
                     ),
                     array(
-                        'label' => __('Excerpt', 'alenastudio_plugin'),
+                        'label' => __('Excerpt', 'live-composer-page-builder'),
                         'value' => 'excerpt',
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Carousel Elements', 'alenastudio_plugin'),
+                'label'   => __('Carousel Elements', 'live-composer-page-builder'),
                 'id'      => 'carousel_elements',
                 'std'     => 'arrows circles',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Arrows', 'alenastudio_plugin'),
+                        'label' => __('Arrows', 'live-composer-page-builder'),
                         'value' => 'arrows'
                     ),
                     array(
-                        'label' => __('Circles', 'alenastudio_plugin'),
+                        'label' => __('Circles', 'live-composer-page-builder'),
                         'value' => 'circles'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'id'                    => 'css_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-staff',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'styling',
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'id'                    => 'css_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-staff',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'styling',
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -275,25 +299,25 @@ class AS_Staff extends DSLC_Module {
              * Separator
              */
             array(
-                'label'   => __('Enable/Disable', 'alenastudio_plugin'),
+                'label'   => __('Enable/Disable', 'live-composer-page-builder'),
                 'id'      => 'separator_enabled',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Row Separator', 'alenastudio_plugin'),
+                'tab'     => __('Row Separator', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_border_color',
                 'std'                   => '#ededed',
                 'type'                  => 'color',
@@ -301,10 +325,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'alenastudio_plugin'),
+                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Height', 'alenastudio_plugin'),
+                'label'                 => __('Height', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -315,10 +339,10 @@ class AS_Staff extends DSLC_Module {
                 'min'                   => 0,
                 'max'                   => 300,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'alenastudio_plugin'),
+                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Thickness', 'alenastudio_plugin'),
+                'label'                 => __('Thickness', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_thickness',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -329,28 +353,28 @@ class AS_Staff extends DSLC_Module {
                 'min'                   => 0,
                 'max'                   => 50,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'alenastudio_plugin'),
+                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Style', 'alenastudio_plugin'),
+                'label'                 => __('Style', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_style',
                 'std'                   => 'dashed',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'alenastudio_plugin'),
+                        'label' => __('Invisible', 'live-composer-page-builder'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Solid', 'alenastudio_plugin'),
+                        'label' => __('Solid', 'live-composer-page-builder'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'alenastudio_plugin'),
+                        'label' => __('Dashed', 'live-composer-page-builder'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'alenastudio_plugin'),
+                        'label' => __('Dotted', 'live-composer-page-builder'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -358,31 +382,42 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'alenastudio_plugin'),
+                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
             ),
             /**
              * Thumbnail
              */
             array(
-                'label'   => __('Effect Thumbnail', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'id'                    => 'css_thumbnail_text_align',
+                'std'                   => 'center',
+                'type'                  => 'text_align',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslca-post-thumb',
+                'affect_on_change_rule' => 'text-align',
+                'section'               => 'styling',
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+            ),
+            array(
+                'label'   => __('Effect Thumbnail', 'live-composer-page-builder'),
                 'id'      => 'effect_hover_img',
-                'std'     => 'black_white',
+                'std'     => 'normal',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Black & White', 'alenastudio_plugin'),
+                        'label' => __('Black & White', 'live-composer-page-builder'),
                         'value' => 'black_white'
                     ),
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'     => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_thumbnail_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -390,10 +425,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -401,10 +436,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -413,28 +448,28 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -442,10 +477,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_thumbnail_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -453,11 +488,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner, .dslc-staff-member-thumb img',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_thumbnail_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -465,11 +500,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner, .dslc-staff-member-thumb img',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -480,10 +515,10 @@ class AS_Staff extends DSLC_Module {
                 'ext'                   => 'px',
                 'min'                   => '-100',
                 'max'                   => '100',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -492,10 +527,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -504,56 +539,56 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'alenastudio_plugin'),
+                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'   => __('Resize - Height', 'alenastudio_plugin'),
+                'label'   => __('Resize - Height', 'live-composer-page-builder'),
                 'id'      => 'thumb_resize_height',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'alenastudio_plugin'),
+                'tab'     => __('thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'   => __('Resize - Width', 'alenastudio_plugin'),
+                'label'   => __('Resize - Width', 'live-composer-page-builder'),
                 'id'      => 'thumb_resize_width_manual',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'alenastudio_plugin'),
+                'tab'     => __('thumbnail', 'live-composer-page-builder'),
             ),
             array(
-                'label'      => __('Resize - Width', 'alenastudio_plugin'),
+                'label'      => __('Resize - Width', 'live-composer-page-builder'),
                 'id'         => 'thumb_resize_width',
                 'std'        => '',
                 'type'       => 'text',
                 'section'    => 'styling',
-                'tab'        => __('thumbnail', 'alenastudio_plugin'),
+                'tab'        => __('thumbnail', 'live-composer-page-builder'),
                 'visibility' => 'hidden'
             ),
             /**
              * Social
              */
             array(
-                'label'   => __('Position', 'alenastudio_plugin'),
+                'label'   => __('Position', 'live-composer-page-builder'),
                 'id'      => 'css_social_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'alenastudio_plugin'),
+                        'label' => __('Inner Thumbnail', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'alenastudio_plugin'),
+                        'label' => __('Bottom Thumbnail', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Social', 'alenastudio_plugin'),
+                'tab'     => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'css_social_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -561,10 +596,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_social_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -572,10 +607,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color Hover', 'alenastudio_plugin'),
+                'label'                 => __('BG Color Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_social_bg_hover_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -583,10 +618,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_social_border_color',
                 'std'                   => 'rgb(175, 175, 175)',
                 'type'                  => 'color',
@@ -594,10 +629,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Hover Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Hover Color', 'live-composer-page-builder'),
                 'id'                    => 'css_social_border_hover_color',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -605,10 +640,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_social_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -617,28 +652,28 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_social_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -646,10 +681,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_social_border_radius_top',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -657,11 +692,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_social_border_radius_bottom',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -669,11 +704,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_social_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -682,10 +717,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Size (width, height)', 'alenastudio_plugin'),
+                'label'                 => __('Size (width, height)', 'live-composer-page-builder'),
                 'id'                    => 'css_social_widht_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -694,10 +729,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Icon - Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Icon - Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_social_spacing',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -706,10 +741,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-left,margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Icon - Color', 'alenastudio_plugin'),
+                'label'                 => __('Icon - Color', 'live-composer-page-builder'),
                 'id'                    => 'css_social_color',
                 'std'                   => 'rgb(175, 175, 175)',
                 'type'                  => 'color',
@@ -717,10 +752,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Icon - Hover Color', 'alenastudio_plugin'),
+                'label'                 => __('Icon - Hover Color', 'live-composer-page-builder'),
                 'id'                    => 'css_social_hover_color',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -728,10 +763,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Icon - Size', 'alenastudio_plugin'),
+                'label'                 => __('Icon - Size', 'live-composer-page-builder'),
                 'id'                    => 'css_social_font_size',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -739,11 +774,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Top', 'alenastudio_plugin'),
+                'label'                 => __('Icon - Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'css_social_margin_top',
                 'std'                   => '6',
                 'type'                  => 'slider',
@@ -752,13 +787,13 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'alenastudio_plugin'),
+                'tab'                   => __('Social', 'live-composer-page-builder'),
             ),
             /**
              * Main
              */
             array(
-                'label'                 => __(' BG Color', 'alenastudio_plugin'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -766,10 +801,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_main_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -777,10 +812,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_main_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -789,28 +824,28 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_main_border_trbl',
                 'std'                   => 'right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -818,10 +853,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'css_main_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -829,11 +864,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_main_border_radius_bottom',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -841,11 +876,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Minimum Height', 'alenastudio_plugin'),
+                'label'                 => __('Minimum Height', 'live-composer-page-builder'),
                 'id'                    => 'css_main_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -854,12 +889,12 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'min-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
                 'min'                   => 0,
                 'max'                   => 500
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_main_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -868,10 +903,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_main_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -880,10 +915,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'css_main_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -891,31 +926,31 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'alenastudio_plugin'),
+                'tab'                   => __('Main', 'live-composer-page-builder'),
             ),
             /**
              * Main Inner
              */
             array(
-                'label'   => __('Content Inner Thumbnail', 'alenastudio_plugin'),
+                'label'   => __('Content Inner Thumbnail', 'live-composer-page-builder'),
                 'id'      => 'content_inner_thumb_enabled',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Main Inner', 'alenastudio_plugin'),
+                'tab'     => __('Main Inner', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'content_inner_thumb_bg_color',
                 'std'                   => 'rgba(0, 0, 0, 0.45)',
                 'type'                  => 'color',
@@ -923,10 +958,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'alenastudio_plugin'),
+                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'content_inner_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -934,10 +969,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'alenastudio_plugin'),
+                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'content_inner_thumb_border_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -945,10 +980,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'alenastudio_plugin'),
+                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'content_inner_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -957,28 +992,28 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'alenastudio_plugin'),
+                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'content_inner_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -986,10 +1021,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'alenastudio_plugin'),
+                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'content_inner_thumb_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -998,10 +1033,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'alenastudio_plugin'),
+                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'content_inner_thumb_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1010,31 +1045,31 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'alenastudio_plugin'),
+                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
             ),
             /**
              * Title
              */
             array(
-                'label'   => __('Position', 'alenastudio_plugin'),
+                'label'   => __('Position', 'live-composer-page-builder'),
                 'id'      => 'css_title_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'alenastudio_plugin'),
+                        'label' => __('Inner Thumbnail', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'alenastudio_plugin'),
+                        'label' => __('Bottom Thumbnail', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Title', 'alenastudio_plugin'),
+                'tab'     => __('Title', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
                 'std'                   => 'rgb(34, 34, 34)',
                 'type'                  => 'color',
@@ -1042,10 +1077,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1053,10 +1088,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1064,11 +1099,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1076,14 +1111,14 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -1091,10 +1126,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1102,11 +1137,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_title_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1114,29 +1149,29 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'alenastudio_plugin'),
+                'label'                 => __('Text Transform', 'live-composer-page-builder'),
                 'id'                    => 'css_title_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'alenastudio_plugin'),
+                        'label' => __('None', 'live-composer-page-builder'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'alenastudio_plugin'),
+                        'label' => __('Capitalize', 'live-composer-page-builder'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'alenastudio_plugin'),
+                        'label' => __('Uppercase', 'live-composer-page-builder'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'alenastudio_plugin'),
+                        'label' => __('Lowercase', 'live-composer-page-builder'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1144,31 +1179,31 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio_plugin'),
+                'tab'                   => __('Title', 'live-composer-page-builder'),
             ),
             /**
              * Position
              */
             array(
-                'label'   => __('Position', 'alenastudio_plugin'),
+                'label'   => __('Position', 'live-composer-page-builder'),
                 'id'      => 'css_position_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'alenastudio_plugin'),
+                        'label' => __('Inner Thumbnail', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'alenastudio_plugin'),
+                        'label' => __('Bottom Thumbnail', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Position', 'alenastudio_plugin'),
+                'tab'     => __('Position', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_position_border_color',
                 'std'                   => '#e5e5e5',
                 'type'                  => 'color',
@@ -1176,10 +1211,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_position_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1188,28 +1223,28 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'border-top-width,border-bottom-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_position_border_trbl',
                 'std'                   => 'top bottom',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -1217,10 +1252,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_position_color',
                 'std'                   => 'rgb(177, 177, 177)',
                 'type'                  => 'color',
@@ -1228,10 +1263,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_position_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1239,11 +1274,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_position_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1251,14 +1286,14 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_position_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
@@ -1266,10 +1301,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Style', 'alenastudio_plugin'),
+                'label'                 => __('Font Style', 'live-composer-page-builder'),
                 'id'                    => 'css_position_font_style',
                 'std'                   => 'italic',
                 'type'                  => 'select',
@@ -1277,20 +1312,20 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'alenastudio_plugin'),
+                        'label' => __('Normal', 'live-composer-page-builder'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'alenastudio_plugin'),
+                        'label' => __('Italic', 'live-composer-page-builder'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_position_margin_bottom',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1298,11 +1333,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_position_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1311,31 +1346,31 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Position', 'alenastudio_plugin'),
+                'tab'                   => __('Position', 'live-composer-page-builder'),
             ),
             /**
              * Excerpt
              */
             array(
-                'label'   => __('Excerpt or Content', 'alenastudio_plugin'),
+                'label'   => __('Excerpt or Content', 'live-composer-page-builder'),
                 'id'      => 'excerpt_or_content',
                 'std'     => 'excerpt',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Excerpt', 'alenastudio_plugin'),
+                        'label' => __('Excerpt', 'live-composer-page-builder'),
                         'value' => 'excerpt'
                     ),
                     array(
-                        'label' => __('Content', 'alenastudio_plugin'),
+                        'label' => __('Content', 'live-composer-page-builder'),
                         'value' => 'content'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Excerpt', 'alenastudio_plugin'),
+                'tab'     => __('Excerpt', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_excerpt_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1343,10 +1378,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'alenastudio_plugin'),
+                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_excerpt_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1354,11 +1389,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'alenastudio_plugin'),
+                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_excerpt_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1366,14 +1401,14 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'alenastudio_plugin'),
+                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_excerpt_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -1381,10 +1416,10 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'alenastudio_plugin'),
+                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_excerpt_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1392,40 +1427,52 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'alenastudio_plugin'),
+                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'   => __('Max Length ( amount of words )', 'alenastudio_plugin'),
+                'label'   => __('Max Length ( amount of words )', 'live-composer-page-builder'),
                 'id'      => 'excerpt_length',
                 'std'     => '20',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Excerpt', 'alenastudio_plugin'),
+                'tab'     => __('Excerpt', 'live-composer-page-builder'),
+            ),
+            array(
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'id'                    => 'css_excerpt_margin_bottom',
+                'std'                   => '20',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-staff-member-excerpt',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'styling',
+                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'ext'                   => 'px'
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'alenastudio_plugin'),
+                'tab'     => __('tablet', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1433,11 +1480,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'alenastudio_plugin'),
+                'label'                 => __('Separator - Height', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1448,10 +1495,10 @@ class AS_Staff extends DSLC_Module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1460,31 +1507,31 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio_plugin'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'alenastudio_plugin'),
+                'tab'     => __('phone', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1492,11 +1539,11 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-staff',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'alenastudio_plugin'),
+                'label'                 => __('Separator - Height', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1507,10 +1554,10 @@ class AS_Staff extends DSLC_Module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1519,7 +1566,7 @@ class AS_Staff extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
             ),
         );
 
@@ -1961,7 +2008,7 @@ class AS_Staff extends DSLC_Module {
             else :
 
                 if ($dslc_is_admin) :
-                    ?><div class="dslc-notification dslc-red"><?php _e('You do not have staff at the moment. Go to <strong>WP Admin &rarr; Staff</strong> to add some.', 'alenastudio_plugin'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
+                    ?><div class="dslc-notification dslc-red"><?php _e('You do not have staff at the moment. Go to <strong>WP Admin &rarr; Staff</strong> to add some.', 'live-composer-page-builder'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
             endif;
 
         endif;

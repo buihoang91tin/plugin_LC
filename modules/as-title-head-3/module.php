@@ -1,6 +1,6 @@
 <?php
 
-class AS_Heading_Title_Module_3 extends DSLC_Module {
+class AS_Heading_Title_Module_3 extends as_module {
 
     // Module Attributes
     var $module_id       = 'AS_Heading_Title_Module_3';
@@ -13,21 +13,21 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
         // The options array
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'dslc_string'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'dslc_string'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'dslc_string'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'dslc_string'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
@@ -36,48 +36,48 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Elements', 'dslc_string'),
+                'label'   => __('Elements', 'live-composer-page-builder'),
                 'id'      => 'elements',
                 'std'     => 'as_icon as_title as_sub_title as_line_heading',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Icon', 'dslc_string'),
+                        'label' => __('Icon', 'live-composer-page-builder'),
                         'value' => 'as_icon'
                     ),
                     array(
-                        'label' => __('Title', 'dslc_string'),
+                        'label' => __('Title', 'live-composer-page-builder'),
                         'value' => 'as_title'
                     ),
                     array(
-                        'label' => __('Sub Title', 'dslc_string'),
+                        'label' => __('Sub Title', 'live-composer-page-builder'),
                         'value' => 'as_sub_title'
                     ),
                     array(
-                        'label' => __('Line Heading', 'dslc_string'),
+                        'label' => __('Line Heading', 'live-composer-page-builder'),
                         'value' => 'as_line_heading'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'      => __('Title', 'dslc_string'),
+                'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'as_title',
-                'std'        => __('CLICK TO EDIT', 'dslc_string'),
+                'std'        => __('CLICK TO EDIT', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Sub Title', 'dslc_string'),
+                'label'      => __('Sub Title', 'live-composer-page-builder'),
                 'id'         => 'as_sub_title',
-                'std'        => __('Developing breakthrough insights, think tank disrupt investment donate. Meaningful work peace, donors growth Kony 2012 transformative.', 'dslc_string'),
+                'std'        => __('Developing breakthrough insights, think tank disrupt investment donate. Meaningful work peace, donors growth Kony 2012 transformative.', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'dslc_string'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -87,17 +87,17 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'             => __('Position Subtitle with Title', 'dslc_string'),
+                'label'             => __('Position Subtitle with Title', 'live-composer-page-builder'),
                 'id'                => 'as_position_subtitle',
                 'std'               => 'bottom',
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                 ),
@@ -105,25 +105,25 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'           => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'as_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -133,7 +133,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -143,7 +143,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -154,7 +154,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'as_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -165,7 +165,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __(' BG Color', 'dslc_string'),
+                'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -175,7 +175,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image', 'dslc_string'),
+                'label'                 => __('BG Image', 'live-composer-page-builder'),
                 'id'                    => 'as_css_main_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -185,25 +185,25 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'dslc_string'),
+                'label'                 => __('BG Image Repeat', 'live-composer-page-builder'),
                 'id'                    => 'as_css_main_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'dslc_string'),
+                        'label' => __('Repeat', 'live-composer-page-builder'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'dslc_string'),
+                        'label' => __('Repeat Horizontal', 'live-composer-page-builder'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'dslc_string'),
+                        'label' => __('Repeat Vertical', 'live-composer-page-builder'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'dslc_string'),
+                        'label' => __('Do NOT Repeat', 'live-composer-page-builder'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -213,17 +213,17 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'dslc_string'),
+                'label'                 => __('BG Image Attachment', 'live-composer-page-builder'),
                 'id'                    => 'as_css_main_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'dslc_string'),
+                        'label' => __('Scroll', 'live-composer-page-builder'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'dslc_string'),
+                        'label' => __('Fixed', 'live-composer-page-builder'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -233,45 +233,45 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Position', 'dslc_string'),
+                'label'                 => __('BG Image Position', 'live-composer-page-builder'),
                 'id'                    => 'as_css_main_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'dslc_string'),
+                        'label' => __('Top Left', 'live-composer-page-builder'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'dslc_string'),
+                        'label' => __('Top Right', 'live-composer-page-builder'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'dslc_string'),
+                        'label' => __('Top Center', 'live-composer-page-builder'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'dslc_string'),
+                        'label' => __('Center Left', 'live-composer-page-builder'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'dslc_string'),
+                        'label' => __('Center Right', 'live-composer-page-builder'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'dslc_string'),
+                        'label' => __('Center', 'live-composer-page-builder'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'dslc_string'),
+                        'label' => __('Bottom Left', 'live-composer-page-builder'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'dslc_string'),
+                        'label' => __('Bottom Right', 'live-composer-page-builder'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'dslc_string'),
+                        'label' => __('Bottom Center', 'live-composer-page-builder'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -281,7 +281,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -292,7 +292,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -305,7 +305,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -316,7 +316,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'dslc_string'),
+                'label'                 => __('Width', 'live-composer-page-builder'),
                 'id'                    => 'as_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -330,7 +330,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
              * Icon
              */
             array(
-                'label'                 => __('BG Color', 'dslc_string'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -338,10 +338,10 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'dslc_string'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -349,10 +349,10 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'dslc_string'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -361,28 +361,28 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'dslc_string'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'dslc_string'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'dslc_string'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'dslc_string'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'dslc_string'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -390,10 +390,10 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'dslc_string'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -401,11 +401,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
                 'std'                   => 'rgb(33, 33, 33)',
                 'type'                  => 'color',
@@ -413,19 +413,19 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
             ),
             array(
-                'label'             => __('Icon', 'dslc_string'),
+                'label'             => __('Icon', 'live-composer-page-builder'),
                 'id'                => 'icon_id',
                 'std'               => 'as-circle-compass',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Icon', 'dslc_string'),
+                'tab'               => __('Icon', 'live-composer-page-builder'),
                 'include_in_preset' => false
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_margin_bottom',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -433,13 +433,13 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'dslc_string'),
+                'label'                 => __('Size ( Wrapper )', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_wrapper_width',
                 'std'                   => '80',
                 'type'                  => 'slider',
@@ -447,13 +447,13 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'dslc_string'),
+                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_width',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -461,11 +461,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Top', 'dslc_string'),
+                'label'                 => __('Icon - Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_margin_top',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -473,14 +473,14 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon .dslc-icon',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'dslc_string'),
+                'tab'                   => __('Icon', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_color',
                 'std'                   => '#212121',
                 'type'                  => 'color',
@@ -491,7 +491,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'tab'                   => 'Title'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_font_size',
                 'std'                   => '26',
                 'type'                  => 'slider',
@@ -503,7 +503,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -518,7 +518,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -529,7 +529,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_line_height',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -541,7 +541,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'dslc_string'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -553,7 +553,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -568,7 +568,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
              * Sub Title
              */
             array(
-                'label'                 => __('Color', 'dslc_string'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -579,7 +579,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'tab'                   => 'Subtitle'
             ),
             array(
-                'label'                 => __('Font Size', 'dslc_string'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -591,7 +591,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'dslc_string'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -606,7 +606,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'dslc_string'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -617,7 +617,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'tab'                   => 'Subtitle',
             ),
             array(
-                'label'                 => __('Line Height', 'dslc_string'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -629,7 +629,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'dslc_string'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -641,7 +641,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_margin',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -656,25 +656,25 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'dslc_string'),
+                'tab'     => __('tablet', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -682,11 +682,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_main_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -694,11 +694,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_main_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -706,11 +706,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Font Size Title', 'dslc_string'),
+                'label'                 => __('Font Size Title', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_main_title_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -718,11 +718,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height Title', 'dslc_string'),
+                'label'                 => __('Line Height Title', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_main_title_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -730,11 +730,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'dslc_string'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_title_letter_spacing',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -742,11 +742,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom Title', 'dslc_string'),
+                'label'                 => __('Margin Bottom Title', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -754,11 +754,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Font Size SubTitle', 'dslc_string'),
+                'label'                 => __('Font Size SubTitle', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_main_subtitle_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -766,11 +766,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-small-subtitle-heading',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height SubTitle', 'dslc_string'),
+                'label'                 => __('Line Height SubTitle', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_main_subtitle_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -778,11 +778,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-small-subtitle-heading',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom SubTitle', 'dslc_string'),
+                'label'                 => __('Margin Bottom SubTitle', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_subtitle_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -790,24 +790,24 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-small-subtitle-heading',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'dslc_string'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'dslc_string'),
+                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'dslc_string'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'dslc_string'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -815,7 +815,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'tab'     => 'phone',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'dslc_string'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -823,11 +823,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'dslc_string'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_main_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -835,11 +835,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'dslc_string'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_main_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -847,11 +847,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Font Size Title', 'dslc_string'),
+                'label'                 => __('Font Size Title', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_main_title_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -859,11 +859,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height Title', 'dslc_string'),
+                'label'                 => __('Line Height Title', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_main_title_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -871,11 +871,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'dslc_string'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_title_letter_spacing',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -883,11 +883,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom Title', 'dslc_string'),
+                'label'                 => __('Margin Bottom Title', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -895,11 +895,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 h3.as-big-title-heading',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Font Size SubTitle', 'dslc_string'),
+                'label'                 => __('Font Size SubTitle', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_main_subtitle_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -907,11 +907,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-small-subtitle-heading',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height SubTitle', 'dslc_string'),
+                'label'                 => __('Line Height SubTitle', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_main_subtitle_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -919,11 +919,11 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-small-subtitle-heading',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom SubTitle', 'dslc_string'),
+                'label'                 => __('Margin Bottom SubTitle', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_subtitle_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -931,7 +931,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-small-subtitle-heading',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'dslc_string'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
         );
@@ -986,7 +986,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                                     <?php echo stripslashes($options['as_sub_title']); ?>
                                 </div>
                                 <div class="dslca-wysiwyg-actions-edit">
-                                    <span class="dslca-wysiwyg-actions-edit-hook"><?php echo __('Edit Subtitle', 'dslc_string'); ?></span>
+                                    <span class="dslca-wysiwyg-actions-edit-hook"><?php echo __('Edit Subtitle', 'live-composer-page-builder'); ?></span>
                                 </div>
                             <?php else : ?>
                                 <?php echo stripslashes($options['as_sub_title']); ?>
@@ -1011,7 +1011,7 @@ class AS_Heading_Title_Module_3 extends DSLC_Module {
                                     <?php echo stripslashes($options['as_sub_title']); ?>
                                 </div>
                                 <div class="dslca-wysiwyg-actions-edit">
-                                    <span class="dslca-wysiwyg-actions-edit-hook"><?php echo __('Edit Subtitle', 'dslc_string'); ?></span>
+                                    <span class="dslca-wysiwyg-actions-edit-hook"><?php echo __('Edit Subtitle', 'live-composer-page-builder'); ?></span>
                                 </div>
                             <?php else : ?>
                                 <?php echo stripslashes($options['as_sub_title']); ?>

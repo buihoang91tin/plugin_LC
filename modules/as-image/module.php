@@ -1,6 +1,6 @@
 <?php
 
-class AS_Image extends DSLC_Module {
+class AS_Image extends as_module {
 
     var $module_id;
     var $module_title;
@@ -10,99 +10,99 @@ class AS_Image extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Image';
-        $this->module_title    = __('AS - Custom Image', 'alenastudio_plugin');
+        $this->module_title    = __('AS - Custom Image', 'live-composer-page-builder');
         $this->module_icon     = 'picture';
         $this->module_category = 'as - element';
     }
 
     function options() {
-
+        global $as_ex_options;
         $dslc_options = array(
             array(
-                'label'      => __('CT', 'alenastudio_plugin'),
+                'label'      => __('CT', 'live-composer-page-builder'),
                 'id'         => 'custom_text',
-                'std'        => __('This is just some placeholder text. Click to edit it.', 'alenastudio_plugin'),
+                'std'        => __('This is just some placeholder text. Click to edit it.', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label' => __('Image', 'alenastudio_plugin'),
+                'label' => __('Image', 'live-composer-page-builder'),
                 'id'    => 'image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'   => __('Link Type', 'alenastudio_plugin'),
+                'label'   => __('Link Type', 'live-composer-page-builder'),
                 'id'      => 'link_type',
                 'std'     => 'none',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('None', 'alenastudio_plugin'),
+                        'label' => __('None', 'live-composer-page-builder'),
                         'value' => 'none',
                     ),
                     array(
-                        'label' => __('URL - Same Tab', 'alenastudio_plugin'),
+                        'label' => __('URL - Same Tab', 'live-composer-page-builder'),
                         'value' => 'url_same',
                     ),
                     array(
-                        'label' => __('URL - New Tab', 'alenastudio_plugin'),
+                        'label' => __('URL - New Tab', 'live-composer-page-builder'),
                         'value' => 'url_new',
                     ),
                     array(
-                        'label' => __('Lightbox', 'alenastudio_plugin'),
+                        'label' => __('Lightbox', 'live-composer-page-builder'),
                         'value' => 'lightbox',
                     ),
                 )
             ),
             array(
-                'label' => __('Link - URL', 'alenastudio_plugin'),
+                'label' => __('Link - URL', 'live-composer-page-builder'),
                 'id'    => 'link_url',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Link - Lightbox Image', 'alenastudio_plugin'),
+                'label' => __('Link - Lightbox Image', 'live-composer-page-builder'),
                 'id'    => 'link_lb_image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'   => __('Custom Text', 'alenastudio_plugin'),
+                'label'   => __('Custom Text', 'live-composer-page-builder'),
                 'id'      => 'custom_text_state',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled',
                     ),
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled',
                     ),
                 )
             ),
             array(
-                'label' => __('Resize - Height', 'alenastudio_plugin'),
+                'label' => __('Resize - Height', 'live-composer-page-builder'),
                 'id'    => 'resize_height',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Resize - Width', 'alenastudio_plugin'),
+                'label' => __('Resize - Width', 'live-composer-page-builder'),
                 'id'    => 'resize_width',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Image - ALT attribute', 'alenastudio_plugin'),
+                'label' => __('Image - ALT attribute', 'live-composer-page-builder'),
                 'id'    => 'image_alt',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Image - TITLE attribute', 'alenastudio_plugin'),
+                'label' => __('Image - TITLE attribute', 'live-composer-page-builder'),
                 'id'    => 'image_title',
                 'std'   => '',
                 'type'  => 'text',
@@ -111,7 +111,7 @@ class AS_Image extends DSLC_Module {
              * Styling
              */
             array(
-                'label'                 => __('Effect Style', 'alenastudio_plugin'),
+                'label'                 => __('Effect Style', 'live-composer-page-builder'),
                 'id'                    => 'as_image_effect_style',
                 'std'                   => 'default',
                 'type'                  => 'select',
@@ -121,69 +121,69 @@ class AS_Image extends DSLC_Module {
                 'section'               => 'styling',
                 'choices'               => array(
                     array(
-                        'label' => __('Default', 'alenastudio_plugin'),
+                        'label' => __('Default', 'live-composer-page-builder'),
                         'value' => 'default',
                     ),
                     array(
-                        'label' => __('1977', 'alenastudio_plugin'),
+                        'label' => __('1977', 'live-composer-page-builder'),
                         'value' => '_1977',
                     ),
                     array(
-                        'label' => __('Aden', 'alenastudio_plugin'),
+                        'label' => __('Aden', 'live-composer-page-builder'),
                         'value' => 'aden',
                     ),
                     array(
-                        'label' => __('Brooklyn', 'alenastudio_plugin'),
+                        'label' => __('Brooklyn', 'live-composer-page-builder'),
                         'value' => 'brooklyn',
                     ),
                     array(
-                        'label' => __('Earlybird', 'alenastudio_plugin'),
+                        'label' => __('Earlybird', 'live-composer-page-builder'),
                         'value' => 'earlybird',
                     ),
                     array(
-                        'label' => __('Gingham', 'alenastudio_plugin'),
+                        'label' => __('Gingham', 'live-composer-page-builder'),
                         'value' => 'gingham',
                     ),
                     array(
-                        'label' => __('Hudson', 'alenastudio_plugin'),
+                        'label' => __('Hudson', 'live-composer-page-builder'),
                         'value' => 'hudson',
                     ),
                     array(
-                        'label' => __('Inkwell', 'alenastudio_plugin'),
+                        'label' => __('Inkwell', 'live-composer-page-builder'),
                         'value' => 'inkwell',
                     ),
                     array(
-                        'label' => __('Lofi', 'alenastudio_plugin'),
+                        'label' => __('Lofi', 'live-composer-page-builder'),
                         'value' => 'lofi',
                     ),
                     array(
-                        'label' => __('Mayfair', 'alenastudio_plugin'),
+                        'label' => __('Mayfair', 'live-composer-page-builder'),
                         'value' => 'mayfair',
                     ),
                     array(
-                        'label' => __('Perpetua', 'alenastudio_plugin'),
+                        'label' => __('Perpetua', 'live-composer-page-builder'),
                         'value' => 'perpetua',
                     ),
                     array(
-                        'label' => __('Reyes', 'alenastudio_plugin'),
+                        'label' => __('Reyes', 'live-composer-page-builder'),
                         'value' => 'reyes',
                     ),
                     array(
-                        'label' => __('Toaster', 'alenastudio_plugin'),
+                        'label' => __('Toaster', 'live-composer-page-builder'),
                         'value' => 'toaster',
                     ),
                     array(
-                        'label' => __('Walden', 'alenastudio_plugin'),
+                        'label' => __('Walden', 'live-composer-page-builder'),
                         'value' => 'walden',
                     ),
                     array(
-                        'label' => __('Xpro2', 'alenastudio_plugin'),
+                        'label' => __('Xpro2', 'live-composer-page-builder'),
                         'value' => 'xpro2',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'css_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
@@ -193,25 +193,25 @@ class AS_Image extends DSLC_Module {
                 'section'               => 'styling',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'alenastudio_plugin'),
+                        'label' => __('Center', 'live-composer-page-builder'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'alenastudio_plugin'),
+                        'label' => __('Justify', 'live-composer-page-builder'),
                         'value' => 'justify',
                     ),
                 )
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -221,7 +221,7 @@ class AS_Image extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -231,7 +231,7 @@ class AS_Image extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -242,25 +242,25 @@ class AS_Image extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -270,7 +270,7 @@ class AS_Image extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -281,7 +281,7 @@ class AS_Image extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'alenastudio_plugin'),
+                'label'                 => __('Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -294,7 +294,7 @@ class AS_Image extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -307,7 +307,7 @@ class AS_Image extends DSLC_Module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -318,7 +318,7 @@ class AS_Image extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -332,7 +332,7 @@ class AS_Image extends DSLC_Module {
              * Custom Text
              */
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
@@ -340,39 +340,39 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'alenastudio_plugin'),
+                'tab'                   => __('custom text', 'live-composer-page-builder'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'alenastudio_plugin'),
+                        'label' => __('Center', 'live-composer-page-builder'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'alenastudio_plugin'),
+                        'label' => __('Justify', 'live-composer-page-builder'),
                         'value' => 'justify',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_content_font'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'alenastudio_plugin'),
+                'tab'                   => __('custom text', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -380,11 +380,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'alenastudio_plugin'),
+                'tab'                   => __('custom text', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -392,25 +392,25 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'alenastudio_plugin'),
+                'tab'                   => __('custom text', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_font_family',
-                'std'                   => 'Open Sans',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'alenastudio_plugin'),
+                'tab'                   => __('custom text', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -418,11 +418,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'alenastudio_plugin'),
+                'tab'                   => __('custom text', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Top', 'alenastudio_plugin'),
+                'label'                 => __('Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -431,31 +431,31 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('custom text', 'alenastudio_plugin'),
+                'tab'                   => __('custom text', 'live-composer-page-builder'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'alenastudio_plugin'),
+                'label'   => __('Responsive', 'live-composer-page-builder'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'alenastudio_plugin'),
+                'tab'     => __('tablet', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -463,11 +463,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -475,11 +475,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -487,11 +487,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Text - Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -499,11 +499,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Text - Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -511,11 +511,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Margin Top', 'alenastudio_plugin'),
+                'label'                 => __('Text - Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -523,32 +523,32 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio_plugin'),
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'alenastudio_plugin'),
+                'label'   => __('Responsive', 'live-composer-page-builder'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'alenastudio_plugin'),
+                'tab'     => __('phone', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -556,11 +556,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -568,11 +568,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -580,11 +580,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Text - Font Size', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -592,11 +592,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Text - Line Height', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -604,11 +604,11 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Margin Top', 'alenastudio_plugin'),
+                'label'                 => __('Text - Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'css_res_p_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -616,7 +616,7 @@ class AS_Image extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio_plugin'),
+                'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
         );
@@ -660,7 +660,7 @@ class AS_Image extends DSLC_Module {
 
             <?php if (empty($options['image'])) : ?>
 
-                <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'alenastudio_plugin'); ?></div>
+                <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'live-composer-page-builder'); ?></div>
 
             <?php else : ?>
 

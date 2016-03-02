@@ -1,6 +1,6 @@
 <?php
 
-class AS_Google_Map extends DSLC_Module {
+class AS_Google_Map extends as_module {
 
     // Module Attributes
     var $module_id;
@@ -11,7 +11,7 @@ class AS_Google_Map extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Google_Map';
-        $this->module_title    = __('AS - Google Map', 'alenastudio_plugin');
+        $this->module_title    = __('AS - Google Map', 'live-composer-page-builder');
         $this->module_icon     = 'globe';
         $this->module_category = 'as - element';
     }
@@ -24,27 +24,27 @@ class AS_Google_Map extends DSLC_Module {
              * General
              */
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Title', 'alenastudio_plugin'),
+                'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'textarea',
@@ -52,93 +52,93 @@ class AS_Google_Map extends DSLC_Module {
                 'section'    => 'styling'
             ),
             array(
-                'label'   => __('Google Map Scrool Wheel', 'alenastudio_plugin'),
+                'label'   => __('Google Map Scrool Wheel', 'live-composer-page-builder'),
                 'id'      => 'googlemap_scrlwheel',
                 'std'     => '0',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio_plugin'),
+                        'label' => __('Disabled', 'live-composer-page-builder'),
                         'value' => '0'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio_plugin'),
+                        'label' => __('Enabled', 'live-composer-page-builder'),
                         'value' => '1'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Snazzy Maps', 'alenastudio_plugin'),
+                'label'   => __('Snazzy Maps', 'live-composer-page-builder'),
                 'id'      => 'googlemap_snazzy_map',
                 'std'     => '1',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('None', 'alenastudio_plugin'),
+                        'label' => __('None', 'live-composer-page-builder'),
                         'value' => '1'
                     ),
                     array(
-                        'label' => __('Subtle Grayscale', 'alenastudio_plugin'),
+                        'label' => __('Subtle Grayscale', 'live-composer-page-builder'),
                         'value' => '2'
                     ),
                     array(
-                        'label' => __('Shades of Grey', 'alenastudio_plugin'),
+                        'label' => __('Shades of Grey', 'live-composer-page-builder'),
                         'value' => '3'
                     ),
                     array(
-                        'label' => __('Blue water', 'alenastudio_plugin'),
+                        'label' => __('Blue water', 'live-composer-page-builder'),
                         'value' => '4'
                     ),
                     array(
-                        'label' => __('Pale Dawn', 'alenastudio_plugin'),
+                        'label' => __('Pale Dawn', 'live-composer-page-builder'),
                         'value' => '5'
                     ),
                     array(
-                        'label' => __('Light Monochrome', 'alenastudio_plugin'),
+                        'label' => __('Light Monochrome', 'live-composer-page-builder'),
                         'value' => '6'
                     ),
                     array(
-                        'label' => __('Apple Maps-esque', 'alenastudio_plugin'),
+                        'label' => __('Apple Maps-esque', 'live-composer-page-builder'),
                         'value' => '7'
                     ),
                     array(
-                        'label' => __('Greyscale', 'alenastudio_plugin'),
+                        'label' => __('Greyscale', 'live-composer-page-builder'),
                         'value' => '8'
                     ),
                     array(
-                        'label' => __('Neutral Blue', 'alenastudio_plugin'),
+                        'label' => __('Neutral Blue', 'live-composer-page-builder'),
                         'value' => '9'
                     ),
                     array(
-                        'label' => __('Bright & Bubbly', 'alenastudio_plugin'),
+                        'label' => __('Bright & Bubbly', 'live-composer-page-builder'),
                         'value' => '10'
                     ),
                     array(
-                        'label' => __('Icy Blue', 'alenastudio_plugin'),
+                        'label' => __('Icy Blue', 'live-composer-page-builder'),
                         'value' => '11'
                     ),
                     array(
-                        'label' => __('Blue Gray', 'alenastudio_plugin'),
+                        'label' => __('Blue Gray', 'live-composer-page-builder'),
                         'value' => '12'
                     ),
                     array(
-                        'label' => __('Blue Essence', 'alenastudio_plugin'),
+                        'label' => __('Blue Essence', 'live-composer-page-builder'),
                         'value' => '13'
                     ),
                     array(
-                        'label' => __('Girly', 'alenastudio_plugin'),
+                        'label' => __('Girly', 'live-composer-page-builder'),
                         'value' => '14'
                     ),
                     array(
-                        'label' => __('Retro', 'alenastudio_plugin'),
+                        'label' => __('Retro', 'live-composer-page-builder'),
                         'value' => '15'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Width Google Map', 'alenastudio_plugin'),
+                'label'                 => __('Width Google Map', 'live-composer-page-builder'),
                 'id'                    => 'as_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -150,7 +150,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Height Google Map', 'alenastudio_plugin'),
+                'label'                 => __('Height Google Map', 'live-composer-page-builder'),
                 'id'                    => 'as_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -162,48 +162,48 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'   => __('Goole Map Center X', 'alenastudio_plugin'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'alenastudio_plugin'),
+                'label'   => __('Goole Map Center X', 'live-composer-page-builder'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'live-composer-page-builder'),
                 'id'      => 'googlemap_x',
                 'std'     => '12.238791',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Center Y', 'alenastudio_plugin'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'alenastudio_plugin'),
+                'label'   => __('Goole Map Center Y', 'live-composer-page-builder'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'live-composer-page-builder'),
                 'id'      => 'googlemap_y',
                 'std'     => '109.196749',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Zoom', 'alenastudio_plugin'),
+                'label'   => __('Goole Map Zoom', 'live-composer-page-builder'),
                 'id'      => 'googlemap_zoom',
                 'std'     => '13',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -213,7 +213,7 @@ class AS_Google_Map extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -223,7 +223,7 @@ class AS_Google_Map extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -234,7 +234,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -245,7 +245,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -256,7 +256,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -269,7 +269,7 @@ class AS_Google_Map extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -282,7 +282,7 @@ class AS_Google_Map extends DSLC_Module {
             /* For mark
              */
             array(
-                'label'   => __('Goole Map Mark X', 'alenastudio_plugin'),
+                'label'   => __('Goole Map Mark X', 'live-composer-page-builder'),
                 'id'      => 'googlemap_x_mark',
                 'std'     => '12.238791',
                 'type'    => 'text',
@@ -290,7 +290,7 @@ class AS_Google_Map extends DSLC_Module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Map Mark Y', 'alenastudio_plugin'),
+                'label'   => __('Goole Map Mark Y', 'live-composer-page-builder'),
                 'id'      => 'googlemap_y_mark',
                 'std'     => '109.196749',
                 'type'    => 'text',
@@ -298,7 +298,7 @@ class AS_Google_Map extends DSLC_Module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Mark Title', 'alenastudio_plugin'),
+                'label'   => __('Goole Mark Title', 'live-composer-page-builder'),
                 'id'      => 'google_title_mark',
                 'std'     => 'Dong Hoi City',
                 'type'    => 'text',

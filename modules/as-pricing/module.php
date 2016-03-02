@@ -1,6 +1,6 @@
 <?php
 
-class AS_Pricing extends DSLC_Module {
+class AS_Pricing extends as_module {
 
     var $module_id;
     var $module_title;
@@ -11,72 +11,72 @@ class AS_Pricing extends DSLC_Module {
     function __construct() {
 
         $this->module_id       = 'AS_Pricing';
-        $this->module_title    = __('Pricing Table', 'alenastudio_plugin');
+        $this->module_title    = __('Pricing Table', 'live-composer-page-builder');
         $this->module_icon     = 'dollar';
         $this->module_category = 'as - Pricing';
         $this->handle_like     = 'accordion';
     }
 
     function options() {
-
+        global $as_ex_options;
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio_plugin'),
+                'label'   => __('Show On', 'live-composer-page-builder'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio_plugin'),
+                        'label' => __('Desktop', 'live-composer-page-builder'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio_plugin'),
+                        'label' => __('Tablet', 'live-composer-page-builder'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio_plugin'),
+                        'label' => __('Phone', 'live-composer-page-builder'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'             => __('Style of Pricing', 'alenastudio_plugin'),
+                'label'             => __('Style of Pricing', 'live-composer-page-builder'),
                 'id'                => 'as_style_pricing',
                 'std'               => 'style_1',
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Style 1 with button on top', 'alenastudio_plugin'),
+                        'label' => __('Style 1 with button on top', 'live-composer-page-builder'),
                         'value' => 'style_1'
                     ),
                     array(
-                        'label' => __('Style 2 with Button on bottom', 'alenastudio_plugin'),
+                        'label' => __('Style 2 with Button on bottom', 'live-composer-page-builder'),
                         'value' => 'style_2'
                     ),
                 ),
                 'refresh_on_change' => true,
             ),
             array(
-                'label'      => __('(hidden) Pricing Title', 'alenastudio_plugin'),
+                'label'      => __('(hidden) Pricing Title', 'live-composer-page-builder'),
                 'id'         => 'as_pricing_title',
-                'std'        => __('CLICK TO EDIT', 'alenastudio_plugin'),
+                'std'        => __('CLICK TO EDIT', 'live-composer-page-builder'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
                 'section'    => 'styling',
             ),
             array(
-                'label'      => __('(hidden) Pricing Number', 'alenastudio_plugin'),
+                'label'      => __('(hidden) Pricing Number', 'live-composer-page-builder'),
                 'id'         => 'as_pricing_number',
-                'std'        => __('79', 'alenastudio_plugin'),
+                'std'        => __('79', 'live-composer-page-builder'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
                 'section'    => 'styling',
             ),
             array(
-                'label'      => __('(hidden) Accordion Nav', 'alenastudio_plugin'),
+                'label'      => __('(hidden) Accordion Nav', 'live-composer-page-builder'),
                 'id'         => 'accordion_nav',
-                'std'        => __('CLICK TO EDIT', 'alenastudio_plugin'),
+                'std'        => __('CLICK TO EDIT', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling',
@@ -85,7 +85,7 @@ class AS_Pricing extends DSLC_Module {
              * General
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_bg_color',
                 'std'                   => '#fff',
                 'type'                  => 'color',
@@ -95,7 +95,7 @@ class AS_Pricing extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -105,7 +105,7 @@ class AS_Pricing extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -116,25 +116,25 @@ class AS_Pricing extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -144,7 +144,7 @@ class AS_Pricing extends DSLC_Module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -155,7 +155,7 @@ class AS_Pricing extends DSLC_Module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -166,7 +166,7 @@ class AS_Pricing extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -177,7 +177,7 @@ class AS_Pricing extends DSLC_Module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -191,7 +191,7 @@ class AS_Pricing extends DSLC_Module {
              * Title
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_bg_color',
                 'std'                   => '#2b3d4e',
                 'type'                  => 'color',
@@ -199,10 +199,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin')
+                'tab'                   => __('title', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -210,10 +210,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin')
+                'tab'                   => __('title', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -222,28 +222,28 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'alenastudio_plugin')
+                'tab'                   => __('title', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -251,10 +251,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin')
+                'tab'                   => __('title', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -262,11 +262,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -274,22 +274,22 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin')
+                'tab'                   => __('title', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -297,11 +297,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -309,25 +309,25 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -335,11 +335,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -347,11 +347,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -359,11 +359,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-		'tab'                   => __('title', 'alenastudio_plugin'),
+		'tab'                   => __('title', 'live-composer-page-builder'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -372,10 +372,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'alenastudio_plugin')
+                'tab'                   => __('title', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -384,10 +384,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'alenastudio_plugin')
+                'tab'                   => __('title', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -395,31 +395,31 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio_plugin'),
+                'tab'                   => __('title', 'live-composer-page-builder'),
             ),
             /**
              * Pricing Label
              */
             array(
-                'label'   => __('Pricing Label', 'alenastudio_plugin'),
+                'label'   => __('Pricing Label', 'live-composer-page-builder'),
                 'id'      => 'as_pricing_label',
                 'std'     => 'none',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disable', 'alenastudio_plugin'),
+                        'label' => __('Disable', 'live-composer-page-builder'),
                         'value' => 'none',
                     ),
                     array(
-                        'label' => __('Enable', 'alenastudio_plugin'),
+                        'label' => __('Enable', 'live-composer-page-builder'),
                         'value' => 'free_label',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('pricing label', 'alenastudio_plugin')
+                'tab'     => __('pricing label', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_label_bg_color',
                 'std'                   => 'rgb(249, 191, 59)',
                 'type'                  => 'color',
@@ -427,30 +427,30 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-label',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'alenastudio_plugin')
+                'tab'                   => __('pricing label', 'live-composer-page-builder')
             ),
             array(
-                'label'             => __('Text Label', 'alenastudio_plugin'),
+                'label'             => __('Text Label', 'live-composer-page-builder'),
                 'id'                => 'as_pricing_label_css_number',
                 'std'               => 'FREE',
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing label', 'alenastudio_plugin')
+                'tab'               => __('pricing label', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Color Label', 'alenastudio_plugin'),
+                'label'                 => __('Color Label', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_label_css_number_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'alenastudio_plugin')
+                'tab'                   => __('pricing label', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -458,28 +458,28 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-label span',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'alenastudio_plugin'),
+                'tab'                   => __('pricing label', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_label_css_number_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label span',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'alenastudio_plugin'),
+                'tab'                   => __('pricing label', 'live-composer-page-builder'),
             ),
             /**
              * Pricing Number
              */
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -487,30 +487,30 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-number-wrapper',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'alenastudio_plugin')
+                'tab'                   => __('pricing number', 'live-composer-page-builder')
             ),
             array(
-                'label'             => __('Pricing Number', 'alenastudio_plugin'),
+                'label'             => __('Pricing Number', 'live-composer-page-builder'),
                 'id'                => 'as_pricing_css_number',
                 'std'               => 79,
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing number', 'alenastudio_plugin')
+                'tab'               => __('pricing number', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_color',
-                'std'                   => '#2b3d4e',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'alenastudio_plugin')
+                'tab'                   => __('pricing number', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -518,11 +518,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'alenastudio_plugin'),
+                'tab'                   => __('pricing number', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -530,25 +530,25 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'alenastudio_plugin'),
+                'tab'                   => __('pricing number', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'alenastudio_plugin'),
+                'tab'                   => __('pricing number', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -556,11 +556,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'alenastudio_plugin'),
+                'tab'                   => __('pricing number', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -569,10 +569,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing number', 'alenastudio_plugin'),
+                'tab'                   => __('pricing number', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -581,52 +581,52 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing number', 'alenastudio_plugin'),
+                'tab'                   => __('pricing number', 'live-composer-page-builder'),
             ),
             /**
              * Currency
              */
             array(
-                'label'             => __('Position of Currency', 'alenastudio_plugin'),
+                'label'             => __('Position of Currency', 'live-composer-page-builder'),
                 'id'                => 'as_style_position_currency',
                 'std'               => 'style_1',
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Position top left', 'alenastudio_plugin'),
+                        'label' => __('Position top left', 'live-composer-page-builder'),
                         'value' => 'style_1'
                     ),
                     array(
-                        'label' => __('Position top right', 'alenastudio_plugin'),
+                        'label' => __('Position top right', 'live-composer-page-builder'),
                         'value' => 'style_2'
                     ),
                 ),
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('pricing currency', 'alenastudio_plugin')
+                'tab'               => __('pricing currency', 'live-composer-page-builder')
             ),
             array(
-                'label'             => __('Pricing Currency', 'alenastudio_plugin'),
+                'label'             => __('Pricing Currency', 'live-composer-page-builder'),
                 'id'                => 'as_pricing_css_currency',
                 'std'               => '$',
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing currency', 'alenastudio_plugin')
+                'tab'               => __('pricing currency', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_color',
-                'std'                   => '#7e7e7e',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'alenastudio_plugin')
+                'tab'                   => __('pricing currency', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -634,11 +634,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'alenastudio_plugin'),
+                'tab'                   => __('pricing currency', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -646,25 +646,25 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'alenastudio_plugin'),
+                'tab'                   => __('pricing currency', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'alenastudio_plugin'),
+                'tab'                   => __('pricing currency', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -672,11 +672,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'alenastudio_plugin'),
+                'tab'                   => __('pricing currency', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -684,34 +684,34 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'alenastudio_plugin'),
+                'tab'                   => __('pricing currency', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /**
              * Time
              */
             array(
-                'label'             => __('Pricing Time', 'alenastudio_plugin'),
+                'label'             => __('Pricing Time', 'live-composer-page-builder'),
                 'id'                => 'as_pricing_css_time',
                 'std'               => 'mo',
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing time', 'alenastudio_plugin')
+                'tab'               => __('pricing time', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_color',
-                'std'                   => '#7e7e7e',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'alenastudio_plugin')
+                'tab'                   => __('pricing time', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -719,11 +719,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'alenastudio_plugin'),
+                'tab'                   => __('pricing time', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -731,25 +731,25 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'alenastudio_plugin'),
+                'tab'                   => __('pricing time', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'alenastudio_plugin'),
+                'tab'                   => __('pricing time', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -757,11 +757,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'alenastudio_plugin'),
+                'tab'                   => __('pricing time', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -769,14 +769,14 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'alenastudio_plugin'),
+                'tab'                   => __('pricing time', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /**
              * Pricing Option
              */
             array(
-                'label'                 => __('Text Align', 'alenastudio_plugin'),
+                'label'                 => __('Text Align', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_text_align_option',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -784,10 +784,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color of nth-child(odd)', 'alenastudio_plugin'),
+                'label'                 => __('BG Color of nth-child(odd)', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_bg_color_ood',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -795,10 +795,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item:nth-child(odd)',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color of nth-child(even)', 'alenastudio_plugin'),
+                'label'                 => __('BG Color of nth-child(even)', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_bg_color_even',
                 'std'                   => '#fafafa',
                 'type'                  => 'color',
@@ -806,10 +806,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item:nth-child(even)',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_line_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -817,10 +817,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -829,28 +829,28 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_line_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -858,21 +858,21 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_color',
-                'std'                   => '#2B3D4E',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin')
+                'tab'                   => __('pricing option', 'live-composer-page-builder')
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -880,11 +880,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -892,25 +892,25 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio_plugin'),
+                'label'                 => __('Line Height', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -918,11 +918,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -930,11 +930,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -943,10 +943,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -955,10 +955,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -967,46 +967,46 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'alenastudio_plugin'),
+                'tab'                   => __('pricing option', 'live-composer-page-builder'),
             ),
             /**
              *  Pricing Button Style
              */
             array(
-                'label'      => __('Button Text', 'alenastudio_plugin'),
+                'label'      => __('Button Text', 'live-composer-page-builder'),
                 'id'         => 'as_button_text',
                 'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
             array(
-                'label'   => __('URL', 'alenastudio_plugin'),
+                'label'   => __('URL', 'live-composer-page-builder'),
                 'id'      => 'as_button_url',
                 'std'     => '#',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('pricing button', 'alenastudio_plugin'),
+                'tab'     => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'   => __('Open in', 'alenastudio_plugin'),
+                'label'   => __('Open in', 'live-composer-page-builder'),
                 'id'      => 'as_button_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'alenastudio_plugin'),
+                        'label' => __('Same Tab', 'live-composer-page-builder'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'alenastudio_plugin'),
+                        'label' => __('New Tab', 'live-composer-page-builder'),
                         'value' => '_blank',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('pricing button', 'alenastudio_plugin'),
+                'tab'     => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Align', 'alenastudio_plugin'),
+                'label'                 => __('Align', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_align_position',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -1014,10 +1014,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio_plugin'),
+                'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_bg_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -1025,10 +1025,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('BG Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_bg_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -1036,10 +1036,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio_plugin'),
+                'label'                 => __('Border Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_border_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -1047,10 +1047,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_border_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -1058,19 +1058,19 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'alenastudio_plugin'),
+                'label'             => __('Duration when hover(ms)', 'live-composer-page-builder'),
                 'id'                => 'as_button_css_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('pricing button', 'alenastudio_plugin'),
+                'tab'               => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio_plugin'),
+                'label'                 => __('Border Width', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1079,28 +1079,28 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio_plugin'),
+                'label'                 => __('Borders', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio_plugin'),
+                        'label' => __('Top', 'live-composer-page-builder'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio_plugin'),
+                        'label' => __('Right', 'live-composer-page-builder'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio_plugin'),
+                        'label' => __('Bottom', 'live-composer-page-builder'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio_plugin'),
+                        'label' => __('Left', 'live-composer-page-builder'),
                         'value' => 'left'
                     ),
                 ),
@@ -1108,10 +1108,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio_plugin'),
+                'label'                 => __('Border Radius', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1120,10 +1120,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Top', 'alenastudio_plugin'),
+                'label'                 => __('Margin Top', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1132,10 +1132,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio_plugin'),
+                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1144,10 +1144,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio_plugin'),
+                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1156,10 +1156,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio_plugin'),
+                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1168,20 +1168,20 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Width', 'alenastudio_plugin'),
+                'label'                 => __('Width', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_width',
                 'std'                   => 'inline-block',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Automatic', 'alenastudio_plugin'),
+                        'label' => __('Automatic', 'live-composer-page-builder'),
                         'value' => 'inline-block'
                     ),
                     array(
-                        'label' => __('Full Width', 'alenastudio_plugin'),
+                        'label' => __('Full Width', 'live-composer-page-builder'),
                         'value' => 'block'
                     ),
                 ),
@@ -1189,13 +1189,13 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'display',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'alenastudio_plugin'),
+                'tab'                   => __('pricing button', 'live-composer-page-builder'),
             ),
             /**
              * Out line Style
              */
             array(
-                'label'                 => __('Out Line Width', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Width', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1203,11 +1203,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Offset', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Offset', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1215,22 +1215,22 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Color', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_color',
-                'std'                   => '#f9bf3b',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Out Line Color Hover', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Color Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -1238,28 +1238,28 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Out Line Style', 'alenastudio_plugin'),
+                'label'                 => __('Out Line Style', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'alenastudio_plugin'),
+                        'label' => __('Invisible', 'live-composer-page-builder'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'alenastudio_plugin'),
+                        'label' => __('Solid', 'live-composer-page-builder'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'alenastudio_plugin'),
+                        'label' => __('Dashed', 'live-composer-page-builder'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'alenastudio_plugin'),
+                        'label' => __('Dotted', 'live-composer-page-builder'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -1267,24 +1267,24 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'alenastudio_plugin'),
+                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
             ),
             /**
              * Typography
              */
             array(
-                'label'                 => __('Color', 'alenastudio_plugin'),
+                'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'alenastudio_plugin'),
+                'tab'                   => __('typography button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'alenastudio_plugin'),
+                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -1292,10 +1292,10 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'alenastudio_plugin'),
+                'tab'                   => __('typography button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio_plugin'),
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1303,11 +1303,11 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'alenastudio_plugin'),
+                'tab'                   => __('typography button', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio_plugin'),
+                'label'                 => __('Font Weight', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1315,25 +1315,25 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'alenastudio_plugin'),
+                'tab'                   => __('typography button', 'live-composer-page-builder'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio_plugin'),
+                'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'alenastudio_plugin'),
+                'tab'                   => __('typography button', 'live-composer-page-builder'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'alenastudio_plugin'),
+                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1341,7 +1341,7 @@ class AS_Pricing extends DSLC_Module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'alenastudio_plugin'),
+                'tab'                   => __('typography button', 'live-composer-page-builder'),
                 'ext'                   => 'px'
             ),
             /**             * Responsive Tablet */
@@ -2766,7 +2766,7 @@ class AS_Pricing extends DSLC_Module {
 
                     <li class="dslc-accordion-item">
                         <div class="dslc-accordion-header">
-                            <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'alenastudio_plugin'); ?></span>
+                            <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'live-composer-page-builder'); ?></span>
                             <?php if ($dslc_is_admin) : ?>
                                 <div class="dslca-accordion-action-hooks">
                                     <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
