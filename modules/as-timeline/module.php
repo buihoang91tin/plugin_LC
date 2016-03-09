@@ -19,7 +19,7 @@ class AS_Timeline extends as_module {
     }
 
     function options() {
-
+         global $as_ex_options;
         $cats         = get_terms('dslc_timeline_cats');
         $cats_choices = array();
 
@@ -380,7 +380,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-timeline-content h2 a',
@@ -418,7 +418,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => 'Open Sans',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-timeline-content h2 a',
@@ -564,7 +564,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '#dslc-theme-content-inner p',
@@ -602,7 +602,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => 'Open Sans',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '#dslc-theme-content-inner p',
@@ -715,7 +715,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_color',
-                'std'                   => '#f9bf3b',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-timeline-content .as-read-more',
@@ -753,7 +753,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_button_font_family',
-                'std'                   => 'Open Sans',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-timeline-content .as-read-more',
@@ -866,7 +866,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_datetime_color',
-                'std'                   => '#8a92a5',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-timeline-content .as-date',
@@ -904,7 +904,7 @@ class AS_Timeline extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_datetime_font_family',
-                'std'                   => 'Open Sans',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-timeline-content .as-date',

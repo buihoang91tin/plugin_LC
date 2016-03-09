@@ -16,7 +16,7 @@ class AS_Res_Menu extends as_module {
     }
 
     function options() {
-
+        global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -401,7 +401,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => '#3d3d3d',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -439,7 +439,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -488,7 +488,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -526,7 +526,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -564,7 +564,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
@@ -602,7 +602,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
@@ -651,7 +651,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-menu-label',
@@ -689,7 +689,7 @@ class AS_Res_Menu extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-menu-label',

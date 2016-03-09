@@ -18,6 +18,7 @@ class AS_SubscriptionBox extends as_module {
 
     // Module Options
     function options() {
+         global $as_ex_options;
         // The options array
         $dslc_options = array(
             /* CLIKC TO EDIT */
@@ -122,7 +123,7 @@ class AS_SubscriptionBox extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_color',
-                'std'                   => '#ccc',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_email_mailchimp',
@@ -460,7 +461,7 @@ class AS_SubscriptionBox extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
@@ -509,7 +510,7 @@ class AS_SubscriptionBox extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',

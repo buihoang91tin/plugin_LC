@@ -11,6 +11,7 @@ class AS_Heading_Title_Module_2 extends as_module {
     // Module Options
     function options() {
         // The options array
+         global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -375,7 +376,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_color',
-                'std'                   => '#403c34',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-heading-title-2 .as-big-title-heading',
@@ -413,7 +414,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_font_family',
-                'std'                   => 'Arvo',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-heading-title-2 .as-big-title-heading',
@@ -463,7 +464,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_color',
-                'std'                   => '#00bad0',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-small-subtitle-heading',
@@ -501,7 +502,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_font_family',
-                'std'                   => 'Arvo',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-small-subtitle-heading',

@@ -19,7 +19,6 @@ define('AS_EXTENSION_ABS', dirname(__FILE__));
 define('AS_EXTENSION_DEV_MODE', false);
 define('AS_EXTENSION_LINK', 'index.php?page=as_getting_start');
 
-require_once AS_EXTENSION_DIR . '/include/as_module.php';
 
 /* Load this after all */
 

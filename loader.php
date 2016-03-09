@@ -6,7 +6,7 @@ include AS_EXTENSION_ABS . '/include/ajax.php';
 //add redux
 require_once dirname(__FILE__) . '/admin/inc/framework.php';
 require_once dirname(__FILE__) . '/admin/inc/admin-config.php';
-
+require_once dirname(__FILE__) . '/include/as_module.php';
 //// Include modules
 include AS_EXTENSION_ABS . '/lc-addon-animations/lc-addon-animations.php';
 include AS_EXTENSION_ABS . '/modules/as-accordion/module.php';
@@ -64,6 +64,8 @@ function as_load_script() {
       wp_enqueue_script('as-circle-char', AS_EXTENSION_URL . 'js/lib/circle_chart.js', array(
         'jquery'));
       wp_enqueue_script('as-video-module', AS_EXTENSION_URL . 'js/lib/video.js', array(
+        'jquery'));
+      wp_enqueue_script('as-text-rotator', AS_EXTENSION_URL . 'js/text-rotator-main.js', array(
         'jquery'));
     wp_enqueue_script('as-twentytwenty', AS_EXTENSION_URL . 'js/jquery.twentytwenty.js', array(
         'jquery'));

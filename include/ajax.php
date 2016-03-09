@@ -1,5 +1,5 @@
 <?php
-if(!function_exists(load_project)){
+if(!function_exists('load_project')){
 add_action( 'wp_ajax_load_projecst', 'load_project' );
 function load_project() {
     $data              = $_REQUEST['content'];
@@ -71,5 +71,5 @@ function load_project() {
         'next_post' => get_next_previous_port_id($project->ID, 'prev'),
     );
     wp_send_json($response);
-}
-}
+};
+};

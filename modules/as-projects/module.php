@@ -18,6 +18,7 @@ class AS_Projects extends as_module {
     }
 
     function options() {
+        global $as_ex_options;
         $cats         = get_terms('dslc_projects_cats');
         $cats_choices = array();
         foreach ($cats as
@@ -356,7 +357,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_border_color',
-                'std'                   => '#ededed',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-post-separator',
@@ -702,7 +703,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => '#fff',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-title h2 a',
@@ -766,7 +767,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
@@ -845,7 +846,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_cats_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-cats',
@@ -883,7 +884,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_cats_font_family',
-                'std'                   => 'Bitter',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-cats',
@@ -955,7 +956,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
@@ -1029,7 +1030,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Navigation', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_nav_color',
-                'std'                   => 'rgb(44, 62, 79)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
@@ -1040,7 +1041,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Nav', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_nav_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
@@ -1091,7 +1092,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Title', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_title_color',
-                'std'                   => 'rgb(89, 89, 89)',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
@@ -1102,7 +1103,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Title', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_title_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
@@ -1235,7 +1236,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Category', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_category_color',
-                'std'                   => 'rgb(131, 131, 131)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
@@ -1246,7 +1247,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Category', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_category_font_family',
-                'std'                   => 'Bitter',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
@@ -1385,7 +1386,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Excerpt', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_excerpt_color',
-                'std'                   => 'rgb(76, 76, 76)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
@@ -1396,7 +1397,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Excerpt', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_excerpt_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
@@ -1501,7 +1502,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_filters_color_hover',
-                'std'                   => 'rgb(248, 191, 59)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',

@@ -18,7 +18,7 @@ class AS_Pricing_3 extends as_module {
     }
 
     function options() {
-
+        global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -223,7 +223,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
-                'std'                   => '#fff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-icon-style',
@@ -389,7 +389,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
@@ -427,7 +427,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
@@ -512,7 +512,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_subtitle_color',
-                'std'                   => '#797979',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-subtitle p',
@@ -550,7 +550,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_subtitle_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_sub_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-subtitle p',
@@ -644,7 +644,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_color',
-                'std'                   => '#ef3a43',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
@@ -682,7 +682,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_font_family',
-                'std'                   => 'Myriad Pro',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
@@ -760,7 +760,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_color',
-                'std'                   => '#fff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
@@ -798,7 +798,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_font_family',
-                'std'                   => 'Myriad Pro',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
@@ -845,7 +845,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_color',
-                'std'                   => '#fff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
@@ -883,7 +883,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_font_family',
-                'std'                   => 'Myriad Pro',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
@@ -1006,7 +1006,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_color',
-                'std'                   => '#fff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
@@ -1017,7 +1017,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color Info', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_color_2',
-                'std'                   => '#fff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title_2',
@@ -1371,7 +1371,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Out Line Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_color',
-                'std'                   => '#f9bf3b',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
@@ -1425,7 +1425,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_color',
-                'std'                   => '#ffffff',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
@@ -1474,7 +1474,7 @@ class AS_Pricing_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_font_family',
-                'std'                   => 'Raleway',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',

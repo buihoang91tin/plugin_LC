@@ -16,7 +16,7 @@ class AS_text_rotator extends as_module {
     }
 
     function options() {
-
+global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -63,38 +63,50 @@ class AS_text_rotator extends as_module {
             array(
                 'label'   => __('Effect Word', 'live-composer-page-builder'),
                 'id'      => 'as_rotator_style',
-                'std'     => 'spin',
+                'std'     => 'rotate-1',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Fade', 'live-composer-page-builder'),
-                        'value' => 'fade',
+                        'label' => __('Style 1', 'live-composer-page-builder'),
+                        'value' => 'rotate-1',
                     ),
                     array(
-                        'label' => __('Flip', 'live-composer-page-builder'),
-                        'value' => 'flip',
+                        'label' => __('Style 2', 'live-composer-page-builder'),
+                        'value' => 'letters type',
                     ),
                     array(
-                        'label' => __('FlipCube', 'live-composer-page-builder'),
-                        'value' => 'flipCube',
+                        'label' => __('Style 3', 'live-composer-page-builder'),
+                        'value' => 'letters rotate-2',
                     ),
                     array(
-                        'label' => __('FlipUp', 'live-composer-page-builder'),
-                        'value' => 'flipUp',
+                        'label' => __('Style 4', 'live-composer-page-builder'),
+                        'value' => 'loading-bar',
                     ),
                     array(
-                        'label' => __('Spin', 'live-composer-page-builder'),
-                        'value' => 'spin',
+                        'label' => __('Style 5', 'live-composer-page-builder'),
+                        'value' => 'slide',
+                    ),
+                    array(
+                        'label' => __('Style 6', 'live-composer-page-builder'),
+                        'value' => 'clip is-full-width',
+                    ),
+                    array(
+                        'label' => __('Style 7', 'live-composer-page-builder'),
+                        'value' => 'zoom',
+                    ),
+                    array(
+                        'label' => __('Style 8', 'live-composer-page-builder'),
+                        'value' => 'letters rotate-3',
+                    ),
+                    array(
+                        'label' => __('Style 9', 'live-composer-page-builder'),
+                        'value' => 'letters scale',
+                    ),
+                    array(
+                        'label' => __('Style 10', 'live-composer-page-builder'),
+                        'value' => 'push',
                     ),
                 ),
-            ),
-            array(
-                'label'             => __('Speed', 'live-composer-page-builder'),
-                'id'                => 'as_rotator_speed',
-                'std'               => '1500',
-                'type'              => 'text',
-                'refresh_on_change' => true,
-                'help'              => __('Just only type numper. Ex: 1 -> 5000', 'live-composer-page-builder'),
             ),
             /**
              * General
@@ -192,7 +204,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-body',
+                'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'tab'                   => __('General', 'live-composer-page-builder'),
@@ -206,7 +218,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-body',
+                'affect_on_change_el'   => '.as-text-wraper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'tab'                   => __('General', 'live-composer-page-builder'),
@@ -230,10 +242,10 @@ class AS_text_rotator extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_title_color',
-                'std'                   => 'rgb(61, 61, 61)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('text', 'live-composer-page-builder'),
@@ -244,7 +256,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'tab'                   => __('text', 'live-composer-page-builder'),
@@ -256,7 +268,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
                 'tab'                   => __('text', 'live-composer-page-builder'),
@@ -268,10 +280,10 @@ class AS_text_rotator extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_title_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
                 'tab'                   => __('text', 'live-composer-page-builder'),
@@ -282,7 +294,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '53',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'tab'                   => __('text', 'live-composer-page-builder'),
@@ -291,14 +303,13 @@ class AS_text_rotator extends as_module {
             /**
              * Text Rotate
              */
-
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_title_color',
-                'std'                   => 'rgb(61, 61, 61)',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -309,7 +320,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -321,7 +332,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -333,10 +344,10 @@ class AS_text_rotator extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_title_font_family',
-                'std'                   => 'Lato',
+                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -347,7 +358,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '53',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -359,7 +370,7 @@ class AS_text_rotator extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -373,11 +384,12 @@ class AS_text_rotator extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
-                'ext'                   => 'px'
+                'ext'                   => 'px',
+                'max'                   => 500,
             ),
             /**
              * Responsive Tablet
@@ -439,12 +451,24 @@ class AS_text_rotator extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size Text', 'live-composer-page-builder'),
                 'id'                    => 'css_res_t_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-wraper .as-text-rotator-text',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Size Rotator', 'live-composer-page-builder'),
+                'id'                    => 'css_res_t_font_size_text_rotator',
+                'std'                   => '15',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-wraper .cd-words-wrapper ',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
                 'tab'                   => __('tablet', 'live-composer-page-builder'),
@@ -515,7 +539,19 @@ class AS_text_rotator extends as_module {
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotate-wrapper,as-text-rotate-wrapper span',
+                'affect_on_change_el'   => '.as-text-wraper .as-text-rotator-text',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'id'                    => 'css_res_p_font_size_text_rotator',
+                'std'                   => '10',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-wraper .cd-words-wrapper',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
                 'tab'                   => __('phone', 'live-composer-page-builder'),
@@ -537,42 +573,29 @@ class AS_text_rotator extends as_module {
             $dslc_is_admin = false;
 
         $this->module_start($options);
-
-        /* CUSTOM SPEED NUMBER */
-        global $as_speed_text;
-        $as_speed_text = $options['as_rotator_speed'];
-        if (is_numeric($as_speed_text)) {
-            switch ($as_speed_text) {
-                case $as_speed_text > 5000:
-                    $as_speed_text = 5000;
-                    break;
-                case $as_speed_text < 1:
-                    $as_speed_text = 10;
-                    break;
-            }
-        }
-        else {
-            $as_speed_text = 100;
-        }
-        /* END CUSTOM SPEED NUMBER */
+        $as_text = explode(',', $options['as_rotator_2']);
         ?>
-
         <!-- Module output stars here -->
-        <div class="as-text-body">
-            <div class="as-text-wraper">
-                <div class="as-text-main">
-                    <div class="as-text-rotate-wrapper">
-	                    <?php echo esc_attr($options['as_rotator_1']); ?> 
-	                    <span class="as-rotate" data-anim-text="<?php echo esc_attr($options['as_rotator_style']); ?>"data-speed-text = "<?php echo esc_attr($as_speed_text); ?>"><?php echo esc_attr($options['as_rotator_2']); ?></span> 
-	                    <?php echo esc_attr($options['as_rotator_3']); ?>
-	                </div>
-                </div>
-            </div>
-        </div>	
-
+        <div class="as-text-rotator as-text-wraper">
+            <section class="cd-intro as-text-rotator" >
+                <h1 class="cd-headline <?php echo $options['as_rotator_style']; ?>">
+                    <span class="as-text-rotator-text"><?php echo esc_attr($options['as_rotator_1']); ?></span>
+                    <span class="cd-words-wrapper ">
+                        <b class="is-visible"><?php echo $as_text[0]; ?></b>
+                        <?php
+                        for ($i = 1;
+                                $i < count($as_text);
+                                $i++) {
+                            echo '<b>' . $as_text[$i] . '</b>';
+                        }
+                        ?>
+                    </span>
+                    <span class="as-text-rotator-text"><?php echo esc_attr($options['as_rotator_3']); ?></span>
+                </h1>
+            </section>
+        </div>
         <?php
         wp_reset_postdata();
-
         /* Module output ends here */
 
         /* Module output ends here */

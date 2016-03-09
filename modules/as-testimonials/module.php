@@ -16,7 +16,7 @@ class AS_Testimonials_Simple extends as_module {
     }
 
     function options() {
-
+         global $as_ex_options;
         $cats         = get_terms('dslc_testimonials_cats');
         $cats_choices = array();
 
@@ -515,7 +515,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_quote_color',
-                'std'                   => '#797979',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
@@ -777,7 +777,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_name_color',
-                'std'                   => '#797979',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
@@ -886,7 +886,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_position_color',
-                'std'                   => '#cddef7',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
@@ -1116,7 +1116,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color Icon', 'live-composer-page-builder'),
                 'id'                    => 'css_circle_arrow_font_color',
-                'std'                   => '#000000',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-next > span, .as-testimonials-simple-prev > span',

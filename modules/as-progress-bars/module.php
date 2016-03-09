@@ -16,7 +16,7 @@ class AS_Progress_Bars extends as_module {
     }
 
     function options() {
-
+global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -238,7 +238,7 @@ class AS_Progress_Bars extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_label_color',
-                'std'                   => '#3d3d3d',
+                'std'                   => $as_ex_options['as_ex_color_main'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
@@ -276,7 +276,7 @@ class AS_Progress_Bars extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_label_font_family',
-                'std'                   => 'Oswald',
+                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
@@ -419,7 +419,7 @@ class AS_Progress_Bars extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_loader_color',
-                'std'                   => '#62cbd7',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-progress-bar-loader-inner',
