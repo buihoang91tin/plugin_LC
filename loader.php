@@ -25,7 +25,7 @@ include AS_EXTENSION_ABS . '/modules/as-infobox-4/module.php';
 include AS_EXTENSION_ABS . '/modules/as-infobox-5/module.php';
 include AS_EXTENSION_ABS . '/modules/as-introduce/module.php';
 include AS_EXTENSION_ABS . '/modules/as-listing/module.php';
-include AS_EXTENSION_ABS . '/modules/as-posts/module.php';
+//include AS_EXTENSION_ABS . '/modules/as-posts/module.php';
 include AS_EXTENSION_ABS . '/modules/as-pricing/module.php';
 include AS_EXTENSION_ABS . '/modules/as-pricing-2/module.php';
 include AS_EXTENSION_ABS . '/modules/as-pricing-3/module.php';
@@ -95,7 +95,7 @@ add_action('dslc_hook_register_modules', create_function('', 'return dslc_regist
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Heading_Title_Module" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Heading_Title_Module_2" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Heading_Title_Module_3" );'));
-add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Posts" );'));
+//add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Posts" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Pricing" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Pricing_2" );'));
 add_action('dslc_hook_register_modules', create_function('', 'return dslc_register_module( "AS_Pricing_3" );'));
