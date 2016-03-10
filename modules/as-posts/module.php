@@ -3088,6 +3088,7 @@ class AS_Posts extends as_module {
                                                 </a>
                                                 <div class="as-post-like-share">
                                                     <div class="as-btn-heart-blog">
+                                                        <!--  error like and share function-->
                                                         <a href="#" class="as-post-like <?php echo as_is_like_post($post->ID); ?>" data-id="<?php echo get_the_ID(); ?>">
                                                             <span class="dslc-icon dslc-icon-heart-empty"></span>
                                                             <span class="number-like-heart">
@@ -3097,22 +3098,6 @@ class AS_Posts extends as_module {
                                                             </span>
                                                         </a>
                                                     </div>
-                                                    <!-- <div class="as-btn-share-social-blog">
-                                                            <span class="dslc-icon dslc-icon-share"></span>
-                                                            <ul class="as-list-icon-share">
-                                                                    <li>
-                                                                            <a class="as-share-blog-twitter" href="http://twitter.com/share?url=<?php the_permalink() ?>&amp;lang=en&amp;text=Check out this awesome project:&amp;" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=620');return false;" data-count="none" data-via=" ">
-                                                                                    <span class="dslc-icon dslc-icon-twitter"></span>
-                                                                            </a>
-                                                                            <a class="sb-facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=660');return false;" target="_blank">
-                                                                                    <span class="dslc-icon dslc-icon-facebook"></span>
-                                                                            </a>
-                                            <a class="sb-google" href="https://plus.google.com/share?url=<?php the_permalink() ?>&amp;title=<?php wp_title('') ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=500');return false;">
-                                                    <span class="dslc-icon dslc-icon-google-plus"></span>
-                                            </a>
-                                                                    </li>
-                                                            </ul>
-                                                    </div> -->
                                                 </div>
                                             </div><!-- .dslc-cpt-post-read-more -->
 

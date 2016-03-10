@@ -16,7 +16,7 @@ class AS_Button extends as_module {
     }
 
     function options() {
-         global $as_ex_options;
+        global $as_ex_options;
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -44,7 +44,7 @@ class AS_Button extends as_module {
             array(
                 'label'      => __('Button Text', 'live-composer-page-builder'),
                 'id'         => 'as_button_text',
-                'std'        => __('CLICK TO EDIT', 'alenastudio'),
+                'std'        => __('CLICK TO EDIT','alenastudio'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
@@ -83,7 +83,7 @@ class AS_Button extends as_module {
             array(
                 'label'                 => __('BG Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_bg_color',
-                'std'                   => $as_ex_color_main,
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
@@ -231,6 +231,7 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'display',
                 'section'               => 'styling',
             ),
+            
             /**
              * Out line Style
              */
@@ -261,7 +262,7 @@ class AS_Button extends as_module {
             array(
                 'label'                 => __('Out Line Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
@@ -434,7 +435,7 @@ class AS_Button extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_icon_color',
-                'std'                   => '',
+                'std'                   => $as_ex_options['as_ex_color_content'],
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
@@ -914,6 +915,7 @@ class AS_Button extends as_module {
                 )
             ),
         );
+
         $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
         $dslc_options = array_merge($dslc_options, $this->presets_options());
 

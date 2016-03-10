@@ -864,7 +864,7 @@ class AS_Circle_Chart_Module extends as_module {
         ?>
         <div class="circle-chart-wrapper">
             <span class="chart" data-percent="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-easing="<?php echo esc_attr($options['circle_chart_animation']); ?>" data-duration="<?php echo esc_attr($options['circle_chart_duration']); ?>" data-line-cap="<?php echo esc_attr($options['circle_chart_cap']); ?>" data-line-width="<?php echo esc_attr($options['circle_chart_width']); ?>" data-track-color="<?php echo esc_attr($options['circle_chart_track']); ?>" data-bar-color="<?php echo esc_attr($options['circle_chart_bar']); ?>" data-size="<?php echo esc_attr($options['circle_chart_size']); ?>" style="width:<?php echo esc_attr($options['circle_chart_size']); ?>px;height:<?php echo esc_attr($options['circle_chart_size']); ?>px;">
-                <span class="percent-chart <?php echo as_is_active_lc() ? 'active-lc' : ''; ?>" data-from="0" data-to="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-speed="1500" data-refresh-interval="25" style="line-height:<?php echo esc_attr($options['circle_chart_size']); ?>px;"><?php echo esc_attr($options['circle_chart_percent']); ?></span>
+                <span class="percent-chart <?php echo $dslc_is_admin ? 'active-lc' : ''; ?>" data-from="0" data-to="<?php echo esc_attr($options['circle_chart_percent']); ?>" data-speed="1500" data-refresh-interval="25" style="line-height:<?php echo esc_attr($options['circle_chart_size']); ?>px;"><?php echo esc_attr($options['circle_chart_percent']); ?></span>
             </span>
             <div class="pie-content">
                 <?php if ($dslc_is_admin) : ?>
