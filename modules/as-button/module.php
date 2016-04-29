@@ -1,6 +1,6 @@
 <?php
 
-class AS_Button extends as_module {
+class AS_Button extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Button extends as_module {
     }
 
     function options() {
-        global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -44,7 +44,7 @@ class AS_Button extends as_module {
             array(
                 'label'      => __('Button Text', 'live-composer-page-builder'),
                 'id'         => 'as_button_text',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
@@ -262,7 +262,7 @@ class AS_Button extends as_module {
             array(
                 'label'                 => __('Out Line Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
@@ -316,7 +316,7 @@ class AS_Button extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#212121',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
@@ -365,7 +365,7 @@ class AS_Button extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
@@ -435,7 +435,7 @@ class AS_Button extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
@@ -949,7 +949,7 @@ class AS_Button extends as_module {
                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['as_button_icon_id']); ?>"></span>
                     <?php endif; ?>
                 <?php endif; ?>
-                <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_button_text'], 'alenastudio'); ?></span>
+                <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_button_text'], 'monalisa'); ?></span>
                 <?php if ($options['as_button_position_icon'] == 'right') : ?>
                     <?php if ($options['as_button_state'] == 'enabled') : ?>
                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['as_button_icon_id']); ?>"></span>

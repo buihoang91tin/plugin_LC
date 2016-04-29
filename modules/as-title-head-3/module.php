@@ -1,6 +1,6 @@
 <?php
 
-class AS_Heading_Title_Module_3 extends as_module {
+class AS_Heading_Title_Module_3 extends DSLC_Module {
 
     // Module Attributes
     var $module_id       = 'AS_Heading_Title_Module_3';
@@ -10,7 +10,6 @@ class AS_Heading_Title_Module_3 extends as_module {
 
     // Module Options
     function options() {
-         global $as_ex_options;
         // The options array
         $dslc_options = array(
             array(
@@ -408,7 +407,7 @@ class AS_Heading_Title_Module_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(33, 33, 33)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-heading-wrapper .as-heading-title-3 .as-heading-icon .dslc-icon',
@@ -483,7 +482,7 @@ class AS_Heading_Title_Module_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#212121',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-heading-title-3 .as-big-title-heading',
@@ -521,7 +520,7 @@ class AS_Heading_Title_Module_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-heading-title-3 .as-big-title-heading',
@@ -571,7 +570,7 @@ class AS_Heading_Title_Module_3 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-small-subtitle-heading',
@@ -609,7 +608,7 @@ class AS_Heading_Title_Module_3 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_css_subtitle_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-small-subtitle-heading',

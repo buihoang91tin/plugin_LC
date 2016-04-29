@@ -1,6 +1,6 @@
 <?php
 
-class AS_Testimonials_Simple extends as_module {
+class AS_Testimonials_Simple extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Testimonials_Simple extends as_module {
     }
 
     function options() {
-         global $as_ex_options;
+
         $cats         = get_terms('dslc_testimonials_cats');
         $cats_choices = array();
 
@@ -515,7 +515,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_quote_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-quote',
@@ -777,7 +777,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_name_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-name',
@@ -886,7 +886,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_position_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#cddef7',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-position',
@@ -1116,7 +1116,7 @@ class AS_Testimonials_Simple extends as_module {
             array(
                 'label'                 => __('Color Icon', 'live-composer-page-builder'),
                 'id'                    => 'css_circle_arrow_font_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#000000',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-testimonials-simple-next > span, .as-testimonials-simple-prev > span',
@@ -1736,16 +1736,20 @@ class AS_Testimonials_Simple extends as_module {
         $show_carousel_arrows = false;
         if (in_array('arrows', $sub_elements))
             $show_carousel_arrows = true;
-
+ // Fix for offset braking pagination
+        $query_offset = $options['offset'];
+        if ($query_offset > 0 && $paged > 1)
+            $query_offset = ( $paged - 1 ) * $options['amount'] + $options['offset'];
         // General args
         $args = array(
             'post_type'      => 'dslc_testimonials',
             'posts_per_page' => $options['amount'],
             'order'          => $options['order'],
-            'orderby'        => $options['orderby'],
-            'offset'         => $options['offset']
+            'orderby'        => $options['orderby']
         );
-
+        if ($query_offset > 0) {
+            $args['offset'] = $query_offset;
+        }
 
         // Do the query
         $dslc_query = new WP_Query($args);

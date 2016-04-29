@@ -1,6 +1,6 @@
 <?php
 
-class AS_Listing extends as_module {
+class AS_Listing extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Listing extends as_module {
     }
 
     function options() {
-        global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -366,7 +366,7 @@ class AS_Listing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(36, 120, 204)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-lis-icon .dslc-icon',
@@ -443,7 +443,7 @@ class AS_Listing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#3d3d3d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-lis-title h4',
@@ -481,7 +481,7 @@ class AS_Listing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-lis-title h4',
@@ -522,7 +522,7 @@ class AS_Listing extends as_module {
             array(
                 'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -550,7 +550,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -563,7 +563,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius', 'alenastudio'),
+                'label'                 => __('Border Radius', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -576,7 +576,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -589,7 +589,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -604,7 +604,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -617,7 +617,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width', 'alenastudio'),
+                'label'                 => __('Width', 'monalisa'),
                 'id'                    => 'css_res_t_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -630,7 +630,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width(Icon)', 'alenastudio'),
+                'label'                 => __('Border Width(Icon)', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -643,7 +643,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius(Icon)', 'alenastudio'),
+                'label'                 => __('Border Radius(Icon)', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -656,7 +656,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top(Icon)', 'alenastudio'),
+                'label'                 => __('Margin Top(Icon)', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -671,7 +671,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right(Icon)', 'alenastudio'),
+                'label'                 => __('Margin Right(Icon)', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -686,7 +686,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper )(Icon)', 'alenastudio'),
+                'label'                 => __('Size ( Wrapper )(Icon)', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -701,7 +701,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size ( Icon )', 'alenastudio'),
+                'label'                 => __('Size ( Icon )', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -714,7 +714,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size(Title)', 'alenastudio'),
+                'label'                 => __('Font Size(Title)', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -727,7 +727,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight(Title)', 'alenastudio'),
+                'label'                 => __('Font Weight(Title)', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -743,7 +743,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height(Title)', 'alenastudio'),
+                'label'                 => __('Line Height(Title)', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -756,7 +756,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom(Title)', 'alenastudio'),
+                'label'                 => __('Margin Bottom(Title)', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -790,7 +790,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -803,7 +803,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius', 'alenastudio'),
+                'label'                 => __('Border Radius', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -816,7 +816,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -829,7 +829,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -844,7 +844,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -857,7 +857,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width', 'alenastudio'),
+                'label'                 => __('Width', 'monalisa'),
                 'id'                    => 'css_res_p_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -870,7 +870,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Icon )', 'alenastudio'),
+                'label'                 => __('Border Width( Icon )', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -883,7 +883,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Icon )', 'alenastudio'),
+                'label'                 => __('Border Radius( Icon )', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -896,7 +896,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Icon )', 'alenastudio'),
+                'label'                 => __('Margin Top( Icon )', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -911,7 +911,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Icon )', 'alenastudio'),
+                'label'                 => __('Margin Right( Icon )', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -926,7 +926,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper-Icon )', 'alenastudio'),
+                'label'                 => __('Size ( Wrapper-Icon )', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -941,7 +941,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size( Icon )', 'alenastudio'),
+                'label'                 => __('Size( Icon )', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -954,7 +954,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Title )', 'alenastudio'),
+                'label'                 => __('Font Size( Title )', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -967,7 +967,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Title )', 'alenastudio'),
+                'label'                 => __('Font Weight( Title )', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -983,7 +983,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( Title )', 'alenastudio'),
+                'label'                 => __('Line Height( Title )', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -996,7 +996,7 @@ class AS_Listing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Title )', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Title )', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',

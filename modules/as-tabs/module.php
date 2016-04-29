@@ -1,6 +1,6 @@
 <?php
 
-class AS_Tabs extends as_module {
+class AS_Tabs extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -18,7 +18,7 @@ class AS_Tabs extends as_module {
     }
 
     function options() {
-         global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -161,7 +161,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __(' Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#8d8d8d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
@@ -348,7 +348,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_nav_active_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#8d8d8d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
@@ -497,7 +497,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-icon',
@@ -611,7 +611,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __(' Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#8d8d8d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
@@ -649,7 +649,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
@@ -785,7 +785,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
@@ -823,7 +823,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h1_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
@@ -917,7 +917,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __(' BG Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_bg_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
@@ -1004,7 +1004,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
@@ -1042,7 +1042,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h2_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
@@ -1223,7 +1223,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
@@ -1261,7 +1261,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h3_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
@@ -1442,7 +1442,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
@@ -1480,7 +1480,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h4_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
@@ -1661,7 +1661,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
@@ -1699,7 +1699,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h5_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
@@ -1880,7 +1880,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
@@ -1918,7 +1918,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_h6_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
@@ -2037,7 +2037,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_li_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content li',
@@ -2075,7 +2075,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_li_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content li',
@@ -2501,7 +2501,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#4d4d4d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
@@ -2539,7 +2539,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_inputs_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => 'input[type=text],input[type=email],textarea',
@@ -2688,7 +2688,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content blockquote, .dslc-tabs-content blockquote p',
@@ -2726,7 +2726,7 @@ class AS_Tabs extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_blockquote_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-tabs-content blockquote, .dslc-tabs-content blockquote p',
@@ -3190,7 +3190,7 @@ class AS_Tabs extends as_module {
                 <?php else : ?>
 
                     <div class="dslc-tabs-tab-content">
-                        <h4 class="dslc-tabs-nav-hook"><?php _e('CLICK TO EDIT', 'alenastudio'); ?></h4>
+                        <h4 class="dslc-tabs-nav-hook"><?php _e('CLICK TO EDIT', 'monalisa'); ?></h4>
                         <div class="dslca-editable-content">
                             <?php _e('This is just placeholder text.', 'live-composer-page-builder'); ?>
                         </div>

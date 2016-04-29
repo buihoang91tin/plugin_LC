@@ -1,6 +1,6 @@
 <?php
 
-class AS_WooCommerce_Products extends as_module {
+class AS_WooCommerce_Products extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -15,7 +15,7 @@ class AS_WooCommerce_Products extends as_module {
     }
 
     function options() {
- global $as_ex_options;
+
         $cats         = get_terms('product_cat');
         $cats_choices = array();
 
@@ -334,7 +334,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_border_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ededed',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-post-separator',
@@ -706,7 +706,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Color Icon', 'live-composer-page-builder'),
                 'id'                    => 'css_main_inner_color_icon',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#00bad0',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button span.dslc-icon',
@@ -781,7 +781,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#212121',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-product-title h2 a',
@@ -830,7 +830,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-product-title h2,.dslc-product-title h2 a',
@@ -897,7 +897,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_price_2_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#00bad0',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-product-customize .dslc-product-price-secondary',
@@ -908,7 +908,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Color ( Non-discount price )', 'live-composer-page-builder'),
                 'id'                    => 'css_price_2_non_discount_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#d1d1d1',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-product-customize .dslc-product-price-secondary del',
@@ -946,7 +946,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_price_2_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Arvo',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-product-customize .dslc-product-price-secondary',
@@ -972,7 +972,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ebebeb',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-product-sep',
@@ -1006,7 +1006,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Add to cart - Color', 'live-composer-page-builder'),
                 'id'                    => 'css_addtocart_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#00bad0',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-product-extra .dslc-product-add-to-cart',
@@ -1044,7 +1044,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Add to cart - Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_addtocart_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-product-extra .dslc-product-add-to-cart',
@@ -1063,7 +1063,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Details - Color', 'live-composer-page-builder'),
                 'id'                    => 'css_details_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#8d8d8d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-product-extra .dslc-product-details',
@@ -1101,7 +1101,7 @@ class AS_WooCommerce_Products extends as_module {
             array(
                 'label'                 => __('Details - Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_details_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-product-extra .dslc-product-details',
@@ -1720,7 +1720,9 @@ class AS_WooCommerce_Products extends as_module {
                 'orderby'        => $options['orderby'],
                 'offset'         => $query_offset
             );
-
+if ($query_offset > 0) {
+            $args['offset'] = $query_offset;
+        }
             if (isset($options['categories']) && $options['categories'] != '') {
 
                 $cats_array = explode(' ', trim($options['categories']));

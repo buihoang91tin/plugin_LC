@@ -1,6 +1,6 @@
 <?php
 
-class AS_SubscriptionBox extends as_module {
+class AS_SubscriptionBox extends DSLC_Module {
 
     // Module Attributes
     var $module_id;
@@ -18,7 +18,6 @@ class AS_SubscriptionBox extends as_module {
 
     // Module Options
     function options() {
-         global $as_ex_options;
         // The options array
         $dslc_options = array(
             /* CLIKC TO EDIT */
@@ -123,7 +122,7 @@ class AS_SubscriptionBox extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_css_input_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ccc',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_email_mailchimp',
@@ -461,7 +460,7 @@ class AS_SubscriptionBox extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
@@ -510,7 +509,7 @@ class AS_SubscriptionBox extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_newsletter_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
@@ -555,7 +554,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -568,7 +567,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_padding_vertical_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -581,7 +580,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_padding_horizontal_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -594,7 +593,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width (%)( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Width (%)( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_input_width',
                 'std'                   => '70',
                 'type'                  => 'slider',
@@ -607,7 +606,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Margin Right( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_input_margin_right',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -620,7 +619,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_input_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -633,7 +632,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_input_padding_vertical_form',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -646,7 +645,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_css_input_padding_horizontal_form',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -659,7 +658,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_input_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -672,7 +671,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -685,7 +684,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -698,7 +697,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -711,7 +710,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -724,7 +723,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -737,7 +736,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_newsletter_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -750,7 +749,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_newsletter_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -763,7 +762,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography ) ', 'alenastudio'),
+                'label'                 => __('Font Size( typography ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -776,7 +775,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( typography ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -792,7 +791,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( typography ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_newsletter_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -828,7 +827,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -841,7 +840,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_padding_vertical_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -854,7 +853,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_padding_horizontal_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -867,7 +866,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width (%)( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Width (%)( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_input_width',
                 'std'                   => '70',
                 'type'                  => 'slider',
@@ -880,7 +879,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Margin Right( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_input_margin_right',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -893,7 +892,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_input_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -906,7 +905,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_input_padding_vertical_form',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -919,7 +918,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_css_input_padding_horizontal_form',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -932,7 +931,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Input Form ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Input Form ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_input_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -945,7 +944,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -958,7 +957,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -971,7 +970,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -984,7 +983,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -997,7 +996,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Button Style ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Button Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1010,7 +1009,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_newsletter_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1023,7 +1022,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_newsletter_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1036,7 +1035,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography ) ', 'alenastudio'),
+                'label'                 => __('Font Size( typography ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1049,7 +1048,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( typography ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1065,7 +1064,7 @@ class AS_SubscriptionBox extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( typography ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_newsletter_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1136,7 +1135,7 @@ class AS_SubscriptionBox extends as_module {
         <div class="as_mailchimp_form">
             <!-- For subscription Form-->
             <form method="GET" action="<?php echo $mailchimp_s_url ?>" target="_blank">
-                <input class="as_email_mailchimp" type="email" required="" placeholder="<?php _e('Email Address', 'alenastudio') ?>" name="EMAIL">
+                <input class="as_email_mailchimp" type="email" required="" placeholder="<?php _e('Email Address', 'monalisa') ?>" name="EMAIL">
                 <input type="hidden" name="u" value="<?php echo $mailchimp_data[0] ?>">
                 <input type="hidden" name="id" value="<?php echo $mailchimp_data[1] ?>">
                 <button class="as_button_submit_mailchimp" type="submit" <?php echo $duration_hover; ?>><?php echo esc_html($options['as_button_text']); ?></button>

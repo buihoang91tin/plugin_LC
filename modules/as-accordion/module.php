@@ -1,6 +1,6 @@
 <?php
 
-class AS_Accordion extends as_module {
+class AS_Accordion extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -11,37 +11,37 @@ class AS_Accordion extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Accordion';
-        $this->module_title    = __('AS - Accordion', 'alenastudio');
+        $this->module_title    = __('AS - Accordion', 'monalisa');
         $this->module_icon     = 'reorder';
         $this->module_category = 'as - element';
         $this->handle_like     = 'accordion';
     }
 
     function options() {
-        global $as_ex_options;
+
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio'),
+                'label'   => __('Show On', 'monalisa'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio'),
+                        'label' => __('Desktop', 'monalisa'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio'),
+                        'label' => __('Tablet', 'monalisa'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio'),
+                        'label' => __('Phone', 'monalisa'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('(hidden) Accordion Content', 'alenastudio'),
+                'label'      => __('(hidden) Accordion Content', 'monalisa'),
                 'id'         => 'accordion_content',
                 'std'        => '',
                 'type'       => 'textarea',
@@ -49,7 +49,7 @@ class AS_Accordion extends as_module {
                 'section'    => 'styling',
             ),
             array(
-                'label'      => __('(hidden) Accordion Nav', 'alenastudio'),
+                'label'      => __('(hidden) Accordion Nav', 'monalisa'),
                 'id'         => 'accordion_nav',
                 'std'        => '',
                 'type'       => 'textarea',
@@ -57,7 +57,7 @@ class AS_Accordion extends as_module {
                 'section'    => 'styling',
             ),
             array(
-                'label' => __('Open by default', 'alenastudio'),
+                'label' => __('Open by default', 'monalisa'),
                 'id'    => 'open_by_default',
                 'std'   => '1',
                 'type'  => 'text',
@@ -66,7 +66,7 @@ class AS_Accordion extends as_module {
              * General
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio'),
+                'label'                 => __('BG Color', 'monalisa'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -76,7 +76,7 @@ class AS_Accordion extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio'),
+                'label'                 => __('Border Color', 'monalisa'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -86,7 +86,7 @@ class AS_Accordion extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -97,25 +97,25 @@ class AS_Accordion extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio'),
+                'label'                 => __('Borders', 'monalisa'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio'),
+                        'label' => __('Top', 'monalisa'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio'),
+                        'label' => __('Right', 'monalisa'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio'),
+                        'label' => __('Bottom', 'monalisa'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio'),
+                        'label' => __('Left', 'monalisa'),
                         'value' => 'left'
                     ),
                 ),
@@ -125,7 +125,7 @@ class AS_Accordion extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,7 +136,7 @@ class AS_Accordion extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Minimum Height', 'alenastudio'),
+                'label'                 => __('Minimum Height', 'monalisa'),
                 'id'                    => 'css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -150,7 +150,7 @@ class AS_Accordion extends as_module {
                 'increment'             => 5
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -161,7 +161,7 @@ class AS_Accordion extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -172,7 +172,7 @@ class AS_Accordion extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Spacing', 'alenastudio'),
+                'label'                 => __('Spacing', 'monalisa'),
                 'id'                    => 'css_spacing',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -187,7 +187,7 @@ class AS_Accordion extends as_module {
              * Header
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio'),
+                'label'                 => __('BG Color', 'monalisa'),
                 'id'                    => 'css_header_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -195,10 +195,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('BG Color (Active)', 'alenastudio'),
+                'label'                 => __('BG Color (Active)', 'monalisa'),
                 'id'                    => 'css_header_bg_color_active',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -206,10 +206,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-active .as-accordion-header-color',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Color Icon', 'alenastudio'),
+                'label'                 => __('Color Icon', 'monalisa'),
                 'id'                    => 'css_header_color_icon',
                 'std'                   => 'rgb(0, 0, 0)',
                 'type'                  => 'color',
@@ -217,10 +217,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.as-accordion-header-color .as-icon-arrow.dslc-icon-angle-down',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Color Icon ( Active )', 'alenastudio'),
+                'label'                 => __('Color Icon ( Active )', 'monalisa'),
                 'id'                    => 'css_header_color_icon_active',
                 'std'                   => 'rgb(43, 243, 4)',
                 'type'                  => 'color',
@@ -228,10 +228,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-active .as-accordion-header-color .as-icon-arrow.dslc-icon-angle-down',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio'),
+                'label'                 => __('Border Color', 'monalisa'),
                 'id'                    => 'css_header_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -239,10 +239,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_header_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -251,28 +251,28 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio'),
+                'label'                 => __('Borders', 'monalisa'),
                 'id'                    => 'css_header_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio'),
+                        'label' => __('Top', 'monalisa'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio'),
+                        'label' => __('Right', 'monalisa'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio'),
+                        'label' => __('Bottom', 'monalisa'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio'),
+                        'label' => __('Left', 'monalisa'),
                         'value' => 'left'
                     ),
                 ),
@@ -280,10 +280,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_header_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -292,10 +292,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_header_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -304,10 +304,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_header_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -316,13 +316,13 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('header', 'alenastudio')
+                'tab'                   => __('header', 'monalisa')
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio'),
+                'label'                 => __('BG Color', 'monalisa'),
                 'id'                    => 'css_title_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -330,10 +330,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio'),
+                'label'                 => __('Border Color', 'monalisa'),
                 'id'                    => 'css_title_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -341,10 +341,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Border Color ( Active )', 'alenastudio'),
+                'label'                 => __('Border Color ( Active )', 'monalisa'),
                 'id'                    => 'css_title_border_color_active',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -352,10 +352,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-active .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -364,28 +364,28 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio'),
+                'label'                 => __('Borders', 'monalisa'),
                 'id'                    => 'css_title_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio'),
+                        'label' => __('Top', 'monalisa'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio'),
+                        'label' => __('Right', 'monalisa'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio'),
+                        'label' => __('Bottom', 'monalisa'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio'),
+                        'label' => __('Left', 'monalisa'),
                         'value' => 'left'
                     ),
                 ),
@@ -393,21 +393,21 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Color', 'alenastudio'),
+                'label'                 => __('Color', 'monalisa'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Color ( Active )', 'alenastudio'),
+                'label'                 => __('Color ( Active )', 'monalisa'),
                 'id'                    => 'css_header_color_title_active',
                 'std'                   => 'rgb(43, 243, 4)',
                 'type'                  => 'color',
@@ -415,10 +415,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-active .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio'),
+                'label'                 => __('Font Size', 'monalisa'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -426,11 +426,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio'),
+                'tab'                   => __('title', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio'),
+                'label'                 => __('Font Weight', 'monalisa'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -438,25 +438,25 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio'),
+                'tab'                   => __('title', 'monalisa'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio'),
+                'label'                 => __('Font Family', 'monalisa'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio'),
+                'tab'                   => __('title', 'monalisa'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio'),
+                'label'                 => __('Line Height', 'monalisa'),
                 'id'                    => 'css_title_lheight',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -464,11 +464,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio'),
+                'tab'                   => __('title', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_title_padding_vertical',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -477,10 +477,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_title_padding_horizontal',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -489,10 +489,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'alenastudio')
+                'tab'                   => __('title', 'monalisa')
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio'),
+                'label'                 => __('Text Align', 'monalisa'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -500,13 +500,13 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'alenastudio'),
+                'tab'                   => __('title', 'monalisa'),
             ),
             /**
              * Content
              */
             array(
-                'label'                 => __('BG Color', 'alenastudio'),
+                'label'                 => __('BG Color', 'monalisa'),
                 'id'                    => 'css_content_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -514,10 +514,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio')
+                'tab'                   => __('content', 'monalisa')
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio'),
+                'label'                 => __('Border Color', 'monalisa'),
                 'id'                    => 'css_content_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -525,10 +525,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio')
+                'tab'                   => __('content', 'monalisa')
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_content_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -537,28 +537,28 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'alenastudio')
+                'tab'                   => __('content', 'monalisa')
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio'),
+                'label'                 => __('Borders', 'monalisa'),
                 'id'                    => 'css_content_border_trbl',
                 'std'                   => 'right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio'),
+                        'label' => __('Top', 'monalisa'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio'),
+                        'label' => __('Right', 'monalisa'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio'),
+                        'label' => __('Bottom', 'monalisa'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio'),
+                        'label' => __('Left', 'monalisa'),
                         'value' => 'left'
                     ),
                 ),
@@ -566,21 +566,21 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio')
+                'tab'                   => __('content', 'monalisa')
             ),
             array(
-                'label'                 => __('Color', 'alenastudio'),
+                'label'                 => __('Color', 'monalisa'),
                 'id'                    => 'css_content_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio')
+                'tab'                   => __('content', 'monalisa')
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio'),
+                'label'                 => __('Font Size', 'monalisa'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -588,11 +588,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio'),
+                'tab'                   => __('content', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio'),
+                'label'                 => __('Font Weight', 'monalisa'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -600,25 +600,25 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio'),
+                'tab'                   => __('content', 'monalisa'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio'),
+                'label'                 => __('Font Family', 'monalisa'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio'),
+                'tab'                   => __('content', 'monalisa'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio'),
+                'label'                 => __('Line Height', 'monalisa'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -626,11 +626,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio'),
+                'tab'                   => __('content', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_content_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -639,10 +639,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'alenastudio')
+                'tab'                   => __('content', 'monalisa')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_content_padding_horizontal',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -651,10 +651,10 @@ class AS_Accordion extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'alenastudio')
+                'tab'                   => __('content', 'monalisa')
             ),
             array(
-                'label'                 => __('Text Align', 'alenastudio'),
+                'label'                 => __('Text Align', 'monalisa'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -662,31 +662,31 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'alenastudio'),
+                'tab'                   => __('content', 'monalisa'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio'),
+                'label'   => __('Responsive Styling', 'monalisa'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio'),
+                        'label' => __('Disabled', 'monalisa'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio'),
+                        'label' => __('Enabled', 'monalisa'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'alenastudio'),
+                'tab'     => __('tablet', 'monalisa'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -694,11 +694,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -706,11 +706,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -718,11 +718,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Header - Margin Bottom', 'alenastudio'),
+                'label'                 => __('Header - Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_t_header_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -730,11 +730,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Header - Padding Vertical', 'alenastudio'),
+                'label'                 => __('Header - Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_t_header_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -742,11 +742,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Header - Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Header - Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_t_header_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -754,11 +754,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Font Size', 'alenastudio'),
+                'label'                 => __('Title - Font Size', 'monalisa'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -766,11 +766,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'alenastudio'),
+                'label'                 => __('Title - Line Height', 'monalisa'),
                 'id'                    => 'css_res_t_title_lheight',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -778,11 +778,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Padding Vertical', 'alenastudio'),
+                'label'                 => __('Title - Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_t_title_padding_vertical',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -790,11 +790,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Title - Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_t_title_padding_horizontal',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -802,11 +802,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Content - Font Size', 'alenastudio'),
+                'label'                 => __('Content - Font Size', 'monalisa'),
                 'id'                    => 'css_res_t_content_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -814,11 +814,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'alenastudio'),
+                'label'                 => __('Content - Line Height', 'monalisa'),
                 'id'                    => 'css_res_t_content_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -826,11 +826,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Padding Vertical', 'alenastudio'),
+                'label'                 => __('Content - Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_t_content_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -838,11 +838,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Content - Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Content - Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_t_content_padding_horizontal',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -850,32 +850,32 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive phone
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio'),
+                'label'   => __('Responsive Styling', 'monalisa'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio'),
+                        'label' => __('Disabled', 'monalisa'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio'),
+                        'label' => __('Enabled', 'monalisa'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'alenastudio'),
+                'tab'     => __('phone', 'monalisa'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -883,11 +883,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -895,11 +895,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -907,11 +907,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Header - Margin Bottom', 'alenastudio'),
+                'label'                 => __('Header - Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_p_header_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -919,11 +919,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Header - Padding Vertical', 'alenastudio'),
+                'label'                 => __('Header - Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_p_header_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -931,11 +931,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Header - Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Header - Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_p_header_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -943,11 +943,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Font Size', 'alenastudio'),
+                'label'                 => __('Title - Font Size', 'monalisa'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -955,11 +955,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'alenastudio'),
+                'label'                 => __('Title - Line Height', 'monalisa'),
                 'id'                    => 'css_res_p_title_lheight',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -967,11 +967,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Padding Vertical', 'alenastudio'),
+                'label'                 => __('Title - Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_p_title_padding_vertical',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -979,11 +979,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Title - Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_p_title_padding_horizontal',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -991,11 +991,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-title',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Content - Font Size', 'alenastudio'),
+                'label'                 => __('Content - Font Size', 'monalisa'),
                 'id'                    => 'css_res_p_content_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1003,11 +1003,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'alenastudio'),
+                'label'                 => __('Content - Line Height', 'monalisa'),
                 'id'                    => 'css_res_p_content_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1015,11 +1015,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Padding Vertical', 'alenastudio'),
+                'label'                 => __('Content - Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_p_content_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1027,11 +1027,11 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Content - Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Content - Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_p_content_padding_horizontal',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1039,7 +1039,7 @@ class AS_Accordion extends as_module {
                 'affect_on_change_el'   => '.dslc-accordion-content',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
         );
@@ -1078,8 +1078,7 @@ class AS_Accordion extends as_module {
 
             <?php if (is_array($accordion_contents) && count($accordion_contents) > 0) : ?>
 
-                <?php
-                foreach ($accordion_contents as
+                <?php foreach ($accordion_contents as
                         $accordion_content) :
                     ?>
 
@@ -1087,13 +1086,13 @@ class AS_Accordion extends as_module {
 
                         <div class="dslc-accordion-header as-accordion-header-color dslc-accordion-hook">
                             <span class="dslc-accordion-title as-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($accordion_nav[$count]); ?></span>
-                            <?php if ($dslc_is_admin) : ?>
+                <?php if ($dslc_is_admin) : ?>
                                 <div class="dslca-accordion-action-hooks as-action-hook-accordion">
                                     <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
                                     <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
                                     <span class="as-accordion-delete dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
                                 </div>
-                            <?php endif; ?>
+                <?php endif; ?>
                             <span class="dslca-icon as-icon-arrow dslc-icon-angle-down"></span>
                         </div>
 
@@ -1106,32 +1105,31 @@ class AS_Accordion extends as_module {
                                 echo do_shortcode($accordion_content_output);
                                 ?>
                             </div>
-                            <?php if ($dslc_is_admin) : ?>
+                <?php if ($dslc_is_admin) : ?>
                                 <textarea class="dslca-accordion-plain-content"><?php echo trim($accordion_content_output); ?></textarea>
-                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'alenastudio'); ?></span></div>
-                            <?php endif; ?>
+                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'monalisa'); ?></span></div>
+                <?php endif; ?>
                         </div><!-- .dslc-accordion-content -->
 
                     </div><!-- .dslc-accordion-item -->
 
-                    <?php
-                    $count++;
+                    <?php $count++;
                 endforeach;
                 ?>
 
-            <?php else : ?>
+        <?php else : ?>
 
                 <div class="dslc-accordion-item as-accordion-item">
 
                     <div class="dslc-accordion-header as-accordion-header-color dslc-accordion-hook">
-                        <span class="dslc-accordion-title as-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'alenastudio'); ?></span>
-                        <?php if ($dslc_is_admin) : ?>
+                        <span class="dslc-accordion-title as-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'monalisa'); ?></span>
+            <?php if ($dslc_is_admin) : ?>
                             <div class="dslca-accordion-action-hooks as-action-hook-accordion">
                                 <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
                                 <span class="dslca-move-down-accordion-hook"><span class="dslca-icon dslc-icon-arrow-down"></span></span>
                                 <span class="as-accordion-delete dslca-delete-accordion-hook"><span class="dslca-icon dslc-icon-remove"></span></span>
                             </div>
-                        <?php endif; ?>
+            <?php endif; ?>
                         <span class="dslca-icon as-icon-arrow dslc-icon-angle-down"></span>
                     </div>
 
@@ -1146,19 +1144,19 @@ class AS_Accordion extends as_module {
                         </div>
                         <?php if ($dslc_is_admin) : ?>
                             <textarea class="dslca-accordion-plain-content">Placeholder content. Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-                            <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'alenastudio'); ?></span></div>
-                        <?php endif; ?>
+                            <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'monalisa'); ?></span></div>
+            <?php endif; ?>
                     </div><!-- .dslc-accordion-content -->
 
                 </div><!-- .dslc-accordion-item -->
 
             <?php endif; ?>
 
-            <?php if ($dslc_is_admin) : ?>
+        <?php if ($dslc_is_admin) : ?>
                 <div class="dslca-add-accordion">
                     <span class="dslca-add-accordion-hook"><span class="dslca-icon dslc-icon-plus"></span></span>
                 </div>
-            <?php endif; ?>
+        <?php endif; ?>
 
         </div><!-- .dslc-accordion -->
 

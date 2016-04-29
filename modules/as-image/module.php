@@ -1,6 +1,6 @@
 <?php
 
-class AS_Image extends as_module {
+class AS_Image extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Image extends as_module {
     }
 
     function options() {
-        global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'      => __('CT', 'live-composer-page-builder'),
@@ -363,7 +363,7 @@ class AS_Image extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_color',
-                'std'                   => $as_ex_options['as_ex_content_font'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-image-caption',
@@ -401,7 +401,7 @@ class AS_Image extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_ct_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-image-caption',
@@ -699,9 +699,9 @@ class AS_Image extends as_module {
                     <div class="dslc-image-caption">
 
                         <?php if ($dslc_is_admin) : ?>
-                            <div class="dslca-editable-content" data-id="custom_text" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['custom_text'], 'alenastudio'); ?></div>
+                            <div class="dslca-editable-content" data-id="custom_text" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['custom_text'], 'monalisa'); ?></div>
                         <?php else : ?>
-                            <?php echo esc_html($options['custom_text'], 'alenastudio'); ?>
+                            <?php echo esc_html($options['custom_text'], 'monalisa'); ?>
                         <?php endif; ?>
 
                     </div>

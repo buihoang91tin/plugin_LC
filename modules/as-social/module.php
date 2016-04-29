@@ -1,6 +1,6 @@
 <?php
 
-class AS_Social extends as_module {
+class AS_Social extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Social extends as_module {
     }
 
     function options() {
-        global $as_ex_options;
+
         // Get categories
         $cats         = get_categories();
         $cats_choices = array();
@@ -201,7 +201,7 @@ class AS_Social extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.title-share-social',
@@ -253,7 +253,7 @@ class AS_Social extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_share_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.title-share-social',

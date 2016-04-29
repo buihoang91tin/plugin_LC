@@ -1,6 +1,6 @@
 <?php
 
-class AS_Before_After extends as_module {
+class AS_Before_After extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,6 +16,7 @@ class AS_Before_After extends as_module {
     }
 
     function options() {
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -54,7 +55,7 @@ class AS_Before_After extends as_module {
             array(
                 'label'      => __('CT', 'live-composer-page-builder'),
                 'id'         => 'custom_text_3',
-                'std'        => __('AFTER', 'alenastudio'),
+                'std'        => __('AFTER', 'monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
@@ -200,7 +201,7 @@ class AS_Before_After extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -211,7 +212,7 @@ class AS_Before_After extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -350,7 +351,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -363,7 +364,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -376,7 +377,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top ', 'alenastudio'),
+                'label'                 => __('Margin Top ', 'monalisa'),
                 'id'                    => 'css_res_t_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -391,7 +392,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -406,7 +407,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width Circle( drag bar ) ', 'alenastudio'),
+                'label'                 => __('Border Width Circle( drag bar ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -418,7 +419,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( drag bar ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( drag bar ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -454,7 +455,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -467,7 +468,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -480,7 +481,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top ', 'alenastudio'),
+                'label'                 => __('Margin Top ', 'monalisa'),
                 'id'                    => 'css_res_p_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -495,7 +496,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -510,7 +511,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width Circle( drag bar ) ', 'alenastudio'),
+                'label'                 => __('Border Width Circle( drag bar ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -522,7 +523,7 @@ class AS_Before_After extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( drag bar ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( drag bar ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',

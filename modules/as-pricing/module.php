@@ -1,6 +1,6 @@
 <?php
 
-class AS_Pricing extends as_module {
+class AS_Pricing extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -18,7 +18,7 @@ class AS_Pricing extends as_module {
     }
 
     function options() {
-        global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -280,7 +280,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
@@ -318,7 +318,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
@@ -441,7 +441,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Color Label', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_label_css_number_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label span',
@@ -467,7 +467,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_label_css_number_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label span',
@@ -501,7 +501,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#2b3d4e',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
@@ -539,7 +539,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_number_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
@@ -617,7 +617,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#7e7e7e',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
@@ -655,7 +655,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_currency_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
@@ -702,7 +702,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#7e7e7e',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
@@ -740,7 +740,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_time_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
@@ -863,7 +863,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#2B3D4E',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header',
@@ -901,7 +901,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_pricing_css_option_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
@@ -975,7 +975,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'      => __('Button Text', 'live-composer-page-builder'),
                 'id'         => 'as_button_text',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
@@ -1221,7 +1221,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Out Line Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#f9bf3b',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
@@ -1275,7 +1275,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
@@ -1324,7 +1324,7 @@ class AS_Pricing extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_button_css_button_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
@@ -1369,7 +1369,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1382,7 +1382,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1395,7 +1395,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1408,7 +1408,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1421,7 +1421,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1434,7 +1434,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( title ) ', 'alenastudio'),
+                'label'                 => __('Border Width( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1447,7 +1447,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Top( title ) ', 'alenastudio'),
+                'label'                 => __('Border Radius - Top( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -1460,7 +1460,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Bottom( title ) ', 'alenastudio'),
+                'label'                 => __('Border Radius - Bottom( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1473,7 +1473,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( title ) ', 'alenastudio'),
+                'label'                 => __('Font Size( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1486,7 +1486,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( title ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1502,7 +1502,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( title ) ', 'alenastudio'),
+                'label'                 => __('Line Height( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1515,7 +1515,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( title ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1528,7 +1528,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1541,7 +1541,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( title ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1554,7 +1554,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( title ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1567,7 +1567,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing label ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing label ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1583,7 +1583,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -1596,7 +1596,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1612,7 +1612,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1625,7 +1625,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1638,7 +1638,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1651,7 +1651,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1664,7 +1664,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1680,7 +1680,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1693,7 +1693,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1706,7 +1706,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1719,7 +1719,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1735,7 +1735,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1748,7 +1748,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1761,7 +1761,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Border Width( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1774,7 +1774,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -1787,7 +1787,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1803,7 +1803,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1816,7 +1816,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1829,7 +1829,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin bottom( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Margin bottom( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1842,7 +1842,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1855,7 +1855,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1868,7 +1868,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Border Width( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1881,7 +1881,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1894,7 +1894,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1907,7 +1907,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1920,7 +1920,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1933,7 +1933,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1946,7 +1946,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1959,7 +1959,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1972,7 +1972,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography button ) ', 'alenastudio'),
+                'label'                 => __('Font Size( typography button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1985,7 +1985,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography button ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( typography button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2001,7 +2001,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography button ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( typography button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_as_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2038,7 +2038,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2051,7 +2051,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2064,7 +2064,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2077,7 +2077,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2090,7 +2090,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2103,7 +2103,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( title ) ', 'alenastudio'),
+                'label'                 => __('Border Width( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2116,7 +2116,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Top( title ) ', 'alenastudio'),
+                'label'                 => __('Border Radius - Top( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -2129,7 +2129,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Bottom( title ) ', 'alenastudio'),
+                'label'                 => __('Border Radius - Bottom( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2142,7 +2142,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( title ) ', 'alenastudio'),
+                'label'                 => __('Font Size( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2155,7 +2155,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( title ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2171,7 +2171,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( title ) ', 'alenastudio'),
+                'label'                 => __('Line Height( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2184,7 +2184,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( title ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2197,7 +2197,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2210,7 +2210,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( title ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -2223,7 +2223,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( title ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2236,7 +2236,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing label ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing label ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2252,7 +2252,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -2265,7 +2265,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2281,7 +2281,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2294,7 +2294,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -2307,7 +2307,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing number ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( pricing number ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2320,7 +2320,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2333,7 +2333,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2349,7 +2349,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2362,7 +2362,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing currency ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( pricing currency ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2375,7 +2375,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -2388,7 +2388,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -2404,7 +2404,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2417,7 +2417,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing time ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( pricing time ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2430,7 +2430,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Border Width( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2443,7 +2443,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Font Size( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -2456,7 +2456,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -2472,7 +2472,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Line Height( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -2485,7 +2485,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2498,7 +2498,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin bottom( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Margin bottom( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2511,7 +2511,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -2524,7 +2524,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing option ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( pricing option ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2537,7 +2537,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Border Width( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2550,7 +2550,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2563,7 +2563,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2576,7 +2576,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2589,7 +2589,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -2602,7 +2602,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing button ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( pricing button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -2615,7 +2615,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2628,7 +2628,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'alenastudio'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2641,7 +2641,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography button ) ', 'alenastudio'),
+                'label'                 => __('Font Size( typography button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2654,7 +2654,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography button ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( typography button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2670,7 +2670,7 @@ class AS_Pricing extends as_module {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography button ) ', 'alenastudio'),
+                'label'                 => __('Letter Spacing( typography button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_as_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',

@@ -2,14 +2,15 @@
 if (dslc_is_module_active('AS_Projects'))
     include AS_EXTENSION_ABS . '/modules/as-projects/functions.php';
 
-class AS_Projects extends as_module {
+class AS_Projects extends DSLC_Module {
 
     var $module_id;
     var $module_title;
     var $module_icon;
     var $module_category;
 
-    function __construct() {
+    function __construct()
+    {
 
         $this->module_id       = 'AS_Projects';
         $this->module_title    = __('AS - Projects', 'live-composer-page-builder');
@@ -17,12 +18,13 @@ class AS_Projects extends as_module {
         $this->module_category = 'as - posts';
     }
 
-    function options() {
-        global $as_ex_options;
+    function options()
+    {
         $cats         = get_terms('dslc_projects_cats');
         $cats_choices = array();
         foreach ($cats as
-                $cat) {
+                $cat)
+        {
             $cats_choices[] = array(
                 'label' => $cat->name,
                 'value' => $cat->slug
@@ -357,7 +359,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_border_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ededed',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-post-separator',
@@ -703,7 +705,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#fff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-title h2 a',
@@ -767,7 +769,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
@@ -846,7 +848,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_cats_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-cats',
@@ -884,7 +886,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_cats_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Bitter',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-project-cats',
@@ -956,7 +958,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
@@ -1030,7 +1032,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Navigation', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_nav_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(44, 62, 79)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
@@ -1041,7 +1043,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Nav', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_nav_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
@@ -1092,7 +1094,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Title', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => 'rgb(89, 89, 89)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
@@ -1103,7 +1105,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Title', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_title_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
@@ -1236,7 +1238,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Category', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_category_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(131, 131, 131)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
@@ -1247,7 +1249,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Category', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_category_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Bitter',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
@@ -1386,7 +1388,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color of Excerpt', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_excerpt_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(76, 76, 76)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
@@ -1397,7 +1399,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Font Family of Excerpt', 'live-composer-page-builder'),
                 'id'                    => 'as_ajax_projects_excerpt_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
@@ -1502,7 +1504,7 @@ class AS_Projects extends as_module {
             array(
                 'label'                 => __('Color - Hover', 'live-composer-page-builder'),
                 'id'                    => 'css_filters_color_hover',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(248, 191, 59)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',
@@ -2099,7 +2101,8 @@ class AS_Projects extends as_module {
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options) {
+    function output($options)
+    {
 
         global $dslc_active;
         if ($dslc_active && is_user_logged_in() && current_user_can(DS_LIVE_COMPOSER_CAPABILITY))
@@ -2115,22 +2118,32 @@ class AS_Projects extends as_module {
         if (!isset($options['type']))
             $options['type']           = 'grid';
 
-        if (is_front_page()) {
+        if (is_front_page())
+        {
             $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
         }
-        else {
+        else
+        {
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
         }
-        $args = array(
+        // Fix for offset braking pagination
+        $query_offset = $options['offset'];
+        if ($query_offset > 0 && $paged > 1)
+            $query_offset = ( $paged - 1 ) * $options['amount'] + $options['offset'];
+        $args         = array(
             'paged'          => $paged,
             'post_type'      => 'dslc_projects',
             'posts_per_page' => $options['amount'],
             'order'          => $options['order'],
-            'orderby'        => $options['orderby'],
-            'offset'         => $options['offset']
+            'orderby'        => $options['orderby']
         );
+        if ($query_offset > 0)
+        {
+            $args['offset'] = $query_offset;
+        }
 
-        if (isset($options['categories']) && $options['categories'] != '') {
+        if (isset($options['categories']) && $options['categories'] != '')
+        {
 
             $cats_array = explode(' ', trim($options['categories']));
 
@@ -2168,7 +2181,8 @@ class AS_Projects extends as_module {
             $args['post__not_in'] = $exclude;
 
         // Author archive page
-        if (is_author()) {
+        if (is_author())
+        {
             global $authordata;
             $args['author__in'] = array(
                 $authordata->data->ID);
@@ -2179,11 +2193,13 @@ class AS_Projects extends as_module {
             $args['no_found_rows'] = true;
 
         // Do the query
-        if (is_category() || is_tax() || is_search()) {
+        if (is_category() || is_tax() || is_search())
+        {
             global $wp_query;
             $dslc_query = $wp_query;
         }
-        else {
+        else
+        {
             $dslc_query = new WP_Query($args);
         }
         $wrapper_class        = '';
@@ -2245,7 +2261,8 @@ class AS_Projects extends as_module {
         /**
          * Carousel Items
          */
-        switch ($options['columns']) {
+        switch ($options['columns'])
+        {
             case 12 :
                 $carousel_items = 1;
                 break;
@@ -2267,20 +2284,23 @@ class AS_Projects extends as_module {
         }
         ?>
 
-        <?php if ($options['as_ajax_projects'] == 1 && $options['as_ajax_projects_position'] == 'top') { ?>
+        <?php
+        if ($options['as_ajax_projects'] == 1 && $options['as_ajax_projects_position'] == 'top')
+        {
+            ?>
             <!-- PRINT PROJECTS DATA -->
             <div id="as_portfolio_content" style="display:none;">
                 <div class="as-wrapper clearfix">
                     <div class="as-portfolio-ajax-wrapper">
                         <div class="as-port-control dslc-col dslc-12-col dslc-last-col">
                             <a href="javascript:void(0);" class="prev" data-ajax="1" data-id="59">
-                                <span class="dslc-icon dslc-icon-angle-left"></span><span class="as-btn-text-ajax-prj"><?php _e('Prev', 'as') ?></span>
+                                <span class="dslc-icon dslc-icon-angle-left"></span><span class="as-btn-text-ajax-prj"><?php _e('Prev', 'monalisa') ?></span>
                             </a> 
                             <a href="javascript:void(0);" class="close-port">
                                 <span class="dslc-icon dslc-icon-remove"></span>
                             </a> 
                             <a href="javascript:void(0);" class="next" data-ajax="1" data-id="57">
-                                <span class="as-btn-text-ajax-prj"><?php _e('Next', 'as') ?></span><span class="dslc-icon dslc-icon-angle-right"></span>
+                                <span class="as-btn-text-ajax-prj"><?php _e('Next', 'as-custom') ?></span><span class="dslc-icon dslc-icon-angle-right"></span>
                             </a>
                         </div>
                     </div>
@@ -2319,20 +2339,25 @@ class AS_Projects extends as_module {
                 <!-- Filters -->
 
                 <?php
-                if ($show_filters) {
+                if ($show_filters)
+                {
 
                     $cats_array = array();
 
-                    if ($dslc_query->have_posts()) {
+                    if ($dslc_query->have_posts())
+                    {
 
-                        while ($dslc_query->have_posts()) {
+                        while ($dslc_query->have_posts())
+                        {
 
                             $dslc_query->the_post();
 
                             $post_cats = get_the_terms(get_the_ID(), 'dslc_projects_cats');
-                            if (!empty($post_cats)) {
+                            if (!empty($post_cats))
+                            {
                                 foreach ($post_cats as
-                                        $post_cat) {
+                                        $post_cat)
+                                {
                                     $cats_array[$post_cat->slug] = $post_cat->name;
                                 }
                             }
@@ -2342,7 +2367,8 @@ class AS_Projects extends as_module {
                     <?php
                     $duration_filter_hover = '';
                     $value_filter_duration = $options['css_filters_duration_hover'];
-                    if ($value_filter_duration != '') {
+                    if ($value_filter_duration != '')
+                    {
                         $duration_filter_hover = '-webkit-transition: all ' . $value_filter_duration . 'ms ease-out;-moz-transition: all ' . $value_filter_duration . 'ms ease-out;-ms-transition: all ' . $value_filter_duration . 'ms ease-out;-o-transition: all ' . $value_filter_duration . 'ms ease-out;transition: all ' . $value_filter_duration . 'ms ease-out;';
                     }
                     ?>
@@ -2400,14 +2426,17 @@ class AS_Projects extends as_module {
                                                             $count += $increment;
                                                             $real_count++;
 
-                                                            if ($count == $max_count) {
+                                                            if ($count == $max_count)
+                                                            {
                                                                 $count       = 0;
                                                                 $extra_class = ' dslc-last-col';
                                                             }
-                                                            elseif ($count == $increment) {
+                                                            elseif ($count == $increment)
+                                                            {
                                                                 $extra_class = ' ';
                                                             }
-                                                            else {
+                                                            else
+                                                            {
                                                                 $extra_class = '';
                                                             }
 
@@ -2418,16 +2447,19 @@ class AS_Projects extends as_module {
                                                             $project_cats       = get_the_terms(get_the_ID(), 'dslc_projects_cats');
 
                                                             $project_cats_data = '';
-                                                            if (!empty($project_cats)) {
+                                                            if (!empty($project_cats))
+                                                            {
                                                                 foreach ($project_cats as
-                                                                        $project_cat) {
+                                                                        $project_cat)
+                                                                {
                                                                     $project_cats_data .= $project_cat->slug . ' ';
                                                                 }
                                                             }
 
                                                             // Project URL
                                                             $the_project_url = get_permalink();
-                                                            if ($options['link'] == 'custom') {
+                                                            if ($options['link'] == 'custom')
+                                                            {
                                                                 if (get_post_meta(get_the_ID(), 'dslc_project_url', true))
                                                                     $the_project_url = get_post_meta(get_the_ID(), 'dslc_project_url', true);
                                                                 else
@@ -2443,7 +2475,8 @@ class AS_Projects extends as_module {
                              * Manual Resize
                              */
                             $manual_resize          = false;
-                            if (isset($options['thumb_resize_height']) && !empty($options['thumb_resize_height']) || isset($options['thumb_resize_width_manual']) && !empty($options['thumb_resize_width_manual'])) {
+                            if (isset($options['thumb_resize_height']) && !empty($options['thumb_resize_height']) || isset($options['thumb_resize_width_manual']) && !empty($options['thumb_resize_width_manual']))
+                            {
                                 $manual_resize = true;
                                 $thumb_url     = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
                                 $thumb_url     = $thumb_url[0];
@@ -2454,11 +2487,13 @@ class AS_Projects extends as_module {
                                 $resize_width  = false;
                                 $resize_height = false;
 
-                                if (isset($options['thumb_resize_width_manual']) && !empty($options['thumb_resize_width_manual'])) {
+                                if (isset($options['thumb_resize_width_manual']) && !empty($options['thumb_resize_width_manual']))
+                                {
                                     $resize_width = $options['thumb_resize_width_manual'];
                                 }
 
-                                if (isset($options['thumb_resize_height']) && !empty($options['thumb_resize_height'])) {
+                                if (isset($options['thumb_resize_height']) && !empty($options['thumb_resize_height']))
+                                {
                                     $resize_height = $options['thumb_resize_height'];
                                 }
                             }
@@ -2470,7 +2505,8 @@ class AS_Projects extends as_module {
                                 $anchor_class   = 'dslc-lightbox-image';
                                 $duration_hover = '';
                                 $value_duration = $options['css_main_bg_color_duration_hover'];
-                                if ($value_duration != '') {
+                                if ($value_duration != '')
+                                {
                                     $duration_hover = '-webkit-transition: all ' . $value_duration . 'ms ease-out;-moz-transition: all ' . $value_duration . 'ms ease-out;-ms-transition: all ' . $value_duration . 'ms ease-out;-o-transition: all ' . $value_duration . 'ms ease-out;transition: all ' . $value_duration . 'ms ease-out;';
                                 }
                                 ?>
@@ -2505,9 +2541,11 @@ class AS_Projects extends as_module {
                                                         <div class="dslc-project-cats">
                                                             <?php
                                                             foreach ($project_cats as
-                                                                    $project_cat) {
+                                                                    $project_cat)
+                                                            {
                                                                 $project_cats_count++;
-                                                                if ($project_cats_count > 1) {
+                                                                if ($project_cats_count > 1)
+                                                                {
                                                                     echo ', ';
                                                                 }
                                                                 echo $project_cat->name;
@@ -2521,10 +2559,20 @@ class AS_Projects extends as_module {
                                                 <?php if ($post_elements == 'all' || in_array('icon_link', $post_elements)) : ?>
                                                     <div class="as-group-icon-project">
                                                         <?php
-                                                        $img_link_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-                                                        $img_link_url = $img_link_url[0];
+                                                        $format_check = rwmb_meta('as_custom_page_metaboxes','type=select');
+                                                        $format = get_post_format();
+                                                        if (($format == 'video') && ($format_check == 'youtube'))
+                                                        {
+                                                            $img_link_url = ( rwmb_meta('as_youtube_link', 'type=select'));
+                                                            $format = 'video';
+                                                        }
+                                                        else{
+                                                            $img_link_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                                                            $img_link_url = $img_link_url[0];
+                                                            $format = 'normal';
+                                                        }
                                                         ?>
-                                                        <a class="as-zoom-img-project as-lightbox-gallery" href="<?php echo esc_url($img_link_url); ?>"><span class="dslc-icon dslc-icon-search"></span></a>
+                                                        <a class="as-zoom-img-project as-lightbox-gallery" data-project-type="<?php echo esc_attr($format);?>" href="<?php echo esc_url($img_link_url); ?>"><span class="dslc-icon <?php echo ($format=='video' ? 'dslc-icon-play-circle':'dslc-icon-search' );?>"></span></a>
                                                         <a class="as-link-to-project" data-ajax="<?php echo isset($options['as_ajax_projects']) && $options['as_ajax_projects'] ? '1' : '0'; ?>" data-id="<?php echo get_the_ID(); ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><span class="dslc-icon dslc-icon-link"></span></a>
                                                     </div>
                                                 <?php endif; ?>
@@ -2541,7 +2589,8 @@ class AS_Projects extends as_module {
                         </div><!-- .dslc-project -->
                         <?php
                         // Row Separator
-                        if ($options['type'] == 'grid' && $count == 0 && $real_count != $dslc_query->found_posts && $real_count != $options['amount'] && $options['separator_enabled'] == 'enabled') {
+                        if ($options['type'] == 'grid' && $count == 0 && $real_count != $dslc_query->found_posts && $real_count != $options['amount'] && $options['separator_enabled'] == 'enabled')
+                        {
                             echo '<div class="dslc-post-separator"></div>';
                         }
                     endwhile;
@@ -2559,7 +2608,8 @@ class AS_Projects extends as_module {
         /**
          * Pagination
          */
-        if (isset($options['pagination_type']) && $options['pagination_type'] != 'disabled') {
+        if (isset($options['pagination_type']) && $options['pagination_type'] != 'disabled')
+        {
             $num_pages = $dslc_query->max_num_pages;
             dslc_post_pagination(array(
                 'pages' => $num_pages,
@@ -2567,20 +2617,23 @@ class AS_Projects extends as_module {
         }
         wp_reset_query();
         ?>
-        <?php if ($options['as_ajax_projects'] == 1 && $options['as_ajax_projects_position'] == 'bottom') { ?>
+        <?php
+        if ($options['as_ajax_projects'] == 1 && $options['as_ajax_projects_position'] == 'bottom')
+        {
+            ?>
             <!-- PRINT PROJECTS DATA -->
             <div id="as_portfolio_content" style="display:none;">
                 <div class="as-wrapper clearfix">
                     <div class="as-portfolio-ajax-wrapper">
                         <div class="as-port-control dslc-col dslc-12-col dslc-last-col">
                             <a href="javascript:void(0);" class="prev" data-ajax="1" data-id="59">
-                                <span class="dslc-icon dslc-icon-angle-left"></span><span class="as-btn-text-ajax-prj"><?php _e('Prev', 'as') ?></span>
+                                <span class="dslc-icon dslc-icon-angle-left"></span><span class="as-btn-text-ajax-prj"><?php _e('Prev', 'as-custom') ?></span>
                             </a> 
                             <a href="javascript:void(0);" class="close-port">
                                 <span class="dslc-icon dslc-icon-remove"></span>
                             </a> 
                             <a href="javascript:void(0);" class="next" data-ajax="1" data-id="57">
-                                <span class="as-btn-text-ajax-prj"><?php _e('Next', 'as') ?></span><span class="dslc-icon dslc-icon-angle-right"></span>
+                                <span class="as-btn-text-ajax-prj"><?php _e('Next', 'as-custom') ?></span><span class="dslc-icon dslc-icon-angle-right"></span>
                             </a>
                         </div>
                     </div>

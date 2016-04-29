@@ -1,6 +1,6 @@
 <?php
 
-class AS_Circle_Chart_Module extends as_module {
+class AS_Circle_Chart_Module extends DSLC_Module {
 
     // Module Attributes
     var $module_id;
@@ -18,7 +18,7 @@ class AS_Circle_Chart_Module extends as_module {
 
     // Module Options
     function options() {
-        global $as_ex_options;
+        // The options array
         $dslc_options = array(
             /**
              * General
@@ -46,7 +46,7 @@ class AS_Circle_Chart_Module extends as_module {
             array(
                 'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT', 'alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -417,7 +417,7 @@ class AS_Circle_Chart_Module extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_percent_chart_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(44, 62, 80)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.percent-chart',
@@ -469,7 +469,7 @@ class AS_Circle_Chart_Module extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.pie-content h2',
@@ -868,9 +868,9 @@ class AS_Circle_Chart_Module extends as_module {
             </span>
             <div class="pie-content">
                 <?php if ($dslc_is_admin) : ?>
-                    <h2 class="dslca-editable-content title" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['title'], 'alenastudio'); ?></h2>
+                    <h2 class="dslca-editable-content title" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['title'], 'monalisa'); ?></h2>
                 <?php else : ?>
-                    <h2 class="title"><?php echo esc_html($options['title'], 'alenastudio'); ?></h2>
+                    <h2 class="title"><?php echo esc_html($options['title'], 'monalisa'); ?></h2>
                 <?php endif; ?>
             </div>
         </div>

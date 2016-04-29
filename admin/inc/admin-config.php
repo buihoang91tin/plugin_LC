@@ -56,13 +56,13 @@ $args['admin_stylesheet']  = 'standard';
 // Default: null
 $args['import_icon_class'] = 'wp-menu-image dashicons-before dashicons-admin-generic';
 // Set a custom menu icon.
-//$args['menu_icon']         = get_template_directory_uri() . '/img/logo-mona-small.png';
+$args['menu_icon']         = get_template_directory_uri() . '/img/logo-mona-small.png';
 // Set a custom title for the options page.
 // Default: Options
-$args['menu_title']        = esc_html__('AS DEFAULT STYLE MODULE', 'alenastudio');
+$args['menu_title']        = esc_html__('AS STYLE MODULE', 'alenastudio');
 // Set a custom page title for the options page.
 // Default: Options
-$args['page_title']        = esc_html__('AS DEFAULT STYLE MODULE', 'alenastudio');
+$args['page_title']        = esc_html__('AS STYLE MODULE', 'alenastudio');
 // Set a custom page slug for options page (wp-admin/themes.php?page=***).
 // Default: redux_options
 $args['page_slug']         = 'as_ex_options';
@@ -110,77 +110,6 @@ $sections[]                = array(
     'icon'       => 'el-icon-cog',
     'submenu'    => true,
     'fields'     => array(
-        array(
-            'id'       => 'as_ex_color_main',
-            'type'     => 'color',
-            'title'    => esc_html__(' Color Main Module', 'alenastudio'),
-            'subtitle' => esc_html__('Main Color', 'alenastudio'),
-            "default"  => '',
-        ),
-        array(
-            'id'       => 'as_ex_color_content',
-            'type'     => 'color',
-            'title'    => esc_html__(' Color Content Module', 'alenastudio'),
-            'subtitle' => esc_html__('Content Color', 'alenastudio'),
-            "default"  => '',
-        ),
-        array(
-            'id'             => 'as_ex_title_font',
-            'type'           => 'typography',
-            'title'          => esc_html__(' Font title Module', 'alenastudio'),
-            'google'         => true,
-            'font-backup'    => false,
-            'font-style'     => false,
-            'font-weight'    => false,
-            'subsets'        => false,
-            'font-size'      => false,
-            'line-height'    => false,
-            'word-spacing'   => false,
-            'text-align'     => false,
-            'letter-spacing' => false,
-            'color'          => false,
-            'preview'        => true,
-            'subtitle'       => esc_html__('', 'alenastudio'),
-            "default"        => '',
-        ),
-        array(
-            'id'             => 'as_ex_sub_title_font',
-            'type'           => 'typography',
-            'title'          => esc_html__(' Font Sub title Module', 'alenastudio'),
-            'google'         => true,
-            'font-backup'    => false,
-            'font-style'     => false,
-            'font-weight'    => false,
-            'subsets'        => false,
-            'font-size'      => false,
-            'line-height'    => false,
-            'word-spacing'   => false,
-            'text-align'     => false,
-            'letter-spacing' => false,
-            'color'          => false,
-            'preview'        => true,
-            'subtitle'       => esc_html__('', 'alenastudio'),
-            "default"        => '',
-        ),
-        array(
-            'id'             => 'as_ex_content_font',
-            'type'           => 'typography',
-            'title'          => esc_html__(' Font Content Module', 'alenastudio'),
-            'google'         => true,
-            'font-backup'    => false,
-            'font-style'     => false,
-            'font-weight'    => false,
-            'subsets'        => false,
-            'font-size'      => false,
-            'line-height'    => false,
-            'word-spacing'   => false,
-            'text-align'     => false,
-            'letter-spacing' => false,
-            'color'          => false,
-            'preview'        => true,
-            'subtitle'       => esc_html__('', 'alenastudio'),
-            "default"        => '',
-        ),
     ),
 );
 global $ReduxFramework;

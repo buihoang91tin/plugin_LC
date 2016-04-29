@@ -1,6 +1,6 @@
 <?php
 
-class AS_Introduce extends as_module {
+class AS_Introduce extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -10,52 +10,52 @@ class AS_Introduce extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Introduce';
-        $this->module_title    = __('Introduce', 'alenastudio');
+        $this->module_title    = __('Introduce', 'monalisa');
         $this->module_icon     = 'info';
         $this->module_category = 'as - Info Box';
     }
 
     function options() {
-        global $as_ex_options;
+
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio'),
+                'label'   => __('Show On', 'monalisa'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio'),
+                        'label' => __('Desktop', 'monalisa'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio'),
+                        'label' => __('Tablet', 'monalisa'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio'),
+                        'label' => __('Phone', 'monalisa'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Title Link', 'alenastudio'),
+                'label' => __('Title Link', 'monalisa'),
                 'id'    => 'title_link',
                 'std'   => '',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Title Link - Open in', 'alenastudio'),
+                'label'   => __('Title Link - Open in', 'monalisa'),
                 'id'      => 'title_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'alenastudio'),
+                        'label' => __('Same Tab', 'monalisa'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'alenastudio'),
+                        'label' => __('New Tab', 'monalisa'),
                         'value' => '_blank',
                     ),
                 )
@@ -64,32 +64,32 @@ class AS_Introduce extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'alenastudio'),
+                'label'   => __('Elements', 'monalisa'),
                 'id'      => 'elements',
                 'std'     => 'icon title content social image',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Title', 'alenastudio'),
+                        'label' => __('Title', 'monalisa'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Image', 'alenastudio'),
+                        'label' => __('Image', 'monalisa'),
                         'value' => 'image'
                     ),
                     array(
-                        'label' => __('Content', 'alenastudio'),
+                        'label' => __('Content', 'monalisa'),
                         'value' => 'content'
                     ),
                     array(
-                        'label' => __('Social', 'alenastudio'),
+                        'label' => __('Social', 'monalisa'),
                         'value' => 'Social'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'alenastudio'),
+                'label'                 => __('Align', 'monalisa'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -99,7 +99,7 @@ class AS_Introduce extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio'),
+                'label'                 => __('BG Color', 'monalisa'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -109,7 +109,7 @@ class AS_Introduce extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio'),
+                'label'                 => __('Border Color', 'monalisa'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -119,7 +119,7 @@ class AS_Introduce extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -130,25 +130,25 @@ class AS_Introduce extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio'),
+                'label'                 => __('Borders', 'monalisa'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio'),
+                        'label' => __('Top', 'monalisa'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio'),
+                        'label' => __('Right', 'monalisa'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio'),
+                        'label' => __('Bottom', 'monalisa'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio'),
+                        'label' => __('Left', 'monalisa'),
                         'value' => 'left'
                     ),
                 ),
@@ -158,7 +158,7 @@ class AS_Introduce extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio'),
+                'label'                 => __('Border Radius', 'monalisa'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -169,7 +169,7 @@ class AS_Introduce extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Z-index', 'alenastudio'),
+                'label'                 => __('Z-index', 'monalisa'),
                 'id'                    => 'css_margin_z_index',
                 'std'                   => '999',
                 'type'                  => 'slider',
@@ -180,7 +180,7 @@ class AS_Introduce extends as_module {
                 'max'                   => 1000,
             ),
             array(
-                'label'                 => __('Margin Top', 'alenastudio'),
+                'label'                 => __('Margin Top', 'monalisa'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -193,7 +193,7 @@ class AS_Introduce extends as_module {
                 'ma~x'                  => 100,
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -204,7 +204,7 @@ class AS_Introduce extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -217,7 +217,7 @@ class AS_Introduce extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -228,7 +228,7 @@ class AS_Introduce extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio'),
+                'label'                 => __('Width', 'monalisa'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -242,7 +242,7 @@ class AS_Introduce extends as_module {
              * Title
              */
             array(
-                'label'                 => __('Align', 'alenastudio'),
+                'label'                 => __('Align', 'monalisa'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -250,21 +250,21 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio'),
+                'tab'                   => __('Title', 'monalisa'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio'),
+                'label'                 => __('Color', 'monalisa'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#3d3d3d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio'),
+                'tab'                   => __('Title', 'monalisa'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio'),
+                'label'                 => __('Font Size', 'monalisa'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -272,11 +272,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio'),
+                'tab'                   => __('Title', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio'),
+                'label'                 => __('Font Weight', 'monalisa'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -284,25 +284,25 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio'),
+                'tab'                   => __('Title', 'monalisa'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio'),
+                'label'                 => __('Font Family', 'monalisa'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio'),
+                'tab'                   => __('Title', 'monalisa'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio'),
+                'label'                 => __('Line Height', 'monalisa'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -310,11 +310,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio'),
+                'tab'                   => __('Title', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -322,14 +322,14 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'alenastudio'),
+                'tab'                   => __('Title', 'monalisa'),
                 'ext'                   => 'px'
             ),
             /**
              * Image
              */
             array(
-                'label'             => __('Image Upload', 'alenastudio'),
+                'label'             => __('Image Upload', 'monalisa'),
                 'id'                => 'as_introduce_upload',
                 'std'               => '',
                 'type'              => 'image',
@@ -377,7 +377,7 @@ class AS_Introduce extends as_module {
              * Decription
              */
             array(
-                'label'                 => __('Align', 'alenastudio'),
+                'label'                 => __('Align', 'monalisa'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -385,21 +385,21 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio'),
+                'label'                 => __('Color', 'monalisa'),
                 'id'                    => 'css_content_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
             ),
             array(
-                'label'                 => __('Font Size', 'alenastudio'),
+                'label'                 => __('Font Size', 'monalisa'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -407,11 +407,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'alenastudio'),
+                'label'                 => __('Font Weight', 'monalisa'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -419,25 +419,25 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'alenastudio'),
+                'label'                 => __('Font Family', 'monalisa'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
             ),
             array(
-                'label'                 => __('Line Height', 'alenastudio'),
+                'label'                 => __('Line Height', 'monalisa'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -445,11 +445,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -457,11 +457,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'as_introduce_decription_padding_vertical',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -469,99 +469,99 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'alenastudio'),
+                'tab'                   => __('Decription', 'monalisa'),
                 'ext'                   => 'px'
             ),
             /**
              * Social
              */
             array(
-                'label'   => __('Soial link 1', 'alenastudio'),
+                'label'   => __('Soial link 1', 'monalisa'),
                 'id'      => 'as_introduce_social_link_1',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'alenastudio'),
+                'tab'     => __('Socials', 'monalisa'),
             ),
             array(
-                'label'             => __('Icon', 'alenastudio'),
+                'label'             => __('Icon', 'monalisa'),
                 'id'                => 'as_introduce_social_icon_1',
                 'std'               => 'facebook',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'alenastudio'),
+                'tab'               => __('Socials', 'monalisa'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 2', 'alenastudio'),
+                'label'   => __('Soial link 2', 'monalisa'),
                 'id'      => 'as_introduce_social_link_2',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'alenastudio'),
+                'tab'     => __('Socials', 'monalisa'),
             ),
             array(
-                'label'             => __('Icon', 'alenastudio'),
+                'label'             => __('Icon', 'monalisa'),
                 'id'                => 'as_introduce_social_icon_2',
                 'std'               => 'youtube',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'alenastudio'),
+                'tab'               => __('Socials', 'monalisa'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 3', 'alenastudio'),
+                'label'   => __('Soial link 3', 'monalisa'),
                 'id'      => 'as_introduce_social_link_3',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'alenastudio'),
+                'tab'     => __('Socials', 'monalisa'),
             ),
             array(
-                'label'             => __('Icon', 'alenastudio'),
+                'label'             => __('Icon', 'monalisa'),
                 'id'                => 'as_introduce_social_icon_3',
                 'std'               => 'google',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'alenastudio'),
+                'tab'               => __('Socials', 'monalisa'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 4', 'alenastudio'),
+                'label'   => __('Soial link 4', 'monalisa'),
                 'id'      => 'as_introduce_social_link_4',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'alenastudio'),
+                'tab'     => __('Socials', 'monalisa'),
             ),
             array(
-                'label'             => __('Icon', 'alenastudio'),
+                'label'             => __('Icon', 'monalisa'),
                 'id'                => 'as_introduce_social_icon_4',
                 'std'               => 'pinterest',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'alenastudio'),
+                'tab'               => __('Socials', 'monalisa'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 5', 'alenastudio'),
+                'label'   => __('Soial link 5', 'monalisa'),
                 'id'      => 'as_introduce_social_link_5',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'alenastudio'),
+                'tab'     => __('Socials', 'monalisa'),
             ),
             array(
-                'label'             => __('Icon', 'alenastudio'),
+                'label'             => __('Icon', 'monalisa'),
                 'id'                => 'as_introduce_social_icon_5',
                 'std'               => 'dribbble',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'alenastudio'),
+                'tab'               => __('Socials', 'monalisa'),
                 'include_in_preset' => false
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'as_introduce_social_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -569,11 +569,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'as_introduce_social_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -581,11 +581,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Size', 'alenastudio'),
+                'label'                 => __('Size', 'monalisa'),
                 'id'                    => 'as_introduce_social_font_size',
                 'std'                   => '19',
                 'type'                  => 'slider',
@@ -593,11 +593,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio'),
+                'label'                 => __('BG Color', 'monalisa'),
                 'id'                    => 'as_introduce_social_bgcolor',
                 'std'                   => 'rgba(189, 36, 36, 0)',
                 'type'                  => 'color',
@@ -605,18 +605,18 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
-                'label'                 => __('Color', 'alenastudio'),
+                'label'                 => __('Color', 'monalisa'),
                 'id'                    => 'as_introduce_social_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(0, 179, 253)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
                 'label'                 => __('Border Color', 'live-composer-page-builder'),
@@ -627,7 +627,7 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
                 'label'                 => __('Border Width', 'live-composer-page-builder'),
@@ -638,39 +638,39 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Style', 'alenastudio'),
+                'label'                 => __('Border Style', 'monalisa'),
                 'id'                    => 'as_introduce_social_border_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'alenastudio'),
+                        'label' => __('Invisible', 'monalisa'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'alenastudio'),
+                        'label' => __('Solid', 'monalisa'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'alenastudio'),
+                        'label' => __('Dashed', 'monalisa'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'alenastudio'),
+                        'label' => __('Dotted', 'monalisa'),
                         'value' => 'dotted'
                     ),
                 ),
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio'),
+                'label'                 => __('Border Radius', 'monalisa'),
                 'id'                    => 'as_introduce_social_border_radius',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -678,11 +678,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'as_introduce_social_margin_bottom',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -690,22 +690,22 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.as-introduce-social',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'alenastudio'),
+                'tab'                   => __('Socials', 'monalisa'),
                 'ext'                   => 'px'
             ),
             /**
              * Hidden
              */
             array(
-                'label'      => __('Title', 'alenastudio'),
+                'label'      => __('Title', 'monalisa'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Content', 'alenastudio'),
+                'label'      => __('Content', 'monalisa'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
                 'type'       => 'textarea',
@@ -713,17 +713,17 @@ class AS_Introduce extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'alenastudio'),
+                'label'      => __('Button Title', 'monalisa'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'alenastudio'),
+                'label'      => __('Button Title', 'monalisa'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -732,25 +732,25 @@ class AS_Introduce extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio'),
+                'label'   => __('Responsive Styling', 'monalisa'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio'),
+                        'label' => __('Disabled', 'monalisa'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio'),
+                        'label' => __('Enabled', 'monalisa'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'alenastudio'),
+                'tab'     => __('tablet', 'monalisa'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -758,11 +758,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -770,13 +770,13 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -784,11 +784,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio'),
+                'label'                 => __('Width', 'monalisa'),
                 'id'                    => 'css_res_t_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -796,11 +796,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Title - Font Size', 'alenastudio'),
+                'label'                 => __('Title - Font Size', 'monalisa'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -808,11 +808,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'alenastudio'),
+                'label'                 => __('Title - Line Height', 'monalisa'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -820,11 +820,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'alenastudio'),
+                'label'                 => __('Title - Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_t_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -832,11 +832,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Font Size', 'alenastudio'),
+                'label'                 => __('Content - Font Size', 'monalisa'),
                 'id'                    => 'css_res_t_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -844,11 +844,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'alenastudio'),
+                'label'                 => __('Content - Line Height', 'monalisa'),
                 'id'                    => 'css_res_t_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -856,11 +856,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Margin Bottom', 'alenastudio'),
+                'label'                 => __('Content - Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_t_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -868,32 +868,32 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'alenastudio'),
+                'tab'                   => __('tablet', 'monalisa'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'alenastudio'),
+                'label'   => __('Responsive Styling', 'monalisa'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'alenastudio'),
+                        'label' => __('Disabled', 'monalisa'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'alenastudio'),
+                        'label' => __('Enabled', 'monalisa'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'alenastudio'),
+                'tab'     => __('phone', 'monalisa'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -901,11 +901,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -913,13 +913,13 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -927,11 +927,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'alenastudio'),
+                'label'                 => __('Width', 'monalisa'),
                 'id'                    => 'css_res_p_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -939,11 +939,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Title - Font Size', 'alenastudio'),
+                'label'                 => __('Title - Font Size', 'monalisa'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -951,11 +951,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'alenastudio'),
+                'label'                 => __('Title - Line Height', 'monalisa'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -963,11 +963,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'alenastudio'),
+                'label'                 => __('Title - Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_p_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -975,11 +975,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Font Size', 'alenastudio'),
+                'label'                 => __('Content - Font Size', 'monalisa'),
                 'id'                    => 'css_res_p_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -987,11 +987,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'alenastudio'),
+                'label'                 => __('Content - Line Height', 'monalisa'),
                 'id'                    => 'css_res_p_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -999,11 +999,11 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Margin Bottom', 'alenastudio'),
+                'label'                 => __('Content - Margin Bottom', 'monalisa'),
                 'id'                    => 'css_res_p_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -1011,7 +1011,7 @@ class AS_Introduce extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'alenastudio'),
+                'tab'                   => __('phone', 'monalisa'),
                 'ext'                   => 'px'
             ),
         );
@@ -1082,7 +1082,7 @@ class AS_Introduce extends as_module {
                                     <?php echo stripslashes($options['content']); ?>
                                 </div>
                                 <!-- .dslca-editable-content -->
-                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'alenastudio'); ?></span></div>
+                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'monalisa'); ?></span></div>
                             <?php else : ?>
                                 <?php echo do_shortcode(stripslashes($options['content'])); ?>
                             <?php endif; ?>

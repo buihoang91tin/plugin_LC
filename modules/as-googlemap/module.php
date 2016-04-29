@@ -1,6 +1,6 @@
 <?php
 
-class AS_Google_Map extends as_module {
+class AS_Google_Map extends DSLC_Module {
 
     // Module Attributes
     var $module_id;
@@ -46,7 +46,7 @@ class AS_Google_Map extends as_module {
             array(
                 'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -330,7 +330,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width Google Map ', 'alenastudio'),
+                'label'                 => __('Width Google Map ', 'monalisa'),
                 'id'                    => 'css_res_t_as_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -344,7 +344,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Height Google Map ', 'alenastudio'),
+                'label'                 => __('Height Google Map ', 'monalisa'),
                 'id'                    => 'css_res_t_as_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -358,7 +358,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -371,7 +371,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -384,7 +384,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -397,7 +397,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -412,7 +412,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -448,7 +448,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width Google Map ', 'alenastudio'),
+                'label'                 => __('Width Google Map ', 'monalisa'),
                 'id'                    => 'css_res_p_as_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -462,7 +462,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Height Google Map ', 'alenastudio'),
+                'label'                 => __('Height Google Map ', 'monalisa'),
                 'id'                    => 'css_res_p_as_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -476,7 +476,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -489,7 +489,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -502,7 +502,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -515,7 +515,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -530,7 +530,7 @@ class AS_Google_Map extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -575,7 +575,7 @@ class AS_Google_Map extends as_module {
         $elementID = uniqid('as_googlemap_');
         ?>
         <?php if ($dslc_active): ?>
-            <!--<div class="dslc-notification dslc-red"><?php _e('Map live preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing map.', 'alenastudio'); ?><br> <?php _e('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'alenastudio'); ?></div>-->
+            <!--<div class="dslc-notification dslc-red"><?php _e('Map live preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing map.', 'monalisa'); ?><br> <?php _e('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'monalisa'); ?></div>-->
             <div class="as_google_map_wrapper">
                 <div class="as_googlemap" id="<?php echo $elementID; ?>" value="<?php echo esc_attr($options['googlemap_x']); ?>,<?php echo esc_attr($options['googlemap_y']); ?>" scrollwheel="<?php echo esc_attr($options['googlemap_scrlwheel']); ?>" zoom="<?php echo esc_attr($options['googlemap_zoom']); ?>" markposition="<?php echo esc_attr($options['googlemap_x_mark']); ?>,<?php echo esc_attr($options['googlemap_y_mark']); ?>" marktitle="<?php echo esc_attr($options['google_title_mark']); ?>" snapzzymap="<?php echo esc_attr($options['googlemap_snazzy_map']); ?>"></div>
             </div>

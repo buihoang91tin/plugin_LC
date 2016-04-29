@@ -1,6 +1,6 @@
 <?php
 
-class AS_video extends as_module {
+class AS_video extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -10,7 +10,7 @@ class AS_video extends as_module {
     function __construct() {
 
         $this->module_id       = 'as_video';
-        $this->module_title    = __('AS - video', 'alenastudio');
+        $this->module_title    = __('AS - video', 'monalisa');
         $this->module_icon     = 'file-video-o';
         $this->module_category = 'as - video';
     }
@@ -24,39 +24,39 @@ class AS_video extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'alenastudio'),
+                'label'   => __('Show On', 'monalisa'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'alenastudio'),
+                        'label' => __('Desktop', 'monalisa'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'alenastudio'),
+                        'label' => __('Tablet', 'monalisa'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'alenastudio'),
+                        'label' => __('Phone', 'monalisa'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Video URL', 'alenastudio'),
+                'label' => __('Video URL', 'monalisa'),
                 'id'    => 'video_url',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Height', 'alenastudio'),
+                'label' => __('Height', 'monalisa'),
                 'id'    => 'video_height',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Width', 'alenastudio'),
+                'label' => __('Width', 'monalisa'),
                 'id'    => 'video_width',
                 'std'   => '',
                 'type'  => 'text',
@@ -78,7 +78,7 @@ class AS_video extends as_module {
              * General
              */
             array(
-                'label'                 => __('Align', 'alenastudio'),
+                'label'                 => __('Align', 'monalisa'),
                 'id'                    => 'css_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -88,7 +88,7 @@ class AS_video extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color', 'alenastudio'),
+                'label'                 => __('BG Color', 'monalisa'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -98,7 +98,7 @@ class AS_video extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'alenastudio'),
+                'label'                 => __('BG Color - Hover', 'monalisa'),
                 'id'                    => 'css_bg_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -108,7 +108,7 @@ class AS_video extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'alenastudio'),
+                'label'                 => __('Border Color', 'monalisa'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -118,7 +118,7 @@ class AS_video extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'alenastudio'),
+                'label'                 => __('Border Color - Hover', 'monalisa'),
                 'id'                    => 'css_border_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -128,7 +128,7 @@ class AS_video extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'alenastudio'),
+                'label'                 => __('Border Width', 'monalisa'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -139,25 +139,25 @@ class AS_video extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'alenastudio'),
+                'label'                 => __('Borders', 'monalisa'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'alenastudio'),
+                        'label' => __('Top', 'monalisa'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'alenastudio'),
+                        'label' => __('Right', 'monalisa'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'alenastudio'),
+                        'label' => __('Bottom', 'monalisa'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'alenastudio'),
+                        'label' => __('Left', 'monalisa'),
                         'value' => 'left'
                     ),
                 ),
@@ -167,7 +167,7 @@ class AS_video extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'alenastudio'),
+                'label'                 => __('Border Radius', 'monalisa'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -178,7 +178,7 @@ class AS_video extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'alenastudio'),
+                'label'                 => __('Margin Bottom', 'monalisa'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -189,7 +189,7 @@ class AS_video extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Minimum Height', 'alenastudio'),
+                'label'                 => __('Minimum Height', 'monalisa'),
                 'id'                    => 'css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -203,7 +203,7 @@ class AS_video extends as_module {
                 'increment'             => 5
             ),
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -214,7 +214,7 @@ class AS_video extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -249,7 +249,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -262,7 +262,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -275,7 +275,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -288,7 +288,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Minimum Height ', 'alenastudio'),
+                'label'                 => __('Minimum Height ', 'monalisa'),
                 'id'                    => 'css_res_t_css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -304,7 +304,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -317,7 +317,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -353,7 +353,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -366,7 +366,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -379,7 +379,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -392,7 +392,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Minimum Height ', 'alenastudio'),
+                'label'                 => __('Minimum Height ', 'monalisa'),
                 'id'                    => 'css_res_p_css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -408,7 +408,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -421,7 +421,7 @@ class AS_video extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -478,7 +478,7 @@ class AS_video extends as_module {
 
                     // Show meessage if editor is active
                     if (dslc_is_editor_active()) {
-                        ?><div class="as-notification as-red"><?php _e('Make sure you entered a valid URL ( ex. https://www.youtube.com/watch?v=ONHBaC-pfsk )', 'alenastudio'); ?><?php
+                        ?><div class="as-notification as-red"><?php _e('Make sure you entered a valid URL ( ex. https://www.youtube.com/watch?v=ONHBaC-pfsk )', 'monalisa'); ?><?php
                     }
 
                     // If embed code ok, display it
@@ -493,7 +493,7 @@ class AS_video extends as_module {
 
                 // Show message if editor active
                 if (dslc_is_editor_active()) {
-                    ?><div class="as-notification as-red"><?php _e('A video URL needs to be set in the module options.', 'alenastudio'); ?><?php
+                    ?><div class="as-notification as-red"><?php _e('A video URL needs to be set in the module options.', 'monalisa'); ?><?php
                         }
                     }
                     ?>

@@ -1,6 +1,6 @@
 <?php
 
-class AS_Info_Box_4 extends as_module {
+class AS_Info_Box_4 extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Info_Box_4 extends as_module {
     }
 
     function options() {
-        global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -578,7 +578,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#fff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box .hi-icon',
@@ -756,7 +756,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#3d3d3d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -794,7 +794,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -843,7 +843,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -881,7 +881,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -1016,7 +1016,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
@@ -1065,7 +1065,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_button_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
@@ -1150,7 +1150,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Icon - Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#b0c8eb',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a .dslc-icon',
@@ -1273,7 +1273,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_2_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
@@ -1322,7 +1322,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_button_2_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
@@ -1389,7 +1389,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'                 => __('Icon - Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_2_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#b0c8eb',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary .dslc-icon',
@@ -1415,7 +1415,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1431,7 +1431,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'      => __('Button Title', 'live-composer-page-builder'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1439,7 +1439,7 @@ class AS_Info_Box_4 extends as_module {
             array(
                 'label'      => __('Button Title', 'live-composer-page-builder'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -2069,9 +2069,9 @@ class AS_Info_Box_4 extends as_module {
                                 <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
                             <?php endif; ?>
                             <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'alenastudio'); ?></span>
+                                <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'monalisa'); ?></span>
                                 <?php
-                            else : echo esc_html($options['button_title'], 'alenastudio');
+                            else : echo esc_html($options['button_title'], 'monalisa');
                             endif;
                             ?>
                         </a>
@@ -2082,9 +2082,9 @@ class AS_Info_Box_4 extends as_module {
                                 <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
                             <?php endif; ?>
                             <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'alenastudio'); ?></span>
+                                <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'monalisa'); ?></span>
                                 <?php
-                            else : echo esc_html($options['button_2_title'], 'alenastudio');
+                            else : echo esc_html($options['button_2_title'], 'monalisa');
                             endif;
                             ?>
                         </a>
@@ -2147,9 +2147,9 @@ class AS_Info_Box_4 extends as_module {
                                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
                                     <?php endif; ?>
                                     <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'alenastudio'); ?></span>
+                                        <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'monalisa'); ?></span>
                                         <?php
-                                    else : echo esc_html($options['button_title'], 'alenastudio');
+                                    else : echo esc_html($options['button_title'], 'monalisa');
                                     endif;
                                     ?>
                                 </a>
@@ -2160,9 +2160,9 @@ class AS_Info_Box_4 extends as_module {
                                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
                                     <?php endif; ?>
                                     <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'alenastudio'); ?></span>
+                                        <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'monalisa'); ?></span>
                                         <?php
-                                    else : echo esc_html($options['button_2_title'], 'alenastudio');
+                                    else : echo esc_html($options['button_2_title'], 'monalisa');
                                     endif;
                                     ?>
                                 </a>

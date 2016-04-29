@@ -1,6 +1,6 @@
 <?php
 
-class AS_Countdown extends as_module {
+class AS_Countdown extends DSLC_Module {
 
     // Module Attributes
     var $module_id;
@@ -18,7 +18,6 @@ class AS_Countdown extends as_module {
 
     // Module Options
     function options() {
-         global $as_ex_options;
         // The options array
         $dslc_options = array(
             /**
@@ -355,7 +354,7 @@ class AS_Countdown extends as_module {
              * Styling
              */
             array(
-                'label'                 => __('Padding Vertical', 'alenastudio'),
+                'label'                 => __('Padding Vertical', 'monalisa'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -366,7 +365,7 @@ class AS_Countdown extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'alenastudio'),
+                'label'                 => __('Padding Horizontal', 'monalisa'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -408,7 +407,7 @@ class AS_Countdown extends as_module {
             array(
                 'label'                 => __('Date  Color', 'live-composer-page-builder'),
                 'id'                    => 'as_timing_date_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#21c2f8',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '',
@@ -419,7 +418,7 @@ class AS_Countdown extends as_module {
             array(
                 'label'                 => __('Hours  Color', 'live-composer-page-builder'),
                 'id'                    => 'as_timing_hours_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#f28776',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '',
@@ -430,7 +429,7 @@ class AS_Countdown extends as_module {
             array(
                 'label'                 => __('Minutes  Color', 'live-composer-page-builder'),
                 'id'                    => 'as_timing_minutes_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#9675ed',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '',
@@ -441,7 +440,7 @@ class AS_Countdown extends as_module {
             array(
                 'label'                 => __('Seconds  Color', 'live-composer-page-builder'),
                 'id'                    => 'as_timing_seconds_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#facc43',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '',
@@ -452,7 +451,7 @@ class AS_Countdown extends as_module {
             array(
                 'label'                 => __('Number Text Color', 'live-composer-page-builder'),
                 'id'                    => 'css_number_text_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#272822',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.time_circles>div>span',
@@ -489,7 +488,7 @@ class AS_Countdown extends as_module {
             ),
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
-                'id'                    => $as_ex_options['as_ex_content_font']['font-family'],
+                'id'                    => 'css_number_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -551,7 +550,7 @@ class AS_Countdown extends as_module {
             array(
                 'label'                 => __('Font Family Text', 'live-composer-page-builder'),
                 'id'                    => 'css_text_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.time_circles>div>h4',
@@ -733,7 +732,7 @@ class AS_Countdown extends as_module {
 
 
         <?php if ((empty($options['time_countdown']))): ?>
-            <div class="dslc-notification dslc-red"><?php _e('Time CountDown preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing time countdown.', 'alenastudio'); ?><br></div>
+            <div class="dslc-notification dslc-red"><?php _e('Time CountDown preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing time countdown.', 'monalisa'); ?><br></div>
         <?php else: ?>
             <div class="coming_soon_ctn">
                 <div class="timing" style="width:100%;">

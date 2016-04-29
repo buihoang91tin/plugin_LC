@@ -1,6 +1,6 @@
 <?php
 
-class AS_Posts extends as_module {
+class AS_Posts extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Posts extends as_module {
     }
 
     function options() {
-        global $as_ex_options;
+
         // Get registered post types
         $post_types         = get_post_types(array(
             'public' => true), 'objects');
@@ -457,7 +457,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_sep_border_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ededed',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-post-separator',
@@ -933,7 +933,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#212121',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-title h2,.dslc-cpt-post-title h2 a',
@@ -982,7 +982,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-title h2,.dslc-cpt-post-title h2 a',
@@ -1158,7 +1158,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_meta_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#aaaaaa',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-meta',
@@ -1181,7 +1181,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_meta_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-meta',
@@ -1422,7 +1422,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_excerpt_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-excerpt',
@@ -1460,7 +1460,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_excerpt_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-excerpt',
@@ -1656,7 +1656,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-read-more a.as-btn-read-more',
@@ -1705,7 +1705,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_button_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-read-more a.as-btn-read-more',
@@ -1778,7 +1778,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Icon - Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-read-more a.as-btn-read-more .dslc-icon',
@@ -1863,7 +1863,7 @@ class AS_Posts extends as_module {
             array(
                 'label'                 => __('Out Line Color', 'live-composer-page-builder'),
                 'id'                    => 'as_button_out_line_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-cpt-post-read-more a.as-btn-read-more',
@@ -2561,13 +2561,17 @@ class AS_Posts extends as_module {
 
         // General args
         $args = array(
-            'paged'          => $paged,
+            'paged'          =>$paged,
             'post_type'      => $options['post_type'],
             'posts_per_page' => $options['amount'],
             'order'          => $options['order'],
-            'orderby'        => $options['orderby'],
-            'offset'         => $query_offset
+            'orderby'        => $options['orderby']
         );
+
+        // Add offset
+        if ($query_offset > 0) {
+            $args['offset'] = $query_offset;
+        }
 
         if (defined('DOING_AJAX') && DOING_AJAX) {
             $args['post_status'] = array(
@@ -2748,19 +2752,19 @@ class AS_Posts extends as_module {
 
                 <!-- Heading -->
 
-                <?php if ($show_heading) : ?>
+            <?php if ($show_heading) : ?>
 
                     <h2 class="dslca-editable-content" data-id="main_heading_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?> ><?php echo stripslashes($options['main_heading_title']); ?></h2>
 
                     <!-- View all -->
 
-                    <?php if (isset($options['view_all_link']) && $options['view_all_link'] !== '') : ?>
+                <?php if (isset($options['view_all_link']) && $options['view_all_link'] !== '') : ?>
 
                         <span class="dslc-module-heading-view-all"><a href="<?php echo esc_url($options['view_all_link']); ?>" class="dslca-editable-content" data-id="main_heading_link_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?> ><?php echo esc_html($options['main_heading_link_title']); ?></a></span>
 
                     <?php endif; ?>
 
-                <?php endif; ?>
+            <?php endif; ?>
 
                 <!-- Filters -->
 
@@ -2812,7 +2816,7 @@ class AS_Posts extends as_module {
                                 $cat_name) :
                             ?>
                             <span class="dslc-post-filter dslc-inactive" data-id="<?php echo esc_attr($cat_slug); ?>"><?php echo attr($cat_name); ?></span>
-                        <?php endforeach; ?>
+                <?php endforeach; ?>
 
                     </div><!-- .dslc-post-filters -->
 
@@ -2822,14 +2826,14 @@ class AS_Posts extends as_module {
 
                 <!-- Carousel -->
 
-                <?php if ($show_carousel_arrows) : ?>
+            <?php if ($show_carousel_arrows) : ?>
                     <span class="dslc-carousel-nav fr">
                         <span class="dslc-carousel-nav-inner">
                             <a href="#" class="dslc-carousel-nav-prev"><span class="dslc-icon-chevron-left dslc-init-center"></span></a>
                             <a href="#" class="dslc-carousel-nav-next"><span class="dslc-icon-chevron-right dslc-init-center"></span></a>
                         </span>
                     </span><!-- .carousel-nav -->
-                <?php endif; ?>
+            <?php endif; ?>
 
             </div><!-- .dslc-module-heading -->
             <?php
@@ -2841,11 +2845,11 @@ class AS_Posts extends as_module {
         global $post;
         if ($dslc_query->have_posts()) {
             ?>
-            <?php echo $duration_hover; ?>
+                <?php echo $duration_hover; ?>
             <div class="as-custom-post-class <?php echo esc_attr($container_class); ?>"><?php
-            ?><div class="dslc-posts-inner"><?php
-                if ($options['type'] == 'carousel') :
-                    ?><div class="dslc-loader"></div><div class="dslc-carousel" data-stop-on-hover="<?php echo esc_attr($options['carousel_autoplay_hover']); ?>" data-autoplay="<?php echo esc_attr($options['carousel_autoplay']); ?>" data-columns="<?php echo esc_attr($carousel_items); ?>" data-pagination="<?php
+                ?><div class="dslc-posts-inner"><?php
+                    if ($options['type'] == 'carousel') :
+                        ?><div class="dslc-loader"></div><div class="dslc-carousel" data-stop-on-hover="<?php echo esc_attr($options['carousel_autoplay_hover']); ?>" data-autoplay="<?php echo esc_attr($options['carousel_autoplay']); ?>" data-columns="<?php echo esc_attr($carousel_items); ?>" data-pagination="<?php
                         if (in_array('circles', $carousel_elements))
                             echo 'true';
                         else
@@ -2915,28 +2919,28 @@ class AS_Posts extends as_module {
                                     }
                                     ?>
 
-                                    <?php if (has_post_thumbnail()) : ?>
+                    <?php if (has_post_thumbnail()) : ?>
 
                                         <div class="dslc-post-thumb dslc-cpt-post-thumb dslc-on-hover-anim">
 
                                             <div class="dslc-cpt-post-thumb-inner dslca-post-thumb">
-                                                <?php if ($manual_resize) : ?>
+                                                    <?php if ($manual_resize) : ?>
                                                     <a href="<?php the_permalink(); ?>"><img src="<?php
-                                                        $res_img = dslc_aq_resize($thumb_url, $resize_width, $resize_height, true);
-                                                        echo esc_url($res_img);
-                                                        ?>" alt="<?php echo esc_attr($thumb_alt); ?>" /></a>
-                                                    <?php else : ?>
+                                                                                             $res_img = dslc_aq_resize($thumb_url, $resize_width, $resize_height, true);
+                                                                                             echo esc_url($res_img);
+                                                                                             ?>" alt="<?php echo esc_attr($thumb_alt); ?>" /></a>
+                                                <?php else : ?>
                                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
-                                                <?php endif; ?>
+                                            <?php endif; ?>
                                             </div><!-- .dslc-cpt-post-thumb-inner -->
 
-                                            <?php if (( $options['main_location'] == 'inside' || $options['main_location'] == 'inside_visible' ) && ( $post_elements == 'all' || in_array('title', $post_elements) || in_array('meta', $post_elements) || in_array('excerpt', $post_elements) || in_array('button', $post_elements) )) : ?>
+                        <?php if (( $options['main_location'] == 'inside' || $options['main_location'] == 'inside_visible' ) && ( $post_elements == 'all' || in_array('title', $post_elements) || in_array('meta', $post_elements) || in_array('excerpt', $post_elements) || in_array('button', $post_elements) )) : ?>
 
                                                 <div class="dslc-post-main dslc-cpt-post-main <?php if ($options['main_location'] == 'inside_visible') echo 'dslc-cpt-post-main-visible'; ?> dslc-on-hover-anim-target dslc-anim-<?php echo esc_attr($options['css_anim_hover']); ?>" data-dslc-anim="<?php echo esc_attr($options['css_anim_hover']) ?>" data-dslc-anim-speed="<?php echo esc_attr($options['css_anim_speed']); ?>">
 
                                                     <div class="dslc-cpt-post-main-inner dslc-init-<?php echo esc_attr($options['main_position']); ?>">
 
-                                                        <?php if ($post_elements == 'all' || in_array('title', $post_elements)) : ?>
+                            <?php if ($post_elements == 'all' || in_array('title', $post_elements)) : ?>
 
                                                             <div class="dslc-cpt-post-title">
                                                                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -2944,23 +2948,23 @@ class AS_Posts extends as_module {
 
                                                         <?php endif; ?>	
 
-                                                        <?php if ($post_elements == 'all' || in_array('meta', $post_elements)) : ?>
+                            <?php if ($post_elements == 'all' || in_array('meta', $post_elements)) : ?>
 
                                                             <div class="dslc-cpt-post-meta">
 
                                                                 <div class="dslc-cpt-post-meta-date">
-                                                                    <?php the_time(get_option('date_format')); ?>
+                                <?php the_time(get_option('date_format')); ?>
                                                                 </div><!-- .dslc-cpt-post-meta-date -->
 
                                                                 <div class="dslc-cpt-post-meta-author">
-                                                                    <?php _e('By', 'live-composer-page-builder'); ?> <?php the_author_posts_link(); ?>
+                                <?php _e('By', 'live-composer-page-builder'); ?> <?php the_author_posts_link(); ?>
                                                                 </div><!-- .dslc-cpt-post-meta-author -->
 
                                                             </div><!-- .dslc-cpt-post-meta -->
 
                                                         <?php endif; ?>
 
-                                                        <?php if ($post_elements == 'all' || in_array('excerpt', $post_elements)) : ?>
+                                                            <?php if ($post_elements == 'all' || in_array('excerpt', $post_elements)) : ?>
 
                                                             <div class="dslc-cpt-post-excerpt">
                                                                 <?php if ($options['excerpt_or_content'] == 'content') : ?>
@@ -2979,12 +2983,12 @@ class AS_Posts extends as_module {
                                                                             echo do_shortcode(get_the_content());
                                                                     }
                                                                     ?>
-                                                                <?php endif; ?>
+                                                            <?php endif; ?>
                                                             </div><!-- .dslc-cpt-post-excerpt -->
 
                                                         <?php endif; ?>
 
-                                                        <?php if ($post_elements == 'all' || in_array('button', $post_elements)) : ?>
+                            <?php if ($post_elements == 'all' || in_array('button', $post_elements)) : ?>
 
                                                             <div class="dslc-cpt-post-read-more">
                                                                 <a href="<?php the_permalink(); ?>">
@@ -2997,18 +3001,18 @@ class AS_Posts extends as_module {
                                                                     <?php if ($options['as_button_position_icon'] == 'right') : ?>
                                                                         <?php if (isset($options['button_icon_id']) && $options['button_icon_id'] != '') : ?>
                                                                             <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
-                                                                        <?php endif; ?>
-                                                                    <?php endif; ?>
+                                    <?php endif; ?>
+                                <?php endif; ?>
                                                                 </a>
                                                             </div><!-- .dslc-cpt-post-read-more -->
 
-                                                        <?php endif; ?>
+                            <?php endif; ?>
 
                                                     </div><!-- .dslc-cpt-post-main-inner -->
 
                                                 </div><!-- .dslc-cpt-post-main -->
 
-                                            <?php endif; ?>
+                        <?php endif; ?>
 
                                         </div><!-- .dslc-cpt-post-thumb -->
 
@@ -3016,11 +3020,11 @@ class AS_Posts extends as_module {
 
                                 <?php endif; ?>
 
-                                <?php if ($options['main_location'] == 'bellow' && ( $post_elements == 'all' || in_array('title', $post_elements) || in_array('meta', $post_elements) || in_array('excerpt', $post_elements) || in_array('button', $post_elements) )) : ?>
+                <?php if ($options['main_location'] == 'bellow' && ( $post_elements == 'all' || in_array('title', $post_elements) || in_array('meta', $post_elements) || in_array('excerpt', $post_elements) || in_array('button', $post_elements) )) : ?>
 
                                     <div class="dslc-post-main dslc-cpt-post-main">
 
-                                        <?php if ($post_elements == 'all' || in_array('title', $post_elements)) : ?>
+                    <?php if ($post_elements == 'all' || in_array('title', $post_elements)) : ?>
 
                                             <div class="dslc-cpt-post-title">
                                                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -3028,12 +3032,12 @@ class AS_Posts extends as_module {
 
                                         <?php endif; ?>	
 
-                                        <?php if ($post_elements == 'all' || in_array('meta', $post_elements)) : ?>
+                    <?php if ($post_elements == 'all' || in_array('meta', $post_elements)) : ?>
 
                                             <div class="dslc-cpt-post-meta">
 
                                                 <div class="dslc-cpt-post-meta-author">
-                                                    <?php _e('By', 'live-composer-page-builder'); ?> <?php the_author_posts_link(); ?>
+                        <?php _e('By', 'live-composer-page-builder'); ?> <?php the_author_posts_link(); ?>
                                                 </div><!-- .dslc-cpt-post-meta-author -->
 
                                                 <span class="as-line-post"></span>
@@ -3046,7 +3050,7 @@ class AS_Posts extends as_module {
 
                                         <?php endif; ?>
 
-                                        <?php if ($post_elements == 'all' || in_array('excerpt', $post_elements)) : ?>
+                                            <?php if ($post_elements == 'all' || in_array('excerpt', $post_elements)) : ?>
 
                                             <div class="dslc-cpt-post-excerpt">
                                                 <?php if ($options['excerpt_or_content'] == 'content') : ?>
@@ -3065,12 +3069,12 @@ class AS_Posts extends as_module {
                                                             echo do_shortcode(get_the_content());
                                                     }
                                                     ?>
-                                                <?php endif; ?>
+                                            <?php endif; ?>
                                             </div><!-- .dslc-cpt-post-excerpt -->
 
                                         <?php endif; ?>
 
-                                        <?php if ($post_elements == 'all' || in_array('button', $post_elements)) : ?>
+                    <?php if ($post_elements == 'all' || in_array('button', $post_elements)) : ?>
 
                                             <div class="dslc-cpt-post-read-more">
                                                 <a href="<?php the_permalink(); ?>" class="as-btn-read-more">
@@ -3083,12 +3087,11 @@ class AS_Posts extends as_module {
                                                     <?php if ($options['as_button_position_icon'] == 'right') : ?>
                                                         <?php if (isset($options['button_icon_id']) && $options['button_icon_id'] != '') : ?>
                                                             <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
-                                                        <?php endif; ?>
-                                                    <?php endif; ?>
+                            <?php endif; ?>
+                        <?php endif; ?>
                                                 </a>
                                                 <div class="as-post-like-share">
                                                     <div class="as-btn-heart-blog">
-                                                        <!--  error like and share function-->
                                                         <a href="#" class="as-post-like <?php echo as_is_like_post($post->ID); ?>" data-id="<?php echo get_the_ID(); ?>">
                                                             <span class="dslc-icon dslc-icon-heart-empty"></span>
                                                             <span class="number-like-heart">
@@ -3098,14 +3101,15 @@ class AS_Posts extends as_module {
                                                             </span>
                                                         </a>
                                                     </div>
+                                                    
                                                 </div>
                                             </div><!-- .dslc-cpt-post-read-more -->
 
-                                        <?php endif; ?>
+                    <?php endif; ?>
 
                                     </div><!-- .dslc-cpt-post-main -->
 
-                                <?php endif; ?>
+                <?php endif; ?>
 
                             </div><!-- .dslc-cpt-post -->
 
@@ -3118,8 +3122,8 @@ class AS_Posts extends as_module {
 
                         if ($options['type'] == 'carousel') :
                             ?></div><?php
-                    endif;
-                    ?></div><!--.dslc-posts-inner --><?php ?></div><!-- .dslc-cpt-posts --><?php
+                endif;
+                ?></div><!--.dslc-posts-inner --><?php ?></div><!-- .dslc-cpt-posts --><?php
             } else {
 
                 if ($dslc_is_admin) :

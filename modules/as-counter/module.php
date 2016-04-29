@@ -1,6 +1,6 @@
 <?php
 
-class AS_Counter_Module extends as_module {
+class AS_Counter_Module extends DSLC_Module {
 
     // Module Attributes
     var $module_id;
@@ -18,7 +18,7 @@ class AS_Counter_Module extends as_module {
 
     // Module Options
     function options() {
- global $as_ex_options;
+
         // The options array
         $dslc_options = array(
             array(
@@ -76,7 +76,7 @@ class AS_Counter_Module extends as_module {
             array(
                 'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'as_counter_title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -322,7 +322,7 @@ class AS_Counter_Module extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_counter_css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_counter_title',
@@ -360,7 +360,7 @@ class AS_Counter_Module extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_counter_css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as_counter_title',
@@ -410,7 +410,7 @@ class AS_Counter_Module extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_counter_css_number_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.odometer',
@@ -448,7 +448,7 @@ class AS_Counter_Module extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_counter_css_number_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Oswald',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.odometer',
@@ -561,7 +561,7 @@ class AS_Counter_Module extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_counter_css_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(90, 195, 188)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-counter-box-image-inner .dslc-icon',
@@ -1296,12 +1296,12 @@ class AS_Counter_Module extends as_module {
                 </div>
             <?php endif; ?>
             <div class="as-counter-content">
-                <div class="odometer" data-number="<?php echo esc_attr($options['as_counter_to_number']); ?>"><?php echo esc_html($options['as_counter_from_number'], 'alenastudio'); ?></div>
+                <div class="odometer" data-number="<?php echo esc_attr($options['as_counter_to_number']); ?>"><?php echo esc_html($options['as_counter_from_number'], 'monalisa'); ?></div>
                 <?php if (in_array('title', $elements)) : ?>
                     <?php if ($dslc_is_admin) : ?>
-                        <h2 class="dslca-editable-content as_counter_title" data-id="as_counter_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_counter_title'], 'alenastudio'); ?></h2>
+                        <h2 class="dslca-editable-content as_counter_title" data-id="as_counter_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_counter_title'], 'monalisa'); ?></h2>
                     <?php else : ?>
-                        <h2 class="as_counter_title"><?php echo esc_html($options['as_counter_title'], 'alenastudio'); ?></h2>
+                        <h2 class="as_counter_title"><?php echo esc_html($options['as_counter_title'], 'monalisa'); ?></h2>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>

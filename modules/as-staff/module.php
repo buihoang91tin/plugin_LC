@@ -2,7 +2,7 @@
 if (dslc_is_module_active('DSLC_Staff'))
     include AS_EXTENSION_ABS . '/modules/as-staff/functions.php';
 
-class AS_Staff extends as_module {
+class AS_Staff extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -1619,10 +1619,11 @@ class AS_Staff extends as_module {
             'post_type'      => 'dslc_staff',
             'posts_per_page' => $options['amount'],
             'order'          => $options['order'],
-            'orderby'        => $options['orderby'],
-            'offset'         => $query_offset
+            'orderby'        => $options['orderby']
         );
-
+if ($query_offset > 0) {
+            $args['offset'] = $query_offset;
+        }
         if (isset($options['categories']) && $options['categories'] != '') {
 
             $cats_array = explode(' ', trim($options['categories']));

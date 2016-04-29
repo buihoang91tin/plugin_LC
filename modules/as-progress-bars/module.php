@@ -1,6 +1,6 @@
 <?php
 
-class AS_Progress_Bars extends as_module {
+class AS_Progress_Bars extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_Progress_Bars extends as_module {
     }
 
     function options() {
-global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -238,7 +238,7 @@ global $as_ex_options;
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_label_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#3d3d3d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
@@ -276,7 +276,7 @@ global $as_ex_options;
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_label_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Oswald',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
@@ -419,7 +419,7 @@ global $as_ex_options;
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_loader_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#62cbd7',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-progress-bar-loader-inner',
@@ -814,7 +814,7 @@ global $as_ex_options;
             <?php if ($options['label_position'] == 'above') : ?>
 
                 <?php if ($dslc_is_admin) : ?>
-                    <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'alenastudio'); ?></h4>
+                    <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'monalisa'); ?></h4>
                 <?php else : ?>
                     <h4 class="dslc-progress-bar-label"><?php echo esc_html($options['label']); ?></h4>
                 <?php endif; ?>
@@ -828,9 +828,9 @@ global $as_ex_options;
                     <?php endif; ?>
                     <?php if ($options['label_position'] == 'inside') : ?>
                         <?php if ($dslc_is_admin) : ?>
-                            <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'alenastudio'); ?></h4>
+                            <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'monalisa'); ?></h4>
                         <?php else : ?>
-                            <h4 class="dslc-progress-bar-label"><?php echo esc_html($options['label'], 'alenastudio'); ?></h4>
+                            <h4 class="dslc-progress-bar-label"><?php echo esc_html($options['label'], 'monalisa'); ?></h4>
                         <?php endif; ?>
                     <?php endif; ?>
                 </span>

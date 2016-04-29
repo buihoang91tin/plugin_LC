@@ -3917,7 +3917,8 @@ Opera 15+
 .as-staff-social-wrapper .as-staff-list-social a {
   margin-bottom: 10px;
   display: inline-block;
-  position: relative; }
+  position: relative; 
+box-shadow: none;}
   .as-staff-social-wrapper .as-staff-list-social a span {
     display: inline-block;
     vertical-align: middle; }

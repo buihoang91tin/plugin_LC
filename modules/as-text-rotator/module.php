@@ -1,6 +1,6 @@
 <?php
 
-class AS_text_rotator extends as_module {
+class AS_text_rotator extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -16,7 +16,7 @@ class AS_text_rotator extends as_module {
     }
 
     function options() {
-global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -242,7 +242,7 @@ global $as_ex_options;
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_title_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(61, 61, 61)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
@@ -280,7 +280,7 @@ global $as_ex_options;
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_title_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
@@ -306,10 +306,10 @@ global $as_ex_options;
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_title_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => 'rgb(61, 61, 61)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -320,7 +320,7 @@ global $as_ex_options;
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -332,7 +332,7 @@ global $as_ex_options;
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -344,10 +344,10 @@ global $as_ex_options;
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'as_rotator_title_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -358,7 +358,7 @@ global $as_ex_options;
                 'std'                   => '53',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -370,7 +370,7 @@ global $as_ex_options;
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -384,7 +384,7 @@ global $as_ex_options;
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'tab'                   => __('text rotator', 'live-composer-page-builder'),
@@ -468,8 +468,32 @@ global $as_ex_options;
                 'std'                   => '15',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-wraper .cd-words-wrapper ',
+                'affect_on_change_el'   => '.as-text-wraper .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b ',
                 'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Line Height ( Text )', 'live-composer-page-builder'),
+                'id'                    => 'css_res_t_line_height_text',
+                'std'                   => '53',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Line Height ( Rotator )', 'live-composer-page-builder'),
+                'id'                    => 'css_res_t_line_height_rotator',
+                'std'                   => '53',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
                 'tab'                   => __('tablet', 'live-composer-page-builder'),
                 'ext'                   => 'px'
@@ -551,8 +575,32 @@ global $as_ex_options;
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-text-wraper .cd-words-wrapper',
+                'affect_on_change_el'   => '.as-text-wraper .cd-words-wrapper, .as-text-wraper .cd-words-wrapper b',
                 'affect_on_change_rule' => 'font-size',
+                'section'               => 'responsive',
+                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Line Height ( Text )', 'live-composer-page-builder'),
+                'id'                    => 'css_res_p_line_height_text',
+                'std'                   => '53',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotator .as-text-rotator-text',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'responsive',
+                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Line Height ( Rotator )', 'live-composer-page-builder'),
+                'id'                    => 'css_res_p_line_height_rotator',
+                'std'                   => '53',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.as-text-rotator .cd-words-wrapper',
+                'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
                 'tab'                   => __('phone', 'live-composer-page-builder'),
                 'ext'                   => 'px'

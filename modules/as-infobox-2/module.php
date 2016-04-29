@@ -1,5 +1,6 @@
 <?php
-class AS_Info_Box_2 extends as_module {
+
+class AS_Info_Box_2 extends DSLC_Module {
 
     var $module_id;
     var $module_title;
@@ -15,7 +16,7 @@ class AS_Info_Box_2 extends as_module {
     }
 
     function options() {
-         global $as_ex_options;
+
         $dslc_options = array(
             array(
                 'label'   => __('Show On', 'live-composer-page-builder'),
@@ -504,7 +505,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#fda501',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner .dslc-icon',
@@ -581,7 +582,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_title_color',
-                'std'                   => $as_ex_options['as_ex_color_main'],
+                'std'                   => '#3d3d3d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -619,7 +620,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => $as_ex_options['as_ex_title_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
@@ -668,7 +669,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_content_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -706,7 +707,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
@@ -841,7 +842,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
@@ -890,7 +891,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_button_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
@@ -975,7 +976,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Icon - Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_icon_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#b0c8eb',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a .dslc-icon',
@@ -1098,7 +1099,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
                 'id'                    => 'css_button_2_color',
-                'std'                   => $as_ex_options['as_ex_color_content'],
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
@@ -1147,7 +1148,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
                 'id'                    => 'css_button_2_font_family',
-                'std'                   => $as_ex_options['as_ex_content_font']['font-family'],
+                'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
@@ -1240,7 +1241,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'      => __('Title', 'live-composer-page-builder'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1256,7 +1257,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'      => __('Button Title', 'live-composer-page-builder'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1264,7 +1265,7 @@ class AS_Info_Box_2 extends as_module {
             array(
                 'label'      => __('Button Title', 'live-composer-page-builder'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','alenastudio'),
+                'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1294,7 +1295,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1307,7 +1308,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1320,7 +1321,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1333,7 +1334,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1348,7 +1349,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1361,7 +1362,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width ', 'alenastudio'),
+                'label'                 => __('Width ', 'monalisa'),
                 'id'                    => 'css_res_t_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1374,7 +1375,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Icon ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1387,7 +1388,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Icon ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1400,7 +1401,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Icon ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1415,7 +1416,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Icon ) ', 'alenastudio'),
+                'label'                 => __('Margin Right( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1430,7 +1431,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper )( Icon ) ', 'alenastudio'),
+                'label'                 => __('Size ( Wrapper )( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -1445,7 +1446,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size ( Icon ) ', 'alenastudio'),
+                'label'                 => __('Size ( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_icon_width',
                 'std'                   => '45',
                 'type'                  => 'slider',
@@ -1458,7 +1459,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Title ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1471,7 +1472,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Title ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1487,7 +1488,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( Title ) ', 'alenastudio'),
+                'label'                 => __('Line Height( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -1500,7 +1501,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Title ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1513,7 +1514,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Content ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -1526,7 +1527,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Content ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1542,7 +1543,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( Content ) ', 'alenastudio'),
+                'label'                 => __('Line Height( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1555,7 +1556,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Content ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -1568,7 +1569,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1581,7 +1582,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1594,7 +1595,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1607,7 +1608,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1623,7 +1624,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1636,7 +1637,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Right( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1649,7 +1650,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1662,7 +1663,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1675,7 +1676,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1688,7 +1689,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1701,7 +1702,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1714,7 +1715,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1727,7 +1728,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1743,7 +1744,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Left( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Left( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1756,7 +1757,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1769,7 +1770,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1782,7 +1783,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1795,7 +1796,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_t_css_button_2_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1832,7 +1833,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'alenastudio'),
+                'label'                 => __('Border Width ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1845,7 +1846,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'alenastudio'),
+                'label'                 => __('Border Radius ', 'monalisa'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1858,7 +1859,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'alenastudio'),
+                'label'                 => __('Margin Bottom ', 'monalisa'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1871,7 +1872,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'alenastudio'),
+                'label'                 => __('Padding Vertical ', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1886,7 +1887,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal ', 'monalisa'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1899,7 +1900,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Width ', 'alenastudio'),
+                'label'                 => __('Width ', 'monalisa'),
                 'id'                    => 'css_res_p_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1912,7 +1913,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Icon ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1925,7 +1926,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Icon ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1938,7 +1939,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Icon ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1953,7 +1954,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Icon ) ', 'alenastudio'),
+                'label'                 => __('Margin Right( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1968,7 +1969,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper )( Icon ) ', 'alenastudio'),
+                'label'                 => __('Size ( Wrapper )( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -1983,7 +1984,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Size( Icon ) ', 'alenastudio'),
+                'label'                 => __('Size( Icon ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_icon_width',
                 'std'                   => '45',
                 'type'                  => 'slider',
@@ -1996,7 +1997,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Title ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -2009,7 +2010,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Title ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2025,7 +2026,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( Title ) ', 'alenastudio'),
+                'label'                 => __('Line Height( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -2038,7 +2039,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Title ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Title ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2051,7 +2052,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Content ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -2064,7 +2065,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Content ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -2080,7 +2081,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Line Height( Content ) ', 'alenastudio'),
+                'label'                 => __('Line Height( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -2093,7 +2094,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Content ) ', 'alenastudio'),
+                'label'                 => __('Margin Bottom( Content ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -2106,7 +2107,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2119,7 +2120,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2132,7 +2133,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2145,7 +2146,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2161,7 +2162,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2174,7 +2175,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Right( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2187,7 +2188,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2200,7 +2201,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -2213,7 +2214,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'alenastudio'),
+                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -2226,7 +2227,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Width( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Width( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2239,7 +2240,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Border Radius( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2252,7 +2253,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Size( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Size( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2265,7 +2266,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Font Weight( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2281,7 +2282,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Left( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Left( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2294,7 +2295,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Margin Top( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2307,7 +2308,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Vertical( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2320,7 +2321,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -2333,7 +2334,7 @@ class AS_Info_Box_2 extends as_module {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'alenastudio'),
+                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'monalisa'),
                 'id'                    => 'css_res_p_css_button_2_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
