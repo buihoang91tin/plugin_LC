@@ -88,6 +88,7 @@
                     @include transform(translateY(0));
                     opacity: 1;
                     visibility: visible;
+                        box-shadow: none;
                 }
             }
         }
