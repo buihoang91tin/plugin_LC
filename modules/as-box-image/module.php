@@ -1,6 +1,6 @@
 <?php
 
-class AS_Box_Image extends DSLC_Module {
+class AS_Box_Image extends as_module {
 
     var $module_id;
     var $module_title;

@@ -1,6 +1,6 @@
 <?php
 
-class AS_Pricing extends DSLC_Module {
+class AS_Pricing extends as_module {
 
     var $module_id;
     var $module_title;

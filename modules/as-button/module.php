@@ -1,6 +1,6 @@
 <?php
 
-class AS_Button extends DSLC_Module {
+class AS_Button extends as_module {
 
     var $module_id;
     var $module_title;

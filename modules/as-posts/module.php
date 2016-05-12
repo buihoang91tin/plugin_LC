@@ -1,6 +1,6 @@
 <?php
 
-class AS_Posts extends DSLC_Module {
+class AS_Posts extends as_module {
 
     var $module_id;
     var $module_title;

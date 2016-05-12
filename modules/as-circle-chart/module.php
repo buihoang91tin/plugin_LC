@@ -1,6 +1,6 @@
 <?php
 
-class AS_Circle_Chart_Module extends DSLC_Module {
+class AS_Circle_Chart_Module extends as_module {
 
     // Module Attributes
     var $module_id;

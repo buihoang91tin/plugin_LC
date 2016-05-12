@@ -3,9 +3,6 @@
 include AS_EXTENSION_ABS . '/include/function.php';
 //Add function
 include AS_EXTENSION_ABS . '/include/ajax.php';
-//add redux
-require_once dirname(__FILE__) . '/admin/inc/framework.php';
-require_once dirname(__FILE__) . '/admin/inc/admin-config.php';
 require_once dirname(__FILE__) . '/include/as_module.php';
 //// Include modules
 include AS_EXTENSION_ABS . '/lc-addon-animations/lc-addon-animations.php';
@@ -14,7 +11,6 @@ include AS_EXTENSION_ABS . '/modules/as-before-after/module.php';
 include AS_EXTENSION_ABS . '/modules/as-box-image/module.php';
 include AS_EXTENSION_ABS . '/modules/as-button/module.php';
 include AS_EXTENSION_ABS . '/modules/as-circle-chart/module.php';
-//include AS_EXTENSION_ABS . '/modules/as-countdown/module.php';
 include AS_EXTENSION_ABS . '/modules/as-counter/module.php';
 include AS_EXTENSION_ABS . '/modules/as-googlemap/module.php';
 include AS_EXTENSION_ABS . '/modules/as-image/module.php';
@@ -25,7 +21,6 @@ include AS_EXTENSION_ABS . '/modules/as-infobox-4/module.php';
 include AS_EXTENSION_ABS . '/modules/as-infobox-5/module.php';
 include AS_EXTENSION_ABS . '/modules/as-introduce/module.php';
 include AS_EXTENSION_ABS . '/modules/as-listing/module.php';
-//include AS_EXTENSION_ABS . '/modules/as-posts/module.php';
 include AS_EXTENSION_ABS . '/modules/as-pricing/module.php';
 include AS_EXTENSION_ABS . '/modules/as-pricing-2/module.php';
 include AS_EXTENSION_ABS . '/modules/as-pricing-3/module.php';
@@ -45,6 +40,10 @@ include AS_EXTENSION_ABS . '/modules/as-title-head-3/module.php';
 include AS_EXTENSION_ABS . '/modules/as-video/module.php';
 if ( class_exists( 'WooCommerce' ) ) {    
 include AS_EXTENSION_ABS . '/modules/as-woocommerce/module.php';
+}
+if(class_exists('AS_MAIN')){
+    include AS_EXTENSION_ABS . '/modules/as-posts/module.php';
+include AS_EXTENSION_ABS . '/modules/as-countdown/module.php';
 }
 
 // Register JS & CSS libary
@@ -118,7 +117,7 @@ add_action('dslc_hook_register_modules', create_function('', 'return dslc_regist
 // Add galleries to post
 // Add galleries to post
 global $dslc_var_post_options;
-$dslc_var_post_options['dslc-gallery-post-options'] = array(
+$dslc_var_post_options['dslc-post-options'] = array(
     'title'   => 'Gallery Options',
     'show_on' => 'post',
     'options' => array(

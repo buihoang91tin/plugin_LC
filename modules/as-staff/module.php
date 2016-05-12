@@ -2,7 +2,7 @@
 if (dslc_is_module_active('DSLC_Staff'))
     include AS_EXTENSION_ABS . '/modules/as-staff/functions.php';
 
-class AS_Staff extends DSLC_Module {
+class AS_Staff extends as_module {
 
     var $module_id;
     var $module_title;

@@ -1,6 +1,6 @@
 <?php
 
-class AS_SubscriptionBox extends DSLC_Module {
+class AS_SubscriptionBox extends as_module {
 
     // Module Attributes
     var $module_id;

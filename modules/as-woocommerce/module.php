@@ -1,6 +1,6 @@
 <?php
 
-class AS_WooCommerce_Products extends DSLC_Module {
+class AS_WooCommerce_Products extends as_module {
 
     var $module_id;
     var $module_title;

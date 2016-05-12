@@ -2,7 +2,7 @@
 if (dslc_is_module_active('AS_Projects'))
     include AS_EXTENSION_ABS . '/modules/as-projects/functions.php';
 
-class AS_Projects extends DSLC_Module {
+class AS_Projects extends as_module {
 
     var $module_id;
     var $module_title;

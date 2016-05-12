@@ -1,6 +1,6 @@
 <?php
 
-class AS_Heading_Title_Module_3 extends DSLC_Module {
+class AS_Heading_Title_Module_3 extends as_module {
 
     // Module Attributes
     var $module_id       = 'AS_Heading_Title_Module_3';

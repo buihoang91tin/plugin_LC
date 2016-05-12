@@ -1,6 +1,6 @@
 <?php
 
-class AS_Countdown extends DSLC_Module {
+class AS_Countdown extends as_module {
 
     // Module Attributes
     var $module_id;

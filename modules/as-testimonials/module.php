@@ -1,6 +1,6 @@
 <?php
 
-class AS_Testimonials_Simple extends DSLC_Module {
+class AS_Testimonials_Simple extends as_module {
 
     var $module_id;
     var $module_title;

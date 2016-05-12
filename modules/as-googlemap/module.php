@@ -1,6 +1,6 @@
 <?php
 
-class AS_Google_Map extends DSLC_Module {
+class AS_Google_Map extends as_module {
 
     // Module Attributes
     var $module_id;
