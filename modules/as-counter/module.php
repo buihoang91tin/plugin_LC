@@ -11,7 +11,7 @@ class AS_Counter_Module extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Counter_Module';
-        $this->module_title    = __('AS - Counter Number', 'live-composer-page-builder');
+        $this->module_title    = __('AS - Counter Number', 'as_extension');
         $this->module_icon     = 'bar-chart';
         $this->module_category = 'as - Counter';
     }
@@ -22,21 +22,21 @@ class AS_Counter_Module extends as_module {
         // The options array
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
@@ -57,24 +57,24 @@ class AS_Counter_Module extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'live-composer-page-builder'),
+                'label'   => __('Elements', 'as_extension'),
                 'id'      => 'elements',
                 'std'     => 'icon title',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Icon', 'live-composer-page-builder'),
+                        'label' => __('Icon', 'as_extension'),
                         'value' => 'icon'
                     ),
                     array(
-                        'label' => __('Title', 'live-composer-page-builder'),
+                        'label' => __('Title', 'as_extension'),
                         'value' => 'title'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'      => __('Title', 'live-composer-page-builder'),
+                'label'      => __('Title', 'as_extension'),
                 'id'         => 'as_counter_title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -82,7 +82,7 @@ class AS_Counter_Module extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Number', 'live-composer-page-builder'),
+                'label'      => __('Number', 'as_extension'),
                 'id'         => 'as_counter_number',
                 'std'        => '1989',
                 'type'       => 'textarea',
@@ -90,21 +90,21 @@ class AS_Counter_Module extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'as_counter_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'live-composer-page-builder'),
+                        'label' => __('Center', 'as_extension'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                 ),
@@ -114,7 +114,7 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'css_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -125,7 +125,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -135,7 +135,7 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image', 'live-composer-page-builder'),
+                'label'                 => __('BG Image', 'as_extension'),
                 'id'                    => 'css_main_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -145,25 +145,25 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Repeat', 'as_extension'),
                 'id'                    => 'css_main_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'live-composer-page-builder'),
+                        'label' => __('Repeat', 'as_extension'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'live-composer-page-builder'),
+                        'label' => __('Repeat Horizontal', 'as_extension'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'live-composer-page-builder'),
+                        'label' => __('Repeat Vertical', 'as_extension'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'live-composer-page-builder'),
+                        'label' => __('Do NOT Repeat', 'as_extension'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -173,45 +173,45 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Position', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Position', 'as_extension'),
                 'id'                    => 'css_main_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'live-composer-page-builder'),
+                        'label' => __('Top Left', 'as_extension'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'live-composer-page-builder'),
+                        'label' => __('Top Right', 'as_extension'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'live-composer-page-builder'),
+                        'label' => __('Top Center', 'as_extension'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'live-composer-page-builder'),
+                        'label' => __('Center Left', 'as_extension'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'live-composer-page-builder'),
+                        'label' => __('Center Right', 'as_extension'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'live-composer-page-builder'),
+                        'label' => __('Center', 'as_extension'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'live-composer-page-builder'),
+                        'label' => __('Bottom Left', 'as_extension'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'live-composer-page-builder'),
+                        'label' => __('Bottom Right', 'as_extension'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'live-composer-page-builder'),
+                        'label' => __('Bottom Center', 'as_extension'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -221,25 +221,25 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'as_counter_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -249,7 +249,7 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'as_counter_css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -259,7 +259,7 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'as_counter_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -270,7 +270,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'as_counter_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -282,7 +282,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => '300',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'as_counter_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -293,7 +293,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'as_counter_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -306,7 +306,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'as_counter_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -320,7 +320,7 @@ class AS_Counter_Module extends as_module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'as_counter_css_title_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -331,7 +331,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Title'
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'as_counter_css_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -343,7 +343,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'as_counter_css_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -358,7 +358,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'as_counter_css_title_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -369,7 +369,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'as_counter_css_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -381,7 +381,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'as_counter_css_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -393,7 +393,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'as_counter_css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -408,7 +408,7 @@ class AS_Counter_Module extends as_module {
              * Number
              */
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'as_counter_css_number_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -419,7 +419,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Number'
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'as_counter_css_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -431,7 +431,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'as_counter_css_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -446,7 +446,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'as_counter_css_number_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
@@ -457,7 +457,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Number',
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'as_counter_css_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -469,7 +469,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'as_counter_css_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -484,7 +484,7 @@ class AS_Counter_Module extends as_module {
              * Icon
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -495,7 +495,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_border_color',
                 'std'                   => 'rgb(90, 195, 188)',
                 'type'                  => 'color',
@@ -506,7 +506,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -518,25 +518,25 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -547,7 +547,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon'
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -559,7 +559,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_color',
                 'std'                   => 'rgb(90, 195, 188)',
                 'type'                  => 'color',
@@ -570,7 +570,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'   => __('Icon', 'live-composer-page-builder'),
+                'label'   => __('Icon', 'as_extension'),
                 'id'      => 'as_counter_icon_id',
                 'std'     => 'comments',
                 'type'    => 'icon',
@@ -578,7 +578,7 @@ class AS_Counter_Module extends as_module {
                 'tab'     => 'Icon',
             ),
             array(
-                'label'                 => __('Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -592,7 +592,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Margin Right', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -606,7 +606,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -620,7 +620,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -632,7 +632,7 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'live-composer-page-builder'),
+                'label'                 => __('Size ( Wrapper )', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -646,7 +646,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
+                'label'                 => __('Size ( Icon )', 'as_extension'),
                 'id'                    => 'as_counter_css_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -661,17 +661,17 @@ class AS_Counter_Module extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'live-composer-page-builder'),
+                'label'   => __('Responsive', 'as_extension'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -679,7 +679,7 @@ class AS_Counter_Module extends as_module {
                 'tab'     => 'tablet',
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'css_res_t_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -691,7 +691,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_res_t_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -703,7 +703,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -715,7 +715,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -729,7 +729,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -741,7 +741,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Font Size (Title)', 'as_extension'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -753,7 +753,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight (Title)', 'as_extension'),
                 'id'                    => 'css_res_t_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -768,7 +768,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Line Height (Title)', 'as_extension'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -780,7 +780,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing (Title)', 'as_extension'),
                 'id'                    => 'css_res_t_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -792,7 +792,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom (Title)', 'as_extension'),
                 'id'                    => 'css_res_t_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -804,7 +804,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Font Size (Number)', 'as_extension'),
                 'id'                    => 'css_res_t_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -816,7 +816,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight (Number)', 'as_extension'),
                 'id'                    => 'css_res_t_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -831,7 +831,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Line Height (Number)', 'as_extension'),
                 'id'                    => 'css_res_t_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -843,7 +843,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom (Number)', 'as_extension'),
                 'id'                    => 'css_res_t_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -855,7 +855,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Width (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Border Width (Icon)', 'as_extension'),
                 'id'                    => 'css_res_t_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -867,7 +867,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius (Icon)', 'as_extension'),
                 'id'                    => 'css_res_t_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -879,7 +879,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top (Icon)', 'as_extension'),
                 'id'                    => 'css_res_t_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -893,7 +893,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Right (Icon)', 'as_extension'),
                 'id'                    => 'css_res_t_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -907,7 +907,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical (Icon)', 'as_extension'),
                 'id'                    => 'css_res_t_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -921,7 +921,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal (Icon)', 'as_extension'),
                 'id'                    => 'css_res_t_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -933,7 +933,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper (Icon) )', 'live-composer-page-builder'),
+                'label'                 => __('Size ( Wrapper (Icon) )', 'as_extension'),
                 'id'                    => 'css_res_t_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -947,7 +947,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
+                'label'                 => __('Size ( Icon )', 'as_extension'),
                 'id'                    => 'css_res_t_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -962,17 +962,17 @@ class AS_Counter_Module extends as_module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'live-composer-page-builder'),
+                'label'   => __('Responsive', 'as_extension'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -980,7 +980,7 @@ class AS_Counter_Module extends as_module {
                 'tab'     => 'phone',
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'css_res_p_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -992,7 +992,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_res_p_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1004,7 +1004,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1016,7 +1016,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1030,7 +1030,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1042,7 +1042,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Font Size (Title)', 'as_extension'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -1054,7 +1054,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight (Title)', 'as_extension'),
                 'id'                    => 'css_res_p_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -1069,7 +1069,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Line Height (Title)', 'as_extension'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -1081,7 +1081,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing (Title)', 'as_extension'),
                 'id'                    => 'css_res_p_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1093,7 +1093,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Title)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom (Title)', 'as_extension'),
                 'id'                    => 'css_res_p_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1105,7 +1105,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Font Size (Number)', 'as_extension'),
                 'id'                    => 'css_res_p_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -1117,7 +1117,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight (Number)', 'as_extension'),
                 'id'                    => 'css_res_p_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -1132,7 +1132,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Line Height (Number)', 'as_extension'),
                 'id'                    => 'css_res_p_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1144,7 +1144,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Number)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom (Number)', 'as_extension'),
                 'id'                    => 'css_res_p_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1156,7 +1156,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Width (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Border Width (Icon)', 'as_extension'),
                 'id'                    => 'css_res_p_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -1168,7 +1168,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius (Icon)', 'as_extension'),
                 'id'                    => 'css_res_p_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1180,7 +1180,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top (Icon)', 'as_extension'),
                 'id'                    => 'css_res_p_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1194,7 +1194,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Margin Right (Icon)', 'as_extension'),
                 'id'                    => 'css_res_p_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1208,7 +1208,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical (Icon)', 'as_extension'),
                 'id'                    => 'css_res_p_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1222,7 +1222,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal (Icon)', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal (Icon)', 'as_extension'),
                 'id'                    => 'css_res_p_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1234,7 +1234,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper (Icon) )', 'live-composer-page-builder'),
+                'label'                 => __('Size ( Wrapper (Icon) )', 'as_extension'),
                 'id'                    => 'css_res_p_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -1248,7 +1248,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
+                'label'                 => __('Size ( Icon )', 'as_extension'),
                 'id'                    => 'css_res_p_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',

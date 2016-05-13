@@ -18,12 +18,12 @@
     ?>
     <a name="dslc-top"></a>
     <h2 class="nav-tab-wrapper dslc-settigns-tabs" id="dslc-tabs">
-        <a href="#" data-nav-to="dslc_getting_started" class="nav-tab <?php echo $anchor == 'as_getting_started' ? 'nav-tab-active' : ''; ?>"><?php _e('Getting Started', 'live-composer-page-builder') ?></a>
-        <a href="#" data-nav-to="tab-settings" class="nav-tab <?php echo $anchor == 'as_settings' ? 'nav-tab-active' : ''; ?>"><?php _e('Settings', 'live-composer-page-builder') ?></a>
-        <a href="#" data-nav-to="tab-extensions" class="nav-tab <?php echo $anchor == 'as_extensions' ? 'nav-tab-active' : ''; ?>"><?php _e('Extensions <span class="tag">Free</span>', 'live-composer-page-builder') ?></a>
-        <a href="#" data-nav-to="tab-themes" class="nav-tab <?php echo $anchor == 'as_themes' ? 'nav-tab-active' : ''; ?>"><?php _e('Themes <span class="tag">Free</span>', 'live-composer-page-builder') ?></a>
-        <a href="#" data-nav-to="tab-docs" class="nav-tab <?php echo $anchor == 'as_docs' ? 'nav-tab-active' : ''; ?>"><?php _e('Docs &amp; Support', 'live-composer-page-builder') ?></a>
-        <a href="#" data-nav-to="tab-about" class="nav-tab <?php echo $anchor == 'as_about' ? 'nav-tab-active' : ''; ?>"><?php _e('About', 'live-composer-page-builder') ?></a>
+        <a href="#" data-nav-to="dslc_getting_started" class="nav-tab <?php echo $anchor == 'as_getting_started' ? 'nav-tab-active' : ''; ?>"><?php _e('Getting Started', 'as_extension') ?></a>
+        <a href="#" data-nav-to="tab-settings" class="nav-tab <?php echo $anchor == 'as_settings' ? 'nav-tab-active' : ''; ?>"><?php _e('Settings', 'as_extension') ?></a>
+        <a href="#" data-nav-to="tab-extensions" class="nav-tab <?php echo $anchor == 'as_extensions' ? 'nav-tab-active' : ''; ?>"><?php _e('Extensions <span class="tag">Free</span>', 'as_extension') ?></a>
+        <a href="#" data-nav-to="tab-themes" class="nav-tab <?php echo $anchor == 'as_themes' ? 'nav-tab-active' : ''; ?>"><?php _e('Themes <span class="tag">Free</span>', 'as_extension') ?></a>
+        <a href="#" data-nav-to="tab-docs" class="nav-tab <?php echo $anchor == 'as_docs' ? 'nav-tab-active' : ''; ?>"><?php _e('Docs &amp; Support', 'as_extension') ?></a>
+        <a href="#" data-nav-to="tab-about" class="nav-tab <?php echo $anchor == 'as_about' ? 'nav-tab-active' : ''; ?>"><?php _e('About', 'as_extension') ?></a>
     </h2>
 
 

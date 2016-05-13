@@ -2,24 +2,24 @@
 <div class="dslc-panel" id="new-lc-coming">
 	<div class="dslc-panel-content">
 		<img src="<?php echo AS_EXTENSION_URL; ?>/images/livecomposer-mink-curious.png" class="mink-illustration">
-		<h2><?php _e( 'All New Live Composer is Coming!', 'live-composer-page-builder' ); ?></h2>
-		<p class="about-description"><?php _e( 'We\'re releasing soon our all new page builder and you\'ll love it.', 'live-composer-page-builder' ); ?></p>
+		<h2><?php _e( 'All New Live Composer is Coming!', 'as_extension' ); ?></h2>
+		<p class="about-description"><?php _e( 'We\'re releasing soon our all new page builder and you\'ll love it.', 'as_extension' ); ?></p>
 		
 
 		<hr>
 
 		<div class="dslc-panel-column-container">
 			<div class="dslc-panel-column">
-				<h3><span class="dashicons dashicons-dashboard"></span> <?php _e( 'Extremely Fast', 'live-composer-page-builder' ); ?></h3>
-				<p><?php _e( 'New Live Composer is completely rewritten using JavaScript. It\'s fast and reliable on any server delivering a great user experience and faster site loading times.', 'live-composer-page-builder' ); ?></p>
+				<h3><span class="dashicons dashicons-dashboard"></span> <?php _e( 'Extremely Fast', 'as_extension' ); ?></h3>
+				<p><?php _e( 'New Live Composer is completely rewritten using JavaScript. It\'s fast and reliable on any server delivering a great user experience and faster site loading times.', 'as_extension' ); ?></p>
 			</div>
 			<div class="dslc-panel-column">
-				<h3><span class="dashicons dashicons-update"></span> <?php _e( "Better Integrated", 'live-composer-page-builder' ); ?></h3>
-				<p><?php _e( 'We redesigned user interface from scratch. The new version is better integrated with WordPress UI making it more effective for both advacned and new users.', 'live-composer-page-builder' ); ?></p>
+				<h3><span class="dashicons dashicons-update"></span> <?php _e( "Better Integrated", 'as_extension' ); ?></h3>
+				<p><?php _e( 'We redesigned user interface from scratch. The new version is better integrated with WordPress UI making it more effective for both advacned and new users.', 'as_extension' ); ?></p>
 			</div>
 			<div class="dslc-panel-column dslc-panel-last">
-				<h3><span class="dashicons dashicons-unlock"></span> <?php _e( "100% Open Source", 'live-composer-page-builder' ); ?></h3>
-				<p><?php _e( 'Unlike other popular page builders, Live Composer remains to be 100% open source plugin. Build premium theme business with our page builder. ', 'live-composer-page-builder' ); ?></p>
+				<h3><span class="dashicons dashicons-unlock"></span> <?php _e( "100% Open Source", 'as_extension' ); ?></h3>
+				<p><?php _e( 'Unlike other popular page builders, Live Composer remains to be 100% open source plugin. Build premium theme business with our page builder. ', 'as_extension' ); ?></p>
 			</div>
 		</div>
 	</div>

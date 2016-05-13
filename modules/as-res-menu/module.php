@@ -10,7 +10,7 @@ class AS_Res_Menu extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Res_Menu';
-        $this->module_title    = __('Restaurant Menu', 'live-composer-page-builder');
+        $this->module_title    = __('Restaurant Menu', 'as_extension');
         $this->module_icon     = 'info';
         $this->module_category = 'as - res - menu';
     }
@@ -19,21 +19,21 @@ class AS_Res_Menu extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
@@ -42,32 +42,32 @@ class AS_Res_Menu extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'live-composer-page-builder'),
+                'label'   => __('Elements', 'as_extension'),
                 'id'      => 'elements',
                 'std'     => 'icon title content button image label',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Title', 'live-composer-page-builder'),
+                        'label' => __('Title', 'as_extension'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Content', 'live-composer-page-builder'),
+                        'label' => __('Content', 'as_extension'),
                         'value' => 'content'
                     ),
                     array(
-                        'label' => __('Image', 'live-composer-page-builder'),
+                        'label' => __('Image', 'as_extension'),
                         'value' => 'image'
                     ),
                     array(
-                        'label' => __('Label', 'live-composer-page-builder'),
+                        'label' => __('Label', 'as_extension'),
                         'value' => 'label'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -77,7 +77,7 @@ class AS_Res_Menu extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -88,25 +88,25 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -116,7 +116,7 @@ class AS_Res_Menu extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -127,7 +127,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -138,7 +138,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -151,7 +151,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -162,7 +162,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -176,7 +176,7 @@ class AS_Res_Menu extends as_module {
              * Image
              */
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_icon_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -184,10 +184,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -195,10 +195,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Image', 'live-composer-page-builder'),
+                'label'                 => __('BG Image', 'as_extension'),
                 'id'                    => 'css_icon_bg_img',
                 'std'                   => 'http://www.freewebsitetemplates.com/images/forum/500/restaurantwebsitetemplate.jpg',
                 'type'                  => 'image',
@@ -206,62 +206,62 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Repeat', 'as_extension'),
                 'id'                    => 'css_icon_bg_img_repeat',
                 'std'                   => 'no-repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'live-composer-page-builder'),
+                        'label' => __('Repeat', 'as_extension'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'live-composer-page-builder'),
+                        'label' => __('Repeat Horizontal', 'as_extension'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'live-composer-page-builder'),
+                        'label' => __('Repeat Vertical', 'as_extension'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'live-composer-page-builder'),
+                        'label' => __('Do NOT Repeat', 'as_extension'),
                         'value' => 'no-repeat',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Image Size', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Size', 'as_extension'),
                 'id'                    => 'css_icon_bg_img_size',
                 'std'                   => 'auto',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Original', 'live-composer-page-builder'),
+                        'label' => __('Original', 'as_extension'),
                         'value' => 'auto',
                     ),
                     array(
-                        'label' => __('Cover', 'live-composer-page-builder'),
+                        'label' => __('Cover', 'as_extension'),
                         'value' => 'cover',
                     ),
                     array(
-                        'label' => __('Contain', 'live-composer-page-builder'),
+                        'label' => __('Contain', 'as_extension'),
                         'value' => 'contain',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-size',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -269,10 +269,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -281,28 +281,28 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -310,10 +310,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -321,11 +321,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top', 'as_extension'),
                 'id'                    => 'css_icon_margin_top',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -333,13 +333,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => -100,
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Margin Right', 'as_extension'),
                 'id'                    => 'css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -347,13 +347,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_icon_margin_bottom',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -361,34 +361,34 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'live-composer-page-builder'),
+                'tab'                   => __('Image', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'   => __('Position', 'live-composer-page-builder'),
+                'label'   => __('Position', 'as_extension'),
                 'id'      => 'icon_position',
                 'std'     => 'above',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Above', 'live-composer-page-builder'),
+                        'label' => __('Above', 'as_extension'),
                         'value' => 'above',
                     ),
                     array(
-                        'label' => __('Aside', 'live-composer-page-builder'),
+                        'label' => __('Aside', 'as_extension'),
                         'value' => 'aside',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Image', 'live-composer-page-builder'),
+                'tab'     => __('Image', 'as_extension'),
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -396,10 +396,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -407,10 +407,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -418,11 +418,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -430,14 +430,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -445,10 +445,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -456,11 +456,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -468,14 +468,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Content
              */
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -483,10 +483,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -494,10 +494,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -505,11 +505,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -517,14 +517,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -532,10 +532,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -543,11 +543,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -555,14 +555,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Prices
              */
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -570,10 +570,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'live-composer-page-builder'),
+                'tab'                   => __('Prices', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -581,11 +581,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'live-composer-page-builder'),
+                'tab'                   => __('Prices', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -593,14 +593,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'live-composer-page-builder'),
+                'tab'                   => __('Prices', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -608,10 +608,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'live-composer-page-builder'),
+                'tab'                   => __('Prices', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -619,11 +619,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'live-composer-page-builder'),
+                'tab'                   => __('Prices', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -631,14 +631,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('prices', 'live-composer-page-builder'),
+                'tab'                   => __('prices', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * label
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#BF9553',
                 'type'                  => 'color',
@@ -646,10 +646,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'live-composer-page-builder'),
+                'tab'                   => __('Label', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -657,10 +657,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'live-composer-page-builder'),
+                'tab'                   => __('Label', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -668,11 +668,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'live-composer-page-builder'),
+                'tab'                   => __('Label', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -680,14 +680,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'live-composer-page-builder'),
+                'tab'                   => __('Label', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -695,10 +695,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'live-composer-page-builder'),
+                'tab'                   => __('Label', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -706,11 +706,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'live-composer-page-builder'),
+                'tab'                   => __('Label', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -718,14 +718,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'live-composer-page-builder'),
+                'tab'                   => __('Label', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Hidden
              */
             array(
-                'label'      => __('Title', 'live-composer-page-builder'),
+                'label'      => __('Title', 'as_extension'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -733,7 +733,7 @@ class AS_Res_Menu extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Content', 'live-composer-page-builder'),
+                'label'      => __('Content', 'as_extension'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
                 'type'       => 'textarea',
@@ -741,7 +741,7 @@ class AS_Res_Menu extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('price', 'live-composer-page-builder'),
+                'label'      => __('price', 'as_extension'),
                 'id'         => 'price',
                 'std'        => '$  Edit',
                 'type'       => 'textarea',
@@ -749,7 +749,7 @@ class AS_Res_Menu extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('label', 'live-composer-page-builder'),
+                'label'      => __('label', 'as_extension'),
                 'id'         => 'label',
                 'std'        => 'Edit label',
                 'type'       => 'textarea',
@@ -760,25 +760,25 @@ class AS_Res_Menu extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'live-composer-page-builder'),
+                'tab'     => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -786,11 +786,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -798,13 +798,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -812,32 +812,32 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'live-composer-page-builder'),
+                'tab'     => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -845,11 +845,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -857,13 +857,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -871,7 +871,7 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
         );

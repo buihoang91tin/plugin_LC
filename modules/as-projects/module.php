@@ -13,7 +13,7 @@ class AS_Projects extends as_module {
     {
 
         $this->module_id       = 'AS_Projects';
-        $this->module_title    = __('AS - Projects', 'live-composer-page-builder');
+        $this->module_title    = __('AS - Projects', 'as_extension');
         $this->module_icon     = 'th';
         $this->module_category = 'as - posts';
     }
@@ -32,197 +32,197 @@ class AS_Projects extends as_module {
         }
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'   => __('Link', 'live-composer-page-builder'),
+                'label'   => __('Link', 'as_extension'),
                 'id'      => 'link',
                 'std'     => 'permalink',
                 'type'    => 'select',
-                'help'    => __('<strong>Link to project page</strong> links to the project page on this website.<br><strong>Link to custom project URL</strong> links to the URL set in the project options.', 'live-composer-page-builder'),
+                'help'    => __('<strong>Link to project page</strong> links to the project page on this website.<br><strong>Link to custom project URL</strong> links to the URL set in the project options.', 'as_extension'),
                 'choices' => array(
                     array(
-                        'label' => __('Link to project page', 'live-composer-page-builder'),
+                        'label' => __('Link to project page', 'as_extension'),
                         'value' => 'permalink'
                     ),
                     array(
-                        'label' => __('Link to custom project URL', 'live-composer-page-builder'),
+                        'label' => __('Link to custom project URL', 'as_extension'),
                         'value' => 'custom'
                     ),
                 )
             ),
             array(
-                'label'   => __('Link Target', 'live-composer-page-builder'),
+                'label'   => __('Link Target', 'as_extension'),
                 'id'      => 'link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same tab', 'live-composer-page-builder'),
+                        'label' => __('Same tab', 'as_extension'),
                         'value' => '_self'
                     ),
                     array(
-                        'label' => __('New tab', 'live-composer-page-builder'),
+                        'label' => __('New tab', 'as_extension'),
                         'value' => '_blank'
                     ),
                 )
             ),
             array(
-                'label'   => __('Type', 'live-composer-page-builder'),
+                'label'   => __('Type', 'as_extension'),
                 'id'      => 'type',
                 'std'     => 'grid',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Grid', 'live-composer-page-builder'),
+                        'label' => __('Grid', 'as_extension'),
                         'value' => 'grid'
                     ),
                     array(
-                        'label' => __('Masonry Grid', 'live-composer-page-builder'),
+                        'label' => __('Masonry Grid', 'as_extension'),
                         'value' => 'masonry'
                     ),
                     array(
-                        'label' => __('Carousel', 'live-composer-page-builder'),
+                        'label' => __('Carousel', 'as_extension'),
                         'value' => 'carousel'
                     )
                 )
             ),
             array(
-                'label' => __('Posts Per Page', 'live-composer-page-builder'),
+                'label' => __('Posts Per Page', 'as_extension'),
                 'id'    => 'amount',
                 'std'   => '8',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Pagination', 'live-composer-page-builder'),
+                'label'   => __('Pagination', 'as_extension'),
                 'id'      => 'pagination_type',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled',
                     ),
                     array(
-                        'label' => __('Numbered', 'live-composer-page-builder'),
+                        'label' => __('Numbered', 'as_extension'),
                         'value' => 'numbered',
                     ),
                     array(
-                        'label' => __('Prev/Next', 'live-composer-page-builder'),
+                        'label' => __('Prev/Next', 'as_extension'),
                         'value' => 'prevnext',
                     )
                 ),
             ),
             array(
-                'label'   => __('Posts Per Row', 'live-composer-page-builder'),
+                'label'   => __('Posts Per Row', 'as_extension'),
                 'id'      => 'columns',
                 'std'     => '3',
                 'type'    => 'select',
                 'choices' => $this->shared_options('posts_per_row_choices'),
             ),
             array(
-                'label'   => __('Categories', 'live-composer-page-builder'),
+                'label'   => __('Categories', 'as_extension'),
                 'id'      => 'categories',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => $cats_choices
             ),
             array(
-                'label'   => __('Categories Operator', 'live-composer-page-builder'),
+                'label'   => __('Categories Operator', 'as_extension'),
                 'id'      => 'categories_operator',
                 'std'     => 'IN',
-                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'live-composer-page-builder'),
+                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'as_extension'),
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('IN', 'live-composer-page-builder'),
+                        'label' => __('IN', 'as_extension'),
                         'value' => 'IN',
                     ),
                     array(
-                        'label' => __('AND', 'live-composer-page-builder'),
+                        'label' => __('AND', 'as_extension'),
                         'value' => 'AND',
                     ),
                     array(
-                        'label' => __('NOT IN', 'live-composer-page-builder'),
+                        'label' => __('NOT IN', 'as_extension'),
                         'value' => 'NOT IN',
                     ),
                 )
             ),
             array(
-                'label'   => __('Order By', 'live-composer-page-builder'),
+                'label'   => __('Order By', 'as_extension'),
                 'id'      => 'orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Publish Date', 'live-composer-page-builder'),
+                        'label' => __('Publish Date', 'as_extension'),
                         'value' => 'date'
                     ),
                     array(
-                        'label' => __('Modified Date', 'live-composer-page-builder'),
+                        'label' => __('Modified Date', 'as_extension'),
                         'value' => 'modified'
                     ),
                     array(
-                        'label' => __('Random', 'live-composer-page-builder'),
+                        'label' => __('Random', 'as_extension'),
                         'value' => 'rand'
                     ),
                     array(
-                        'label' => __('Alphabetic', 'live-composer-page-builder'),
+                        'label' => __('Alphabetic', 'as_extension'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Comment Count', 'live-composer-page-builder'),
+                        'label' => __('Comment Count', 'as_extension'),
                         'value' => 'comment_count'
                     ),
                 )
             ),
             array(
-                'label'   => __('Order', 'live-composer-page-builder'),
+                'label'   => __('Order', 'as_extension'),
                 'id'      => 'order',
                 'std'     => 'DESC',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Ascending', 'live-composer-page-builder'),
+                        'label' => __('Ascending', 'as_extension'),
                         'value' => 'ASC'
                     ),
                     array(
-                        'label' => __('Descending', 'live-composer-page-builder'),
+                        'label' => __('Descending', 'as_extension'),
                         'value' => 'DESC'
                     )
                 )
             ),
             array(
-                'label' => __('Offset', 'live-composer-page-builder'),
+                'label' => __('Offset', 'as_extension'),
                 'id'    => 'offset',
                 'std'   => '0',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Include (IDs)', 'live-composer-page-builder'),
+                'label' => __('Include (IDs)', 'as_extension'),
                 'id'    => 'query_post_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Exclude (IDs)', 'live-composer-page-builder'),
+                'label' => __('Exclude (IDs)', 'as_extension'),
                 'id'    => 'query_post_not_in',
                 'std'   => '',
                 'type'  => 'text',
@@ -231,66 +231,66 @@ class AS_Projects extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'live-composer-page-builder'),
+                'label'   => __('Elements', 'as_extension'),
                 'id'      => 'elements',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Heading', 'live-composer-page-builder'),
+                        'label' => __('Heading', 'as_extension'),
                         'value' => 'main_heading'
                     ),
                     array(
-                        'label' => __('Filters', 'live-composer-page-builder'),
+                        'label' => __('Filters', 'as_extension'),
                         'value' => 'filters'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Post Elements', 'live-composer-page-builder'),
+                'label'   => __('Post Elements', 'as_extension'),
                 'id'      => 'post_elements',
                 'std'     => 'thumbnail categories title icon_link',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Thumbnail', 'as_extension'),
                         'value' => 'thumbnail',
                     ),
                     array(
-                        'label' => __('Title', 'live-composer-page-builder'),
+                        'label' => __('Title', 'as_extension'),
                         'value' => 'title',
                     ),
                     array(
-                        'label' => __('Categories', 'live-composer-page-builder'),
+                        'label' => __('Categories', 'as_extension'),
                         'value' => 'categories',
                     ),
                     array(
-                        'label' => __('Icon', 'live-composer-page-builder'),
+                        'label' => __('Icon', 'as_extension'),
                         'value' => 'icon_link',
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Carousel Elements', 'live-composer-page-builder'),
+                'label'   => __('Carousel Elements', 'as_extension'),
                 'id'      => 'carousel_elements',
                 'std'     => 'arrows circles',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Arrows', 'live-composer-page-builder'),
+                        'label' => __('Arrows', 'as_extension'),
                         'value' => 'arrows'
                     ),
                     array(
-                        'label' => __('Circles', 'live-composer-page-builder'),
+                        'label' => __('Circles', 'as_extension'),
                         'value' => 'circles'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -303,7 +303,7 @@ class AS_Projects extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -314,7 +314,7 @@ class AS_Projects extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -325,7 +325,7 @@ class AS_Projects extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Item Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Item Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom_item',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -339,25 +339,25 @@ class AS_Projects extends as_module {
              * Separator
              */
             array(
-                'label'   => __('Enable/Disable', 'live-composer-page-builder'),
+                'label'   => __('Enable/Disable', 'as_extension'),
                 'id'      => 'separator_enabled',
                 'std'     => 'enabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Row Separator', 'live-composer-page-builder'),
+                'tab'     => __('Row Separator', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_sep_border_color',
                 'std'                   => '#ededed',
                 'type'                  => 'color',
@@ -365,10 +365,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
+                'tab'                   => __('Row Separator', 'as_extension'),
             ),
             array(
-                'label'                 => __('Height', 'live-composer-page-builder'),
+                'label'                 => __('Height', 'as_extension'),
                 'id'                    => 'css_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -379,28 +379,28 @@ class AS_Projects extends as_module {
                 'min'                   => 0,
                 'max'                   => 300,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
+                'tab'                   => __('Row Separator', 'as_extension'),
             ),
             array(
-                'label'                 => __('Style', 'live-composer-page-builder'),
+                'label'                 => __('Style', 'as_extension'),
                 'id'                    => 'css_sep_style',
                 'std'                   => 'dashed',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'live-composer-page-builder'),
+                        'label' => __('Invisible', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Solid', 'live-composer-page-builder'),
+                        'label' => __('Solid', 'as_extension'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'live-composer-page-builder'),
+                        'label' => __('Dashed', 'as_extension'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'live-composer-page-builder'),
+                        'label' => __('Dotted', 'as_extension'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -408,13 +408,13 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
+                'tab'                   => __('Row Separator', 'as_extension'),
             ),
             /**
              * Thumbnail
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_thumbnail_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -422,10 +422,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -433,10 +433,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -445,28 +445,28 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -474,10 +474,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_thumbnail_border_radius_top',
                 'std'                   => '',
                 'type'                  => 'slider',
@@ -485,11 +485,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner, .dslc-project-thumb img',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_thumbnail_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -497,11 +497,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner, .dslc-project-thumb img',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -510,10 +510,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -522,10 +522,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -534,35 +534,35 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'   => __('Resize - Height', 'live-composer-page-builder'),
+                'label'   => __('Resize - Height', 'as_extension'),
                 'id'      => 'thumb_resize_height',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'live-composer-page-builder'),
+                'tab'     => __('thumbnail', 'as_extension'),
             ),
             array(
-                'label'   => __('Resize - Width', 'live-composer-page-builder'),
+                'label'   => __('Resize - Width', 'as_extension'),
                 'id'      => 'thumb_resize_width_manual',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'live-composer-page-builder'),
+                'tab'     => __('thumbnail', 'as_extension'),
             ),
             array(
-                'label'      => __('Resize - Width', 'live-composer-page-builder'),
+                'label'      => __('Resize - Width', 'as_extension'),
                 'id'         => 'thumb_resize_width',
                 'std'        => '',
                 'type'       => 'text',
                 'section'    => 'styling',
-                'tab'        => __('thumbnail', 'live-composer-page-builder'),
+                'tab'        => __('thumbnail', 'as_extension'),
                 'visibility' => 'hidden'
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'thumb_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -570,7 +570,7 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-thumb',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
                 'min'                   => 1,
                 'max'                   => 100,
                 'ext'                   => '%'
@@ -579,7 +579,7 @@ class AS_Projects extends as_module {
              * Main
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -587,10 +587,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __(' BG Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color - Hover', 'as_extension'),
                 'id'                    => 'css_main_bg_color_hover',
                 'std'                   => 'rgba(40, 43, 48, 0.8)',
                 'type'                  => 'color',
@@ -598,19 +598,19 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'live-composer-page-builder'),
+                'label'             => __('Duration when hover(ms)', 'as_extension'),
                 'id'                => 'css_main_bg_color_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('Main', 'live-composer-page-builder'),
+                'tab'               => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_main_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -618,10 +618,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_main_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -630,28 +630,28 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_main_border_trbl',
                 'std'                   => 'right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -659,10 +659,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_main_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -670,11 +670,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_main_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -682,11 +682,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Minimum Height', 'live-composer-page-builder'),
+                'label'                 => __('Minimum Height', 'as_extension'),
                 'id'                    => 'css_main_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -695,7 +695,7 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'min-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
                 'min'                   => 0,
                 'max'                   => 500
             ),
@@ -703,7 +703,7 @@ class AS_Projects extends as_module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#fff',
                 'type'                  => 'color',
@@ -711,10 +711,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Color - Hover', 'as_extension'),
                 'id'                    => 'css_title_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -722,10 +722,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2:hover a,.dslc-project-title h2 a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -733,11 +733,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -745,14 +745,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Weight tag Span', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight tag Span', 'as_extension'),
                 'id'                    => 'css_title_font_weight_span',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -760,14 +760,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2 span,.dslc-project-title h2 a span',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -775,10 +775,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -786,11 +786,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'css_title_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -798,29 +798,29 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'live-composer-page-builder'),
+                'label'                 => __('Text Transform', 'as_extension'),
                 'id'                    => 'css_title_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'live-composer-page-builder'),
+                        'label' => __('Capitalize', 'as_extension'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'live-composer-page-builder'),
+                        'label' => __('Uppercase', 'as_extension'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'live-composer-page-builder'),
+                        'label' => __('Lowercase', 'as_extension'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -828,10 +828,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_title_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -839,14 +839,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Categories
              */
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_cats_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -854,10 +854,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'live-composer-page-builder'),
+                'tab'                   => __('Categories', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_cats_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -865,11 +865,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'live-composer-page-builder'),
+                'tab'                   => __('Categories', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_cats_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -877,14 +877,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'live-composer-page-builder'),
+                'tab'                   => __('Categories', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_cats_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
@@ -892,10 +892,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'live-composer-page-builder'),
+                'tab'                   => __('Categories', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_cats_line_height',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -903,11 +903,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'live-composer-page-builder'),
+                'tab'                   => __('Categories', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_cats_margin-bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -916,13 +916,13 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Categories', 'live-composer-page-builder'),
+                'tab'                   => __('Categories', 'as_extension'),
             ),
             /**
              * Icon
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_button_bg_color',
                 'std'                   => '#333333',
                 'type'                  => 'color',
@@ -930,10 +930,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('BG Color - Hover', 'as_extension'),
                 'id'                    => 'css_button_bg_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -941,10 +941,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project:hover,.as-project-custom .as-link-to-project:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_button_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -952,11 +952,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_button_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -964,10 +964,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Color - Hover', 'as_extension'),
                 'id'                    => 'css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -975,49 +975,49 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project:hover,.as-project-custom .as-link-to-project:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             /**
              * Ajax Portfolio Style
              */
             array(
-                'label'   => __('Ajax Projects', 'live-composer-page-builder'),
+                'label'   => __('Ajax Projects', 'as_extension'),
                 'id'      => 'as_ajax_projects',
                 'std'     => 1,
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Use Ajax Portfolio', 'live-composer-page-builder'),
+                        'label' => __('Use Ajax Portfolio', 'as_extension'),
                         'value' => 1
                     ),
                     array(
-                        'label' => __('Normal Link', 'live-composer-page-builder'),
+                        'label' => __('Normal Link', 'as_extension'),
                         'value' => 0
                     )
                 ),
                 'section' => 'styling',
-                'tab'     => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'     => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'   => __('Position Ajax Projects', 'live-composer-page-builder'),
+                'label'   => __('Position Ajax Projects', 'as_extension'),
                 'id'      => 'as_ajax_projects_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     )
                 ),
                 'section' => 'styling',
-                'tab'     => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'     => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Ajax Content Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Ajax Content Margin Bottom', 'as_extension'),
                 'id'                    => 'as_ajax_projects_margin_bottom',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -1025,12 +1025,12 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '#as_portfolio_content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /** Navigation Ajax Style * */
             array(
-                'label'                 => __('Color of Navigation', 'live-composer-page-builder'),
+                'label'                 => __('Color of Navigation', 'as_extension'),
                 'id'                    => 'as_ajax_projects_nav_color',
                 'std'                   => 'rgb(44, 62, 79)',
                 'type'                  => 'color',
@@ -1038,10 +1038,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Family of Nav', 'live-composer-page-builder'),
+                'label'                 => __('Font Family of Nav', 'as_extension'),
                 'id'                    => 'as_ajax_projects_nav_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -1049,10 +1049,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Weight of Nav', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight of Nav', 'as_extension'),
                 'id'                    => 'as_ajax_projects_nav_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1060,14 +1060,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Nav', 'live-composer-page-builder'),
+                'label'                 => __('Font Size of Nav', 'as_extension'),
                 'id'                    => 'as_ajax_projects_nav_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1075,11 +1075,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Nav Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Nav Margin Bottom', 'as_extension'),
                 'id'                    => 'as_ajax_projects_nav_margin_bottom',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1087,12 +1087,12 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /** Title Ajax Style * */
             array(
-                'label'                 => __('Color of Title', 'live-composer-page-builder'),
+                'label'                 => __('Color of Title', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_color',
                 'std'                   => 'rgb(89, 89, 89)',
                 'type'                  => 'color',
@@ -1100,10 +1100,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Family of Title', 'live-composer-page-builder'),
+                'label'                 => __('Font Family of Title', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -1111,10 +1111,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height of Title', 'live-composer-page-builder'),
+                'label'                 => __('Line Height of Title', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1122,11 +1122,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight of Title', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight of Title', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1134,14 +1134,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Title', 'live-composer-page-builder'),
+                'label'                 => __('Font Size of Title', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1149,29 +1149,29 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'live-composer-page-builder'),
+                'label'                 => __('Text Transform', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_text_transform',
                 'std'                   => 'uppercase',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'live-composer-page-builder'),
+                        'label' => __('Capitalize', 'as_extension'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'live-composer-page-builder'),
+                        'label' => __('Uppercase', 'as_extension'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'live-composer-page-builder'),
+                        'label' => __('Lowercase', 'as_extension'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1179,10 +1179,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1190,11 +1190,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Title Margin Bottom', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_margin_bottom',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -1202,11 +1202,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title Align', 'live-composer-page-builder'),
+                'label'                 => __('Title Align', 'as_extension'),
                 'id'                    => 'as_ajax_projects_title_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
@@ -1214,29 +1214,29 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'live-composer-page-builder'),
+                        'label' => __('Center', 'as_extension'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'live-composer-page-builder'),
+                        'label' => __('Justify', 'as_extension'),
                         'value' => 'justify',
                     ),
                 )
             ),
             /** Category Ajax Style * */
             array(
-                'label'                 => __('Color of Category', 'live-composer-page-builder'),
+                'label'                 => __('Color of Category', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_color',
                 'std'                   => 'rgb(131, 131, 131)',
                 'type'                  => 'color',
@@ -1244,10 +1244,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Family of Category', 'live-composer-page-builder'),
+                'label'                 => __('Font Family of Category', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
@@ -1255,10 +1255,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height of Category', 'live-composer-page-builder'),
+                'label'                 => __('Line Height of Category', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_line_height',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1266,11 +1266,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight of Category', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight of Category', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1278,14 +1278,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Category', 'live-composer-page-builder'),
+                'label'                 => __('Font Size of Category', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1293,29 +1293,29 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'live-composer-page-builder'),
+                'label'                 => __('Text Transform', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_text_transform',
                 'std'                   => 'uppercase',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'live-composer-page-builder'),
+                        'label' => __('Capitalize', 'as_extension'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'live-composer-page-builder'),
+                        'label' => __('Uppercase', 'as_extension'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'live-composer-page-builder'),
+                        'label' => __('Lowercase', 'as_extension'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1323,10 +1323,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1334,11 +1334,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Category Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Category Margin Bottom', 'as_extension'),
                 'id'                    => 'as_ajax_projects_category_margin_bottom .as-port-ajax-category',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -1346,12 +1346,12 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /** Excerpt Ajax Style * */
             array(
-                'label'                 => __('BG Color of Content', 'live-composer-page-builder'),
+                'label'                 => __('BG Color of Content', 'as_extension'),
                 'id'                    => 'as_ajax_content_bg_color',
                 'std'                   => '#f5f5f5',
                 'type'                  => 'color',
@@ -1359,10 +1359,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-ajax-info-wrapper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Content Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Content Vertical', 'as_extension'),
                 'id'                    => 'as_ajax_content_padding_vertical_test',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1371,10 +1371,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'ext'                   => 'px',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Content Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Content Horizontal', 'as_extension'),
                 'id'                    => 'as_ajax_content_padding_horizontal',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1383,10 +1383,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'ext'                   => 'px',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color of Excerpt', 'live-composer-page-builder'),
+                'label'                 => __('Color of Excerpt', 'as_extension'),
                 'id'                    => 'as_ajax_projects_excerpt_color',
                 'std'                   => 'rgb(76, 76, 76)',
                 'type'                  => 'color',
@@ -1394,10 +1394,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Family of Excerpt', 'live-composer-page-builder'),
+                'label'                 => __('Font Family of Excerpt', 'as_extension'),
                 'id'                    => 'as_ajax_projects_excerpt_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -1405,10 +1405,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height of Excerpt', 'live-composer-page-builder'),
+                'label'                 => __('Line Height of Excerpt', 'as_extension'),
                 'id'                    => 'as_ajax_projects_excerpt_line_height',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1416,11 +1416,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight of Excerpt', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight of Excerpt', 'as_extension'),
                 'id'                    => 'as_ajax_projects_excerpt_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1428,14 +1428,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Excerpt', 'live-composer-page-builder'),
+                'label'                 => __('Font Size of Excerpt', 'as_extension'),
                 'id'                    => 'as_ajax_projects_excerpt_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1443,29 +1443,29 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform Excerpt', 'live-composer-page-builder'),
+                'label'                 => __('Text Transform Excerpt', 'as_extension'),
                 'id'                    => 'as_ajax_projects_excerpt_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'live-composer-page-builder'),
+                        'label' => __('Capitalize', 'as_extension'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'live-composer-page-builder'),
+                        'label' => __('Uppercase', 'as_extension'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'live-composer-page-builder'),
+                        'label' => __('Lowercase', 'as_extension'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1473,10 +1473,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
             ),
             array(
-                'label'                 => __('Letter Spacing Excerpt', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing Excerpt', 'as_extension'),
                 'id'                    => 'as_ajax_projects_excerpt_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1484,14 +1484,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'live-composer-page-builder'),
+                'tab'                   => __('Ajax Portfolio', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Filters
              */
             array(
-                'label'                 => __('Background Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Background Color - Hover', 'as_extension'),
                 'id'                    => 'css_filters_background_color_hover',
                 'std'                   => 'rgb(248, 191, 59)',
                 'type'                  => 'color',
@@ -1499,10 +1499,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'live-composer-page-builder'),
+                'tab'                   => __('Filters', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Color - Hover', 'as_extension'),
                 'id'                    => 'css_filters_color_hover',
                 'std'                   => 'rgb(248, 191, 59)',
                 'type'                  => 'color',
@@ -1510,10 +1510,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'live-composer-page-builder'),
+                'tab'                   => __('Filters', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Border Color - Hover', 'as_extension'),
                 'id'                    => 'css_filters_border_color_hover',
                 'std'                   => 'rgb(248, 191, 59)',
                 'type'                  => 'color',
@@ -1521,37 +1521,37 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'live-composer-page-builder'),
+                'tab'                   => __('Filters', 'as_extension'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'live-composer-page-builder'),
+                'label'             => __('Duration when hover(ms)', 'as_extension'),
                 'id'                => 'css_filters_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('Filters', 'live-composer-page-builder'),
+                'tab'               => __('Filters', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Transform', 'live-composer-page-builder'),
+                'label'                 => __('Text Transform', 'as_extension'),
                 'id'                    => 'css_filters_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'live-composer-page-builder'),
+                        'label' => __('Capitalize', 'as_extension'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'live-composer-page-builder'),
+                        'label' => __('Uppercase', 'as_extension'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'live-composer-page-builder'),
+                        'label' => __('Lowercase', 'as_extension'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1559,31 +1559,31 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'live-composer-page-builder'),
+                'tab'                   => __('Filters', 'as_extension'),
             ),
             /**
              * Responsive tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'live-composer-page-builder'),
+                'tab'     => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1591,11 +1591,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-projects',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'live-composer-page-builder'),
+                'label'                 => __('Separator - Height', 'as_extension'),
                 'id'                    => 'css_res_t_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1606,10 +1606,10 @@ class AS_Projects extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1618,10 +1618,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1630,10 +1630,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1642,10 +1642,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Main - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Main - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_main_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1654,10 +1654,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Main - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Main - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_main_padding_horizontal',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1666,10 +1666,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Title - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Title - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1677,11 +1677,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Title - Line Height', 'as_extension'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1689,11 +1689,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Title - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_title_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1701,11 +1701,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Categories - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_cats_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1713,11 +1713,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Categories - Line Height', 'as_extension'),
                 'id'                    => 'css_res_t_cats_line_height',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1725,11 +1725,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Categories - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_cats_margin-bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1738,10 +1738,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Excerpt - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Excerpt - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_excerpt_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1749,11 +1749,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Excerpt - Line Height', 'as_extension'),
                 'id'                    => 'css_res_t_excerpt_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1761,11 +1761,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt, .dslc-project-excerpt p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Excerpt - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_excerpt_margin',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1774,10 +1774,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Button - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Button - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1785,11 +1785,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-read-more a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1798,10 +1798,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Button - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1810,10 +1810,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Button Icon - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Button Icon - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_t_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1822,31 +1822,31 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'live-composer-page-builder'),
+                'tab'     => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1854,11 +1854,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-projects',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'live-composer-page-builder'),
+                'label'                 => __('Separator - Height', 'as_extension'),
                 'id'                    => 'css_res_p_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1869,10 +1869,10 @@ class AS_Projects extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1881,10 +1881,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1893,10 +1893,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1905,10 +1905,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Main - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Main - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_main_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1917,10 +1917,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Main - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Main - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_main_padding_horizontal',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1929,10 +1929,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Title - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Title - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1940,11 +1940,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Title - Line Height', 'as_extension'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1952,11 +1952,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Title - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_title_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1964,11 +1964,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Categories - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_cats_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1976,11 +1976,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Categories - Line Height', 'as_extension'),
                 'id'                    => 'css_res_p_cats_line_height',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1988,11 +1988,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Categories - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_cats_margin-bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2001,10 +2001,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Excerpt - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Excerpt - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_excerpt_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2012,11 +2012,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Excerpt - Line Height', 'as_extension'),
                 'id'                    => 'css_res_p_excerpt_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2024,11 +2024,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt, .dslc-project-excerpt p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Excerpt - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_excerpt_margin',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2037,10 +2037,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Button - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Button - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2048,11 +2048,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-read-more a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2061,10 +2061,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Button - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -2073,10 +2073,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Button Icon - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Button Icon - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_p_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -2085,7 +2085,7 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
         );
 
@@ -2374,7 +2374,7 @@ class AS_Projects extends as_module {
                     ?>
                     <div class="dslc-post-filters">
 
-                        <span class="dslc-post-filter as-isotope-filter dslc-active" data-id=" " style="<?php echo esc_html($duration_filter_hover); ?>"><?php _e('All', 'Post Filter', 'live-composer-page-builder'); ?></span>
+                        <span class="dslc-post-filter as-isotope-filter dslc-active" data-id=" " style="<?php echo esc_html($duration_filter_hover); ?>"><?php _e('All', 'Post Filter', 'as_extension'); ?></span>
 
                         <?php
                         foreach ($cats_array as
@@ -2602,7 +2602,7 @@ class AS_Projects extends as_module {
             <?php
         else :
             if ($dslc_is_admin) :
-                ?><div class="dslc-notification dslc-red"><?php _e('You do not have any projects at the moment. Go to <strong>WP Admin &rarr; Projects</strong> to add some.', 'live-composer-page-builder'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
+                ?><div class="dslc-notification dslc-red"><?php _e('You do not have any projects at the moment. Go to <strong>WP Admin &rarr; Projects</strong> to add some.', 'as_extension'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
             endif;
         endif;
         /**

@@ -338,7 +338,7 @@ class AS_Introduce extends as_module {
                 'tab'               => 'Image',
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'as_introduce_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -350,7 +350,7 @@ class AS_Introduce extends as_module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Size', 'live-composer-page-builder'),
+                'label'                 => __('Size', 'as_extension'),
                 'id'                    => 'as_introduce_size',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -362,7 +362,7 @@ class AS_Introduce extends as_module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'as_introduce_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -619,7 +619,7 @@ class AS_Introduce extends as_module {
                 'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'as_introduce_social_border',
                 'std'                   => 'rgba(189, 36, 36, 0)',
                 'type'                  => 'color',
@@ -630,7 +630,7 @@ class AS_Introduce extends as_module {
                 'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'as_introduce_social_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',

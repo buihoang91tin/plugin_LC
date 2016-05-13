@@ -11,7 +11,7 @@ class AS_Tabs extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Tabs';
-        $this->module_title    = __('AS Tabs', 'live-composer-page-builder');
+        $this->module_title    = __('AS Tabs', 'as_extension');
         $this->module_icon     = 'list';
         $this->module_category = 'as - element';
         $this->handle_like     = 'tabs';
@@ -21,27 +21,27 @@ class AS_Tabs extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('(hidden) Tabs Content', 'live-composer-page-builder'),
+                'label'      => __('(hidden) Tabs Content', 'as_extension'),
                 'id'         => 'tabs_content',
                 'std'        => '',
                 'type'       => 'textarea',
@@ -49,7 +49,7 @@ class AS_Tabs extends as_module {
                 'section'    => 'styling',
             ),
             array(
-                'label'      => __('(hidden) Tabs Nav', 'live-composer-page-builder'),
+                'label'      => __('(hidden) Tabs Nav', 'as_extension'),
                 'id'         => 'tabs_nav',
                 'std'        => '',
                 'type'       => 'textarea',
@@ -60,7 +60,7 @@ class AS_Tabs extends as_module {
              * Tabs Nav
              */
             array(
-                'label'                 => __('Navigation Width', 'live-composer-page-builder'),
+                'label'                 => __('Navigation Width', 'as_extension'),
                 'id'                    => 'css_nav_tabs_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -69,10 +69,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_nav_bg_color',
                 'std'                   => '#fbfbfb',
                 'type'                  => 'color',
@@ -80,10 +80,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_nav_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -91,10 +91,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_nav_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -103,28 +103,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_nav_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -132,10 +132,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_nav_border_radius_top',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -143,11 +143,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_nav_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -155,11 +155,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __(' Color', 'live-composer-page-builder'),
+                'label'                 => __(' Color', 'as_extension'),
                 'id'                    => 'css_nav_color',
                 'std'                   => '#8d8d8d',
                 'type'                  => 'color',
@@ -167,10 +167,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_nav_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -178,11 +178,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_nav_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -190,14 +190,14 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_nav_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -205,10 +205,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_nav_padding_vertical',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -217,10 +217,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_nav_padding_horizontal',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -229,10 +229,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             array(
-                'label'                 => __('Spacing - Items', 'live-composer-page-builder'),
+                'label'                 => __('Spacing - Items', 'as_extension'),
                 'id'                    => 'css_nav_item_margin_right',
                 'std'                   => '-1',
                 'type'                  => 'slider',
@@ -241,12 +241,12 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
                 'min'                   => -10,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Spacing - Nav and Content', 'live-composer-page-builder'),
+                'label'                 => __('Spacing - Nav and Content', 'as_extension'),
                 'id'                    => 'css_nav_content_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -255,13 +255,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation', 'as_extension'),
             ),
             /**
              * Tabs Nav - Active
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_nav_active_bg_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -269,10 +269,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation Active', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_nav_border_color_active',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -280,10 +280,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-left-color,border-right-color,border-top-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation Active', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Bottom Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Bottom Color', 'as_extension'),
                 'id'                    => 'css_nav_border_bottom_color_active',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -291,10 +291,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation Active', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Left Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Left Color', 'as_extension'),
                 'id'                    => 'as-css_nav_border_bottom_color_active',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -302,10 +302,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation Active', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Left Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Left Width', 'as_extension'),
                 'id'                    => 'ascss_content_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -314,28 +314,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-left-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation Active', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_nav_border_trbl_active',
                 'std'                   => 'top bottom right left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -343,10 +343,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation Active', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_nav_active_color',
                 'std'                   => '#8d8d8d',
                 'type'                  => 'color',
@@ -354,13 +354,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook.dslc-active',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Navigation Active', 'live-composer-page-builder'),
+                'tab'                   => __('Navigation Active', 'as_extension'),
             ),
             /**
              * Tabs Content
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_content_bg_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -370,7 +370,7 @@ class AS_Tabs extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_content_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
@@ -380,7 +380,7 @@ class AS_Tabs extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_content_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -391,25 +391,25 @@ class AS_Tabs extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_content_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -419,7 +419,7 @@ class AS_Tabs extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_content_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -430,7 +430,7 @@ class AS_Tabs extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_content_border_radius_bottom',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -441,7 +441,7 @@ class AS_Tabs extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -452,7 +452,7 @@ class AS_Tabs extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_content_padding_vertical',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -463,7 +463,7 @@ class AS_Tabs extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_content_padding_horizontal',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -477,25 +477,25 @@ class AS_Tabs extends as_module {
              * Icon
              */
             array(
-                'label'   => __('Hide / Show Icon', 'live-composer-page-builder'),
+                'label'   => __('Hide / Show Icon', 'as_extension'),
                 'id'      => 'css_icon_hide_show',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Icon', 'live-composer-page-builder'),
+                'tab'     => __('Icon', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_icon_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -503,10 +503,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color Hover', 'live-composer-page-builder'),
+                'label'                 => __('Color Hover', 'as_extension'),
                 'id'                    => 'css_icon_color_hover',
                 'std'                   => '#cccccc',
                 'type'                  => 'color',
@@ -514,10 +514,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook:hover .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color Active', 'live-composer-page-builder'),
+                'label'                 => __('Color Active', 'as_extension'),
                 'id'                    => 'css_icon_color_active',
                 'std'                   => '#cccccc',
                 'type'                  => 'color',
@@ -525,10 +525,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-active.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '#cccccc',
                 'type'                  => 'color',
@@ -536,19 +536,19 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
             ),
             array(
-                'label'             => __('Icon', 'live-composer-page-builder'),
+                'label'             => __('Icon', 'as_extension'),
                 'id'                => 'icon_id',
                 'std'               => 'comments',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Icon', 'live-composer-page-builder'),
+                'tab'               => __('Icon', 'as_extension'),
                 'include_in_preset' => false
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'live-composer-page-builder'),
+                'label'                 => __('Size ( Icon )', 'as_extension'),
                 'id'                    => 'as-css_icon_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -556,11 +556,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'as-css_icon_title-line-height',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -568,11 +568,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Left Icon', 'live-composer-page-builder'),
+                'label'                 => __('Padding Left Icon', 'as_extension'),
                 'id'                    => 'as-css_tabs_icon_padding_left',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -580,11 +580,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'padding-left',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Right Icon', 'live-composer-page-builder'),
+                'label'                 => __('Padding Right Icon', 'as_extension'),
                 'id'                    => 'as-css_tabs_icon_padding_right',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -592,12 +592,12 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-nav-hook .dslc-icon',
                 'affect_on_change_rule' => 'padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'live-composer-page-builder'),
+                'tab'                   => __('Icon', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /* Content */
             array(
-                'label'                 => __('Content Width', 'live-composer-page-builder'),
+                'label'                 => __('Content Width', 'as_extension'),
                 'id'                    => 'as-css_content_tabs_width',
                 'std'                   => '80',
                 'type'                  => 'slider',
@@ -606,10 +606,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             array(
-                'label'                 => __(' Color', 'live-composer-page-builder'),
+                'label'                 => __(' Color', 'as_extension'),
                 'id'                    => 'css_content_color',
                 'std'                   => '#8d8d8d',
                 'type'                  => 'color',
@@ -617,10 +617,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -629,10 +629,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -644,10 +644,10 @@ class AS_Tabs extends as_module {
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100,
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -655,10 +655,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -667,10 +667,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom ( paragraph )', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom ( paragraph )', 'as_extension'),
                 'id'                    => 'css_content_margin_bottom',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -679,10 +679,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -690,13 +690,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content, .dslc-tabs-content p',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('content', 'live-composer-page-builder'),
+                'tab'                   => __('content', 'as_extension'),
             ),
             /**
              * Heading 1
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_h1_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -704,10 +704,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_h1_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -715,10 +715,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_h1_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -727,28 +727,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_h1_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -756,10 +756,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_h1_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -768,10 +768,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_h1_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -780,10 +780,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_h1_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -791,10 +791,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_h1_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -802,11 +802,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_h1_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -814,14 +814,14 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_h1_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -829,10 +829,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Style', 'live-composer-page-builder'),
+                'label'                 => __('Font Style', 'as_extension'),
                 'id'                    => 'css_h1_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -840,20 +840,20 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'live-composer-page-builder'),
+                        'label' => __('Italic', 'as_extension'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_h1_line_height',
                 'std'                   => '35',
                 'type'                  => 'slider',
@@ -861,11 +861,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_h1_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -873,11 +873,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_h1_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -886,10 +886,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_h1_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -898,10 +898,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_h1_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -909,13 +909,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h1',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h1', 'live-composer-page-builder'),
+                'tab'                   => __('h1', 'as_extension'),
             ),
             /**
              * Heading 2
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_h2_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -923,10 +923,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_h2_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -934,10 +934,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_h2_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -946,28 +946,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_h2_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -975,10 +975,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_h2_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -987,10 +987,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_h2_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -999,10 +999,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_h2_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1010,10 +1010,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_h2_font_size',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1021,11 +1021,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_h2_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1033,14 +1033,14 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_h2_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1048,10 +1048,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Style', 'live-composer-page-builder'),
+                'label'                 => __('Font Style', 'as_extension'),
                 'id'                    => 'css_h2_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1059,20 +1059,20 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h2', 'live-composer-page-builder'),
+                'tab'                   => __('h2', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'live-composer-page-builder'),
+                        'label' => __('Italic', 'as_extension'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_h2_line_height',
                 'std'                   => '33',
                 'type'                  => 'slider',
@@ -1080,11 +1080,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_h2_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1092,11 +1092,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_h2_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1105,10 +1105,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_h2_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1117,10 +1117,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_h2_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1128,13 +1128,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h2',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('H2', 'live-composer-page-builder'),
+                'tab'                   => __('H2', 'as_extension'),
             ),
             /**
              * Heading 3
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_h3_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1142,10 +1142,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_h3_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1153,10 +1153,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_h3_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1165,28 +1165,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_h3_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -1194,10 +1194,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_h3_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1206,10 +1206,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_h3_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1218,10 +1218,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_h3_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1229,10 +1229,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_h3_font_size',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -1240,11 +1240,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_h3_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1252,14 +1252,14 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_h3_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1267,10 +1267,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Style', 'live-composer-page-builder'),
+                'label'                 => __('Font Style', 'as_extension'),
                 'id'                    => 'css_h3_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1278,20 +1278,20 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'live-composer-page-builder'),
+                        'label' => __('Italic', 'as_extension'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_h3_line_height',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -1299,11 +1299,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_h3_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1311,11 +1311,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_h3_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1324,10 +1324,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_h3_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1336,10 +1336,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_h3_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1347,13 +1347,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h3',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h3', 'live-composer-page-builder'),
+                'tab'                   => __('h3', 'as_extension'),
             ),
             /**
              * Heading 4
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_h4_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1361,10 +1361,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_h4_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1372,10 +1372,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_h4_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1384,28 +1384,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_h4_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -1413,10 +1413,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_h4_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1425,10 +1425,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_h4_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1437,10 +1437,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_h4_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1448,10 +1448,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_h4_font_size',
                 'std'                   => '19',
                 'type'                  => 'slider',
@@ -1459,11 +1459,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_h4_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1471,14 +1471,14 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_h4_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1486,10 +1486,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Style', 'live-composer-page-builder'),
+                'label'                 => __('Font Style', 'as_extension'),
                 'id'                    => 'css_h4_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1497,20 +1497,20 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'live-composer-page-builder'),
+                        'label' => __('Italic', 'as_extension'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_h4_line_height',
                 'std'                   => '29',
                 'type'                  => 'slider',
@@ -1518,11 +1518,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_h4_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1530,11 +1530,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_h4_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1543,10 +1543,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_h4_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1555,10 +1555,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_h4_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1566,13 +1566,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h4',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h4', 'live-composer-page-builder'),
+                'tab'                   => __('h4', 'as_extension'),
             ),
             /**
              * Heading 5
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_h5_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1580,10 +1580,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_h5_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1591,10 +1591,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_h5_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1603,28 +1603,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_h5_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -1632,10 +1632,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_h5_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1644,10 +1644,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_h5_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1656,10 +1656,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_h5_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1667,10 +1667,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_h5_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1678,11 +1678,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_h5_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1690,14 +1690,14 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_h5_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1705,10 +1705,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Style', 'live-composer-page-builder'),
+                'label'                 => __('Font Style', 'as_extension'),
                 'id'                    => 'css_h5_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1716,20 +1716,20 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'live-composer-page-builder'),
+                        'label' => __('Italic', 'as_extension'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_h5_line_height',
                 'std'                   => '27',
                 'type'                  => 'slider',
@@ -1737,11 +1737,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_h5_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1749,11 +1749,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_h5_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1762,10 +1762,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_h5_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1774,10 +1774,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_h5_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -1785,13 +1785,13 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h5',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('h5', 'live-composer-page-builder'),
+                'tab'                   => __('h5', 'as_extension'),
             ),
             /**
              * Heading 6
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_h6_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1799,10 +1799,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_h6_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1810,10 +1810,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_h6_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1822,28 +1822,28 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_h6_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -1851,10 +1851,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_h6_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1863,10 +1863,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_h6_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1875,10 +1875,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_h6_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1886,10 +1886,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_h6_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1897,11 +1897,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_h6_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1909,14 +1909,14 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_h6_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1924,10 +1924,10 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Style', 'live-composer-page-builder'),
+                'label'                 => __('Font Style', 'as_extension'),
                 'id'                    => 'css_h6_font_style',
                 'std'                   => 'normal',
                 'type'                  => 'select',
@@ -1935,20 +1935,20 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'live-composer-page-builder'),
+                        'label' => __('Italic', 'as_extension'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_h6_line_height',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1956,11 +1956,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_h6_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1968,11 +1968,11 @@ class AS_Tabs extends as_module {
                 'affect_on_change_el'   => '.dslc-tabs-content h6',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('h6', 'live-composer-page-builder'),
+                'tab'                   => __('h6', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_h6_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',

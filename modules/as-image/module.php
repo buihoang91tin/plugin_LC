@@ -10,7 +10,7 @@ class AS_Image extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Image';
-        $this->module_title    = __('AS - Custom Image', 'live-composer-page-builder');
+        $this->module_title    = __('AS - Custom Image', 'as_extension');
         $this->module_icon     = 'picture';
         $this->module_category = 'as - element';
     }
@@ -19,90 +19,90 @@ class AS_Image extends as_module {
 
         $dslc_options = array(
             array(
-                'label'      => __('CT', 'live-composer-page-builder'),
+                'label'      => __('CT', 'as_extension'),
                 'id'         => 'custom_text',
-                'std'        => __('This is just some placeholder text. Click to edit it.', 'live-composer-page-builder'),
+                'std'        => __('This is just some placeholder text. Click to edit it.', 'as_extension'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label' => __('Image', 'live-composer-page-builder'),
+                'label' => __('Image', 'as_extension'),
                 'id'    => 'image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'   => __('Link Type', 'live-composer-page-builder'),
+                'label'   => __('Link Type', 'as_extension'),
                 'id'      => 'link_type',
                 'std'     => 'none',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => 'none',
                     ),
                     array(
-                        'label' => __('URL - Same Tab', 'live-composer-page-builder'),
+                        'label' => __('URL - Same Tab', 'as_extension'),
                         'value' => 'url_same',
                     ),
                     array(
-                        'label' => __('URL - New Tab', 'live-composer-page-builder'),
+                        'label' => __('URL - New Tab', 'as_extension'),
                         'value' => 'url_new',
                     ),
                     array(
-                        'label' => __('Lightbox', 'live-composer-page-builder'),
+                        'label' => __('Lightbox', 'as_extension'),
                         'value' => 'lightbox',
                     ),
                 )
             ),
             array(
-                'label' => __('Link - URL', 'live-composer-page-builder'),
+                'label' => __('Link - URL', 'as_extension'),
                 'id'    => 'link_url',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Link - Lightbox Image', 'live-composer-page-builder'),
+                'label' => __('Link - Lightbox Image', 'as_extension'),
                 'id'    => 'link_lb_image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'   => __('Custom Text', 'live-composer-page-builder'),
+                'label'   => __('Custom Text', 'as_extension'),
                 'id'      => 'custom_text_state',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled',
                     ),
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled',
                     ),
                 )
             ),
             array(
-                'label' => __('Resize - Height', 'live-composer-page-builder'),
+                'label' => __('Resize - Height', 'as_extension'),
                 'id'    => 'resize_height',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Resize - Width', 'live-composer-page-builder'),
+                'label' => __('Resize - Width', 'as_extension'),
                 'id'    => 'resize_width',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Image - ALT attribute', 'live-composer-page-builder'),
+                'label' => __('Image - ALT attribute', 'as_extension'),
                 'id'    => 'image_alt',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Image - TITLE attribute', 'live-composer-page-builder'),
+                'label' => __('Image - TITLE attribute', 'as_extension'),
                 'id'    => 'image_title',
                 'std'   => '',
                 'type'  => 'text',
@@ -111,7 +111,7 @@ class AS_Image extends as_module {
              * Styling
              */
             array(
-                'label'                 => __('Effect Style', 'live-composer-page-builder'),
+                'label'                 => __('Effect Style', 'as_extension'),
                 'id'                    => 'as_image_effect_style',
                 'std'                   => 'default',
                 'type'                  => 'select',
@@ -121,69 +121,69 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
                 'choices'               => array(
                     array(
-                        'label' => __('Default', 'live-composer-page-builder'),
+                        'label' => __('Default', 'as_extension'),
                         'value' => 'default',
                     ),
                     array(
-                        'label' => __('1977', 'live-composer-page-builder'),
+                        'label' => __('1977', 'as_extension'),
                         'value' => '_1977',
                     ),
                     array(
-                        'label' => __('Aden', 'live-composer-page-builder'),
+                        'label' => __('Aden', 'as_extension'),
                         'value' => 'aden',
                     ),
                     array(
-                        'label' => __('Brooklyn', 'live-composer-page-builder'),
+                        'label' => __('Brooklyn', 'as_extension'),
                         'value' => 'brooklyn',
                     ),
                     array(
-                        'label' => __('Earlybird', 'live-composer-page-builder'),
+                        'label' => __('Earlybird', 'as_extension'),
                         'value' => 'earlybird',
                     ),
                     array(
-                        'label' => __('Gingham', 'live-composer-page-builder'),
+                        'label' => __('Gingham', 'as_extension'),
                         'value' => 'gingham',
                     ),
                     array(
-                        'label' => __('Hudson', 'live-composer-page-builder'),
+                        'label' => __('Hudson', 'as_extension'),
                         'value' => 'hudson',
                     ),
                     array(
-                        'label' => __('Inkwell', 'live-composer-page-builder'),
+                        'label' => __('Inkwell', 'as_extension'),
                         'value' => 'inkwell',
                     ),
                     array(
-                        'label' => __('Lofi', 'live-composer-page-builder'),
+                        'label' => __('Lofi', 'as_extension'),
                         'value' => 'lofi',
                     ),
                     array(
-                        'label' => __('Mayfair', 'live-composer-page-builder'),
+                        'label' => __('Mayfair', 'as_extension'),
                         'value' => 'mayfair',
                     ),
                     array(
-                        'label' => __('Perpetua', 'live-composer-page-builder'),
+                        'label' => __('Perpetua', 'as_extension'),
                         'value' => 'perpetua',
                     ),
                     array(
-                        'label' => __('Reyes', 'live-composer-page-builder'),
+                        'label' => __('Reyes', 'as_extension'),
                         'value' => 'reyes',
                     ),
                     array(
-                        'label' => __('Toaster', 'live-composer-page-builder'),
+                        'label' => __('Toaster', 'as_extension'),
                         'value' => 'toaster',
                     ),
                     array(
-                        'label' => __('Walden', 'live-composer-page-builder'),
+                        'label' => __('Walden', 'as_extension'),
                         'value' => 'walden',
                     ),
                     array(
-                        'label' => __('Xpro2', 'live-composer-page-builder'),
+                        'label' => __('Xpro2', 'as_extension'),
                         'value' => 'xpro2',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
@@ -193,25 +193,25 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'live-composer-page-builder'),
+                        'label' => __('Center', 'as_extension'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'live-composer-page-builder'),
+                        'label' => __('Justify', 'as_extension'),
                         'value' => 'justify',
                     ),
                 )
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -221,7 +221,7 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -231,7 +231,7 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -242,25 +242,25 @@ class AS_Image extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -270,7 +270,7 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -281,7 +281,7 @@ class AS_Image extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top', 'as_extension'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -294,7 +294,7 @@ class AS_Image extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -307,7 +307,7 @@ class AS_Image extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -318,7 +318,7 @@ class AS_Image extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -332,7 +332,7 @@ class AS_Image extends as_module {
              * Custom Text
              */
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_ct_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
@@ -340,28 +340,28 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'live-composer-page-builder'),
+                'tab'                   => __('custom text', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'live-composer-page-builder'),
+                        'label' => __('Center', 'as_extension'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'live-composer-page-builder'),
+                        'label' => __('Justify', 'as_extension'),
                         'value' => 'justify',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_ct_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -369,10 +369,10 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'live-composer-page-builder'),
+                'tab'                   => __('custom text', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -380,11 +380,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'live-composer-page-builder'),
+                'tab'                   => __('custom text', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_ct_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -392,14 +392,14 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'live-composer-page-builder'),
+                'tab'                   => __('custom text', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_ct_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -407,10 +407,10 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'live-composer-page-builder'),
+                'tab'                   => __('custom text', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -418,11 +418,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'live-composer-page-builder'),
+                'tab'                   => __('custom text', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top', 'as_extension'),
                 'id'                    => 'css_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -431,31 +431,31 @@ class AS_Image extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('custom text', 'live-composer-page-builder'),
+                'tab'                   => __('custom text', 'as_extension'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'live-composer-page-builder'),
+                'label'   => __('Responsive', 'as_extension'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'live-composer-page-builder'),
+                'tab'     => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -463,11 +463,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -475,11 +475,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -487,11 +487,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Text - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -499,11 +499,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Text - Line Height', 'as_extension'),
                 'id'                    => 'css_res_t_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -511,11 +511,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Text - Margin Top', 'as_extension'),
                 'id'                    => 'css_res_t_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -523,32 +523,32 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'live-composer-page-builder'),
+                'label'   => __('Responsive', 'as_extension'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'live-composer-page-builder'),
+                'tab'     => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -556,11 +556,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -568,11 +568,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -580,11 +580,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Text - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -592,11 +592,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Text - Line Height', 'as_extension'),
                 'id'                    => 'css_res_p_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -604,11 +604,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Text - Margin Top', 'as_extension'),
                 'id'                    => 'css_res_p_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -616,7 +616,7 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
         );
@@ -660,7 +660,7 @@ class AS_Image extends as_module {
 
             <?php if (empty($options['image'])) : ?>
 
-                <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'live-composer-page-builder'); ?></div>
+                <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'as_extension'); ?></div>
 
             <?php else : ?>
 

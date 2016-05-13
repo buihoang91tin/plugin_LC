@@ -12,7 +12,7 @@ class AS_Staff extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Staff';
-        $this->module_title    = __('Staff Simple', 'live-composer-page-builder');
+        $this->module_title    = __('Staff Simple', 'as_extension');
         $this->module_icon     = 'group';
         $this->module_category = 'as - posts';
     }
@@ -32,236 +32,236 @@ class AS_Staff extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'   => __('Type', 'live-composer-page-builder'),
+                'label'   => __('Type', 'as_extension'),
                 'id'      => 'type',
                 'std'     => 'grid',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Grid', 'live-composer-page-builder'),
+                        'label' => __('Grid', 'as_extension'),
                         'value' => 'grid'
                     ),
                     array(
-                        'label' => __('Masonry Grid', 'live-composer-page-builder'),
+                        'label' => __('Masonry Grid', 'as_extension'),
                         'value' => 'masonry'
                     ),
                     array(
-                        'label' => __('Carousel', 'live-composer-page-builder'),
+                        'label' => __('Carousel', 'as_extension'),
                         'value' => 'carousel'
                     )
                 )
             ),
             array(
-                'label' => __('Posts Per Page', 'live-composer-page-builder'),
+                'label' => __('Posts Per Page', 'as_extension'),
                 'id'    => 'amount',
                 'std'   => '4',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Pagination', 'live-composer-page-builder'),
+                'label'   => __('Pagination', 'as_extension'),
                 'id'      => 'pagination_type',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled',
                     ),
                     array(
-                        'label' => __('Numbered', 'live-composer-page-builder'),
+                        'label' => __('Numbered', 'as_extension'),
                         'value' => 'numbered',
                     ),
                     array(
-                        'label' => __('Prev/Next', 'live-composer-page-builder'),
+                        'label' => __('Prev/Next', 'as_extension'),
                         'value' => 'prevnext',
                     )
                 ),
             ),
             array(
-                'label'   => __('Items Per Row', 'live-composer-page-builder'),
+                'label'   => __('Items Per Row', 'as_extension'),
                 'id'      => 'columns',
                 'std'     => '3',
                 'type'    => 'select',
                 'choices' => $this->shared_options('posts_per_row_choices'),
             ),
             array(
-                'label'   => __('Categories', 'live-composer-page-builder'),
+                'label'   => __('Categories', 'as_extension'),
                 'id'      => 'categories',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => $cats_choices
             ),
             array(
-                'label'   => __('Categories Operator', 'live-composer-page-builder'),
+                'label'   => __('Categories Operator', 'as_extension'),
                 'id'      => 'categories_operator',
                 'std'     => 'IN',
-                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'live-composer-page-builder'),
+                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'as_extension'),
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('IN', 'live-composer-page-builder'),
+                        'label' => __('IN', 'as_extension'),
                         'value' => 'IN',
                     ),
                     array(
-                        'label' => __('AND', 'live-composer-page-builder'),
+                        'label' => __('AND', 'as_extension'),
                         'value' => 'AND',
                     ),
                     array(
-                        'label' => __('NOT IN', 'live-composer-page-builder'),
+                        'label' => __('NOT IN', 'as_extension'),
                         'value' => 'NOT IN',
                     ),
                 )
             ),
             array(
-                'label'   => __('Order By', 'live-composer-page-builder'),
+                'label'   => __('Order By', 'as_extension'),
                 'id'      => 'orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Publish Date', 'live-composer-page-builder'),
+                        'label' => __('Publish Date', 'as_extension'),
                         'value' => 'date'
                     ),
                     array(
-                        'label' => __('Modified Date', 'live-composer-page-builder'),
+                        'label' => __('Modified Date', 'as_extension'),
                         'value' => 'modified'
                     ),
                     array(
-                        'label' => __('Random', 'live-composer-page-builder'),
+                        'label' => __('Random', 'as_extension'),
                         'value' => 'rand'
                     ),
                     array(
-                        'label' => __('Alphabetic', 'live-composer-page-builder'),
+                        'label' => __('Alphabetic', 'as_extension'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Comment Count', 'live-composer-page-builder'),
+                        'label' => __('Comment Count', 'as_extension'),
                         'value' => 'comment_count'
                     ),
                 )
             ),
             array(
-                'label'   => __('Order', 'live-composer-page-builder'),
+                'label'   => __('Order', 'as_extension'),
                 'id'      => 'order',
                 'std'     => 'DESC',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Ascending', 'live-composer-page-builder'),
+                        'label' => __('Ascending', 'as_extension'),
                         'value' => 'ASC'
                     ),
                     array(
-                        'label' => __('Descending', 'live-composer-page-builder'),
+                        'label' => __('Descending', 'as_extension'),
                         'value' => 'DESC'
                     )
                 )
             ),
             array(
-                'label' => __('Offset', 'live-composer-page-builder'),
+                'label' => __('Offset', 'as_extension'),
                 'id'    => 'offset',
                 'std'   => '0',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Include (IDs)', 'live-composer-page-builder'),
+                'label' => __('Include (IDs)', 'as_extension'),
                 'id'    => 'query_post_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Exclude (IDs)', 'live-composer-page-builder'),
+                'label' => __('Exclude (IDs)', 'as_extension'),
                 'id'    => 'query_post_not_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Social - Link Behaviour', 'live-composer-page-builder'),
+                'label'   => __('Social - Link Behaviour', 'as_extension'),
                 'id'      => 'social_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Open in same tab', 'live-composer-page-builder'),
+                        'label' => __('Open in same tab', 'as_extension'),
                         'value' => '_self'
                     ),
                     array(
-                        'label' => __('Open in new tab', 'live-composer-page-builder'),
+                        'label' => __('Open in new tab', 'as_extension'),
                         'value' => '_blank'
                     )
                 ),
-                'tab'     => __('Other', 'live-composer-page-builder'),
+                'tab'     => __('Other', 'as_extension'),
             ),
             /**
              * General
              */
             array(
-                'label'   => __('Post Elements', 'live-composer-page-builder'),
+                'label'   => __('Post Elements', 'as_extension'),
                 'id'      => 'post_elements',
                 'std'     => 'thumbnail social title position excerpt',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Thumbnail', 'as_extension'),
                         'value' => 'thumbnail',
                     ),
                     array(
-                        'label' => __('Social Links', 'live-composer-page-builder'),
+                        'label' => __('Social Links', 'as_extension'),
                         'value' => 'social',
                     ),
                     array(
-                        'label' => __('Title', 'live-composer-page-builder'),
+                        'label' => __('Title', 'as_extension'),
                         'value' => 'title',
                     ),
                     array(
-                        'label' => __('Position', 'live-composer-page-builder'),
+                        'label' => __('Position', 'as_extension'),
                         'value' => 'position',
                     ),
                     array(
-                        'label' => __('Excerpt', 'live-composer-page-builder'),
+                        'label' => __('Excerpt', 'as_extension'),
                         'value' => 'excerpt',
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Carousel Elements', 'live-composer-page-builder'),
+                'label'   => __('Carousel Elements', 'as_extension'),
                 'id'      => 'carousel_elements',
                 'std'     => 'arrows circles',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Arrows', 'live-composer-page-builder'),
+                        'label' => __('Arrows', 'as_extension'),
                         'value' => 'arrows'
                     ),
                     array(
-                        'label' => __('Circles', 'live-composer-page-builder'),
+                        'label' => __('Circles', 'as_extension'),
                         'value' => 'circles'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -274,7 +274,7 @@ class AS_Staff extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -285,7 +285,7 @@ class AS_Staff extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -299,25 +299,25 @@ class AS_Staff extends as_module {
              * Separator
              */
             array(
-                'label'   => __('Enable/Disable', 'live-composer-page-builder'),
+                'label'   => __('Enable/Disable', 'as_extension'),
                 'id'      => 'separator_enabled',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Row Separator', 'live-composer-page-builder'),
+                'tab'     => __('Row Separator', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_sep_border_color',
                 'std'                   => '#ededed',
                 'type'                  => 'color',
@@ -325,10 +325,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
+                'tab'                   => __('Row Separator', 'as_extension'),
             ),
             array(
-                'label'                 => __('Height', 'live-composer-page-builder'),
+                'label'                 => __('Height', 'as_extension'),
                 'id'                    => 'css_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -339,10 +339,10 @@ class AS_Staff extends as_module {
                 'min'                   => 0,
                 'max'                   => 300,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
+                'tab'                   => __('Row Separator', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thickness', 'live-composer-page-builder'),
+                'label'                 => __('Thickness', 'as_extension'),
                 'id'                    => 'css_sep_thickness',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -353,28 +353,28 @@ class AS_Staff extends as_module {
                 'min'                   => 0,
                 'max'                   => 50,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
+                'tab'                   => __('Row Separator', 'as_extension'),
             ),
             array(
-                'label'                 => __('Style', 'live-composer-page-builder'),
+                'label'                 => __('Style', 'as_extension'),
                 'id'                    => 'css_sep_style',
                 'std'                   => 'dashed',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'live-composer-page-builder'),
+                        'label' => __('Invisible', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Solid', 'live-composer-page-builder'),
+                        'label' => __('Solid', 'as_extension'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'live-composer-page-builder'),
+                        'label' => __('Dashed', 'as_extension'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'live-composer-page-builder'),
+                        'label' => __('Dotted', 'as_extension'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -382,13 +382,13 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'live-composer-page-builder'),
+                'tab'                   => __('Row Separator', 'as_extension'),
             ),
             /**
              * Thumbnail
              */
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_thumbnail_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -396,28 +396,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslca-post-thumb',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'   => __('Effect Thumbnail', 'live-composer-page-builder'),
+                'label'   => __('Effect Thumbnail', 'as_extension'),
                 'id'      => 'effect_hover_img',
                 'std'     => 'normal',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Black & White', 'live-composer-page-builder'),
+                        'label' => __('Black & White', 'as_extension'),
                         'value' => 'black_white'
                     ),
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'     => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_thumbnail_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -425,10 +425,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -436,10 +436,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -448,28 +448,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -477,10 +477,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_thumbnail_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -488,11 +488,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner, .dslc-staff-member-thumb img',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_thumbnail_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -500,11 +500,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner, .dslc-staff-member-thumb img',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -515,10 +515,10 @@ class AS_Staff extends as_module {
                 'ext'                   => 'px',
                 'min'                   => '-100',
                 'max'                   => '100',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -527,10 +527,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -539,56 +539,56 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'live-composer-page-builder'),
+                'tab'                   => __('Thumbnail', 'as_extension'),
             ),
             array(
-                'label'   => __('Resize - Height', 'live-composer-page-builder'),
+                'label'   => __('Resize - Height', 'as_extension'),
                 'id'      => 'thumb_resize_height',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'live-composer-page-builder'),
+                'tab'     => __('thumbnail', 'as_extension'),
             ),
             array(
-                'label'   => __('Resize - Width', 'live-composer-page-builder'),
+                'label'   => __('Resize - Width', 'as_extension'),
                 'id'      => 'thumb_resize_width_manual',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'live-composer-page-builder'),
+                'tab'     => __('thumbnail', 'as_extension'),
             ),
             array(
-                'label'      => __('Resize - Width', 'live-composer-page-builder'),
+                'label'      => __('Resize - Width', 'as_extension'),
                 'id'         => 'thumb_resize_width',
                 'std'        => '',
                 'type'       => 'text',
                 'section'    => 'styling',
-                'tab'        => __('thumbnail', 'live-composer-page-builder'),
+                'tab'        => __('thumbnail', 'as_extension'),
                 'visibility' => 'hidden'
             ),
             /**
              * Social
              */
             array(
-                'label'   => __('Position', 'live-composer-page-builder'),
+                'label'   => __('Position', 'as_extension'),
                 'id'      => 'css_social_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Inner Thumbnail', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Bottom Thumbnail', 'as_extension'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Social', 'live-composer-page-builder'),
+                'tab'     => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_social_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -596,10 +596,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_social_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -607,10 +607,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color Hover', 'live-composer-page-builder'),
+                'label'                 => __('BG Color Hover', 'as_extension'),
                 'id'                    => 'css_social_bg_hover_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -618,10 +618,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_social_border_color',
                 'std'                   => 'rgb(175, 175, 175)',
                 'type'                  => 'color',
@@ -629,10 +629,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Hover Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Hover Color', 'as_extension'),
                 'id'                    => 'css_social_border_hover_color',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -640,10 +640,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_social_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -652,28 +652,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_social_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -681,10 +681,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_social_border_radius_top',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -692,11 +692,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_social_border_radius_bottom',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -704,11 +704,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_social_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -717,10 +717,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Size (width, height)', 'live-composer-page-builder'),
+                'label'                 => __('Size (width, height)', 'as_extension'),
                 'id'                    => 'css_social_widht_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -729,10 +729,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Icon - Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Spacing', 'as_extension'),
                 'id'                    => 'css_social_spacing',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -741,10 +741,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-left,margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Icon - Color', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Color', 'as_extension'),
                 'id'                    => 'css_social_color',
                 'std'                   => 'rgb(175, 175, 175)',
                 'type'                  => 'color',
@@ -752,10 +752,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Icon - Hover Color', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Hover Color', 'as_extension'),
                 'id'                    => 'css_social_hover_color',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -763,10 +763,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             array(
-                'label'                 => __('Icon - Size', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Size', 'as_extension'),
                 'id'                    => 'css_social_font_size',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -774,11 +774,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Margin Top', 'as_extension'),
                 'id'                    => 'css_social_margin_top',
                 'std'                   => '6',
                 'type'                  => 'slider',
@@ -787,13 +787,13 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'live-composer-page-builder'),
+                'tab'                   => __('Social', 'as_extension'),
             ),
             /**
              * Main
              */
             array(
-                'label'                 => __(' BG Color', 'live-composer-page-builder'),
+                'label'                 => __(' BG Color', 'as_extension'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -801,10 +801,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_main_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -812,10 +812,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_main_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -824,28 +824,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_main_border_trbl',
                 'std'                   => 'right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -853,10 +853,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Top', 'as_extension'),
                 'id'                    => 'css_main_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -864,11 +864,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius - Bottom', 'as_extension'),
                 'id'                    => 'css_main_border_radius_bottom',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -876,11 +876,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Minimum Height', 'live-composer-page-builder'),
+                'label'                 => __('Minimum Height', 'as_extension'),
                 'id'                    => 'css_main_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -889,12 +889,12 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'min-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
                 'min'                   => 0,
                 'max'                   => 500
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_main_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -903,10 +903,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_main_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -915,10 +915,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             array(
-                'label'                 => __('Text Align', 'live-composer-page-builder'),
+                'label'                 => __('Text Align', 'as_extension'),
                 'id'                    => 'css_main_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -926,31 +926,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'live-composer-page-builder'),
+                'tab'                   => __('Main', 'as_extension'),
             ),
             /**
              * Main Inner
              */
             array(
-                'label'   => __('Content Inner Thumbnail', 'live-composer-page-builder'),
+                'label'   => __('Content Inner Thumbnail', 'as_extension'),
                 'id'      => 'content_inner_thumb_enabled',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Main Inner', 'live-composer-page-builder'),
+                'tab'     => __('Main Inner', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'content_inner_thumb_bg_color',
                 'std'                   => 'rgba(0, 0, 0, 0.45)',
                 'type'                  => 'color',
@@ -958,10 +958,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
+                'tab'                   => __('Main Inner', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'content_inner_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -969,10 +969,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
+                'tab'                   => __('Main Inner', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Border Color - Hover', 'as_extension'),
                 'id'                    => 'content_inner_thumb_border_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -980,10 +980,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
+                'tab'                   => __('Main Inner', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'content_inner_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -992,28 +992,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
+                'tab'                   => __('Main Inner', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'content_inner_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -1021,10 +1021,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
+                'tab'                   => __('Main Inner', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'content_inner_thumb_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1033,10 +1033,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
+                'tab'                   => __('Main Inner', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'content_inner_thumb_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1045,31 +1045,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'live-composer-page-builder'),
+                'tab'                   => __('Main Inner', 'as_extension'),
             ),
             /**
              * Title
              */
             array(
-                'label'   => __('Position', 'live-composer-page-builder'),
+                'label'   => __('Position', 'as_extension'),
                 'id'      => 'css_title_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Inner Thumbnail', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Bottom Thumbnail', 'as_extension'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Title', 'live-composer-page-builder'),
+                'tab'     => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_title_color',
                 'std'                   => 'rgb(34, 34, 34)',
                 'type'                  => 'color',
@@ -1077,10 +1077,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Color - Hover', 'as_extension'),
                 'id'                    => 'css_title_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1088,10 +1088,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1099,11 +1099,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1111,14 +1111,14 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -1126,10 +1126,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1137,11 +1137,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_title_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1149,29 +1149,29 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'live-composer-page-builder'),
+                'label'                 => __('Text Transform', 'as_extension'),
                 'id'                    => 'css_title_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'live-composer-page-builder'),
+                        'label' => __('Capitalize', 'as_extension'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'live-composer-page-builder'),
+                        'label' => __('Uppercase', 'as_extension'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'live-composer-page-builder'),
+                        'label' => __('Lowercase', 'as_extension'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1179,31 +1179,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             /**
              * Position
              */
             array(
-                'label'   => __('Position', 'live-composer-page-builder'),
+                'label'   => __('Position', 'as_extension'),
                 'id'      => 'css_position_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Inner Thumbnail', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'live-composer-page-builder'),
+                        'label' => __('Bottom Thumbnail', 'as_extension'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Position', 'live-composer-page-builder'),
+                'tab'     => __('Position', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_position_border_color',
                 'std'                   => '#e5e5e5',
                 'type'                  => 'color',
@@ -1211,10 +1211,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_position_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1223,28 +1223,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-top-width,border-bottom-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_position_border_trbl',
                 'std'                   => 'top bottom',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -1252,10 +1252,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_position_color',
                 'std'                   => 'rgb(177, 177, 177)',
                 'type'                  => 'color',
@@ -1263,10 +1263,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_position_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1274,11 +1274,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_position_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1286,14 +1286,14 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_position_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
@@ -1301,10 +1301,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Style', 'live-composer-page-builder'),
+                'label'                 => __('Font Style', 'as_extension'),
                 'id'                    => 'css_position_font_style',
                 'std'                   => 'italic',
                 'type'                  => 'select',
@@ -1312,20 +1312,20 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'live-composer-page-builder'),
+                        'label' => __('Normal', 'as_extension'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'live-composer-page-builder'),
+                        'label' => __('Italic', 'as_extension'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_position_margin_bottom',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1333,11 +1333,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_position_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1346,31 +1346,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
             ),
             /**
              * Excerpt
              */
             array(
-                'label'   => __('Excerpt or Content', 'live-composer-page-builder'),
+                'label'   => __('Excerpt or Content', 'as_extension'),
                 'id'      => 'excerpt_or_content',
                 'std'     => 'excerpt',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Excerpt', 'live-composer-page-builder'),
+                        'label' => __('Excerpt', 'as_extension'),
                         'value' => 'excerpt'
                     ),
                     array(
-                        'label' => __('Content', 'live-composer-page-builder'),
+                        'label' => __('Content', 'as_extension'),
                         'value' => 'content'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Excerpt', 'live-composer-page-builder'),
+                'tab'     => __('Excerpt', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_excerpt_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1378,10 +1378,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
+                'tab'                   => __('Excerpt', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_excerpt_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1389,11 +1389,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
+                'tab'                   => __('Excerpt', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_excerpt_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1401,14 +1401,14 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
+                'tab'                   => __('Excerpt', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_excerpt_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -1416,10 +1416,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
+                'tab'                   => __('Excerpt', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_excerpt_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1427,19 +1427,19 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'live-composer-page-builder'),
+                'tab'                   => __('Excerpt', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'   => __('Max Length ( amount of words )', 'live-composer-page-builder'),
+                'label'   => __('Max Length ( amount of words )', 'as_extension'),
                 'id'      => 'excerpt_length',
                 'std'     => '20',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Excerpt', 'live-composer-page-builder'),
+                'tab'     => __('Excerpt', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_excerpt_margin_bottom',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1447,32 +1447,32 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'live-composer-page-builder'),
+                'tab'                   => __('Position', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'live-composer-page-builder'),
+                'tab'     => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1480,11 +1480,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'live-composer-page-builder'),
+                'label'                 => __('Separator - Height', 'as_extension'),
                 'id'                    => 'css_res_t_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1495,10 +1495,10 @@ class AS_Staff extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1507,31 +1507,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'live-composer-page-builder'),
+                'tab'     => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1539,11 +1539,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'live-composer-page-builder'),
+                'label'                 => __('Separator - Height', 'as_extension'),
                 'id'                    => 'css_res_p_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1554,10 +1554,10 @@ class AS_Staff extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1566,7 +1566,7 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
         );
 
@@ -2009,7 +2009,7 @@ if ($query_offset > 0) {
             else :
 
                 if ($dslc_is_admin) :
-                    ?><div class="dslc-notification dslc-red"><?php _e('You do not have staff at the moment. Go to <strong>WP Admin &rarr; Staff</strong> to add some.', 'live-composer-page-builder'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
+                    ?><div class="dslc-notification dslc-red"><?php _e('You do not have staff at the moment. Go to <strong>WP Admin &rarr; Staff</strong> to add some.', 'as_extension'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
             endif;
 
         endif;

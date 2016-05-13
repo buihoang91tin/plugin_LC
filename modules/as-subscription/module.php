@@ -11,7 +11,7 @@ class AS_SubscriptionBox extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_SubscriptionBox';
-        $this->module_title    = __('AS - Mailchimp Subscription', 'live-composer-page-builder');
+        $this->module_title    = __('AS - Mailchimp Subscription', 'as_extension');
         $this->module_icon     = 'envelope-alt';
         $this->module_category = 'as - element';
     }
@@ -22,7 +22,7 @@ class AS_SubscriptionBox extends as_module {
         $dslc_options = array(
             /* CLIKC TO EDIT */
             array(
-                'label' => __('MailChimp URL', 'live-composer-page-builder'),
+                'label' => __('MailChimp URL', 'as_extension'),
                 'id'    => 'as_mailchimp_url',
                 'std'   => 'http://alenastudio.us10.list-manage.com/subscribe?u=f2e21eb858ed6d4d505e8e877&id=ffdd9414e1',
                 'type'  => 'text',
@@ -32,27 +32,27 @@ class AS_SubscriptionBox extends as_module {
              * General
              */
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'as_css_main_newsletter_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -62,7 +62,7 @@ class AS_SubscriptionBox extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Background', 'live-composer-page-builder'),
+                'label'                 => __('Background', 'as_extension'),
                 'id'                    => 'as_css_background_form',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -72,7 +72,7 @@ class AS_SubscriptionBox extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'as_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -83,7 +83,7 @@ class AS_SubscriptionBox extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'as_css_padding_vertical_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -94,7 +94,7 @@ class AS_SubscriptionBox extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'as_css_padding_horizontal_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -108,7 +108,7 @@ class AS_SubscriptionBox extends as_module {
              * Button Styling
              */
             array(
-                'label'                 => __('Width (%)', 'live-composer-page-builder'),
+                'label'                 => __('Width (%)', 'as_extension'),
                 'id'                    => 'as_css_input_width',
                 'std'                   => '70',
                 'type'                  => 'slider',
@@ -117,10 +117,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'as_css_input_color',
                 'std'                   => '#ccc',
                 'type'                  => 'color',
@@ -128,10 +128,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Margin Right', 'as_extension'),
                 'id'                    => 'as_css_input_margin_right',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -140,10 +140,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'as_css_input_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -152,10 +152,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'as_css_input_padding_vertical_form',
                 'std'                   => '9',
                 'type'                  => 'slider',
@@ -164,10 +164,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'as_css_input_padding_horizontal_form',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -176,10 +176,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'as_input_css_newsletter_bg_color',
                 'std'                   => 'rgb(255, 255, 255)',
                 'type'                  => 'color',
@@ -187,10 +187,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'as_input_css_newsletter_border_color',
                 'std'                   => '#ccc',
                 'type'                  => 'color',
@@ -198,10 +198,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_email_mailchimp',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'as_input_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -210,21 +210,21 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Input Form', 'live-composer-page-builder'),
+                'tab'                   => __('Input Form', 'as_extension'),
             ),
             /**
              * Button Styling
              */
             array(
-                'label'   => __('Button Text', 'live-composer-page-builder'),
+                'label'   => __('Button Text', 'as_extension'),
                 'id'      => 'as_button_text',
                 'std'     => 'Subscribe',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Button Style', 'live-composer-page-builder'),
+                'tab'     => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'as_button_newsletter_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -232,10 +232,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_bg_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -243,10 +243,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('BG Color - Hover', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_bg_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -254,10 +254,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_border_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -265,10 +265,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Border Color - Hover', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_border_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -276,19 +276,19 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'live-composer-page-builder'),
+                'label'             => __('Duration when hover(ms)', 'as_extension'),
                 'id'                => 'as_button_css_newsletter_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('Button Style', 'live-composer-page-builder'),
+                'tab'               => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -297,28 +297,28 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -326,10 +326,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -338,10 +338,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -350,10 +350,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -362,10 +362,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -374,13 +374,13 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Button Style', 'live-composer-page-builder'),
+                'tab'                   => __('Button Style', 'as_extension'),
             ),
             /**
              * Out line Style
              */
             array(
-                'label'                 => __('Out Line Width', 'live-composer-page-builder'),
+                'label'                 => __('Out Line Width', 'as_extension'),
                 'id'                    => 'as_button_newsletter_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -388,11 +388,11 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
+                'tab'                   => __('Out Line Style', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Offset', 'live-composer-page-builder'),
+                'label'                 => __('Out Line Offset', 'as_extension'),
                 'id'                    => 'as_button_newsletter_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -400,11 +400,11 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
+                'tab'                   => __('Out Line Style', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Color', 'live-composer-page-builder'),
+                'label'                 => __('Out Line Color', 'as_extension'),
                 'id'                    => 'as_button_newsletter_out_line_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
@@ -412,10 +412,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
+                'tab'                   => __('Out Line Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Out Line Color Hover', 'live-composer-page-builder'),
+                'label'                 => __('Out Line Color Hover', 'as_extension'),
                 'id'                    => 'as_button_newsletter_out_line_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
@@ -423,28 +423,28 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
+                'tab'                   => __('Out Line Style', 'as_extension'),
             ),
             array(
-                'label'                 => __('Out Line Style', 'live-composer-page-builder'),
+                'label'                 => __('Out Line Style', 'as_extension'),
                 'id'                    => 'as_button_newsletter_out_line_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'live-composer-page-builder'),
+                        'label' => __('Invisible', 'as_extension'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'live-composer-page-builder'),
+                        'label' => __('Solid', 'as_extension'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'live-composer-page-builder'),
+                        'label' => __('Dashed', 'as_extension'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'live-composer-page-builder'),
+                        'label' => __('Dotted', 'as_extension'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -452,13 +452,13 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'live-composer-page-builder'),
+                'tab'                   => __('Out Line Style', 'as_extension'),
             ),
             /**
              * Typography
              */
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -466,10 +466,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'live-composer-page-builder'),
+                'tab'                   => __('typography', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Color - Hover', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -477,10 +477,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'live-composer-page-builder'),
+                'tab'                   => __('typography', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -488,11 +488,11 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'live-composer-page-builder'),
+                'tab'                   => __('typography', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -500,14 +500,14 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'live-composer-page-builder'),
+                'tab'                   => __('typography', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -515,10 +515,10 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'live-composer-page-builder'),
+                'tab'                   => __('typography', 'as_extension'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'as_button_css_newsletter_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -526,7 +526,7 @@ class AS_SubscriptionBox extends as_module {
                 'affect_on_change_el'   => '.as_mailchimp_form .as_button_submit_mailchimp',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'live-composer-page-builder'),
+                'tab'                   => __('typography', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**             * Responsive Tablet */

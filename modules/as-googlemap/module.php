@@ -11,7 +11,7 @@ class AS_Google_Map extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Google_Map';
-        $this->module_title    = __('AS - Google Map', 'live-composer-page-builder');
+        $this->module_title    = __('AS - Google Map', 'as_extension');
         $this->module_icon     = 'globe';
         $this->module_category = 'as - element';
     }
@@ -24,27 +24,27 @@ class AS_Google_Map extends as_module {
              * General
              */
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Title', 'live-composer-page-builder'),
+                'label'      => __('Title', 'as_extension'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -52,93 +52,93 @@ class AS_Google_Map extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'   => __('Google Map Scrool Wheel', 'live-composer-page-builder'),
+                'label'   => __('Google Map Scrool Wheel', 'as_extension'),
                 'id'      => 'googlemap_scrlwheel',
                 'std'     => '0',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => '0'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => '1'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Snazzy Maps', 'live-composer-page-builder'),
+                'label'   => __('Snazzy Maps', 'as_extension'),
                 'id'      => 'googlemap_snazzy_map',
                 'std'     => '1',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('None', 'live-composer-page-builder'),
+                        'label' => __('None', 'as_extension'),
                         'value' => '1'
                     ),
                     array(
-                        'label' => __('Subtle Grayscale', 'live-composer-page-builder'),
+                        'label' => __('Subtle Grayscale', 'as_extension'),
                         'value' => '2'
                     ),
                     array(
-                        'label' => __('Shades of Grey', 'live-composer-page-builder'),
+                        'label' => __('Shades of Grey', 'as_extension'),
                         'value' => '3'
                     ),
                     array(
-                        'label' => __('Blue water', 'live-composer-page-builder'),
+                        'label' => __('Blue water', 'as_extension'),
                         'value' => '4'
                     ),
                     array(
-                        'label' => __('Pale Dawn', 'live-composer-page-builder'),
+                        'label' => __('Pale Dawn', 'as_extension'),
                         'value' => '5'
                     ),
                     array(
-                        'label' => __('Light Monochrome', 'live-composer-page-builder'),
+                        'label' => __('Light Monochrome', 'as_extension'),
                         'value' => '6'
                     ),
                     array(
-                        'label' => __('Apple Maps-esque', 'live-composer-page-builder'),
+                        'label' => __('Apple Maps-esque', 'as_extension'),
                         'value' => '7'
                     ),
                     array(
-                        'label' => __('Greyscale', 'live-composer-page-builder'),
+                        'label' => __('Greyscale', 'as_extension'),
                         'value' => '8'
                     ),
                     array(
-                        'label' => __('Neutral Blue', 'live-composer-page-builder'),
+                        'label' => __('Neutral Blue', 'as_extension'),
                         'value' => '9'
                     ),
                     array(
-                        'label' => __('Bright & Bubbly', 'live-composer-page-builder'),
+                        'label' => __('Bright & Bubbly', 'as_extension'),
                         'value' => '10'
                     ),
                     array(
-                        'label' => __('Icy Blue', 'live-composer-page-builder'),
+                        'label' => __('Icy Blue', 'as_extension'),
                         'value' => '11'
                     ),
                     array(
-                        'label' => __('Blue Gray', 'live-composer-page-builder'),
+                        'label' => __('Blue Gray', 'as_extension'),
                         'value' => '12'
                     ),
                     array(
-                        'label' => __('Blue Essence', 'live-composer-page-builder'),
+                        'label' => __('Blue Essence', 'as_extension'),
                         'value' => '13'
                     ),
                     array(
-                        'label' => __('Girly', 'live-composer-page-builder'),
+                        'label' => __('Girly', 'as_extension'),
                         'value' => '14'
                     ),
                     array(
-                        'label' => __('Retro', 'live-composer-page-builder'),
+                        'label' => __('Retro', 'as_extension'),
                         'value' => '15'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Width Google Map', 'live-composer-page-builder'),
+                'label'                 => __('Width Google Map', 'as_extension'),
                 'id'                    => 'as_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -150,7 +150,7 @@ class AS_Google_Map extends as_module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Height Google Map', 'live-composer-page-builder'),
+                'label'                 => __('Height Google Map', 'as_extension'),
                 'id'                    => 'as_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -162,48 +162,48 @@ class AS_Google_Map extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'   => __('Goole Map Center X', 'live-composer-page-builder'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'live-composer-page-builder'),
+                'label'   => __('Goole Map Center X', 'as_extension'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'as_extension'),
                 'id'      => 'googlemap_x',
                 'std'     => '12.238791',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Center Y', 'live-composer-page-builder'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'live-composer-page-builder'),
+                'label'   => __('Goole Map Center Y', 'as_extension'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'as_extension'),
                 'id'      => 'googlemap_y',
                 'std'     => '109.196749',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Zoom', 'live-composer-page-builder'),
+                'label'   => __('Goole Map Zoom', 'as_extension'),
                 'id'      => 'googlemap_zoom',
                 'std'     => '13',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -213,7 +213,7 @@ class AS_Google_Map extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -223,7 +223,7 @@ class AS_Google_Map extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -234,7 +234,7 @@ class AS_Google_Map extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -245,7 +245,7 @@ class AS_Google_Map extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -256,7 +256,7 @@ class AS_Google_Map extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -269,7 +269,7 @@ class AS_Google_Map extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -282,7 +282,7 @@ class AS_Google_Map extends as_module {
             /* For mark
              */
             array(
-                'label'   => __('Goole Map Mark X', 'live-composer-page-builder'),
+                'label'   => __('Goole Map Mark X', 'as_extension'),
                 'id'      => 'googlemap_x_mark',
                 'std'     => '12.238791',
                 'type'    => 'text',
@@ -290,7 +290,7 @@ class AS_Google_Map extends as_module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Map Mark Y', 'live-composer-page-builder'),
+                'label'   => __('Goole Map Mark Y', 'as_extension'),
                 'id'      => 'googlemap_y_mark',
                 'std'     => '109.196749',
                 'type'    => 'text',
@@ -298,7 +298,7 @@ class AS_Google_Map extends as_module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Mark Title', 'live-composer-page-builder'),
+                'label'   => __('Goole Mark Title', 'as_extension'),
                 'id'      => 'google_title_mark',
                 'std'     => 'Dong Hoi City',
                 'type'    => 'text',

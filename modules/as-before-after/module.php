@@ -10,7 +10,7 @@ class AS_Before_After extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Before_After';
-        $this->module_title    = __('AS - Before After Image', 'live-composer-page-builder');
+        $this->module_title    = __('AS - Before After Image', 'as_extension');
         $this->module_icon     = 'picture';
         $this->module_category = 'as - element';
     }
@@ -19,77 +19,77 @@ class AS_Before_After extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('CT', 'live-composer-page-builder'),
+                'label'      => __('CT', 'as_extension'),
                 'id'         => 'custom_text',
-                'std'        => __('BEFORE', 'live-composer-page-builder'),
+                'std'        => __('BEFORE', 'as_extension'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'live-composer-page-builder'),
+                'label'      => __('CT', 'as_extension'),
                 'id'         => 'custom_text_2',
-                'std'        => __('MIDDLE', 'live-composer-page-builder'),
+                'std'        => __('MIDDLE', 'as_extension'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'live-composer-page-builder'),
+                'label'      => __('CT', 'as_extension'),
                 'id'         => 'custom_text_3',
                 'std'        => __('AFTER', 'monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label' => __('Image', 'live-composer-page-builder'),
+                'label' => __('Image', 'as_extension'),
                 'id'    => 'image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label' => __('Image 2', 'live-composer-page-builder'),
+                'label' => __('Image 2', 'as_extension'),
                 'id'    => 'image_2',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'             => __('Orientation', 'live-composer-page-builder'),
+                'label'             => __('Orientation', 'as_extension'),
                 'id'                => 'orientation_img',
                 'std'               => 'horizontal',
                 'refresh_on_change' => true,
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Horizontal', 'live-composer-page-builder'),
+                        'label' => __('Horizontal', 'as_extension'),
                         'value' => 'horizontal'
                     ),
                     array(
-                        'label' => __('Vertical', 'live-composer-page-builder'),
+                        'label' => __('Vertical', 'as_extension'),
                         'value' => 'vertical'
                     ),
                 ),
             ),
             array(
-                'label'                 => __('Offset Image', 'live-composer-page-builder'),
+                'label'                 => __('Offset Image', 'as_extension'),
                 'id'                    => 'offset_img',
                 'std'                   => '.5',
                 'refresh_on_change'     => true,
@@ -105,7 +105,7 @@ class AS_Before_After extends as_module {
              * Styling
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -115,7 +115,7 @@ class AS_Before_After extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -125,7 +125,7 @@ class AS_Before_After extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,25 +136,25 @@ class AS_Before_After extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -164,7 +164,7 @@ class AS_Before_After extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -175,7 +175,7 @@ class AS_Before_After extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top', 'as_extension'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -188,7 +188,7 @@ class AS_Before_After extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -226,7 +226,7 @@ class AS_Before_After extends as_module {
              * Custom DragBar
              */
             array(
-                'label'                 => __('BG Color Bar', 'live-composer-page-builder'),
+                'label'                 => __('BG Color Bar', 'as_extension'),
                 'id'                    => 'css_drag_bar_bg_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -234,10 +234,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after, .twentytwenty-vertical .twentytwenty-handle:before, .twentytwenty-vertical .twentytwenty-handle:after',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color Circle', 'live-composer-page-builder'),
+                'label'                 => __('BG Color Circle', 'as_extension'),
                 'id'                    => 'css_drag_bar_circle_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -245,10 +245,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color Circle', 'live-composer-page-builder'),
+                'label'                 => __('Border Color Circle', 'as_extension'),
                 'id'                    => 'css_drag_bar_circle_border_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -256,10 +256,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width Circle', 'live-composer-page-builder'),
+                'label'                 => __('Border Width Circle', 'as_extension'),
                 'id'                    => 'css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -268,10 +268,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -280,10 +280,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color Icon Right', 'live-composer-page-builder'),
+                'label'                 => __('Color Icon Right', 'as_extension'),
                 'id'                    => 'css_drag_bar_icon_color_right',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -291,10 +291,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-left-arrow',
                 'affect_on_change_rule' => 'border-right-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color Icon Left', 'live-composer-page-builder'),
+                'label'                 => __('Color Icon Left', 'as_extension'),
                 'id'                    => 'css_drag_bar_icon_color_left',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -302,10 +302,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-right-arrow',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color Icon Up', 'live-composer-page-builder'),
+                'label'                 => __('Color Icon Up', 'as_extension'),
                 'id'                    => 'css_drag_bar_icon_color_down',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -313,10 +313,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-up-arrow',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color Icon Down', 'live-composer-page-builder'),
+                'label'                 => __('Color Icon Down', 'as_extension'),
                 'id'                    => 'css_drag_bar_icon_color_up',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -324,7 +324,7 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-down-arrow',
                 'affect_on_change_rule' => 'border-top-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'live-composer-page-builder'),
+                'tab'                   => __('drag bar', 'as_extension'),
             ),
             /**             * Responsive Tablet */
             array
@@ -556,7 +556,7 @@ class AS_Before_After extends as_module {
             $dslc_is_admin = false;
         ?>
         <?php if (empty($options['image']) || empty($options['image_2'])) : ?>
-            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'live-composer-page-builder'); ?></div>
+            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'as_extension'); ?></div>
         <?php else : ?>		
             <div class="as-before-img">
                 <?php

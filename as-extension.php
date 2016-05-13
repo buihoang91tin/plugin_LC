@@ -20,7 +20,6 @@ define('AS_EXTENSION_DIR', __DIR__);
 define('AS_EXTENSION_DIR_NAME', dirname(plugin_basename(__FILE__)));
 define('AS_EXTENSION_ABS', dirname(__FILE__));
 define('AS_EXTENSION_DEV_MODE', false);
-
 require_once (AS_EXTENSION_DIR . '/core/as-extension.class.php');
 include (AS_EXTENSION_DIR . '/admin/options/options.php');
 $as_extension = new AS_EXTENSION();
@@ -37,7 +36,7 @@ function my_admin_notice()
         ?>
         <div class="updated">
             <?php
-            $admin_url = '#'; // get_admin_url().'update.php?action=install-plugin&amp;plugin=live-composer-page-builder&amp;_wpnonce=d77895e8c3';
+            $admin_url = '#'; // get_admin_url().'update.php?action=install-plugin&amp;plugin=as_extension&amp;_wpnonce=d77895e8c3';
             ?>
             <p><?php _e('AS Extension need Live Composer plugin <a style="color:red;" target="_self" href="' . $admin_url . '">Please install this plugin</a>', 'alenastudio'); ?></p>
         </div>

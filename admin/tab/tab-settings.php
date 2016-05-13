@@ -3,12 +3,12 @@
 	<ul class="nav-subtabs wp-clearfix widget-inside" id="dslc-settings-column">
 		<li class="dslc-submenu-section">
 			<a href="#general"  data-nav-to="<?php echo 'tab-1' ?>" class="nav-subtab <?php echo $anchor == 'tab-1' ? 'nav-tab-active' : ''; ?>">
-				<span class="dashicons dashicons-admin-settings"></span> <?php _e( 'General Options', 'live-composer-page-builder' ) ?>
+				<span class="dashicons dashicons-admin-settings"></span> <?php _e( 'General Options', 'as_extension' ) ?>
 			</a>
 		</li>
 		<li class="dslc-submenu-section">
 			<a href="#module-control"  data-nav-to="<?php echo 'tab-1' ?>" class="nav-subtab <?php echo $anchor == 'tab-1' ? 'nav-tab-active' : ''; ?>">
-				<span class="dashicons dashicons-dashboard"></span> <?php _e( 'Module controll', 'live-composer-page-builder' ) ?>
+				<span class="dashicons dashicons-dashboard"></span> <?php _e( 'Module controll', 'as_extension' ) ?>
 			</a>
 		</li>
 		

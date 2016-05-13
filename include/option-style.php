@@ -3,19 +3,19 @@
 			<?php if ( $tab == 'dslc_plugin_options_cpt_slugs' ) : ?>
 
 				<div class="dslca-plugin-opts-notification">
-					<?php _e( '<strong>Important:</strong> After changing slugs you need to visit the <strong>Settings &rarr; Permalinks</strong> page. Otherwise you will get 404 errors.', 'live-composer-page-builder' ); ?>
+					<?php _e( '<strong>Important:</strong> After changing slugs you need to visit the <strong>Settings &rarr; Permalinks</strong> page. Otherwise you will get 404 errors.', 'as_extension' ); ?>
 				</div>
 
 			<?php elseif ( $tab == 'dslc_plugin_options_widgets_m' ) : ?>
 
 				<div class="dslca-plugin-opts-notification">
-					<?php _e( 'Sidebars created here will be available in <strong>WP Admin > Appearance > Widgets</strong> and in the <strong>Widgets</strong> module.', 'live-composer-page-builder' ); ?>
+					<?php _e( 'Sidebars created here will be available in <strong>WP Admin > Appearance > Widgets</strong> and in the <strong>Widgets</strong> module.', 'as_extension' ); ?>
 				</div>
 
 			<?php elseif ( $tab == 'dslc_plugin_options_navigation_m' ) : ?>
 
 				<div class="dslca-plugin-opts-notification">
-					<?php _e( 'Menus locations created here will be available in <strong>WP Admin > Appearance > Menus</strong> and in the <strong>Navigation</strong> module.', 'live-composer-page-builder' ); ?>
+					<?php _e( 'Menus locations created here will be available in <strong>WP Admin > Appearance > Menus</strong> and in the <strong>Navigation</strong> module.', 'as_extension' ); ?>
 				</div>
 
 			<?php endif; ?>

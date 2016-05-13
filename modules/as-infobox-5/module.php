@@ -10,7 +10,7 @@ class AS_Info_Box_5 extends as_module {
     function __construct() {
 
         $this->module_id       = 'AS_Info_Box_5';
-        $this->module_title    = __('Info Box Animation', 'live-composer-page-builder');
+        $this->module_title    = __('Info Box Animation', 'as_extension');
         $this->module_icon     = 'info';
         $this->module_category = 'as - Info Box';
     }
@@ -19,65 +19,65 @@ class AS_Info_Box_5 extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'live-composer-page-builder'),
+                'label'   => __('Show On', 'as_extension'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'live-composer-page-builder'),
+                        'label' => __('Desktop', 'as_extension'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'live-composer-page-builder'),
+                        'label' => __('Tablet', 'as_extension'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'live-composer-page-builder'),
+                        'label' => __('Phone', 'as_extension'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Title Link', 'live-composer-page-builder'),
+                'label' => __('Title Link', 'as_extension'),
                 'id'    => 'title_link',
                 'std'   => '',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Title Link - Open in', 'live-composer-page-builder'),
+                'label'   => __('Title Link - Open in', 'as_extension'),
                 'id'      => 'title_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'live-composer-page-builder'),
+                        'label' => __('Same Tab', 'as_extension'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'live-composer-page-builder'),
+                        'label' => __('New Tab', 'as_extension'),
                         'value' => '_blank',
                     ),
                 )
             ),
             array(
-                'label' => __('Primary Button Link', 'live-composer-page-builder'),
+                'label' => __('Primary Button Link', 'as_extension'),
                 'id'    => 'button_link',
                 'std'   => '#',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Primary Button - Open in', 'live-composer-page-builder'),
+                'label'   => __('Primary Button - Open in', 'as_extension'),
                 'id'      => 'button_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'live-composer-page-builder'),
+                        'label' => __('Same Tab', 'as_extension'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'live-composer-page-builder'),
+                        'label' => __('New Tab', 'as_extension'),
                         'value' => '_blank',
                     ),
                 )
@@ -86,28 +86,28 @@ class AS_Info_Box_5 extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'live-composer-page-builder'),
+                'label'   => __('Elements', 'as_extension'),
                 'id'      => 'elements',
                 'std'     => 'icon title content button',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Title', 'live-composer-page-builder'),
+                        'label' => __('Title', 'as_extension'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Content', 'live-composer-page-builder'),
+                        'label' => __('Content', 'as_extension'),
                         'value' => 'content'
                     ),
                     array(
-                        'label' => __('Button', 'live-composer-page-builder'),
+                        'label' => __('Button', 'as_extension'),
                         'value' => 'button'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -117,7 +117,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -127,7 +127,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image', 'live-composer-page-builder'),
+                'label'                 => __('BG Image', 'as_extension'),
                 'id'                    => 'css_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -137,25 +137,25 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Repeat', 'as_extension'),
                 'id'                    => 'css_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'live-composer-page-builder'),
+                        'label' => __('Repeat', 'as_extension'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'live-composer-page-builder'),
+                        'label' => __('Repeat Horizontal', 'as_extension'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'live-composer-page-builder'),
+                        'label' => __('Repeat Vertical', 'as_extension'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'live-composer-page-builder'),
+                        'label' => __('Do NOT Repeat', 'as_extension'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -165,17 +165,17 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Attachment', 'as_extension'),
                 'id'                    => 'css_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'live-composer-page-builder'),
+                        'label' => __('Scroll', 'as_extension'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'live-composer-page-builder'),
+                        'label' => __('Fixed', 'as_extension'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -187,19 +187,19 @@ class AS_Info_Box_5 extends as_module {
             array(
                 'id'                    => 'css_bg_img_size',
 		        'std'                   => 'auto',
-		        'label'                 => __('BG Image Size', 'live-composer-page-builder'),
+		        'label'                 => __('BG Image Size', 'as_extension'),
 		        'type'                  => 'select',
 		        'choices'               => array(
 		            array(
-		                'label' => __('Original', 'live-composer-page-builder'),
+		                'label' => __('Original', 'as_extension'),
 		                'value' => 'auto',
 		            ),
 		            array(
-		                'label' => __('Cover', 'live-composer-page-builder'),
+		                'label' => __('Cover', 'as_extension'),
 		                'value' => 'cover',
 		            ),
 		            array(
-		                'label' => __('Contain', 'live-composer-page-builder'),
+		                'label' => __('Contain', 'as_extension'),
 		                'value' => 'contain',
 		            ),
 		        ),
@@ -209,45 +209,45 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Position', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Position', 'as_extension'),
                 'id'                    => 'css_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'live-composer-page-builder'),
+                        'label' => __('Top Left', 'as_extension'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'live-composer-page-builder'),
+                        'label' => __('Top Right', 'as_extension'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'live-composer-page-builder'),
+                        'label' => __('Top Center', 'as_extension'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'live-composer-page-builder'),
+                        'label' => __('Center Left', 'as_extension'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'live-composer-page-builder'),
+                        'label' => __('Center Right', 'as_extension'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'live-composer-page-builder'),
+                        'label' => __('Center', 'as_extension'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'live-composer-page-builder'),
+                        'label' => __('Bottom Left', 'as_extension'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'live-composer-page-builder'),
+                        'label' => __('Bottom Right', 'as_extension'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'live-composer-page-builder'),
+                        'label' => __('Bottom Center', 'as_extension'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -257,21 +257,21 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Size', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Size', 'as_extension'),
                 'id'                    => 'css_bg_img_size',
                 'std'                   => 'auto',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Original', 'live-composer-page-builder'),
+                        'label' => __('Original', 'as_extension'),
                         'value' => 'auto',
                     ),
                     array(
-                        'label' => __('Cover', 'live-composer-page-builder'),
+                        'label' => __('Cover', 'as_extension'),
                         'value' => 'cover',
                     ),
                     array(
-                        'label' => __('Contain', 'live-composer-page-builder'),
+                        'label' => __('Contain', 'as_extension'),
                         'value' => 'contain',
                     ),
                 ),
@@ -281,7 +281,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -291,7 +291,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -302,25 +302,25 @@ class AS_Info_Box_5 extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -330,7 +330,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -341,7 +341,7 @@ class AS_Info_Box_5 extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -352,7 +352,7 @@ class AS_Info_Box_5 extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Minimum Height', 'live-composer-page-builder'),
+                'label'                 => __('Minimum Height', 'as_extension'),
                 'id'                    => 'css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -366,7 +366,7 @@ class AS_Info_Box_5 extends as_module {
                 'increment'             => 5
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -379,7 +379,7 @@ class AS_Info_Box_5 extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -390,7 +390,7 @@ class AS_Info_Box_5 extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -404,7 +404,7 @@ class AS_Info_Box_5 extends as_module {
              * Wrapper Opacity
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_wrapper_absolute_bg_color',
                 'std'                   => 'rgba(0, 0, 0, 0.7)',
                 'type'                  => 'color',
@@ -412,10 +412,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5 .as-bg-opacity',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('BG Opacity', 'live-composer-page-builder')
+                'tab'                   => __('BG Opacity', 'as_extension')
             ),
             array(
-                'label'                 => __('Top', 'live-composer-page-builder'),
+                'label'                 => __('Top', 'as_extension'),
                 'id'                    => 'css_wrapper_absolute_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -424,10 +424,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('BG Opacity', 'live-composer-page-builder')
+                'tab'                   => __('BG Opacity', 'as_extension')
             ),
             array(
-                'label'                 => __('Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Bottom', 'as_extension'),
                 'id'                    => 'css_wrapper_absolute_bottom',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -436,10 +436,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('BG Opacity', 'live-composer-page-builder')
+                'tab'                   => __('BG Opacity', 'as_extension')
             ),
             array(
-                'label'                 => __('Left', 'live-composer-page-builder'),
+                'label'                 => __('Left', 'as_extension'),
                 'id'                    => 'css_wrapper_absolute_left',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -448,10 +448,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'left',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('BG Opacity', 'live-composer-page-builder')
+                'tab'                   => __('BG Opacity', 'as_extension')
             ),
             array(
-                'label'                 => __('Right', 'live-composer-page-builder'),
+                'label'                 => __('Right', 'as_extension'),
                 'id'                    => 'css_wrapper_absolute_right',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -460,13 +460,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('BG Opacity', 'live-composer-page-builder')
+                'tab'                   => __('BG Opacity', 'as_extension')
             ),
             /**
              * Wrapper
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_wrapper_bg_color',
                 'std'                   => 'rgb(234, 234, 234)',
                 'type'                  => 'color',
@@ -474,10 +474,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('BG Image', 'live-composer-page-builder'),
+                'label'                 => __('BG Image', 'as_extension'),
                 'id'                    => 'css_wrapper_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -485,28 +485,28 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'background-image',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Repeat', 'as_extension'),
                 'id'                    => 'css_wrapper_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'live-composer-page-builder'),
+                        'label' => __('Repeat', 'as_extension'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'live-composer-page-builder'),
+                        'label' => __('Repeat Horizontal', 'as_extension'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'live-composer-page-builder'),
+                        'label' => __('Repeat Vertical', 'as_extension'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'live-composer-page-builder'),
+                        'label' => __('Do NOT Repeat', 'as_extension'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -514,20 +514,20 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Attachment', 'as_extension'),
                 'id'                    => 'css_wrapper_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'live-composer-page-builder'),
+                        'label' => __('Scroll', 'as_extension'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'live-composer-page-builder'),
+                        'label' => __('Fixed', 'as_extension'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -535,48 +535,48 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'background-attachment',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('BG Image Position', 'live-composer-page-builder'),
+                'label'                 => __('BG Image Position', 'as_extension'),
                 'id'                    => 'css_wrapper_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'live-composer-page-builder'),
+                        'label' => __('Top Left', 'as_extension'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'live-composer-page-builder'),
+                        'label' => __('Top Right', 'as_extension'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'live-composer-page-builder'),
+                        'label' => __('Top Center', 'as_extension'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'live-composer-page-builder'),
+                        'label' => __('Center Left', 'as_extension'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'live-composer-page-builder'),
+                        'label' => __('Center Right', 'as_extension'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'live-composer-page-builder'),
+                        'label' => __('Center', 'as_extension'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'live-composer-page-builder'),
+                        'label' => __('Bottom Left', 'as_extension'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'live-composer-page-builder'),
+                        'label' => __('Bottom Right', 'as_extension'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'live-composer-page-builder'),
+                        'label' => __('Bottom Center', 'as_extension'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -584,10 +584,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'background-position',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_wrapper_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -595,10 +595,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_wrapper_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -607,28 +607,28 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_wrapper_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -636,10 +636,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_wrapper_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -648,10 +648,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_wrapper_padding_vertical',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -662,10 +662,10 @@ class AS_Info_Box_5 extends as_module {
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_wrapper_padding_horizontal',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -674,13 +674,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'live-composer-page-builder')
+                'tab'                   => __('wrapper', 'as_extension')
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -688,10 +688,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -699,10 +699,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -710,11 +710,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -722,14 +722,14 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -737,10 +737,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -748,11 +748,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'css_title_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -760,11 +760,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top', 'as_extension'),
                 'id'                    => 'css_title_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -772,11 +772,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_title_margin_bottom',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -784,14 +784,14 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'live-composer-page-builder'),
+                'tab'                   => __('Title', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Content
              */
             array(
-                'label'                 => __('Align', 'live-composer-page-builder'),
+                'label'                 => __('Align', 'as_extension'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -799,10 +799,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -810,10 +810,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -821,11 +821,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -833,14 +833,14 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -848,10 +848,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
             ),
             array(
-                'label'                 => __('Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Line Height', 'as_extension'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -859,11 +859,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -871,11 +871,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'css_content_marginletter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -883,14 +883,14 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'live-composer-page-builder'),
+                'tab'                   => __('Content', 'as_extension'),
                 'ext'                   => 'px'
             ),
             /**
              * Button
              */
             array(
-                'label'                 => __('BG Color', 'live-composer-page-builder'),
+                'label'                 => __('BG Color', 'as_extension'),
                 'id'                    => 'css_button_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -898,10 +898,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('BG Color - Hover', 'as_extension'),
                 'id'                    => 'css_button_bg_color_hover',
                 'std'                   => '#3e73c2',
                 'type'                  => 'color',
@@ -909,10 +909,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Width', 'live-composer-page-builder'),
+                'label'                 => __('Border Width', 'as_extension'),
                 'id'                    => 'css_button_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -920,29 +920,29 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Borders', 'live-composer-page-builder'),
+                'label'                 => __('Borders', 'as_extension'),
                 'id'                    => 'css_button_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'live-composer-page-builder'),
+                        'label' => __('Top', 'as_extension'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'live-composer-page-builder'),
+                        'label' => __('Right', 'as_extension'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'live-composer-page-builder'),
+                        'label' => __('Bottom', 'as_extension'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'live-composer-page-builder'),
+                        'label' => __('Left', 'as_extension'),
                         'value' => 'left'
                     ),
                 ),
@@ -950,10 +950,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color', 'live-composer-page-builder'),
+                'label'                 => __('Border Color', 'as_extension'),
                 'id'                    => 'css_button_border_color',
                 'std'                   => '#d8d8d8',
                 'type'                  => 'color',
@@ -961,10 +961,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Border Color - Hover', 'as_extension'),
                 'id'                    => 'css_button_border_color_hover',
                 'std'                   => '#3e73c2',
                 'type'                  => 'color',
@@ -972,10 +972,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Border Radius', 'live-composer-page-builder'),
+                'label'                 => __('Border Radius', 'as_extension'),
                 'id'                    => 'css_button_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -983,11 +983,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Color', 'live-composer-page-builder'),
+                'label'                 => __('Color', 'as_extension'),
                 'id'                    => 'css_button_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -995,10 +995,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'live-composer-page-builder'),
+                'label'                 => __('Color - Hover', 'as_extension'),
                 'id'                    => 'css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -1006,10 +1006,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Font Size', 'as_extension'),
                 'id'                    => 'css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1017,11 +1017,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'live-composer-page-builder'),
+                'label'                 => __('Font Weight', 'as_extension'),
                 'id'                    => 'css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1029,14 +1029,14 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'live-composer-page-builder'),
+                'label'                 => __('Font Family', 'as_extension'),
                 'id'                    => 'css_button_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1044,10 +1044,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
+                'label'                 => __('Letter Spacing', 'as_extension'),
                 'id'                    => 'css_button_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1055,13 +1055,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => -50,
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Margin Top', 'as_extension'),
                 'id'                    => 'css_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1070,10 +1070,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Margin Right', 'as_extension'),
                 'id'                    => 'css_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1082,10 +1082,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1094,10 +1094,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1106,18 +1106,18 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'   => __('Icon', 'live-composer-page-builder'),
+                'label'   => __('Icon', 'as_extension'),
                 'id'      => 'button_icon_id',
                 'std'     => '',
                 'type'    => 'icon',
                 'section' => 'styling',
-                'tab'     => __('Primary Button', 'live-composer-page-builder'),
+                'tab'     => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Icon - Color', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Color', 'as_extension'),
                 'id'                    => 'css_button_icon_color',
                 'std'                   => '#b0c8eb',
                 'type'                  => 'color',
@@ -1125,10 +1125,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Icon - Color Hover', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Color Hover', 'as_extension'),
                 'id'                    => 'css_button_icon_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1136,10 +1136,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a:hover .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Margin Right', 'as_extension'),
                 'id'                    => 'css_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1148,13 +1148,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'live-composer-page-builder'),
+                'tab'                   => __('Primary Button', 'as_extension'),
             ),
             /**
              * Hidden
              */
             array(
-                'label'      => __('Title', 'live-composer-page-builder'),
+                'label'      => __('Title', 'as_extension'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -1162,7 +1162,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Content', 'live-composer-page-builder'),
+                'label'      => __('Content', 'as_extension'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
                 'type'       => 'textarea',
@@ -1170,7 +1170,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'live-composer-page-builder'),
+                'label'      => __('Button Title', 'as_extension'),
                 'id'         => 'button_title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -1178,7 +1178,7 @@ class AS_Info_Box_5 extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'live-composer-page-builder'),
+                'label'      => __('Button Title', 'as_extension'),
                 'id'         => 'button_2_title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -1189,25 +1189,25 @@ class AS_Info_Box_5 extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'live-composer-page-builder'),
+                'tab'     => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1215,11 +1215,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1227,13 +1227,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1241,11 +1241,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Wrapper - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Wrapper - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_inner_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1253,13 +1253,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Wrapper - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Wrapper - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_inner_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1267,11 +1267,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'css_res_t_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1279,11 +1279,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Icon - Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Margin Top', 'as_extension'),
                 'id'                    => 'css_res_t_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1291,13 +1291,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => -100,
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_t_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1305,13 +1305,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Icon - Size ( Wrapper )', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Size ( Wrapper )', 'as_extension'),
                 'id'                    => 'css_res_t_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -1319,13 +1319,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image-inner',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Icon - Size ( Icon )', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Size ( Icon )', 'as_extension'),
                 'id'                    => 'css_res_t_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -1333,11 +1333,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image-inner .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Title - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1345,11 +1345,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Title - Line Height', 'as_extension'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1357,11 +1357,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Title - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -1369,11 +1369,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Content - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -1381,11 +1381,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Content - Line Height', 'as_extension'),
                 'id'                    => 'css_res_t_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1393,11 +1393,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Content - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_t_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -1405,11 +1405,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Button - Font Size', 'as_extension'),
                 'id'                    => 'css_res_t_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1417,11 +1417,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Button - Margin Top', 'as_extension'),
                 'id'                    => 'css_res_t_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1429,11 +1429,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Button - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_t_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1441,11 +1441,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_t_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1453,11 +1453,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_t_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1465,11 +1465,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Icon - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Button - Icon - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_t_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1477,11 +1477,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('2nd Button Margin Left', 'live-composer-page-builder'),
+                'label'                 => __('2nd Button Margin Left', 'as_extension'),
                 'id'                    => 'css_res_t_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1490,10 +1490,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             array(
-                'label'                 => __('2nd Button Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('2nd Button Margin Top', 'as_extension'),
                 'id'                    => 'css_res_t_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1502,31 +1502,31 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'live-composer-page-builder'),
+                'tab'                   => __('tablet', 'as_extension'),
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'live-composer-page-builder'),
+                'label'   => __('Responsive Styling', 'as_extension'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'live-composer-page-builder'),
+                        'label' => __('Disabled', 'as_extension'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'live-composer-page-builder'),
+                        'label' => __('Enabled', 'as_extension'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'live-composer-page-builder'),
+                'tab'     => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1534,11 +1534,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1546,13 +1546,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1560,11 +1560,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Wrapper - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Wrapper - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_inner_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1572,13 +1572,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Wrapper - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Wrapper - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_inner_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1586,11 +1586,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'live-composer-page-builder'),
+                'label'                 => __('Width', 'as_extension'),
                 'id'                    => 'css_res_p_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1598,11 +1598,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Icon - Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Margin Top', 'as_extension'),
                 'id'                    => 'css_res_p_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1610,13 +1610,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => -100,
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_p_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1624,13 +1624,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Icon - Size ( Wrapper )', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Size ( Wrapper )', 'as_extension'),
                 'id'                    => 'css_res_p_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -1638,13 +1638,13 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image-inner',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Icon - Size ( Icon )', 'live-composer-page-builder'),
+                'label'                 => __('Icon - Size ( Icon )', 'as_extension'),
                 'id'                    => 'css_res_p_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -1652,11 +1652,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-image-inner .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Title - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1664,11 +1664,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Title - Line Height', 'as_extension'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1676,11 +1676,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Title - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -1688,11 +1688,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Content - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -1700,11 +1700,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'live-composer-page-builder'),
+                'label'                 => __('Content - Line Height', 'as_extension'),
                 'id'                    => 'css_res_p_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1712,11 +1712,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content, .dslc-info-box-5-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Margin Bottom', 'live-composer-page-builder'),
+                'label'                 => __('Content - Margin Bottom', 'as_extension'),
                 'id'                    => 'css_res_p_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -1724,11 +1724,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Font Size', 'live-composer-page-builder'),
+                'label'                 => __('Button - Font Size', 'as_extension'),
                 'id'                    => 'css_res_p_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1736,11 +1736,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('Button - Margin Top', 'as_extension'),
                 'id'                    => 'css_res_p_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1748,11 +1748,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Button - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_p_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1760,11 +1760,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Padding Vertical', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Vertical', 'as_extension'),
                 'id'                    => 'css_res_p_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1772,11 +1772,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Padding Horizontal', 'live-composer-page-builder'),
+                'label'                 => __('Button - Padding Horizontal', 'as_extension'),
                 'id'                    => 'css_res_p_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1784,11 +1784,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Button - Icon - Margin Right', 'live-composer-page-builder'),
+                'label'                 => __('Button - Icon - Margin Right', 'as_extension'),
                 'id'                    => 'css_res_p_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1796,11 +1796,11 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-5-button a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('2nd Button Margin Left', 'live-composer-page-builder'),
+                'label'                 => __('2nd Button Margin Left', 'as_extension'),
                 'id'                    => 'css_res_p_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1809,10 +1809,10 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
             array(
-                'label'                 => __('2nd Button Margin Top', 'live-composer-page-builder'),
+                'label'                 => __('2nd Button Margin Top', 'as_extension'),
                 'id'                    => 'css_res_p_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1821,7 +1821,7 @@ class AS_Info_Box_5 extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'live-composer-page-builder'),
+                'tab'                   => __('phone', 'as_extension'),
             ),
         );
 
@@ -1881,7 +1881,7 @@ class AS_Info_Box_5 extends as_module {
                                     <div class="dslca-editable-content" data-id="content">								
                                         <?php echo stripslashes($options['content']); ?>
                                     </div><!-- .dslca-editable-content -->
-                                    <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'live-composer-page-builder'); ?></span></div>
+                                    <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'as_extension'); ?></span></div>
                                 <?php else : ?>
                                     <?php echo do_shortcode(stripslashes($options['content'])); ?>
                                 <?php endif; ?>
