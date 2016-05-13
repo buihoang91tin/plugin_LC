@@ -17,12 +17,12 @@
 	<div id="dslc-setings-liquid">
 
 		<form method="post" action="options.php" class="dslc-settings-form">
-		<?php echo settings_fields( 'dslc_plugin_options' ); ?>
+		<?php echo settings_fields( 'as_general_options' ); ?>
 
 			<!-- <div class="tab" <?php echo $anchor == 'tab-1' ? 'style="display: block"' : ''?> id="tab-for-tab-1"> -->
 			<a name="general"></a>
 			<div class="dslc-panel">
-					<?php do_settings_sections( 'dslc_plugin_options' ); ?>
+					<?php do_settings_sections( 'as_general_options' ); ?>
 					<?php submit_button(); ?>
 			</div>
 			<a name="module-control"></a>
