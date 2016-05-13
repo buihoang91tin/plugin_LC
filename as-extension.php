@@ -22,7 +22,7 @@ define('AS_EXTENSION_ABS', dirname(__FILE__));
 define('AS_EXTENSION_DEV_MODE', false);
 
 require_once (AS_EXTENSION_DIR . '/core/as-extension.class.php');
-
+include (AS_EXTENSION_DIR . '/admin/options/options.php');
 $as_extension = new AS_EXTENSION();
 
 require (AS_EXTENSION_ABS . '/core/as-tab.class.php');

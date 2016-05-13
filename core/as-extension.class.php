@@ -48,16 +48,14 @@ class AS_EXTENSION {
 
     public function as_ex_regiter_style()
     {
-        wp_enqueue_style('as-checkbox', AS_EXTENSION_URL . '/admin/css/as-checkbox.css');
-        wp_enqueue_style('about', AS_EXTENSION_URL . '/admin/css/about.css');
-        wp_enqueue_style('about-rev', AS_EXTENSION_URL . '/admin/css/reponsive-about.css');
+        wp_enqueue_style('dslc-main-css', AS_EXTENSION_URL . '/admin/css/as-main.css');
         wp_enqueue_script('script_radio', AS_EXTENSION_URL . '/admin/js/script.js');
     }
 
     function as_ex_options_getting_start()
     {
 
-        include ( AS_EXTENSION_DIR . '/admin/as-options-getting-start.php');
+        include ( AS_EXTENSION_DIR . '/admin/tab/init.php');
     }
 
     public function as_load_this_plugin_last()
@@ -70,7 +68,7 @@ class AS_EXTENSION {
 
     public function as_ex_options_about()
     {
-        include ( AS_EXTENSION_DIR . '/admin/about.php');
+        include ( AS_EXTENSION_DIR . '/admin/tab/tab-about.php');
     }
 
 }
