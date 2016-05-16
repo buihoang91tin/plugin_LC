@@ -1,5 +1,4 @@
 <?php
-
 if (!function_exists('as_custom_icon')) {
 
     function as_custom_icon() {

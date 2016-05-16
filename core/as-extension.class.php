@@ -1,5 +1,4 @@
 <?php
-
 if (!function_exists('add_action'))
 {
     echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
@@ -10,6 +9,7 @@ class AS_EXTENSION {
 
     public function __construct()
     {
+        add_action('wp_head', array($this,'as_ex_set_root_ajax_url'));
         add_action('admin_init', array(
             $this,
             'as_ex_regiter_style'));
@@ -37,6 +37,15 @@ class AS_EXTENSION {
     {
         delete_option('my_plugin_do_activation_redirect');
         delete_option('as_default_module_stye');
+    }
+
+    public function as_ex_set_root_ajax_url()
+    {
+        ?>
+        <script>
+            var root_ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
+        </script>    
+        <?php
     }
 
     public function as_add_menu()
