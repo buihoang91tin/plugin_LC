@@ -29,7 +29,7 @@ function as_ex_add_ajax($hook, $callback, $priv = true, $no_priv = true, $priori
         add_action('wp_ajax_' . $hook, $callback, $priority, $accepted_args);
     }
     if ($no_priv) {
-        add_action('AJAX_NOPRIV_PREFIX' . $hook, $callback, $priority, $accepted_args);
+        add_action('wp_ajax_nopriv_' . $hook, $callback, $priority, $accepted_args);
     }
 }
 
