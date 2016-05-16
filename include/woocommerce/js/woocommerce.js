@@ -1,3 +1,4 @@
+jQuery(document).ready(function(){
 jQuery(document).on('click', '.cart_list.product_list_widget  .remove-product', function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -49,6 +50,7 @@ jQuery(document).on('click', '.single_add_to_cart_button', function (e) {
         showMessage("Product is added to Cart!");
     });
 });
+
 jQuery(document).on('click', '.as_quickview_btn', function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -61,6 +63,7 @@ jQuery(document).on('click', '.as_quickview_btn', function (e) {
     {
         data_effect = jQuery(this).attr('data-effect');
     }
+    
     jQuery.magnificPopup.open({
         preloader: true,
         mainClass: data_effect,
@@ -77,4 +80,5 @@ jQuery(document).on('click', '.as_quickview_btn', function (e) {
             }
         }
     });
+});
 });

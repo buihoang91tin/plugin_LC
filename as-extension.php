@@ -21,6 +21,7 @@ define('AS_EXTENSION_DIR_NAME', dirname(plugin_basename(__FILE__)));
 define('AS_EXTENSION_ABS', dirname(__FILE__));
 define('AS_EXTENSION_DEV_MODE', false);
 require (AS_EXTENSION_DIR . '/functions.php');
+require_once (AS_EXTENSION_DIR . '/include/woocommerce/woocommerce_init.php');
 require_once (AS_EXTENSION_DIR . '/core/as-extension.class.php');
 include (AS_EXTENSION_DIR . '/admin/options/general.php');
 $as_extension = new AS_EXTENSION();
@@ -30,5 +31,5 @@ $as_tab_menu = new AS_EX_TAB();
 require_once (AS_EXTENSION_DIR . '/core/as-front.class.php');
 new AS_EX_FRONT();
 add_action('admin_init', 'my_plugin_redirect');
-require_once (AS_EXTENSION_DIR . '/include/woocommerce/woocommerce_init.php');
+
 

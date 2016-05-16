@@ -1,3 +1,4 @@
+jQuery(document).ready(function(){
 jQuery(document).on('click', '.as_compare_btn', function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -40,4 +41,5 @@ jQuery(document).on('click', '.as_remove_compare_product_btn', function (e) {
             jQuery("td[data-product-id='" + prod_id + "']").remove();
         }
     });
+});
 });

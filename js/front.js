@@ -1,3 +1,20 @@
+
+function showMessage(message, effect)
+{
+    if (typeof (effect) == "undefined")
+    {
+        effect = "mfp-zoom-in";
+    }
+    jQuery.magnificPopup.open({
+        preloader: true,
+        mainClass: effect,
+        items: {
+            src: '<div class="as-popup-message mfp-with-anim">' + message + '</div>',
+            type: "inline",
+            midClick: true
+        }
+    });
+}
 (function ($) {
     $.fn.countTo = function (options) {
         options = options || {};

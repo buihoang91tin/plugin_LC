@@ -5,7 +5,6 @@
 /* ----------------------------------------------------------------------------------- */
 require_once AS_EXTENSION_ABS . "/include/woocommerce/wish-list/wish-list.php";
 require_once AS_EXTENSION_ABS . "/include/woocommerce/compare/compare.php";
-if (class_exists('Woocommerce')) {
     /* ----------------------------------------------------------------------------------- */
     /* Ajax   */
     /* ----------------------------------------------------------------------------------- */
@@ -16,10 +15,10 @@ if (class_exists('Woocommerce')) {
     /* Filters   */
     /* ----------------------------------------------------------------------------------- */
     add_filter('body_class', 'woo_columns_body_class');
-    add_filter('loop_shop_per_page', create_function('$limit', 'return ' . as_option('as_woo_item_per_page') . ';'), 20);
+    //add_filter('loop_shop_per_page', create_function('$limit', 'return ' . as_option('as_woo_item_per_page') . ';'), 20);
     add_filter('woocommerce_enqueue_styles', 'jk_dequeue_styles');
     add_filter('woocommerce_show_page_title', 'override_page_title');
-    add_filter('loop_shop_columns', create_function('$cols', 'return ' . as_option('woo_listing_column_number') . ';'), 20);
+   // add_filter('loop_shop_columns', create_function('$cols', 'return ' . as_option('woo_listing_column_number') . ';'), 20);
 
     /* ----------------------------------------------------------------------------------- */
     /* Actions   */
@@ -117,7 +116,6 @@ if (class_exists('Woocommerce')) {
     }
 
     function as_load_product_quick_view() {
-
         if (!isset($_REQUEST['product_id'])) {
             die();
         }
@@ -144,7 +142,7 @@ if (class_exists('Woocommerce')) {
         ob_start();
 
         // load content template
-        wc_get_template('quick-view.php', array(), '', get_template_directory() . '/woocommerce/cart/');
+        wc_get_template('quick-view.php', array(), '', AS_EXTENSION_ABS . '/include/woocommerce/quick-view/');
 
         echo ob_get_clean();
 
@@ -163,5 +161,3 @@ if (class_exists('Woocommerce')) {
                 'class' => 'secondary-image attachment-shop-catalog'));
         }
     }
-
-}
