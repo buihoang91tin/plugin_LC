@@ -10,7 +10,7 @@ class ASEX_ADMIN extends ASEX_MAIN
 
     public function init()
     {
-        $this->_tab = new ASEX_TAB();
+        $this->_tab = new ASEX_TAB(); 
         $this->asex_add_action('admin_init', 'asex_admin_script');
 //        $this->asex_add_action('admin_init', 'asex_plugin_redirect');
         $this->_tab->init();
