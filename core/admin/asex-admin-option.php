@@ -1,4 +1,5 @@
 <?php
+add_action('dslc_hook_register_options', 'asex_option',50);
 function asex_option()
 {
     global $asex_plugin_options;

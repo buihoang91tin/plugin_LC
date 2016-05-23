@@ -1,7 +1,7 @@
 <?php
 
 require_once (ASEX_DIR . '/core/admin/asex-tab.class.php');
-require_once (ASEX_DIR . '/core/admin/asex-admin-option.php');
+require (ASEX_DIR . '/core/admin/asex-admin-option.php');
 
 class ASEX_ADMIN extends ASEX_MAIN
 {
@@ -11,7 +11,6 @@ class ASEX_ADMIN extends ASEX_MAIN
     public function init()
     {
         $this->_tab = new ASEX_TAB();
-        $this->asex_add_action('dslc_hook_register_options', 'asex_option',50);
         $this->asex_add_action('admin_init', 'asex_admin_script');
 //        $this->asex_add_action('admin_init', 'asex_plugin_redirect');
         $this->_tab->init();
