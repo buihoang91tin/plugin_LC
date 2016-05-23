@@ -45,7 +45,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'      => __('(hidden) Accordion Content', 'monalisa'),
-                'id'         => 'functionnaly_hidden_content',
+                'id'         => 'accordion_content',
                 'std'        => '',
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
@@ -53,7 +53,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'      => __('(hidden) Accordion Nav', 'monalisa'),
-                'id'         => 'functionnaly_hidden_nav',
+                'id'         => 'accordion_nav',
                 'std'        => '',
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
@@ -61,7 +61,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label' => __('Open by default', 'monalisa'),
-                'id'    => 'functionnaly_open_by_default',
+                'id'    => 'open_by_default',
                 'std'   => '1',
                 'type'  => 'text',
             ),
@@ -70,7 +70,7 @@ class ASEX_Accordion extends ASEX_MODULE
              */
             array(
                 'label'                 => __('BG Color', 'monalisa'),
-                'id'                    => 'general_bg_color',
+                'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -80,7 +80,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Color', 'monalisa'),
-                'id'                    => 'general_border_color',
+                'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -90,7 +90,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Width', 'monalisa'),
-                'id'                    => 'general_border_width',
+                'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -101,7 +101,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Borders', 'monalisa'),
-                'id'                    => 'general_border_trbl',
+                'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
@@ -129,7 +129,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Margin Bottom', 'monalisa'),
-                'id'                    => 'general_margin_bottom',
+                'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -140,7 +140,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Minimum Height', 'monalisa'),
-                'id'                    => 'general_minium_height',
+                'id'                    => 'css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -154,7 +154,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Vertical', 'monalisa'),
-                'id'                    => 'general_padding_vertical',
+                'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -165,7 +165,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'monalisa'),
-                'id'                    => 'general_padding_horizontal',
+                'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -176,7 +176,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Spacing', 'monalisa'),
-                'id'                    => 'general_spacing',
+                'id'                    => 'css_spacing',
                 'std'                   => '20',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -191,7 +191,7 @@ class ASEX_Accordion extends ASEX_MODULE
              */
             array(
                 'label'                 => __('BG Color', 'monalisa'),
-                'id'                    => 'header_header_bg_color',
+                'id'                    => 'css_header_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -202,7 +202,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('BG Color (Active)', 'monalisa'),
-                'id'                    => 'header_bg_color_active',
+                'id'                    => 'css_header_bg_color_active',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -213,7 +213,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Color Icon', 'monalisa'),
-                'id'                    => 'header_color_icon',
+                'id'                    => 'css_header_color_icon',
                 'std'                   => 'rgb(0, 0, 0)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -224,7 +224,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Color Icon ( Active )', 'monalisa'),
-                'id'                    => 'header_color_icon_active',
+                'id'                    => 'css_header_color_icon_active',
                 'std'                   => 'rgb(43, 243, 4)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -235,7 +235,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Color', 'monalisa'),
-                'id'                    => 'header_border_color',
+                'id'                    => 'css_header_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -246,7 +246,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Width', 'monalisa'),
-                'id'                    => 'header_border_width',
+                'id'                    => 'css_header_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -258,7 +258,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Borders', 'monalisa'),
-                'id'                    => 'header_border_trbl',
+                'id'                    => 'css_header_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
@@ -287,7 +287,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Margin Bottom', 'monalisa'),
-                'id'                    => 'header_margin_bottom',
+                'id'                    => 'css_header_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -299,7 +299,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Vertical', 'monalisa'),
-                'id'                    => 'header_padding_vertical',
+                'id'                    => 'css_header_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -311,7 +311,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'monalisa'),
-                'id'                    => 'header_padding_horizontal',
+                'id'                    => 'css_header_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -326,7 +326,7 @@ class ASEX_Accordion extends ASEX_MODULE
              */
             array(
                 'label'                 => __('BG Color', 'monalisa'),
-                'id'                    => 'title_bg_color',
+                'id'                    => 'css_title_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -337,7 +337,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Color', 'monalisa'),
-                'id'                    => 'title_border_color',
+                'id'                    => 'css_title_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -348,7 +348,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Color ( Active )', 'monalisa'),
-                'id'                    => 'title_border_color_active',
+                'id'                    => 'css_title_border_color_active',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -359,7 +359,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Width', 'monalisa'),
-                'id'                    => 'title_border_width',
+                'id'                    => 'css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -371,7 +371,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Borders', 'monalisa'),
-                'id'                    => 'title_border_trbl',
+                'id'                    => 'css_title_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
@@ -400,7 +400,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Color', 'monalisa'),
-                'id'                    => 'title_color',
+                'id'                    => 'css_title_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -411,7 +411,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Color ( Active )', 'monalisa'),
-                'id'                    => 'title_color_acive',
+                'id'                    => 'css_header_color_title_active',
                 'std'                   => 'rgb(43, 243, 4)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -422,7 +422,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Font Size', 'monalisa'),
-                'id'                    => 'title_font_size',
+                'id'                    => 'css_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -434,7 +434,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Font Weight', 'monalisa'),
-                'id'                    => 'title_font_weight',
+                'id'                    => 'css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -449,7 +449,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Font Family', 'monalisa'),
-                'id'                    => 'title_font_family',
+                'id'                    => 'css_title_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -460,7 +460,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Line Height', 'monalisa'),
-                'id'                    => 'title_line_height',
+                'id'                    => 'css_title_lheight',
                 'std'                   => '16',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -472,7 +472,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Vertical', 'monalisa'),
-                'id'                    => 'title_padding_vertical',
+                'id'                    => 'css_title_padding_vertical',
                 'std'                   => '15',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -484,7 +484,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'monalisa'),
-                'id'                    => 'title_padding_horizontal',
+                'id'                    => 'css_title_padding_horizontal',
                 'std'                   => '15',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -496,7 +496,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Text Align', 'monalisa'),
-                'id'                    => 'title_text_align',
+                'id'                    => 'css_title_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
@@ -510,7 +510,7 @@ class ASEX_Accordion extends ASEX_MODULE
              */
             array(
                 'label'                 => __('BG Color', 'monalisa'),
-                'id'                    => 'content_bg_color',
+                'id'                    => 'css_content_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -521,7 +521,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Color', 'monalisa'),
-                'id'                    => 'content_border_color',
+                'id'                    => 'css_content_border_color',
                 'std'                   => '#e8e8e8',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -532,7 +532,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Border Width', 'monalisa'),
-                'id'                    => 'content_border_width',
+                'id'                    => 'css_content_border_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -544,7 +544,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Borders', 'monalisa'),
-                'id'                    => 'content_border_trbl',
+                'id'                    => 'css_content_border_trbl',
                 'std'                   => 'right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
@@ -573,7 +573,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Color', 'monalisa'),
-                'id'                    => 'content_color',
+                'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -584,7 +584,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Font Size', 'monalisa'),
-                'id'                    => 'content_font_size',
+                'id'                    => 'css_content_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -596,7 +596,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Font Weight', 'monalisa'),
-                'id'                    => 'content_font_weight',
+                'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -611,7 +611,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Font Family', 'monalisa'),
-                'id'                    => 'content_font_family',
+                'id'                    => 'css_content_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -622,7 +622,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Line Height', 'monalisa'),
-                'id'                    => 'content_line_height',
+                'id'                    => 'css_content_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -634,7 +634,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Vertical', 'monalisa'),
-                'id'                    => 'content_padding_vertical',
+                'id'                    => 'css_content_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -646,7 +646,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'monalisa'),
-                'id'                    => 'content_padding_horizontal',
+                'id'                    => 'css_content_padding_horizontal',
                 'std'                   => '25',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -658,7 +658,7 @@ class ASEX_Accordion extends ASEX_MODULE
             ),
             array(
                 'label'                 => __('Text Align', 'monalisa'),
-                'id'                    => 'content_text_align',
+                'id'                    => 'css_content_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
