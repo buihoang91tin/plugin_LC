@@ -1,23 +1,4 @@
 <?php
-
-global $asex_options;
-if (is_array($asex_options) && !is_null($asex_options))
-{
-    $asex_color_main     = $asex_options['asex_color_main'];
-    $asex_color_content  = $asex_options['$asex_color_content'];
-    $asex_title_font     = $asex_options['asex_title_font'];
-    $asex_sub_title_font = $asex_options['asex_sub_title_font'];
-    $asex_content_font   = $asex_options['asex_content_font'];
-}
-else
-{
-    $asex_color_main     = '';
-    $asex_color_content  = '';
-    $asex_title_font     = '';
-    $asex_sub_title_font = '';
-    $asex_content_font   = '';
-}
-
 if (!function_exists("rwmb_meta"))
 {
 

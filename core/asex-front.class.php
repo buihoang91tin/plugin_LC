@@ -24,10 +24,10 @@ class ASEX_FRONT extends ASEX_MAIN
     {
         $asex_custom_style   = '';
         $asex_general_option = get_option('asex_general_options');
-        if ($asex_general_option['asex_custom_css'] != '')
+        if ($asex_general_option['asex_ex_css'] != '')
         {
             $asex_custom_style.= '<style>' . "\n";
-            $asex_custom_style.= $asex_general_option['asex_css'] . "\n";
+            $asex_custom_style.= $asex_general_option['asex_ex_css'] . "\n";
             $asex_custom_style.= '</style>' . "\n";
         }
         echo $asex_custom_style;

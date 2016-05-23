@@ -2,7 +2,7 @@
     #jstabs .tab{display: none}
 </style>
 <div class="wrap">
-    <h2 id="dslc-main-title">Live Composer <span class="dslc-ver"><?php echo DS_LIVE_COMPOSER_VER; ?></span></h2>
+    <h2 id="dslc-main-title">AS EXTENSION <span class="dslc-ver"><?php echo ASEX_VERSION; ?></span></h2>
 
     <form autocomplete="off" class="docs-search-form" id="dslc-headersearch" method="GET" action="//support.alenastudio.com/search-page"  target="_blank">
         Search the knowledge base: &nbsp;

@@ -8,7 +8,7 @@
 		<!-- Video Embed -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Video Embed" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-videoembed.png">
+				<img alt="Video Embed" src="<?php echo ASEX_URL; ?>/images/lc-extension-videoembed.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/video-embed/?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=video-embed" target="_blank" class="more-details">More Details</a>
@@ -25,7 +25,7 @@
 		<!-- Animations+ -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Animations+" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-animations.png">
+				<img alt="Animations+" src="<?php echo ASEX_URL; ?>/images/lc-extension-animations.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/additional-animations?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=animations" target="_blank" class="more-details">More Details</a>
@@ -42,7 +42,7 @@
 		<!-- Per Page Content Width -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Per Page Content Width" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-perpagewidth.png">
+				<img alt="Per Page Content Width" src="<?php echo ASEX_URL; ?>/images/lc-extension-perpagewidth.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/per-page-content-width-add-on/?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=perpagewidth" target="_blank" class="more-details">More Details</a>
@@ -59,7 +59,7 @@
 		<!-- Previous/Next Post Links -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Previous/Next Post Links" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-prevnext.png">
+				<img alt="Previous/Next Post Links" src="<?php echo ASEX_URL; ?>/images/lc-extension-prevnext.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/additional-animations?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=prevnext" target="_blank" class="more-details">More Details</a>
@@ -75,7 +75,7 @@
 		<!-- Gallery Images Grid -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Gallery Images Grid" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-gallery.png">
+				<img alt="Gallery Images Grid" src="<?php echo ASEX_URL; ?>/images/lc-extension-gallery.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/gallery-images-grid/?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=gallery" target="_blank" class="more-details">More Details</a>
@@ -91,7 +91,7 @@
 		<!-- Google Maps -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Google Maps" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-googlemaps.png">
+				<img alt="Google Maps" src="<?php echo ASEX_URL; ?>/images/lc-extension-googlemaps.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/google-maps-add-on/?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=googlemaps" target="_blank" class="more-details">More Details</a>
@@ -107,7 +107,7 @@
 		<!-- Linecons Icons Add-On -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Linecons Icons" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-lineicons.png">
+				<img alt="Linecons Icons" src="<?php echo ASEX_URL; ?>/images/lc-extension-lineicons.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/linecons-icons-add-on/?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=linecons" target="_blank" class="more-details">More Details</a>
@@ -123,7 +123,7 @@
 		<!-- Before/After Image Slider -->
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="Before/After Image Slider" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-beforeafter.png">
+				<img alt="Before/After Image Slider" src="<?php echo ASEX_URL; ?>/images/lc-extension-beforeafter.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/downloads/beforeafter-image-slider-add-on/?utm_source=wp-admin&utm_medium=extension-tab&utm_campaign=beforeafter" target="_blank" class="more-details">More Details</a>

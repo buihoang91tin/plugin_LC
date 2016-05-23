@@ -1,7 +1,7 @@
 <div class="wrap lc-wrap">
 <div class="dslc-panel" id="new-lc-coming">
 	<div class="dslc-panel-content">
-		<img src="<?php echo asex_EXTENSION_URL; ?>/images/livecomposer-mink-curious.png" class="mink-illustration">
+		<img src="<?php echo ASEX_URL; ?>/images/livecomposer-mink-curious.png" class="mink-illustration">
 		<h2><?php _e( 'All New Live Composer is Coming!', 'asex_extension' ); ?></h2>
 		<p class="about-description"><?php _e( 'We\'re releasing soon our all new page builder and you\'ll love it.', 'asex_extension' ); ?></p>
 		
@@ -34,7 +34,7 @@
 
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-videoembed.png">
+				<img alt="" src="<?php echo ASEX_URL; ?>/images/lc-extension-videoembed.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/add-ons/?utm_source=wp-admin&utm_medium=extension-block&utm_campaign=video-embed" target="_blank" class="more-details">More Details</a>
@@ -50,7 +50,7 @@
 
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-extension-animations.png">
+				<img alt="" src="<?php echo ASEX_URL; ?>/images/lc-extension-animations.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/add-ons/?utm_source=wp-admin&utm_medium=extension-block&utm_campaign=animations" target="_blank" class="more-details">More Details</a>
@@ -83,7 +83,7 @@
 
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-theme-blank.png">
+				<img alt="" src="<?php echo ASEX_URL; ?>/images/lc-theme-blank.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/themes/?utm_source=wp-admin&utm_medium=theme-block&utm_campaign=blank" target="_blank" class="more-details">More Details</a>
@@ -99,7 +99,7 @@
 
 		<div class="extension" tabindex="0" >
 			<div class="extension-screenshot">
-				<img alt="" src="<?php echo asex_EXTENSION_URL; ?>/images/lc-theme-orao.png">
+				<img alt="" src="<?php echo ASEX_URL; ?>/images/lc-theme-orao.png">
 			</div>
 
 			<a href="//livecomposerplugin.com/themes/?utm_source=wp-admin&utm_medium=theme-block&utm_campaign=orao" target="_blank" class="more-details">More Details</a>
