@@ -1,7 +1,6 @@
 <?php
 
-class ASEX_TAB extends ASEX_MAIN
-{
+class ASEX_TAB extends ASEX_MAIN {
 
     public $config_menu = array();
 
@@ -22,7 +21,9 @@ class ASEX_TAB extends ASEX_MAIN
         $asex_config = $this->config_menu;
         $asex_output = '';
         $asex_output .= '<h2 class="nav-tab-wrapper">';
-        foreach ($asex_config as $name => $link)
+        foreach ($asex_config as
+                $name =>
+                $link)
         {
             $asex_output.= '<a class = "nav-tab nav-tab-active" href = "' . $link . '">' . $name . '</a >';
         }
@@ -59,10 +60,14 @@ class ASEX_TAB extends ASEX_MAIN
          */
         if (!empty($asex_plugin_options))
         {
-            foreach ($asex_plugin_options as $section_ID => $section)
+            foreach ($asex_plugin_options as
+                    $section_ID =>
+                    $section)
             {
                 add_settings_section(
-                        $section_ID, $section['title'], 'asex_plugin_options_display_options', $section_ID
+                        $section_ID, $section['title'], array(
+                    $this,
+                    'asex_plugin_options_display_options'), $section_ID
                 );
 
                 register_setting(
@@ -72,7 +77,9 @@ class ASEX_TAB extends ASEX_MAIN
                 /**
                  * Add Fields
                  */
-                foreach ($section['options'] as $option_ID => $option)
+                foreach ($section['options'] as
+                        $option_ID =>
+                        $option)
                 {
 
                     $option['id'] = $option_ID;
@@ -128,9 +135,20 @@ class ASEX_TAB extends ASEX_MAIN
         }
     }
 
+    public function asex_plugin_options_display_options($section)
+    {
+        /*
+         * Function is required for add_settings_section
+         * even if we don't print any data insite of it.
+         * In our case all the settings fields rendered
+         * by callback from add_settings_field.
+         *
+         */
+    }
+
     public function asex_add_menu()
     {
-        add_menu_page('AS Extension', 'AS Extension', 'read', 'asex', array(
+        add_menu_page('AS Extension', 'AS Extension', 'read', 'as-extension', array(
             $this,
             'asex_options_getting_start'), ASEX_URL . '/img/icon.png');
     }
@@ -138,11 +156,6 @@ class ASEX_TAB extends ASEX_MAIN
     function asex_options_getting_start()
     {
         include ( ASEX_DIR . '/template/tab-init.php');
-    }
-
-    public function asex_options_about()
-    {
-        include ( ASEX_DIR . '/template/tab-about.php');
     }
 
 }
