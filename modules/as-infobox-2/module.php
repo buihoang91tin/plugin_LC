@@ -14,7 +14,6 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
         $this->module_icon     = 'info';
         $this->module_category = 'as - Info Box';
     }
-
     function options() {
 
         $dslc_options = array(
