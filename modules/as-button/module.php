@@ -1,6 +1,6 @@
 <?php
 
-class AS_Button extends as_module {
+class ASEX_Button extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,8 +9,8 @@ class AS_Button extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Button';
-        $this->module_title    = __('AS - Button Simple', 'as_extension');
+        $this->module_id       = 'ASEX_Button';
+        $this->module_title    = __('AS - Button Simple', 'asex');
         $this->module_icon     = 'link';
         $this->module_category = 'as - element';
     }
@@ -19,21 +19,21 @@ class AS_Button extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
@@ -42,37 +42,37 @@ class AS_Button extends as_module {
              * Styling
              */
             array(
-                'label'      => __('Button Text', 'as_extension'),
-                'id'         => 'as_button_text',
+                'label'      => __('Button Text', 'asex'),
+                'id'         => 'asex_button_text',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
             array(
-                'label' => __('URL', 'as_extension'),
-                'id'    => 'as_button_url',
+                'label' => __('URL', 'asex'),
+                'id'    => 'asex_button_url',
                 'std'   => '#',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Open in', 'as_extension'),
-                'id'      => 'as_button_target',
+                'label'   => __('Open in', 'asex'),
+                'id'      => 'asex_button_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'as_extension'),
+                        'label' => __('Same Tab', 'asex'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'as_extension'),
+                        'label' => __('New Tab', 'asex'),
                         'value' => '_blank',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
-                'id'                    => 'as_button_css_align_position',
+                'label'                 => __('Align', 'asex'),
+                'id'                    => 'asex_button_css_align_position',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
@@ -81,8 +81,8 @@ class AS_Button extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
-                'id'                    => 'as_button_css_bg_color',
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'asex_button_css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -91,8 +91,8 @@ class AS_Button extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'as_extension'),
-                'id'                    => 'as_button_css_bg_color_hover',
+                'label'                 => __('BG Color - Hover', 'asex'),
+                'id'                    => 'asex_button_css_bg_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -101,8 +101,8 @@ class AS_Button extends as_module {
                 'section'               => 'styling'
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_button_css_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_button_css_border_color',
                 'std'                   => '#212121',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -111,8 +111,8 @@ class AS_Button extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'as_extension'),
-                'id'                    => 'as_button_css_border_color_hover',
+                'label'                 => __('Border Color - Hover', 'asex'),
+                'id'                    => 'asex_button_css_border_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -121,16 +121,16 @@ class AS_Button extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'as_extension'),
-                'id'                => 'as_button_css_duration_hover',
+                'label'             => __('Duration when hover(ms)', 'asex'),
+                'id'                => 'asex_button_css_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_button_css_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_button_css_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -140,25 +140,25 @@ class AS_Button extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_button_css_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_button_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -168,8 +168,8 @@ class AS_Button extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
-                'id'                    => 'as_button_css_border_radius',
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'asex_button_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -179,8 +179,8 @@ class AS_Button extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_button_css_margin_bottom',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -190,8 +190,8 @@ class AS_Button extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_button_css_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -201,8 +201,8 @@ class AS_Button extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_button_css_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -212,17 +212,17 @@ class AS_Button extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
-                'id'                    => 'as_button_css_width',
+                'label'                 => __('Width', 'asex'),
+                'id'                    => 'asex_button_css_width',
                 'std'                   => 'inline-block',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Automatic', 'as_extension'),
+                        'label' => __('Automatic', 'asex'),
                         'value' => 'inline-block'
                     ),
                     array(
-                        'label' => __('Full Width', 'as_extension'),
+                        'label' => __('Full Width', 'asex'),
                         'value' => 'block'
                     ),
                 ),
@@ -236,71 +236,71 @@ class AS_Button extends as_module {
              * Out line Style
              */
             array(
-                'label'                 => __('Out Line Width', 'as_extension'),
-                'id'                    => 'as_button_out_line_width',
+                'label'                 => __('Out Line Width', 'asex'),
+                'id'                    => 'asex_button_out_line_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Offset', 'as_extension'),
-                'id'                    => 'as_button_out_line_offset',
+                'label'                 => __('Out Line Offset', 'asex'),
+                'id'                    => 'asex_button_out_line_offset',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Color', 'as_extension'),
-                'id'                    => 'as_button_out_line_color',
+                'label'                 => __('Out Line Color', 'asex'),
+                'id'                    => 'asex_button_out_line_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
             ),
             array(
-                'label'                 => __('Out Line Color Hover', 'as_extension'),
-                'id'                    => 'as_button_out_line_color_hover',
+                'label'                 => __('Out Line Color Hover', 'asex'),
+                'id'                    => 'asex_button_out_line_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
             ),
             array(
-                'label'                 => __('Out Line Style', 'as_extension'),
-                'id'                    => 'as_button_out_line_style',
+                'label'                 => __('Out Line Style', 'asex'),
+                'id'                    => 'asex_button_out_line_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'as_extension'),
+                        'label' => __('Invisible', 'asex'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'as_extension'),
+                        'label' => __('Solid', 'asex'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'as_extension'),
+                        'label' => __('Dashed', 'asex'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'as_extension'),
+                        'label' => __('Dotted', 'asex'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -308,155 +308,155 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
             ),
             /**
              * Typography
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_button_css_button_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_button_css_button_color',
                 'std'                   => '#212121',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'as_extension'),
+                'tab'                   => __('typography', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
-                'id'                    => 'as_button_css_button_color_hover',
+                'label'                 => __('Color - Hover', 'asex'),
+                'id'                    => 'asex_button_css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'as_extension'),
+                'tab'                   => __('typography', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_button_css_button_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'as_extension'),
+                'tab'                   => __('typography', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_button_css_button_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'as_extension'),
+                'tab'                   => __('typography', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_button_css_button_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_button_css_button_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'as_extension'),
+                'tab'                   => __('typography', 'asex'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_button_css_button_letter_spacing',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('typography', 'as_extension'),
+                'tab'                   => __('typography', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Icon
              */
             array(
-                'label'   => __('Enable/Disable', 'as_extension'),
-                'id'      => 'as_button_state',
+                'label'   => __('Enable/Disable', 'asex'),
+                'id'      => 'asex_button_state',
                 'std'     => 'enabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('icon', 'as_extension'),
+                'tab'     => __('icon', 'asex'),
             ),
             array(
-                'label'   => __('Position Icon', 'as_extension'),
-                'id'      => 'as_button_position_icon',
+                'label'   => __('Position Icon', 'asex'),
+                'id'      => 'asex_button_position_icon',
                 'std'     => 'left',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('icon', 'as_extension'),
+                'tab'     => __('icon', 'asex'),
             ),
             array(
-                'label'   => __('Icon', 'as_extension'),
-                'id'      => 'as_button_icon_id',
+                'label'   => __('Icon', 'asex'),
+                'id'      => 'asex_button_icon_id',
                 'std'     => 'link',
                 'type'    => 'icon',
                 'section' => 'styling',
-                'tab'     => __('icon', 'as_extension'),
+                'tab'     => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_button_css_icon_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_button_css_icon_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
-                'id'                    => 'as_button_css_icon_color_hover',
+                'label'                 => __('Color - Hover', 'asex'),
+                'id'                    => 'asex_button_css_icon_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc a:hover .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
-                'id'                    => 'as_button_css_icon_margin_right',
+                'label'                 => __('Margin Right', 'asex'),
+                'id'                    => 'asex_button_css_icon_margin_right',
                 'std'                   => '5',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -464,11 +464,11 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Left', 'as_extension'),
-                'id'                    => 'as_button_css_icon_margin_left',
+                'label'                 => __('Margin Left', 'asex'),
+                'id'                    => 'asex_button_css_icon_margin_left',
                 'std'                   => '5',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -476,53 +476,53 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             /**
              * Wrapper
              */
             array(
-                'label'                 => __(' BG Color', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_bg_color',
+                'label'                 => __(' BG Color', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('BG Image', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_bg_img',
+                'label'                 => __('BG Image', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-image',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_bg_img_repeat',
+                'label'                 => __('BG Image Repeat', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'as_extension'),
+                        'label' => __('Repeat', 'asex'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'as_extension'),
+                        'label' => __('Repeat Horizontal', 'asex'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'as_extension'),
+                        'label' => __('Repeat Vertical', 'asex'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'as_extension'),
+                        'label' => __('Do NOT Repeat', 'asex'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -530,20 +530,20 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_bg_img_attch',
+                'label'                 => __('BG Image Attachment', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'as_extension'),
+                        'label' => __('Scroll', 'asex'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'as_extension'),
+                        'label' => __('Fixed', 'asex'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -551,48 +551,48 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-attachment',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('BG Image Position', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_bg_img_pos',
+                'label'                 => __('BG Image Position', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'as_extension'),
+                        'label' => __('Top Left', 'asex'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'as_extension'),
+                        'label' => __('Top Right', 'asex'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'as_extension'),
+                        'label' => __('Top Center', 'asex'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'as_extension'),
+                        'label' => __('Center Left', 'asex'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'as_extension'),
+                        'label' => __('Center Right', 'asex'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'as_extension'),
+                        'label' => __('Bottom Left', 'asex'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'as_extension'),
+                        'label' => __('Bottom Right', 'asex'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'as_extension'),
+                        'label' => __('Bottom Center', 'asex'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -600,22 +600,22 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'background-position',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -623,28 +623,28 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -652,11 +652,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_border_radius_top',
+                'label'                 => __('Border Radius - Top', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -664,11 +664,11 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_border_radius_bottom',
+                'label'                 => __('Border Radius - Bottom', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -676,11 +676,11 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -688,11 +688,11 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_button_css_wrapper_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_button_css_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -700,31 +700,31 @@ class AS_Button extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('wrapper', 'as_extension')
+                'tab'                   => __('wrapper', 'asex')
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -732,11 +732,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -744,11 +744,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -756,11 +756,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_res_t_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -768,11 +768,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'as_extension'),
+                'label'                 => __('Icon - Margin Right', 'asex'),
                 'id'                    => 'css_res_t_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -780,11 +780,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_res_t_align',
                 'std'                   => 'left',
                 'type'                  => 'select',
@@ -792,18 +792,18 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right',
                     ),
                 )
@@ -812,25 +812,25 @@ class AS_Button extends as_module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -838,11 +838,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -850,11 +850,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -862,11 +862,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_res_p_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -874,11 +874,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'as_extension'),
+                'label'                 => __('Icon - Margin Right', 'asex'),
                 'id'                    => 'css_res_p_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -886,11 +886,11 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_res_ph_align',
                 'std'                   => 'left',
                 'type'                  => 'select',
@@ -898,18 +898,18 @@ class AS_Button extends as_module {
                 'affect_on_change_el'   => '.as-button-lc',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right',
                     ),
                 )
@@ -938,21 +938,21 @@ class AS_Button extends as_module {
         <div class="as-button-lc">
             <?php
             $duration_hover = '';
-            $value_duration = $options['as_button_css_duration_hover'];
+            $value_duration = $options['asex_button_css_duration_hover'];
             if ($value_duration != '') {
                 $duration_hover = 'style="-webkit-transition: all ' . $value_duration . 'ms ease;-moz-transition: all ' . $value_duration . 'ms ease;-ms-transition: all ' . $value_duration . 'ms ease;-o-transition: all ' . $value_duration . 'ms ease;transition: all ' . $value_duration . 'ms ease;"';
             }
             ?>
-            <a href="<?php echo do_shortcode($options['as_button_url']); ?>" target="<?php echo esc_attr($options['as_button_target']); ?>" <?php echo ($duration_hover); ?>>
-                <?php if ($options['as_button_position_icon'] == 'left') : ?>
-                    <?php if ($options['as_button_state'] == 'enabled') : ?>
-                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['as_button_icon_id']); ?>"></span>
+            <a href="<?php echo do_shortcode($options['asex_button_url']); ?>" target="<?php echo esc_attr($options['asex_button_target']); ?>" <?php echo ($duration_hover); ?>>
+                <?php if ($options['asex_button_position_icon'] == 'left') : ?>
+                    <?php if ($options['asex_button_state'] == 'enabled') : ?>
+                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['asex_button_icon_id']); ?>"></span>
                     <?php endif; ?>
                 <?php endif; ?>
-                <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_button_text'], 'monalisa'); ?></span>
-                <?php if ($options['as_button_position_icon'] == 'right') : ?>
-                    <?php if ($options['as_button_state'] == 'enabled') : ?>
-                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['as_button_icon_id']); ?>"></span>
+                <span class="dslca-editable-content" data-id="asex_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_button_text'], 'monalisa'); ?></span>
+                <?php if ($options['asex_button_position_icon'] == 'right') : ?>
+                    <?php if ($options['asex_button_state'] == 'enabled') : ?>
+                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['asex_button_icon_id']); ?>"></span>
                     <?php endif; ?>
                 <?php endif; ?>
             </a>

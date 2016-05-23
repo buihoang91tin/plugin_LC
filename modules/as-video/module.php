@@ -1,6 +1,6 @@
 <?php
 
-class AS_video extends as_module {
+class ASEX_video extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,7 +9,7 @@ class AS_video extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'as_video';
+        $this->module_id       = 'ASEX_video';
         $this->module_title    = __('AS - video', 'monalisa');
         $this->module_icon     = 'file-video-o';
         $this->module_category = 'as - video';

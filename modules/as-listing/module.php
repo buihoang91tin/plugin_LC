@@ -1,6 +1,6 @@
 <?php
 
-class AS_Listing extends as_module {
+class ASEX_Listing extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,8 +9,8 @@ class AS_Listing extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Listing';
-        $this->module_title    = __('AS - Listing', 'as_extension');
+        $this->module_id       = 'ASEX_Listing';
+        $this->module_title    = __('AS - Listing', 'asex');
         $this->module_icon     = 'info';
         $this->module_category = 'as - element';
     }
@@ -19,43 +19,43 @@ class AS_Listing extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Title Link', 'as_extension'),
-                'id'    => 'as_lis_title_link',
+                'label' => __('Title Link', 'asex'),
+                'id'    => 'asex_lis_title_link',
                 'std'   => '',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Title Link - Open in', 'as_extension'),
-                'id'      => 'as_lis_title_link_target',
+                'label'   => __('Title Link - Open in', 'asex'),
+                'id'      => 'asex_lis_title_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'as_extension'),
+                        'label' => __('Same Tab', 'asex'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'as_extension'),
+                        'label' => __('New Tab', 'asex'),
                         'value' => '_blank',
                     ),
                 )
@@ -64,8 +64,8 @@ class AS_Listing extends as_module {
              * General
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
-                'id'                    => 'as_lis_bgcolor',
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'asex_lis_bgcolor',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -74,7 +74,7 @@ class AS_Listing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image', 'as_extension'),
+                'label'                 => __('BG Image', 'asex'),
                 'id'                    => 'css_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -84,25 +84,25 @@ class AS_Listing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'as_extension'),
+                'label'                 => __('BG Image Repeat', 'asex'),
                 'id'                    => 'css_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'as_extension'),
+                        'label' => __('Repeat', 'asex'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'as_extension'),
+                        'label' => __('Repeat Horizontal', 'asex'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'as_extension'),
+                        'label' => __('Repeat Vertical', 'asex'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'as_extension'),
+                        'label' => __('Do NOT Repeat', 'asex'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -112,17 +112,17 @@ class AS_Listing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'as_extension'),
+                'label'                 => __('BG Image Attachment', 'asex'),
                 'id'                    => 'css_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'as_extension'),
+                        'label' => __('Scroll', 'asex'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'as_extension'),
+                        'label' => __('Fixed', 'asex'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -132,45 +132,45 @@ class AS_Listing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Position', 'as_extension'),
+                'label'                 => __('BG Image Position', 'asex'),
                 'id'                    => 'css_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'as_extension'),
+                        'label' => __('Top Left', 'asex'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'as_extension'),
+                        'label' => __('Top Right', 'asex'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'as_extension'),
+                        'label' => __('Top Center', 'asex'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'as_extension'),
+                        'label' => __('Center Left', 'asex'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'as_extension'),
+                        'label' => __('Center Right', 'asex'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'as_extension'),
+                        'label' => __('Bottom Left', 'asex'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'as_extension'),
+                        'label' => __('Bottom Right', 'asex'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'as_extension'),
+                        'label' => __('Bottom Center', 'asex'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -180,7 +180,7 @@ class AS_Listing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -190,7 +190,7 @@ class AS_Listing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -201,25 +201,25 @@ class AS_Listing extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -229,7 +229,7 @@ class AS_Listing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -240,7 +240,7 @@ class AS_Listing extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -251,7 +251,7 @@ class AS_Listing extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -264,7 +264,7 @@ class AS_Listing extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -275,7 +275,7 @@ class AS_Listing extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -289,7 +289,7 @@ class AS_Listing extends as_module {
              * Icon
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -297,10 +297,10 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -308,10 +308,10 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -320,28 +320,28 @@ class AS_Listing extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -349,10 +349,10 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -360,11 +360,11 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_icon_color',
                 'std'                   => 'rgb(36, 120, 204)',
                 'type'                  => 'color',
@@ -372,19 +372,19 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'             => __('Icon', 'as_extension'),
+                'label'             => __('Icon', 'asex'),
                 'id'                => 'icon_id',
                 'std'               => 'ok',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Icon', 'as_extension'),
+                'tab'               => __('Icon', 'asex'),
                 'include_in_preset' => false
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -392,13 +392,13 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
+                'label'                 => __('Margin Right', 'asex'),
                 'id'                    => 'css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -406,13 +406,13 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'as_extension'),
+                'label'                 => __('Size ( Wrapper )', 'asex'),
                 'id'                    => 'css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -420,13 +420,13 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'as_extension'),
+                'label'                 => __('Size ( Icon )', 'asex'),
                 'id'                    => 'css_icon_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -434,14 +434,14 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-icon .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -449,10 +449,10 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -460,11 +460,11 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -472,14 +472,14 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -487,10 +487,10 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -498,11 +498,11 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -510,7 +510,7 @@ class AS_Listing extends as_module {
                 'affect_on_change_el'   => '.as-lis-title h4',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
@@ -520,7 +520,7 @@ class AS_Listing extends as_module {
              * Hidden
              */
             array(
-                'label'      => __('Title', 'as_extension'),
+                'label'      => __('Title', 'asex'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -531,22 +531,22 @@ class AS_Listing extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array
                 (
@@ -771,22 +771,22 @@ class AS_Listing extends as_module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array
                 (
@@ -1042,8 +1042,8 @@ class AS_Listing extends as_module {
                         <?php if ($dslc_is_admin) : ?>
                             <h4 class="dslca-editable-content" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($options['title']); ?></h4>
                         <?php else : ?>
-                            <?php if ($options['as_lis_title_link'] != '') : ?>
-                                <h4><a href="<?php echo esc_url($options['as_lis_title_link']); ?>" target="<?php echo esc_attr($options['as_lis_title_link_target']); ?>"><?php echo stripslashes($options['title']); ?></a></h4>
+                            <?php if ($options['asex_lis_title_link'] != '') : ?>
+                                <h4><a href="<?php echo esc_url($options['asex_lis_title_link']); ?>" target="<?php echo esc_attr($options['asex_lis_title_link_target']); ?>"><?php echo stripslashes($options['title']); ?></a></h4>
                             <?php else : ?>
                                 <h4><?php echo stripslashes($options['title']); ?></h4>
                             <?php endif; ?>

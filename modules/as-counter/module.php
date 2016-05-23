@@ -1,6 +1,6 @@
 <?php
 
-class AS_Counter_Module extends as_module {
+class ASEX_Counter_Module extends ASEX_MODULE {
 
     // Module Attributes
     var $module_id;
@@ -10,8 +10,8 @@ class AS_Counter_Module extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Counter_Module';
-        $this->module_title    = __('AS - Counter Number', 'as_extension');
+        $this->module_id       = 'ASEX_Counter_Module';
+        $this->module_title    = __('AS - Counter Number', 'asex');
         $this->module_icon     = 'bar-chart';
         $this->module_category = 'as - Counter';
     }
@@ -22,34 +22,34 @@ class AS_Counter_Module extends as_module {
         // The options array
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
                 'label' => 'From Number',
-                'id'    => 'as_counter_from_number',
+                'id'    => 'asex_counter_from_number',
                 'std'   => '7979',
                 'type'  => 'text',
             ),
             array(
                 'label' => 'To Number',
-                'id'    => 'as_counter_to_number',
+                'id'    => 'asex_counter_to_number',
                 'std'   => '9999',
                 'type'  => 'text',
             ),
@@ -57,54 +57,54 @@ class AS_Counter_Module extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'as_extension'),
+                'label'   => __('Elements', 'asex'),
                 'id'      => 'elements',
                 'std'     => 'icon title',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Icon', 'as_extension'),
+                        'label' => __('Icon', 'asex'),
                         'value' => 'icon'
                     ),
                     array(
-                        'label' => __('Title', 'as_extension'),
+                        'label' => __('Title', 'asex'),
                         'value' => 'title'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'      => __('Title', 'as_extension'),
-                'id'         => 'as_counter_title',
+                'label'      => __('Title', 'asex'),
+                'id'         => 'asex_counter_title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Number', 'as_extension'),
-                'id'         => 'as_counter_number',
+                'label'      => __('Number', 'asex'),
+                'id'         => 'asex_counter_number',
                 'std'        => '1989',
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
-                'id'                    => 'as_counter_text_align',
+                'label'                 => __('Align', 'asex'),
+                'id'                    => 'asex_counter_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                 ),
@@ -114,7 +114,7 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -125,7 +125,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __(' BG Color', 'as_extension'),
+                'label'                 => __(' BG Color', 'asex'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -135,7 +135,7 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image', 'as_extension'),
+                'label'                 => __('BG Image', 'asex'),
                 'id'                    => 'css_main_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -145,25 +145,25 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'as_extension'),
+                'label'                 => __('BG Image Repeat', 'asex'),
                 'id'                    => 'css_main_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'as_extension'),
+                        'label' => __('Repeat', 'asex'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'as_extension'),
+                        'label' => __('Repeat Horizontal', 'asex'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'as_extension'),
+                        'label' => __('Repeat Vertical', 'asex'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'as_extension'),
+                        'label' => __('Do NOT Repeat', 'asex'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -173,45 +173,45 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Position', 'as_extension'),
+                'label'                 => __('BG Image Position', 'asex'),
                 'id'                    => 'css_main_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'as_extension'),
+                        'label' => __('Top Left', 'asex'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'as_extension'),
+                        'label' => __('Top Right', 'asex'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'as_extension'),
+                        'label' => __('Top Center', 'asex'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'as_extension'),
+                        'label' => __('Center Left', 'asex'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'as_extension'),
+                        'label' => __('Center Right', 'asex'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'as_extension'),
+                        'label' => __('Bottom Left', 'asex'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'as_extension'),
+                        'label' => __('Bottom Right', 'asex'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'as_extension'),
+                        'label' => __('Bottom Center', 'asex'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -221,25 +221,25 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_counter_css_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_counter_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -249,8 +249,8 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_counter_css_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_counter_css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -259,8 +259,8 @@ class AS_Counter_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_counter_css_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_counter_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -270,8 +270,8 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
-                'id'                    => 'as_counter_css_border_radius',
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'asex_counter_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -282,8 +282,8 @@ class AS_Counter_Module extends as_module {
                 'max'                   => '300',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_counter_css_margin_bottom',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_counter_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -293,8 +293,8 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_counter_css_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_counter_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -306,8 +306,8 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_counter_css_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_counter_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -320,35 +320,35 @@ class AS_Counter_Module extends as_module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_counter_css_title_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_counter_css_title_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => 'Title'
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_counter_css_title_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_counter_css_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'tab'                   => 'Title',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_counter_css_title_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_counter_css_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
                 'tab'                   => 'Title',
@@ -358,47 +358,47 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_counter_css_title_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_counter_css_title_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
-                'id'                    => 'as_counter_css_title_line_height',
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'asex_counter_css_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'tab'                   => 'Title',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_counter_css_title_letter_spacing',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_counter_css_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
                 'tab'                   => 'Title',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_counter_css_title_margin',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_counter_css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'tab'                   => 'Title',
@@ -408,8 +408,8 @@ class AS_Counter_Module extends as_module {
              * Number
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_counter_css_number_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_counter_css_number_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -419,8 +419,8 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Number'
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_counter_css_number_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_counter_css_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -431,8 +431,8 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_counter_css_number_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_counter_css_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -446,8 +446,8 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_counter_css_number_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_counter_css_number_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -457,8 +457,8 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Number',
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
-                'id'                    => 'as_counter_css_number_line_height',
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'asex_counter_css_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -469,8 +469,8 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_counter_css_number_margin',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_counter_css_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -484,8 +484,8 @@ class AS_Counter_Module extends as_module {
              * Icon
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_bg_color',
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'asex_counter_css_icon_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -495,8 +495,8 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_counter_css_icon_border_color',
                 'std'                   => 'rgb(90, 195, 188)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -506,8 +506,8 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_counter_css_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -518,25 +518,25 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_counter_css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -547,8 +547,8 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon'
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_border_radius',
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'asex_counter_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -559,8 +559,8 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_counter_css_icon_color',
                 'std'                   => 'rgb(90, 195, 188)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -570,16 +570,16 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'   => __('Icon', 'as_extension'),
-                'id'      => 'as_counter_icon_id',
+                'label'   => __('Icon', 'asex'),
+                'id'      => 'asex_counter_icon_id',
                 'std'     => 'comments',
                 'type'    => 'icon',
                 'section' => 'styling',
                 'tab'     => 'Icon',
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_margin_top',
+                'label'                 => __('Margin Top', 'asex'),
+                'id'                    => 'asex_counter_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -592,8 +592,8 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_margin_right',
+                'label'                 => __('Margin Right', 'asex'),
+                'id'                    => 'asex_counter_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -606,8 +606,8 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_counter_css_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -620,8 +620,8 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_counter_css_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -632,8 +632,8 @@ class AS_Counter_Module extends as_module {
                 'tab'                   => 'Icon',
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_wrapper_width',
+                'label'                 => __('Size ( Wrapper )', 'asex'),
+                'id'                    => 'asex_counter_css_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -646,8 +646,8 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'as_extension'),
-                'id'                    => 'as_counter_css_icon_width',
+                'label'                 => __('Size ( Icon )', 'asex'),
+                'id'                    => 'asex_counter_css_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -661,17 +661,17 @@ class AS_Counter_Module extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -679,7 +679,7 @@ class AS_Counter_Module extends as_module {
                 'tab'     => 'tablet',
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_t_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -691,7 +691,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_res_t_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -703,7 +703,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -715,7 +715,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -729,7 +729,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -741,24 +741,24 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Title)', 'as_extension'),
+                'label'                 => __('Font Size (Title)', 'asex'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
                 'tab'                   => 'tablet',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Title)', 'as_extension'),
+                'label'                 => __('Font Weight (Title)', 'asex'),
                 'id'                    => 'css_res_t_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'responsive',
                 'tab'                   => 'tablet',
@@ -768,43 +768,43 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'as_extension'),
+                'label'                 => __('Line Height (Title)', 'asex'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
                 'tab'                   => 'tablet',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing (Title)', 'as_extension'),
+                'label'                 => __('Letter Spacing (Title)', 'asex'),
                 'id'                    => 'css_res_t_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'responsive',
                 'tab'                   => 'tablet',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Title)', 'as_extension'),
+                'label'                 => __('Margin Bottom (Title)', 'asex'),
                 'id'                    => 'css_res_t_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'tab'                   => 'tablet',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Number)', 'as_extension'),
+                'label'                 => __('Font Size (Number)', 'asex'),
                 'id'                    => 'css_res_t_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -816,7 +816,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Number)', 'as_extension'),
+                'label'                 => __('Font Weight (Number)', 'asex'),
                 'id'                    => 'css_res_t_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -831,7 +831,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Number)', 'as_extension'),
+                'label'                 => __('Line Height (Number)', 'asex'),
                 'id'                    => 'css_res_t_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -843,7 +843,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Number)', 'as_extension'),
+                'label'                 => __('Margin Bottom (Number)', 'asex'),
                 'id'                    => 'css_res_t_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -855,7 +855,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Width (Icon)', 'as_extension'),
+                'label'                 => __('Border Width (Icon)', 'asex'),
                 'id'                    => 'css_res_t_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -867,7 +867,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius (Icon)', 'as_extension'),
+                'label'                 => __('Border Radius (Icon)', 'asex'),
                 'id'                    => 'css_res_t_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -879,7 +879,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top (Icon)', 'as_extension'),
+                'label'                 => __('Margin Top (Icon)', 'asex'),
                 'id'                    => 'css_res_t_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -893,7 +893,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right (Icon)', 'as_extension'),
+                'label'                 => __('Margin Right (Icon)', 'asex'),
                 'id'                    => 'css_res_t_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -907,7 +907,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical (Icon)', 'as_extension'),
+                'label'                 => __('Padding Vertical (Icon)', 'asex'),
                 'id'                    => 'css_res_t_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -921,7 +921,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal (Icon)', 'as_extension'),
+                'label'                 => __('Padding Horizontal (Icon)', 'asex'),
                 'id'                    => 'css_res_t_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -933,7 +933,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper (Icon) )', 'as_extension'),
+                'label'                 => __('Size ( Wrapper (Icon) )', 'asex'),
                 'id'                    => 'css_res_t_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -947,7 +947,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'as_extension'),
+                'label'                 => __('Size ( Icon )', 'asex'),
                 'id'                    => 'css_res_t_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -962,17 +962,17 @@ class AS_Counter_Module extends as_module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -980,7 +980,7 @@ class AS_Counter_Module extends as_module {
                 'tab'     => 'phone',
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_p_main_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -992,7 +992,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_res_p_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1004,7 +1004,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1016,7 +1016,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1030,7 +1030,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1042,24 +1042,24 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Title)', 'as_extension'),
+                'label'                 => __('Font Size (Title)', 'asex'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Title)', 'as_extension'),
+                'label'                 => __('Font Weight (Title)', 'asex'),
                 'id'                    => 'css_res_p_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
@@ -1069,43 +1069,43 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'as_extension'),
+                'label'                 => __('Line Height (Title)', 'asex'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing (Title)', 'as_extension'),
+                'label'                 => __('Letter Spacing (Title)', 'asex'),
                 'id'                    => 'css_res_p_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Title)', 'as_extension'),
+                'label'                 => __('Margin Bottom (Title)', 'asex'),
                 'id'                    => 'css_res_p_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_counter_title',
+                'affect_on_change_el'   => '.asex_counter_title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'tab'                   => 'phone',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Size (Number)', 'as_extension'),
+                'label'                 => __('Font Size (Number)', 'asex'),
                 'id'                    => 'css_res_p_number_font_size',
                 'std'                   => '36',
                 'type'                  => 'slider',
@@ -1117,7 +1117,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Number)', 'as_extension'),
+                'label'                 => __('Font Weight (Number)', 'asex'),
                 'id'                    => 'css_res_p_number_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -1132,7 +1132,7 @@ class AS_Counter_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Line Height (Number)', 'as_extension'),
+                'label'                 => __('Line Height (Number)', 'asex'),
                 'id'                    => 'css_res_p_number_line_height',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1144,7 +1144,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom (Number)', 'as_extension'),
+                'label'                 => __('Margin Bottom (Number)', 'asex'),
                 'id'                    => 'css_res_p_number_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1156,7 +1156,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Width (Icon)', 'as_extension'),
+                'label'                 => __('Border Width (Icon)', 'asex'),
                 'id'                    => 'css_res_p_icon_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -1168,7 +1168,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius (Icon)', 'as_extension'),
+                'label'                 => __('Border Radius (Icon)', 'asex'),
                 'id'                    => 'css_res_p_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1180,7 +1180,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top (Icon)', 'as_extension'),
+                'label'                 => __('Margin Top (Icon)', 'asex'),
                 'id'                    => 'css_res_p_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1194,7 +1194,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right (Icon)', 'as_extension'),
+                'label'                 => __('Margin Right (Icon)', 'asex'),
                 'id'                    => 'css_res_p_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1208,7 +1208,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical (Icon)', 'as_extension'),
+                'label'                 => __('Padding Vertical (Icon)', 'asex'),
                 'id'                    => 'css_res_p_icon_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1222,7 +1222,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal (Icon)', 'as_extension'),
+                'label'                 => __('Padding Horizontal (Icon)', 'asex'),
                 'id'                    => 'css_res_p_icon_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1234,7 +1234,7 @@ class AS_Counter_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper (Icon) )', 'as_extension'),
+                'label'                 => __('Size ( Wrapper (Icon) )', 'asex'),
                 'id'                    => 'css_res_p_icon_wrapper_width',
                 'std'                   => '84',
                 'type'                  => 'slider',
@@ -1248,7 +1248,7 @@ class AS_Counter_Module extends as_module {
                 'max'                   => 300
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'as_extension'),
+                'label'                 => __('Size ( Icon )', 'asex'),
                 'id'                    => 'css_res_p_icon_width',
                 'std'                   => '31',
                 'type'                  => 'slider',
@@ -1291,17 +1291,17 @@ class AS_Counter_Module extends as_module {
             <?php if (in_array('icon', $elements)) : ?>
                 <div class="as-counter-box-image">
                     <div class="as-counter-box-image-inner">
-                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['as_counter_icon_id']); ?> as-init-center"></span>
+                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['asex_counter_icon_id']); ?> as-init-center"></span>
                     </div>
                 </div>
             <?php endif; ?>
             <div class="as-counter-content">
-                <div class="odometer" data-number="<?php echo esc_attr($options['as_counter_to_number']); ?>"><?php echo esc_html($options['as_counter_from_number'], 'monalisa'); ?></div>
+                <div class="odometer" data-number="<?php echo esc_attr($options['asex_counter_to_number']); ?>"><?php echo esc_html($options['asex_counter_from_number'], 'monalisa'); ?></div>
                 <?php if (in_array('title', $elements)) : ?>
                     <?php if ($dslc_is_admin) : ?>
-                        <h2 class="dslca-editable-content as_counter_title" data-id="as_counter_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_counter_title'], 'monalisa'); ?></h2>
+                        <h2 class="dslca-editable-content asex_counter_title" data-id="asex_counter_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_counter_title'], 'monalisa'); ?></h2>
                     <?php else : ?>
-                        <h2 class="as_counter_title"><?php echo esc_html($options['as_counter_title'], 'monalisa'); ?></h2>
+                        <h2 class="asex_counter_title"><?php echo esc_html($options['asex_counter_title'], 'monalisa'); ?></h2>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>

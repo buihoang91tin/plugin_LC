@@ -52,7 +52,7 @@
             @include transform ( translateY(0) );
         }
     }
-    a.as_button .as-tooltip-button-woo{
+    a.asex_button .as-tooltip-button-woo{
         position: absolute;
         font-size: 12px;
         min-width: 100px;
@@ -97,7 +97,7 @@
     }
     a{
         display: block;
-        &.as_button{
+        &.asex_button{
             position: relative;
             vertical-align: middle;
             width: 25%;
@@ -141,7 +141,7 @@
     */
 }
 /*
-.as-product-customize a.as_button .as-tooltip-button-woo:before{
+.as-product-customize a.asex_button .as-tooltip-button-woo:before{
         position: absolute;
         content: '';
         width: 0;
@@ -153,7 +153,7 @@
         top: 50%;
         margin-top: -7px;
 }
-.as-product-customize a.as_button:hover .as-tooltip-button-woo{
+.as-product-customize a.asex_button:hover .as-tooltip-button-woo{
         left: 58px;
         visibility: visible;
         opacity: 1;

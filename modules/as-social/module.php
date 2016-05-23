@@ -1,6 +1,6 @@
 <?php
 
-class AS_Social extends as_module {
+class ASEX_Social extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,7 +9,7 @@ class AS_Social extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Social';
+        $this->module_id       = 'ASEX_Social';
         $this->module_title    = 'Custom Social';
         $this->module_icon     = 'share';
         $this->module_category = 'as - Social Icon';
@@ -36,21 +36,21 @@ class AS_Social extends as_module {
              * General
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'text_align',
                 'std'                   => 'left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                 ),
@@ -60,25 +60,25 @@ class AS_Social extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -88,7 +88,7 @@ class AS_Social extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -98,7 +98,7 @@ class AS_Social extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -109,7 +109,7 @@ class AS_Social extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -120,7 +120,7 @@ class AS_Social extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -131,7 +131,7 @@ class AS_Social extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -144,7 +144,7 @@ class AS_Social extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -155,7 +155,7 @@ class AS_Social extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -169,7 +169,7 @@ class AS_Social extends as_module {
              * Title
              */
             array(
-                'label'   => __('Title Share', 'as_extension'),
+                'label'   => __('Title Share', 'asex'),
                 'id'      => 'text_input_social_share',
                 'std'     => 'Share our portfolio :',
                 'type'    => 'text',
@@ -177,7 +177,7 @@ class AS_Social extends as_module {
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Icon', 'as_extension'),
+                'label'   => __('Icon', 'asex'),
                 'id'      => 'icon_title_share_id',
                 'std'     => 'share',
                 'type'    => 'icon',
@@ -185,7 +185,7 @@ class AS_Social extends as_module {
                 'tab'     => 'Title',
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
+                'label'                 => __('Margin Right', 'asex'),
                 'id'                    => 'icon_title_share_margin_right',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -199,7 +199,7 @@ class AS_Social extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_share_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -210,7 +210,7 @@ class AS_Social extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
+                'label'                 => __('Margin Right', 'asex'),
                 'id'                    => 'css_title_share_margin_right',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -224,7 +224,7 @@ class AS_Social extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_share_font_size',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -236,7 +236,7 @@ class AS_Social extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_share_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -251,7 +251,7 @@ class AS_Social extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_share_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -262,7 +262,7 @@ class AS_Social extends as_module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_share_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -275,29 +275,29 @@ class AS_Social extends as_module {
             ),
             // LIST ICON SHARE SOCIAL
             array(
-                'label'   => __('Twitter', 'as_extension'),
+                'label'   => __('Twitter', 'asex'),
                 'id'      => 'list_icon_share_social',
                 'std'     => "facebook google twitter",
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Facebook', 'as_extension'),
+                        'label' => __('Facebook', 'asex'),
                         'value' => "facebook",
                     ),
                     array(
-                        'label' => __('Google+', 'as_extension'),
+                        'label' => __('Google+', 'asex'),
                         'value' => "google",
                     ),
                     array(
-                        'label' => __('Twitter', 'as_extension'),
+                        'label' => __('Twitter', 'asex'),
                         'value' => "twitter",
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('icon', 'as_extension'),
+                'tab'     => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Size', 'as_extension'),
+                'label'                 => __('Size', 'asex'),
                 'id'                    => 'css_size_list_icon_share_social',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -306,10 +306,10 @@ class AS_Social extends as_module {
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_font_size_list_icon_share_social',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -318,10 +318,10 @@ class AS_Social extends as_module {
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_line_height_list_icon_share_social',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -330,10 +330,10 @@ class AS_Social extends as_module {
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color_list_icon_share_social',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -341,10 +341,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'as_extension'),
+                'label'                 => __('Border Color - Hover', 'asex'),
                 'id'                    => 'css_border_color_hover_list_icon_share_social',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -352,10 +352,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width_list_icon_share_social',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -364,28 +364,28 @@ class AS_Social extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl_list_icon_share_social',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -393,10 +393,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius_list_icon_share_social',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -405,10 +405,10 @@ class AS_Social extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color Twitter', 'as_extension'),
+                'label'                 => __('Color Twitter', 'asex'),
                 'id'                    => 'css_bg_color_twitter',
                 'std'                   => '#2c3e50',
                 'type'                  => 'color',
@@ -416,10 +416,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-twitter',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color Twitter - Hover', 'as_extension'),
+                'label'                 => __('Color Twitter - Hover', 'asex'),
                 'id'                    => 'css_bg_color_twitter_hover',
                 'std'                   => '#40bde6',
                 'type'                  => 'color',
@@ -427,10 +427,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-twitter:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color Facebook', 'as_extension'),
+                'label'                 => __('Color Facebook', 'asex'),
                 'id'                    => 'css_bg_color_facebook',
                 'std'                   => '#2c3e50',
                 'type'                  => 'color',
@@ -438,10 +438,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-facebook',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color Facebook - Hover', 'as_extension'),
+                'label'                 => __('Color Facebook - Hover', 'asex'),
                 'id'                    => 'css_bg_color_facebook_hover',
                 'std'                   => '#3b5998',
                 'type'                  => 'color',
@@ -449,10 +449,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-facebook:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color Google Plus', 'as_extension'),
+                'label'                 => __('Color Google Plus', 'asex'),
                 'id'                    => 'css_bg_color_google',
                 'std'                   => '#2c3e50',
                 'type'                  => 'color',
@@ -460,10 +460,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-google',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color Google Plus - Hover', 'as_extension'),
+                'label'                 => __('Color Google Plus - Hover', 'asex'),
                 'id'                    => 'css_bg_color_google_hover',
                 'std'                   => '#d13f2d',
                 'type'                  => 'color',
@@ -471,10 +471,10 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a.sb-google:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             array(
-                'label'                 => __('Spacing', 'as_extension'),
+                'label'                 => __('Spacing', 'asex'),
                 'id'                    => 'css_spacing_list_icon_share_social',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -483,31 +483,31 @@ class AS_Social extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('icon', 'as_extension'),
+                'tab'                   => __('icon', 'asex'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -515,11 +515,11 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.share-social',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'as_extension'),
+                'label'                 => __('Size ( Wrapper )', 'asex'),
                 'id'                    => 'css_res_t_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -527,11 +527,11 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'as_extension'),
+                'label'                 => __('Size ( Icon )', 'asex'),
                 'id'                    => 'css_res_t_icon_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -539,11 +539,11 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a span.dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Spacing', 'as_extension'),
+                'label'                 => __('Spacing', 'asex'),
                 'id'                    => 'css_res_t_spacing',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -551,32 +551,32 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -584,11 +584,11 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.share-social',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'as_extension'),
+                'label'                 => __('Size ( Wrapper )', 'asex'),
                 'id'                    => 'css_res_p_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -596,11 +596,11 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Size ( Icon )', 'as_extension'),
+                'label'                 => __('Size ( Icon )', 'asex'),
                 'id'                    => 'css_res_p_icon_font_size',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -608,11 +608,11 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li a span.dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Spacing', 'as_extension'),
+                'label'                 => __('Spacing', 'asex'),
                 'id'                    => 'css_res_p_spacing',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -620,7 +620,7 @@ class AS_Social extends as_module {
                 'affect_on_change_el'   => '.list-social-share li',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
         );

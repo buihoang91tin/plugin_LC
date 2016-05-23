@@ -147,7 +147,7 @@ function dslc_init_lightbox() {
 /**
  * Initiate Counter
  */
-function as_counter() {
+function asex_counter() {
     jQuery('.as-counter-box-wrapper').each(function () {
         jQuery('.odometer').waypoint(function () {
             var data_number = jQuery(this).attr('data-number');
@@ -161,7 +161,7 @@ function as_counter() {
 /**
  * Initiate Testimonials
  */
-function as_testimonials() {
+function asex_testimonials() {
     jQuery('.as-testimonials-simple').each(function () {
         var slide_owl = jQuery(this),
                 data_pagination = slide_owl.attr('data-pagination');
@@ -192,7 +192,7 @@ function as_testimonials() {
 /**
  * Initiate Circle Chart
  */
-function as_circle_chart() {
+function asex_circle_chart() {
     jQuery('.circle-chart-wrapper').each(function (e) {
         jQuery(".chart").waypoint(function () {
             var element = jQuery(this),
@@ -242,8 +242,8 @@ function as_circle_chart() {
  * Time Circles
  */
 
-function as_time_circles() {
-    jQuery('.as_count_down').each(function (i, obj) {
+function asex_time_circles() {
+    jQuery('.asex_count_down').each(function (i, obj) {
 
         var id_time_circles = jQuery(this).attr('id');
         var date_color = jQuery(this).attr('date-color');
@@ -482,10 +482,10 @@ jQuery(document).ready(function ($) {
                 event.preventDefault();
                 if (target.attr('data-id') && !target.hasClass('loading')) {
                     $.ajax({
-                        url: as_globals.ajaxURL,
+                        url: asex_globals.ajaxURL,
                         type: 'post',
                         data: {
-                            action: 'as_load_project',
+                            action: 'asex_load_project',
                             content: {
                                 id: target.attr('data-id')
                             }
@@ -499,15 +499,15 @@ jQuery(document).ready(function ($) {
                         },
                         success: function (response) {
                             $('.as-mask-color-port').fadeOut('300');
-                            var container = $("#as_portfolio_content .as-port-content"),
-                                    control = $("#as_portfolio_content .as-port-control");
+                            var container = $("#asex_portfolio_content .as-port-content"),
+                                    control = $("#asex_portfolio_content .as-port-control");
                             target.removeClass('loading');
                             if (response.success) {
 
                                 if (!target.hasClass('next') && !target.hasClass('prev')) {
-                                    $("#as_portfolio_content").fadeIn('500', function () {
+                                    $("#asex_portfolio_content").fadeIn('500', function () {
                                         $('html, body').animate({
-                                            scrollTop: $("#as_portfolio_content").offset().top
+                                            scrollTop: $("#asex_portfolio_content").offset().top
                                         },
                                         2000, 'easeOutExpo');
                                     });
@@ -532,7 +532,7 @@ jQuery(document).ready(function ($) {
                 scrollTop: $(".dslc-projects").offset().top
             },
             2000, 'easeOutExpo');
-            $('#as_portfolio_content').fadeOut(500, function () {
+            $('#asex_portfolio_content').fadeOut(500, function () {
             });
         });
     });
@@ -543,8 +543,8 @@ jQuery(document).ready(function ($) {
  */
 var style_google = [];
 
-var as_snapzzy_none = [];
-var as_snapzzy_subtle_grayscale = [{
+var asex_snapzzy_none = [];
+var asex_snapzzy_subtle_grayscale = [{
         featureType: "landscape",
         stylers: [{
                 saturation: -100
@@ -620,7 +620,7 @@ var as_snapzzy_subtle_grayscale = [{
                 saturation: -97
             }]
     }];
-var as_snapzzy_shades_of_grey = [{
+var asex_snapzzy_shades_of_grey = [{
         featureType: "all",
         elementType: "labels.text.fill",
         stylers: [{
@@ -731,7 +731,7 @@ var as_snapzzy_shades_of_grey = [{
                 lightness: 17
             }]
     }];
-var as_snapzzy_blue_water = [{
+var asex_snapzzy_blue_water = [{
         featureType: "administrative",
         elementType: "labels.text.fill",
         stylers: [{
@@ -784,7 +784,7 @@ var as_snapzzy_blue_water = [{
                 visibility: "on"
             }]
     }];
-var as_snapzzy_pale_dawn = [{
+var asex_snapzzy_pale_dawn = [{
         featureType: "administrative",
         elementType: "all",
         stylers: [{
@@ -845,7 +845,7 @@ var as_snapzzy_pale_dawn = [{
                 color: "#acbcc9"
             }]
     }];
-var as_snapzzy_light_monochrome = [{
+var asex_snapzzy_light_monochrome = [{
         featureType: "administrative.locality",
         elementType: "all",
         stylers: [{
@@ -954,7 +954,7 @@ var as_snapzzy_light_monochrome = [{
                 visibility: "simplified"
             }]
     }];
-var as_snapzzy_apple_maps = [{
+var asex_snapzzy_apple_maps = [{
         featureType: "landscape.man_made",
         elementType: "geometry",
         stylers: [{
@@ -1045,7 +1045,7 @@ var as_snapzzy_apple_maps = [{
                 color: "#a2daf2"
             }]
     }];
-var as_snapzzy_greyscale = [{
+var asex_snapzzy_greyscale = [{
         "featureType": "all",
         "elementType": "all",
         "stylers": [{
@@ -1054,7 +1054,7 @@ var as_snapzzy_greyscale = [{
                 "gamma": 0.5
             }]
     }];
-var as_snapzzy_neutral_blue = [{
+var asex_snapzzy_neutral_blue = [{
         featureType: "water",
         elementType: "geometry",
         stylers: [{
@@ -1122,7 +1122,7 @@ var as_snapzzy_neutral_blue = [{
                 color: "#2c5a71"
             }]
     }];
-var as_snapzzy_bright_bubbly = [{
+var asex_snapzzy_bright_bubbly = [{
         featureType: "water",
         stylers: [{
                 color: "#19a0d8"
@@ -1253,7 +1253,7 @@ var as_snapzzy_bright_bubbly = [{
                 visibility: "simplified"
             }]
     }];
-var as_snapzzy_icy_blue = [{
+var asex_snapzzy_icy_blue = [{
         stylers: [{
                 hue: "#2c3e50"
             }, {
@@ -1274,7 +1274,7 @@ var as_snapzzy_icy_blue = [{
                 visibility: "off"
             }]
     }];
-var as_snapzzy_blue_gray = [{
+var asex_snapzzy_blue_gray = [{
         featureType: "water",
         stylers: [{
                 visibility: "on"
@@ -1333,7 +1333,7 @@ var as_snapzzy_blue_gray = [{
                 lightness: 20
             }]
     }];
-var as_snapzzy_blue_essence = [{
+var asex_snapzzy_blue_essence = [{
         featureType: "landscape.natural",
         elementType: "geometry.fill",
         stylers: [{
@@ -1380,7 +1380,7 @@ var as_snapzzy_blue_essence = [{
                 color: "#7dcdcd"
             }]
     }];
-var as_snapzzy_girly = [{
+var asex_snapzzy_girly = [{
         featureType: "administrative",
         elementType: "labels.text.fill",
         stylers: [{
@@ -1507,7 +1507,7 @@ var as_snapzzy_girly = [{
                 saturation: "-23"
             }]
     }];
-var as_snapzzy_retro = [{
+var asex_snapzzy_retro = [{
         featureType: "administrative",
         stylers: [{
                 visibility: "off"
@@ -1574,25 +1574,25 @@ var as_snapzzy_retro = [{
                 color: "#3f518c"
             }]
     }];
-style_google[1] = as_snapzzy_none;
-style_google[2] = as_snapzzy_subtle_grayscale;
-style_google[3] = as_snapzzy_shades_of_grey;
-style_google[4] = as_snapzzy_blue_water;
-style_google[5] = as_snapzzy_pale_dawn;
-style_google[6] = as_snapzzy_light_monochrome;
-style_google[7] = as_snapzzy_apple_maps;
-style_google[8] = as_snapzzy_greyscale;
-style_google[9] = as_snapzzy_neutral_blue;
-style_google[10] = as_snapzzy_bright_bubbly;
-style_google[11] = as_snapzzy_icy_blue;
-style_google[12] = as_snapzzy_blue_gray;
-style_google[13] = as_snapzzy_blue_essence;
-style_google[14] = as_snapzzy_girly;
-style_google[15] = as_snapzzy_retro;
+style_google[1] = asex_snapzzy_none;
+style_google[2] = asex_snapzzy_subtle_grayscale;
+style_google[3] = asex_snapzzy_shades_of_grey;
+style_google[4] = asex_snapzzy_blue_water;
+style_google[5] = asex_snapzzy_pale_dawn;
+style_google[6] = asex_snapzzy_light_monochrome;
+style_google[7] = asex_snapzzy_apple_maps;
+style_google[8] = asex_snapzzy_greyscale;
+style_google[9] = asex_snapzzy_neutral_blue;
+style_google[10] = asex_snapzzy_bright_bubbly;
+style_google[11] = asex_snapzzy_icy_blue;
+style_google[12] = asex_snapzzy_blue_gray;
+style_google[13] = asex_snapzzy_blue_essence;
+style_google[14] = asex_snapzzy_girly;
+style_google[15] = asex_snapzzy_retro;
 
-function as_google_map() {
+function asex_google_map() {
     //for google map
-    var elements = document.getElementsByClassName('as_googlemap');
+    var elements = document.getElementsByClassName('asex_googlemap');
     var lating = new Array();
     var myOptions = new Array();
     var map = new Array();
@@ -1640,7 +1640,7 @@ function as_google_map() {
 /**
  *  Before & After Image
  */
-function as_before_img() {
+function asex_before_img() {
     jQuery('.as-compare-img-container').each(function () {
         var orientation_vertical = jQuery(".as-compare-img-container[data-orientation='vertical']"),
                 orientation_horizontal = jQuery(".as-compare-img-container[data-orientation!='vertical']"),
@@ -1661,7 +1661,7 @@ function as_before_img() {
 /**
  *  Text Rotator
  */
-function as_text_rotator() {
+function asex_text_rotator() {
     jQuery(".as-text-rotate-wrapper .as-rotate").each(function(){
         anim_text  = jQuery(this).data('anim-text');
 		speed_text = jQuery(this).data('speed-text');
@@ -1676,7 +1676,7 @@ function as_text_rotator() {
 /**
  *  Owl Carousel Post Format
  */
-function as_gallery_post() {
+function asex_gallery_post() {
     var owl_slider_post = jQuery(".owl-carousel");
     owl_slider_post.owlCarousel({
         navigation: false, // Show next and prev buttons
@@ -1701,7 +1701,7 @@ function as_gallery_post() {
 /**
  *  DSLC Carousel Post Format
  */
-function as_gallery_dslc() {
+function asex_gallery_dslc() {
     jQuery('.as-post-galleries').each(function () {
         jQuery(this).owlCarousel({
             navigation: false, // Show next and prev buttons
@@ -1726,25 +1726,25 @@ function as_gallery_dslc() {
 
 }
 jQuery(window).load(function () {
-    as_gallery_post();
-    as_counter();
-    as_circle_chart();
-    as_testimonials();
-    as_google_map();
-    as_time_circles();
-    as_before_img();
-    as_text_rotator();
-    as_gallery_dslc();
+    asex_gallery_post();
+    asex_counter();
+    asex_circle_chart();
+    asex_testimonials();
+    asex_google_map();
+    asex_time_circles();
+    asex_before_img();
+    asex_text_rotator();
+    asex_gallery_dslc();
 });
 jQuery(document).ajaxComplete(function () {
     if (jQuery('body').hasClass('dslca-enabled')) {
-        as_testimonials();
-        as_counter();
-        as_circle_chart();
-        as_google_map();
-        as_time_circles();
-        as_before_img();
-        as_text_rotator();
-        as_gallery_dslc();
+        asex_testimonials();
+        asex_counter();
+        asex_circle_chart();
+        asex_google_map();
+        asex_time_circles();
+        asex_before_img();
+        asex_text_rotator();
+        asex_gallery_dslc();
     }
 });

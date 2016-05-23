@@ -36,7 +36,7 @@ $dslc_var_post_options['dslc-tinelines-post-options'] = array(
 
 function dslc_timeline_module_cpt() {
 
-    if (!dslc_is_module_active('AS_Timeline', true))
+    if (!dslc_is_module_active('asex_Timeline', true))
         return;
 
     $capability = dslc_get_option('lc_min_capability_timeline_m', 'dslc_plugin_options_access_control');

@@ -1,6 +1,6 @@
 <?php
 
-class AS_Circle_Chart_Module extends as_module {
+class ASEX_Circle_Chart_Module extends ASEX_MODULE {
 
     // Module Attributes
     var $module_id;
@@ -10,8 +10,8 @@ class AS_Circle_Chart_Module extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Circle_Chart_Module';
-        $this->module_title    = __('AS - Circle Chart', 'as_extension');
+        $this->module_id       = 'ASEX_Circle_Chart_Module';
+        $this->module_title    = __('AS - Circle Chart', 'asex');
         $this->module_icon     = 'circle-blank';
         $this->module_category = 'as - Counter';
     }
@@ -24,27 +24,27 @@ class AS_Circle_Chart_Module extends as_module {
              * General
              */
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Title', 'as_extension'),
+                'label'      => __('Title', 'asex'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -52,21 +52,21 @@ class AS_Circle_Chart_Module extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                 ),
@@ -76,25 +76,25 @@ class AS_Circle_Chart_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -104,7 +104,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -114,7 +114,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -125,7 +125,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,7 +136,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -147,7 +147,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -160,7 +160,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -171,7 +171,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -185,7 +185,7 @@ class AS_Circle_Chart_Module extends as_module {
              * Circle Chart
              */
             array(
-                'label'   => __('On Load Animation', 'as_extension'),
+                'label'   => __('On Load Animation', 'asex'),
                 'id'      => 'circle_chart_animation',
                 'std'     => 'easeOutExpo',
                 'type'    => 'select',
@@ -319,7 +319,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'             => __('Percent Circle Chart', 'as_extension'),
+                'label'             => __('Percent Circle Chart', 'asex'),
                 'id'                => 'circle_chart_percent',
                 'std'               => 50,
                 'refresh_on_change' => true,
@@ -330,7 +330,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'               => 'Circle Chart',
             ),
             array(
-                'label'   => __('Duration', 'as_extension'),
+                'label'   => __('Duration', 'asex'),
                 'id'      => 'circle_chart_duration',
                 'std'     => '4000',
                 'type'    => 'text',
@@ -338,7 +338,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'   => __('Type chart', 'as_extension'),
+                'label'   => __('Type chart', 'asex'),
                 'id'      => 'circle_chart_cap',
                 'std'     => 'butt',
                 'type'    => 'select',
@@ -360,20 +360,20 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Line Width (px)', 'as_extension'),
+                'label'                 => __('Line Width (px)', 'asex'),
                 'id'                    => 'circle_chart_width',
                 'std'                   => '5',
                 'type'                  => 'slider',
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'section'               => 'styling',
-                'tab'                   => __('Circle Chart', 'as_extension'),
+                'tab'                   => __('Circle Chart', 'asex'),
                 'ext'                   => '',
                 'min'                   => 0,
                 'max'                   => 30
             ),
             array(
-                'label'                 => __('Track Color', 'as_extension'),
+                'label'                 => __('Track Color', 'asex'),
                 'id'                    => 'circle_chart_track',
                 'std'                   => '#f2f2f2',
                 'affect_on_change_el'   => '',
@@ -383,7 +383,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Bar Color', 'as_extension'),
+                'label'                 => __('Bar Color', 'asex'),
                 'id'                    => 'circle_chart_bar',
                 'std'                   => '#5ac3bc',
                 'affect_on_change_el'   => '',
@@ -393,7 +393,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'   => __('Size', 'as_extension'),
+                'label'   => __('Size', 'asex'),
                 'id'      => 'circle_chart_size',
                 'std'     => '150',
                 'type'    => 'select',
@@ -415,7 +415,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'     => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_percent_chart_color',
                 'std'                   => 'rgb(44, 62, 80)',
                 'type'                  => 'color',
@@ -426,7 +426,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'                   => 'Circle Chart',
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -438,7 +438,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -453,7 +453,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_percent_chart_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -467,7 +467,7 @@ class AS_Circle_Chart_Module extends as_module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#797979',
                 'type'                  => 'color',
@@ -478,7 +478,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'                   => 'Title'
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -490,7 +490,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -505,7 +505,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
@@ -516,7 +516,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'                   => 'Title',
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -528,7 +528,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -543,17 +543,17 @@ class AS_Circle_Chart_Module extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -561,7 +561,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'     => 'tablet',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_res_t_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -573,7 +573,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_res_t_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -585,7 +585,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -597,7 +597,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -611,7 +611,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -623,7 +623,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_t_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -635,7 +635,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Font Size(Circle Chart)', 'as_extension'),
+                'label'                 => __('Font Size(Circle Chart)', 'asex'),
                 'id'                    => 'css_res_t_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -647,7 +647,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Circle Chart)', 'as_extension'),
+                'label'                 => __('Font Weight (Circle Chart)', 'asex'),
                 'id'                    => 'css_res_t_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -662,7 +662,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size(Title)', 'as_extension'),
+                'label'                 => __('Font Size(Title)', 'asex'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -674,7 +674,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'as_extension'),
+                'label'                 => __('Line Height (Title)', 'asex'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -689,17 +689,17 @@ class AS_Circle_Chart_Module extends as_module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
@@ -707,7 +707,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'tab'     => 'phone',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_res_p_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -719,7 +719,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_res_p_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -731,7 +731,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -743,7 +743,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -757,7 +757,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -769,7 +769,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_p_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -781,7 +781,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Font Size(Circle Chart)', 'as_extension'),
+                'label'                 => __('Font Size(Circle Chart)', 'asex'),
                 'id'                    => 'css_res_p_percent_chart_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -793,7 +793,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight (Circle Chart)', 'as_extension'),
+                'label'                 => __('Font Weight (Circle Chart)', 'asex'),
                 'id'                    => 'css_res_p_percent_chart_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -808,7 +808,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size(Title)', 'as_extension'),
+                'label'                 => __('Font Size(Title)', 'asex'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -820,7 +820,7 @@ class AS_Circle_Chart_Module extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Line Height (Title)', 'as_extension'),
+                'label'                 => __('Line Height (Title)', 'asex'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '40',
                 'type'                  => 'slider',

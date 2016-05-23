@@ -1,95 +1,98 @@
 <?php
 
-class AS_Before_After extends as_module {
+class ASEX_Before_After extends ASEX_MODULE
+{
 
     var $module_id;
     var $module_title;
     var $module_icon;
     var $module_category;
 
-    function __construct() {
+    function __construct()
+    {
 
-        $this->module_id       = 'AS_Before_After';
-        $this->module_title    = __('AS - Before After Image', 'as_extension');
+        $this->module_id       = 'ASEX_Before_After';
+        $this->module_title    = __('AS - Before After Image', 'asex');
         $this->module_icon     = 'picture';
         $this->module_category = 'as - element';
     }
 
-    function options() {
+    function options()
+    {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('CT', 'as_extension'),
+                'label'      => __('CT', 'asex'),
                 'id'         => 'custom_text',
-                'std'        => __('BEFORE', 'as_extension'),
+                'std'        => __('BEFORE', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'as_extension'),
+                'label'      => __('CT', 'asex'),
                 'id'         => 'custom_text_2',
-                'std'        => __('MIDDLE', 'as_extension'),
+                'std'        => __('MIDDLE', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label'      => __('CT', 'as_extension'),
+                'label'      => __('CT', 'asex'),
                 'id'         => 'custom_text_3',
                 'std'        => __('AFTER', 'monalisa'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label' => __('Image', 'as_extension'),
+                'label' => __('Image', 'asex'),
                 'id'    => 'image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label' => __('Image 2', 'as_extension'),
+                'label' => __('Image 2', 'asex'),
                 'id'    => 'image_2',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'             => __('Orientation', 'as_extension'),
+                'label'             => __('Orientation', 'asex'),
                 'id'                => 'orientation_img',
                 'std'               => 'horizontal',
                 'refresh_on_change' => true,
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Horizontal', 'as_extension'),
+                        'label' => __('Horizontal', 'asex'),
                         'value' => 'horizontal'
                     ),
                     array(
-                        'label' => __('Vertical', 'as_extension'),
+                        'label' => __('Vertical', 'asex'),
                         'value' => 'vertical'
                     ),
                 ),
             ),
             array(
-                'label'                 => __('Offset Image', 'as_extension'),
+                'label'                 => __('Offset Image', 'asex'),
                 'id'                    => 'offset_img',
                 'std'                   => '.5',
                 'refresh_on_change'     => true,
@@ -105,7 +108,7 @@ class AS_Before_After extends as_module {
              * Styling
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -115,7 +118,7 @@ class AS_Before_After extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -125,7 +128,7 @@ class AS_Before_After extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,25 +139,25 @@ class AS_Before_After extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -164,7 +167,7 @@ class AS_Before_After extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -175,7 +178,7 @@ class AS_Before_After extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -188,7 +191,7 @@ class AS_Before_After extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -226,7 +229,7 @@ class AS_Before_After extends as_module {
              * Custom DragBar
              */
             array(
-                'label'                 => __('BG Color Bar', 'as_extension'),
+                'label'                 => __('BG Color Bar', 'asex'),
                 'id'                    => 'css_drag_bar_bg_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -234,10 +237,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after, .twentytwenty-vertical .twentytwenty-handle:before, .twentytwenty-vertical .twentytwenty-handle:after',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color Circle', 'as_extension'),
+                'label'                 => __('BG Color Circle', 'asex'),
                 'id'                    => 'css_drag_bar_circle_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -245,10 +248,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color Circle', 'as_extension'),
+                'label'                 => __('Border Color Circle', 'asex'),
                 'id'                    => 'css_drag_bar_circle_border_color',
                 'std'                   => '#f9f9f9',
                 'type'                  => 'color',
@@ -256,10 +259,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-handle',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width Circle', 'as_extension'),
+                'label'                 => __('Border Width Circle', 'asex'),
                 'id'                    => 'css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -268,10 +271,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -280,10 +283,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('Color Icon Right', 'as_extension'),
+                'label'                 => __('Color Icon Right', 'asex'),
                 'id'                    => 'css_drag_bar_icon_color_right',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -291,10 +294,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-left-arrow',
                 'affect_on_change_rule' => 'border-right-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('Color Icon Left', 'as_extension'),
+                'label'                 => __('Color Icon Left', 'asex'),
                 'id'                    => 'css_drag_bar_icon_color_left',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -302,10 +305,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-right-arrow',
                 'affect_on_change_rule' => 'border-left-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('Color Icon Up', 'as_extension'),
+                'label'                 => __('Color Icon Up', 'asex'),
                 'id'                    => 'css_drag_bar_icon_color_down',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -313,10 +316,10 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-up-arrow',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             array(
-                'label'                 => __('Color Icon Down', 'as_extension'),
+                'label'                 => __('Color Icon Down', 'asex'),
                 'id'                    => 'css_drag_bar_icon_color_up',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -324,7 +327,7 @@ class AS_Before_After extends as_module {
                 'affect_on_change_el'   => '.twentytwenty-down-arrow',
                 'affect_on_change_rule' => 'border-top-color',
                 'section'               => 'styling',
-                'tab'                   => __('drag bar', 'as_extension'),
+                'tab'                   => __('drag bar', 'asex'),
             ),
             /**             * Responsive Tablet */
             array
@@ -542,7 +545,8 @@ class AS_Before_After extends as_module {
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options) {
+    function output($options)
+    {
 
         $this->module_start($options);
 
@@ -555,16 +559,18 @@ class AS_Before_After extends as_module {
         else
             $dslc_is_admin = false;
         ?>
-        <?php if (empty($options['image']) || empty($options['image_2'])) : ?>
-            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'as_extension'); ?></div>
-        <?php else : ?>		
+            <?php if (empty($options['image']) || empty($options['image_2'])) : ?>
+            <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'asex'); ?></div>
+            <?php else : ?>		
             <div class="as-before-img">
                 <?php
                 $orientation_img = '';
-                if ($options['orientation_img'] == 'vertical') {
+                if ($options['orientation_img'] == 'vertical')
+                {
                     $orientation_img = 'vertical';
                 }
-                else {
+                else
+                {
                     $orientation_img = '';
                 }
                 ?>

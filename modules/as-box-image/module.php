@@ -1,6 +1,6 @@
 <?php
 
-class AS_Box_Image extends as_module {
+class ASEX_Box_Image extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,8 +9,8 @@ class AS_Box_Image extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Box_Image';
-        $this->module_title    = __('Box Image', 'as_extension');
+        $this->module_id       = 'ASEX_Box_Image';
+        $this->module_title    = __('Box Image', 'asex');
         $this->module_icon     = 'camera-retro';
         $this->module_category = 'as - Info Box';
     }
@@ -19,87 +19,87 @@ class AS_Box_Image extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Title Link', 'as_extension'),
+                'label' => __('Title Link', 'asex'),
                 'id'    => 'title_link',
                 'std'   => '',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Title Link - Open in', 'as_extension'),
+                'label'   => __('Title Link - Open in', 'asex'),
                 'id'      => 'title_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'as_extension'),
+                        'label' => __('Same Tab', 'asex'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'as_extension'),
+                        'label' => __('New Tab', 'asex'),
                         'value' => '_blank',
                     ),
                 )
             ),
             array(
-                'label' => __('Primary Button Link', 'as_extension'),
+                'label' => __('Primary Button Link', 'asex'),
                 'id'    => 'button_link',
                 'std'   => '#',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Primary Button - Open in', 'as_extension'),
+                'label'   => __('Primary Button - Open in', 'asex'),
                 'id'      => 'button_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'as_extension'),
+                        'label' => __('Same Tab', 'asex'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'as_extension'),
+                        'label' => __('New Tab', 'asex'),
                         'value' => '_blank',
                     ),
                 )
             ),
             array(
-                'label' => __('Secondary Button Link', 'as_extension'),
+                'label' => __('Secondary Button Link', 'asex'),
                 'id'    => 'button_2_link',
                 'std'   => '',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Secondary Button - Open in', 'as_extension'),
+                'label'   => __('Secondary Button - Open in', 'asex'),
                 'id'      => 'button_2_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'as_extension'),
+                        'label' => __('Same Tab', 'asex'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'as_extension'),
+                        'label' => __('New Tab', 'asex'),
                         'value' => '_blank',
                     ),
                 )
@@ -108,32 +108,32 @@ class AS_Box_Image extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'as_extension'),
+                'label'   => __('Elements', 'asex'),
                 'id'      => 'elements',
                 'std'     => 'icon title content button',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Image', 'as_extension'),
+                        'label' => __('Image', 'asex'),
                         'value' => 'icon'
                     ),
                     array(
-                        'label' => __('Title', 'as_extension'),
+                        'label' => __('Title', 'asex'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Content', 'as_extension'),
+                        'label' => __('Content', 'asex'),
                         'value' => 'content'
                     ),
                     array(
-                        'label' => __('Button', 'as_extension'),
+                        'label' => __('Button', 'asex'),
                         'value' => 'button'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -143,7 +143,7 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -153,7 +153,7 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image', 'as_extension'),
+                'label'                 => __('BG Image', 'asex'),
                 'id'                    => 'css_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -163,25 +163,25 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'as_extension'),
+                'label'                 => __('BG Image Repeat', 'asex'),
                 'id'                    => 'css_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'as_extension'),
+                        'label' => __('Repeat', 'asex'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'as_extension'),
+                        'label' => __('Repeat Horizontal', 'asex'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'as_extension'),
+                        'label' => __('Repeat Vertical', 'asex'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'as_extension'),
+                        'label' => __('Do NOT Repeat', 'asex'),
                         'value' => 'no-repeat',
                     ),
                 ),
@@ -191,17 +191,17 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Attachment', 'as_extension'),
+                'label'                 => __('BG Image Attachment', 'asex'),
                 'id'                    => 'css_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Scroll', 'as_extension'),
+                        'label' => __('Scroll', 'asex'),
                         'value' => 'scroll',
                     ),
                     array(
-                        'label' => __('Fixed', 'as_extension'),
+                        'label' => __('Fixed', 'asex'),
                         'value' => 'fixed',
                     ),
                 ),
@@ -211,45 +211,45 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Image Position', 'as_extension'),
+                'label'                 => __('BG Image Position', 'asex'),
                 'id'                    => 'css_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Top Left', 'as_extension'),
+                        'label' => __('Top Left', 'asex'),
                         'value' => 'left top',
                     ),
                     array(
-                        'label' => __('Top Right', 'as_extension'),
+                        'label' => __('Top Right', 'asex'),
                         'value' => 'right top',
                     ),
                     array(
-                        'label' => __('Top Center', 'as_extension'),
+                        'label' => __('Top Center', 'asex'),
                         'value' => 'Center Top',
                     ),
                     array(
-                        'label' => __('Center Left', 'as_extension'),
+                        'label' => __('Center Left', 'asex'),
                         'value' => 'left center',
                     ),
                     array(
-                        'label' => __('Center Right', 'as_extension'),
+                        'label' => __('Center Right', 'asex'),
                         'value' => 'right center',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center center',
                     ),
                     array(
-                        'label' => __('Bottom Left', 'as_extension'),
+                        'label' => __('Bottom Left', 'asex'),
                         'value' => 'left bottom',
                     ),
                     array(
-                        'label' => __('Bottom Right', 'as_extension'),
+                        'label' => __('Bottom Right', 'asex'),
                         'value' => 'right bottom',
                     ),
                     array(
-                        'label' => __('Bottom Center', 'as_extension'),
+                        'label' => __('Bottom Center', 'asex'),
                         'value' => 'center bottom',
                     ),
                 ),
@@ -259,7 +259,7 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -269,7 +269,7 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -280,25 +280,25 @@ class AS_Box_Image extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -308,7 +308,7 @@ class AS_Box_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -319,7 +319,7 @@ class AS_Box_Image extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -330,7 +330,7 @@ class AS_Box_Image extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -343,7 +343,7 @@ class AS_Box_Image extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -354,7 +354,7 @@ class AS_Box_Image extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -368,7 +368,7 @@ class AS_Box_Image extends as_module {
              * Image
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_icon_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -376,10 +376,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#5890e5',
                 'type'                  => 'color',
@@ -387,10 +387,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Image', 'as_extension'),
+                'label'                 => __('BG Image', 'asex'),
                 'id'                    => 'css_icon_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
@@ -398,62 +398,62 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'as_extension'),
+                'label'                 => __('BG Image Repeat', 'asex'),
                 'id'                    => 'css_icon_bg_img_repeat',
                 'std'                   => 'no-repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'as_extension'),
+                        'label' => __('Repeat', 'asex'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'as_extension'),
+                        'label' => __('Repeat Horizontal', 'asex'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'as_extension'),
+                        'label' => __('Repeat Vertical', 'asex'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'as_extension'),
+                        'label' => __('Do NOT Repeat', 'asex'),
                         'value' => 'no-repeat',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Image Size', 'as_extension'),
+                'label'                 => __('BG Image Size', 'asex'),
                 'id'                    => 'css_icon_bg_img_size',
                 'std'                   => 'auto',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Original', 'as_extension'),
+                        'label' => __('Original', 'asex'),
                         'value' => 'auto',
                     ),
                     array(
-                        'label' => __('Cover', 'as_extension'),
+                        'label' => __('Cover', 'asex'),
                         'value' => 'cover',
                     ),
                     array(
-                        'label' => __('Contain', 'as_extension'),
+                        'label' => __('Contain', 'asex'),
                         'value' => 'contain',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-size',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -461,10 +461,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -473,28 +473,28 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -502,10 +502,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -513,11 +513,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -525,13 +525,13 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => -100,
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
+                'label'                 => __('Margin Right', 'asex'),
                 'id'                    => 'css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -539,13 +539,13 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_icon_margin_bottom',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -553,34 +553,34 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'   => __('Position', 'as_extension'),
+                'label'   => __('Position', 'asex'),
                 'id'      => 'icon_position',
                 'std'     => 'above',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Above', 'as_extension'),
+                        'label' => __('Above', 'asex'),
                         'value' => 'above',
                     ),
                     array(
-                        'label' => __('Aside', 'as_extension'),
+                        'label' => __('Aside', 'asex'),
                         'value' => 'aside',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Image', 'as_extension'),
+                'tab'     => __('Image', 'asex'),
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -588,10 +588,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -599,10 +599,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -610,11 +610,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -622,14 +622,14 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -637,10 +637,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -648,11 +648,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin_bottom',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -660,11 +660,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_title_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -672,14 +672,14 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Content
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -687,10 +687,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -698,10 +698,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -709,11 +709,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -721,14 +721,14 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -736,10 +736,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -747,11 +747,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -759,14 +759,14 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Button
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_button_bg_color',
                 'std'                   => '#5890e5',
                 'type'                  => 'color',
@@ -774,10 +774,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'as_extension'),
+                'label'                 => __('BG Color - Hover', 'asex'),
                 'id'                    => 'css_button_bg_color_hover',
                 'std'                   => '#3e73c2',
                 'type'                  => 'color',
@@ -785,10 +785,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_button_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -796,29 +796,29 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_button_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -826,10 +826,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_button_border_color',
                 'std'                   => '#d8d8d8',
                 'type'                  => 'color',
@@ -837,10 +837,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'as_extension'),
+                'label'                 => __('Border Color - Hover', 'asex'),
                 'id'                    => 'css_button_border_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -848,10 +848,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_button_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -859,11 +859,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_button_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -871,10 +871,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
+                'label'                 => __('Color - Hover', 'asex'),
                 'id'                    => 'css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -882,10 +882,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -893,11 +893,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -905,14 +905,14 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_button_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -920,10 +920,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -932,10 +932,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_button_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -944,10 +944,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
+                'label'                 => __('Margin Right', 'asex'),
                 'id'                    => 'css_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -956,28 +956,28 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'   => __('Position', 'as_extension'),
+                'label'   => __('Position', 'asex'),
                 'id'      => 'button_pos',
                 'std'     => 'bellow',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Right of content', 'as_extension'),
+                        'label' => __('Right of content', 'asex'),
                         'value' => 'aside',
                     ),
                     array(
-                        'label' => __('Bellow content', 'as_extension'),
+                        'label' => __('Bellow content', 'asex'),
                         'value' => 'bellow',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Primary Button', 'as_extension'),
+                'tab'     => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -986,10 +986,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -998,18 +998,18 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'   => __('Icon', 'as_extension'),
+                'label'   => __('Icon', 'asex'),
                 'id'      => 'button_icon_id',
                 'std'     => 'cog',
                 'type'    => 'icon',
                 'section' => 'styling',
-                'tab'     => __('Primary Button', 'as_extension'),
+                'tab'     => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Color', 'as_extension'),
+                'label'                 => __('Icon - Color', 'asex'),
                 'id'                    => 'css_button_icon_color',
                 'std'                   => '#b0c8eb',
                 'type'                  => 'color',
@@ -1017,10 +1017,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'as_extension'),
+                'label'                 => __('Icon - Margin Right', 'asex'),
                 'id'                    => 'css_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1029,13 +1029,13 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Primary Button', 'as_extension'),
+                'tab'                   => __('Primary Button', 'asex'),
             ),
             /**
              * Secondary Button
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_button_2_bg_color',
                 'std'                   => '#5890e5',
                 'type'                  => 'color',
@@ -1043,10 +1043,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'as_extension'),
+                'label'                 => __('BG Color - Hover', 'asex'),
                 'id'                    => 'css_button_2_bg_color_hover',
                 'std'                   => '#3e73c2',
                 'type'                  => 'color',
@@ -1054,10 +1054,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_button_2_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1065,29 +1065,29 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_button_2_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -1095,10 +1095,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_button_2_border_color',
                 'std'                   => '#d8d8d8',
                 'type'                  => 'color',
@@ -1106,10 +1106,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'as_extension'),
+                'label'                 => __('Border Color - Hover', 'asex'),
                 'id'                    => 'css_button_2_border_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1117,10 +1117,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_button_2_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1128,11 +1128,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_button_2_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -1140,10 +1140,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
+                'label'                 => __('Color - Hover', 'asex'),
                 'id'                    => 'css_button_2_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -1151,10 +1151,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_button_2_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1162,11 +1162,11 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_button_2_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1174,14 +1174,14 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_button_2_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -1189,10 +1189,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Left', 'as_extension'),
+                'label'                 => __('Margin Left', 'asex'),
                 'id'                    => 'css_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1201,10 +1201,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1213,10 +1213,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_button_2_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1225,10 +1225,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_button_2_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1237,18 +1237,18 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'   => __('Icon', 'as_extension'),
+                'label'   => __('Icon', 'asex'),
                 'id'      => 'button_2_icon_id',
                 'std'     => 'cog',
                 'type'    => 'icon',
                 'section' => 'styling',
-                'tab'     => __('Secondary Button', 'as_extension'),
+                'tab'     => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Color', 'as_extension'),
+                'label'                 => __('Icon - Color', 'asex'),
                 'id'                    => 'css_button_2_icon_color',
                 'std'                   => '#b0c8eb',
                 'type'                  => 'color',
@@ -1256,10 +1256,10 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Margin Right', 'as_extension'),
+                'label'                 => __('Icon - Margin Right', 'asex'),
                 'id'                    => 'css_button_2_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1268,13 +1268,13 @@ class AS_Box_Image extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Secondary Button', 'as_extension'),
+                'tab'                   => __('Secondary Button', 'asex'),
             ),
             /**
              * Hidden
              */
             array(
-                'label'      => __('Title', 'as_extension'),
+                'label'      => __('Title', 'asex'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -1282,7 +1282,7 @@ class AS_Box_Image extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Content', 'as_extension'),
+                'label'      => __('Content', 'asex'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
                 'type'       => 'textarea',
@@ -1290,7 +1290,7 @@ class AS_Box_Image extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'as_extension'),
+                'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -1298,7 +1298,7 @@ class AS_Box_Image extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'as_extension'),
+                'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_2_title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -1309,22 +1309,22 @@ class AS_Box_Image extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array
                 (
@@ -1857,22 +1857,22 @@ class AS_Box_Image extends as_module {
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array
                 (
@@ -2501,7 +2501,7 @@ class AS_Box_Image extends as_module {
                                 <div class="dslca-editable-content" data-id="content">								
                                     <?php echo stripslashes($options['content']); ?>
                                 </div><!-- .dslca-editable-content -->
-                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'as_extension'); ?></span></div>
+                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'asex'); ?></span></div>
                             <?php else : ?>
                                 <?php echo do_shortcode(stripslashes($options['content'])); ?>
                             <?php endif; ?>

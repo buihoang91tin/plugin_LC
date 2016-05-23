@@ -1,17 +1,57 @@
 <?php
 
-global $as_ex_options;
-if (is_array($as_ex_options) && !is_null($as_ex_options)) {
-    $as_ex_color_main     = $as_ex_options['as_ex_color_main'];
-    $as_ex_color_content  = $as_ex_options['$as_ex_color_content'];
-    $as_ex_title_font     = $as_ex_options['as_ex_title_font'];
-    $as_ex_sub_title_font = $as_ex_options['as_ex_sub_title_font'];
-    $as_ex_content_font   = $as_ex_options['as_ex_content_font'];
+global $asex_options;
+if (is_array($asex_options) && !is_null($asex_options))
+{
+    $asex_color_main     = $asex_options['asex_color_main'];
+    $asex_color_content  = $asex_options['$asex_color_content'];
+    $asex_title_font     = $asex_options['asex_title_font'];
+    $asex_sub_title_font = $asex_options['asex_sub_title_font'];
+    $asex_content_font   = $asex_options['asex_content_font'];
 }
-else {
-    $as_ex_color_main     = '';
-    $as_ex_color_content  = '';
-    $as_ex_title_font     = '';
-    $as_ex_sub_title_font = '';
-    $as_ex_content_font   = '';
+else
+{
+    $asex_color_main     = '';
+    $asex_color_content  = '';
+    $asex_title_font     = '';
+    $asex_sub_title_font = '';
+    $asex_content_font   = '';
 }
+
+if (!function_exists("rwmb_meta"))
+{
+
+    function rwmb_meta($id, $default = false)
+    {
+        $array_default = array(
+            "as_custom_page_metaboxes" => array('page_breadcrumb_options'),
+            "as_breadcrumb_menu"       => 2,
+            "as_header_box"            => 0,
+            "as_boxed_choice"          => 0,
+            "as_footer_menu"           => 0,
+            "as_boxed_choice_width"    => '',
+            "as_blog_option"           => 'default',
+            "as_html5_audio_file_mp3"  => '',
+            "as_url_link"              => '',
+            "as_text_link"             => '',
+            "as_bg_link"               => '',
+            "as_youtube_link"          => '',
+            "as_view_img"              => '',
+            "as_html5_video_file_mp4"  => '',
+            "as_html5_video_file_ogv"  => '',
+            "as_html5_video_file_webm" => '',
+            "as_html5_media_loop"      => 'loop',
+            "as_html5_media_autoplay"  => 'autoplay',
+        );
+        if (!isset($array_default[$id]))
+        {
+            return '';
+        }
+        else
+        {
+            return $array_default[$id];
+        }
+    }
+
+}
+    

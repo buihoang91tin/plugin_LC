@@ -3,40 +3,40 @@
 /* R E S P O N S I V E   S T Y L E 
 /* ------------------------------------ */
 @media ( max-width: 1170px ) {
-    /*  .dslc-no-columns-spacing #as_portfolio_content .as-port-ajax-data .dslc-6-col.dslc-last-col */
-    .dslc-no-columns-spacing #as_portfolio_content{
+    /*  .dslc-no-columns-spacing #asex_portfolio_content .as-port-ajax-data .dslc-6-col.dslc-last-col */
+    .dslc-no-columns-spacing #asex_portfolio_content{
         width: 960px;
     }
-    .dslc-module-AS_Info_Box .dslc-info-box-icon-pos-aside .dslc-info-box-image{
+    .dslc-module-asex_Info_Box .dslc-info-box-icon-pos-aside .dslc-info-box-image{
         width: 40%;
     }
 }
 @media ( max-width: 996px ) {
-    .dslc-no-columns-spacing #as_portfolio_content{
+    .dslc-no-columns-spacing #asex_portfolio_content{
         width: 748px;
     }
-    .dslc-no-columns-spacing #as_portfolio_content .as-port-ajax-data .dslc-6-col{
+    .dslc-no-columns-spacing #asex_portfolio_content .as-port-ajax-data .dslc-6-col{
         width: 100% !important;
         margin: 0 !important;
     }
 }
 @media ( max-width: 769px ) {
-    .dslc-no-columns-spacing #as_portfolio_content{
+    .dslc-no-columns-spacing #asex_portfolio_content{
         width: 420px;
     }
     .border-none-right .dslc-partner .dslc-partner-thumb, .border-none-left .dslc-partner .dslc-partner-thumb, .border-none-top .dslc-partner .dslc-partner-thumb, .border-none-bottom .dslc-partner .dslc-partner-thumb{
         border: none !important;
     }
-    .dslc-module-AS_Info_Box .dslc-info-box-image{
+    .dslc-module-asex_Info_Box .dslc-info-box-image{
         width: 100%;
         float:none;
         margin: 0 !important;
     }
-    .dslc-module-AS_Info_Box .dslc-info-box-image-inner{
+    .dslc-module-asex_Info_Box .dslc-info-box-image-inner{
         display: block;
         margin: 0 auto;
     }
-    .dslc-module-AS_Info_Box .dslc-info-box-main{
+    .dslc-module-asex_Info_Box .dslc-info-box-main{
         text-align: center;
         padding: 30px 0;
     }
@@ -54,15 +54,15 @@
     }
 }
 @media ( max-width: 480px ) {
-    .dslc-no-columns-spacing #as_portfolio_content{
+    .dslc-no-columns-spacing #asex_portfolio_content{
         width: 100% !important;
     }
-    .as_mailchimp_form form .as_email_mailchimp, .as_mailchimp_form form .as_button_submit_mailchimp {
+    .asex_mailchimp_form form .asex_email_mailchimp, .asex_mailchimp_form form .asex_button_submit_mailchimp {
         width: 100% !important;
         display: block;
         margin: 0;
     }
-    .as_mailchimp_form form .as_email_mailchimp{
+    .asex_mailchimp_form form .asex_email_mailchimp{
         margin-bottom: 15px !important;
     }
 }

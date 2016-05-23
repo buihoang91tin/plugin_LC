@@ -1,8 +1,11 @@
 <?php
-if (dslc_is_module_active('AS_timeline'))
-    include AS_EXTENSION_ABS . '/modules/as-timeline/functions.php';
+if (dslc_is_module_active('ASEX_Timeline'))
+{
+    include ASEX_ABS . '/modules/as-timeline/functions.php';
+}
 
-class AS_Timeline extends as_module {
+class ASEX_Timeline extends ASEX_MODULE
+{
 
     var $module_id;
     var $module_title;
@@ -10,21 +13,23 @@ class AS_Timeline extends as_module {
     var $module_category;
     var $handle_like;
 
-    function __construct() {
-        $this->module_id       = 'AS_Timeline';
+    function __construct()
+    {
+        $this->module_id       = 'ASEX_Timeline';
         $this->module_title    = __('Timeline', 'live-composer-page-builder');
         $this->module_icon     = 'history';
         $this->module_category = 'as - posts';
         $this->handle_like     = 'accordion';
     }
 
-    function options() {
+    function options()
+    {
 
         $cats         = get_terms('dslc_timeline_cats');
         $cats_choices = array();
 
-        foreach ($cats as
-                $cat) {
+        foreach ($cats as $cat)
+        {
             $cats_choices[] = array(
                 'label' => $cat->name,
                 'value' => $cat->slug
@@ -61,14 +66,14 @@ class AS_Timeline extends as_module {
             ),
             array(
                 'label'   => __('Categories', 'live-composer-page-builder'),
-                'id'      => 'as_categories',
+                'id'      => 'asex_categories',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => $cats_choices
             ),
             array(
                 'label'   => __('Order By', 'live-composer-page-builder'),
-                'id'      => 'as_orderby',
+                'id'      => 'asex_orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
@@ -96,7 +101,7 @@ class AS_Timeline extends as_module {
             ),
             array(
                 'label'   => __('Order', 'live-composer-page-builder'),
-                'id'      => 'as_orders',
+                'id'      => 'asex_orders',
                 'std'     => 'DESC',
                 'type'    => 'select',
                 'choices' => array(
@@ -115,7 +120,7 @@ class AS_Timeline extends as_module {
              */
             array(
                 'label'   => __('Post Elements', 'live-composer-page-builder'),
-                'id'      => 'as_post_elements',
+                'id'      => 'asex_post_elements',
                 'std'     => 'thumbnail categories title',
                 'type'    => 'checkbox',
                 'choices' => array(
@@ -479,7 +484,7 @@ class AS_Timeline extends as_module {
              */
             array(
                 'label'                 => __('Content Stype', 'live-composer-page-builder'),
-                'id'                    => 'as_timeline_content_style',
+                'id'                    => 'asex_timeline_content_style',
                 'std'                   => '',
                 'type'                  => 'select',
                 'refresh_on_change'     => true,
@@ -1260,7 +1265,8 @@ class AS_Timeline extends as_module {
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options) {
+    function output($options)
+    {
         global $dslc_active;
 
         if ($dslc_active && is_user_logged_in() && current_user_can(DS_LIVE_COMPOSER_CAPABILITY))
@@ -1272,29 +1278,32 @@ class AS_Timeline extends as_module {
 
         /* CUSTOM THUMBNAIL CATEGORIES TITLE EXCERPT BUTTON */
 
-        $post_elements = explode(" ", $options['as_post_elements']);
- // Fix for offset braking pagination
-        $query_offset = $options['offset'];
+        $post_elements = explode(" ", $options['asex_post_elements']);
+        // Fix for offset braking pagination
+        $query_offset  = $options['offset'];
         if ($query_offset > 0 && $paged > 1)
-            $query_offset = ( $paged - 1 ) * $options['amount'] + $options['offset'];
-        $args = array(
+            $query_offset  = ( $paged - 1 ) * $options['amount'] + $options['offset'];
+        $args          = array(
             'post_type'      => 'dslc_timeline',
             'posts_per_page' => $options['open_by_default'],
-            'order'          => $options['as_orders'],
-            'orderby'        => $options['as_orderby'],
+            'order'          => $options['asex_orders'],
+            'orderby'        => $options['asex_orderby'],
                 //'offset' => $options['offset'],
-                //'category_and' => $options['as_categories'],
+                //'category_and' => $options['asex_categories'],
         );
-        if ($query_offset > 0) {
+        if ($query_offset > 0)
+        {
             $args['offset'] = $query_offset;
         }
 
         // Do the query
-        if (is_category() || is_tax() || is_search()) {
+        if (is_category() || is_tax() || is_search())
+        {
             global $wp_query;
             $dslc_query = $wp_query;
         }
-        else {
+        else
+        {
             $dslc_query = new WP_Query($args);
         }
         $wrapper_class = '';
@@ -1308,39 +1317,39 @@ class AS_Timeline extends as_module {
 
         <?php if ($dslc_query->have_posts()) : ?>
             <section id="as-timeline" class="as-timeline-container dslc-timeline">
-                <?php
-                while ($dslc_query->have_posts()) : $dslc_query->the_post();
-                    //$count += $increment;
-                    $real_count++;
-                    ?>
+            <?php
+            while ($dslc_query->have_posts()) : $dslc_query->the_post();
+                //$count += $increment;
+                $real_count++;
+                ?>
                     <div class="as-timeline-block">
                         <div class="as-timeline-img as-picture"></div>
                         <!-- as-timeline-img -->
                         <div class="as-timeline-content"> 
                             <h2>
-                                <?php if (in_array('title', $post_elements)): ?>
+                            <?php if (in_array('title', $post_elements)): ?>
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                <?php endif; ?>
+                            <?php endif; ?>
                             </h2>
                             <?php if (has_post_thumbnail() && in_array('thumbnail', $post_elements)) : ?>
                                 <a class = "as-timeline-thumb" href="<?php the_permalink(); ?>" target="_blank"><?php the_post_thumbnail('full'); ?></a>
                             <?php endif; ?>
                             <?php if (in_array('excerpt', $post_elements)): ?>
-                                <?php if ($options['as_timeline_content_style'] == 'excerpt'): ?>
+                                <?php if ($options['asex_timeline_content_style'] == 'excerpt'): ?>
                                     <p><?php the_excerpt(); ?></p>
-                                <?php else: ?>
+                    <?php else: ?>
                                     <p><?php the_content(); ?></p>
-                                <?php endif; ?>
-                            <?php endif; ?>
-                            <?php if (in_array('button', $post_elements)): ?>
+                    <?php endif; ?>
+                <?php endif; ?>
+                    <?php if (in_array('button', $post_elements)): ?>
                                 <a href="<?php the_permalink(); ?>" class="as-read-more"> <span class="lc-icon-list-item-icon dslc-icon-double-angle-right"></span> Read more</a>
-                            <?php endif; ?>
+                <?php endif; ?>
                             <span class="as-date"><?php the_time('F j, Y'); ?></span>
                         </div>
                         <!-- as-timeline-content -->
                     </div>
                     <!-- as-timeline-block -->
-                <?php endwhile; ?>
+            <?php endwhile; ?>
                 <div class="as-timeline-img as-picture last"></div>
             </section>
             <!-- as-timeline -->
@@ -1350,7 +1359,7 @@ class AS_Timeline extends as_module {
             if ($dslc_is_admin) :
                 ?>
                 <div class="dslc-notification dslc-red">
-                    <?php _e('You do not have any timelines at the moment. Go to <strong>WP Admin &rarr; timelines</strong> to add some.', 'live-composer-page-builder'); ?>
+                <?php _e('You do not have any timelines at the moment. Go to <strong>WP Admin &rarr; timelines</strong> to add some.', 'live-composer-page-builder'); ?>
                     <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span>
                 </div>
                 <?php

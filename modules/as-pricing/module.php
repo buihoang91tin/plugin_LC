@@ -1,6 +1,6 @@
 <?php
 
-class AS_Pricing extends as_module {
+class ASEX_Pricing extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -10,8 +10,8 @@ class AS_Pricing extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Pricing';
-        $this->module_title    = __('Pricing Table', 'as_extension');
+        $this->module_id       = 'ASEX_Pricing';
+        $this->module_title    = __('Pricing Table', 'asex');
         $this->module_icon     = 'dollar';
         $this->module_category = 'as - Pricing';
         $this->handle_like     = 'accordion';
@@ -21,62 +21,62 @@ class AS_Pricing extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'             => __('Style of Pricing', 'as_extension'),
-                'id'                => 'as_style_pricing',
+                'label'             => __('Style of Pricing', 'asex'),
+                'id'                => 'asex_style_pricing',
                 'std'               => 'style_1',
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Style 1 with button on top', 'as_extension'),
+                        'label' => __('Style 1 with button on top', 'asex'),
                         'value' => 'style_1'
                     ),
                     array(
-                        'label' => __('Style 2 with Button on bottom', 'as_extension'),
+                        'label' => __('Style 2 with Button on bottom', 'asex'),
                         'value' => 'style_2'
                     ),
                 ),
                 'refresh_on_change' => true,
             ),
             array(
-                'label'      => __('(hidden) Pricing Title', 'as_extension'),
-                'id'         => 'as_pricing_title',
-                'std'        => __('CLICK TO EDIT', 'as_extension'),
+                'label'      => __('(hidden) Pricing Title', 'asex'),
+                'id'         => 'asex_pricing_title',
+                'std'        => __('CLICK TO EDIT', 'asex'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
                 'section'    => 'styling',
             ),
             array(
-                'label'      => __('(hidden) Pricing Number', 'as_extension'),
-                'id'         => 'as_pricing_number',
-                'std'        => __('79', 'as_extension'),
+                'label'      => __('(hidden) Pricing Number', 'asex'),
+                'id'         => 'asex_pricing_number',
+                'std'        => __('79', 'asex'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
                 'section'    => 'styling',
             ),
             array(
-                'label'      => __('(hidden) Accordion Nav', 'as_extension'),
+                'label'      => __('(hidden) Accordion Nav', 'asex'),
                 'id'         => 'accordion_nav',
-                'std'        => __('CLICK TO EDIT', 'as_extension'),
+                'std'        => __('CLICK TO EDIT', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling',
@@ -85,8 +85,8 @@ class AS_Pricing extends as_module {
              * General
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_bg_color',
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'asex_pricing_css_bg_color',
                 'std'                   => '#fff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -95,8 +95,8 @@ class AS_Pricing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_pricing_css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -105,8 +105,8 @@ class AS_Pricing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_pricing_css_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -116,25 +116,25 @@ class AS_Pricing extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_pricing_css_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_pricing_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -144,8 +144,8 @@ class AS_Pricing extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
-                'id'                    => 'as_pricing_css_border_radius',
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'asex_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -155,8 +155,8 @@ class AS_Pricing extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_pricing_css_margin_bottom',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -166,8 +166,8 @@ class AS_Pricing extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_pricing_css_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -177,8 +177,8 @@ class AS_Pricing extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_pricing_css_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -191,30 +191,30 @@ class AS_Pricing extends as_module {
              * Title
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_bg_color',
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'asex_pricing_css_title_bg_color',
                 'std'                   => '#2b3d4e',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension')
+                'tab'                   => __('title', 'asex')
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_pricing_css_title_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension')
+                'tab'                   => __('title', 'asex')
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -222,28 +222,28 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'as_extension')
+                'tab'                   => __('title', 'asex')
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_pricing_css_title_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -251,120 +251,120 @@ class AS_Pricing extends as_module {
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension')
+                'tab'                   => __('title', 'asex')
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_border_radius_top',
+                'label'                 => __('Border Radius - Top', 'asex'),
+                'id'                    => 'asex_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_border_radius_bottom',
+                'label'                 => __('Border Radius - Bottom', 'asex'),
+                'id'                    => 'asex_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_pricing_css_title_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension')
+                'tab'                   => __('title', 'asex')
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_pricing_css_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_lheight',
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'asex_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_letter',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_margin_bottom',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-		'tab'                   => __('title', 'as_extension'),
+		'tab'                   => __('title', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -372,11 +372,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'as_extension')
+                'tab'                   => __('title', 'asex')
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -384,184 +384,184 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('title', 'as_extension')
+                'tab'                   => __('title', 'asex')
             ),
             array(
-                'label'                 => __('Text Align', 'as_extension'),
-                'id'                    => 'as_pricing_css_title_text_align',
+                'label'                 => __('Text Align', 'asex'),
+                'id'                    => 'asex_pricing_css_title_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-title h3',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('title', 'as_extension'),
+                'tab'                   => __('title', 'asex'),
             ),
             /**
              * Pricing Label
              */
             array(
-                'label'   => __('Pricing Label', 'as_extension'),
-                'id'      => 'as_pricing_label',
+                'label'   => __('Pricing Label', 'asex'),
+                'id'      => 'asex_pricing_label',
                 'std'     => 'none',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disable', 'as_extension'),
+                        'label' => __('Disable', 'asex'),
                         'value' => 'none',
                     ),
                     array(
-                        'label' => __('Enable', 'as_extension'),
+                        'label' => __('Enable', 'asex'),
                         'value' => 'free_label',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('pricing label', 'as_extension')
+                'tab'     => __('pricing label', 'asex')
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
-                'id'                    => 'as_pricing_label_bg_color',
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'asex_pricing_label_bg_color',
                 'std'                   => 'rgb(249, 191, 59)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label',
                 'affect_on_change_rule' => 'border-bottom-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'as_extension')
+                'tab'                   => __('pricing label', 'asex')
             ),
             array(
-                'label'             => __('Text Label', 'as_extension'),
-                'id'                => 'as_pricing_label_css_number',
+                'label'             => __('Text Label', 'asex'),
+                'id'                => 'asex_pricing_label_css_number',
                 'std'               => 'FREE',
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing label', 'as_extension')
+                'tab'               => __('pricing label', 'asex')
             ),
             array(
-                'label'                 => __('Color Label', 'as_extension'),
-                'id'                    => 'as_pricing_label_css_number_color',
+                'label'                 => __('Color Label', 'asex'),
+                'id'                    => 'asex_pricing_label_css_number_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'as_extension')
+                'tab'                   => __('pricing label', 'asex')
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_pricing_label_css_number_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label span',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'as_extension'),
+                'tab'                   => __('pricing label', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_pricing_label_css_number_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_pricing_label_css_number_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-label span',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing label', 'as_extension'),
+                'tab'                   => __('pricing label', 'asex'),
             ),
             /**
              * Pricing Number
              */
             array(
-                'label'                 => __('Text Align', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_text_align',
+                'label'                 => __('Text Align', 'asex'),
+                'id'                    => 'asex_pricing_css_number_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number-wrapper',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'as_extension')
+                'tab'                   => __('pricing number', 'asex')
             ),
             array(
-                'label'             => __('Pricing Number', 'as_extension'),
-                'id'                => 'as_pricing_css_number',
+                'label'             => __('Pricing Number', 'asex'),
+                'id'                => 'asex_pricing_css_number',
                 'std'               => 79,
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing number', 'as_extension')
+                'tab'               => __('pricing number', 'asex')
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_pricing_css_number_color',
                 'std'                   => '#2b3d4e',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'as_extension')
+                'tab'                   => __('pricing number', 'asex')
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'as_extension'),
+                'tab'                   => __('pricing number', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'as_extension'),
+                'tab'                   => __('pricing number', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_pricing_css_number_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'as_extension'),
+                'tab'                   => __('pricing number', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_lheight',
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'asex_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-number',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing number', 'as_extension'),
+                'tab'                   => __('pricing number', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -569,11 +569,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing number', 'as_extension'),
+                'tab'                   => __('pricing number', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_pricing_css_number_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -581,247 +581,247 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing number', 'as_extension'),
+                'tab'                   => __('pricing number', 'asex'),
             ),
             /**
              * Currency
              */
             array(
-                'label'             => __('Position of Currency', 'as_extension'),
-                'id'                => 'as_style_position_currency',
+                'label'             => __('Position of Currency', 'asex'),
+                'id'                => 'asex_style_position_currency',
                 'std'               => 'style_1',
                 'type'              => 'select',
                 'choices'           => array(
                     array(
-                        'label' => __('Position top left', 'as_extension'),
+                        'label' => __('Position top left', 'asex'),
                         'value' => 'style_1'
                     ),
                     array(
-                        'label' => __('Position top right', 'as_extension'),
+                        'label' => __('Position top right', 'asex'),
                         'value' => 'style_2'
                     ),
                 ),
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('pricing currency', 'as_extension')
+                'tab'               => __('pricing currency', 'asex')
             ),
             array(
-                'label'             => __('Pricing Currency', 'as_extension'),
-                'id'                => 'as_pricing_css_currency',
+                'label'             => __('Pricing Currency', 'asex'),
+                'id'                => 'asex_pricing_css_currency',
                 'std'               => '$',
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing currency', 'as_extension')
+                'tab'               => __('pricing currency', 'asex')
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_currency_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_pricing_css_currency_color',
                 'std'                   => '#7e7e7e',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'as_extension')
+                'tab'                   => __('pricing currency', 'asex')
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_pricing_css_currency_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'as_extension'),
+                'tab'                   => __('pricing currency', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_pricing_css_currency_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'as_extension'),
+                'tab'                   => __('pricing currency', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_pricing_css_currency_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_pricing_css_currency_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'as_extension'),
+                'tab'                   => __('pricing currency', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
-                'id'                    => 'as_pricing_css_currency_lheight',
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'asex_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'as_extension'),
+                'tab'                   => __('pricing currency', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_pricing_css_currency_letter',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-currency',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('pricing currency', 'as_extension'),
+                'tab'                   => __('pricing currency', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Time
              */
             array(
-                'label'             => __('Pricing Time', 'as_extension'),
-                'id'                => 'as_pricing_css_time',
+                'label'             => __('Pricing Time', 'asex'),
+                'id'                => 'asex_pricing_css_time',
                 'std'               => 'mo',
                 'refresh_on_change' => true,
                 'type'              => 'text',
                 'section'           => 'styling',
-                'tab'               => __('pricing time', 'as_extension')
+                'tab'               => __('pricing time', 'asex')
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_time_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_pricing_css_time_color',
                 'std'                   => '#7e7e7e',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'as_extension')
+                'tab'                   => __('pricing time', 'asex')
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_pricing_css_time_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'as_extension'),
+                'tab'                   => __('pricing time', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_pricing_css_time_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'as_extension'),
+                'tab'                   => __('pricing time', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_pricing_css_time_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_pricing_css_time_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'as_extension'),
+                'tab'                   => __('pricing time', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
-                'id'                    => 'as_pricing_css_time_lheight',
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'asex_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'as_extension'),
+                'tab'                   => __('pricing time', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_pricing_css_time_letter',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-pricing-time',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('pricing time', 'as_extension'),
+                'tab'                   => __('pricing time', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Pricing Option
              */
             array(
-                'label'                 => __('Text Align', 'as_extension'),
-                'id'                    => 'as_pricing_css_text_align_option',
+                'label'                 => __('Text Align', 'asex'),
+                'id'                    => 'asex_pricing_css_text_align_option',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-accordion-header',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color of nth-child(odd)', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_bg_color_ood',
+                'label'                 => __('BG Color of nth-child(odd)', 'asex'),
+                'id'                    => 'asex_pricing_css_option_bg_color_ood',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item:nth-child(odd)',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color of nth-child(even)', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_bg_color_even',
+                'label'                 => __('BG Color of nth-child(even)', 'asex'),
+                'id'                    => 'asex_pricing_css_option_bg_color_even',
                 'std'                   => '#fafafa',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item:nth-child(even)',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_line_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_pricing_css_option_line_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_line_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -829,28 +829,28 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_line_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_pricing_css_option_line_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -858,84 +858,84 @@ class AS_Pricing extends as_module {
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li.dslc-accordion-item',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_pricing_css_option_color',
                 'std'                   => '#2B3D4E',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension')
+                'tab'                   => __('pricing option', 'asex')
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_pricing_css_option_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_lheight',
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'asex_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_pricing_css_option_letter',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-list-pricing-option-wrapper li .dslc-accordion-header .dslc-accordion-title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin bottom', 'as_extension'),
-                'id'                    => 'as_pricing_css_margin_bottom_option',
+                'label'                 => __('Margin bottom', 'asex'),
+                'id'                    => 'asex_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -943,11 +943,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_pricing_css_padding_vertical_option',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -955,11 +955,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_pricing_css_padding_horizontal_option',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -967,111 +967,111 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing option', 'as_extension'),
+                'tab'                   => __('pricing option', 'asex'),
             ),
             /**
              *  Pricing Button Style
              */
             array(
-                'label'      => __('Button Text', 'as_extension'),
-                'id'         => 'as_button_text',
+                'label'      => __('Button Text', 'asex'),
+                'id'         => 'asex_button_text',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
             array(
-                'label'   => __('URL', 'as_extension'),
-                'id'      => 'as_button_url',
+                'label'   => __('URL', 'asex'),
+                'id'      => 'asex_button_url',
                 'std'     => '#',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('pricing button', 'as_extension'),
+                'tab'     => __('pricing button', 'asex'),
             ),
             array(
-                'label'   => __('Open in', 'as_extension'),
-                'id'      => 'as_button_target',
+                'label'   => __('Open in', 'asex'),
+                'id'      => 'asex_button_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'as_extension'),
+                        'label' => __('Same Tab', 'asex'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'as_extension'),
+                        'label' => __('New Tab', 'asex'),
                         'value' => '_blank',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('pricing button', 'as_extension'),
+                'tab'     => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
-                'id'                    => 'as_button_css_align_position',
+                'label'                 => __('Align', 'asex'),
+                'id'                    => 'asex_button_css_align_position',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
-                'id'                    => 'as_button_css_bg_color',
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'asex_button_css_bg_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'as_extension'),
-                'id'                    => 'as_button_css_bg_color_hover',
+                'label'                 => __('BG Color - Hover', 'asex'),
+                'id'                    => 'asex_button_css_bg_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_button_css_border_color',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_button_css_border_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'as_extension'),
-                'id'                    => 'as_button_css_border_color_hover',
+                'label'                 => __('Border Color - Hover', 'asex'),
+                'id'                    => 'asex_button_css_border_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'as_extension'),
-                'id'                => 'as_button_css_duration_hover',
+                'label'             => __('Duration when hover(ms)', 'asex'),
+                'id'                => 'asex_button_css_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('pricing button', 'as_extension'),
+                'tab'               => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_button_css_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1079,28 +1079,28 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
-                'id'                    => 'as_button_css_border_trbl',
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'asex_button_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -1108,11 +1108,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
-                'id'                    => 'as_button_css_border_radius',
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'asex_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1120,11 +1120,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
-                'id'                    => 'as_button_css_margin_top',
+                'label'                 => __('Margin Top', 'asex'),
+                'id'                    => 'asex_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1132,11 +1132,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_button_css_margin_bottom',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1144,11 +1144,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
-                'id'                    => 'as_button_css_padding_vertical',
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'asex_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1156,11 +1156,11 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
-                'id'                    => 'as_button_css_padding_horizontal',
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'asex_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1168,20 +1168,20 @@ class AS_Pricing extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
-                'id'                    => 'as_button_css_width',
+                'label'                 => __('Width', 'asex'),
+                'id'                    => 'asex_button_css_width',
                 'std'                   => 'inline-block',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Automatic', 'as_extension'),
+                        'label' => __('Automatic', 'asex'),
                         'value' => 'inline-block'
                     ),
                     array(
-                        'label' => __('Full Width', 'as_extension'),
+                        'label' => __('Full Width', 'asex'),
                         'value' => 'block'
                     ),
                 ),
@@ -1189,77 +1189,77 @@ class AS_Pricing extends as_module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'display',
                 'section'               => 'styling',
-                'tab'                   => __('pricing button', 'as_extension'),
+                'tab'                   => __('pricing button', 'asex'),
             ),
             /**
              * Out line Style
              */
             array(
-                'label'                 => __('Out Line Width', 'as_extension'),
-                'id'                    => 'as_button_out_line_width',
+                'label'                 => __('Out Line Width', 'asex'),
+                'id'                    => 'asex_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-width',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Offset', 'as_extension'),
-                'id'                    => 'as_button_out_line_offset',
+                'label'                 => __('Out Line Offset', 'asex'),
+                'id'                    => 'asex_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-offset',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Out Line Color', 'as_extension'),
-                'id'                    => 'as_button_out_line_color',
+                'label'                 => __('Out Line Color', 'asex'),
+                'id'                    => 'asex_button_out_line_color',
                 'std'                   => '#f9bf3b',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
             ),
             array(
-                'label'                 => __('Out Line Color Hover', 'as_extension'),
-                'id'                    => 'as_button_out_line_color_hover',
+                'label'                 => __('Out Line Color Hover', 'asex'),
+                'id'                    => 'asex_button_out_line_color_hover',
                 'std'                   => 'rgb(251, 206, 100)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'outline-color',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
             ),
             array(
-                'label'                 => __('Out Line Style', 'as_extension'),
-                'id'                    => 'as_button_out_line_style',
+                'label'                 => __('Out Line Style', 'asex'),
+                'id'                    => 'asex_button_out_line_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'as_extension'),
+                        'label' => __('Invisible', 'asex'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'as_extension'),
+                        'label' => __('Solid', 'asex'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'as_extension'),
+                        'label' => __('Dashed', 'asex'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'as_extension'),
+                        'label' => __('Dotted', 'asex'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -1267,81 +1267,81 @@ class AS_Pricing extends as_module {
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'outline-style',
                 'section'               => 'styling',
-                'tab'                   => __('Out Line Style', 'as_extension'),
+                'tab'                   => __('Out Line Style', 'asex'),
             ),
             /**
              * Typography
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
-                'id'                    => 'as_button_css_button_color',
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'asex_button_css_button_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'as_extension'),
+                'tab'                   => __('typography button', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
-                'id'                    => 'as_button_css_button_color_hover',
+                'label'                 => __('Color - Hover', 'asex'),
+                'id'                    => 'asex_button_css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'as_extension'),
+                'tab'                   => __('typography button', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
-                'id'                    => 'as_button_css_button_font_size',
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'asex_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'as_extension'),
+                'tab'                   => __('typography button', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
-                'id'                    => 'as_button_css_button_font_weight',
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'asex_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'as_extension'),
+                'tab'                   => __('typography button', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
-                'id'                    => 'as_button_css_button_font_family',
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'asex_button_css_button_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'as_extension'),
+                'tab'                   => __('typography button', 'asex'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_button_css_button_letter_spacing',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-button-pricing a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('typography button', 'as_extension'),
+                'tab'                   => __('typography button', 'asex'),
                 'ext'                   => 'px'
             ),
             /**             * Responsive Tablet */
@@ -1370,7 +1370,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_border_width',
+                'id'                    => 'css_res_t_asex_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1383,7 +1383,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_border_radius',
+                'id'                    => 'css_res_t_asex_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1396,7 +1396,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Bottom ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_margin_bottom',
+                'id'                    => 'css_res_t_asex_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1409,7 +1409,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_padding_vertical',
+                'id'                    => 'css_res_t_asex_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1422,7 +1422,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_padding_horizontal',
+                'id'                    => 'css_res_t_asex_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1435,7 +1435,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_border_width',
+                'id'                    => 'css_res_t_asex_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1448,7 +1448,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius - Top( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_border_radius_top',
+                'id'                    => 'css_res_t_asex_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1461,7 +1461,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius - Bottom( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_border_radius_bottom',
+                'id'                    => 'css_res_t_asex_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1474,7 +1474,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_font_size',
+                'id'                    => 'css_res_t_asex_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1487,7 +1487,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_font_weight',
+                'id'                    => 'css_res_t_asex_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1503,7 +1503,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_lheight',
+                'id'                    => 'css_res_t_asex_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1516,7 +1516,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_letter',
+                'id'                    => 'css_res_t_asex_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1529,7 +1529,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Bottom ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_margin_bottom',
+                'id'                    => 'css_res_t_asex_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1542,7 +1542,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_padding_vertical',
+                'id'                    => 'css_res_t_asex_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1555,7 +1555,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( title ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_title_padding_horizontal',
+                'id'                    => 'css_res_t_asex_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1568,7 +1568,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing label ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_label_css_number_font_weight',
+                'id'                    => 'css_res_t_asex_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1584,7 +1584,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_number_font_size',
+                'id'                    => 'css_res_t_asex_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1597,7 +1597,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_number_font_weight',
+                'id'                    => 'css_res_t_asex_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1613,7 +1613,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_number_lheight',
+                'id'                    => 'css_res_t_asex_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1626,7 +1626,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_number_padding_vertical',
+                'id'                    => 'css_res_t_asex_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1639,7 +1639,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_number_padding_horizontal',
+                'id'                    => 'css_res_t_asex_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1652,7 +1652,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_currency_font_size',
+                'id'                    => 'css_res_t_asex_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1665,7 +1665,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_currency_font_weight',
+                'id'                    => 'css_res_t_asex_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1681,7 +1681,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_currency_lheight',
+                'id'                    => 'css_res_t_asex_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1694,7 +1694,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_currency_letter',
+                'id'                    => 'css_res_t_asex_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1707,7 +1707,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_time_font_size',
+                'id'                    => 'css_res_t_asex_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1720,7 +1720,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_time_font_weight',
+                'id'                    => 'css_res_t_asex_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1736,7 +1736,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_time_lheight',
+                'id'                    => 'css_res_t_asex_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1749,7 +1749,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_time_letter',
+                'id'                    => 'css_res_t_asex_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1762,7 +1762,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_option_line_border_width',
+                'id'                    => 'css_res_t_asex_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1775,7 +1775,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_option_font_size',
+                'id'                    => 'css_res_t_asex_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1788,7 +1788,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_option_font_weight',
+                'id'                    => 'css_res_t_asex_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1804,7 +1804,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_option_lheight',
+                'id'                    => 'css_res_t_asex_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1817,7 +1817,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_option_letter',
+                'id'                    => 'css_res_t_asex_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1830,7 +1830,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin bottom( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_margin_bottom_option',
+                'id'                    => 'css_res_t_asex_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1843,7 +1843,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_padding_vertical_option',
+                'id'                    => 'css_res_t_asex_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1856,7 +1856,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_pricing_css_padding_horizontal_option',
+                'id'                    => 'css_res_t_asex_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1869,7 +1869,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_border_width',
+                'id'                    => 'css_res_t_asex_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1882,7 +1882,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_border_radius',
+                'id'                    => 'css_res_t_asex_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1895,7 +1895,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Top( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_margin_top',
+                'id'                    => 'css_res_t_asex_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1908,7 +1908,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Bottom( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_margin_bottom',
+                'id'                    => 'css_res_t_asex_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1921,7 +1921,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_padding_vertical',
+                'id'                    => 'css_res_t_asex_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1934,7 +1934,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_padding_horizontal',
+                'id'                    => 'css_res_t_asex_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1947,7 +1947,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_out_line_width',
+                'id'                    => 'css_res_t_asex_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1960,7 +1960,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_out_line_offset',
+                'id'                    => 'css_res_t_asex_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1973,7 +1973,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( typography button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_button_font_size',
+                'id'                    => 'css_res_t_asex_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -1986,7 +1986,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( typography button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_button_font_weight',
+                'id'                    => 'css_res_t_asex_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2002,7 +2002,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( typography button ) ', 'monalisa'),
-                'id'                    => 'css_res_t_as_button_css_button_letter_spacing',
+                'id'                    => 'css_res_t_asex_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2039,7 +2039,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_border_width',
+                'id'                    => 'css_res_p_asex_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2052,7 +2052,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_border_radius',
+                'id'                    => 'css_res_p_asex_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2065,7 +2065,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Bottom ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_margin_bottom',
+                'id'                    => 'css_res_p_asex_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2078,7 +2078,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_padding_vertical',
+                'id'                    => 'css_res_p_asex_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2091,7 +2091,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_padding_horizontal',
+                'id'                    => 'css_res_p_asex_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2104,7 +2104,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_border_width',
+                'id'                    => 'css_res_p_asex_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2117,7 +2117,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius - Top( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_border_radius_top',
+                'id'                    => 'css_res_p_asex_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2130,7 +2130,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius - Bottom( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_border_radius_bottom',
+                'id'                    => 'css_res_p_asex_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2143,7 +2143,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_font_size',
+                'id'                    => 'css_res_p_asex_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2156,7 +2156,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_font_weight',
+                'id'                    => 'css_res_p_asex_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2172,7 +2172,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_lheight',
+                'id'                    => 'css_res_p_asex_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2185,7 +2185,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_letter',
+                'id'                    => 'css_res_p_asex_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2198,7 +2198,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Bottom ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_margin_bottom',
+                'id'                    => 'css_res_p_asex_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2211,7 +2211,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_padding_vertical',
+                'id'                    => 'css_res_p_asex_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2224,7 +2224,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( title ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_title_padding_horizontal',
+                'id'                    => 'css_res_p_asex_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2237,7 +2237,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing label ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_label_css_number_font_weight',
+                'id'                    => 'css_res_p_asex_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2253,7 +2253,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_number_font_size',
+                'id'                    => 'css_res_p_asex_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2266,7 +2266,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_number_font_weight',
+                'id'                    => 'css_res_p_asex_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2282,7 +2282,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_number_lheight',
+                'id'                    => 'css_res_p_asex_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2295,7 +2295,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_number_padding_vertical',
+                'id'                    => 'css_res_p_asex_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2308,7 +2308,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( pricing number ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_number_padding_horizontal',
+                'id'                    => 'css_res_p_asex_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2321,7 +2321,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_currency_font_size',
+                'id'                    => 'css_res_p_asex_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2334,7 +2334,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_currency_font_weight',
+                'id'                    => 'css_res_p_asex_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2350,7 +2350,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_currency_lheight',
+                'id'                    => 'css_res_p_asex_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2363,7 +2363,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( pricing currency ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_currency_letter',
+                'id'                    => 'css_res_p_asex_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2376,7 +2376,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_time_font_size',
+                'id'                    => 'css_res_p_asex_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2389,7 +2389,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_time_font_weight',
+                'id'                    => 'css_res_p_asex_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2405,7 +2405,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_time_lheight',
+                'id'                    => 'css_res_p_asex_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2418,7 +2418,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( pricing time ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_time_letter',
+                'id'                    => 'css_res_p_asex_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2431,7 +2431,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_option_line_border_width',
+                'id'                    => 'css_res_p_asex_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2444,7 +2444,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_option_font_size',
+                'id'                    => 'css_res_p_asex_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2457,7 +2457,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_option_font_weight',
+                'id'                    => 'css_res_p_asex_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2473,7 +2473,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Line Height( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_option_lheight',
+                'id'                    => 'css_res_p_asex_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2486,7 +2486,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_option_letter',
+                'id'                    => 'css_res_p_asex_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2499,7 +2499,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin bottom( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_margin_bottom_option',
+                'id'                    => 'css_res_p_asex_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2512,7 +2512,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_padding_vertical_option',
+                'id'                    => 'css_res_p_asex_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2525,7 +2525,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( pricing option ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_pricing_css_padding_horizontal_option',
+                'id'                    => 'css_res_p_asex_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2538,7 +2538,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Width( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_border_width',
+                'id'                    => 'css_res_p_asex_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2551,7 +2551,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Border Radius( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_border_radius',
+                'id'                    => 'css_res_p_asex_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2564,7 +2564,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Top( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_margin_top',
+                'id'                    => 'css_res_p_asex_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2577,7 +2577,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Margin Bottom( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_margin_bottom',
+                'id'                    => 'css_res_p_asex_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2590,7 +2590,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Vertical( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_padding_vertical',
+                'id'                    => 'css_res_p_asex_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2603,7 +2603,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Padding Horizontal( pricing button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_padding_horizontal',
+                'id'                    => 'css_res_p_asex_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2616,7 +2616,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_out_line_width',
+                'id'                    => 'css_res_p_asex_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2629,7 +2629,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_out_line_offset',
+                'id'                    => 'css_res_p_asex_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2642,7 +2642,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Size( typography button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_button_font_size',
+                'id'                    => 'css_res_p_asex_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2655,7 +2655,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Font Weight( typography button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_button_font_weight',
+                'id'                    => 'css_res_p_asex_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2671,7 +2671,7 @@ class AS_Pricing extends as_module {
             array
                 (
                 'label'                 => __('Letter Spacing( typography button ) ', 'monalisa'),
-                'id'                    => 'css_res_p_as_button_css_button_letter_spacing',
+                'id'                    => 'css_res_p_asex_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
@@ -2706,37 +2706,37 @@ class AS_Pricing extends as_module {
         ?>
         <?php
         $style_pricing = '';
-        if ($options['as_style_pricing'] == 'style_2') {
+        if ($options['asex_style_pricing'] == 'style_2') {
             $style_pricing = ' as-pricing-style-2';
         }
         ?>
         <div class="dslc-accordion as-pricing-wrapper as-pricing-style-2">
-            <?php if ($options['as_pricing_label'] != 'none') { ?>
-                <div class="as-pricing-label"><span><?php echo esc_html($options['as_pricing_label_css_number']); ?></span></div>
+            <?php if ($options['asex_pricing_label'] != 'none') { ?>
+                <div class="as-pricing-label"><span><?php echo esc_html($options['asex_pricing_label_css_number']); ?></span></div>
             <?php } ?>
 
-            <div class="as-pricing-title"><h3 class="dslca-editable-content" data-id="as_pricing_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_pricing_title']); ?></h3></div>
+            <div class="as-pricing-title"><h3 class="dslca-editable-content" data-id="asex_pricing_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_pricing_title']); ?></h3></div>
             <div class="as-pricing-number-wrapper">
-                <?php if ($options['as_style_position_currency'] == 'style_1') { ?>
-                    <sup class="as-pricing-currency"><?php echo esc_html($options['as_pricing_css_currency']); ?></sup>
+                <?php if ($options['asex_style_position_currency'] == 'style_1') { ?>
+                    <sup class="as-pricing-currency"><?php echo esc_html($options['asex_pricing_css_currency']); ?></sup>
                 <?php } ?>
-                <span class="as-pricing-number"><?php echo esc_html($options['as_pricing_css_number']); ?></span>
-                <?php if ($options['as_style_position_currency'] == 'style_2') { ?>
-                    <sup class="as-pricing-currency"><?php echo esc_html($options['as_pricing_css_currency']); ?></sup>
+                <span class="as-pricing-number"><?php echo esc_html($options['asex_pricing_css_number']); ?></span>
+                <?php if ($options['asex_style_position_currency'] == 'style_2') { ?>
+                    <sup class="as-pricing-currency"><?php echo esc_html($options['asex_pricing_css_currency']); ?></sup>
                 <?php } ?>
-                <span class="as-pricing-time"><?php echo esc_attr($options['as_pricing_css_time']); ?></span>
+                <span class="as-pricing-time"><?php echo esc_attr($options['asex_pricing_css_time']); ?></span>
             </div>
-            <?php if ($options['as_style_pricing'] == 'style_1') { ?>
+            <?php if ($options['asex_style_pricing'] == 'style_1') { ?>
                 <div class="as-button-pricing">
                     <?php
                     $duration_hover = '';
-                    $value_duration = $options['as_button_css_duration_hover'];
+                    $value_duration = $options['asex_button_css_duration_hover'];
                     if ($value_duration != '') {
                         $duration_hover = 'style="-webkit-transition: all ' . $value_duration . 'ms ease;-moz-transition: all ' . $value_duration . 'ms ease;-ms-transition: all ' . $value_duration . 'ms ease;-o-transition: all ' . $value_duration . 'ms ease;transition: all ' . $value_duration . 'ms ease;"';
                     }
                     ?>
-                    <a href="<?php echo do_shortcode($options['as_button_url']); ?>" target="<?php echo esc_attr($options['as_button_target']); ?>" <?php echo ($duration_hover); ?>>
-                        <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_button_text']); ?></span>
+                    <a href="<?php echo do_shortcode($options['asex_button_url']); ?>" target="<?php echo esc_attr($options['asex_button_target']); ?>" <?php echo ($duration_hover); ?>>
+                        <span class="dslca-editable-content" data-id="asex_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_button_text']); ?></span>
                     </a>
                 </div>
             <?php } ?>
@@ -2766,7 +2766,7 @@ class AS_Pricing extends as_module {
 
                     <li class="dslc-accordion-item">
                         <div class="dslc-accordion-header">
-                            <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'as_extension'); ?></span>
+                            <span class="dslc-accordion-title" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php _e('CLICK TO EDIT', 'asex'); ?></span>
                             <?php if ($dslc_is_admin) : ?>
                                 <div class="dslca-accordion-action-hooks">
                                     <span class="dslca-move-up-accordion-hook"><span class="dslca-icon dslc-icon-arrow-up"></span></span>
@@ -2784,17 +2784,17 @@ class AS_Pricing extends as_module {
                     <span class="dslca-add-accordion-hook"><span class="dslca-icon dslc-icon-plus"></span></span>
                 </div>
             <?php endif; ?>
-            <?php if ($options['as_style_pricing'] == 'style_2') { ?>
+            <?php if ($options['asex_style_pricing'] == 'style_2') { ?>
                 <div class="as-button-pricing">
                     <?php
                     $duration_hover = '';
-                    $value_duration = $options['as_button_css_duration_hover'];
+                    $value_duration = $options['asex_button_css_duration_hover'];
                     if ($value_duration != '') {
                         $duration_hover = 'style="-webkit-transition: all ' . $value_duration . 'ms ease;-moz-transition: all ' . $value_duration . 'ms ease;-ms-transition: all ' . $value_duration . 'ms ease;-o-transition: all ' . $value_duration . 'ms ease;transition: all ' . $value_duration . 'ms ease;"';
                     }
                     ?>
-                    <a href="<?php echo do_shortcode($options['as_button_url']); ?>" target="<?php echo esc_attr($options['as_button_target']); ?>" <?php echo $duration_hover; ?>>
-                        <span class="dslca-editable-content" data-id="as_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['as_button_text']); ?></span>
+                    <a href="<?php echo do_shortcode($options['asex_button_url']); ?>" target="<?php echo esc_attr($options['asex_button_target']); ?>" <?php echo $duration_hover; ?>>
+                        <span class="dslca-editable-content" data-id="asex_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_button_text']); ?></span>
                     </a>
                 </div>
             <?php } ?>

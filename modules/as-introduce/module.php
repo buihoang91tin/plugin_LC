@@ -1,6 +1,6 @@
 <?php
 
-class AS_Introduce extends as_module {
+class ASEX_Introduce extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,7 +9,7 @@ class AS_Introduce extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Introduce';
+        $this->module_id       = 'ASEX_Introduce';
         $this->module_title    = __('Introduce', 'monalisa');
         $this->module_icon     = 'info';
         $this->module_category = 'as - Info Box';
@@ -330,7 +330,7 @@ class AS_Introduce extends as_module {
              */
             array(
                 'label'             => __('Image Upload', 'monalisa'),
-                'id'                => 'as_introduce_upload',
+                'id'                => 'asex_introduce_upload',
                 'std'               => '',
                 'type'              => 'image',
                 'refresh_on_change' => false,
@@ -338,8 +338,8 @@ class AS_Introduce extends as_module {
                 'tab'               => 'Image',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
-                'id'                    => 'as_introduce_border_radius',
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'asex_introduce_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -350,8 +350,8 @@ class AS_Introduce extends as_module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Size', 'as_extension'),
-                'id'                    => 'as_introduce_size',
+                'label'                 => __('Size', 'asex'),
+                'id'                    => 'asex_introduce_size',
                 'std'                   => '32',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -362,8 +362,8 @@ class AS_Introduce extends as_module {
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
-                'id'                    => 'as_introduce_margin_bottom',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'asex_introduce_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -462,7 +462,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Padding Vertical', 'monalisa'),
-                'id'                    => 'as_introduce_decription_padding_vertical',
+                'id'                    => 'asex_introduce_decription_padding_vertical',
                 'std'                   => '28',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -477,7 +477,7 @@ class AS_Introduce extends as_module {
              */
             array(
                 'label'   => __('Soial link 1', 'monalisa'),
-                'id'      => 'as_introduce_social_link_1',
+                'id'      => 'asex_introduce_social_link_1',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
@@ -485,7 +485,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'             => __('Icon', 'monalisa'),
-                'id'                => 'as_introduce_social_icon_1',
+                'id'                => 'asex_introduce_social_icon_1',
                 'std'               => 'facebook',
                 'type'              => 'icon',
                 'section'           => 'styling',
@@ -494,7 +494,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'   => __('Soial link 2', 'monalisa'),
-                'id'      => 'as_introduce_social_link_2',
+                'id'      => 'asex_introduce_social_link_2',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
@@ -502,7 +502,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'             => __('Icon', 'monalisa'),
-                'id'                => 'as_introduce_social_icon_2',
+                'id'                => 'asex_introduce_social_icon_2',
                 'std'               => 'youtube',
                 'type'              => 'icon',
                 'section'           => 'styling',
@@ -511,7 +511,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'   => __('Soial link 3', 'monalisa'),
-                'id'      => 'as_introduce_social_link_3',
+                'id'      => 'asex_introduce_social_link_3',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
@@ -519,7 +519,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'             => __('Icon', 'monalisa'),
-                'id'                => 'as_introduce_social_icon_3',
+                'id'                => 'asex_introduce_social_icon_3',
                 'std'               => 'google',
                 'type'              => 'icon',
                 'section'           => 'styling',
@@ -528,7 +528,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'   => __('Soial link 4', 'monalisa'),
-                'id'      => 'as_introduce_social_link_4',
+                'id'      => 'asex_introduce_social_link_4',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
@@ -536,7 +536,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'             => __('Icon', 'monalisa'),
-                'id'                => 'as_introduce_social_icon_4',
+                'id'                => 'asex_introduce_social_icon_4',
                 'std'               => 'pinterest',
                 'type'              => 'icon',
                 'section'           => 'styling',
@@ -545,7 +545,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'   => __('Soial link 5', 'monalisa'),
-                'id'      => 'as_introduce_social_link_5',
+                'id'      => 'asex_introduce_social_link_5',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
@@ -553,7 +553,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'             => __('Icon', 'monalisa'),
-                'id'                => 'as_introduce_social_icon_5',
+                'id'                => 'asex_introduce_social_icon_5',
                 'std'               => 'dribbble',
                 'type'              => 'icon',
                 'section'           => 'styling',
@@ -562,7 +562,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Padding Vertical', 'monalisa'),
-                'id'                    => 'as_introduce_social_padding_vertical',
+                'id'                    => 'asex_introduce_social_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -574,7 +574,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'monalisa'),
-                'id'                    => 'as_introduce_social_padding_horizontal',
+                'id'                    => 'asex_introduce_social_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -586,7 +586,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Size', 'monalisa'),
-                'id'                    => 'as_introduce_social_font_size',
+                'id'                    => 'asex_introduce_social_font_size',
                 'std'                   => '19',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -598,7 +598,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('BG Color', 'monalisa'),
-                'id'                    => 'as_introduce_social_bgcolor',
+                'id'                    => 'asex_introduce_social_bgcolor',
                 'std'                   => 'rgba(189, 36, 36, 0)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -609,7 +609,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Color', 'monalisa'),
-                'id'                    => 'as_introduce_social_color',
+                'id'                    => 'asex_introduce_social_color',
                 'std'                   => 'rgb(0, 179, 253)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -619,8 +619,8 @@ class AS_Introduce extends as_module {
                 'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
-                'id'                    => 'as_introduce_social_border',
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'asex_introduce_social_border',
                 'std'                   => 'rgba(189, 36, 36, 0)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -630,8 +630,8 @@ class AS_Introduce extends as_module {
                 'tab'                   => __('Socials', 'monalisa'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
-                'id'                    => 'as_introduce_social_border_width',
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'asex_introduce_social_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -643,7 +643,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Border Style', 'monalisa'),
-                'id'                    => 'as_introduce_social_border_style',
+                'id'                    => 'asex_introduce_social_border_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
@@ -671,7 +671,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Border Radius', 'monalisa'),
-                'id'                    => 'as_introduce_social_border_radius',
+                'id'                    => 'asex_introduce_social_border_radius',
                 'std'                   => '2',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -683,7 +683,7 @@ class AS_Introduce extends as_module {
             ),
             array(
                 'label'                 => __('Margin Bottom', 'monalisa'),
-                'id'                    => 'as_introduce_social_margin_bottom',
+                'id'                    => 'asex_introduce_social_margin_bottom',
                 'std'                   => '2',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1064,14 +1064,14 @@ class AS_Introduce extends as_module {
                         </div>
                         <!-- .dslc-info-box-title -->
                     <?php endif; ?>
-                    <?php if (in_array('image', $elements) && $options['as_introduce_upload'] != ""): ?>
+                    <?php if (in_array('image', $elements) && $options['asex_introduce_upload'] != ""): ?>
                         <div class="as-info-box-image-wrapper">
                             <?php if ($options['title_link'] != '') : ?>
                                 <a href="<?php echo esc_url($options['title_link']); ?>" target="<?php echo esc_attr($options['title_link_target']); ?>">
-                                    <image src="<?php echo esc_url($options['as_introduce_upload']); ?>"/>
+                                    <image src="<?php echo esc_url($options['asex_introduce_upload']); ?>"/>
                                 </a>
                             <?php else : ?>
-                                <image src="<?php echo esc_url($options['as_introduce_upload']); ?>" />
+                                <image src="<?php echo esc_url($options['asex_introduce_upload']); ?>" />
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
@@ -1093,11 +1093,11 @@ class AS_Introduce extends as_module {
                         <?php if (in_array('Social', $elements)):$i = 1; ?>
                             <?php
                             while ($i < 6):
-                                $url  = $options['as_introduce_social_link_' . $i];
-                                $icon = $options['as_introduce_social_icon_' . $i];
+                                $url  = $options['asex_introduce_social_link_' . $i];
+                                $icon = $options['asex_introduce_social_icon_' . $i];
                                 if ($url != ''):
                                     ?>
-                                    <a href="<?php echo esc_url($options['as_introduce_social_link_' . $i]) ?>"><span class="dslc-icon dslc-icon-<?php echo esc_attr($icon) ?>"></span></a>
+                                    <a href="<?php echo esc_url($options['asex_introduce_social_link_' . $i]) ?>"><span class="dslc-icon dslc-icon-<?php echo esc_attr($icon) ?>"></span></a>
                                         <?php
                                     endif;
                                     $i+=1;

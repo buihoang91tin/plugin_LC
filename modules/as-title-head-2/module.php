@@ -1,9 +1,9 @@
 <?php
 
-class AS_Heading_Title_Module_2 extends as_module {
+class ASEX_Heading_Title_Module_2 extends ASEX_MODULE {
 
     // Module Attributes
-    var $module_id       = 'AS_Heading_Title_Module_2';
+    var $module_id       = 'ASEX_Heading_Title_Module_2';
     var $module_title    = 'AS - Heading Title 2';
     var $module_icon     = 'th-list';
     var $module_category = 'as - Headding';
@@ -38,27 +38,27 @@ class AS_Heading_Title_Module_2 extends as_module {
             array(
                 'label'   => __('Elements', 'live-composer-page-builder'),
                 'id'      => 'elements',
-                'std'     => 'as_title as_sub_title as_line_heading',
+                'std'     => 'asex_title asex_sub_title asex_line_heading',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
                         'label' => __('Title', 'live-composer-page-builder'),
-                        'value' => 'as_title'
+                        'value' => 'asex_title'
                     ),
                     array(
                         'label' => __('Sub Title', 'live-composer-page-builder'),
-                        'value' => 'as_sub_title'
+                        'value' => 'asex_sub_title'
                     ),
                     array(
                         'label' => __('Line Heading', 'live-composer-page-builder'),
-                        'value' => 'as_line_heading'
+                        'value' => 'asex_line_heading'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
                 'label'      => __('Title', 'live-composer-page-builder'),
-                'id'         => 'as_title',
+                'id'         => 'asex_title',
                 'std'        => __('CLICK TO EDIT', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
@@ -66,7 +66,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'      => __('Sub Title', 'live-composer-page-builder'),
-                'id'         => 'as_sub_title',
+                'id'         => 'asex_sub_title',
                 'std'        => __('Sub Title', 'live-composer-page-builder'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
@@ -84,7 +84,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'             => __('Position Subtitle with Title', 'live-composer-page-builder'),
-                'id'                => 'as_position_subtitle',
+                'id'                => 'asex_position_subtitle',
                 'std'               => 'bottom',
                 'type'              => 'select',
                 'choices'           => array(
@@ -102,7 +102,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Borders', 'live-composer-page-builder'),
-                'id'                    => 'as_css_border_trbl',
+                'id'                    => 'asex_css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
@@ -130,7 +130,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Border Color', 'live-composer-page-builder'),
-                'id'                    => 'as_css_border_color',
+                'id'                    => 'asex_css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -140,7 +140,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Border Width', 'live-composer-page-builder'),
-                'id'                    => 'as_css_border_width',
+                'id'                    => 'asex_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -151,7 +151,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Border Radius', 'live-composer-page-builder'),
-                'id'                    => 'as_css_border_radius',
+                'id'                    => 'asex_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -162,7 +162,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __(' BG Color', 'live-composer-page-builder'),
-                'id'                    => 'as_css_main_bg_color',
+                'id'                    => 'asex_css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -172,7 +172,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('BG Image', 'live-composer-page-builder'),
-                'id'                    => 'as_css_main_bg_img',
+                'id'                    => 'asex_css_main_bg_img',
                 'std'                   => '',
                 'type'                  => 'image',
                 'refresh_on_change'     => false,
@@ -182,7 +182,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('BG Image Repeat', 'live-composer-page-builder'),
-                'id'                    => 'as_css_main_bg_img_repeat',
+                'id'                    => 'asex_css_main_bg_img_repeat',
                 'std'                   => 'repeat',
                 'type'                  => 'select',
                 'choices'               => array(
@@ -210,7 +210,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('BG Image Attachment', 'live-composer-page-builder'),
-                'id'                    => 'as_css_main_bg_img_attch',
+                'id'                    => 'asex_css_main_bg_img_attch',
                 'std'                   => 'scroll',
                 'type'                  => 'select',
                 'choices'               => array(
@@ -230,7 +230,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('BG Image Position', 'live-composer-page-builder'),
-                'id'                    => 'as_css_main_bg_img_pos',
+                'id'                    => 'asex_css_main_bg_img_pos',
                 'std'                   => 'top left',
                 'type'                  => 'select',
                 'choices'               => array(
@@ -278,7 +278,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
-                'id'                    => 'as_css_margin_bottom',
+                'id'                    => 'asex_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -289,7 +289,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
-                'id'                    => 'as_css_padding_vertical',
+                'id'                    => 'asex_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -302,7 +302,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
-                'id'                    => 'as_css_padding_horizontal',
+                'id'                    => 'asex_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -313,7 +313,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Width', 'live-composer-page-builder'),
-                'id'                    => 'as_css_content_width',
+                'id'                    => 'asex_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -327,7 +327,7 @@ class AS_Heading_Title_Module_2 extends as_module {
              */
             array(
                 'label'                 => __('Background', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_background',
+                'id'                    => 'asex_css_title_background',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -338,7 +338,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_padding_horizontal',
+                'id'                    => 'asex_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -350,7 +350,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_padding_vertical',
+                'id'                    => 'asex_css_title_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -362,7 +362,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Margin Horizontal', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_margin_horizontal',
+                'id'                    => 'asex_css_title_margin_horizontal',
                 'std'                   => '',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -374,7 +374,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_color',
+                'id'                    => 'asex_css_title_color',
                 'std'                   => '#403c34',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -385,7 +385,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Font Size', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_font_size',
+                'id'                    => 'asex_css_title_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -397,7 +397,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Font Weight', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_font_weight',
+                'id'                    => 'asex_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -412,7 +412,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_font_family',
+                'id'                    => 'asex_css_title_font_family',
                 'std'                   => 'Arvo',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -423,7 +423,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Line Height', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_line_height',
+                'id'                    => 'asex_css_title_line_height',
                 'std'                   => '28',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -435,7 +435,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_letter_spacing',
+                'id'                    => 'asex_css_title_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -447,7 +447,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
-                'id'                    => 'as_css_title_margin',
+                'id'                    => 'asex_css_title_margin',
                 'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -462,7 +462,7 @@ class AS_Heading_Title_Module_2 extends as_module {
              */
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
-                'id'                    => 'as_css_subtitle_color',
+                'id'                    => 'asex_css_subtitle_color',
                 'std'                   => '#00bad0',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -473,7 +473,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Font Size', 'live-composer-page-builder'),
-                'id'                    => 'as_css_subtitle_font_size',
+                'id'                    => 'asex_css_subtitle_font_size',
                 'std'                   => '16',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -485,7 +485,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Font Weight', 'live-composer-page-builder'),
-                'id'                    => 'as_css_subtitle_font_weight',
+                'id'                    => 'asex_css_subtitle_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -500,7 +500,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
-                'id'                    => 'as_css_subtitle_font_family',
+                'id'                    => 'asex_css_subtitle_font_family',
                 'std'                   => 'Arvo',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -511,7 +511,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Line Height', 'live-composer-page-builder'),
-                'id'                    => 'as_css_subtitle_line_height',
+                'id'                    => 'asex_css_subtitle_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -523,7 +523,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Letter Spacing', 'live-composer-page-builder'),
-                'id'                    => 'as_css_subtitle_letter_spacing',
+                'id'                    => 'asex_css_subtitle_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -535,7 +535,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
-                'id'                    => 'as_css_subtitle_margin',
+                'id'                    => 'asex_css_subtitle_margin',
                 'std'                   => '25',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -550,7 +550,7 @@ class AS_Heading_Title_Module_2 extends as_module {
              */
             array(
                 'label'                 => __('BG Color', 'live-composer-page-builder'),
-                'id'                    => 'as_line_heading_css_bg_color',
+                'id'                    => 'asex_line_heading_css_bg_color',
                 'std'                   => '#212121',
                 'type'                  => 'color',
                 'refresh_on_change'     => true,
@@ -561,7 +561,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Height', 'live-composer-page-builder'),
-                'id'                    => 'as_line_heading_height',
+                'id'                    => 'asex_line_heading_height',
                 'std'                   => '1',
                 'type'                  => 'slider',
                 'refresh_on_change'     => true,
@@ -575,7 +575,7 @@ class AS_Heading_Title_Module_2 extends as_module {
             ),
             array(
                 'label'                 => __('Margin Top', 'live-composer-page-builder'),
-                'id'                    => 'as_line_heading_height_margin_top',
+                'id'                    => 'asex_line_heading_height_margin_top',
                 'std'                   => '13',
                 'type'                  => 'slider',
                 'refresh_on_change'     => true,
@@ -896,47 +896,47 @@ class AS_Heading_Title_Module_2 extends as_module {
         <!-- HEADING TITLE -->
         <div class="as-heading-wrapper">
             <div class="as-heading-title-2">
-                <?php if ($options['as_position_subtitle'] == 'top') : ?>
-                    <?php if (in_array('as_sub_title', $elements)) : ?>
+                <?php if ($options['asex_position_subtitle'] == 'top') : ?>
+                    <?php if (in_array('asex_sub_title', $elements)) : ?>
                         <div class="as-small-subtitle-heading">
                             <?php if ($dslc_is_admin) : ?>
-                                <div class="dslca-editable-content" data-id="as_sub_title">
-                                    <?php echo stripslashes($options['as_sub_title']); ?>
+                                <div class="dslca-editable-content" data-id="asex_sub_title">
+                                    <?php echo stripslashes($options['asex_sub_title']); ?>
                                 </div>
                                 <div class="dslca-wysiwyg-actions-edit">
                                     <span class="dslca-wysiwyg-actions-edit-hook"><?php echo __('Edit Subtitle', 'live-composer-page-builder'); ?></span>
                                 </div>
                             <?php else : ?>
-                                <?php echo stripslashes($options['as_sub_title']); ?>
+                                <?php echo stripslashes($options['asex_sub_title']); ?>
                             <?php endif; ?>
                         </div>
                         <div class="clearfix"></div>
                     <?php endif; ?>
                 <?php endif; ?>
-                <?php if (in_array('as_title', $elements)) : ?>
+                <?php if (in_array('asex_title', $elements)) : ?>
                     <?php if ($dslc_is_admin) : ?>
-                        <h3 class="dslca-editable-content as-big-title-heading" data-id="as_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>>
-                            <?php echo esc_html($options['as_title']); ?>
+                        <h3 class="dslca-editable-content as-big-title-heading" data-id="asex_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>>
+                            <?php echo esc_html($options['asex_title']); ?>
                         </h3>
                     <?php else : ?>
                         <h3 class="as-big-title-heading">
-                            <?php echo esc_html($options['as_title']); ?>
+                            <?php echo esc_html($options['asex_title']); ?>
                         </h3>
                     <?php endif; ?>
                 <?php endif; ?>
-                <?php if ($options['as_position_subtitle'] == 'bottom') : ?>
-                    <?php if (in_array('as_sub_title', $elements)) : ?>
+                <?php if ($options['asex_position_subtitle'] == 'bottom') : ?>
+                    <?php if (in_array('asex_sub_title', $elements)) : ?>
                         <div class="clearfix"></div>
                         <div class="as-small-subtitle-heading">
                             <?php if ($dslc_is_admin) : ?>
-                                <div class="dslca-editable-content" data-id="as_sub_title">
-                                    <?php echo stripslashes($options['as_sub_title']); ?>
+                                <div class="dslca-editable-content" data-id="asex_sub_title">
+                                    <?php echo stripslashes($options['asex_sub_title']); ?>
                                 </div>
                                 <div class="dslca-wysiwyg-actions-edit">
                                     <span class="dslca-wysiwyg-actions-edit-hook"><?php echo __('Edit Subtitle', 'live-composer-page-builder'); ?></span>
                                 </div>
                             <?php else : ?>
-                                <?php echo stripslashes($options['as_sub_title']); ?>
+                                <?php echo stripslashes($options['asex_sub_title']); ?>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>

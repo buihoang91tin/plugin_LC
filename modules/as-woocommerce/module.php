@@ -1,6 +1,6 @@
 <?php
 
-class AS_WooCommerce_Products extends as_module {
+class ASEX_WooCommerce_Products extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -8,7 +8,7 @@ class AS_WooCommerce_Products extends as_module {
     var $module_category;
 
     function __construct() {
-        $this->module_id       = 'AS_WooCommerce_Products';
+        $this->module_id       = 'ASEX_WooCommerce_Products';
         $this->module_title    = __('AS Products ( Woo )', 'live-composer-page-builder');
         $this->module_icon     = 'dollar';
         $this->module_category = 'as - woo';
@@ -687,7 +687,7 @@ class AS_WooCommerce_Products extends as_module {
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button',
+                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
                 'tab'                   => __('Main Inner', 'live-composer-page-builder'),
@@ -698,7 +698,7 @@ class AS_WooCommerce_Products extends as_module {
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button:hover',
+                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
                 'tab'                   => __('Main Inner', 'live-composer-page-builder'),
@@ -709,7 +709,7 @@ class AS_WooCommerce_Products extends as_module {
                 'std'                   => '#00bad0',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button span.dslc-icon',
+                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button span.dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('Main Inner', 'live-composer-page-builder'),
@@ -720,7 +720,7 @@ class AS_WooCommerce_Products extends as_module {
                 'std'                   => '#00bad0',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button:hover span.dslc-icon',
+                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button:hover span.dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('Main Inner', 'live-composer-page-builder'),
@@ -731,7 +731,7 @@ class AS_WooCommerce_Products extends as_module {
                 'std'                   => '40',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button span.dslc-icon',
+                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button span.dslc-icon',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
@@ -743,7 +743,7 @@ class AS_WooCommerce_Products extends as_module {
                 'std'                   => '16',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button, .product_listing_buttons_wrapper a.as_button.added:before',
+                'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button, .product_listing_buttons_wrapper a.asex_button.added:before',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'ext'                   => 'px',
@@ -756,7 +756,7 @@ class AS_WooCommerce_Products extends as_module {
               'std'                   => '40',
               'type'                  => 'slider',
               'refresh_on_change'     => false,
-              'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button',
+              'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button',
               'affect_on_change_rule' => 'width,height',
               'section'               => 'styling',
               'ext'                   => 'px',
@@ -768,7 +768,7 @@ class AS_WooCommerce_Products extends as_module {
               'std'                   => '25',
               'type'                  => 'slider',
               'refresh_on_change'     => false,
-              'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.as_button',
+              'affect_on_change_el'   => '.as-product-customize .product_listing_buttons_wrapper a.asex_button',
               'affect_on_change_rule' => 'margin-top,margin-bottom',
               'section'               => 'styling',
               'ext'                   => 'px',
@@ -2060,10 +2060,10 @@ if ($query_offset > 0) {
                                                 <div class="product_listing_buttons_wrapper">
                                                     <div class="product_listing_buttons">
                                                         <?php
-                                                        echo apply_filters('woocommerce_loop_add_to_cart_link', sprintf('<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="button as_button as_buy_btn %s product_type_%s"><span class="dslc-icon dslc-icon-shopping-cart"></span><span class="as-loading-woo-img"></span></a>', $product->add_to_cart_url(), esc_attr($product->id), esc_attr($product->get_sku()), esc_attr(isset($quantity) ? $quantity : 1 ), $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '', esc_attr($product->product_type), esc_html($product->add_to_cart_text())), $product);
-                                                        echo '<a data-product-id="' . $product->id . '"  class="button as_button product_show_detail_button as_wishlist_btn" href="javascript:;"><span class="dslc-icon dslc-icon-heart-empty"></span></a>';
-                                                        echo '<a data-product-id="' . $product->id . '"  class="button as_button product_show_detail_button as_compare_btn" href="javascript:;"><span class="dslc-icon dslc-icon-retweet"></span></a>';
-                                                        echo '<a data-product-id="' . $product->id . '"  data-effect="mfp-zoom-in" data-ajax-url="' . admin_url("admin-ajax.php") . '" class="button as_button product_show_detail_button as_quickview_btn" href="#as-product-quickview"><span class="dslc-icon dslc-icon-eye-open"></span></a>';
+                                                        echo apply_filters('woocommerce_loop_add_to_cart_link', sprintf('<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="button asex_button asex_buy_btn %s product_type_%s"><span class="dslc-icon dslc-icon-shopping-cart"></span><span class="as-loading-woo-img"></span></a>', $product->add_to_cart_url(), esc_attr($product->id), esc_attr($product->get_sku()), esc_attr(isset($quantity) ? $quantity : 1 ), $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '', esc_attr($product->product_type), esc_html($product->add_to_cart_text())), $product);
+                                                        echo '<a data-product-id="' . $product->id . '"  class="button asex_button product_show_detail_button asex_wishlist_btn" href="javascript:;"><span class="dslc-icon dslc-icon-heart-empty"></span></a>';
+                                                        echo '<a data-product-id="' . $product->id . '"  class="button asex_button product_show_detail_button asex_compare_btn" href="javascript:;"><span class="dslc-icon dslc-icon-retweet"></span></a>';
+                                                        echo '<a data-product-id="' . $product->id . '"  data-effect="mfp-zoom-in" data-ajax-url="' . admin_url("admin-ajax.php") . '" class="button asex_button product_show_detail_button asex_quickview_btn" href="#as-product-quickview"><span class="dslc-icon dslc-icon-eye-open"></span></a>';
                                                         ?>
                                                         <div class="clearfix"></div> 
                                                     </div>

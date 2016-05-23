@@ -1,6 +1,6 @@
 <?php
 
-class AS_Google_Map extends as_module {
+class ASEX_Google_Map extends ASEX_MODULE {
 
     // Module Attributes
     var $module_id;
@@ -10,8 +10,8 @@ class AS_Google_Map extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Google_Map';
-        $this->module_title    = __('AS - Google Map', 'as_extension');
+        $this->module_id       = 'ASEX_Google_Map';
+        $this->module_title    = __('AS - Google Map', 'asex');
         $this->module_icon     = 'globe';
         $this->module_category = 'as - element';
     }
@@ -24,27 +24,27 @@ class AS_Google_Map extends as_module {
              * General
              */
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Title', 'as_extension'),
+                'label'      => __('Title', 'asex'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -52,216 +52,216 @@ class AS_Google_Map extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'   => __('Google Map Scrool Wheel', 'as_extension'),
+                'label'   => __('Google Map Scrool Wheel', 'asex'),
                 'id'      => 'googlemap_scrlwheel',
                 'std'     => '0',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => '0'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => '1'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Snazzy Maps', 'as_extension'),
+                'label'   => __('Snazzy Maps', 'asex'),
                 'id'      => 'googlemap_snazzy_map',
                 'std'     => '1',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => '1'
                     ),
                     array(
-                        'label' => __('Subtle Grayscale', 'as_extension'),
+                        'label' => __('Subtle Grayscale', 'asex'),
                         'value' => '2'
                     ),
                     array(
-                        'label' => __('Shades of Grey', 'as_extension'),
+                        'label' => __('Shades of Grey', 'asex'),
                         'value' => '3'
                     ),
                     array(
-                        'label' => __('Blue water', 'as_extension'),
+                        'label' => __('Blue water', 'asex'),
                         'value' => '4'
                     ),
                     array(
-                        'label' => __('Pale Dawn', 'as_extension'),
+                        'label' => __('Pale Dawn', 'asex'),
                         'value' => '5'
                     ),
                     array(
-                        'label' => __('Light Monochrome', 'as_extension'),
+                        'label' => __('Light Monochrome', 'asex'),
                         'value' => '6'
                     ),
                     array(
-                        'label' => __('Apple Maps-esque', 'as_extension'),
+                        'label' => __('Apple Maps-esque', 'asex'),
                         'value' => '7'
                     ),
                     array(
-                        'label' => __('Greyscale', 'as_extension'),
+                        'label' => __('Greyscale', 'asex'),
                         'value' => '8'
                     ),
                     array(
-                        'label' => __('Neutral Blue', 'as_extension'),
+                        'label' => __('Neutral Blue', 'asex'),
                         'value' => '9'
                     ),
                     array(
-                        'label' => __('Bright & Bubbly', 'as_extension'),
+                        'label' => __('Bright & Bubbly', 'asex'),
                         'value' => '10'
                     ),
                     array(
-                        'label' => __('Icy Blue', 'as_extension'),
+                        'label' => __('Icy Blue', 'asex'),
                         'value' => '11'
                     ),
                     array(
-                        'label' => __('Blue Gray', 'as_extension'),
+                        'label' => __('Blue Gray', 'asex'),
                         'value' => '12'
                     ),
                     array(
-                        'label' => __('Blue Essence', 'as_extension'),
+                        'label' => __('Blue Essence', 'asex'),
                         'value' => '13'
                     ),
                     array(
-                        'label' => __('Girly', 'as_extension'),
+                        'label' => __('Girly', 'asex'),
                         'value' => '14'
                     ),
                     array(
-                        'label' => __('Retro', 'as_extension'),
+                        'label' => __('Retro', 'asex'),
                         'value' => '15'
                     ),
                 ),
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Width Google Map', 'as_extension'),
-                'id'                    => 'as_width_googlemap',
+                'label'                 => __('Width Google Map', 'asex'),
+                'id'                    => 'asex_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'max'                   => 100,
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
                 'ext'                   => '%',
             ),
             array(
-                'label'                 => __('Height Google Map', 'as_extension'),
-                'id'                    => 'as_height_googlemap',
+                'label'                 => __('Height Google Map', 'asex'),
+                'id'                    => 'asex_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'max'                   => 1500,
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
             ),
             array(
-                'label'   => __('Goole Map Center X', 'as_extension'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'as_extension'),
+                'label'   => __('Goole Map Center X', 'asex'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'asex'),
                 'id'      => 'googlemap_x',
                 'std'     => '12.238791',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Center Y', 'as_extension'),
-                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'as_extension'),
+                'label'   => __('Goole Map Center Y', 'asex'),
+                'help'    => __('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'asex'),
                 'id'      => 'googlemap_y',
                 'std'     => '109.196749',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'   => __('Goole Map Zoom', 'as_extension'),
+                'label'   => __('Goole Map Zoom', 'asex'),
                 'id'      => 'googlemap_zoom',
                 'std'     => '13',
                 'type'    => 'text',
                 'section' => 'styling',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'max'                   => 500,
@@ -269,12 +269,12 @@ class AS_Google_Map extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px'
@@ -282,7 +282,7 @@ class AS_Google_Map extends as_module {
             /* For mark
              */
             array(
-                'label'   => __('Goole Map Mark X', 'as_extension'),
+                'label'   => __('Goole Map Mark X', 'asex'),
                 'id'      => 'googlemap_x_mark',
                 'std'     => '12.238791',
                 'type'    => 'text',
@@ -290,7 +290,7 @@ class AS_Google_Map extends as_module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Map Mark Y', 'as_extension'),
+                'label'   => __('Goole Map Mark Y', 'asex'),
                 'id'      => 'googlemap_y_mark',
                 'std'     => '109.196749',
                 'type'    => 'text',
@@ -298,7 +298,7 @@ class AS_Google_Map extends as_module {
                 'tab'     => 'mark',
             ),
             array(
-                'label'   => __('Goole Mark Title', 'as_extension'),
+                'label'   => __('Goole Mark Title', 'asex'),
                 'id'      => 'google_title_mark',
                 'std'     => 'Dong Hoi City',
                 'type'    => 'text',
@@ -331,12 +331,12 @@ class AS_Google_Map extends as_module {
             array
                 (
                 'label'                 => __('Width Google Map ', 'monalisa'),
-                'id'                    => 'css_res_t_as_width_googlemap',
+                'id'                    => 'css_res_t_asex_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
                 'max'                   => '100',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'responsive',
                 'ext'                   => '%',
@@ -345,12 +345,12 @@ class AS_Google_Map extends as_module {
             array
                 (
                 'label'                 => __('Height Google Map ', 'monalisa'),
-                'id'                    => 'css_res_t_as_height_googlemap',
+                'id'                    => 'css_res_t_asex_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
                 'max'                   => '1500',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'height',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -363,7 +363,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -376,7 +376,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -389,7 +389,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -402,7 +402,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'max'                   => '500',
@@ -417,7 +417,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -449,12 +449,12 @@ class AS_Google_Map extends as_module {
             array
                 (
                 'label'                 => __('Width Google Map ', 'monalisa'),
-                'id'                    => 'css_res_p_as_width_googlemap',
+                'id'                    => 'css_res_p_asex_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
                 'max'                   => '100',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'responsive',
                 'ext'                   => '%',
@@ -463,12 +463,12 @@ class AS_Google_Map extends as_module {
             array
                 (
                 'label'                 => __('Height Google Map ', 'monalisa'),
-                'id'                    => 'css_res_p_as_height_googlemap',
+                'id'                    => 'css_res_p_asex_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
                 'max'                   => '1500',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'height',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -481,7 +481,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -494,7 +494,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_googlemap',
+                'affect_on_change_el'   => '.asex_googlemap',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -507,7 +507,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -520,7 +520,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'max'                   => '500',
@@ -535,7 +535,7 @@ class AS_Google_Map extends as_module {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.as_google_map_wrapper',
+                'affect_on_change_el'   => '.asex_google_map_wrapper',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
@@ -572,16 +572,16 @@ class AS_Google_Map extends as_module {
           else
           $elements = array(); */
 
-        $elementID = uniqid('as_googlemap_');
+        $elementID = uniqid('asex_googlemap_');
         ?>
         <?php if ($dslc_active): ?>
             <!--<div class="dslc-notification dslc-red"><?php _e('Map live preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing map.', 'monalisa'); ?><br> <?php _e('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'monalisa'); ?></div>-->
-            <div class="as_google_map_wrapper">
-                <div class="as_googlemap" id="<?php echo $elementID; ?>" value="<?php echo esc_attr($options['googlemap_x']); ?>,<?php echo esc_attr($options['googlemap_y']); ?>" scrollwheel="<?php echo esc_attr($options['googlemap_scrlwheel']); ?>" zoom="<?php echo esc_attr($options['googlemap_zoom']); ?>" markposition="<?php echo esc_attr($options['googlemap_x_mark']); ?>,<?php echo esc_attr($options['googlemap_y_mark']); ?>" marktitle="<?php echo esc_attr($options['google_title_mark']); ?>" snapzzymap="<?php echo esc_attr($options['googlemap_snazzy_map']); ?>"></div>
+            <div class="asex_google_map_wrapper">
+                <div class="asex_googlemap" id="<?php echo $elementID; ?>" value="<?php echo esc_attr($options['googlemap_x']); ?>,<?php echo esc_attr($options['googlemap_y']); ?>" scrollwheel="<?php echo esc_attr($options['googlemap_scrlwheel']); ?>" zoom="<?php echo esc_attr($options['googlemap_zoom']); ?>" markposition="<?php echo esc_attr($options['googlemap_x_mark']); ?>,<?php echo esc_attr($options['googlemap_y_mark']); ?>" marktitle="<?php echo esc_attr($options['google_title_mark']); ?>" snapzzymap="<?php echo esc_attr($options['googlemap_snazzy_map']); ?>"></div>
             </div>
         <?php else: ?>
-            <div class="as_google_map_wrapper">
-                <div class="as_googlemap" id="<?php echo $elementID; ?>" value="<?php echo esc_attr($options['googlemap_x']); ?>,<?php echo esc_attr($options['googlemap_y']); ?>" scrollwheel="<?php echo esc_attr($options['googlemap_scrlwheel']); ?>" zoom="<?php echo esc_attr($options['googlemap_zoom']); ?>" markposition="<?php echo esc_attr($options['googlemap_x_mark']); ?>,<?php echo esc_attr($options['googlemap_y_mark']); ?>" marktitle="<?php echo esc_attr($options['google_title_mark']); ?>" snapzzymap="<?php echo esc_attr($options['googlemap_snazzy_map']); ?>"></div>
+            <div class="asex_google_map_wrapper">
+                <div class="asex_googlemap" id="<?php echo $elementID; ?>" value="<?php echo esc_attr($options['googlemap_x']); ?>,<?php echo esc_attr($options['googlemap_y']); ?>" scrollwheel="<?php echo esc_attr($options['googlemap_scrlwheel']); ?>" zoom="<?php echo esc_attr($options['googlemap_zoom']); ?>" markposition="<?php echo esc_attr($options['googlemap_x_mark']); ?>,<?php echo esc_attr($options['googlemap_y_mark']); ?>" marktitle="<?php echo esc_attr($options['google_title_mark']); ?>" snapzzymap="<?php echo esc_attr($options['googlemap_snazzy_map']); ?>"></div>
             </div>
         <?php endif ?>
         <?php

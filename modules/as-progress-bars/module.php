@@ -1,6 +1,6 @@
 <?php
 
-class AS_Progress_Bars extends as_module {
+class ASEX_Progress_Bars extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,8 +9,8 @@ class AS_Progress_Bars extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Progress_Bars';
-        $this->module_title    = __('AS - Progress Bar', 'as_extension');
+        $this->module_id       = 'ASEX_Progress_Bars';
+        $this->module_title    = __('AS - Progress Bar', 'asex');
         $this->module_icon     = 'tasks';
         $this->module_category = 'as - Counter';
     }
@@ -19,29 +19,29 @@ class AS_Progress_Bars extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'      => __('Label', 'as_extension'),
+                'label'      => __('Label', 'asex'),
                 'id'         => 'label',
-                'std'        => __('CLICK TO EDIT', 'as_extension'),
+                'std'        => __('CLICK TO EDIT', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'functionality',
@@ -50,7 +50,7 @@ class AS_Progress_Bars extends as_module {
              * General Settings
              */
             array(
-                'label'                 => __('Amount', 'as_extension'),
+                'label'                 => __('Amount', 'asex'),
                 'id'                    => 'amount',
                 'std'                   => '50',
                 'type'                  => 'slider',
@@ -61,41 +61,41 @@ class AS_Progress_Bars extends as_module {
                 'section'               => 'functionality',
             ),
             array(
-                'label'   => __('Show / Hide Tooltip', 'as_extension'),
+                'label'   => __('Show / Hide Tooltip', 'asex'),
                 'id'      => 'number_percent',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled ', 'as_extension'),
+                        'label' => __('Enabled ', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'functionality',
             ),
             array(
-                'label'   => __('Animation', 'as_extension'),
+                'label'   => __('Animation', 'asex'),
                 'id'      => 'animation',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled ', 'as_extension'),
+                        'label' => __('Enabled ', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'functionality',
             ),
             array(
-                'label'   => __('Animation Speed ( miliseconds )', 'as_extension'),
+                'label'   => __('Animation Speed ( miliseconds )', 'asex'),
                 'id'      => 'animation_speed',
                 'std'     => '1000',
                 'type'    => 'text',
@@ -105,7 +105,7 @@ class AS_Progress_Bars extends as_module {
              * Wrapper Style
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_wrapper_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -115,7 +115,7 @@ class AS_Progress_Bars extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_wrapper_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -125,7 +125,7 @@ class AS_Progress_Bars extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_wrapper_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -136,25 +136,25 @@ class AS_Progress_Bars extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_wrapper_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -164,7 +164,7 @@ class AS_Progress_Bars extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
+                'label'                 => __('Border Radius - Top', 'asex'),
                 'id'                    => 'css_wrapper_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -175,7 +175,7 @@ class AS_Progress_Bars extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
+                'label'                 => __('Border Radius - Bottom', 'asex'),
                 'id'                    => 'css_wrapper_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -186,7 +186,7 @@ class AS_Progress_Bars extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -197,7 +197,7 @@ class AS_Progress_Bars extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Minimum Height', 'as_extension'),
+                'label'                 => __('Minimum Height', 'asex'),
                 'id'                    => 'css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -211,7 +211,7 @@ class AS_Progress_Bars extends as_module {
                 'increment'             => 5
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -222,7 +222,7 @@ class AS_Progress_Bars extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -236,7 +236,7 @@ class AS_Progress_Bars extends as_module {
              * Label
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_label_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -244,10 +244,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_label_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -255,11 +255,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_label_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -267,14 +267,14 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_label_font_family',
                 'std'                   => 'Oswald',
                 'type'                  => 'font',
@@ -282,10 +282,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_label_margin',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -293,11 +293,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_label_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -306,10 +306,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_label_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -318,31 +318,31 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'   => __('Position', 'as_extension'),
+                'label'   => __('Position', 'asex'),
                 'id'      => 'label_position',
                 'std'     => 'above',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Above', 'as_extension'),
+                        'label' => __('Above', 'asex'),
                         'value' => 'above'
                     ),
                     array(
-                        'label' => __('Inside ', 'as_extension'),
+                        'label' => __('Inside ', 'asex'),
                         'value' => 'inside'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('title', 'as_extension'),
+                'tab'     => __('title', 'asex'),
             ),
             /**
              * Loader
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_loader_bg_color',
                 'std'                   => '#f1f1f1',
                 'type'                  => 'color',
@@ -350,10 +350,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_loader_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -361,10 +361,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_loader_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -373,28 +373,28 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_loader_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -402,10 +402,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_loader_border_radius',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -414,10 +414,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_loader_color',
                 'std'                   => '#62cbd7',
                 'type'                  => 'color',
@@ -425,10 +425,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader-inner',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_loader_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -437,10 +437,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_loader_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -449,10 +449,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_loader_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -461,10 +461,10 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             array(
-                'label'                 => __('Size', 'as_extension'),
+                'label'                 => __('Size', 'asex'),
                 'id'                    => 'css_loader_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -473,31 +473,31 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_rule' => 'height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('bar', 'as_extension'),
+                'tab'                   => __('bar', 'asex'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -505,11 +505,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -517,11 +517,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -529,11 +529,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Font Size', 'as_extension'),
+                'label'                 => __('Title - Font Size', 'asex'),
                 'id'                    => 'css_res_t_label_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -541,11 +541,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'as_extension'),
+                'label'                 => __('Title - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_label_margin',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -553,11 +553,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Title - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_label_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -565,11 +565,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Padding Vertical', 'as_extension'),
+                'label'                 => __('Title - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_label_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -577,11 +577,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Margin Bottom', 'as_extension'),
+                'label'                 => __('Bar - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_loader_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -589,11 +589,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Vertical', 'as_extension'),
+                'label'                 => __('Bar - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_loader_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -601,11 +601,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Bar - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_loader_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -613,11 +613,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Size', 'as_extension'),
+                'label'                 => __('Bar - Size', 'asex'),
                 'id'                    => 'css_res_t_loader_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -625,32 +625,32 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader, .dslc-progress-bar-loader-inner',
                 'affect_on_change_rule' => 'height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -658,11 +658,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_wrapper_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -670,11 +670,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_wrapper_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -682,11 +682,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Font Size', 'as_extension'),
+                'label'                 => __('Title - Font Size', 'asex'),
                 'id'                    => 'css_res_p_label_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -694,11 +694,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'as_extension'),
+                'label'                 => __('Title - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_label_margin',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -706,11 +706,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Title - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_label_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -718,11 +718,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Title - Padding Vertical', 'as_extension'),
+                'label'                 => __('Title - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_label_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -730,11 +730,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => 'h4.dslc-progress-bar-label',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Margin Bottom', 'as_extension'),
+                'label'                 => __('Bar - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_loader_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -742,11 +742,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Vertical', 'as_extension'),
+                'label'                 => __('Bar - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_loader_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -754,11 +754,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Bar - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_loader_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -766,11 +766,11 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Bar - Size', 'as_extension'),
+                'label'                 => __('Bar - Size', 'asex'),
                 'id'                    => 'css_res_p_loader_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -778,7 +778,7 @@ class AS_Progress_Bars extends as_module {
                 'affect_on_change_el'   => '.dslc-progress-bar-loader, .dslc-progress-bar-loader-inner',
                 'affect_on_change_rule' => 'height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
         );

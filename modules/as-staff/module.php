@@ -1,8 +1,8 @@
 <?php
 if (dslc_is_module_active('DSLC_Staff'))
-    include AS_EXTENSION_ABS . '/modules/as-staff/functions.php';
+    include ASEX_ABS . '/modules/as-staff/functions.php';
 
-class AS_Staff extends as_module {
+class ASEX_Staff extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -11,8 +11,8 @@ class AS_Staff extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Staff';
-        $this->module_title    = __('Staff Simple', 'as_extension');
+        $this->module_id       = 'ASEX_Staff';
+        $this->module_title    = __('Staff Simple', 'asex');
         $this->module_icon     = 'group';
         $this->module_category = 'as - posts';
     }
@@ -32,236 +32,236 @@ class AS_Staff extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'   => __('Type', 'as_extension'),
+                'label'   => __('Type', 'asex'),
                 'id'      => 'type',
                 'std'     => 'grid',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Grid', 'as_extension'),
+                        'label' => __('Grid', 'asex'),
                         'value' => 'grid'
                     ),
                     array(
-                        'label' => __('Masonry Grid', 'as_extension'),
+                        'label' => __('Masonry Grid', 'asex'),
                         'value' => 'masonry'
                     ),
                     array(
-                        'label' => __('Carousel', 'as_extension'),
+                        'label' => __('Carousel', 'asex'),
                         'value' => 'carousel'
                     )
                 )
             ),
             array(
-                'label' => __('Posts Per Page', 'as_extension'),
+                'label' => __('Posts Per Page', 'asex'),
                 'id'    => 'amount',
                 'std'   => '4',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Pagination', 'as_extension'),
+                'label'   => __('Pagination', 'asex'),
                 'id'      => 'pagination_type',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled',
                     ),
                     array(
-                        'label' => __('Numbered', 'as_extension'),
+                        'label' => __('Numbered', 'asex'),
                         'value' => 'numbered',
                     ),
                     array(
-                        'label' => __('Prev/Next', 'as_extension'),
+                        'label' => __('Prev/Next', 'asex'),
                         'value' => 'prevnext',
                     )
                 ),
             ),
             array(
-                'label'   => __('Items Per Row', 'as_extension'),
+                'label'   => __('Items Per Row', 'asex'),
                 'id'      => 'columns',
                 'std'     => '3',
                 'type'    => 'select',
                 'choices' => $this->shared_options('posts_per_row_choices'),
             ),
             array(
-                'label'   => __('Categories', 'as_extension'),
+                'label'   => __('Categories', 'asex'),
                 'id'      => 'categories',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => $cats_choices
             ),
             array(
-                'label'   => __('Categories Operator', 'as_extension'),
+                'label'   => __('Categories Operator', 'asex'),
                 'id'      => 'categories_operator',
                 'std'     => 'IN',
-                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'as_extension'),
+                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'asex'),
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('IN', 'as_extension'),
+                        'label' => __('IN', 'asex'),
                         'value' => 'IN',
                     ),
                     array(
-                        'label' => __('AND', 'as_extension'),
+                        'label' => __('AND', 'asex'),
                         'value' => 'AND',
                     ),
                     array(
-                        'label' => __('NOT IN', 'as_extension'),
+                        'label' => __('NOT IN', 'asex'),
                         'value' => 'NOT IN',
                     ),
                 )
             ),
             array(
-                'label'   => __('Order By', 'as_extension'),
+                'label'   => __('Order By', 'asex'),
                 'id'      => 'orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Publish Date', 'as_extension'),
+                        'label' => __('Publish Date', 'asex'),
                         'value' => 'date'
                     ),
                     array(
-                        'label' => __('Modified Date', 'as_extension'),
+                        'label' => __('Modified Date', 'asex'),
                         'value' => 'modified'
                     ),
                     array(
-                        'label' => __('Random', 'as_extension'),
+                        'label' => __('Random', 'asex'),
                         'value' => 'rand'
                     ),
                     array(
-                        'label' => __('Alphabetic', 'as_extension'),
+                        'label' => __('Alphabetic', 'asex'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Comment Count', 'as_extension'),
+                        'label' => __('Comment Count', 'asex'),
                         'value' => 'comment_count'
                     ),
                 )
             ),
             array(
-                'label'   => __('Order', 'as_extension'),
+                'label'   => __('Order', 'asex'),
                 'id'      => 'order',
                 'std'     => 'DESC',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Ascending', 'as_extension'),
+                        'label' => __('Ascending', 'asex'),
                         'value' => 'ASC'
                     ),
                     array(
-                        'label' => __('Descending', 'as_extension'),
+                        'label' => __('Descending', 'asex'),
                         'value' => 'DESC'
                     )
                 )
             ),
             array(
-                'label' => __('Offset', 'as_extension'),
+                'label' => __('Offset', 'asex'),
                 'id'    => 'offset',
                 'std'   => '0',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Include (IDs)', 'as_extension'),
+                'label' => __('Include (IDs)', 'asex'),
                 'id'    => 'query_post_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Exclude (IDs)', 'as_extension'),
+                'label' => __('Exclude (IDs)', 'asex'),
                 'id'    => 'query_post_not_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Social - Link Behaviour', 'as_extension'),
+                'label'   => __('Social - Link Behaviour', 'asex'),
                 'id'      => 'social_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Open in same tab', 'as_extension'),
+                        'label' => __('Open in same tab', 'asex'),
                         'value' => '_self'
                     ),
                     array(
-                        'label' => __('Open in new tab', 'as_extension'),
+                        'label' => __('Open in new tab', 'asex'),
                         'value' => '_blank'
                     )
                 ),
-                'tab'     => __('Other', 'as_extension'),
+                'tab'     => __('Other', 'asex'),
             ),
             /**
              * General
              */
             array(
-                'label'   => __('Post Elements', 'as_extension'),
+                'label'   => __('Post Elements', 'asex'),
                 'id'      => 'post_elements',
                 'std'     => 'thumbnail social title position excerpt',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Thumbnail', 'as_extension'),
+                        'label' => __('Thumbnail', 'asex'),
                         'value' => 'thumbnail',
                     ),
                     array(
-                        'label' => __('Social Links', 'as_extension'),
+                        'label' => __('Social Links', 'asex'),
                         'value' => 'social',
                     ),
                     array(
-                        'label' => __('Title', 'as_extension'),
+                        'label' => __('Title', 'asex'),
                         'value' => 'title',
                     ),
                     array(
-                        'label' => __('Position', 'as_extension'),
+                        'label' => __('Position', 'asex'),
                         'value' => 'position',
                     ),
                     array(
-                        'label' => __('Excerpt', 'as_extension'),
+                        'label' => __('Excerpt', 'asex'),
                         'value' => 'excerpt',
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Carousel Elements', 'as_extension'),
+                'label'   => __('Carousel Elements', 'asex'),
                 'id'      => 'carousel_elements',
                 'std'     => 'arrows circles',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Arrows', 'as_extension'),
+                        'label' => __('Arrows', 'asex'),
                         'value' => 'arrows'
                     ),
                     array(
-                        'label' => __('Circles', 'as_extension'),
+                        'label' => __('Circles', 'asex'),
                         'value' => 'circles'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -274,7 +274,7 @@ class AS_Staff extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -285,7 +285,7 @@ class AS_Staff extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -299,25 +299,25 @@ class AS_Staff extends as_module {
              * Separator
              */
             array(
-                'label'   => __('Enable/Disable', 'as_extension'),
+                'label'   => __('Enable/Disable', 'asex'),
                 'id'      => 'separator_enabled',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Row Separator', 'as_extension'),
+                'tab'     => __('Row Separator', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_sep_border_color',
                 'std'                   => '#ededed',
                 'type'                  => 'color',
@@ -325,10 +325,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'as_extension'),
+                'tab'                   => __('Row Separator', 'asex'),
             ),
             array(
-                'label'                 => __('Height', 'as_extension'),
+                'label'                 => __('Height', 'asex'),
                 'id'                    => 'css_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -339,10 +339,10 @@ class AS_Staff extends as_module {
                 'min'                   => 0,
                 'max'                   => 300,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'as_extension'),
+                'tab'                   => __('Row Separator', 'asex'),
             ),
             array(
-                'label'                 => __('Thickness', 'as_extension'),
+                'label'                 => __('Thickness', 'asex'),
                 'id'                    => 'css_sep_thickness',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -353,28 +353,28 @@ class AS_Staff extends as_module {
                 'min'                   => 0,
                 'max'                   => 50,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'as_extension'),
+                'tab'                   => __('Row Separator', 'asex'),
             ),
             array(
-                'label'                 => __('Style', 'as_extension'),
+                'label'                 => __('Style', 'asex'),
                 'id'                    => 'css_sep_style',
                 'std'                   => 'dashed',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'as_extension'),
+                        'label' => __('Invisible', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Solid', 'as_extension'),
+                        'label' => __('Solid', 'asex'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'as_extension'),
+                        'label' => __('Dashed', 'asex'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'as_extension'),
+                        'label' => __('Dotted', 'asex'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -382,13 +382,13 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'as_extension'),
+                'tab'                   => __('Row Separator', 'asex'),
             ),
             /**
              * Thumbnail
              */
             array(
-                'label'                 => __('Text Align', 'as_extension'),
+                'label'                 => __('Text Align', 'asex'),
                 'id'                    => 'css_thumbnail_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -396,28 +396,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslca-post-thumb',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'   => __('Effect Thumbnail', 'as_extension'),
+                'label'   => __('Effect Thumbnail', 'asex'),
                 'id'      => 'effect_hover_img',
                 'std'     => 'normal',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Black & White', 'as_extension'),
+                        'label' => __('Black & White', 'asex'),
                         'value' => 'black_white'
                     ),
                     array(
-                        'label' => __('Normal', 'as_extension'),
+                        'label' => __('Normal', 'asex'),
                         'value' => 'normal'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Thumbnail', 'as_extension'),
+                'tab'     => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_thumbnail_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -425,10 +425,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -436,10 +436,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -448,28 +448,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -477,10 +477,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
+                'label'                 => __('Border Radius - Top', 'asex'),
                 'id'                    => 'css_thumbnail_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -488,11 +488,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner, .dslc-staff-member-thumb img',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
+                'label'                 => __('Border Radius - Bottom', 'asex'),
                 'id'                    => 'css_thumbnail_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -500,11 +500,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-thumb-inner, .dslc-staff-member-thumb img',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -515,10 +515,10 @@ class AS_Staff extends as_module {
                 'ext'                   => 'px',
                 'min'                   => '-100',
                 'max'                   => '100',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -527,10 +527,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -539,56 +539,56 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'   => __('Resize - Height', 'as_extension'),
+                'label'   => __('Resize - Height', 'asex'),
                 'id'      => 'thumb_resize_height',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'as_extension'),
+                'tab'     => __('thumbnail', 'asex'),
             ),
             array(
-                'label'   => __('Resize - Width', 'as_extension'),
+                'label'   => __('Resize - Width', 'asex'),
                 'id'      => 'thumb_resize_width_manual',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'as_extension'),
+                'tab'     => __('thumbnail', 'asex'),
             ),
             array(
-                'label'      => __('Resize - Width', 'as_extension'),
+                'label'      => __('Resize - Width', 'asex'),
                 'id'         => 'thumb_resize_width',
                 'std'        => '',
                 'type'       => 'text',
                 'section'    => 'styling',
-                'tab'        => __('thumbnail', 'as_extension'),
+                'tab'        => __('thumbnail', 'asex'),
                 'visibility' => 'hidden'
             ),
             /**
              * Social
              */
             array(
-                'label'   => __('Position', 'as_extension'),
+                'label'   => __('Position', 'asex'),
                 'id'      => 'css_social_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'as_extension'),
+                        'label' => __('Inner Thumbnail', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'as_extension'),
+                        'label' => __('Bottom Thumbnail', 'asex'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Social', 'as_extension'),
+                'tab'     => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_social_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -596,10 +596,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_social_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -607,10 +607,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color Hover', 'as_extension'),
+                'label'                 => __('BG Color Hover', 'asex'),
                 'id'                    => 'css_social_bg_hover_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -618,10 +618,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_social_border_color',
                 'std'                   => 'rgb(175, 175, 175)',
                 'type'                  => 'color',
@@ -629,10 +629,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Border Hover Color', 'as_extension'),
+                'label'                 => __('Border Hover Color', 'asex'),
                 'id'                    => 'css_social_border_hover_color',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -640,10 +640,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_social_border_width',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -652,28 +652,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_social_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -681,10 +681,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
+                'label'                 => __('Border Radius - Top', 'asex'),
                 'id'                    => 'css_social_border_radius_top',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -692,11 +692,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
+                'label'                 => __('Border Radius - Bottom', 'asex'),
                 'id'                    => 'css_social_border_radius_bottom',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -704,11 +704,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_social_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -717,10 +717,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Size (width, height)', 'as_extension'),
+                'label'                 => __('Size (width, height)', 'asex'),
                 'id'                    => 'css_social_widht_height',
                 'std'                   => '40',
                 'type'                  => 'slider',
@@ -729,10 +729,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Spacing', 'as_extension'),
+                'label'                 => __('Icon - Spacing', 'asex'),
                 'id'                    => 'css_social_spacing',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -741,10 +741,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-left,margin-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Color', 'as_extension'),
+                'label'                 => __('Icon - Color', 'asex'),
                 'id'                    => 'css_social_color',
                 'std'                   => 'rgb(175, 175, 175)',
                 'type'                  => 'color',
@@ -752,10 +752,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Hover Color', 'as_extension'),
+                'label'                 => __('Icon - Hover Color', 'asex'),
                 'id'                    => 'css_social_hover_color',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -763,10 +763,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a:hover span',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             array(
-                'label'                 => __('Icon - Size', 'as_extension'),
+                'label'                 => __('Icon - Size', 'asex'),
                 'id'                    => 'css_social_font_size',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -774,11 +774,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-social-wrapper .as-staff-list-social a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Icon - Margin Top', 'as_extension'),
+                'label'                 => __('Icon - Margin Top', 'asex'),
                 'id'                    => 'css_social_margin_top',
                 'std'                   => '6',
                 'type'                  => 'slider',
@@ -787,13 +787,13 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Social', 'as_extension'),
+                'tab'                   => __('Social', 'asex'),
             ),
             /**
              * Main
              */
             array(
-                'label'                 => __(' BG Color', 'as_extension'),
+                'label'                 => __(' BG Color', 'asex'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -801,10 +801,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_main_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -812,10 +812,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_main_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -824,28 +824,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_main_border_trbl',
                 'std'                   => 'right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -853,10 +853,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
+                'label'                 => __('Border Radius - Top', 'asex'),
                 'id'                    => 'css_main_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -864,11 +864,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
+                'label'                 => __('Border Radius - Bottom', 'asex'),
                 'id'                    => 'css_main_border_radius_bottom',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -876,11 +876,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Minimum Height', 'as_extension'),
+                'label'                 => __('Minimum Height', 'asex'),
                 'id'                    => 'css_main_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -889,12 +889,12 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'min-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
                 'min'                   => 0,
                 'max'                   => 500
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_main_padding_vertical',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -903,10 +903,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_main_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -915,10 +915,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Text Align', 'as_extension'),
+                'label'                 => __('Text Align', 'asex'),
                 'id'                    => 'css_main_text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -926,31 +926,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-main',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             /**
              * Main Inner
              */
             array(
-                'label'   => __('Content Inner Thumbnail', 'as_extension'),
+                'label'   => __('Content Inner Thumbnail', 'asex'),
                 'id'      => 'content_inner_thumb_enabled',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Main Inner', 'as_extension'),
+                'tab'     => __('Main Inner', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'content_inner_thumb_bg_color',
                 'std'                   => 'rgba(0, 0, 0, 0.45)',
                 'type'                  => 'color',
@@ -958,10 +958,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'as_extension'),
+                'tab'                   => __('Main Inner', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'content_inner_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -969,10 +969,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'as_extension'),
+                'tab'                   => __('Main Inner', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'as_extension'),
+                'label'                 => __('Border Color - Hover', 'asex'),
                 'id'                    => 'content_inner_thumb_border_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -980,10 +980,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'as_extension'),
+                'tab'                   => __('Main Inner', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'content_inner_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -992,28 +992,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'as_extension'),
+                'tab'                   => __('Main Inner', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'content_inner_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -1021,10 +1021,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.as-staff-inner-content-thumb-wrapper',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main Inner', 'as_extension'),
+                'tab'                   => __('Main Inner', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'content_inner_thumb_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1033,10 +1033,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'as_extension'),
+                'tab'                   => __('Main Inner', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'content_inner_thumb_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1045,31 +1045,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main Inner', 'as_extension'),
+                'tab'                   => __('Main Inner', 'asex'),
             ),
             /**
              * Title
              */
             array(
-                'label'   => __('Position', 'as_extension'),
+                'label'   => __('Position', 'asex'),
                 'id'      => 'css_title_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'as_extension'),
+                        'label' => __('Inner Thumbnail', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'as_extension'),
+                        'label' => __('Bottom Thumbnail', 'asex'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Title', 'as_extension'),
+                'tab'     => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => 'rgb(34, 34, 34)',
                 'type'                  => 'color',
@@ -1077,10 +1077,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
+                'label'                 => __('Color - Hover', 'asex'),
                 'id'                    => 'css_title_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1088,10 +1088,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1099,11 +1099,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1111,14 +1111,14 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -1126,10 +1126,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1137,11 +1137,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin_bottom',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -1149,29 +1149,29 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'as_extension'),
+                'label'                 => __('Text Transform', 'asex'),
                 'id'                    => 'css_title_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'as_extension'),
+                        'label' => __('Capitalize', 'asex'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'as_extension'),
+                        'label' => __('Uppercase', 'asex'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'as_extension'),
+                        'label' => __('Lowercase', 'asex'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1179,31 +1179,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-title h2',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             /**
              * Position
              */
             array(
-                'label'   => __('Position', 'as_extension'),
+                'label'   => __('Position', 'asex'),
                 'id'      => 'css_position_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Inner Thumbnail', 'as_extension'),
+                        'label' => __('Inner Thumbnail', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom Thumbnail', 'as_extension'),
+                        'label' => __('Bottom Thumbnail', 'asex'),
                         'value' => 'bottom'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Position', 'as_extension'),
+                'tab'     => __('Position', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_position_border_color',
                 'std'                   => '#e5e5e5',
                 'type'                  => 'color',
@@ -1211,10 +1211,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_position_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1223,28 +1223,28 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'border-top-width,border-bottom-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_position_border_trbl',
                 'std'                   => 'top bottom',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -1252,10 +1252,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_position_color',
                 'std'                   => 'rgb(177, 177, 177)',
                 'type'                  => 'color',
@@ -1263,10 +1263,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_position_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1274,11 +1274,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_position_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1286,14 +1286,14 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_position_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
@@ -1301,10 +1301,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
             ),
             array(
-                'label'                 => __('Font Style', 'as_extension'),
+                'label'                 => __('Font Style', 'asex'),
                 'id'                    => 'css_position_font_style',
                 'std'                   => 'italic',
                 'type'                  => 'select',
@@ -1312,20 +1312,20 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'font-style',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
                 'choices'               => array(
                     array(
-                        'label' => __('Normal', 'as_extension'),
+                        'label' => __('Normal', 'asex'),
                         'value' => 'normal',
                     ),
                     array(
-                        'label' => __('Italic', 'as_extension'),
+                        'label' => __('Italic', 'asex'),
                         'value' => 'italic',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_position_margin_bottom',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1333,11 +1333,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-position',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_position_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1346,31 +1346,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
             ),
             /**
              * Excerpt
              */
             array(
-                'label'   => __('Excerpt or Content', 'as_extension'),
+                'label'   => __('Excerpt or Content', 'asex'),
                 'id'      => 'excerpt_or_content',
                 'std'     => 'excerpt',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Excerpt', 'as_extension'),
+                        'label' => __('Excerpt', 'asex'),
                         'value' => 'excerpt'
                     ),
                     array(
-                        'label' => __('Content', 'as_extension'),
+                        'label' => __('Content', 'asex'),
                         'value' => 'content'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Excerpt', 'as_extension'),
+                'tab'     => __('Excerpt', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_excerpt_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -1378,10 +1378,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'as_extension'),
+                'tab'                   => __('Excerpt', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_excerpt_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1389,11 +1389,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'as_extension'),
+                'tab'                   => __('Excerpt', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_excerpt_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1401,14 +1401,14 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'as_extension'),
+                'tab'                   => __('Excerpt', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_excerpt_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -1416,10 +1416,10 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'as_extension'),
+                'tab'                   => __('Excerpt', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_excerpt_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1427,19 +1427,19 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Excerpt', 'as_extension'),
+                'tab'                   => __('Excerpt', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'   => __('Max Length ( amount of words )', 'as_extension'),
+                'label'   => __('Max Length ( amount of words )', 'asex'),
                 'id'      => 'excerpt_length',
                 'std'     => '20',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Excerpt', 'as_extension'),
+                'tab'     => __('Excerpt', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_excerpt_margin_bottom',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1447,32 +1447,32 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff-member-excerpt',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Position', 'as_extension'),
+                'tab'                   => __('Position', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1480,11 +1480,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'as_extension'),
+                'label'                 => __('Separator - Height', 'asex'),
                 'id'                    => 'css_res_t_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1495,10 +1495,10 @@ class AS_Staff extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1507,31 +1507,31 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1539,11 +1539,11 @@ class AS_Staff extends as_module {
                 'affect_on_change_el'   => '.dslc-staff',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'as_extension'),
+                'label'                 => __('Separator - Height', 'asex'),
                 'id'                    => 'css_res_p_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1554,10 +1554,10 @@ class AS_Staff extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1566,7 +1566,7 @@ class AS_Staff extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
         );
 
@@ -2009,7 +2009,7 @@ if ($query_offset > 0) {
             else :
 
                 if ($dslc_is_admin) :
-                    ?><div class="dslc-notification dslc-red"><?php _e('You do not have staff at the moment. Go to <strong>WP Admin &rarr; Staff</strong> to add some.', 'as_extension'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
+                    ?><div class="dslc-notification dslc-red"><?php _e('You do not have staff at the moment. Go to <strong>WP Admin &rarr; Staff</strong> to add some.', 'asex'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
             endif;
 
         endif;

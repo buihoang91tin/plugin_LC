@@ -1,6 +1,6 @@
 <?php
 
-class AS_text_rotator extends as_module {
+class ASEX_text_rotator extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,7 +9,7 @@ class AS_text_rotator extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_text_rotator';
+        $this->module_id       = 'ASEX_text_rotator';
         $this->module_title    = __('AS - Text Rotator', 'live-composer-page-builder');
         $this->module_icon     = 'quote-right';
         $this->module_category = 'as - element';
@@ -40,14 +40,14 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'             => __('Text before', 'live-composer-page-builder'),
-                'id'                => 'as_rotator_1',
+                'id'                => 'asex_rotator_1',
                 'std'               => 'Super',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
                 'label'             => __('Text rotate', 'live-composer-page-builder'),
-                'id'                => 'as_rotator_2',
+                'id'                => 'asex_rotator_2',
                 'std'               => 'Easy, Simple, Customizable',
                 'type'              => 'text',
                 'refresh_on_change' => true,
@@ -55,14 +55,14 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'             => __('Text after', 'live-composer-page-builder'),
-                'id'                => 'as_rotator_3',
+                'id'                => 'asex_rotator_3',
                 'std'               => 'Text Rotator with Style',
                 'type'              => 'text',
                 'refresh_on_change' => true,
             ),
             array(
                 'label'   => __('Effect Word', 'live-composer-page-builder'),
-                'id'      => 'as_rotator_style',
+                'id'      => 'asex_rotator_style',
                 'std'     => 'rotate-1',
                 'type'    => 'select',
                 'choices' => array(
@@ -113,7 +113,7 @@ class AS_text_rotator extends as_module {
              */
             array(
                 'label'                 => __('BG Color', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_bg_color',
+                'id'                    => 'asex_rotator_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -124,7 +124,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('BORDER COLOR', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_boder_color',
+                'id'                    => 'asex_rotator_boder_color',
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -135,7 +135,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Border Width', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_boder_width',
+                'id'                    => 'asex_rotator_boder_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -147,7 +147,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Borders', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_boder',
+                'id'                    => 'asex_rotator_boder',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
@@ -176,7 +176,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Border Radius', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_border_radius',
+                'id'                    => 'asex_rotator_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -188,7 +188,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Margin Bottom', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_margin_bottom',
+                'id'                    => 'asex_rotator_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -200,7 +200,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_padding_vertical',
+                'id'                    => 'asex_rotator_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -214,7 +214,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_padding_horizontal',
+                'id'                    => 'asex_rotator_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -226,7 +226,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Width', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_content_width',
+                'id'                    => 'asex_rotator_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -241,7 +241,7 @@ class AS_text_rotator extends as_module {
              */
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
-                'id'                    => 'as_title_color',
+                'id'                    => 'asex_title_color',
                 'std'                   => 'rgb(61, 61, 61)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -252,7 +252,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Font Size', 'live-composer-page-builder'),
-                'id'                    => 'as_title_font_size',
+                'id'                    => 'asex_title_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -264,7 +264,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Font Weight', 'live-composer-page-builder'),
-                'id'                    => 'as_title_font_weight',
+                'id'                    => 'asex_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -279,7 +279,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
-                'id'                    => 'as_title_font_family',
+                'id'                    => 'asex_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -290,7 +290,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Line Height', 'live-composer-page-builder'),
-                'id'                    => 'as_title_line_height',
+                'id'                    => 'asex_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -305,7 +305,7 @@ class AS_text_rotator extends as_module {
              */
             array(
                 'label'                 => __('Color', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_title_color',
+                'id'                    => 'asex_rotator_title_color',
                 'std'                   => 'rgb(61, 61, 61)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
@@ -316,7 +316,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Font Size', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_title_font_size',
+                'id'                    => 'asex_rotator_title_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -328,7 +328,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Font Weight', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_title_font_weight',
+                'id'                    => 'asex_rotator_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -343,7 +343,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Font Family', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_title_font_family',
+                'id'                    => 'asex_rotator_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
@@ -354,7 +354,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Line Height', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_title_line_height',
+                'id'                    => 'asex_rotator_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -366,7 +366,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Padding Vertical', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_padding_vertical',
+                'id'                    => 'asex_rotator_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -380,7 +380,7 @@ class AS_text_rotator extends as_module {
             ),
             array(
                 'label'                 => __('Padding Horizontal', 'live-composer-page-builder'),
-                'id'                    => 'as_rotator_padding_horizontal',
+                'id'                    => 'asex_rotator_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -621,24 +621,24 @@ class AS_text_rotator extends as_module {
             $dslc_is_admin = false;
 
         $this->module_start($options);
-        $as_text = explode(',', $options['as_rotator_2']);
+        $asex_text = explode(',', $options['asex_rotator_2']);
         ?>
         <!-- Module output stars here -->
         <div class="as-text-rotator as-text-wraper">
             <section class="cd-intro as-text-rotator" >
-                <h1 class="cd-headline <?php echo $options['as_rotator_style']; ?>">
-                    <span class="as-text-rotator-text"><?php echo esc_attr($options['as_rotator_1']); ?></span>
+                <h1 class="cd-headline <?php echo $options['asex_rotator_style']; ?>">
+                    <span class="as-text-rotator-text"><?php echo esc_attr($options['asex_rotator_1']); ?></span>
                     <span class="cd-words-wrapper ">
-                        <b class="is-visible"><?php echo $as_text[0]; ?></b>
+                        <b class="is-visible"><?php echo $asex_text[0]; ?></b>
                         <?php
                         for ($i = 1;
-                                $i < count($as_text);
+                                $i < count($asex_text);
                                 $i++) {
-                            echo '<b>' . $as_text[$i] . '</b>';
+                            echo '<b>' . $asex_text[$i] . '</b>';
                         }
                         ?>
                     </span>
-                    <span class="as-text-rotator-text"><?php echo esc_attr($options['as_rotator_3']); ?></span>
+                    <span class="as-text-rotator-text"><?php echo esc_attr($options['asex_rotator_3']); ?></span>
                 </h1>
             </section>
         </div>

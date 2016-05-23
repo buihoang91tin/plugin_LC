@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: AS Extension For Live Composer
  * Plugin URI: monalisa.alenastudio.com
@@ -14,22 +15,18 @@ if (!function_exists('add_action'))
     echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
     exit;
 }
-define('AS_EXTENSION_VERSION', '1.0.0');
-define('AS_EXTENSION_URL', plugin_dir_url(__FILE__));
-define('AS_EXTENSION_DIR', __DIR__);
-define('AS_EXTENSION_DIR_NAME', dirname(plugin_basename(__FILE__)));
-define('AS_EXTENSION_ABS', dirname(__FILE__));
-define('AS_EXTENSION_DEV_MODE', false);
-require (AS_EXTENSION_DIR . '/functions.php');
-require_once (AS_EXTENSION_DIR . '/include/woocommerce/woocommerce_init.php');
-require_once (AS_EXTENSION_DIR . '/core/as-extension.class.php');
-include (AS_EXTENSION_DIR . '/admin/options/general.php');
-$as_extension = new AS_EXTENSION();
 
-require (AS_EXTENSION_ABS . '/core/as-tab.class.php');
-$as_tab_menu = new AS_EX_TAB();
-require_once (AS_EXTENSION_DIR . '/core/as-front.class.php');
-new AS_EX_FRONT();
-add_action('admin_init', 'my_plugin_redirect');
+define('ASEX_VERSION', '1.0.0');
+define('ASEX_URL', plugin_dir_url(__FILE__));
+define('ASEX_DIR', __DIR__);
+define('ASEX_DIR_NAME', dirname(plugin_basename(__FILE__)));
+define('ASEX_ABS', dirname(__FILE__));
+define('ASEX_DEV_MODE', false);
 
+//Core 
+require_once (ASEX_DIR . '/load-default.php');
+require_once (ASEX_ABS . '/core/asex-main.class.php');
+require_once (ASEX_DIR . '/core/asex.class.php');
 
+$asex_extension = new ASEX();
+$asex_extension->init();

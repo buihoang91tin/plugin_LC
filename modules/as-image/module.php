@@ -1,6 +1,6 @@
 <?php
 
-class AS_Image extends as_module {
+class ASEX_Image extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,8 +9,8 @@ class AS_Image extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Image';
-        $this->module_title    = __('AS - Custom Image', 'as_extension');
+        $this->module_id       = 'ASEX_Image';
+        $this->module_title    = __('AS - Custom Image', 'asex');
         $this->module_icon     = 'picture';
         $this->module_category = 'as - element';
     }
@@ -19,90 +19,90 @@ class AS_Image extends as_module {
 
         $dslc_options = array(
             array(
-                'label'      => __('CT', 'as_extension'),
+                'label'      => __('CT', 'asex'),
                 'id'         => 'custom_text',
-                'std'        => __('This is just some placeholder text. Click to edit it.', 'as_extension'),
+                'std'        => __('This is just some placeholder text. Click to edit it.', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
             array(
-                'label' => __('Image', 'as_extension'),
+                'label' => __('Image', 'asex'),
                 'id'    => 'image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'   => __('Link Type', 'as_extension'),
+                'label'   => __('Link Type', 'asex'),
                 'id'      => 'link_type',
                 'std'     => 'none',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => 'none',
                     ),
                     array(
-                        'label' => __('URL - Same Tab', 'as_extension'),
+                        'label' => __('URL - Same Tab', 'asex'),
                         'value' => 'url_same',
                     ),
                     array(
-                        'label' => __('URL - New Tab', 'as_extension'),
+                        'label' => __('URL - New Tab', 'asex'),
                         'value' => 'url_new',
                     ),
                     array(
-                        'label' => __('Lightbox', 'as_extension'),
+                        'label' => __('Lightbox', 'asex'),
                         'value' => 'lightbox',
                     ),
                 )
             ),
             array(
-                'label' => __('Link - URL', 'as_extension'),
+                'label' => __('Link - URL', 'asex'),
                 'id'    => 'link_url',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Link - Lightbox Image', 'as_extension'),
+                'label' => __('Link - Lightbox Image', 'asex'),
                 'id'    => 'link_lb_image',
                 'std'   => '',
                 'type'  => 'image',
             ),
             array(
-                'label'   => __('Custom Text', 'as_extension'),
+                'label'   => __('Custom Text', 'asex'),
                 'id'      => 'custom_text_state',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled',
                     ),
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled',
                     ),
                 )
             ),
             array(
-                'label' => __('Resize - Height', 'as_extension'),
+                'label' => __('Resize - Height', 'asex'),
                 'id'    => 'resize_height',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Resize - Width', 'as_extension'),
+                'label' => __('Resize - Width', 'asex'),
                 'id'    => 'resize_width',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Image - ALT attribute', 'as_extension'),
+                'label' => __('Image - ALT attribute', 'asex'),
                 'id'    => 'image_alt',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Image - TITLE attribute', 'as_extension'),
+                'label' => __('Image - TITLE attribute', 'asex'),
                 'id'    => 'image_title',
                 'std'   => '',
                 'type'  => 'text',
@@ -111,8 +111,8 @@ class AS_Image extends as_module {
              * Styling
              */
             array(
-                'label'                 => __('Effect Style', 'as_extension'),
-                'id'                    => 'as_image_effect_style',
+                'label'                 => __('Effect Style', 'asex'),
+                'id'                    => 'asex_image_effect_style',
                 'std'                   => 'default',
                 'type'                  => 'select',
                 'refresh_on_change'     => true,
@@ -121,69 +121,69 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
                 'choices'               => array(
                     array(
-                        'label' => __('Default', 'as_extension'),
+                        'label' => __('Default', 'asex'),
                         'value' => 'default',
                     ),
                     array(
-                        'label' => __('1977', 'as_extension'),
+                        'label' => __('1977', 'asex'),
                         'value' => '_1977',
                     ),
                     array(
-                        'label' => __('Aden', 'as_extension'),
+                        'label' => __('Aden', 'asex'),
                         'value' => 'aden',
                     ),
                     array(
-                        'label' => __('Brooklyn', 'as_extension'),
+                        'label' => __('Brooklyn', 'asex'),
                         'value' => 'brooklyn',
                     ),
                     array(
-                        'label' => __('Earlybird', 'as_extension'),
+                        'label' => __('Earlybird', 'asex'),
                         'value' => 'earlybird',
                     ),
                     array(
-                        'label' => __('Gingham', 'as_extension'),
+                        'label' => __('Gingham', 'asex'),
                         'value' => 'gingham',
                     ),
                     array(
-                        'label' => __('Hudson', 'as_extension'),
+                        'label' => __('Hudson', 'asex'),
                         'value' => 'hudson',
                     ),
                     array(
-                        'label' => __('Inkwell', 'as_extension'),
+                        'label' => __('Inkwell', 'asex'),
                         'value' => 'inkwell',
                     ),
                     array(
-                        'label' => __('Lofi', 'as_extension'),
+                        'label' => __('Lofi', 'asex'),
                         'value' => 'lofi',
                     ),
                     array(
-                        'label' => __('Mayfair', 'as_extension'),
+                        'label' => __('Mayfair', 'asex'),
                         'value' => 'mayfair',
                     ),
                     array(
-                        'label' => __('Perpetua', 'as_extension'),
+                        'label' => __('Perpetua', 'asex'),
                         'value' => 'perpetua',
                     ),
                     array(
-                        'label' => __('Reyes', 'as_extension'),
+                        'label' => __('Reyes', 'asex'),
                         'value' => 'reyes',
                     ),
                     array(
-                        'label' => __('Toaster', 'as_extension'),
+                        'label' => __('Toaster', 'asex'),
                         'value' => 'toaster',
                     ),
                     array(
-                        'label' => __('Walden', 'as_extension'),
+                        'label' => __('Walden', 'asex'),
                         'value' => 'walden',
                     ),
                     array(
-                        'label' => __('Xpro2', 'as_extension'),
+                        'label' => __('Xpro2', 'asex'),
                         'value' => 'xpro2',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
@@ -193,25 +193,25 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'as_extension'),
+                        'label' => __('Justify', 'asex'),
                         'value' => 'justify',
                     ),
                 )
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -221,7 +221,7 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -231,7 +231,7 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -242,25 +242,25 @@ class AS_Image extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -270,7 +270,7 @@ class AS_Image extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -281,7 +281,7 @@ class AS_Image extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -294,7 +294,7 @@ class AS_Image extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -307,7 +307,7 @@ class AS_Image extends as_module {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -318,7 +318,7 @@ class AS_Image extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -332,7 +332,7 @@ class AS_Image extends as_module {
              * Custom Text
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_ct_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
@@ -340,28 +340,28 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'as_extension'),
+                'tab'                   => __('custom text', 'asex'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'as_extension'),
+                        'label' => __('Justify', 'asex'),
                         'value' => 'justify',
                     ),
                 )
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_ct_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -369,10 +369,10 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'as_extension'),
+                'tab'                   => __('custom text', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -380,11 +380,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'as_extension'),
+                'tab'                   => __('custom text', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_ct_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -392,14 +392,14 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'as_extension'),
+                'tab'                   => __('custom text', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_ct_font_family',
                 'std'                   => 'Open Sans',
                 'type'                  => 'font',
@@ -407,10 +407,10 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'as_extension'),
+                'tab'                   => __('custom text', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -418,11 +418,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('custom text', 'as_extension'),
+                'tab'                   => __('custom text', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -431,31 +431,31 @@ class AS_Image extends as_module {
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('custom text', 'as_extension'),
+                'tab'                   => __('custom text', 'asex'),
             ),
             /**
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -463,11 +463,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -475,11 +475,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -487,11 +487,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Font Size', 'as_extension'),
+                'label'                 => __('Text - Font Size', 'asex'),
                 'id'                    => 'css_res_t_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -499,11 +499,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Line Height', 'as_extension'),
+                'label'                 => __('Text - Line Height', 'asex'),
                 'id'                    => 'css_res_t_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -511,11 +511,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Margin Top', 'as_extension'),
+                'label'                 => __('Text - Margin Top', 'asex'),
                 'id'                    => 'css_res_t_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -523,32 +523,32 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive', 'as_extension'),
+                'label'   => __('Responsive', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -556,11 +556,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -568,11 +568,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -580,11 +580,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Font Size', 'as_extension'),
+                'label'                 => __('Text - Font Size', 'asex'),
                 'id'                    => 'css_res_p_ct_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -592,11 +592,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Line Height', 'as_extension'),
+                'label'                 => __('Text - Line Height', 'asex'),
                 'id'                    => 'css_res_p_ct_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -604,11 +604,11 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text - Margin Top', 'as_extension'),
+                'label'                 => __('Text - Margin Top', 'asex'),
                 'id'                    => 'css_res_p_ct_margin_top',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -616,7 +616,7 @@ class AS_Image extends as_module {
                 'affect_on_change_el'   => '.dslc-image-caption',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
         );
@@ -660,7 +660,7 @@ class AS_Image extends as_module {
 
             <?php if (empty($options['image'])) : ?>
 
-                <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'as_extension'); ?></div>
+                <div class="dslc-notification dslc-red"><?php _e('No image has been set yet, edit the module to set one.', 'asex'); ?></div>
 
             <?php else : ?>
 
@@ -686,7 +686,7 @@ class AS_Image extends as_module {
                 <?php if ($options['link_type'] !== 'none') : ?>
                     <a class="<?php echo esc_attr($anchor_class); ?>" href="<?php echo esc_url($anchor_href); ?>" target="<?php echo esc_attr($anchor_target); ?>">
                     <?php endif; ?>
-                    <div class="as-effect-style <?php echo esc_attr($options['as_image_effect_style']); ?>">
+                    <div class="as-effect-style <?php echo esc_attr($options['asex_image_effect_style']); ?>">
                         <img src="<?php echo esc_url($the_image) ?>" alt="<?php echo esc_attr($options['image_alt']); ?>" title="<?php echo esc_attr($options['image_title']); ?>" />
 
                     </div>

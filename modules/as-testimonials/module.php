@@ -1,6 +1,6 @@
 <?php
 
-class AS_Testimonials_Simple extends as_module {
+class ASEX_Testimonials_Simple extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,7 +9,7 @@ class AS_Testimonials_Simple extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Testimonials_Simple';
+        $this->module_id       = 'ASEX_Testimonials_Simple';
         $this->module_title    = __('Testimonials Simple', 'live-composer-page-builder');
         $this->module_icon     = 'quote-right';
         $this->module_category = 'as - posts';

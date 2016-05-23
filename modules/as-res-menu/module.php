@@ -1,6 +1,6 @@
 <?php
 
-class AS_Res_Menu extends as_module {
+class ASEX_Res_Menu extends ASEX_MODULE {
 
     var $module_id;
     var $module_title;
@@ -9,8 +9,8 @@ class AS_Res_Menu extends as_module {
 
     function __construct() {
 
-        $this->module_id       = 'AS_Res_Menu';
-        $this->module_title    = __('Restaurant Menu', 'as_extension');
+        $this->module_id       = 'ASEX_Res_Menu';
+        $this->module_title    = __('Restaurant Menu', 'asex');
         $this->module_icon     = 'info';
         $this->module_category = 'as - res - menu';
     }
@@ -19,21 +19,21 @@ class AS_Res_Menu extends as_module {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
@@ -42,32 +42,32 @@ class AS_Res_Menu extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'as_extension'),
+                'label'   => __('Elements', 'asex'),
                 'id'      => 'elements',
                 'std'     => 'icon title content button image label',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Title', 'as_extension'),
+                        'label' => __('Title', 'asex'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Content', 'as_extension'),
+                        'label' => __('Content', 'asex'),
                         'value' => 'content'
                     ),
                     array(
-                        'label' => __('Image', 'as_extension'),
+                        'label' => __('Image', 'asex'),
                         'value' => 'image'
                     ),
                     array(
-                        'label' => __('Label', 'as_extension'),
+                        'label' => __('Label', 'asex'),
                         'value' => 'label'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -77,7 +77,7 @@ class AS_Res_Menu extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -88,25 +88,25 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -116,7 +116,7 @@ class AS_Res_Menu extends as_module {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -127,7 +127,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -138,7 +138,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -151,7 +151,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -162,7 +162,7 @@ class AS_Res_Menu extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -176,7 +176,7 @@ class AS_Res_Menu extends as_module {
              * Image
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_icon_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -184,10 +184,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -195,10 +195,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Image', 'as_extension'),
+                'label'                 => __('BG Image', 'asex'),
                 'id'                    => 'css_icon_bg_img',
                 'std'                   => 'http://www.freewebsitetemplates.com/images/forum/500/restaurantwebsitetemplate.jpg',
                 'type'                  => 'image',
@@ -206,62 +206,62 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '',
                 'affect_on_change_rule' => '',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Image Repeat', 'as_extension'),
+                'label'                 => __('BG Image Repeat', 'asex'),
                 'id'                    => 'css_icon_bg_img_repeat',
                 'std'                   => 'no-repeat',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Repeat', 'as_extension'),
+                        'label' => __('Repeat', 'asex'),
                         'value' => 'repeat',
                     ),
                     array(
-                        'label' => __('Repeat Horizontal', 'as_extension'),
+                        'label' => __('Repeat Horizontal', 'asex'),
                         'value' => 'repeat-x',
                     ),
                     array(
-                        'label' => __('Repeat Vertical', 'as_extension'),
+                        'label' => __('Repeat Vertical', 'asex'),
                         'value' => 'repeat-y',
                     ),
                     array(
-                        'label' => __('Do NOT Repeat', 'as_extension'),
+                        'label' => __('Do NOT Repeat', 'asex'),
                         'value' => 'no-repeat',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('BG Image Size', 'as_extension'),
+                'label'                 => __('BG Image Size', 'asex'),
                 'id'                    => 'css_icon_bg_img_size',
                 'std'                   => 'auto',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Original', 'as_extension'),
+                        'label' => __('Original', 'asex'),
                         'value' => 'auto',
                     ),
                     array(
-                        'label' => __('Cover', 'as_extension'),
+                        'label' => __('Cover', 'asex'),
                         'value' => 'cover',
                     ),
                     array(
-                        'label' => __('Contain', 'as_extension'),
+                        'label' => __('Contain', 'asex'),
                         'value' => 'contain',
                     ),
                 ),
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-size',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_icon_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -269,10 +269,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -281,28 +281,28 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_icon_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -310,10 +310,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -321,11 +321,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Top', 'as_extension'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_icon_margin_top',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -333,13 +333,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => -100,
                 'max'                   => 50
             ),
             array(
-                'label'                 => __('Margin Right', 'as_extension'),
+                'label'                 => __('Margin Right', 'asex'),
                 'id'                    => 'css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -347,13 +347,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_icon_margin_bottom',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -361,34 +361,34 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Image', 'as_extension'),
+                'tab'                   => __('Image', 'asex'),
                 'ext'                   => 'px',
                 'min'                   => 0,
                 'max'                   => 100
             ),
             array(
-                'label'   => __('Position', 'as_extension'),
+                'label'   => __('Position', 'asex'),
                 'id'      => 'icon_position',
                 'std'     => 'above',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Above', 'as_extension'),
+                        'label' => __('Above', 'asex'),
                         'value' => 'above',
                     ),
                     array(
-                        'label' => __('Aside', 'as_extension'),
+                        'label' => __('Aside', 'asex'),
                         'value' => 'aside',
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Image', 'as_extension'),
+                'tab'     => __('Image', 'asex'),
             ),
             /**
              * Title
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -396,10 +396,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -407,10 +407,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -418,11 +418,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -430,14 +430,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -445,10 +445,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -456,11 +456,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -468,14 +468,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Content
              */
             array(
-                'label'                 => __('Align', 'as_extension'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -483,10 +483,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -494,10 +494,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -505,11 +505,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -517,14 +517,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -532,10 +532,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -543,11 +543,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -555,14 +555,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Content', 'as_extension'),
+                'tab'                   => __('Content', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Prices
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -570,10 +570,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'as_extension'),
+                'tab'                   => __('Prices', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -581,11 +581,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'as_extension'),
+                'tab'                   => __('Prices', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -593,14 +593,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'as_extension'),
+                'tab'                   => __('Prices', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -608,10 +608,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'as_extension'),
+                'tab'                   => __('Prices', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -619,11 +619,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price .dslca-editable-content, .as-res-menu-price',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Prices', 'as_extension'),
+                'tab'                   => __('Prices', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -631,14 +631,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box-price',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('prices', 'as_extension'),
+                'tab'                   => __('prices', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * label
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_icon_bg_color',
                 'std'                   => '#BF9553',
                 'type'                  => 'color',
@@ -646,10 +646,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'as_extension'),
+                'tab'                   => __('Label', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -657,10 +657,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'as_extension'),
+                'tab'                   => __('Label', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -668,11 +668,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'as_extension'),
+                'tab'                   => __('Label', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -680,14 +680,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'as_extension'),
+                'tab'                   => __('Label', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -695,10 +695,10 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'as_extension'),
+                'tab'                   => __('Label', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -706,11 +706,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'as_extension'),
+                'tab'                   => __('Label', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -718,14 +718,14 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.as-menu-label',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Label', 'as_extension'),
+                'tab'                   => __('Label', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Hidden
              */
             array(
-                'label'      => __('Title', 'as_extension'),
+                'label'      => __('Title', 'asex'),
                 'id'         => 'title',
                 'std'        => __('CLICK TO EDIT','monalisa'),
                 'type'       => 'textarea',
@@ -733,7 +733,7 @@ class AS_Res_Menu extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Content', 'as_extension'),
+                'label'      => __('Content', 'asex'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
                 'type'       => 'textarea',
@@ -741,7 +741,7 @@ class AS_Res_Menu extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('price', 'as_extension'),
+                'label'      => __('price', 'asex'),
                 'id'         => 'price',
                 'std'        => '$  Edit',
                 'type'       => 'textarea',
@@ -749,7 +749,7 @@ class AS_Res_Menu extends as_module {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('label', 'as_extension'),
+                'label'      => __('label', 'asex'),
                 'id'         => 'label',
                 'std'        => 'Edit label',
                 'type'       => 'textarea',
@@ -760,25 +760,25 @@ class AS_Res_Menu extends as_module {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -786,11 +786,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -798,13 +798,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -812,32 +812,32 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -845,11 +845,11 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -857,13 +857,13 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -871,7 +871,7 @@ class AS_Res_Menu extends as_module {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
         );

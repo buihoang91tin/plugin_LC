@@ -1,8 +1,9 @@
 <?php
-if (dslc_is_module_active('AS_Projects'))
-    include AS_EXTENSION_ABS . '/modules/as-projects/functions.php';
+if (dslc_is_module_active('asex_Projects'))
+    include ASEX_ABS . '/modules/as-projects/functions.php';
 
-class AS_Projects extends as_module {
+class ASEX_Projects extends ASEX_MODULE
+{
 
     var $module_id;
     var $module_title;
@@ -12,18 +13,92 @@ class AS_Projects extends as_module {
     function __construct()
     {
 
-        $this->module_id       = 'AS_Projects';
-        $this->module_title    = __('AS - Projects', 'as_extension');
+        $this->module_id       = 'ASEX_Projects';
+        $this->module_title    = __('AS - Projects', 'asex');
         $this->module_icon     = 'th';
         $this->module_category = 'as - posts';
+        add_action('wp_ajax_asex_load_project', array($this, 'asex_load_project'));
+    }
+
+    public function asex_load_project()
+    {
+        $data              = $_REQUEST['content'];
+        $project           = get_post($data['id']);
+        $project_permalink = get_permalink($project->ID);
+        $project_url       = get_post_meta($project->ID, 'dslc_project_url', true);
+        $project_url_text  = get_post_meta($project->ID, 'dslc_project_url_text', true);
+        $project_name      = get_post_meta($project->ID, 'dslc_project_name', true);
+        $cats              = array();
+        $terms             = get_the_terms($project->ID, 'dslc_projects_cats');
+        if (!empty($terms))
+        {
+            foreach ($terms as $term)
+            {
+                $cats[] = $term->name;
+            }
+        }
+        $dslc_projects_cats = join(', ', $cats);
+        $fb_share           = '<li><a class="as-port-ajax-social-facebook" href="http://www.facebook.com/sharer/sharer.php?u=' . $project_permalink . '" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=660\');return false;" target="_blank"><span class="dslc-icon dslc-icon-facebook"></span></a></li>';
+        $twitter_share      = '<li><a class="as-port-ajax-social-twitter" href="http://twitter.com/share?url=' . $project_permalink . '&amp;lang=en&amp;text=Check%20out%20this%20awesome%20project:&amp;" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=620\');return false;" data-count="none" data-via=" "><span class="dslc-icon dslc-icon-twitter"></span></a></li>';
+        $google_share       = '<li><a class="as-port-ajax-social-google" href="https://plus.google.com/share?url=' . $project_permalink . '" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=500\');return false;"><span class="dslc-icon dslc-icon-google-plus"></span></a></li>';
+        $btn_get            = '<a href="' . $project_url . '" class="as-get-in-touch-prj-ajax">' . __('Visit Project', 'asex') . '</a>';
+
+
+        $html     = '<div class="as-mask-color-port">
+					<svg class="as-preloading-port" width="80" height="80" viewbox="0 0 80 80">
+	                    <polygon points="0 0 0 80 80 80 80 0" class="rect" />
+	                </svg>
+				</div>
+				<div class="as-title-port-ajax-wrapper dslc-col dslc-12-col dslc-last-col">
+					<h1 class="as-port-ajax-title">' . $project->post_title . '</h1>
+					<span class="as-port-ajax-category">' . $dslc_projects_cats . '</span>
+				</div>
+				<div class="as-port-ajax-data">
+					<div class="dslc-col dslc-6-col port-thumb">
+						<div class="as-port-ajax-thumbnail-img">
+							' . get_the_post_thumbnail($project->ID, 'full') . '
+						</div>
+					</div>
+					<div class="dslc-col dslc-6-col dslc-last-col as-port-ajax-excerpt">
+						<div class="as-ajax-info-wrapper">
+							' . apply_filters('the_content', $project->post_content) . '
+							<div class="clearfix"></div>
+							<div class="as-info-project-meta">
+								<div class="as-info-client">
+									<span class="dslc-icon dslc-icon-user"></span>&nbsp;&nbsp;<span class="as-info-sum">Client:</span>&nbsp; <span>' . $project_name . '</span>
+								</div>
+								<div class="as-info-url">
+									
+									<span class="dslc-icon dslc-icon-link"></span>&nbsp;&nbsp;<span class="as-info-sum">URL Project:</span>&nbsp; <a href="' . $project_url . '" target="_blank">' . $project_url_text . '</a>
+								</div>
+							</div>
+							<div class="as-port-ajax-social-share">
+								' . $btn_get . '
+								<ul class="as-port-ajax-list-social">
+									' . $fb_share . '
+									' . $twitter_share . '
+									' . $google_share . '
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>';
+        $response = array(
+            'success'   => true,
+            'html'      => $html,
+            'prev_post' => $this->asex_get_next_previous_port_id($project->ID, 'next'),
+            'next_post' => $this->asex_get_next_previous_port_id($project->ID, 'prev'),
+        );
+        wp_send_json($response);
     }
 
     function options()
     {
         $cats         = get_terms('dslc_projects_cats');
         $cats_choices = array();
-        foreach ($cats as
-                $cat)
+        foreach ($cats as $cat)
         {
             $cats_choices[] = array(
                 'label' => $cat->name,
@@ -32,197 +107,197 @@ class AS_Projects extends as_module {
         }
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'as_extension'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'as_extension'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'as_extension'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'as_extension'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label'   => __('Link', 'as_extension'),
+                'label'   => __('Link', 'asex'),
                 'id'      => 'link',
                 'std'     => 'permalink',
                 'type'    => 'select',
-                'help'    => __('<strong>Link to project page</strong> links to the project page on this website.<br><strong>Link to custom project URL</strong> links to the URL set in the project options.', 'as_extension'),
+                'help'    => __('<strong>Link to project page</strong> links to the project page on this website.<br><strong>Link to custom project URL</strong> links to the URL set in the project options.', 'asex'),
                 'choices' => array(
                     array(
-                        'label' => __('Link to project page', 'as_extension'),
+                        'label' => __('Link to project page', 'asex'),
                         'value' => 'permalink'
                     ),
                     array(
-                        'label' => __('Link to custom project URL', 'as_extension'),
+                        'label' => __('Link to custom project URL', 'asex'),
                         'value' => 'custom'
                     ),
                 )
             ),
             array(
-                'label'   => __('Link Target', 'as_extension'),
+                'label'   => __('Link Target', 'asex'),
                 'id'      => 'link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same tab', 'as_extension'),
+                        'label' => __('Same tab', 'asex'),
                         'value' => '_self'
                     ),
                     array(
-                        'label' => __('New tab', 'as_extension'),
+                        'label' => __('New tab', 'asex'),
                         'value' => '_blank'
                     ),
                 )
             ),
             array(
-                'label'   => __('Type', 'as_extension'),
+                'label'   => __('Type', 'asex'),
                 'id'      => 'type',
                 'std'     => 'grid',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Grid', 'as_extension'),
+                        'label' => __('Grid', 'asex'),
                         'value' => 'grid'
                     ),
                     array(
-                        'label' => __('Masonry Grid', 'as_extension'),
+                        'label' => __('Masonry Grid', 'asex'),
                         'value' => 'masonry'
                     ),
                     array(
-                        'label' => __('Carousel', 'as_extension'),
+                        'label' => __('Carousel', 'asex'),
                         'value' => 'carousel'
                     )
                 )
             ),
             array(
-                'label' => __('Posts Per Page', 'as_extension'),
+                'label' => __('Posts Per Page', 'asex'),
                 'id'    => 'amount',
                 'std'   => '8',
                 'type'  => 'text',
             ),
             array(
-                'label'   => __('Pagination', 'as_extension'),
+                'label'   => __('Pagination', 'asex'),
                 'id'      => 'pagination_type',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled',
                     ),
                     array(
-                        'label' => __('Numbered', 'as_extension'),
+                        'label' => __('Numbered', 'asex'),
                         'value' => 'numbered',
                     ),
                     array(
-                        'label' => __('Prev/Next', 'as_extension'),
+                        'label' => __('Prev/Next', 'asex'),
                         'value' => 'prevnext',
                     )
                 ),
             ),
             array(
-                'label'   => __('Posts Per Row', 'as_extension'),
+                'label'   => __('Posts Per Row', 'asex'),
                 'id'      => 'columns',
                 'std'     => '3',
                 'type'    => 'select',
                 'choices' => $this->shared_options('posts_per_row_choices'),
             ),
             array(
-                'label'   => __('Categories', 'as_extension'),
+                'label'   => __('Categories', 'asex'),
                 'id'      => 'categories',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => $cats_choices
             ),
             array(
-                'label'   => __('Categories Operator', 'as_extension'),
+                'label'   => __('Categories Operator', 'asex'),
                 'id'      => 'categories_operator',
                 'std'     => 'IN',
-                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'as_extension'),
+                'help'    => __('<strong>IN</strong> - Posts must be in at least one chosen category.<br><strong>AND</strong> - Posts must be in all chosen categories.<br><strong>NOT IN</strong> Posts must not be in the chosen categories.', 'asex'),
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('IN', 'as_extension'),
+                        'label' => __('IN', 'asex'),
                         'value' => 'IN',
                     ),
                     array(
-                        'label' => __('AND', 'as_extension'),
+                        'label' => __('AND', 'asex'),
                         'value' => 'AND',
                     ),
                     array(
-                        'label' => __('NOT IN', 'as_extension'),
+                        'label' => __('NOT IN', 'asex'),
                         'value' => 'NOT IN',
                     ),
                 )
             ),
             array(
-                'label'   => __('Order By', 'as_extension'),
+                'label'   => __('Order By', 'asex'),
                 'id'      => 'orderby',
                 'std'     => 'date',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Publish Date', 'as_extension'),
+                        'label' => __('Publish Date', 'asex'),
                         'value' => 'date'
                     ),
                     array(
-                        'label' => __('Modified Date', 'as_extension'),
+                        'label' => __('Modified Date', 'asex'),
                         'value' => 'modified'
                     ),
                     array(
-                        'label' => __('Random', 'as_extension'),
+                        'label' => __('Random', 'asex'),
                         'value' => 'rand'
                     ),
                     array(
-                        'label' => __('Alphabetic', 'as_extension'),
+                        'label' => __('Alphabetic', 'asex'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Comment Count', 'as_extension'),
+                        'label' => __('Comment Count', 'asex'),
                         'value' => 'comment_count'
                     ),
                 )
             ),
             array(
-                'label'   => __('Order', 'as_extension'),
+                'label'   => __('Order', 'asex'),
                 'id'      => 'order',
                 'std'     => 'DESC',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Ascending', 'as_extension'),
+                        'label' => __('Ascending', 'asex'),
                         'value' => 'ASC'
                     ),
                     array(
-                        'label' => __('Descending', 'as_extension'),
+                        'label' => __('Descending', 'asex'),
                         'value' => 'DESC'
                     )
                 )
             ),
             array(
-                'label' => __('Offset', 'as_extension'),
+                'label' => __('Offset', 'asex'),
                 'id'    => 'offset',
                 'std'   => '0',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Include (IDs)', 'as_extension'),
+                'label' => __('Include (IDs)', 'asex'),
                 'id'    => 'query_post_in',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Exclude (IDs)', 'as_extension'),
+                'label' => __('Exclude (IDs)', 'asex'),
                 'id'    => 'query_post_not_in',
                 'std'   => '',
                 'type'  => 'text',
@@ -231,66 +306,66 @@ class AS_Projects extends as_module {
              * General
              */
             array(
-                'label'   => __('Elements', 'as_extension'),
+                'label'   => __('Elements', 'asex'),
                 'id'      => 'elements',
                 'std'     => '',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Heading', 'as_extension'),
+                        'label' => __('Heading', 'asex'),
                         'value' => 'main_heading'
                     ),
                     array(
-                        'label' => __('Filters', 'as_extension'),
+                        'label' => __('Filters', 'asex'),
                         'value' => 'filters'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Post Elements', 'as_extension'),
+                'label'   => __('Post Elements', 'asex'),
                 'id'      => 'post_elements',
                 'std'     => 'thumbnail categories title icon_link',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Thumbnail', 'as_extension'),
+                        'label' => __('Thumbnail', 'asex'),
                         'value' => 'thumbnail',
                     ),
                     array(
-                        'label' => __('Title', 'as_extension'),
+                        'label' => __('Title', 'asex'),
                         'value' => 'title',
                     ),
                     array(
-                        'label' => __('Categories', 'as_extension'),
+                        'label' => __('Categories', 'asex'),
                         'value' => 'categories',
                     ),
                     array(
-                        'label' => __('Icon', 'as_extension'),
+                        'label' => __('Icon', 'asex'),
                         'value' => 'icon_link',
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'   => __('Carousel Elements', 'as_extension'),
+                'label'   => __('Carousel Elements', 'asex'),
                 'id'      => 'carousel_elements',
                 'std'     => 'arrows circles',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Arrows', 'as_extension'),
+                        'label' => __('Arrows', 'asex'),
                         'value' => 'arrows'
                     ),
                     array(
-                        'label' => __('Circles', 'as_extension'),
+                        'label' => __('Circles', 'asex'),
                         'value' => 'circles'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -303,7 +378,7 @@ class AS_Projects extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -314,7 +389,7 @@ class AS_Projects extends as_module {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -325,7 +400,7 @@ class AS_Projects extends as_module {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Item Margin Bottom', 'as_extension'),
+                'label'                 => __('Item Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom_item',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -339,25 +414,25 @@ class AS_Projects extends as_module {
              * Separator
              */
             array(
-                'label'   => __('Enable/Disable', 'as_extension'),
+                'label'   => __('Enable/Disable', 'asex'),
                 'id'      => 'separator_enabled',
                 'std'     => 'enabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                 ),
                 'section' => 'styling',
-                'tab'     => __('Row Separator', 'as_extension'),
+                'tab'     => __('Row Separator', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_sep_border_color',
                 'std'                   => '#ededed',
                 'type'                  => 'color',
@@ -365,10 +440,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'as_extension'),
+                'tab'                   => __('Row Separator', 'asex'),
             ),
             array(
-                'label'                 => __('Height', 'as_extension'),
+                'label'                 => __('Height', 'asex'),
                 'id'                    => 'css_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -379,28 +454,28 @@ class AS_Projects extends as_module {
                 'min'                   => 0,
                 'max'                   => 300,
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'as_extension'),
+                'tab'                   => __('Row Separator', 'asex'),
             ),
             array(
-                'label'                 => __('Style', 'as_extension'),
+                'label'                 => __('Style', 'asex'),
                 'id'                    => 'css_sep_style',
                 'std'                   => 'dashed',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'as_extension'),
+                        'label' => __('Invisible', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Solid', 'as_extension'),
+                        'label' => __('Solid', 'asex'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'as_extension'),
+                        'label' => __('Dashed', 'asex'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'as_extension'),
+                        'label' => __('Dotted', 'asex'),
                         'value' => 'dotted'
                     ),
                 ),
@@ -408,13 +483,13 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-separator',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Row Separator', 'as_extension'),
+                'tab'                   => __('Row Separator', 'asex'),
             ),
             /**
              * Thumbnail
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_thumbnail_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -422,10 +497,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_thumb_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -433,10 +508,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_thumb_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -445,28 +520,28 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_thumb_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -474,10 +549,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
+                'label'                 => __('Border Radius - Top', 'asex'),
                 'id'                    => 'css_thumbnail_border_radius_top',
                 'std'                   => '',
                 'type'                  => 'slider',
@@ -485,11 +560,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner, .dslc-project-thumb img',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
+                'label'                 => __('Border Radius - Bottom', 'asex'),
                 'id'                    => 'css_thumbnail_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -497,11 +572,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-thumb-inner, .dslc-project-thumb img',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -510,10 +585,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Vertical', 'as_extension'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -522,10 +597,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'as_extension'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -534,35 +609,35 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
             ),
             array(
-                'label'   => __('Resize - Height', 'as_extension'),
+                'label'   => __('Resize - Height', 'asex'),
                 'id'      => 'thumb_resize_height',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'as_extension'),
+                'tab'     => __('thumbnail', 'asex'),
             ),
             array(
-                'label'   => __('Resize - Width', 'as_extension'),
+                'label'   => __('Resize - Width', 'asex'),
                 'id'      => 'thumb_resize_width_manual',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('thumbnail', 'as_extension'),
+                'tab'     => __('thumbnail', 'asex'),
             ),
             array(
-                'label'      => __('Resize - Width', 'as_extension'),
+                'label'      => __('Resize - Width', 'asex'),
                 'id'         => 'thumb_resize_width',
                 'std'        => '',
                 'type'       => 'text',
                 'section'    => 'styling',
-                'tab'        => __('thumbnail', 'as_extension'),
+                'tab'        => __('thumbnail', 'asex'),
                 'visibility' => 'hidden'
             ),
             array(
-                'label'                 => __('Width', 'as_extension'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'thumb_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -570,7 +645,7 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-thumb',
                 'affect_on_change_rule' => 'width',
                 'section'               => 'styling',
-                'tab'                   => __('Thumbnail', 'as_extension'),
+                'tab'                   => __('Thumbnail', 'asex'),
                 'min'                   => 1,
                 'max'                   => 100,
                 'ext'                   => '%'
@@ -579,7 +654,7 @@ class AS_Projects extends as_module {
              * Main
              */
             array(
-                'label'                 => __(' BG Color', 'as_extension'),
+                'label'                 => __(' BG Color', 'asex'),
                 'id'                    => 'css_main_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -587,10 +662,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __(' BG Color - Hover', 'as_extension'),
+                'label'                 => __(' BG Color - Hover', 'asex'),
                 'id'                    => 'css_main_bg_color_hover',
                 'std'                   => 'rgba(40, 43, 48, 0.8)',
                 'type'                  => 'color',
@@ -598,19 +673,19 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'as_extension'),
+                'label'             => __('Duration when hover(ms)', 'asex'),
                 'id'                => 'css_main_bg_color_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('Main', 'as_extension'),
+                'tab'               => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color', 'as_extension'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_main_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -618,10 +693,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Border Width', 'as_extension'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_main_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -630,28 +705,28 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Borders', 'as_extension'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_main_border_trbl',
                 'std'                   => 'right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -659,10 +734,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius - Top', 'as_extension'),
+                'label'                 => __('Border Radius - Top', 'asex'),
                 'id'                    => 'css_main_border_radius_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -670,11 +745,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-top-left-radius,border-top-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Border Radius - Bottom', 'as_extension'),
+                'label'                 => __('Border Radius - Bottom', 'asex'),
                 'id'                    => 'css_main_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -682,11 +757,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-main',
                 'affect_on_change_rule' => 'border-bottom-left-radius,border-bottom-right-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Minimum Height', 'as_extension'),
+                'label'                 => __('Minimum Height', 'asex'),
                 'id'                    => 'css_main_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -695,7 +770,7 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'min-height',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Main', 'as_extension'),
+                'tab'                   => __('Main', 'asex'),
                 'min'                   => 0,
                 'max'                   => 500
             ),
@@ -703,7 +778,7 @@ class AS_Projects extends as_module {
              * Title
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#fff',
                 'type'                  => 'color',
@@ -711,10 +786,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
+                'label'                 => __('Color - Hover', 'asex'),
                 'id'                    => 'css_title_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -722,10 +797,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2:hover a,.dslc-project-title h2 a:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -733,11 +808,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -745,14 +820,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Weight tag Span', 'as_extension'),
+                'label'                 => __('Font Weight tag Span', 'asex'),
                 'id'                    => 'css_title_font_weight_span',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -760,14 +835,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2 span,.dslc-project-title h2 a span',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
@@ -775,10 +850,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -786,11 +861,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
+                'label'                 => __('Letter Spacing', 'asex'),
                 'id'                    => 'css_title_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -798,29 +873,29 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'as_extension'),
+                'label'                 => __('Text Transform', 'asex'),
                 'id'                    => 'css_title_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'as_extension'),
+                        'label' => __('Capitalize', 'asex'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'as_extension'),
+                        'label' => __('Uppercase', 'asex'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'as_extension'),
+                        'label' => __('Lowercase', 'asex'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -828,10 +903,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -839,14 +914,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'as_extension'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Categories
              */
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_cats_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -854,10 +929,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'as_extension'),
+                'tab'                   => __('Categories', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'as_extension'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_cats_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -865,11 +940,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'as_extension'),
+                'tab'                   => __('Categories', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'as_extension'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_cats_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -877,14 +952,14 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'as_extension'),
+                'tab'                   => __('Categories', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'as_extension'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_cats_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
@@ -892,10 +967,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'as_extension'),
+                'tab'                   => __('Categories', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'as_extension'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_cats_line_height',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -903,11 +978,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Categories', 'as_extension'),
+                'tab'                   => __('Categories', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_cats_margin-bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -916,13 +991,13 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
-                'tab'                   => __('Categories', 'as_extension'),
+                'tab'                   => __('Categories', 'asex'),
             ),
             /**
              * Icon
              */
             array(
-                'label'                 => __('BG Color', 'as_extension'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_button_bg_color',
                 'std'                   => '#333333',
                 'type'                  => 'color',
@@ -930,10 +1005,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'as_extension'),
+                'label'                 => __('BG Color - Hover', 'asex'),
                 'id'                    => 'css_button_bg_color_hover',
                 'std'                   => '#00b9cf',
                 'type'                  => 'color',
@@ -941,10 +1016,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project:hover,.as-project-custom .as-link-to-project:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'as_extension'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_button_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -952,11 +1027,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Color', 'as_extension'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_button_color',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -964,10 +1039,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project,.as-project-custom .as-link-to-project',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
+                'label'                 => __('Color - Hover', 'asex'),
                 'id'                    => 'css_button_color_hover',
                 'std'                   => '#ffffff',
                 'type'                  => 'color',
@@ -975,203 +1050,203 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-project-custom .as-zoom-img-project:hover,.as-project-custom .as-link-to-project:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Icon', 'as_extension'),
+                'tab'                   => __('Icon', 'asex'),
             ),
             /**
              * Ajax Portfolio Style
              */
             array(
-                'label'   => __('Ajax Projects', 'as_extension'),
-                'id'      => 'as_ajax_projects',
+                'label'   => __('Ajax Projects', 'asex'),
+                'id'      => 'asex_ajax_projects',
                 'std'     => 1,
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Use Ajax Portfolio', 'as_extension'),
+                        'label' => __('Use Ajax Portfolio', 'asex'),
                         'value' => 1
                     ),
                     array(
-                        'label' => __('Normal Link', 'as_extension'),
+                        'label' => __('Normal Link', 'asex'),
                         'value' => 0
                     )
                 ),
                 'section' => 'styling',
-                'tab'     => __('Ajax Portfolio', 'as_extension'),
+                'tab'     => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'   => __('Position Ajax Projects', 'as_extension'),
-                'id'      => 'as_ajax_projects_position',
+                'label'   => __('Position Ajax Projects', 'asex'),
+                'id'      => 'asex_ajax_projects_position',
                 'std'     => 'bottom',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Top', 'as_extension'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Bottom', 'as_extension'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     )
                 ),
                 'section' => 'styling',
-                'tab'     => __('Ajax Portfolio', 'as_extension'),
+                'tab'     => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Ajax Content Margin Bottom', 'as_extension'),
-                'id'                    => 'as_ajax_projects_margin_bottom',
+                'label'                 => __('Ajax Content Margin Bottom', 'asex'),
+                'id'                    => 'asex_ajax_projects_margin_bottom',
                 'std'                   => '35',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '#as_portfolio_content',
+                'affect_on_change_el'   => '#asex_portfolio_content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             /** Navigation Ajax Style * */
             array(
-                'label'                 => __('Color of Navigation', 'as_extension'),
-                'id'                    => 'as_ajax_projects_nav_color',
+                'label'                 => __('Color of Navigation', 'asex'),
+                'id'                    => 'asex_ajax_projects_nav_color',
                 'std'                   => 'rgb(44, 62, 79)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Font Family of Nav', 'as_extension'),
-                'id'                    => 'as_ajax_projects_nav_font_family',
+                'label'                 => __('Font Family of Nav', 'asex'),
+                'id'                    => 'asex_ajax_projects_nav_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Font Weight of Nav', 'as_extension'),
-                'id'                    => 'as_ajax_projects_nav_font_weight',
+                'label'                 => __('Font Weight of Nav', 'asex'),
+                'id'                    => 'asex_ajax_projects_nav_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Nav', 'as_extension'),
-                'id'                    => 'as_ajax_projects_nav_font_size',
+                'label'                 => __('Font Size of Nav', 'asex'),
+                'id'                    => 'asex_ajax_projects_nav_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control span.as-btn-text-ajax-prj',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Nav Margin Bottom', 'as_extension'),
-                'id'                    => 'as_ajax_projects_nav_margin_bottom',
+                'label'                 => __('Nav Margin Bottom', 'asex'),
+                'id'                    => 'asex_ajax_projects_nav_margin_bottom',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-portfolio-ajax-wrapper .as-port-control',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             /** Title Ajax Style * */
             array(
-                'label'                 => __('Color of Title', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_color',
+                'label'                 => __('Color of Title', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_color',
                 'std'                   => 'rgb(89, 89, 89)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Font Family of Title', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_font_family',
+                'label'                 => __('Font Family of Title', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height of Title', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_line_height',
+                'label'                 => __('Line Height of Title', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight of Title', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_font_weight',
+                'label'                 => __('Font Weight of Title', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Title', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_font_size',
+                'label'                 => __('Font Size of Title', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_font_size',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_text_transform',
+                'label'                 => __('Text Transform', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_text_transform',
                 'std'                   => 'uppercase',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'as_extension'),
+                        'label' => __('Capitalize', 'asex'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'as_extension'),
+                        'label' => __('Uppercase', 'asex'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'as_extension'),
+                        'label' => __('Lowercase', 'asex'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1179,143 +1254,143 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_letter_spacing',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title Margin Bottom', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_margin_bottom',
+                'label'                 => __('Title Margin Bottom', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_margin_bottom',
                 'std'                   => '35',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title Align', 'as_extension'),
-                'id'                    => 'as_ajax_projects_title_text_align',
+                'label'                 => __('Title Align', 'asex'),
+                'id'                    => 'asex_ajax_projects_title_text_align',
                 'std'                   => 'center',
                 'type'                  => 'select',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'choices'               => array(
                     array(
-                        'label' => __('Left', 'as_extension'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left',
                     ),
                     array(
-                        'label' => __('Center', 'as_extension'),
+                        'label' => __('Center', 'asex'),
                         'value' => 'center',
                     ),
                     array(
-                        'label' => __('Right', 'as_extension'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right',
                     ),
                     array(
-                        'label' => __('Justify', 'as_extension'),
+                        'label' => __('Justify', 'asex'),
                         'value' => 'justify',
                     ),
                 )
             ),
             /** Category Ajax Style * */
             array(
-                'label'                 => __('Color of Category', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_color',
+                'label'                 => __('Color of Category', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_color',
                 'std'                   => 'rgb(131, 131, 131)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Font Family of Category', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_font_family',
+                'label'                 => __('Font Family of Category', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_font_family',
                 'std'                   => 'Bitter',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height of Category', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_line_height',
+                'label'                 => __('Line Height of Category', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_line_height',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight of Category', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_font_weight',
+                'label'                 => __('Font Weight of Category', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Category', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_font_size',
+                'label'                 => __('Font Size of Category', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_text_transform',
+                'label'                 => __('Text Transform', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_text_transform',
                 'std'                   => 'uppercase',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'as_extension'),
+                        'label' => __('Capitalize', 'asex'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'as_extension'),
+                        'label' => __('Uppercase', 'asex'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'as_extension'),
+                        'label' => __('Lowercase', 'asex'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1323,47 +1398,47 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Letter Spacing', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_letter_spacing',
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Category Margin Bottom', 'as_extension'),
-                'id'                    => 'as_ajax_projects_category_margin_bottom .as-port-ajax-category',
+                'label'                 => __('Category Margin Bottom', 'asex'),
+                'id'                    => 'asex_ajax_projects_category_margin_bottom .as-port-ajax-category',
                 'std'                   => '35',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-title-port-ajax-wrapper .as-port-ajax-category',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             /** Excerpt Ajax Style * */
             array(
-                'label'                 => __('BG Color of Content', 'as_extension'),
-                'id'                    => 'as_ajax_content_bg_color',
+                'label'                 => __('BG Color of Content', 'asex'),
+                'id'                    => 'asex_ajax_content_bg_color',
                 'std'                   => '#f5f5f5',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-ajax-info-wrapper',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Content Vertical', 'as_extension'),
-                'id'                    => 'as_ajax_content_padding_vertical_test',
+                'label'                 => __('Padding Content Vertical', 'asex'),
+                'id'                    => 'asex_ajax_content_padding_vertical_test',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1371,11 +1446,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'ext'                   => 'px',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Padding Content Horizontal', 'as_extension'),
-                'id'                    => 'as_ajax_content_padding_horizontal',
+                'label'                 => __('Padding Content Horizontal', 'asex'),
+                'id'                    => 'asex_ajax_content_padding_horizontal',
                 'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
@@ -1383,89 +1458,89 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'ext'                   => 'px',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Color of Excerpt', 'as_extension'),
-                'id'                    => 'as_ajax_projects_excerpt_color',
+                'label'                 => __('Color of Excerpt', 'asex'),
+                'id'                    => 'asex_ajax_projects_excerpt_color',
                 'std'                   => 'rgb(76, 76, 76)',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Font Family of Excerpt', 'as_extension'),
-                'id'                    => 'as_ajax_projects_excerpt_font_family',
+                'label'                 => __('Font Family of Excerpt', 'asex'),
+                'id'                    => 'asex_ajax_projects_excerpt_font_family',
                 'std'                   => 'Raleway',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height of Excerpt', 'as_extension'),
-                'id'                    => 'as_ajax_projects_excerpt_line_height',
+                'label'                 => __('Line Height of Excerpt', 'asex'),
+                'id'                    => 'asex_ajax_projects_excerpt_line_height',
                 'std'                   => '25',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight of Excerpt', 'as_extension'),
-                'id'                    => 'as_ajax_projects_excerpt_font_weight',
+                'label'                 => __('Font Weight of Excerpt', 'asex'),
+                'id'                    => 'asex_ajax_projects_excerpt_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Size of Excerpt', 'as_extension'),
-                'id'                    => 'as_ajax_projects_excerpt_font_size',
+                'label'                 => __('Font Size of Excerpt', 'asex'),
+                'id'                    => 'asex_ajax_projects_excerpt_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Text Transform Excerpt', 'as_extension'),
-                'id'                    => 'as_ajax_projects_excerpt_text_transform',
+                'label'                 => __('Text Transform Excerpt', 'asex'),
+                'id'                    => 'asex_ajax_projects_excerpt_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'as_extension'),
+                        'label' => __('Capitalize', 'asex'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'as_extension'),
+                        'label' => __('Uppercase', 'asex'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'as_extension'),
+                        'label' => __('Lowercase', 'asex'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1473,25 +1548,25 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
             ),
             array(
-                'label'                 => __('Letter Spacing Excerpt', 'as_extension'),
-                'id'                    => 'as_ajax_projects_excerpt_letter_spacing',
+                'label'                 => __('Letter Spacing Excerpt', 'asex'),
+                'id'                    => 'asex_ajax_projects_excerpt_letter_spacing',
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.as-port-ajax-data .as-port-ajax-excerpt',
                 'affect_on_change_rule' => 'letter-spacing',
                 'section'               => 'styling',
-                'tab'                   => __('Ajax Portfolio', 'as_extension'),
+                'tab'                   => __('Ajax Portfolio', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Filters
              */
             array(
-                'label'                 => __('Background Color - Hover', 'as_extension'),
+                'label'                 => __('Background Color - Hover', 'asex'),
                 'id'                    => 'css_filters_background_color_hover',
                 'std'                   => 'rgb(248, 191, 59)',
                 'type'                  => 'color',
@@ -1499,10 +1574,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'as_extension'),
+                'tab'                   => __('Filters', 'asex'),
             ),
             array(
-                'label'                 => __('Color - Hover', 'as_extension'),
+                'label'                 => __('Color - Hover', 'asex'),
                 'id'                    => 'css_filters_color_hover',
                 'std'                   => 'rgb(248, 191, 59)',
                 'type'                  => 'color',
@@ -1510,10 +1585,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'as_extension'),
+                'tab'                   => __('Filters', 'asex'),
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'as_extension'),
+                'label'                 => __('Border Color - Hover', 'asex'),
                 'id'                    => 'css_filters_border_color_hover',
                 'std'                   => 'rgb(248, 191, 59)',
                 'type'                  => 'color',
@@ -1521,37 +1596,37 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter:hover',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'as_extension'),
+                'tab'                   => __('Filters', 'asex'),
             ),
             array(
-                'label'             => __('Duration when hover(ms)', 'as_extension'),
+                'label'             => __('Duration when hover(ms)', 'asex'),
                 'id'                => 'css_filters_duration_hover',
                 'std'               => '300',
                 'type'              => 'text',
                 'refresh_on_change' => true,
                 'section'           => 'styling',
-                'tab'               => __('Filters', 'as_extension'),
+                'tab'               => __('Filters', 'asex'),
             ),
             array(
-                'label'                 => __('Text Transform', 'as_extension'),
+                'label'                 => __('Text Transform', 'asex'),
                 'id'                    => 'css_filters_text_transform',
                 'std'                   => 'none',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('None', 'as_extension'),
+                        'label' => __('None', 'asex'),
                         'value' => 'none'
                     ),
                     array(
-                        'label' => __('Capitalize', 'as_extension'),
+                        'label' => __('Capitalize', 'asex'),
                         'value' => 'capitalize'
                     ),
                     array(
-                        'label' => __('Uppercase', 'as_extension'),
+                        'label' => __('Uppercase', 'asex'),
                         'value' => 'uppercase'
                     ),
                     array(
-                        'label' => __('Lowercase', 'as_extension'),
+                        'label' => __('Lowercase', 'asex'),
                         'value' => 'lowercase'
                     ),
                 ),
@@ -1559,31 +1634,31 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-post-filters .dslc-post-filter',
                 'affect_on_change_rule' => 'text-transform',
                 'section'               => 'styling',
-                'tab'                   => __('Filters', 'as_extension'),
+                'tab'                   => __('Filters', 'asex'),
             ),
             /**
              * Responsive tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'as_extension'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1591,11 +1666,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-projects',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'as_extension'),
+                'label'                 => __('Separator - Height', 'asex'),
                 'id'                    => 'css_res_t_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1606,10 +1681,10 @@ class AS_Projects extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1618,10 +1693,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Vertical', 'as_extension'),
+                'label'                 => __('Thumbnail - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1630,10 +1705,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Thumbnail - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1642,10 +1717,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Main - Padding Vertical', 'as_extension'),
+                'label'                 => __('Main - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_main_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1654,10 +1729,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Main - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Main - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_main_padding_horizontal',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1666,10 +1741,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Title - Font Size', 'as_extension'),
+                'label'                 => __('Title - Font Size', 'asex'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1677,11 +1752,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'as_extension'),
+                'label'                 => __('Title - Line Height', 'asex'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1689,11 +1764,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'as_extension'),
+                'label'                 => __('Title - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_title_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1701,11 +1776,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Font Size', 'as_extension'),
+                'label'                 => __('Categories - Font Size', 'asex'),
                 'id'                    => 'css_res_t_cats_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1713,11 +1788,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Line Height', 'as_extension'),
+                'label'                 => __('Categories - Line Height', 'asex'),
                 'id'                    => 'css_res_t_cats_line_height',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1725,11 +1800,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Margin Bottom', 'as_extension'),
+                'label'                 => __('Categories - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_cats_margin-bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1738,10 +1813,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Excerpt - Font Size', 'as_extension'),
+                'label'                 => __('Excerpt - Font Size', 'asex'),
                 'id'                    => 'css_res_t_excerpt_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1749,11 +1824,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Line Height', 'as_extension'),
+                'label'                 => __('Excerpt - Line Height', 'asex'),
                 'id'                    => 'css_res_t_excerpt_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1761,11 +1836,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt, .dslc-project-excerpt p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Margin Bottom', 'as_extension'),
+                'label'                 => __('Excerpt - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_excerpt_margin',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1774,10 +1849,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Button - Font Size', 'as_extension'),
+                'label'                 => __('Button - Font Size', 'asex'),
                 'id'                    => 'css_res_t_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1785,11 +1860,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-read-more a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Padding Vertical', 'as_extension'),
+                'label'                 => __('Button - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1798,10 +1873,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Button - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Button - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1810,10 +1885,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Button Icon - Margin Right', 'as_extension'),
+                'label'                 => __('Button Icon - Margin Right', 'asex'),
                 'id'                    => 'css_res_t_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1822,31 +1897,31 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('tablet', 'as_extension'),
+                'tab'                   => __('tablet', 'asex'),
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'as_extension'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'as_extension'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'as_extension'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'as_extension'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'as_extension'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1854,11 +1929,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-projects',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Separator - Height', 'as_extension'),
+                'label'                 => __('Separator - Height', 'asex'),
                 'id'                    => 'css_res_p_sep_height',
                 'std'                   => '32',
                 'type'                  => 'slider',
@@ -1869,10 +1944,10 @@ class AS_Projects extends as_module {
                 'min'                   => 1,
                 'max'                   => 300,
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Margin Bottom', 'as_extension'),
+                'label'                 => __('Thumbnail - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_thumbnail_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1881,10 +1956,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Vertical', 'as_extension'),
+                'label'                 => __('Thumbnail - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_thumbnail_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1893,10 +1968,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Thumbnail - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Thumbnail - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_thumbnail_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1905,10 +1980,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Main - Padding Vertical', 'as_extension'),
+                'label'                 => __('Main - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_main_padding_vertical',
                 'std'                   => '25',
                 'type'                  => 'slider',
@@ -1917,10 +1992,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Main - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Main - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_main_padding_horizontal',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1929,10 +2004,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Title - Font Size', 'as_extension'),
+                'label'                 => __('Title - Font Size', 'asex'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1940,11 +2015,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'as_extension'),
+                'label'                 => __('Title - Line Height', 'asex'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1952,11 +2027,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title h2,.dslc-project-title h2 a',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'as_extension'),
+                'label'                 => __('Title - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_title_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1964,11 +2039,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Font Size', 'as_extension'),
+                'label'                 => __('Categories - Font Size', 'asex'),
                 'id'                    => 'css_res_p_cats_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1976,11 +2051,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Line Height', 'as_extension'),
+                'label'                 => __('Categories - Line Height', 'asex'),
                 'id'                    => 'css_res_p_cats_line_height',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -1988,11 +2063,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-cats',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Categories - Margin Bottom', 'as_extension'),
+                'label'                 => __('Categories - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_cats_margin-bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2001,10 +2076,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Excerpt - Font Size', 'as_extension'),
+                'label'                 => __('Excerpt - Font Size', 'asex'),
                 'id'                    => 'css_res_p_excerpt_font_size',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2012,11 +2087,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Line Height', 'as_extension'),
+                'label'                 => __('Excerpt - Line Height', 'asex'),
                 'id'                    => 'css_res_p_excerpt_line_height',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2024,11 +2099,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-excerpt, .dslc-project-excerpt p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Excerpt - Margin Bottom', 'as_extension'),
+                'label'                 => __('Excerpt - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_excerpt_margin',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2037,10 +2112,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Button - Font Size', 'as_extension'),
+                'label'                 => __('Button - Font Size', 'asex'),
                 'id'                    => 'css_res_p_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2048,11 +2123,11 @@ class AS_Projects extends as_module {
                 'affect_on_change_el'   => '.dslc-project-read-more a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Button - Padding Vertical', 'as_extension'),
+                'label'                 => __('Button - Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2061,10 +2136,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Button - Padding Horizontal', 'as_extension'),
+                'label'                 => __('Button - Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -2073,10 +2148,10 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Button Icon - Margin Right', 'as_extension'),
+                'label'                 => __('Button Icon - Margin Right', 'asex'),
                 'id'                    => 'css_res_p_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -2085,7 +2160,7 @@ class AS_Projects extends as_module {
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => __('phone', 'as_extension'),
+                'tab'                   => __('phone', 'asex'),
             ),
         );
 
@@ -2285,11 +2360,11 @@ class AS_Projects extends as_module {
         ?>
 
         <?php
-        if ($options['as_ajax_projects'] == 1 && $options['as_ajax_projects_position'] == 'top')
+        if ($options['asex_ajax_projects'] == 1 && $options['asex_ajax_projects_position'] == 'top')
         {
             ?>
             <!-- PRINT PROJECTS DATA -->
-            <div id="as_portfolio_content" style="display:none;">
+            <div id="asex_portfolio_content" style="display:none;">
                 <div class="as-wrapper clearfix">
                     <div class="as-portfolio-ajax-wrapper">
                         <div class="as-port-control dslc-col dslc-12-col dslc-last-col">
@@ -2355,8 +2430,7 @@ class AS_Projects extends as_module {
                             $post_cats = get_the_terms(get_the_ID(), 'dslc_projects_cats');
                             if (!empty($post_cats))
                             {
-                                foreach ($post_cats as
-                                        $post_cat)
+                                foreach ($post_cats as $post_cat)
                                 {
                                     $cats_array[$post_cat->slug] = $post_cat->name;
                                 }
@@ -2374,12 +2448,10 @@ class AS_Projects extends as_module {
                     ?>
                     <div class="dslc-post-filters">
 
-                        <span class="dslc-post-filter as-isotope-filter dslc-active" data-id=" " style="<?php echo esc_html($duration_filter_hover); ?>"><?php _e('All', 'Post Filter', 'as_extension'); ?></span>
+                        <span class="dslc-post-filter as-isotope-filter dslc-active" data-id=" " style="<?php echo esc_html($duration_filter_hover); ?>"><?php _e('All', 'Post Filter', 'asex'); ?></span>
 
                         <?php
-                        foreach ($cats_array as
-                                $cat_slug =>
-                                $cat_name) :
+                        foreach ($cats_array as $cat_slug => $cat_name) :
                             ?>
                             <span class="dslc-post-filter as-isotope-filter dslc-inactive" data-id="<?php echo esc_attr($cat_slug); ?>" style="<?php echo esc_html($duration_filter_hover); ?>"><?php echo esc_html($cat_name); ?></span>
                         <?php endforeach; ?>
@@ -2449,8 +2521,7 @@ class AS_Projects extends as_module {
                                                             $project_cats_data = '';
                                                             if (!empty($project_cats))
                                                             {
-                                                                foreach ($project_cats as
-                                                                        $project_cat)
+                                                                foreach ($project_cats as $project_cat)
                                                                 {
                                                                     $project_cats_data .= $project_cat->slug . ' ';
                                                                 }
@@ -2514,12 +2585,12 @@ class AS_Projects extends as_module {
                                 <div class="dslc-post-thumb dslc-project-thumb dslc-on-hover-anim as-project-custom">
                                     <div class="dslc-project-thumb-inner dslca-post-thumb">
                                         <?php if ($manual_resize) : ?>
-                                            <a data-id="<?php echo get_the_ID(); ?>" data-ajax="<?php echo isset($options['as_ajax_projects']) && $options['as_ajax_projects'] ? '1' : '0'; ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><img src="<?php
+                                            <a data-id="<?php echo get_the_ID(); ?>" data-ajax="<?php echo isset($options['asex_ajax_projects']) && $options['asex_ajax_projects'] ? '1' : '0'; ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><img src="<?php
                                                 $res_img = dslc_aq_resize($thumb_url, $resize_width, $resize_height, true);
                                                 echo esc_url($res_img);
                                                 ?>" alt="<?php echo esc_attr($thumb_alt); ?>" /></a>
                                             <?php else : ?>
-                                            <a data-id="<?php echo get_the_ID(); ?>" data-ajax="<?php echo isset($options['as_ajax_projects']) && $options['as_ajax_projects'] ? '1' : '0'; ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><?php the_post_thumbnail('full'); ?></a>
+                                            <a data-id="<?php echo get_the_ID(); ?>" data-ajax="<?php echo isset($options['asex_ajax_projects']) && $options['asex_ajax_projects'] ? '1' : '0'; ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><?php the_post_thumbnail('full'); ?></a>
                                         <?php endif; ?>
                                     </div><!-- .dslc-project-thumb-inner -->
 
@@ -2531,7 +2602,7 @@ class AS_Projects extends as_module {
                                             <div class="dslc-project-main-inner">
                                                 <?php if ($post_elements == 'all' || in_array('title', $post_elements)) : ?>
                                                     <div class="dslc-project-title">
-                                                        <h2><a data-ajax="<?php echo isset($options['as_ajax_projects']) && $options['as_ajax_projects'] ? '1' : '0'; ?>" data-id="<?php echo get_the_ID(); ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><?php the_title(); ?></a></h2>
+                                                        <h2><a data-ajax="<?php echo isset($options['asex_ajax_projects']) && $options['asex_ajax_projects'] ? '1' : '0'; ?>" data-id="<?php echo get_the_ID(); ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><?php the_title(); ?></a></h2>
                                                     </div><!-- .dslc-project-title -->
                                                 <?php endif; ?>
 
@@ -2540,8 +2611,7 @@ class AS_Projects extends as_module {
                                                     <?php if (!empty($project_cats)) : ?>
                                                         <div class="dslc-project-cats">
                                                             <?php
-                                                            foreach ($project_cats as
-                                                                    $project_cat)
+                                                            foreach ($project_cats as $project_cat)
                                                             {
                                                                 $project_cats_count++;
                                                                 if ($project_cats_count > 1)
@@ -2559,21 +2629,22 @@ class AS_Projects extends as_module {
                                                 <?php if ($post_elements == 'all' || in_array('icon_link', $post_elements)) : ?>
                                                     <div class="as-group-icon-project">
                                                         <?php
-                                                        $format_check = rwmb_meta('as_custom_page_metaboxes','type=select');
-                                                        $format = get_post_format();
+                                                        $format_check = rwmb_meta('asex_custom_page_metaboxes', 'type=select');
+                                                        $format       = get_post_format();
                                                         if (($format == 'video') && ($format_check == 'youtube'))
                                                         {
-                                                            $img_link_url = ( rwmb_meta('as_youtube_link', 'type=select'));
-                                                            $format = 'video';
+                                                            $img_link_url = ( rwmb_meta('asex_youtube_link', 'type=select'));
+                                                            $format       = 'video';
                                                         }
-                                                        else{
+                                                        else
+                                                        {
                                                             $img_link_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
                                                             $img_link_url = $img_link_url[0];
-                                                            $format = 'normal';
+                                                            $format       = 'normal';
                                                         }
                                                         ?>
-                                                        <a class="as-zoom-img-project as-lightbox-gallery" data-project-type="<?php echo esc_attr($format);?>" href="<?php echo esc_url($img_link_url); ?>"><span class="dslc-icon <?php echo ($format=='video' ? 'dslc-icon-play-circle':'dslc-icon-search' );?>"></span></a>
-                                                        <a class="as-link-to-project" data-ajax="<?php echo isset($options['as_ajax_projects']) && $options['as_ajax_projects'] ? '1' : '0'; ?>" data-id="<?php echo get_the_ID(); ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><span class="dslc-icon dslc-icon-link"></span></a>
+                                                        <a class="as-zoom-img-project as-lightbox-gallery" data-project-type="<?php echo esc_attr($format); ?>" href="<?php echo esc_url($img_link_url); ?>"><span class="dslc-icon <?php echo ($format == 'video' ? 'dslc-icon-play-circle' : 'dslc-icon-search' ); ?>"></span></a>
+                                                        <a class="as-link-to-project" data-ajax="<?php echo isset($options['asex_ajax_projects']) && $options['asex_ajax_projects'] ? '1' : '0'; ?>" data-id="<?php echo get_the_ID(); ?>" href="<?php echo esc_url($the_project_url); ?>" target="<?php echo esc_attr($the_project_url_target); ?>"><span class="dslc-icon dslc-icon-link"></span></a>
                                                     </div>
                                                 <?php endif; ?>
                                             </div><!-- .dslc-init-center -->
@@ -2602,7 +2673,7 @@ class AS_Projects extends as_module {
             <?php
         else :
             if ($dslc_is_admin) :
-                ?><div class="dslc-notification dslc-red"><?php _e('You do not have any projects at the moment. Go to <strong>WP Admin &rarr; Projects</strong> to add some.', 'as_extension'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
+                ?><div class="dslc-notification dslc-red"><?php _e('You do not have any projects at the moment. Go to <strong>WP Admin &rarr; Projects</strong> to add some.', 'asex'); ?> <span class="dslca-refresh-module-hook dslc-icon dslc-icon-refresh"></span></span></div><?php
             endif;
         endif;
         /**
@@ -2618,11 +2689,11 @@ class AS_Projects extends as_module {
         wp_reset_query();
         ?>
         <?php
-        if ($options['as_ajax_projects'] == 1 && $options['as_ajax_projects_position'] == 'bottom')
+        if ($options['asex_ajax_projects'] == 1 && $options['asex_ajax_projects_position'] == 'bottom')
         {
             ?>
             <!-- PRINT PROJECTS DATA -->
-            <div id="as_portfolio_content" style="display:none;">
+            <div id="asex_portfolio_content" style="display:none;">
                 <div class="as-wrapper clearfix">
                     <div class="as-portfolio-ajax-wrapper">
                         <div class="as-port-control dslc-col dslc-12-col dslc-last-col">
