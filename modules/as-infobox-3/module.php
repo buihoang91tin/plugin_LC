@@ -145,10 +145,6 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                         'label' => __('Title', 'asex'),
                         'value' => 'title'
                     ),
-                     array(
-                        'label' => __('Sub Title', 'asex'),
-                        'value' => 'sub_title'
-                    ),
                     array(
                         'label' => __('Content', 'asex'),
                         'value' => 'content'
@@ -580,7 +576,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'             => __('Icon', 'asex'),
                 'id'                => 'icon_id',
-                'std'               => 'comments',
+                'std'               => 'as-params',
                 'type'              => 'icon',
                 'section'           => 'styling',
                 'tab'               => __('Icon', 'asex'),
@@ -592,7 +588,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-3-image',
+                'affect_on_change_el'   => '.dslc-info-box-3-image .dslc-info-box-3-image-inner',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -606,7 +602,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-3-image',
+                'affect_on_change_el'   => '.dslc-info-box-3-image .dslc-info-box-3-image-inner',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -617,10 +613,10 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Margin Left', 'asex'),
                 'id'                    => 'css_icon_margin_left',
-                'std'                   => '0',
+                'std'                   => '13',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-image',
+                'affect_on_change_el'   => '.dslc-info-box-3-image .dslc-info-box-3-image-inner',
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -634,7 +630,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 'std'                   => '25',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-3-image',
+                'affect_on_change_el'   => '.dslc-info-box-3-image .dslc-info-box-3-image-inner',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -643,34 +639,12 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 'max'                   => 100
             ),
             array(
-                'label'   => __('Position', 'asex'),
-                'id'      => 'icon_position',
-                'std'     => 'above',
-                'type'    => 'select',
-                'choices' => array(
-                    array(
-                        'label' => __('Above', 'asex'),
-                        'value' => 'above',
-                    ),
-                    array(
-                        'label' => __('Left', 'asex'),
-                        'value' => 'aside',
-                    ),
-                    array(
-                        'label' => __('Right', 'asex'),
-                        'value' => 'right',
-                    ),
-                ),
-                'section' => 'styling',
-                'tab'     => __('Icon', 'asex'),
-            ),
-            array(
                 'label'                 => __('Size ( Wrapper )', 'asex'),
                 'id'                    => 'css_icon_wrapper_width',
                 'std'                   => '63',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-3-image-inner',
+                'affect_on_change_el'   => '.dslc-info-box-3-image .dslc-info-box-3-image-inner',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -684,7 +658,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 'std'                   => '31',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-3-image-inner .dslc-icon',
+                'affect_on_change_el'   => '.dslc-info-box-3-image .dslc-info-box-3-image-inner .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -1556,14 +1530,6 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Sub Title', 'asex'),
-                'id'         => 'sub_title',
-                'std'        => __('CLICK TO EDIT', 'asex'),
-                'type'       => 'textarea',
-                'visibility' => 'hidden',
-                'section'    => 'styling'
-            ),
-            array(
                 'label'      => __('Content', 'asex'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
@@ -2217,7 +2183,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             $type_line = '<div class="as-icon-line"></div>';
         }
         ?>
-        <div class="dslc-info-box-3 dslc-info-box-3-icon-pos-<?php echo esc_attr($options['icon_position']); ?>">
+        <div class="dslc-info-box-3">
             <?php if ($options['button_pos'] == 'aside' && in_array('button', $elements)) : ?>
                 <div class="dslc-info-box-3-button dslc-info-box-3-button-aside">
                     <?php if (isset($options['button_link']) && !empty($options['button_link'])) : ?>
@@ -2265,13 +2231,6 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 <?php endif; ?>
 
                 <div class="dslc-info-box-3-main">
-                    <?php if (in_array('sub_title', $elements)) : ?>
-                        <?php if ($dslc_is_admin) : ?>
-                            <div class="dslca-editable-content asex-infobox-3-subtitle" data-id="sub_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($options['sub_title']); ?></div>
-                                <?php else : ?>
-                            <div class="asex-infobox-3-subtitle"><?php echo stripslashes($options['sub_title']); ?></div>
-                        <?php endif; ?>
-                    <?php endif; ?>
                     <?php if (in_array('title', $elements)) : ?>
                         <div class="dslc-info-box-3-title">
                             <?php if ($dslc_is_admin) : ?>
