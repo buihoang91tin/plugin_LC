@@ -3190,7 +3190,7 @@ class ASEX_Tabs extends ASEX_MODULE {
                 <?php else : ?>
 
                     <div class="dslc-tabs-tab-content">
-                        <h4 class="dslc-tabs-nav-hook"><?php _e('CLICK TO EDIT', 'monalisa'); ?></h4>
+                        <h4 class="dslc-tabs-nav-hook"><?php _e('CLICK TO EDIT', 'asex'); ?></h4>
                         <div class="dslca-editable-content">
                             <?php _e('This is just placeholder text.', 'live-composer-page-builder'); ?>
                         </div>

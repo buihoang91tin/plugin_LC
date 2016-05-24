@@ -44,7 +44,7 @@ class ASEX_Button extends ASEX_MODULE {
             array(
                 'label'      => __('Button Text', 'asex'),
                 'id'         => 'asex_button_text',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
@@ -949,7 +949,7 @@ class ASEX_Button extends ASEX_MODULE {
                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['asex_button_icon_id']); ?>"></span>
                     <?php endif; ?>
                 <?php endif; ?>
-                <span class="dslca-editable-content" data-id="asex_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_button_text'], 'monalisa'); ?></span>
+                <span class="dslca-editable-content" data-id="asex_button_text"  data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_button_text'], 'asex'); ?></span>
                 <?php if ($options['asex_button_position_icon'] == 'right') : ?>
                     <?php if ($options['asex_button_state'] == 'enabled') : ?>
                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['asex_button_icon_id']); ?>"></span>

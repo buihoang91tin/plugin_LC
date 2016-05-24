@@ -46,7 +46,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -330,7 +330,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width Google Map ', 'monalisa'),
+                'label'                 => __('Width Google Map ', 'asex'),
                 'id'                    => 'css_res_t_asex_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -344,7 +344,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Height Google Map ', 'monalisa'),
+                'label'                 => __('Height Google Map ', 'asex'),
                 'id'                    => 'css_res_t_asex_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -358,7 +358,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -371,7 +371,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -384,7 +384,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -397,7 +397,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -412,7 +412,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -448,7 +448,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width Google Map ', 'monalisa'),
+                'label'                 => __('Width Google Map ', 'asex'),
                 'id'                    => 'css_res_p_asex_width_googlemap',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -462,7 +462,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Height Google Map ', 'monalisa'),
+                'label'                 => __('Height Google Map ', 'asex'),
                 'id'                    => 'css_res_p_asex_height_googlemap',
                 'std'                   => '300',
                 'type'                  => 'slider',
@@ -476,7 +476,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -489,7 +489,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -502,7 +502,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -515,7 +515,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -530,7 +530,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -575,7 +575,7 @@ class ASEX_Google_Map extends ASEX_MODULE {
         $elementID = uniqid('asex_googlemap_');
         ?>
         <?php if ($dslc_active): ?>
-            <!--<div class="dslc-notification dslc-red"><?php _e('Map live preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing map.', 'monalisa'); ?><br> <?php _e('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'monalisa'); ?></div>-->
+            <!--<div class="dslc-notification dslc-red"><?php _e('Map live preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing map.', 'asex'); ?><br> <?php _e('Please <a href="http://www.latlong.net/" target="_blank">click here</a> for finding your Latitude and Longitude', 'asex'); ?></div>-->
             <div class="asex_google_map_wrapper">
                 <div class="asex_googlemap" id="<?php echo $elementID; ?>" value="<?php echo esc_attr($options['googlemap_x']); ?>,<?php echo esc_attr($options['googlemap_y']); ?>" scrollwheel="<?php echo esc_attr($options['googlemap_scrlwheel']); ?>" zoom="<?php echo esc_attr($options['googlemap_zoom']); ?>" markposition="<?php echo esc_attr($options['googlemap_x_mark']); ?>,<?php echo esc_attr($options['googlemap_y_mark']); ?>" marktitle="<?php echo esc_attr($options['google_title_mark']); ?>" snapzzymap="<?php echo esc_attr($options['googlemap_snazzy_map']); ?>"></div>
             </div>

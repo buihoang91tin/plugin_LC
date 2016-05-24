@@ -7,7 +7,8 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
     var $module_icon;
     var $module_category;
 
-    function __construct() {
+    function __construct()
+    {
 
         $this->module_id       = 'ASEX_Info_Box_3';
         $this->module_title    = __('Info Box 3', 'asex');
@@ -15,7 +16,8 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
         $this->module_category = 'as - Info Box';
     }
 
-    function options() {
+    function options()
+    {
 
         $dslc_options = array(
             array(
@@ -132,7 +134,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'   => __('Elements', 'asex'),
                 'id'      => 'elements',
-                'std'     => 'icon title content button',
+                'std'     => 'icon title content',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
@@ -142,6 +144,10 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                     array(
                         'label' => __('Title', 'asex'),
                         'value' => 'title'
+                    ),
+                     array(
+                        'label' => __('Sub Title', 'asex'),
+                        'value' => 'sub_title'
                     ),
                     array(
                         'label' => __('Content', 'asex'),
@@ -186,26 +192,26 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             ),
             array(
                 'id'                    => 'css_bg_img_size',
-		        'std'                   => 'auto',
-		        'label'                 => __('BG Image Size', 'asex'),
-		        'type'                  => 'select',
-		        'choices'               => array(
-		            array(
-		                'label' => __('Original', 'asex'),
-		                'value' => 'auto',
-		            ),
-		            array(
-		                'label' => __('Cover', 'asex'),
-		                'value' => 'cover',
-		            ),
-		            array(
-		                'label' => __('Contain', 'asex'),
-		                'value' => 'contain',
-		            ),
-		        ),
-		        'refresh_on_change'     => false,
+                'std'                   => 'auto',
+                'label'                 => __('BG Image Size', 'asex'),
+                'type'                  => 'select',
+                'choices'               => array(
+                    array(
+                        'label' => __('Original', 'asex'),
+                        'value' => 'auto',
+                    ),
+                    array(
+                        'label' => __('Cover', 'asex'),
+                        'value' => 'cover',
+                    ),
+                    array(
+                        'label' => __('Contain', 'asex'),
+                        'value' => 'contain',
+                    ),
+                ),
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box',
-		        'affect_on_change_rule' => 'background-size',
+                'affect_on_change_rule' => 'background-size',
                 'section'               => 'styling',
             ),
             array(
@@ -441,7 +447,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_icon_bg_color',
-                'std'                   => '#f9bf3b',
+                'std'                   => '#333',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-image-inner .as-bg-icon-info-box-3',
@@ -661,7 +667,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Size ( Wrapper )', 'asex'),
                 'id'                    => 'css_icon_wrapper_width',
-                'std'                   => '84',
+                'std'                   => '63',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-image-inner',
@@ -789,7 +795,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
-                'std'                   => '#3d3d3d',
+                'std'                   => '#ffb727',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-title h4',
@@ -827,7 +833,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
-                'std'                   => 'Lato',
+                'std'                   => 'Poppins',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-title h4',
@@ -838,7 +844,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
-                'std'                   => '17',
+                'std'                   => '25',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-title h4',
@@ -850,13 +856,121 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin',
-                'std'                   => '21',
+                'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'tab'                   => __('Title', 'asex'),
+                'ext'                   => 'px'
+            ),
+            /**
+             * Sub Title
+             */
+            array(
+                'label'                 => __('Align', 'asex'),
+                'id'                    => 'css_sub_title_text_align',
+                'std'                   => 'inherit',
+                'type'                  => 'text_align',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'text-align',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
+            ),
+            array(
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'css_sub_title_color',
+                'std'                   => '#797979',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
+            ),
+            array(
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'css_sub_title_font_size',
+                'std'                   => '15',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'css_sub_title_font_weight',
+                'std'                   => '400',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Style', 'asex'),
+                'id'                    => 'css_sub_title_font_style',
+                'std'                   => 'normal',
+                'type'                  => 'select',
+                'choices'               => array(
+                    array(
+                        'label' => __('Normal', 'asex'),
+                        'value' => 'normal'
+                    ),
+                    array(
+                        'label' => __('Italic', 'asex'),
+                        'value' => 'italic'
+                    ),
+                ),
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'font-style',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
+            ),
+            array(
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'css_sub_title_font_family',
+                'std'                   => ' PlayfairDisplay',
+                'type'                  => 'font',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'font-family',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
+            ),
+            array(
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'css_sub_title_line_height',
+                'std'                   => '28',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'css_sub_title_margin',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-3-subtitle',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'styling',
+                'tab'                   => __('Sub Title', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
@@ -876,7 +990,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_content_color',
-                'std'                   => '',
+                'std'                   => '#333',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-content, .dslc-info-box-3-content p',
@@ -887,7 +1001,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_content_font_size',
-                'std'                   => '14',
+                'std'                   => '13',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-content, .dslc-info-box-3-content p',
@@ -914,7 +1028,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_content_font_family',
-                'std'                   => 'Lato',
+                'std'                   => 'Poppins',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-content, .dslc-info-box-3-content p',
@@ -925,7 +1039,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_content_line_height',
-                'std'                   => '23',
+                'std'                   => '26',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-content, .dslc-info-box-3-content p',
@@ -1436,7 +1550,15 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT', 'asex'),
+                'type'       => 'textarea',
+                'visibility' => 'hidden',
+                'section'    => 'styling'
+            ),
+            array(
+                'label'      => __('Sub Title', 'asex'),
+                'id'         => 'sub_title',
+                'std'        => __('CLICK TO EDIT', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1452,7 +1574,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1460,7 +1582,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -2059,7 +2181,8 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options) {
+    function output($options)
+    {
 
         global $dslc_active;
 
@@ -2082,13 +2205,15 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
 
         $transform_rotate       = '';
         $value_transform_rotate = $options['css_icon_transform_rotate'];
-        if ($value_transform_rotate != 0) {
+        if ($value_transform_rotate != 0)
+        {
             $transform_rotate = 'style="-webkit-transform: rotate(' . $value_transform_rotate . 'deg);-moz-transform: rotate(' . $value_transform_rotate . 'deg);-ms-transform: rotate(' . $value_transform_rotate . 'deg);-o-transform: rotate(' . $value_transform_rotate . 'deg);transform: rotate(' . $value_transform_rotate . 'deg);"';
         }
 
         $type_line       = '';
         $value_icon_line = $options['css_line_icon'];
-        if ($value_icon_line == 'enable') {
+        if ($value_icon_line == 'enable')
+        {
             $type_line = '<div class="as-icon-line"></div>';
         }
         ?>
@@ -2101,9 +2226,9 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                                 <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
                             <?php endif; ?>
                             <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'monalisa'); ?></span>
+                                <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'asex'); ?></span>
                                 <?php
-                            else : echo esc_html($options['button_title'], 'monalisa');
+                            else : echo esc_html($options['button_title'], 'asex');
                             endif;
                             ?>
                         </a>
@@ -2114,9 +2239,9 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                                 <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
                             <?php endif; ?>
                             <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'monalisa'); ?></span>
+                                <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'asex'); ?></span>
                                 <?php
-                            else : echo esc_html($options['button_2_title'], 'monalisa');
+                            else : echo esc_html($options['button_2_title'], 'asex');
                             endif;
                             ?>
                         </a>
@@ -2130,7 +2255,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                     <div class="dslc-info-box-3-image">
                         <div class="dslc-info-box-3-image-inner">
                             <?php echo $type_line; ?>
-                            <div class="as-bg-icon-info-box-3" <?php echo $transform_rotate; ?>></div>
+                            <div class="as-bg-icon-info-box-3" <?php echo $transform_rotate; ?>></div>
                             <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['icon_id']); ?> dslc-init-center"></span>
                             <?php if (!empty($options['icon_link'])) : ?>
                                 <a class="dslc-info-box-3-image-link" href="<?php echo esc_url($options['icon_link']); ?>" target="<?php echo esc_attr($options['icon_link_target']); ?>"></a>
@@ -2140,7 +2265,13 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                 <?php endif; ?>
 
                 <div class="dslc-info-box-3-main">
-
+                    <?php if (in_array('sub_title', $elements)) : ?>
+                        <?php if ($dslc_is_admin) : ?>
+                            <div class="dslca-editable-content asex-infobox-3-subtitle" data-id="sub_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($options['sub_title']); ?></div>
+                                <?php else : ?>
+                            <div class="asex-infobox-3-subtitle"><?php echo stripslashes($options['sub_title']); ?></div>
+                        <?php endif; ?>
+                    <?php endif; ?>
                     <?php if (in_array('title', $elements)) : ?>
                         <div class="dslc-info-box-3-title">
                             <?php if ($dslc_is_admin) : ?>
@@ -2176,9 +2307,9 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
                                     <?php endif; ?>
                                     <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'monalisa'); ?></span>
+                                        <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'asex'); ?></span>
                                         <?php
-                                    else : echo esc_html($options['button_title'], 'monalisa');
+                                    else : echo esc_html($options['button_title'], 'asex');
                                     endif;
                                     ?>
                                 </a>
@@ -2189,9 +2320,9 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
                                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
                                     <?php endif; ?>
                                     <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'monalisa'); ?></span>
+                                        <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'asex'); ?></span>
                                         <?php
-                                    else : echo esc_html($options['button_2_title'], 'monalisa');
+                                    else : echo esc_html($options['button_2_title'], 'asex');
                                     endif;
                                     ?>
                                 </a>

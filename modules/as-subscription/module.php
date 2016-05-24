@@ -554,7 +554,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -567,7 +567,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_padding_vertical_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -580,7 +580,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_padding_horizontal_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -593,7 +593,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width (%)( Input Form ) ', 'monalisa'),
+                'label'                 => __('Width (%)( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_input_width',
                 'std'                   => '70',
                 'type'                  => 'slider',
@@ -606,7 +606,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Input Form ) ', 'monalisa'),
+                'label'                 => __('Margin Right( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_input_margin_right',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -619,7 +619,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Input Form ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_input_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -632,7 +632,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Input Form ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_input_padding_vertical_form',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -645,7 +645,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Input Form ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_css_input_padding_horizontal_form',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -658,7 +658,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Input Form ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_input_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -671,7 +671,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Button Style ) ', 'monalisa'),
+                'label'                 => __('Border Width( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -684,7 +684,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Button Style ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -697,7 +697,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Button Style ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -710,7 +710,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Button Style ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -723,7 +723,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Button Style ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -736,7 +736,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_newsletter_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -749,7 +749,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_newsletter_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -762,7 +762,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography ) ', 'monalisa'),
+                'label'                 => __('Font Size( typography ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -775,7 +775,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography ) ', 'monalisa'),
+                'label'                 => __('Font Weight( typography ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -791,7 +791,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( typography ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_newsletter_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -827,7 +827,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -840,7 +840,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_padding_vertical_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -853,7 +853,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_padding_horizontal_form',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -866,7 +866,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width (%)( Input Form ) ', 'monalisa'),
+                'label'                 => __('Width (%)( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_input_width',
                 'std'                   => '70',
                 'type'                  => 'slider',
@@ -879,7 +879,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Input Form ) ', 'monalisa'),
+                'label'                 => __('Margin Right( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_input_margin_right',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -892,7 +892,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Input Form ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_input_margin_bottom',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -905,7 +905,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Input Form ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_input_padding_vertical_form',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -918,7 +918,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Input Form ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_css_input_padding_horizontal_form',
                 'std'                   => '15',
                 'type'                  => 'slider',
@@ -931,7 +931,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Input Form ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Input Form ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_input_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -944,7 +944,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Button Style ) ', 'monalisa'),
+                'label'                 => __('Border Width( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -957,7 +957,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Button Style ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -970,7 +970,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Button Style ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -983,7 +983,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Button Style ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -996,7 +996,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Button Style ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Button Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1009,7 +1009,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_newsletter_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1022,7 +1022,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_newsletter_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1035,7 +1035,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography ) ', 'monalisa'),
+                'label'                 => __('Font Size( typography ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1048,7 +1048,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography ) ', 'monalisa'),
+                'label'                 => __('Font Weight( typography ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1064,7 +1064,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( typography ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_newsletter_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1135,7 +1135,7 @@ class ASEX_SubscriptionBox extends ASEX_MODULE {
         <div class="asex_mailchimp_form">
             <!-- For subscription Form-->
             <form method="GET" action="<?php echo $mailchimp_s_url ?>" target="_blank">
-                <input class="asex_email_mailchimp" type="email" required="" placeholder="<?php _e('Email Address', 'monalisa') ?>" name="EMAIL">
+                <input class="asex_email_mailchimp" type="email" required="" placeholder="<?php _e('Email Address', 'asex') ?>" name="EMAIL">
                 <input type="hidden" name="u" value="<?php echo $mailchimp_data[0] ?>">
                 <input type="hidden" name="id" value="<?php echo $mailchimp_data[1] ?>">
                 <button class="asex_button_submit_mailchimp" type="submit" <?php echo $duration_hover; ?>><?php echo esc_html($options['asex_button_text']); ?></button>

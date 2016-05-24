@@ -1241,7 +1241,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1257,7 +1257,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1265,7 +1265,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1295,7 +1295,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1308,7 +1308,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1321,7 +1321,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1334,7 +1334,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1349,7 +1349,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1362,7 +1362,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width ', 'monalisa'),
+                'label'                 => __('Width ', 'asex'),
                 'id'                    => 'css_res_t_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1375,7 +1375,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Icon ) ', 'monalisa'),
+                'label'                 => __('Border Width( Icon ) ', 'asex'),
                 'id'                    => 'css_res_t_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1388,7 +1388,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Icon ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Icon ) ', 'asex'),
                 'id'                    => 'css_res_t_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1401,7 +1401,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Icon ) ', 'monalisa'),
+                'label'                 => __('Margin Top( Icon ) ', 'asex'),
                 'id'                    => 'css_res_t_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1416,7 +1416,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Icon ) ', 'monalisa'),
+                'label'                 => __('Margin Right( Icon ) ', 'asex'),
                 'id'                    => 'css_res_t_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1431,7 +1431,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper )( Icon ) ', 'monalisa'),
+                'label'                 => __('Size ( Wrapper )( Icon ) ', 'asex'),
                 'id'                    => 'css_res_t_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -1446,7 +1446,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size ( Icon ) ', 'monalisa'),
+                'label'                 => __('Size ( Icon ) ', 'asex'),
                 'id'                    => 'css_res_t_css_icon_width',
                 'std'                   => '45',
                 'type'                  => 'slider',
@@ -1459,7 +1459,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Title ) ', 'monalisa'),
+                'label'                 => __('Font Size( Title ) ', 'asex'),
                 'id'                    => 'css_res_t_css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -1472,7 +1472,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Title ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Title ) ', 'asex'),
                 'id'                    => 'css_res_t_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1488,7 +1488,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( Title ) ', 'monalisa'),
+                'label'                 => __('Line Height( Title ) ', 'asex'),
                 'id'                    => 'css_res_t_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -1501,7 +1501,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Title ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Title ) ', 'asex'),
                 'id'                    => 'css_res_t_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1514,7 +1514,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Content ) ', 'monalisa'),
+                'label'                 => __('Font Size( Content ) ', 'asex'),
                 'id'                    => 'css_res_t_css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -1527,7 +1527,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Content ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Content ) ', 'asex'),
                 'id'                    => 'css_res_t_css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -1543,7 +1543,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( Content ) ', 'monalisa'),
+                'label'                 => __('Line Height( Content ) ', 'asex'),
                 'id'                    => 'css_res_t_css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -1556,7 +1556,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Content ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Content ) ', 'asex'),
                 'id'                    => 'css_res_t_css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -1569,7 +1569,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Border Width( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1582,7 +1582,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1595,7 +1595,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Font Size( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1608,7 +1608,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1624,7 +1624,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Top( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1637,7 +1637,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Right( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1650,7 +1650,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1663,7 +1663,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1676,7 +1676,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1689,7 +1689,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Border Width( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1702,7 +1702,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1715,7 +1715,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Font Size( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1728,7 +1728,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -1744,7 +1744,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Left( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Left( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1757,7 +1757,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Top( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1770,7 +1770,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -1783,7 +1783,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -1796,7 +1796,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_t_css_button_2_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -1833,7 +1833,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1846,7 +1846,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1859,7 +1859,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1872,7 +1872,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1887,7 +1887,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1900,7 +1900,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width ', 'monalisa'),
+                'label'                 => __('Width ', 'asex'),
                 'id'                    => 'css_res_p_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1913,7 +1913,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Icon ) ', 'monalisa'),
+                'label'                 => __('Border Width( Icon ) ', 'asex'),
                 'id'                    => 'css_res_p_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1926,7 +1926,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Icon ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Icon ) ', 'asex'),
                 'id'                    => 'css_res_p_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -1939,7 +1939,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Icon ) ', 'monalisa'),
+                'label'                 => __('Margin Top( Icon ) ', 'asex'),
                 'id'                    => 'css_res_p_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1954,7 +1954,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Icon ) ', 'monalisa'),
+                'label'                 => __('Margin Right( Icon ) ', 'asex'),
                 'id'                    => 'css_res_p_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1969,7 +1969,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper )( Icon ) ', 'monalisa'),
+                'label'                 => __('Size ( Wrapper )( Icon ) ', 'asex'),
                 'id'                    => 'css_res_p_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -1984,7 +1984,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size( Icon ) ', 'monalisa'),
+                'label'                 => __('Size( Icon ) ', 'asex'),
                 'id'                    => 'css_res_p_css_icon_width',
                 'std'                   => '45',
                 'type'                  => 'slider',
@@ -1997,7 +1997,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Title ) ', 'monalisa'),
+                'label'                 => __('Font Size( Title ) ', 'asex'),
                 'id'                    => 'css_res_p_css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -2010,7 +2010,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Title ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Title ) ', 'asex'),
                 'id'                    => 'css_res_p_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2026,7 +2026,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( Title ) ', 'monalisa'),
+                'label'                 => __('Line Height( Title ) ', 'asex'),
                 'id'                    => 'css_res_p_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -2039,7 +2039,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Title ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Title ) ', 'asex'),
                 'id'                    => 'css_res_p_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2052,7 +2052,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Content ) ', 'monalisa'),
+                'label'                 => __('Font Size( Content ) ', 'asex'),
                 'id'                    => 'css_res_p_css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -2065,7 +2065,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Content ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Content ) ', 'asex'),
                 'id'                    => 'css_res_p_css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -2081,7 +2081,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( Content ) ', 'monalisa'),
+                'label'                 => __('Line Height( Content ) ', 'asex'),
                 'id'                    => 'css_res_p_css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -2094,7 +2094,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Content ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( Content ) ', 'asex'),
                 'id'                    => 'css_res_p_css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -2107,7 +2107,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Border Width( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2120,7 +2120,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2133,7 +2133,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Font Size( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2146,7 +2146,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2162,7 +2162,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Top( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2175,7 +2175,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Right( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2188,7 +2188,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2201,7 +2201,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -2214,7 +2214,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'monalisa'),
+                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
@@ -2227,7 +2227,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Border Width( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2240,7 +2240,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Border Radius( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2253,7 +2253,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Font Size( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2266,7 +2266,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Font Weight( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2282,7 +2282,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Left( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Left( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2295,7 +2295,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Margin Top( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2308,7 +2308,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
@@ -2321,7 +2321,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
@@ -2334,7 +2334,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'monalisa'),
+                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'asex'),
                 'id'                    => 'css_res_p_css_button_2_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',

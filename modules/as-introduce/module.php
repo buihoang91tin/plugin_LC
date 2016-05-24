@@ -10,7 +10,7 @@ class ASEX_Introduce extends ASEX_MODULE {
     function __construct() {
 
         $this->module_id       = 'ASEX_Introduce';
-        $this->module_title    = __('Introduce', 'monalisa');
+        $this->module_title    = __('Introduce', 'asex');
         $this->module_icon     = 'info';
         $this->module_category = 'as - Info Box';
     }
@@ -19,43 +19,43 @@ class ASEX_Introduce extends ASEX_MODULE {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'monalisa'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'monalisa'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'monalisa'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'monalisa'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Title Link', 'monalisa'),
+                'label' => __('Title Link', 'asex'),
                 'id'    => 'title_link',
                 'std'   => '',
                 'type'  => 'text'
             ),
             array(
-                'label'   => __('Title Link - Open in', 'monalisa'),
+                'label'   => __('Title Link - Open in', 'asex'),
                 'id'      => 'title_link_target',
                 'std'     => '_self',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Same Tab', 'monalisa'),
+                        'label' => __('Same Tab', 'asex'),
                         'value' => '_self',
                     ),
                     array(
-                        'label' => __('New Tab', 'monalisa'),
+                        'label' => __('New Tab', 'asex'),
                         'value' => '_blank',
                     ),
                 )
@@ -64,32 +64,32 @@ class ASEX_Introduce extends ASEX_MODULE {
              * General
              */
             array(
-                'label'   => __('Elements', 'monalisa'),
+                'label'   => __('Elements', 'asex'),
                 'id'      => 'elements',
                 'std'     => 'icon title content social image',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Title', 'monalisa'),
+                        'label' => __('Title', 'asex'),
                         'value' => 'title'
                     ),
                     array(
-                        'label' => __('Image', 'monalisa'),
+                        'label' => __('Image', 'asex'),
                         'value' => 'image'
                     ),
                     array(
-                        'label' => __('Content', 'monalisa'),
+                        'label' => __('Content', 'asex'),
                         'value' => 'content'
                     ),
                     array(
-                        'label' => __('Social', 'monalisa'),
+                        'label' => __('Social', 'asex'),
                         'value' => 'Social'
                     ),
                 ),
                 'section' => 'styling'
             ),
             array(
-                'label'                 => __('Align', 'monalisa'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'text_align',
                 'std'                   => 'center',
                 'type'                  => 'text_align',
@@ -99,7 +99,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color', 'monalisa'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -109,7 +109,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'monalisa'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '#000000',
                 'type'                  => 'color',
@@ -119,7 +119,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'monalisa'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -130,25 +130,25 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'monalisa'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'monalisa'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'monalisa'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'monalisa'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'monalisa'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -158,7 +158,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'monalisa'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -169,7 +169,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Z-index', 'monalisa'),
+                'label'                 => __('Z-index', 'asex'),
                 'id'                    => 'css_margin_z_index',
                 'std'                   => '999',
                 'type'                  => 'slider',
@@ -180,7 +180,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'max'                   => 1000,
             ),
             array(
-                'label'                 => __('Margin Top', 'monalisa'),
+                'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -193,7 +193,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'ma~x'                  => 100,
             ),
             array(
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -204,7 +204,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -217,7 +217,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -228,7 +228,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'monalisa'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -242,7 +242,7 @@ class ASEX_Introduce extends ASEX_MODULE {
              * Title
              */
             array(
-                'label'                 => __('Align', 'monalisa'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_title_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -250,10 +250,10 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'monalisa'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'monalisa'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
@@ -261,10 +261,10 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'monalisa'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'monalisa'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -272,11 +272,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'monalisa'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'monalisa'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -284,14 +284,14 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'monalisa'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'monalisa'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_title_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -299,10 +299,10 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'monalisa'),
+                'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'monalisa'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -310,11 +310,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'monalisa'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -322,14 +322,14 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Title', 'monalisa'),
+                'tab'                   => __('Title', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Image
              */
             array(
-                'label'             => __('Image Upload', 'monalisa'),
+                'label'             => __('Image Upload', 'asex'),
                 'id'                => 'asex_introduce_upload',
                 'std'               => '',
                 'type'              => 'image',
@@ -377,7 +377,7 @@ class ASEX_Introduce extends ASEX_MODULE {
              * Decription
              */
             array(
-                'label'                 => __('Align', 'monalisa'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_content_text_align',
                 'std'                   => 'inherit',
                 'type'                  => 'text_align',
@@ -385,10 +385,10 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'monalisa'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_content_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -396,10 +396,10 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
             ),
             array(
-                'label'                 => __('Font Size', 'monalisa'),
+                'label'                 => __('Font Size', 'asex'),
                 'id'                    => 'css_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -407,11 +407,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Font Weight', 'monalisa'),
+                'label'                 => __('Font Weight', 'asex'),
                 'id'                    => 'css_content_font_weight',
                 'std'                   => '400',
                 'type'                  => 'slider',
@@ -419,14 +419,14 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
                 'ext'                   => '',
                 'min'                   => 100,
                 'max'                   => 900,
                 'increment'             => 100
             ),
             array(
-                'label'                 => __('Font Family', 'monalisa'),
+                'label'                 => __('Font Family', 'asex'),
                 'id'                    => 'css_content_font_family',
                 'std'                   => 'Lato',
                 'type'                  => 'font',
@@ -434,10 +434,10 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'monalisa'),
+                'label'                 => __('Line Height', 'asex'),
                 'id'                    => 'css_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -445,11 +445,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -457,11 +457,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'asex_introduce_decription_padding_vertical',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -469,99 +469,99 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('Decription', 'monalisa'),
+                'tab'                   => __('Decription', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Social
              */
             array(
-                'label'   => __('Soial link 1', 'monalisa'),
+                'label'   => __('Soial link 1', 'asex'),
                 'id'      => 'asex_introduce_social_link_1',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'monalisa'),
+                'tab'     => __('Socials', 'asex'),
             ),
             array(
-                'label'             => __('Icon', 'monalisa'),
+                'label'             => __('Icon', 'asex'),
                 'id'                => 'asex_introduce_social_icon_1',
                 'std'               => 'facebook',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'monalisa'),
+                'tab'               => __('Socials', 'asex'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 2', 'monalisa'),
+                'label'   => __('Soial link 2', 'asex'),
                 'id'      => 'asex_introduce_social_link_2',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'monalisa'),
+                'tab'     => __('Socials', 'asex'),
             ),
             array(
-                'label'             => __('Icon', 'monalisa'),
+                'label'             => __('Icon', 'asex'),
                 'id'                => 'asex_introduce_social_icon_2',
                 'std'               => 'youtube',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'monalisa'),
+                'tab'               => __('Socials', 'asex'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 3', 'monalisa'),
+                'label'   => __('Soial link 3', 'asex'),
                 'id'      => 'asex_introduce_social_link_3',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'monalisa'),
+                'tab'     => __('Socials', 'asex'),
             ),
             array(
-                'label'             => __('Icon', 'monalisa'),
+                'label'             => __('Icon', 'asex'),
                 'id'                => 'asex_introduce_social_icon_3',
                 'std'               => 'google',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'monalisa'),
+                'tab'               => __('Socials', 'asex'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 4', 'monalisa'),
+                'label'   => __('Soial link 4', 'asex'),
                 'id'      => 'asex_introduce_social_link_4',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'monalisa'),
+                'tab'     => __('Socials', 'asex'),
             ),
             array(
-                'label'             => __('Icon', 'monalisa'),
+                'label'             => __('Icon', 'asex'),
                 'id'                => 'asex_introduce_social_icon_4',
                 'std'               => 'pinterest',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'monalisa'),
+                'tab'               => __('Socials', 'asex'),
                 'include_in_preset' => false
             ),
             array(
-                'label'   => __('Soial link 5', 'monalisa'),
+                'label'   => __('Soial link 5', 'asex'),
                 'id'      => 'asex_introduce_social_link_5',
                 'std'     => '',
                 'type'    => 'text',
                 'section' => 'styling',
-                'tab'     => __('Socials', 'monalisa'),
+                'tab'     => __('Socials', 'asex'),
             ),
             array(
-                'label'             => __('Icon', 'monalisa'),
+                'label'             => __('Icon', 'asex'),
                 'id'                => 'asex_introduce_social_icon_5',
                 'std'               => 'dribbble',
                 'type'              => 'icon',
                 'section'           => 'styling',
-                'tab'               => __('Socials', 'monalisa'),
+                'tab'               => __('Socials', 'asex'),
                 'include_in_preset' => false
             ),
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'asex_introduce_social_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -569,11 +569,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'asex_introduce_social_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -581,11 +581,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Size', 'monalisa'),
+                'label'                 => __('Size', 'asex'),
                 'id'                    => 'asex_introduce_social_font_size',
                 'std'                   => '19',
                 'type'                  => 'slider',
@@ -593,11 +593,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('BG Color', 'monalisa'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'asex_introduce_social_bgcolor',
                 'std'                   => 'rgba(189, 36, 36, 0)',
                 'type'                  => 'color',
@@ -605,10 +605,10 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
             ),
             array(
-                'label'                 => __('Color', 'monalisa'),
+                'label'                 => __('Color', 'asex'),
                 'id'                    => 'asex_introduce_social_color',
                 'std'                   => 'rgb(0, 179, 253)',
                 'type'                  => 'color',
@@ -616,7 +616,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
             ),
             array(
                 'label'                 => __('Border Color', 'asex'),
@@ -627,7 +627,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
             ),
             array(
                 'label'                 => __('Border Width', 'asex'),
@@ -638,39 +638,39 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Border Style', 'monalisa'),
+                'label'                 => __('Border Style', 'asex'),
                 'id'                    => 'asex_introduce_social_border_style',
                 'std'                   => 'solid',
                 'type'                  => 'select',
                 'choices'               => array(
                     array(
-                        'label' => __('Invisible', 'monalisa'),
+                        'label' => __('Invisible', 'asex'),
                         'value' => 'invisible'
                     ),
                     array(
-                        'label' => __('Solid', 'monalisa'),
+                        'label' => __('Solid', 'asex'),
                         'value' => 'solid'
                     ),
                     array(
-                        'label' => __('Dashed', 'monalisa'),
+                        'label' => __('Dashed', 'asex'),
                         'value' => 'dashed'
                     ),
                     array(
-                        'label' => __('Dotted', 'monalisa'),
+                        'label' => __('Dotted', 'asex'),
                         'value' => 'dotted'
                     ),
                 ),
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
             ),
             array(
-                'label'                 => __('Border Radius', 'monalisa'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'asex_introduce_social_border_radius',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -678,11 +678,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social a',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'asex_introduce_social_margin_bottom',
                 'std'                   => '2',
                 'type'                  => 'slider',
@@ -690,22 +690,22 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.as-introduce-social',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
-                'tab'                   => __('Socials', 'monalisa'),
+                'tab'                   => __('Socials', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Hidden
              */
             array(
-                'label'      => __('Title', 'monalisa'),
+                'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Content', 'monalisa'),
+                'label'      => __('Content', 'asex'),
                 'id'         => 'content',
                 'std'        => 'This is just placeholder text. Click here to edit it.',
                 'type'       => 'textarea',
@@ -713,17 +713,17 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'monalisa'),
+                'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
             array(
-                'label'      => __('Button Title', 'monalisa'),
+                'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -732,25 +732,25 @@ class ASEX_Introduce extends ASEX_MODULE {
              * Responsive Tablet
              */
             array(
-                'label'   => __('Responsive Styling', 'monalisa'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'monalisa'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'monalisa'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('tablet', 'monalisa'),
+                'tab'     => __('tablet', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -758,11 +758,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -770,13 +770,13 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -784,11 +784,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'monalisa'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_t_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -796,11 +796,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Title - Font Size', 'monalisa'),
+                'label'                 => __('Title - Font Size', 'asex'),
                 'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -808,11 +808,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'monalisa'),
+                'label'                 => __('Title - Line Height', 'asex'),
                 'id'                    => 'css_res_t_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -820,11 +820,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'monalisa'),
+                'label'                 => __('Title - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -832,11 +832,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Font Size', 'monalisa'),
+                'label'                 => __('Content - Font Size', 'asex'),
                 'id'                    => 'css_res_t_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -844,11 +844,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'monalisa'),
+                'label'                 => __('Content - Line Height', 'asex'),
                 'id'                    => 'css_res_t_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -856,11 +856,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Margin Bottom', 'monalisa'),
+                'label'                 => __('Content - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -868,32 +868,32 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('tablet', 'monalisa'),
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
              * Responsive Phone
              */
             array(
-                'label'   => __('Responsive Styling', 'monalisa'),
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
                 'choices' => array(
                     array(
-                        'label' => __('Disabled', 'monalisa'),
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
                     array(
-                        'label' => __('Enabled', 'monalisa'),
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => __('phone', 'monalisa'),
+                'tab'     => __('phone', 'asex'),
             ),
             array(
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -901,11 +901,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -913,13 +913,13 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'max'                   => 500,
                 'increment'             => 1,
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -927,11 +927,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Width', 'monalisa'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_p_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -939,11 +939,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => '%'
             ),
             array(
-                'label'                 => __('Title - Font Size', 'monalisa'),
+                'label'                 => __('Title - Font Size', 'asex'),
                 'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -951,11 +951,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Line Height', 'monalisa'),
+                'label'                 => __('Title - Line Height', 'asex'),
                 'id'                    => 'css_res_p_title_line_height',
                 'std'                   => '17',
                 'type'                  => 'slider',
@@ -963,11 +963,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Title - Margin Bottom', 'monalisa'),
+                'label'                 => __('Title - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_title_margin',
                 'std'                   => '21',
                 'type'                  => 'slider',
@@ -975,11 +975,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Font Size', 'monalisa'),
+                'label'                 => __('Content - Font Size', 'asex'),
                 'id'                    => 'css_res_p_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -987,11 +987,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Line Height', 'monalisa'),
+                'label'                 => __('Content - Line Height', 'asex'),
                 'id'                    => 'css_res_p_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
@@ -999,11 +999,11 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
             array(
-                'label'                 => __('Content - Margin Bottom', 'monalisa'),
+                'label'                 => __('Content - Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
@@ -1011,7 +1011,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                 'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => __('phone', 'monalisa'),
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
         );
@@ -1082,7 +1082,7 @@ class ASEX_Introduce extends ASEX_MODULE {
                                     <?php echo stripslashes($options['content']); ?>
                                 </div>
                                 <!-- .dslca-editable-content -->
-                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'monalisa'); ?></span></div>
+                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'asex'); ?></span></div>
                             <?php else : ?>
                                 <?php echo do_shortcode(stripslashes($options['content'])); ?>
                             <?php endif; ?>

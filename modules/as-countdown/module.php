@@ -354,7 +354,7 @@ class ASEX_Countdown extends ASEX_MODULE {
              * Styling
              */
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -365,7 +365,7 @@ class ASEX_Countdown extends ASEX_MODULE {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -732,7 +732,7 @@ class ASEX_Countdown extends ASEX_MODULE {
 
 
         <?php if ((empty($options['time_countdown']))): ?>
-            <div class="dslc-notification dslc-red"><?php _e('Time CountDown preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing time countdown.', 'monalisa'); ?><br></div>
+            <div class="dslc-notification dslc-red"><?php _e('Time CountDown preview is not available in admin active. Please setting option, after click save changes and disable Live Composer for viewing time countdown.', 'asex'); ?><br></div>
         <?php else: ?>
             <div class="coming_soon_ctn">
                 <div class="timing" style="width:100%;">

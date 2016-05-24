@@ -10,7 +10,7 @@ class ASEX_video extends ASEX_MODULE {
     function __construct() {
 
         $this->module_id       = 'ASEX_video';
-        $this->module_title    = __('AS - video', 'monalisa');
+        $this->module_title    = __('AS - video', 'asex');
         $this->module_icon     = 'file-video-o';
         $this->module_category = 'as - video';
     }
@@ -24,39 +24,39 @@ class ASEX_video extends ASEX_MODULE {
 
         $dslc_options = array(
             array(
-                'label'   => __('Show On', 'monalisa'),
+                'label'   => __('Show On', 'asex'),
                 'id'      => 'css_show_on',
                 'std'     => 'desktop tablet phone',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
-                        'label' => __('Desktop', 'monalisa'),
+                        'label' => __('Desktop', 'asex'),
                         'value' => 'desktop'
                     ),
                     array(
-                        'label' => __('Tablet', 'monalisa'),
+                        'label' => __('Tablet', 'asex'),
                         'value' => 'tablet'
                     ),
                     array(
-                        'label' => __('Phone', 'monalisa'),
+                        'label' => __('Phone', 'asex'),
                         'value' => 'phone'
                     ),
                 ),
             ),
             array(
-                'label' => __('Video URL', 'monalisa'),
+                'label' => __('Video URL', 'asex'),
                 'id'    => 'video_url',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Height', 'monalisa'),
+                'label' => __('Height', 'asex'),
                 'id'    => 'video_height',
                 'std'   => '',
                 'type'  => 'text',
             ),
             array(
-                'label' => __('Width', 'monalisa'),
+                'label' => __('Width', 'asex'),
                 'id'    => 'video_width',
                 'std'   => '',
                 'type'  => 'text',
@@ -78,7 +78,7 @@ class ASEX_video extends ASEX_MODULE {
              * General
              */
             array(
-                'label'                 => __('Align', 'monalisa'),
+                'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_align',
                 'std'                   => 'left',
                 'type'                  => 'text_align',
@@ -88,7 +88,7 @@ class ASEX_video extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color', 'monalisa'),
+                'label'                 => __('BG Color', 'asex'),
                 'id'                    => 'css_bg_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -98,7 +98,7 @@ class ASEX_video extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('BG Color - Hover', 'monalisa'),
+                'label'                 => __('BG Color - Hover', 'asex'),
                 'id'                    => 'css_bg_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -108,7 +108,7 @@ class ASEX_video extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color', 'monalisa'),
+                'label'                 => __('Border Color', 'asex'),
                 'id'                    => 'css_border_color',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -118,7 +118,7 @@ class ASEX_video extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Color - Hover', 'monalisa'),
+                'label'                 => __('Border Color - Hover', 'asex'),
                 'id'                    => 'css_border_color_hover',
                 'std'                   => '',
                 'type'                  => 'color',
@@ -128,7 +128,7 @@ class ASEX_video extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Width', 'monalisa'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -139,25 +139,25 @@ class ASEX_video extends ASEX_MODULE {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Borders', 'monalisa'),
+                'label'                 => __('Borders', 'asex'),
                 'id'                    => 'css_border_trbl',
                 'std'                   => 'top right bottom left',
                 'type'                  => 'checkbox',
                 'choices'               => array(
                     array(
-                        'label' => __('Top', 'monalisa'),
+                        'label' => __('Top', 'asex'),
                         'value' => 'top'
                     ),
                     array(
-                        'label' => __('Right', 'monalisa'),
+                        'label' => __('Right', 'asex'),
                         'value' => 'right'
                     ),
                     array(
-                        'label' => __('Bottom', 'monalisa'),
+                        'label' => __('Bottom', 'asex'),
                         'value' => 'bottom'
                     ),
                     array(
-                        'label' => __('Left', 'monalisa'),
+                        'label' => __('Left', 'asex'),
                         'value' => 'left'
                     ),
                 ),
@@ -167,7 +167,7 @@ class ASEX_video extends ASEX_MODULE {
                 'section'               => 'styling',
             ),
             array(
-                'label'                 => __('Border Radius', 'monalisa'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -178,7 +178,7 @@ class ASEX_video extends ASEX_MODULE {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -189,7 +189,7 @@ class ASEX_video extends ASEX_MODULE {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Minimum Height', 'monalisa'),
+                'label'                 => __('Minimum Height', 'asex'),
                 'id'                    => 'css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -203,7 +203,7 @@ class ASEX_video extends ASEX_MODULE {
                 'increment'             => 5
             ),
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -214,7 +214,7 @@ class ASEX_video extends ASEX_MODULE {
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -249,7 +249,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -262,7 +262,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -275,7 +275,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -288,7 +288,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Minimum Height ', 'monalisa'),
+                'label'                 => __('Minimum Height ', 'asex'),
                 'id'                    => 'css_res_t_css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -304,7 +304,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -317,7 +317,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -353,7 +353,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -366,7 +366,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -379,7 +379,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -392,7 +392,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Minimum Height ', 'monalisa'),
+                'label'                 => __('Minimum Height ', 'asex'),
                 'id'                    => 'css_res_p_css_min_height',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -408,7 +408,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -421,7 +421,7 @@ class ASEX_video extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -478,7 +478,7 @@ class ASEX_video extends ASEX_MODULE {
 
                     // Show meessage if editor is active
                     if (dslc_is_editor_active()) {
-                        ?><div class="as-notification as-red"><?php _e('Make sure you entered a valid URL ( ex. https://www.youtube.com/watch?v=ONHBaC-pfsk )', 'monalisa'); ?><?php
+                        ?><div class="as-notification as-red"><?php _e('Make sure you entered a valid URL ( ex. https://www.youtube.com/watch?v=ONHBaC-pfsk )', 'asex'); ?><?php
                     }
 
                     // If embed code ok, display it
@@ -493,7 +493,7 @@ class ASEX_video extends ASEX_MODULE {
 
                 // Show message if editor active
                 if (dslc_is_editor_active()) {
-                    ?><div class="as-notification as-red"><?php _e('A video URL needs to be set in the module options.', 'monalisa'); ?><?php
+                    ?><div class="as-notification as-red"><?php _e('A video URL needs to be set in the module options.', 'asex'); ?><?php
                         }
                     }
                     ?>

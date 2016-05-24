@@ -1156,7 +1156,7 @@ class ASEX_Info_Box_5 extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1172,7 +1172,7 @@ class ASEX_Info_Box_5 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1180,7 +1180,7 @@ class ASEX_Info_Box_5 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'

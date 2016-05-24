@@ -2369,7 +2369,7 @@ class ASEX_Projects extends ASEX_MODULE
                     <div class="as-portfolio-ajax-wrapper">
                         <div class="as-port-control dslc-col dslc-12-col dslc-last-col">
                             <a href="javascript:void(0);" class="prev" data-ajax="1" data-id="59">
-                                <span class="dslc-icon dslc-icon-angle-left"></span><span class="as-btn-text-ajax-prj"><?php _e('Prev', 'monalisa') ?></span>
+                                <span class="dslc-icon dslc-icon-angle-left"></span><span class="as-btn-text-ajax-prj"><?php _e('Prev', 'asex') ?></span>
                             </a> 
                             <a href="javascript:void(0);" class="close-port">
                                 <span class="dslc-icon dslc-icon-remove"></span>

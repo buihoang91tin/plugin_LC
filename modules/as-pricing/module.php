@@ -975,7 +975,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             array(
                 'label'      => __('Button Text', 'asex'),
                 'id'         => 'asex_button_text',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'text',
                 'visibility' => 'hidden',
             ),
@@ -1369,7 +1369,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1382,7 +1382,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1395,7 +1395,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1408,7 +1408,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1421,7 +1421,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1434,7 +1434,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( title ) ', 'monalisa'),
+                'label'                 => __('Border Width( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1447,7 +1447,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Top( title ) ', 'monalisa'),
+                'label'                 => __('Border Radius - Top( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -1460,7 +1460,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Bottom( title ) ', 'monalisa'),
+                'label'                 => __('Border Radius - Bottom( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1473,7 +1473,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( title ) ', 'monalisa'),
+                'label'                 => __('Font Size( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -1486,7 +1486,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( title ) ', 'monalisa'),
+                'label'                 => __('Font Weight( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1502,7 +1502,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( title ) ', 'monalisa'),
+                'label'                 => __('Line Height( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1515,7 +1515,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( title ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1528,7 +1528,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1541,7 +1541,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( title ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1554,7 +1554,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( title ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( title ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1567,7 +1567,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing label ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing label ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1583,7 +1583,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing number ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -1596,7 +1596,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing number ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1612,7 +1612,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing number ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1625,7 +1625,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing number ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -1638,7 +1638,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing number ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1651,7 +1651,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1664,7 +1664,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -1680,7 +1680,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1693,7 +1693,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1706,7 +1706,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing time ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1719,7 +1719,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing time ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1735,7 +1735,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing time ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -1748,7 +1748,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing time ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1761,7 +1761,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing option ) ', 'monalisa'),
+                'label'                 => __('Border Width( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1774,7 +1774,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing option ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -1787,7 +1787,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing option ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -1803,7 +1803,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing option ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -1816,7 +1816,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing option ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1829,7 +1829,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin bottom( pricing option ) ', 'monalisa'),
+                'label'                 => __('Margin bottom( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1842,7 +1842,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing option ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -1855,7 +1855,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing option ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1868,7 +1868,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing button ) ', 'monalisa'),
+                'label'                 => __('Border Width( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1881,7 +1881,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( pricing button ) ', 'monalisa'),
+                'label'                 => __('Border Radius( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1894,7 +1894,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( pricing button ) ', 'monalisa'),
+                'label'                 => __('Margin Top( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1907,7 +1907,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( pricing button ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -1920,7 +1920,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing button ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1933,7 +1933,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing button ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -1946,7 +1946,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -1959,7 +1959,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -1972,7 +1972,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography button ) ', 'monalisa'),
+                'label'                 => __('Font Size( typography button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -1985,7 +1985,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography button ) ', 'monalisa'),
+                'label'                 => __('Font Weight( typography button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2001,7 +2001,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography button ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( typography button ) ', 'asex'),
                 'id'                    => 'css_res_t_asex_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2038,7 +2038,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2051,7 +2051,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_border_radius',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2064,7 +2064,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2077,7 +2077,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical ', 'monalisa'),
+                'label'                 => __('Padding Vertical ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2090,7 +2090,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal ', 'monalisa'),
+                'label'                 => __('Padding Horizontal ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2103,7 +2103,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( title ) ', 'monalisa'),
+                'label'                 => __('Border Width( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2116,7 +2116,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Top( title ) ', 'monalisa'),
+                'label'                 => __('Border Radius - Top( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_border_radius_top',
                 'std'                   => '4',
                 'type'                  => 'slider',
@@ -2129,7 +2129,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius - Bottom( title ) ', 'monalisa'),
+                'label'                 => __('Border Radius - Bottom( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_border_radius_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2142,7 +2142,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( title ) ', 'monalisa'),
+                'label'                 => __('Font Size( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_font_size',
                 'std'                   => '22',
                 'type'                  => 'slider',
@@ -2155,7 +2155,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( title ) ', 'monalisa'),
+                'label'                 => __('Font Weight( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2171,7 +2171,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( title ) ', 'monalisa'),
+                'label'                 => __('Line Height( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2184,7 +2184,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( title ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2197,7 +2197,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2210,7 +2210,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( title ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -2223,7 +2223,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( title ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( title ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_title_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2236,7 +2236,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing label ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing label ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_label_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2252,7 +2252,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing number ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_number_font_size',
                 'std'                   => '55',
                 'type'                  => 'slider',
@@ -2265,7 +2265,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing number ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_number_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2281,7 +2281,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing number ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_number_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2294,7 +2294,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing number ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_number_padding_vertical',
                 'std'                   => '30',
                 'type'                  => 'slider',
@@ -2307,7 +2307,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing number ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( pricing number ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_number_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2320,7 +2320,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_currency_font_size',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2333,7 +2333,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_currency_font_weight',
                 'std'                   => '700',
                 'type'                  => 'slider',
@@ -2349,7 +2349,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_currency_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2362,7 +2362,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing currency ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( pricing currency ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_currency_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2375,7 +2375,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing time ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_time_font_size',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -2388,7 +2388,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing time ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_time_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -2404,7 +2404,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing time ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_time_lheight',
                 'std'                   => '24',
                 'type'                  => 'slider',
@@ -2417,7 +2417,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing time ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( pricing time ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_time_letter',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2430,7 +2430,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing option ) ', 'monalisa'),
+                'label'                 => __('Border Width( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_option_line_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2443,7 +2443,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( pricing option ) ', 'monalisa'),
+                'label'                 => __('Font Size( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_option_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
@@ -2456,7 +2456,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( pricing option ) ', 'monalisa'),
+                'label'                 => __('Font Weight( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_option_font_weight',
                 'std'                   => '600',
                 'type'                  => 'slider',
@@ -2472,7 +2472,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( pricing option ) ', 'monalisa'),
+                'label'                 => __('Line Height( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_option_lheight',
                 'std'                   => '18',
                 'type'                  => 'slider',
@@ -2485,7 +2485,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( pricing option ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_option_letter',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2498,7 +2498,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin bottom( pricing option ) ', 'monalisa'),
+                'label'                 => __('Margin bottom( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_margin_bottom_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2511,7 +2511,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing option ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_padding_vertical_option',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -2524,7 +2524,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing option ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( pricing option ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_pricing_css_padding_horizontal_option',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2537,7 +2537,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( pricing button ) ', 'monalisa'),
+                'label'                 => __('Border Width( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2550,7 +2550,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( pricing button ) ', 'monalisa'),
+                'label'                 => __('Border Radius( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2563,7 +2563,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( pricing button ) ', 'monalisa'),
+                'label'                 => __('Margin Top( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2576,7 +2576,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( pricing button ) ', 'monalisa'),
+                'label'                 => __('Margin Bottom( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -2589,7 +2589,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical( pricing button ) ', 'monalisa'),
+                'label'                 => __('Padding Vertical( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_padding_vertical',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -2602,7 +2602,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal( pricing button ) ', 'monalisa'),
+                'label'                 => __('Padding Horizontal( pricing button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_padding_horizontal',
                 'std'                   => '12',
                 'type'                  => 'slider',
@@ -2615,7 +2615,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Width( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Width( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_out_line_width',
                 'std'                   => '1',
                 'type'                  => 'slider',
@@ -2628,7 +2628,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Out Line Offset( Out Line Style ) ', 'monalisa'),
+                'label'                 => __('Out Line Offset( Out Line Style ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_out_line_offset',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -2641,7 +2641,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( typography button ) ', 'monalisa'),
+                'label'                 => __('Font Size( typography button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
@@ -2654,7 +2654,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( typography button ) ', 'monalisa'),
+                'label'                 => __('Font Weight( typography button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_button_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -2670,7 +2670,7 @@ class ASEX_Pricing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Letter Spacing( typography button ) ', 'monalisa'),
+                'label'                 => __('Letter Spacing( typography button ) ', 'asex'),
                 'id'                    => 'css_res_p_asex_button_css_button_letter_spacing',
                 'std'                   => '1',
                 'type'                  => 'slider',

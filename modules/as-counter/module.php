@@ -76,7 +76,7 @@ class ASEX_Counter_Module extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'asex_counter_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1296,12 +1296,12 @@ class ASEX_Counter_Module extends ASEX_MODULE {
                 </div>
             <?php endif; ?>
             <div class="as-counter-content">
-                <div class="odometer" data-number="<?php echo esc_attr($options['asex_counter_to_number']); ?>"><?php echo esc_html($options['asex_counter_from_number'], 'monalisa'); ?></div>
+                <div class="odometer" data-number="<?php echo esc_attr($options['asex_counter_to_number']); ?>"><?php echo esc_html($options['asex_counter_from_number'], 'asex'); ?></div>
                 <?php if (in_array('title', $elements)) : ?>
                     <?php if ($dslc_is_admin) : ?>
-                        <h2 class="dslca-editable-content asex_counter_title" data-id="asex_counter_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_counter_title'], 'monalisa'); ?></h2>
+                        <h2 class="dslca-editable-content asex_counter_title" data-id="asex_counter_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['asex_counter_title'], 'asex'); ?></h2>
                     <?php else : ?>
-                        <h2 class="asex_counter_title"><?php echo esc_html($options['asex_counter_title'], 'monalisa'); ?></h2>
+                        <h2 class="asex_counter_title"><?php echo esc_html($options['asex_counter_title'], 'asex'); ?></h2>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>

@@ -699,9 +699,9 @@ class ASEX_Image extends ASEX_MODULE {
                     <div class="dslc-image-caption">
 
                         <?php if ($dslc_is_admin) : ?>
-                            <div class="dslca-editable-content" data-id="custom_text" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['custom_text'], 'monalisa'); ?></div>
+                            <div class="dslca-editable-content" data-id="custom_text" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['custom_text'], 'asex'); ?></div>
                         <?php else : ?>
-                            <?php echo esc_html($options['custom_text'], 'monalisa'); ?>
+                            <?php echo esc_html($options['custom_text'], 'asex'); ?>
                         <?php endif; ?>
 
                     </div>

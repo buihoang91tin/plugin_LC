@@ -814,7 +814,7 @@ class ASEX_Progress_Bars extends ASEX_MODULE {
             <?php if ($options['label_position'] == 'above') : ?>
 
                 <?php if ($dslc_is_admin) : ?>
-                    <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'monalisa'); ?></h4>
+                    <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'asex'); ?></h4>
                 <?php else : ?>
                     <h4 class="dslc-progress-bar-label"><?php echo esc_html($options['label']); ?></h4>
                 <?php endif; ?>
@@ -828,9 +828,9 @@ class ASEX_Progress_Bars extends ASEX_MODULE {
                     <?php endif; ?>
                     <?php if ($options['label_position'] == 'inside') : ?>
                         <?php if ($dslc_is_admin) : ?>
-                            <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'monalisa'); ?></h4>
+                            <h4 class="dslc-progress-bar-label dslca-editable-content" data-id="label" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['label'], 'asex'); ?></h4>
                         <?php else : ?>
-                            <h4 class="dslc-progress-bar-label"><?php echo esc_html($options['label'], 'monalisa'); ?></h4>
+                            <h4 class="dslc-progress-bar-label"><?php echo esc_html($options['label'], 'asex'); ?></h4>
                         <?php endif; ?>
                     <?php endif; ?>
                 </span>

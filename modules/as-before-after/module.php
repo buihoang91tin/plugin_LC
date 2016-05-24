@@ -58,7 +58,7 @@ class ASEX_Before_After extends ASEX_MODULE
             array(
                 'label'      => __('CT', 'asex'),
                 'id'         => 'custom_text_3',
-                'std'        => __('AFTER', 'monalisa'),
+                'std'        => __('AFTER', 'asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden'
             ),
@@ -204,7 +204,7 @@ class ASEX_Before_After extends ASEX_MODULE
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -215,7 +215,7 @@ class ASEX_Before_After extends ASEX_MODULE
                 'ext'                   => 'px',
             ),
             array(
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -354,7 +354,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -367,7 +367,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -380,7 +380,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Margin Top ', 'monalisa'),
+                'label'                 => __('Margin Top ', 'asex'),
                 'id'                    => 'css_res_t_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -395,7 +395,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -410,7 +410,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Width Circle( drag bar ) ', 'monalisa'),
+                'label'                 => __('Border Width Circle( drag bar ) ', 'asex'),
                 'id'                    => 'css_res_t_css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -422,7 +422,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Radius( drag bar ) ', 'monalisa'),
+                'label'                 => __('Border Radius( drag bar ) ', 'asex'),
                 'id'                    => 'css_res_t_css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -458,7 +458,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Width ', 'monalisa'),
+                'label'                 => __('Border Width ', 'asex'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -471,7 +471,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Radius ', 'monalisa'),
+                'label'                 => __('Border Radius ', 'asex'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -484,7 +484,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Margin Top ', 'monalisa'),
+                'label'                 => __('Margin Top ', 'asex'),
                 'id'                    => 'css_res_p_css_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -499,7 +499,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Margin Bottom ', 'monalisa'),
+                'label'                 => __('Margin Bottom ', 'asex'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -514,7 +514,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Width Circle( drag bar ) ', 'monalisa'),
+                'label'                 => __('Border Width Circle( drag bar ) ', 'asex'),
                 'id'                    => 'css_res_p_css_drag_bar_circle_border_width',
                 'std'                   => '3',
                 'type'                  => 'slider',
@@ -526,7 +526,7 @@ class ASEX_Before_After extends ASEX_MODULE
             ),
             array
                 (
-                'label'                 => __('Border Radius( drag bar ) ', 'monalisa'),
+                'label'                 => __('Border Radius( drag bar ) ', 'asex'),
                 'id'                    => 'css_res_p_css_drag_bar_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',

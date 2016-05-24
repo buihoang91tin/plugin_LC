@@ -46,7 +46,7 @@ class ASEX_Circle_Chart_Module extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -868,9 +868,9 @@ class ASEX_Circle_Chart_Module extends ASEX_MODULE {
             </span>
             <div class="pie-content">
                 <?php if ($dslc_is_admin) : ?>
-                    <h2 class="dslca-editable-content title" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['title'], 'monalisa'); ?></h2>
+                    <h2 class="dslca-editable-content title" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo esc_html($options['title'], 'asex'); ?></h2>
                 <?php else : ?>
-                    <h2 class="title"><?php echo esc_html($options['title'], 'monalisa'); ?></h2>
+                    <h2 class="title"><?php echo esc_html($options['title'], 'asex'); ?></h2>
                 <?php endif; ?>
             </div>
         </div>

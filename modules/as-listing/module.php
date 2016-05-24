@@ -522,7 +522,7 @@ class ASEX_Listing extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -550,7 +550,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width', 'monalisa'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_res_t_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -563,7 +563,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius', 'monalisa'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_res_t_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -576,7 +576,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_t_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -589,7 +589,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_t_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -604,7 +604,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_t_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -617,7 +617,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width', 'monalisa'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_t_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -630,7 +630,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width(Icon)', 'monalisa'),
+                'label'                 => __('Border Width(Icon)', 'asex'),
                 'id'                    => 'css_res_t_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -643,7 +643,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius(Icon)', 'monalisa'),
+                'label'                 => __('Border Radius(Icon)', 'asex'),
                 'id'                    => 'css_res_t_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -656,7 +656,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top(Icon)', 'monalisa'),
+                'label'                 => __('Margin Top(Icon)', 'asex'),
                 'id'                    => 'css_res_t_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -671,7 +671,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right(Icon)', 'monalisa'),
+                'label'                 => __('Margin Right(Icon)', 'asex'),
                 'id'                    => 'css_res_t_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -686,7 +686,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper )(Icon)', 'monalisa'),
+                'label'                 => __('Size ( Wrapper )(Icon)', 'asex'),
                 'id'                    => 'css_res_t_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -701,7 +701,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size ( Icon )', 'monalisa'),
+                'label'                 => __('Size ( Icon )', 'asex'),
                 'id'                    => 'css_res_t_css_icon_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -714,7 +714,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size(Title)', 'monalisa'),
+                'label'                 => __('Font Size(Title)', 'asex'),
                 'id'                    => 'css_res_t_css_title_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -727,7 +727,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight(Title)', 'monalisa'),
+                'label'                 => __('Font Weight(Title)', 'asex'),
                 'id'                    => 'css_res_t_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -743,7 +743,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height(Title)', 'monalisa'),
+                'label'                 => __('Line Height(Title)', 'asex'),
                 'id'                    => 'css_res_t_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -756,7 +756,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom(Title)', 'monalisa'),
+                'label'                 => __('Margin Bottom(Title)', 'asex'),
                 'id'                    => 'css_res_t_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -790,7 +790,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width', 'monalisa'),
+                'label'                 => __('Border Width', 'asex'),
                 'id'                    => 'css_res_p_css_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -803,7 +803,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius', 'monalisa'),
+                'label'                 => __('Border Radius', 'asex'),
                 'id'                    => 'css_res_p_css_border_radius',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -816,7 +816,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom', 'monalisa'),
+                'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_res_p_css_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -829,7 +829,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Vertical', 'monalisa'),
+                'label'                 => __('Padding Vertical', 'asex'),
                 'id'                    => 'css_res_p_css_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -844,7 +844,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Padding Horizontal', 'monalisa'),
+                'label'                 => __('Padding Horizontal', 'asex'),
                 'id'                    => 'css_res_p_css_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -857,7 +857,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Width', 'monalisa'),
+                'label'                 => __('Width', 'asex'),
                 'id'                    => 'css_res_p_css_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -870,7 +870,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Width( Icon )', 'monalisa'),
+                'label'                 => __('Border Width( Icon )', 'asex'),
                 'id'                    => 'css_res_p_css_icon_border_width',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -883,7 +883,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Border Radius( Icon )', 'monalisa'),
+                'label'                 => __('Border Radius( Icon )', 'asex'),
                 'id'                    => 'css_res_p_css_icon_border_radius',
                 'std'                   => '100',
                 'type'                  => 'slider',
@@ -896,7 +896,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Top( Icon )', 'monalisa'),
+                'label'                 => __('Margin Top( Icon )', 'asex'),
                 'id'                    => 'css_res_p_css_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -911,7 +911,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Right( Icon )', 'monalisa'),
+                'label'                 => __('Margin Right( Icon )', 'asex'),
                 'id'                    => 'css_res_p_css_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
@@ -926,7 +926,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size ( Wrapper-Icon )', 'monalisa'),
+                'label'                 => __('Size ( Wrapper-Icon )', 'asex'),
                 'id'                    => 'css_res_p_css_icon_wrapper_width',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -941,7 +941,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Size( Icon )', 'monalisa'),
+                'label'                 => __('Size( Icon )', 'asex'),
                 'id'                    => 'css_res_p_css_icon_width',
                 'std'                   => '20',
                 'type'                  => 'slider',
@@ -954,7 +954,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Size( Title )', 'monalisa'),
+                'label'                 => __('Font Size( Title )', 'asex'),
                 'id'                    => 'css_res_p_css_title_font_size',
                 'std'                   => '10',
                 'type'                  => 'slider',
@@ -967,7 +967,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Font Weight( Title )', 'monalisa'),
+                'label'                 => __('Font Weight( Title )', 'asex'),
                 'id'                    => 'css_res_p_css_title_font_weight',
                 'std'                   => '800',
                 'type'                  => 'slider',
@@ -983,7 +983,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Line Height( Title )', 'monalisa'),
+                'label'                 => __('Line Height( Title )', 'asex'),
                 'id'                    => 'css_res_p_css_title_line_height',
                 'std'                   => '53',
                 'type'                  => 'slider',
@@ -996,7 +996,7 @@ class ASEX_Listing extends ASEX_MODULE {
             ),
             array
                 (
-                'label'                 => __('Margin Bottom( Title )', 'monalisa'),
+                'label'                 => __('Margin Bottom( Title )', 'asex'),
                 'id'                    => 'css_res_p_css_title_margin',
                 'std'                   => '0',
                 'type'                  => 'slider',

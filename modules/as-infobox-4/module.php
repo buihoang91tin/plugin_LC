@@ -1415,7 +1415,7 @@ class ASEX_Info_Box_4 extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1431,7 +1431,7 @@ class ASEX_Info_Box_4 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1439,7 +1439,7 @@ class ASEX_Info_Box_4 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','monalisa'),
+                'std'        => __('CLICK TO EDIT','asex'),
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -2069,9 +2069,9 @@ class ASEX_Info_Box_4 extends ASEX_MODULE {
                                 <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
                             <?php endif; ?>
                             <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'monalisa'); ?></span>
+                                <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'asex'); ?></span>
                                 <?php
-                            else : echo esc_html($options['button_title'], 'monalisa');
+                            else : echo esc_html($options['button_title'], 'asex');
                             endif;
                             ?>
                         </a>
@@ -2082,9 +2082,9 @@ class ASEX_Info_Box_4 extends ASEX_MODULE {
                                 <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
                             <?php endif; ?>
                             <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'monalisa'); ?></span>
+                                <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'asex'); ?></span>
                                 <?php
-                            else : echo esc_html($options['button_2_title'], 'monalisa');
+                            else : echo esc_html($options['button_2_title'], 'asex');
                             endif;
                             ?>
                         </a>
@@ -2147,9 +2147,9 @@ class ASEX_Info_Box_4 extends ASEX_MODULE {
                                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
                                     <?php endif; ?>
                                     <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'monalisa'); ?></span>
+                                        <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title'], 'asex'); ?></span>
                                         <?php
-                                    else : echo esc_html($options['button_title'], 'monalisa');
+                                    else : echo esc_html($options['button_title'], 'asex');
                                     endif;
                                     ?>
                                 </a>
@@ -2160,9 +2160,9 @@ class ASEX_Info_Box_4 extends ASEX_MODULE {
                                         <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
                                     <?php endif; ?>
                                     <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'monalisa'); ?></span>
+                                        <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title'], 'asex'); ?></span>
                                         <?php
-                                    else : echo esc_html($options['button_2_title'], 'monalisa');
+                                    else : echo esc_html($options['button_2_title'], 'asex');
                                     endif;
                                     ?>
                                 </a>
