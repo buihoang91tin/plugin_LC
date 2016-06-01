@@ -1,5 +1,8 @@
 .as-float-left{
-    float: left;
+    float: left !important;
+}
+.as-float-right{
+    float: right !important;
 }
 .asex_inline{
     display: inline-block;

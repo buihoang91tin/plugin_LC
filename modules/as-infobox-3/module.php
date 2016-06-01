@@ -627,7 +627,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_icon_margin_bottom',
-                'std'                   => '25',
+                'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-image .dslc-info-box-3-image-inner',
@@ -830,7 +830,7 @@ class ASEX_Info_Box_3 extends ASEX_MODULE {
             array(
                 'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin',
-                'std'                   => '0',
+                'std'                   => '10',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-3-title',

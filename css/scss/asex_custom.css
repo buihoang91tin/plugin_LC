@@ -44,7 +44,10 @@
   margin-right: 10px; }
 
 .as-float-left {
-  float: left; }
+  float: left !important; }
+
+.as-float-right {
+  float: right !important; }
 
 .asex_inline {
   display: inline-block; }
@@ -408,6 +411,39 @@ asex_button_submit_mailchimp {
     right: -20px; }
 
 /*** Infobox ***/
+.asex-info-box-2 .asex-infobox-title {
+  -webkit-transition: all 0.2s ease-out;
+  -khtml-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+  .asex-info-box-2 .asex-infobox-title h4 {
+    margin-bottom: 0; }
+.asex-info-box-2 .asex-infobox-sub-title {
+  -webkit-transition: all 0.2s ease-out;
+  -khtml-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+.asex-info-box-2 .dslc-info-box-image-inner {
+  -webkit-transition: all 0.2s ease-out;
+  -khtml-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  position: relative; }
+  .asex-info-box-2 .dslc-info-box-image-inner .dslc-icon {
+    position: absolute; }
+  .asex-info-box-2 .dslc-info-box-image-inner .asex-icon-text {
+    position: relative;
+    visibility: visible; }
+
+.asex-oveflow {
+  overflow: hidden; }
+
 .dslc-info-box-icon-pos-right .dslc-info-box-image {
   float: right;
   margin-left: 20px; }
@@ -1469,7 +1505,7 @@ body.dslca-enabled .dslc-info-box-5-button {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
-    box-shadow: none;}
+  box-shadow: none; }
 
 .asex_portfolio_content {
   display: block; }
@@ -3881,7 +3917,8 @@ Opera 15+
     -o-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
-    opacity: 1; }
+    opacity: 1;
+    box-shadow: none; }
   .dslc-post.dslc-staff-member:hover .as-staff-inner-content-thumb-wrapper .dslc-staff-member-position,
   .dslc-post.dslc-staff-member:hover .as-staff-inner-content-thumb-wrapper .dslc-staff-member-title {
     -webkit-transform: translateY(0);
@@ -3918,8 +3955,7 @@ Opera 15+
 .as-staff-social-wrapper .as-staff-list-social a {
   margin-bottom: 10px;
   display: inline-block;
-  position: relative; 
-box-shadow: none;}
+  position: relative; }
   .as-staff-social-wrapper .as-staff-list-social a span {
     display: inline-block;
     vertical-align: middle; }

@@ -7,7 +7,8 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
     var $module_icon;
     var $module_category;
 
-    function __construct() {
+    function __construct()
+    {
 
         $this->module_id       = 'ASEX_Info_Box_2';
         $this->module_title    = __('Info Box 2', 'asex');
@@ -15,7 +16,8 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
         $this->module_category = 'as - Info Box';
     }
 
-    function options() {
+    function options()
+    {
 
         $dslc_options = array(
             array(
@@ -126,13 +128,25 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                     ),
                 )
             ),
+            array(
+                'id'      => 'link_nofollow',
+                'std'     => '',
+                'type'    => 'checkbox',
+                'help'    => __('Nofollow tells search engines to not follow this specific link', 'asex'),
+                'choices' => array(
+                    array(
+                        'label' => __('Nofollow', 'asex'),
+                        'value' => 'nofollow'
+                    ),
+                ),
+            ),
             /**
              * General
              */
             array(
                 'label'   => __('Elements', 'asex'),
                 'id'      => 'elements',
-                'std'     => 'icon title content button',
+                'std'     => 'icon title content',
                 'type'    => 'checkbox',
                 'choices' => array(
                     array(
@@ -140,8 +154,16 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                         'value' => 'icon'
                     ),
                     array(
+                        'label' => __('Image', 'asex'),
+                        'value' => 'image'
+                    ),
+                    array(
                         'label' => __('Title', 'asex'),
                         'value' => 'title'
+                    ),
+                    array(
+                        'label' => __('Sub Title', 'asex'),
+                        'value' => 'subtitle'
                     ),
                     array(
                         'label' => __('Content', 'asex'),
@@ -160,7 +182,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => 'center',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'text-align',
                 'section'               => 'styling',
             ),
@@ -170,7 +192,17 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
+                'affect_on_change_rule' => 'background-color',
+                'section'               => 'styling',
+            ),
+            array(
+                'label'                 => __('BG Color Hover', 'asex'),
+                'id'                    => 'css_bg_color_hover',
+                'std'                   => '',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2:hover',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
             ),
@@ -180,7 +212,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '',
                 'type'                  => 'image',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'background-image',
                 'section'               => 'styling',
             ),
@@ -208,7 +240,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                     ),
                 ),
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'background-repeat',
                 'section'               => 'styling',
             ),
@@ -228,32 +260,8 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                     ),
                 ),
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'background-attachment',
-                'section'               => 'styling',
-            ),
-            array(
-                'id'                    => 'css_bg_img_size',
-		        'std'                   => 'auto',
-		        'label'                 => __('BG Image Size', 'asex'),
-		        'type'                  => 'select',
-		        'choices'               => array(
-		            array(
-		                'label' => __('Original', 'asex'),
-		                'value' => 'auto',
-		            ),
-		            array(
-		                'label' => __('Cover', 'asex'),
-		                'value' => 'cover',
-		            ),
-		            array(
-		                'label' => __('Contain', 'asex'),
-		                'value' => 'contain',
-		            ),
-		        ),
-		        'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
-		        'affect_on_change_rule' => 'background-size',
                 'section'               => 'styling',
             ),
             array(
@@ -300,7 +308,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                     ),
                 ),
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'background-position',
                 'section'               => 'styling',
             ),
@@ -310,7 +318,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '#000000',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
             ),
@@ -320,7 +328,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
@@ -349,7 +357,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                     ),
                 ),
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
             ),
@@ -359,7 +367,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'ext'                   => 'px'
@@ -370,10 +378,24 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'ext'                   => 'px',
+            ),
+            array(
+                'label'                 => __('Minimum Height', 'asex'),
+                'id'                    => 'css_min_height',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2',
+                'affect_on_change_rule' => 'min-height',
+                'section'               => 'styling',
+                'ext'                   => 'px',
+                'min'                   => 0,
+                'max'                   => 1000,
+                'increment'             => 5
             ),
             array(
                 'label'                 => __('Padding Vertical', 'asex'),
@@ -381,7 +403,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'styling',
                 'max'                   => 500,
@@ -394,24 +416,10 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'styling',
                 'ext'                   => 'px'
-            ),
-            array(
-                'label'                 => __('Minimum Height', 'asex'),
-                'id'                    => 'css_min_height',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box',
-                'affect_on_change_rule' => 'min-height',
-                'section'               => 'styling',
-                'ext'                   => 'px',
-                'min'                   => 0,
-                'max'                   => 1000,
-                'increment'             => 5
             ),
             array(
                 'label'                 => __('Width', 'asex'),
@@ -425,15 +433,288 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'ext'                   => '%'
             ),
             /**
-             * Icon
+             * Wrapper
              */
             array(
                 'label'                 => __('BG Color', 'asex'),
-                'id'                    => 'css_icon_bg_color',
-                'std'                   => '#fff',
+                'id'                    => 'css_wrapper_bg_color',
+                'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'background-color',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('BG Color Hover', 'asex'),
+                'id'                    => 'css_wrapper_bg_color_hover',
+                'std'                   => '',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2:hover .dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'background-color',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('BG Image', 'asex'),
+                'id'                    => 'css_wrapper_bg_img',
+                'std'                   => '',
+                'type'                  => 'image',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'background-image',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('BG Image Repeat', 'asex'),
+                'id'                    => 'css_wrapper_bg_img_repeat',
+                'std'                   => 'repeat',
+                'type'                  => 'select',
+                'choices'               => array(
+                    array(
+                        'label' => __('Repeat', 'asex'),
+                        'value' => 'repeat',
+                    ),
+                    array(
+                        'label' => __('Repeat Horizontal', 'asex'),
+                        'value' => 'repeat-x',
+                    ),
+                    array(
+                        'label' => __('Repeat Vertical', 'asex'),
+                        'value' => 'repeat-y',
+                    ),
+                    array(
+                        'label' => __('Do NOT Repeat', 'asex'),
+                        'value' => 'no-repeat',
+                    ),
+                ),
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'background-repeat',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('BG Image Attachment', 'asex'),
+                'id'                    => 'css_wrapper_bg_img_attch',
+                'std'                   => 'scroll',
+                'type'                  => 'select',
+                'choices'               => array(
+                    array(
+                        'label' => __('Scroll', 'asex'),
+                        'value' => 'scroll',
+                    ),
+                    array(
+                        'label' => __('Fixed', 'asex'),
+                        'value' => 'fixed',
+                    ),
+                ),
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'background-attachment',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('BG Image Position', 'asex'),
+                'id'                    => 'css_wrapper_bg_img_pos',
+                'std'                   => 'top left',
+                'type'                  => 'select',
+                'choices'               => array(
+                    array(
+                        'label' => __('Top Left', 'asex'),
+                        'value' => 'left top',
+                    ),
+                    array(
+                        'label' => __('Top Right', 'asex'),
+                        'value' => 'right top',
+                    ),
+                    array(
+                        'label' => __('Top Center', 'asex'),
+                        'value' => 'Center Top',
+                    ),
+                    array(
+                        'label' => __('Center Left', 'asex'),
+                        'value' => 'left center',
+                    ),
+                    array(
+                        'label' => __('Center Right', 'asex'),
+                        'value' => 'right center',
+                    ),
+                    array(
+                        'label' => __('Center', 'asex'),
+                        'value' => 'center center',
+                    ),
+                    array(
+                        'label' => __('Bottom Left', 'asex'),
+                        'value' => 'left bottom',
+                    ),
+                    array(
+                        'label' => __('Bottom Right', 'asex'),
+                        'value' => 'right bottom',
+                    ),
+                    array(
+                        'label' => __('Bottom Center', 'asex'),
+                        'value' => 'center bottom',
+                    ),
+                ),
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'background-position',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'css_wrapper_border_color',
+                'std'                   => '',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'border-color',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'css_wrapper_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'border-width',
+                'section'               => 'styling',
+                'ext'                   => 'px',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'css_wrapper_border_trbl',
+                'std'                   => 'top right bottom left',
+                'type'                  => 'checkbox',
+                'choices'               => array(
+                    array(
+                        'label' => __('Top', 'asex'),
+                        'value' => 'top'
+                    ),
+                    array(
+                        'label' => __('Right', 'asex'),
+                        'value' => 'right'
+                    ),
+                    array(
+                        'label' => __('Bottom', 'asex'),
+                        'value' => 'bottom'
+                    ),
+                    array(
+                        'label' => __('Left', 'asex'),
+                        'value' => 'left'
+                    ),
+                ),
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'border-style',
+                'section'               => 'styling',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'css_wrapper_border_radius',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'styling',
+                'ext'                   => 'px',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'css_wrapper_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'styling',
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            array(
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'css_wrapper_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'styling',
+                'ext'                   => 'px',
+                'tab'                   => __('wrapper', 'asex')
+            ),
+            /**
+             * Icon
+             */
+            array(
+                'label'   => __('Style Icon', 'asex'),
+                'id'      => 'icon_style',
+                'std'     => 'icon',
+                'type'    => 'select',
+                'choices' => array(
+                    array(
+                        'label' => __('Icon', 'asex'),
+                        'value' => 'icon',
+                    ),
+                    array(
+                        'label' => __('Text', 'asex'),
+                        'value' => 'text',
+                    ),
+                ),
+                'section' => 'styling',
+                'tab'     => __('Icon', 'asex'),
+            ),
+            array(
+                'label'   => __('Icon Text', 'asex'),
+                'id'      => 'icon_text',
+                'std'     => '01',
+                'type'    => 'text',
+                'section' => 'styling',
+                'tab'     => __('Icon', 'asex')
+            ),
+            array(
+                'label'                 => __('Align', 'asex'),
+                'id'                    => 'css_icon_text_align',
+                'std'                   => 'inherit',
+                'type'                  => 'text_align',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image',
+                'affect_on_change_rule' => 'text-align',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+            ),
+            array(
+                'label'                 => __('BG Color', 'asex'),
+                'id'                    => 'css_icon_bg_color',
+                'std'                   => '#ffb727',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
+                'affect_on_change_rule' => 'background-color',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+            ),
+            array(
+                'label'                 => __('BG Color Hover', 'asex'),
+                'id'                    => 'css_icon_bg_color_hover',
+                'std'                   => '#ffb727',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2:hover .dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'background-color',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -444,7 +725,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-color',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -455,7 +736,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-width',
                 'section'               => 'styling',
                 'ext'                   => 'px',
@@ -485,7 +766,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                     ),
                 ),
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-style',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -496,19 +777,30 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '100',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'border-radius',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
-                'ext'                   => 'px',
+                'ext'                   => '%',
             ),
             array(
                 'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_icon_color',
-                'std'                   => '#fda501',
+                'std'                   => '#ffffff',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner .dslc-icon',
+                'affect_on_change_el'   => '.dslc-info-box-image-inner .dslc-icon',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+            ),
+            array(
+                'label'                 => __('Color Hover', 'asex'),
+                'id'                    => 'css_icon_color_hover',
+                'std'                   => '#ffffff',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2:hover .dslc-info-box-image-inner .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -516,7 +808,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'             => __('Icon', 'asex'),
                 'id'                => 'icon_id',
-                'std'               => 'comments',
+                'std'               => 'as-params',
                 'type'              => 'icon',
                 'section'           => 'styling',
                 'tab'               => __('Icon', 'asex'),
@@ -528,8 +820,22 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-top',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+                'ext'                   => 'px',
+                'min'                   => -100,
+                'max'                   => 100
+            ),
+            array(
+                'label'                 => __('Margin Left', 'asex'),
+                'id'                    => 'css_icon_margin_left',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image',
+                'affect_on_change_rule' => 'margin-left',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px',
@@ -542,7 +848,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.asex-info-box-2 .dslc-info-box-wrapper .dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -551,12 +857,70 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'max'                   => 100
             ),
             array(
-                'label'                 => __('Size ( Wrapper )', 'asex'),
-                'id'                    => 'css_icon_wrapper_width',
-                'std'                   => '53',
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'css_icon_margin_bottom',
+                'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'affect_on_change_el'   => '.dslc-info-box-image',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+                'ext'                   => 'px',
+                'min'                   => 0,
+                'max'                   => 100
+            ),
+            array(
+                'label'   => __('Position', 'asex'),
+                'id'      => 'icon_position',
+                'std'     => 'aside',
+                'type'    => 'select',
+                'choices' => array(
+                    array(
+                        'label' => __('Above', 'asex'),
+                        'value' => 'above',
+                    ),
+                    array(
+                        'label' => __('Aside', 'asex'),
+                        'value' => 'aside',
+                    ),
+                ),
+                'section' => 'styling',
+                'tab'     => __('Icon', 'asex'),
+            ),
+            array(
+                'label'   => __('Style', 'asex'),
+                'id'      => 'icon_position_style',
+                'std'     => 'style_1',
+                'type'    => 'select',
+                'choices' => array(
+                    array(
+                        'label' => __('Style 1', 'asex'),
+                        'value' => 'style_1',
+                    ),
+                    array(
+                        'label' => __('Style 2', 'asex'),
+                        'value' => 'style_2',
+                    ),
+                    array(
+                        'label' => __('Style 3', 'asex'),
+                        'value' => 'style_3',
+                    ),
+                    array(
+                        'label' => __('Style 4', 'asex'),
+                        'value' => 'style_4',
+                    ),
+                ),
+                'section' => 'styling',
+                'tab'     => __('Icon', 'asex'),
+            ),
+            array(
+                'label'                 => __('Size ( Wrapper )', 'asex'),
+                'id'                    => 'css_icon_wrapper_width',
+                'std'                   => '84',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
@@ -567,25 +931,231 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'                 => __('Size ( Icon )', 'asex'),
                 'id'                    => 'css_icon_width',
-                'std'                   => '45',
+                'std'                   => '30',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner .dslc-icon',
+                'affect_on_change_el'   => '.dslc-info-box-image-inner .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'tab'                   => __('Icon', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
+             * Icon text
+             */
+            array(
+                'label'                 => __('Color (Text)' , 'asex'),
+                'id'                    => 'css_icon_text_color',
+                'std'                   => '#3d3d3d',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-icon-text',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+            ),
+            array(
+                'label'                 => __('Color Hover (Text)', 'asex'),
+                'id'                    => 'css_icon_text_color_hover',
+                'std'                   => '#3d3d3d',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2:hover .asex-icon-text',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+            ),
+            array(
+                'label'                 => __('Font Size (Text)', 'asex'),
+                'id'                    => 'css_icon_text_font_size',
+                'std'                   => '17',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-icon-text',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight (Text)', 'asex'),
+                'id'                    => 'css_icon_text_font_weight',
+                'std'                   => '800',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-icon-text',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Family (Text)', 'asex'),
+                'id'                    => 'css_icon_text_font_family',
+                'std'                   => 'Lato',
+                'type'                  => 'font',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-icon-text',
+                'affect_on_change_rule' => 'font-family',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+            ),
+            array(
+                'label'                 => __('Letter Spacing (Text)', 'asex'),
+                'id'                    => 'css_icon_text_letter_spacing',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-icon-text',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+                'ext'                   => 'px',
+                'min'                   => 0,
+                'max'                   => 50
+            ),
+            array(
+                'label'                 => __('Line Height (Text)', 'asex'),
+                'id'                    => 'css_icon_text_line_height',
+                'std'                   => '17',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-icon-text',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'styling',
+                'tab'                   => __('Icon', 'asex'),
+                'ext'                   => 'px'
+            ),
+            /**
+             * Image
+             */
+            array(
+                'label'   => __('Image - File', 'asex'),
+                'id'      => 'image_alt',
+                'std'     => '',
+                'type'    => 'image',
+                'section' => 'styling',
+                'tab'     => __('Image', 'asex'),
+            ),
+            array(
+                'label'   => __('Image Link - URL', 'asex'),
+                'id'      => 'image_alt_link_url',
+                'std'     => '',
+                'type'    => 'text',
+                'section' => 'styling',
+                'tab'     => __('Image', 'asex'),
+            ),
+            array(
+                'label'                 => __('Border Color', 'asex'),
+                'id'                    => 'css_image_alt_border_color',
+                'std'                   => '',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-alt-inner img',
+                'affect_on_change_rule' => 'border-color',
+                'section'               => 'styling',
+                'tab'                   => __('Image', 'asex'),
+            ),
+            array(
+                'label'                 => __('Border Width', 'asex'),
+                'id'                    => 'css_image_alt_border_width',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-alt-inner img',
+                'affect_on_change_rule' => 'border-width',
+                'ext'                   => 'px',
+                'section'               => 'styling',
+                'tab'                   => __('Image', 'asex'),
+            ),
+            array(
+                'label'                 => __('Borders', 'asex'),
+                'id'                    => 'css_image_alt_border_trbl',
+                'std'                   => 'top right bottom left',
+                'type'                  => 'checkbox',
+                'choices'               => array(
+                    array(
+                        'label' => __('Top', 'asex'),
+                        'value' => 'top'
+                    ),
+                    array(
+                        'label' => __('Right', 'asex'),
+                        'value' => 'right'
+                    ),
+                    array(
+                        'label' => __('Bottom', 'asex'),
+                        'value' => 'bottom'
+                    ),
+                    array(
+                        'label' => __('Left', 'asex'),
+                        'value' => 'left'
+                    ),
+                ),
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-alt-inner img',
+                'affect_on_change_rule' => 'border-style',
+                'section'               => 'styling',
+                'tab'                   => __('Image', 'asex'),
+            ),
+            array(
+                'label'                 => __('Border Radius', 'asex'),
+                'id'                    => 'css_image_alt_border_radius',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-alt-inner img',
+                'affect_on_change_rule' => 'border-radius',
+                'section'               => 'styling',
+                'tab'                   => __('Image', 'asex'),
+                'ext'                   => '%',
+            ),
+            array(
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'css_image_alt_margin_bottom',
+                'std'                   => '25',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-alt-inner img',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'styling',
+                'tab'                   => __('Image', 'asex'),
+                'ext'                   => 'px',
+            ),
+            /**
              * Title
              */
+            array(
+                'label'                 => __('Align', 'asex'),
+                'id'                    => 'css_title_text_align',
+                'std'                   => 'left',
+                'type'                  => 'text_align',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title',
+                'affect_on_change_rule' => 'text-align',
+                'section'               => 'styling',
+                'tab'                   => __('Title', 'asex'),
+            ),
             array(
                 'label'                 => __('Color', 'asex'),
                 'id'                    => 'css_title_color',
                 'std'                   => '#3d3d3d',
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'affect_on_change_el'   => '.asex-infobox-title h4',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Title', 'asex'),
+            ),
+            array(
+                'label'                 => __('Color Hover', 'asex'),
+                'id'                    => 'css_title_color_hover',
+                'std'                   => '#3d3d3d',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2:hover .asex-infobox-title h4',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('Title', 'asex'),
@@ -596,7 +1166,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '17',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'styling',
                 'tab'                   => __('Title', 'asex'),
@@ -608,7 +1178,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => '800',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'font-weight',
                 'section'               => 'styling',
                 'tab'                   => __('Title', 'asex'),
@@ -623,18 +1193,53 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'std'                   => 'Lato',
                 'type'                  => 'font',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'font-family',
                 'section'               => 'styling',
                 'tab'                   => __('Title', 'asex'),
             ),
             array(
-                'label'                 => __('Line Height', 'asex'),
-                'id'                    => 'css_title_line_height',
-                'std'                   => '53',
+                'label'                 => __('Font Style', 'asex'),
+                'id'                    => 'css_title_font_family',
+                'std'                   => 'normal',
+                'type'                  => 'select',
+                'choices'               => array(
+                    array(
+                        'label' => __('Normal', 'asex'),
+                        'value' => 'normal'
+                    ),
+                    array(
+                        'label' => __('Italic', 'asex'),
+                        'value' => 'italic'
+                    ),
+                ),
+                                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title h4',
+                'affect_on_change_rule' => 'font-style',
+                'section'               => 'styling',
+                'tab'                   => __('title', 'asex'),
+            ),
+            array(
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'css_title_letter_spacing',
+                'std'                   => '0',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'affect_on_change_el'   => '.asex-infobox-title h4',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'styling',
+                'tab'                   => __('Title', 'asex'),
+                'ext'                   => 'px',
+                'min'                   => -50,
+                'max'                   => 50
+            ),
+            array(
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'css_title_line_height',
+                'std'                   => '17',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'styling',
                 'tab'                   => __('Title', 'asex'),
@@ -643,13 +1248,170 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'                 => __('Margin Bottom', 'asex'),
                 'id'                    => 'css_title_margin',
-                'std'                   => '0',
+                'std'                   => '20',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
-                'affect_on_change_el'   => '.dslc-info-box-title',
+                'affect_on_change_el'   => '.asex-infobox-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'styling',
                 'tab'                   => __('Title', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Margin Left', 'asex'),
+                'id'                    => 'css_title_margin_left',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title h4',
+                'affect_on_change_rule' => 'margin-left',
+                'section'               => 'styling',
+                'tab'                   => __('Title', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Margin Right', 'asex'),
+                'id'                    => 'css_title_margin_right h4',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title',
+                'affect_on_change_rule' => 'margin-right',
+                'section'               => 'styling',
+                'tab'                   => __('Title', 'asex'),
+                'ext'                   => 'px'
+            ),
+            /**
+             * Sub Title
+             */
+            array(
+                'label'                 => __('Align', 'asex'),
+                'id'                    => 'css_sub_title_text_align',
+                'std'                   => 'left',
+                'type'                  => 'text_align',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title',
+                'affect_on_change_rule' => 'text-align',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+            ),
+            array(
+                'label'                 => __('Color', 'asex'),
+                'id'                    => 'css_sub_title_color',
+                'std'                   => '#797979',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+            ),
+            array(
+                'label'                 => __('Color Hover', 'asex'),
+                'id'                    => 'css_sub_title_color_hover',
+                'std'                   => '#797979',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2:hover .asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+            ),
+            array(
+                'label'                 => __('Font Size', 'asex'),
+                'id'                    => 'css_sub_title_font_size',
+                'std'                   => '16',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'font-size',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Font Weight', 'asex'),
+                'id'                    => 'css_sub_title_font_weight',
+                'std'                   => '400',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'font-weight',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+                'ext'                   => '',
+                'min'                   => 100,
+                'max'                   => 900,
+                'increment'             => 100
+            ),
+            array(
+                'label'                 => __('Font Family', 'asex'),
+                'id'                    => 'css_sub_title_font_family',
+                'std'                   => 'Playfair Display',
+                'type'                  => 'font',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'font-family',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+            ),
+            array(
+                'label'                 => __('Font Style', 'asex'),
+                'id'                    => 'css_sub_title_font_family',
+                'std'                   => 'Italic',
+                'type'                  => 'select',
+                'choices'               => array(
+                    array(
+                        'label' => __('Normal', 'asex'),
+                        'value' => 'normal'
+                    ),
+                    array(
+                        'label' => __('Italic', 'asex'),
+                        'value' => 'italic'
+                    ),
+                ),
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'font-style',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+            ),
+            array(
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'css_sub_title_letter_spacing',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+                'ext'                   => 'px',
+                'min'                   => -50,
+                'max'                   => 50
+            ),
+            array(
+                'label'                 => __('Line Height', 'asex'),
+                'id'                    => 'css_sub_title_line_height',
+                'std'                   => '20',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title div',
+                'affect_on_change_rule' => 'line-height',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'css_sub_title_margin',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-sub-title',
+                'affect_on_change_rule' => 'margin-bottom',
+                'section'               => 'styling',
+                'tab'                   => __('subtitle', 'asex'),
                 'ext'                   => 'px'
             ),
             /**
@@ -658,7 +1420,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'                 => __('Align', 'asex'),
                 'id'                    => 'css_content_text_align',
-                'std'                   => 'left',
+                'std'                   => 'left    ',
                 'type'                  => 'text_align',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content',
@@ -900,6 +1662,20 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'tab'                   => __('Primary Button', 'asex'),
             ),
             array(
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'css_button_letter_spacing',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-button a',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'styling',
+                'tab'                   => __('Primary Button', 'asex'),
+                'ext'                   => 'px',
+                'min'                   => -50,
+                'max'                   => 50
+            ),
+            array(
                 'label'                 => __('Margin Top', 'asex'),
                 'id'                    => 'css_button_margin_top',
                 'std'                   => '0',
@@ -980,6 +1756,17 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'type'                  => 'color',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a .dslc-icon',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Primary Button', 'asex'),
+            ),
+            array(
+                'label'                 => __('Icon - Color Hover', 'asex'),
+                'id'                    => 'css_button_icon_color_hover',
+                'std'                   => '',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-button a:hover .dslc-icon',
                 'affect_on_change_rule' => 'color',
                 'section'               => 'styling',
                 'tab'                   => __('Primary Button', 'asex'),
@@ -1157,9 +1944,23 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
+                'label'                 => __('Letter Spacing', 'asex'),
+                'id'                    => 'css_button_2_letter_spacing',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
+                'affect_on_change_rule' => 'letter-spacing',
+                'section'               => 'styling',
+                'tab'                   => __('Secondary Button', 'asex'),
+                'ext'                   => 'px',
+                'min'                   => -50,
+                'max'                   => 50
+            ),
+            array(
                 'label'                 => __('Margin Left', 'asex'),
                 'id'                    => 'css_button_2_mleft',
-                'std'                   => '0',
+                'std'                   => '5',
                 'type'                  => 'slider',
                 'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
@@ -1224,6 +2025,17 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
                 'tab'                   => __('Secondary Button', 'asex'),
             ),
             array(
+                'label'                 => __('Icon - Color Hover', 'asex'),
+                'id'                    => 'css_button_2_icon_color_hover',
+                'std'                   => '',
+                'type'                  => 'color',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary:hover .dslc-icon',
+                'affect_on_change_rule' => 'color',
+                'section'               => 'styling',
+                'tab'                   => __('Secondary Button', 'asex'),
+            ),
+            array(
                 'label'                 => __('Icon - Margin Right', 'asex'),
                 'id'                    => 'css_button_2_icon_margin',
                 'std'                   => '5',
@@ -1241,7 +2053,15 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'      => __('Title', 'asex'),
                 'id'         => 'title',
-                'std'        => __('CLICK TO EDIT','asex'),
+                'std'        => 'CLICK TO EDIT',
+                'type'       => 'textarea',
+                'visibility' => 'hidden',
+                'section'    => 'styling'
+            ),
+            array(
+                'label'      => __('Sub Title', 'asex'),
+                'id'         => 'sub_title',
+                'std'        => 'CLICK TO EDIT',
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1249,7 +2069,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'      => __('Content', 'asex'),
                 'id'         => 'content',
-                'std'        => 'This is just placeholder text. Click here to edit it.',
+                'std'        => 'This is just placeholder text. Hover over the module and click "Edit Content" to change it.',
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1257,7 +2077,7 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_title',
-                'std'        => __('CLICK TO EDIT','asex'),
+                'std'        => 'CLICK TO EDIT',
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
@@ -1265,1096 +2085,660 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             array(
                 'label'      => __('Button Title', 'asex'),
                 'id'         => 'button_2_title',
-                'std'        => __('CLICK TO EDIT','asex'),
+                'std'        => 'CLICK TO EDIT',
                 'type'       => 'textarea',
                 'visibility' => 'hidden',
                 'section'    => 'styling'
             ),
-            /**             * Responsive Tablet */
-            array
-                (
-                'label'   => 'Responsive Styling',
+            /**
+             * Responsive Tablet
+             */
+            array(
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_t',
                 'std'     => 'disabled',
                 'type'    => 'select',
-                'choices' => array
-                    (
-                    0 => array
-                        (
-                        'label' => 'Disabled',
+                'choices' => array(
+                    array(
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
-                    1 => array
-                        (
-                        'label' => 'Enabled',
+                    array(
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => 'tablet',
+                'tab'     => __('tablet', 'asex'),
             ),
-            array
-                (
-                'label'                 => __('Border Width ', 'asex'),
-                'id'                    => 'css_res_t_css_border_width',
+            array(
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'css_res_t_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius ', 'asex'),
-                'id'                    => 'css_res_t_css_border_radius',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
-            ),
-            array
-                (
-                'label'                 => __('Margin Bottom ', 'asex'),
-                'id'                    => 'css_res_t_css_margin_bottom',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
             ),
-            array
-                (
-                'label'                 => __('Padding Vertical ', 'asex'),
-                'id'                    => 'css_res_t_css_padding_vertical',
+            array(
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'css_res_t_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'max'                   => '500',
-                'increment'             => '1',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
+                'tab'                   => __('tablet', 'asex'),
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Padding Horizontal ', 'asex'),
-                'id'                    => 'css_res_t_css_padding_horizontal',
+            array(
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'css_res_t_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
+                'tab'                   => __('tablet', 'asex'),
+                'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Width ', 'asex'),
-                'id'                    => 'css_res_t_css_content_width',
+            array(
+                'label'                 => __('Wrapper - Padding Vertical', 'asex'),
+                'id'                    => 'css_res_t_inner_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Wrapper - Padding Horizontal', 'asex'),
+                'id'                    => 'css_res_t_inner_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Width', 'asex'),
+                'id'                    => 'css_res_t_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'ext'                   => '%',
-                'tab'                   => 'tablet'
+                'tab'                   => __('tablet', 'asex'),
+                'ext'                   => '%'
             ),
-            array
-                (
-                'label'                 => __('Border Width( Icon ) ', 'asex'),
-                'id'                    => 'css_res_t_css_icon_border_width',
+            array(
+                'label'                 => __('Icon - Margin Top', 'asex'),
+                'id'                    => 'css_res_t_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius( Icon ) ', 'asex'),
-                'id'                    => 'css_res_t_css_icon_border_radius',
-                'std'                   => '100',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Margin Top( Icon ) ', 'asex'),
-                'id'                    => 'css_res_t_css_icon_margin_top',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'min'                   => '0',
-                'max'                   => '100'
+                'min'                   => -100,
+                'max'                   => 50
             ),
-            array
-                (
-                'label'                 => __('Margin Right( Icon ) ', 'asex'),
-                'id'                    => 'css_res_t_css_icon_margin_right',
+            array(
+                'label'                 => __('Icon - Margin Right', 'asex'),
+                'id'                    => 'css_res_t_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'min'                   => '0',
-                'max'                   => '100'
+                'min'                   => 0,
+                'max'                   => 100
             ),
-            array
-                (
-                'label'                 => __('Size ( Wrapper )( Icon ) ', 'asex'),
-                'id'                    => 'css_res_t_css_icon_wrapper_width',
-                'std'                   => '53',
+            array(
+                'label'                 => __('Icon - Size ( Wrapper )', 'asex'),
+                'id'                    => 'css_res_t_icon_wrapper_width',
+                'std'                   => '84',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'min'                   => '0',
-                'max'                   => '300'
+                'min'                   => 0,
+                'max'                   => 300
             ),
-            array
-                (
-                'label'                 => __('Size ( Icon ) ', 'asex'),
-                'id'                    => 'css_res_t_css_icon_width',
-                'std'                   => '45',
+            array(
+                'label'                 => __('Icon - Size ( Icon )', 'asex'),
+                'id'                    => 'css_res_t_icon_width',
+                'std'                   => '31',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner .dslc-icon',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-inner .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Size( Title ) ', 'asex'),
-                'id'                    => 'css_res_t_css_title_font_size',
+            array(
+                'label'                 => __('Title - Font Size', 'asex'),
+                'id'                    => 'css_res_t_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Weight( Title ) ', 'asex'),
-                'id'                    => 'css_res_t_css_title_font_weight',
-                'std'                   => '800',
+            array(
+                'label'                 => __('Title - Line Height', 'asex'),
+                'id'                    => 'css_res_t_title_line_height',
+                'std'                   => '17',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Line Height( Title ) ', 'asex'),
-                'id'                    => 'css_res_t_css_title_line_height',
-                'std'                   => '53',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Margin Bottom( Title ) ', 'asex'),
-                'id'                    => 'css_res_t_css_title_margin',
-                'std'                   => '0',
+            array(
+                'label'                 => __('Title - Margin Bottom', 'asex'),
+                'id'                    => 'css_res_t_title_margin',
+                'std'                   => '21',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Size( Content ) ', 'asex'),
-                'id'                    => 'css_res_t_css_content_font_size',
+            array(
+                'label'                 => __('Content - Font Size', 'asex'),
+                'id'                    => 'css_res_t_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Weight( Content ) ', 'asex'),
-                'id'                    => 'css_res_t_css_content_font_weight',
-                'std'                   => '400',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Line Height( Content ) ', 'asex'),
-                'id'                    => 'css_res_t_css_content_line_height',
+            array(
+                'label'                 => __('Content - Line Height', 'asex'),
+                'id'                    => 'css_res_t_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Margin Bottom( Content ) ', 'asex'),
-                'id'                    => 'css_res_t_css_content_margin',
+            array(
+                'label'                 => __('Content - Margin Bottom', 'asex'),
+                'id'                    => 'css_res_t_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Border Width( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_border_width',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_border_radius',
-                'std'                   => '3',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Font Size( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_font_size',
+            array(
+                'label'                 => __('Button - Font Size', 'asex'),
+                'id'                    => 'css_res_t_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'tablet',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Weight( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_font_weight',
-                'std'                   => '800',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Margin Top( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_margin_top',
+            array(
+                'label'                 => __('Button - Margin Top', 'asex'),
+                'id'                    => 'css_res_t_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
             ),
-            array
-                (
-                'label'                 => __('Margin Right( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_margin_right',
+            array(
+                'label'                 => __('Button - Margin Right', 'asex'),
+                'id'                    => 'css_res_t_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
             ),
-            array
-                (
-                'label'                 => __('Padding Vertical( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_padding_vertical',
+            array(
+                'label'                 => __('Button - Padding Vertical', 'asex'),
+                'id'                    => 'css_res_t_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
             ),
-            array
-                (
-                'label'                 => __('Padding Horizontal( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_padding_horizontal',
+            array(
+                'label'                 => __('Button - Padding Horizontal', 'asex'),
+                'id'                    => 'css_res_t_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
             ),
-            array
-                (
-                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_icon_margin',
+            array(
+                'label'                 => __('Button - Icon - Margin Right', 'asex'),
+                'id'                    => 'css_res_t_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
+                'tab'                   => __('tablet', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
             ),
-            array
-                (
-                'label'                 => __('Border Width( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_border_width',
+            array(
+                'label'                 => __('2nd Button Margin Left', 'asex'),
+                'id'                    => 'css_res_t_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_border_radius',
-                'std'                   => '3',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Font Size( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_font_size',
-                'std'                   => '11',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'font-size',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Font Weight( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_font_weight',
-                'std'                   => '800',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'tablet',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Margin Left( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_mleft',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
+                'tab'                   => __('tablet', 'asex'),
             ),
-            array
-                (
-                'label'                 => __('Margin Top( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_mtop',
+            array(
+                'label'                 => __('2nd Button Margin Top', 'asex'),
+                'id'                    => 'css_res_t_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => 'tablet'
+                'tab'                   => __('tablet', 'asex'),
             ),
-            array
-                (
-                'label'                 => __('Padding Vertical( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_padding_vertical',
-                'std'                   => '13',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'padding-top,padding-bottom',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
-            ),
-            array
-                (
-                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_padding_horizontal',
-                'std'                   => '16',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'padding-left,padding-right',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
-            ),
-            array
-                (
-                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_t_css_button_2_icon_margin',
-                'std'                   => '5',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary .dslc-icon',
-                'affect_on_change_rule' => 'margin-right',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'tablet'
-            )
-            /**             * Responsive phone */
-            ,
-            array
-                (
-                'label'   => 'Responsive Styling',
+            /**
+             * Responsive Phone
+             */
+            array(
+                'label'   => __('Responsive Styling', 'asex'),
                 'id'      => 'css_res_p',
                 'std'     => 'disabled',
                 'type'    => 'select',
-                'choices' => array
-                    (
-                    0 => array
-                        (
-                        'label' => 'Disabled',
+                'choices' => array(
+                    array(
+                        'label' => __('Disabled', 'asex'),
                         'value' => 'disabled'
                     ),
-                    1 => array
-                        (
-                        'label' => 'Enabled',
+                    array(
+                        'label' => __('Enabled', 'asex'),
                         'value' => 'enabled'
                     ),
                 ),
                 'section' => 'responsive',
-                'tab'     => 'phone',
+                'tab'     => __('phone', 'asex'),
             ),
-            array
-                (
-                'label'                 => __('Border Width ', 'asex'),
-                'id'                    => 'css_res_p_css_border_width',
+            array(
+                'label'                 => __('Margin Bottom', 'asex'),
+                'id'                    => 'css_res_p_margin_bottom',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius ', 'asex'),
-                'id'                    => 'css_res_p_css_border_radius',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
-            ),
-            array
-                (
-                'label'                 => __('Margin Bottom ', 'asex'),
-                'id'                    => 'css_res_p_css_margin_bottom',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
             ),
-            array
-                (
-                'label'                 => __('Padding Vertical ', 'asex'),
-                'id'                    => 'css_res_p_css_padding_vertical',
+            array(
+                'label'                 => __('Padding Vertical', 'asex'),
+                'id'                    => 'css_res_p_padding_vertical',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
-                'max'                   => '500',
-                'increment'             => '1',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
+                'tab'                   => __('phone', 'asex'),
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Padding Horizontal ', 'asex'),
-                'id'                    => 'css_res_p_css_padding_horizontal',
+            array(
+                'label'                 => __('Padding Horizontal', 'asex'),
+                'id'                    => 'css_res_p_padding_horizontal',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-info-box-2',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
+                'tab'                   => __('phone', 'asex'),
+                'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Width ', 'asex'),
-                'id'                    => 'css_res_p_css_content_width',
+            array(
+                'label'                 => __('Wrapper - Padding Vertical', 'asex'),
+                'id'                    => 'css_res_p_inner_padding_vertical',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'padding-top,padding-bottom',
+                'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
+                'max'                   => 500,
+                'increment'             => 1,
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Wrapper - Padding Horizontal', 'asex'),
+                'id'                    => 'css_res_p_inner_padding_horizontal',
+                'std'                   => '0',
+                'type'                  => 'slider',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-wrapper',
+                'affect_on_change_rule' => 'padding-left,padding-right',
+                'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
+                'ext'                   => 'px'
+            ),
+            array(
+                'label'                 => __('Width', 'asex'),
+                'id'                    => 'css_res_p_content_width',
                 'std'                   => '100',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-main-wrap',
                 'affect_on_change_rule' => 'max-width',
                 'section'               => 'responsive',
-                'ext'                   => '%',
-                'tab'                   => 'phone'
+                'tab'                   => __('phone', 'asex'),
+                'ext'                   => '%'
             ),
-            array
-                (
-                'label'                 => __('Border Width( Icon ) ', 'asex'),
-                'id'                    => 'css_res_p_css_icon_border_width',
+            array(
+                'label'                 => __('Icon - Margin Top', 'asex'),
+                'id'                    => 'css_res_p_icon_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius( Icon ) ', 'asex'),
-                'id'                    => 'css_res_p_css_icon_border_radius',
-                'std'                   => '100',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Margin Top( Icon ) ', 'asex'),
-                'id'                    => 'css_res_p_css_icon_margin_top',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'min'                   => '0',
-                'max'                   => '100'
+                'min'                   => -100,
+                'max'                   => 50
             ),
-            array
-                (
-                'label'                 => __('Margin Right( Icon ) ', 'asex'),
-                'id'                    => 'css_res_p_css_icon_margin_right',
+            array(
+                'label'                 => __('Icon - Margin Right', 'asex'),
+                'id'                    => 'css_res_p_icon_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'min'                   => '0',
-                'max'                   => '100'
+                'min'                   => 0,
+                'max'                   => 100
             ),
-            array
-                (
-                'label'                 => __('Size ( Wrapper )( Icon ) ', 'asex'),
-                'id'                    => 'css_res_p_css_icon_wrapper_width',
-                'std'                   => '53',
+            array(
+                'label'                 => __('Icon - Size ( Wrapper )', 'asex'),
+                'id'                    => 'css_res_p_icon_wrapper_width',
+                'std'                   => '84',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-inner',
                 'affect_on_change_rule' => 'width,height',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'min'                   => '0',
-                'max'                   => '300'
+                'min'                   => 0,
+                'max'                   => 300
             ),
-            array
-                (
-                'label'                 => __('Size( Icon ) ', 'asex'),
-                'id'                    => 'css_res_p_css_icon_width',
-                'std'                   => '45',
+            array(
+                'label'                 => __('Icon - Size ( Icon )', 'asex'),
+                'id'                    => 'css_res_p_icon_width',
+                'std'                   => '31',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-icon-bellow-title-inner .dslc-icon',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-image-inner .dslc-icon',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Size( Title ) ', 'asex'),
-                'id'                    => 'css_res_p_css_title_font_size',
+            array(
+                'label'                 => __('Title - Font Size', 'asex'),
+                'id'                    => 'css_res_p_title_font_size',
                 'std'                   => '17',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Weight( Title ) ', 'asex'),
-                'id'                    => 'css_res_p_css_title_font_weight',
-                'std'                   => '800',
+            array(
+                'label'                 => __('Title - Line Height', 'asex'),
+                'id'                    => 'css_res_p_title_line_height',
+                'std'                   => '17',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Line Height( Title ) ', 'asex'),
-                'id'                    => 'css_res_p_css_title_line_height',
-                'std'                   => '53',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title h4',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title h4',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Margin Bottom( Title ) ', 'asex'),
-                'id'                    => 'css_res_p_css_title_margin',
-                'std'                   => '0',
+            array(
+                'label'                 => __('Title - Margin Bottom', 'asex'),
+                'id'                    => 'css_res_p_title_margin',
+                'std'                   => '21',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-title',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.asex-infobox-title',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Size( Content ) ', 'asex'),
-                'id'                    => 'css_res_p_css_content_font_size',
+            array(
+                'label'                 => __('Content - Font Size', 'asex'),
+                'id'                    => 'css_res_p_content_font_size',
                 'std'                   => '14',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Weight( Content ) ', 'asex'),
-                'id'                    => 'css_res_p_css_content_font_weight',
-                'std'                   => '400',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Line Height( Content ) ', 'asex'),
-                'id'                    => 'css_res_p_css_content_line_height',
+            array(
+                'label'                 => __('Content - Line Height', 'asex'),
+                'id'                    => 'css_res_p_content_line_height',
                 'std'                   => '23',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
                 'affect_on_change_rule' => 'line-height',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Margin Bottom( Content ) ', 'asex'),
-                'id'                    => 'css_res_p_css_content_margin',
+            array(
+                'label'                 => __('Content - Margin Bottom', 'asex'),
+                'id'                    => 'css_res_p_content_margin',
                 'std'                   => '28',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-content, .dslc-info-box-content p',
+                'refresh_on_change'     => false,
+                'affect_on_change_el'   => '.dslc-info-box-content',
                 'affect_on_change_rule' => 'margin-bottom',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Border Width( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_border_width',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_border_radius',
-                'std'                   => '3',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Font Size( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_font_size',
+            array(
+                'label'                 => __('Button - Font Size', 'asex'),
+                'id'                    => 'css_res_p_button_font_size',
                 'std'                   => '11',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'font-size',
                 'section'               => 'responsive',
-                'tab'                   => 'phone',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px'
             ),
-            array
-                (
-                'label'                 => __('Font Weight( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_font_weight',
-                'std'                   => '800',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Margin Top( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_margin_top',
+            array(
+                'label'                 => __('Button - Margin Top', 'asex'),
+                'id'                    => 'css_res_p_button_margin_top',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
             ),
-            array
-                (
-                'label'                 => __('Margin Right( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_margin_right',
+            array(
+                'label'                 => __('Button - Margin Right', 'asex'),
+                'id'                    => 'css_res_p_button_margin_right',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
             ),
-            array
-                (
-                'label'                 => __('Padding Vertical( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_padding_vertical',
+            array(
+                'label'                 => __('Button - Padding Vertical', 'asex'),
+                'id'                    => 'css_res_p_button_padding_vertical',
                 'std'                   => '13',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'padding-top,padding-bottom',
                 'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
             ),
-            array
-                (
-                'label'                 => __('Padding Horizontal( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_padding_horizontal',
+            array(
+                'label'                 => __('Button - Padding Horizontal', 'asex'),
+                'id'                    => 'css_res_p_button_padding_horizontal',
                 'std'                   => '16',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a',
                 'affect_on_change_rule' => 'padding-left,padding-right',
                 'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
             ),
-            array
-                (
-                'label'                 => __('Icon - Margin Right( Primary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_icon_margin',
+            array(
+                'label'                 => __('Button - Icon - Margin Right', 'asex'),
+                'id'                    => 'css_res_p_button_icon_margin',
                 'std'                   => '5',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a .dslc-icon',
                 'affect_on_change_rule' => 'margin-right',
                 'section'               => 'responsive',
+                'tab'                   => __('phone', 'asex'),
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
             ),
-            array
-                (
-                'label'                 => __('Border Width( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_border_width',
+            array(
+                'label'                 => __('2nd Button Margin Left', 'asex'),
+                'id'                    => 'css_res_p_button_2_mleft',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'border-width',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Border Radius( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_border_radius',
-                'std'                   => '3',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'border-radius',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Font Size( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_font_size',
-                'std'                   => '11',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'font-size',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => 'px'
-            ),
-            array
-                (
-                'label'                 => __('Font Weight( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_font_weight',
-                'std'                   => '800',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'font-weight',
-                'section'               => 'responsive',
-                'tab'                   => 'phone',
-                'ext'                   => '',
-                'min'                   => '100',
-                'max'                   => '900',
-                'increment'             => '100'
-            ),
-            array
-                (
-                'label'                 => __('Margin Left( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_mleft',
-                'std'                   => '0',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'margin-left',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
+                'tab'                   => __('phone', 'asex'),
             ),
-            array
-                (
-                'label'                 => __('Margin Top( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_mtop',
+            array(
+                'label'                 => __('2nd Button Margin Top', 'asex'),
+                'id'                    => 'css_res_p_button_2_mtop',
                 'std'                   => '0',
                 'type'                  => 'slider',
-                'refresh_on_change'     => '',
+                'refresh_on_change'     => false,
                 'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
                 'affect_on_change_rule' => 'margin-top',
                 'section'               => 'responsive',
                 'ext'                   => 'px',
-                'tab'                   => 'phone'
+                'tab'                   => __('phone', 'asex'),
             ),
-            array
-                (
-                'label'                 => __('Padding Vertical( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_padding_vertical',
-                'std'                   => '13',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'padding-top,padding-bottom',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
-            ),
-            array
-                (
-                'label'                 => __('Padding Horizontal( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_padding_horizontal',
-                'std'                   => '16',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary',
-                'affect_on_change_rule' => 'padding-left,padding-right',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
-            ),
-            array
-                (
-                'label'                 => __('Icon - Margin Right( Secondary Button ) ', 'asex'),
-                'id'                    => 'css_res_p_css_button_2_icon_margin',
-                'std'                   => '5',
-                'type'                  => 'slider',
-                'refresh_on_change'     => '',
-                'affect_on_change_el'   => '.dslc-info-box-button a.dslc-secondary .dslc-icon',
-                'affect_on_change_rule' => 'margin-right',
-                'section'               => 'responsive',
-                'ext'                   => 'px',
-                'tab'                   => 'phone'
-            )
-                ,
         );
 
-        $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options'));
+        $dslc_options = array_merge($dslc_options, $this->shared_options('animation_options', array(
+                    'hover_opts' => false)));
         $dslc_options = array_merge($dslc_options, $this->presets_options());
 
         return apply_filters('dslc_module_options', $dslc_options, $this->module_id);
     }
 
-    function output($options) {
+    function output($options)
+    {
 
         global $dslc_active;
 
@@ -2373,126 +2757,188 @@ class ASEX_Info_Box_2 extends ASEX_MODULE {
             $elements = explode(' ', trim($elements));
         else
             $elements = array();
+
+        $image_alt          = $options['image_alt'];
+        $image_alt_link_url = $options['image_alt_link_url'];
         ?>
 
-        <div class="dslc-info-box">
+        <div class="dslc-info-box asex-info-box-2 dslc-info-box-icon-pos-<?php echo $options['icon_position']; ?>">
 
-            <?php if ($options['button_pos'] == 'aside' && in_array('button', $elements)) : ?>
-                <div class="dslc-info-box-button dslc-info-box-button-aside">
-                    <?php if (isset($options['button_link']) && !empty($options['button_link'])) : ?>
-                        <a href="<?php echo esc_url($options['button_link']); ?>" target="<?php echo esc_attr($options['button_target']); ?>">
-                            <?php if (isset($options['button_icon_id']) && $options['button_icon_id'] != '') : ?>
-                                <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
-                            <?php endif; ?>
-                            <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title']); ?></span>
-                                <?php
-                            else : echo esc_html($options['button_title']);
-                            endif;
-                            ?>
-                        </a>
-                    <?php endif; ?>	
-                    <?php if (isset($options['button_2_link']) && !empty($options['button_2_link'])) : ?>
-                        <a href="<?php echo esc_url($options['button_2_link']); ?>" target="<?php echo esc_attr($options['button_2_target']); ?>" class="dslc-secondary">
-                            <?php if (isset($options['button_2_icon_id']) && $options['button_2_icon_id'] != '') : ?>
-                                <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
-                            <?php endif; ?>
-                            <?php if ($dslc_is_admin) : ?>
-                                <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title']); ?></span>
-                                <?php
-                            else : echo esc_html($options['button_2_title']);
-                            endif;
-                            ?>
-                        </a>
+            <div class="dslc-info-box-wrapper"<?php if ($dslc_is_admin) echo ' data-exportable-content="div"'; ?>>
+
+                <?php if ($options['button_pos'] == 'aside' && in_array('button', $elements)) : ?>
+                    <div class="dslc-info-box-button dslc-info-box-button-aside">
+                        <?php if (isset($options['button_link']) && !empty($options['button_link'])) : ?>
+                            <a href="<?php echo $options['button_link']; ?>" target="<?php echo $options['button_target']; ?>" <?php if ($options['link_nofollow']) echo 'rel="nofollow"'; ?> class="dslc-primary">
+                                <?php if (isset($options['button_icon_id']) && $options['button_icon_id'] != '') : ?>
+                                    <span class="dslc-icon dslc-icon-<?php echo $options['button_icon_id']; ?>"></span>
+                                <?php endif; ?>
+                                <?php if ($dslc_is_admin) : ?>
+                                    <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo $options['button_title']; ?></span>
+                                    <?php
+                                else : echo $options['button_title'];
+                                endif;
+                                ?>
+                            </a>
+                        <?php endif; ?>
+                        <?php if (isset($options['button_2_link']) && !empty($options['button_2_link'])) : ?>
+                            <a href="<?php echo $options['button_2_link']; ?>" target="<?php echo $options['button_2_target']; ?>" <?php if ($options['link_nofollow']) echo 'rel="nofollow"'; ?> class="dslc-secondary">
+                                <?php if (isset($options['button_2_icon_id']) && $options['button_2_icon_id'] != '') : ?>
+                                    <span class="dslc-icon dslc-icon-<?php echo $options['button_2_icon_id']; ?>"></span>
+                                <?php endif; ?>
+                                <?php if ($dslc_is_admin) : ?>
+                                    <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo $options['button_2_title']; ?></span>
+                                    <?php
+                                else : echo $options['button_2_title'];
+                                endif;
+                                ?>
+                            </a>
+                        <?php endif; ?>
+                    </div><!-- .dslc-info-box-button -->
+                <?php endif; ?>
+
+                <div class="dslc-info-box-main-wrap dslc-clearfix">
+
+                    <?php if (in_array('image', $elements) && $image_alt) : ?>
+                        <div class="dslc-info-box-image-alt">
+                            <div class="dslc-info-box-image-alt-inner">
+                                <?php if (!$image_alt_link_url) : ?>
+                                    <img src="<?php echo esc_url($image_alt); ?>">
+                                <?php else : ?>
+                                    <a href="<?php echo esc_url($image_alt_link_url); ?>" <?php if ($options['link_nofollow']) echo 'rel="nofollow"'; ?>><img src="<?php echo esc_url($image_alt); ?>"></a>
+                                <?php endif; ?>
+                            </div><!-- .dslc-info-box-image-alt-inner -->
+                        </div><!-- .dslc-info-box-image-alt -->
                     <?php endif; ?>
-                </div><!-- .dslc-info-box-button -->
-            <?php endif; ?>
 
-            <div class="dslc-info-box-main-wrap dslc-clearfix">
-
-                <?php if (in_array('icon', $elements)) : ?>
-                    <div class="dslc-info-box-icon-bellow-title">
-                        <div class="dslc-info-box-icon-bellow-title-inner as-float-left">
-                            <?php if (!empty($options['icon_link'])) : ?>
-                                <a class="as-icon-link" href="<?php echo esc_url($options['icon_link']); ?>" target="<?php echo esc_attr($options['icon_link_target']); ?>">
-                                    <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['icon_id']); ?>"></span>
-                                </a>
-                            <?php else :?>
-                             <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['icon_id']); ?>"></span>
-                            <?php endif; ?>
-                        </div><!-- .dslc-info-box-image-inner -->
+                    <?php if (in_array('icon', $elements)) : ?>
+                        <?php
+                        $asex_icon_pos = '';
+                        if ($options['icon_position'] == 'aside')
+                        {
+                            switch ($options['icon_position_style'])
+                            {
+                                case 'style_1':
+                                    $asex_icon_pos = 'as-float-left';
+                                    $asex_overflow = 'asex-oveflow';
+                                    $asex_clear    = 'asex-oveflow';
+                                    break;
+                                case 'style_2':
+                                    $asex_icon_pos = 'as-float-right';
+                                    $asex_overflow = 'asex-oveflow';
+                                    $asex_clear    = 'asex-oveflow';
+                                    break;
+                                case 'style_3':
+                                    $asex_icon_pos = 'as-float-left';
+                                    $asex_overflow = 'asex-oveflow';
+                                    $asex_clear    = 'clearfix';
+                                    break;
+                                case 'style_4':
+                                    $asex_icon_pos = 'as-float-right';
+                                    $asex_clear    = 'clearfix';
+                                    $asex_overflow = 'asex-oveflow';
+                                    break;
+                                default:
+                                    $asex_overflow = '';
+                                    $asex_clear    = '';
+                                    break;
+                            }
+                        }
+                        ?>
+                        <div class="dslc-info-box-image <?php echo $asex_icon_pos; ?>">
+                            <div class="dslc-info-box-image-inner <?php echo ($options['icon_style'] == 'icon' ? 'asex-icon-wrapper' : 'asex-text-wrapper'); ?>">
+                                <span class="<?php echo ($options['icon_style'] == 'icon' ? 'dslc-init-center dslc-icon dslc-icon-' . $options['icon_id'] : 'asex-icon-text'); ?> ">
+                                    <?php
+                                    if ($options['icon_style'] == 'text')
+                                    {
+                                        echo esc_attr($options['icon_text']);
+                                    }
+                                    ?></span>
+                                <?php if (!empty($options['icon_link'])) : ?>
+                                    <a class="dslc-info-box-image-link" href="<?php echo $options['icon_link']; ?>" <?php if ($options['link_nofollow']) echo 'rel="nofollow"'; ?> target="<?php echo $options['icon_link_target']; ?>"></a>
+                                <?php endif; ?>
+                            </div><!-- .dslc-info-box-image-inner -->
+                        </div><!-- .dslc-info-box-image -->
+                    <?php endif; ?>
+                    <div class="asex-info-box-main">
 
                         <?php if (in_array('title', $elements)) : ?>
-                            <div class="dslc-info-box-title as-float-left">
+                            <div class=" asex-infobox-title <?php echo esc_attr($asex_overflow) ?>">
                                 <?php if ($dslc_is_admin) : ?>
                                     <h4 class="dslca-editable-content" data-id="title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($options['title']); ?></h4>
                                 <?php else : ?>
                                     <?php if ($options['title_link'] != '') : ?>
-                                        <h4><a href="<?php echo esc_url($options['title_link']); ?>" target="<?php echo esc_attr($options['title_link_target']); ?>"><?php echo stripslashes($options['title']); ?></a></h4>
+                                        <h4><a href="<?php echo $options['title_link']; ?>" target="<?php echo $options['title_link_target']; ?>" <?php if ($options['link_nofollow']) echo 'rel="nofollow"'; ?>><?php echo stripslashes($options['title']); ?></a></h4>
                                     <?php else : ?>
                                         <h4><?php echo stripslashes($options['title']); ?></h4>
                                     <?php endif; ?>
                                 <?php endif; ?>
                             </div><!-- .dslc-info-box-title -->
                         <?php endif; ?>
+                        <?php if (in_array('subtitle', $elements)) : ?>
+                            <div class=" asex-infobox-sub-title <?php echo esc_attr($asex_overflow) ?>">
+                                <?php if ($dslc_is_admin) : ?>
+                                    <div class="dslca-editable-content" data-id="sub_title" data-type="simple" <?php if ($dslc_is_admin) echo 'contenteditable'; ?>><?php echo stripslashes($options['sub_title']); ?></div>
+                                <?php else : ?>
+                                    <div><?php echo stripslashes($options['sub_title']); ?></div>
+                                <?php endif; ?>
+                            </div><!-- .dslc-info-box-title -->
+                        <?php endif; ?>
+                        <?php
+                        if ($options['icon_position_style'] == 'style_3' || $options['icon_position_style'] == 'style_4')
+                        {
+                            echo '<div class="clearfix"></div>';
+                        }
+                        ?>
+                        <?php if (in_array('content', $elements)) : ?>
+                            <div class="dslc-info-box-content <?php echo esc_attr($asex_clear) ?> ">
+                                <?php if ($dslc_is_admin) : ?>
+                                    <div class="dslca-editable-content" data-id="content">
+                                        <?php echo stripslashes($options['content']); ?>
+                                    </div><!-- .dslca-editable-content -->
+                                    <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'asex'); ?></span></div>
+                                <?php else : ?>
+                                    <?php echo do_shortcode(stripslashes($options['content'])); ?>
+                                <?php endif; ?>
+                            </div><!-- .dslc-info-box-content -->
+                        <?php endif; ?>
 
+                        <?php if ($options['button_pos'] == 'bellow' && in_array('button', $elements)) : ?>
+                            <div class="dslc-info-box-button">
+                                <?php if (isset($options['button_link']) && !empty($options['button_link'])) : ?>
+                                    <a href="<?php echo $options['button_link']; ?>" target="<?php echo $options['button_target']; ?>" <?php if ($options['link_nofollow']) echo 'rel="nofollow"'; ?> class="dslc-primary">
+                                        <?php if (isset($options['button_icon_id']) && $options['button_icon_id'] != '') : ?>
+                                            <span class="dslc-icon dslc-icon-<?php echo $options['button_icon_id']; ?>"></span>
+                                        <?php endif; ?>
+                                        <?php if ($dslc_is_admin) : ?>
+                                            <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo $options['button_title']; ?></span>
+                                            <?php
+                                        else : echo $options['button_title'];
+                                        endif;
+                                        ?>
+                                    </a>
+                                <?php endif; ?>
+                                <?php if (isset($options['button_2_link']) && !empty($options['button_2_link'])) : ?>
+                                    <a href="<?php echo $options['button_2_link']; ?>" target="<?php echo $options['button_2_target']; ?>" <?php if ($options['link_nofollow']) echo 'rel="nofollow"'; ?> class="dslc-secondary">
+                                        <?php if (isset($options['button_2_icon_id']) && $options['button_2_icon_id'] != '') : ?>
+                                            <span class="dslc-icon dslc-icon-<?php echo $options['button_2_icon_id']; ?>"></span>
+                                        <?php endif; ?>
+                                        <?php if ($dslc_is_admin) : ?>
+                                            <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo $options['button_2_title']; ?></span>
+                                            <?php
+                                        else : echo $options['button_2_title'];
+                                        endif;
+                                        ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div><!-- .dslc-info-box-button -->
+                        <?php endif; ?>
 
-                    </div><!-- .dslc-info-box-image -->
-                <?php endif; ?>
+                    </div><!-- .dslc-info-box-main -->
 
-                <div class="dslc-clearfix"></div>
+                </div><!-- .dslc-info-box-main-wrap -->
 
-                <div class="dslc-info-box-main">
-
-
-
-                    <?php if (in_array('content', $elements)) : ?>
-                        <div class="dslc-info-box-content">
-                            <?php if ($dslc_is_admin) : ?>
-                                <div class="dslca-editable-content" data-id="content">								
-                                    <?php echo stripslashes($options['content']); ?>
-                                </div><!-- .dslca-editable-content -->
-                                <div class="dslca-wysiwyg-actions-edit"><span class="dslca-wysiwyg-actions-edit-hook"><?php _e('Edit Content', 'asex'); ?></span></div>
-                            <?php else : ?>
-                                <?php echo do_shortcode(stripslashes($options['content'])); ?>
-                            <?php endif; ?>
-                        </div><!-- .dslc-info-box-content -->
-                    <?php endif; ?>
-
-                    <?php if ($options['button_pos'] == 'bellow' && in_array('button', $elements)) : ?>
-                        <div class="dslc-info-box-button">
-                            <?php if (isset($options['button_link']) && !empty($options['button_link'])) : ?>
-                                <a href="<?php echo esc_url($options['button_link']); ?>" target="<?php echo esc_attr($options['button_target']); ?>">
-                                    <?php if (isset($options['button_icon_id']) && $options['button_icon_id'] != '') : ?>
-                                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_icon_id']); ?>"></span>
-                                    <?php endif; ?>
-                                    <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_title" data-type="simple" contenteditable><?php echo esc_html($options['button_title']); ?></span>
-                                        <?php
-                                    else : echo esc_html($options['button_title']);
-                                    endif;
-                                    ?>
-                                </a>
-                            <?php endif; ?>	
-                            <?php if (isset($options['button_2_link']) && !empty($options['button_2_link'])) : ?>
-                                <a href="<?php echo esc_url($options['button_2_link']); ?>" target="<?php echo esc_attr($options['button_2_target']); ?>" class="dslc-secondary">
-                                    <?php if (isset($options['button_2_icon_id']) && $options['button_2_icon_id'] != '') : ?>
-                                        <span class="dslc-icon dslc-icon-<?php echo esc_attr($options['button_2_icon_id']); ?>"></span>
-                                    <?php endif; ?>
-                                    <?php if ($dslc_is_admin) : ?>
-                                        <span class="dslca-editable-content" data-id="button_2_title" data-type="simple" contenteditable><?php echo esc_html($options['button_2_title']); ?></span>
-                                        <?php
-                                    else : echo esc_html($options['button_2_title']);
-                                    endif;
-                                    ?>
-                                </a>
-                            <?php endif; ?>
-                        </div><!-- .dslc-info-box-button -->
-                    <?php endif; ?>
-
-                </div><!-- .dslc-info-box-main -->
-
-            </div><!-- .dslc-info-box-main-wrap -->
+            </div><!-- .dslc-info-box-wrapper -->
 
         </div><!-- .dslc-info-box -->
 

@@ -1,0 +1,25 @@
+.asex-info-box-2{
+    .asex-infobox-title{
+        @include transition('all 0.2s ease-out' );
+        h4{
+            margin-bottom: 0;
+        }
+    }
+    .asex-infobox-sub-title{
+         @include transition('all 0.2s ease-out' );
+    }
+    .dslc-info-box-image-inner{
+        @include transition('all 0.2s ease-out' );
+        position: relative;
+        .dslc-icon{
+            position: absolute;
+        }
+        .asex-icon-text{
+            position: relative;
+            visibility: visible;
+        }
+    }
+}
+.asex-oveflow{
+    overflow: hidden;
+}
